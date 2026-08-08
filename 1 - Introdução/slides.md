@@ -170,50 +170,31 @@ _Apresentação do OpenFrameworks no festival Ars Electronica de Linz em 2008_
 _Zach Lieberman, "Chrome Waves" (2023)_
 :::
 ---
-
----
 # A programação criativa hoje
 
 A prática floresce na arte generativa, nas instalações e na performance.
-
-::: row height=100%
-::: col ratio=60%
-- **Tyler Hobbs** — arte generativa contemporânea, como a série _Fidenza_.
-:::
-::: col ratio=40%
-:: image src="placeholder-obra.svg" width=100%
+::: col
+**Tyler Hobbs** — arte generativa contemporânea, como a série _Fidenza_.
+:: image src="Tyler_Hobbs_Fidenza.png" height=90%
 _Tyler Hobbs — série "Fidenza"_
 :::
+::: col
+**Manolo Gamboa Naon** e **Jared Tarbell** — referências da arte generativa.
+:: image src="manolo_gamboa_naon_cllm_2020.png" height=90%
+_Manolo Gamboa Naon - cllm - 2020_
 :::
-::: row height=100%
-::: col ratio=60%
-- **Manolo Gamboa Naon** e **Jared Tarbell** — referências da arte generativa.
+---
+# A programação criativa hoje
+::: col
+**Refik Anadol** — instalações imersivas com grandes volumes de dados e IA.
+:: image src="Refik Anadol Unsupervised.jpg" height=85%
+_Refik Anadol — Unsupervised_
 :::
-::: col ratio=40%
-:: image src="placeholder-obra.svg" width=100%
-_Manolo Gamboa Naon / Jared Tarbell — obra_
+::: col
+**Sougwen Chung** — desenho colaborativo entre humano e robô.
+:: image src="Sougwen_Chung_Drawing_Operations.jpg" height=85%
+_Sougwen Chung — Drawing Operations_
 :::
-:::
-::: row height=100%
-::: col ratio=60%
-- **Refik Anadol** — instalações imersivas com grandes volumes de dados e IA.
-:::
-::: col ratio=40%
-:: image src="placeholder-obra.svg" width=100%
-_Refik Anadol — instalação de dados_
-:::
-:::
-::: row height=100%
-::: col ratio=60%
-- **Sougwen Chung** — desenho colaborativo entre humano e robô.
-:::
-::: col ratio=40%
-:: image src="placeholder-obra.svg" width=100%
-_Sougwen Chung — performance de desenho_
-:::
-:::
-
-Comunidades vivas em torno do **p5.js**, do **openFrameworks** e movimentos como o _#plottertwitter_ e os _dailies_.
 ---
 # Processing e P5.js
 
@@ -262,7 +243,7 @@ Ruim para:
 Chatbots (ChatGPT, Claude, Gemini)
 - Cria código a partir de uma descrição
 - Pode mostrar o código já funcionando
-- Inibe a experimentação 
+- Pode inibir a experimentação 
 
 Agentic AI (Antigravity IDE, Cursor, VSCode+Copilot)
 - O agente de IA atua dentro do editor
