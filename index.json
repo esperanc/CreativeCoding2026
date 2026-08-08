@@ -1,0 +1,14 @@
+{
+    "title": "Programação Criativa 2026",
+    "subtitle": "Apresentações disponíveis:",
+    "presentations": [
+        {
+            "folder": "0 - Álgebra linear",
+            "title": "Álgebra linear"
+        },
+        {
+            "folder": "1 - Introdução",
+            "title": "Introdução à programação criativa"
+        }
+    ]
+}

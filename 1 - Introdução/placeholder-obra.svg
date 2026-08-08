@@ -1,0 +1,11 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="0" width="400" height="300" fill="#2a2a35"/>
+  <rect x="12" y="12" width="376" height="276" fill="none" stroke="#8a8a9a" stroke-width="2" stroke-dasharray="10 8" rx="8"/>
+  <g fill="#b8b8c8" font-family="sans-serif" text-anchor="middle">
+    <circle cx="200" cy="118" r="34" fill="none" stroke="#8a8a9a" stroke-width="2"/>
+    <path d="M186 128 l10 -13 8 9 6 -7 10 12 z" fill="#8a8a9a"/>
+    <circle cx="190" cy="108" r="5" fill="#8a8a9a"/>
+    <text x="200" y="192" font-size="20" font-weight="bold">Imagem</text>
+    <text x="200" y="220" font-size="15">exemplo de obra a inserir</text>
+  </g>
+</svg>

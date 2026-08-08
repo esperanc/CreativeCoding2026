@@ -1,0 +1,17 @@
+<svg viewBox="0 0 320 280" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="0" width="320" height="280" fill="#ffffff"/>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#2b6cb0"/>
+    </marker>
+  </defs>
+  <line x1="160" y1="240" x2="290" y2="212" stroke="#a0aec0" stroke-width="2"/>
+  <line x1="160" y1="240" x2="160" y2="28" stroke="#a0aec0" stroke-width="2"/>
+  <line x1="160" y1="240" x2="35" y2="192" stroke="#a0aec0" stroke-width="2"/>
+  <text x="296" y="216" font-size="16" font-style="italic" fill="#4a5568">x</text>
+  <text x="153" y="20" font-size="16" font-style="italic" fill="#4a5568">y</text>
+  <text x="12" y="196" font-size="16" font-style="italic" fill="#4a5568">z</text>
+  <line x1="160" y1="240" x2="252" y2="92" stroke="#2b6cb0" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="262" y="82" font-size="18" fill="#2b6cb0"><tspan font-style="italic" font-weight="bold">v</tspan></text>
+  <circle cx="160" cy="240" r="3" fill="#2d3748"/>
+</svg>

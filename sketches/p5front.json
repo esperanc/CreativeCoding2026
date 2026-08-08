@@ -1,0 +1,415 @@
+{
+  "format": "p5front-export",
+  "version": 1,
+  "createdAt": "2026-08-08T16:51:25.160Z",
+  "projects": [
+    {
+      "folder": "Fidenza-like by Claude",
+      "id": "wild-spark",
+      "name": "Fidenza-like by Claude",
+      "origin": "native",
+      "lastModified": 1786207863308,
+      "title": "Fidenza-inspired By Claude.AI",
+      "tags": [
+        "Fidenza",
+        "Flow field",
+        "AI",
+        "Claude"
+      ],
+      "description": "Este sketch foi criado pelo Claude.AI (Opus 5 - Alto) usando o seguinte prompt:\n\nCrie um sketch em p5.js inspirado na série Fidenza de Tyler Hobbs. Documente o código e mostre os fontes.\n\n## Uso\nUse a interface embutida",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "shapes",
+      "id": "formas",
+      "name": "shapes",
+      "origin": "imported",
+      "lastModified": 1786204479031,
+      "title": "",
+      "tags": [
+        "demo",
+        "concept"
+      ],
+      "description": "Demonstrates P5's drawing commands\n\nNo interaction",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "style.css",
+        "sketch.js",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "colored shapes",
+      "id": "formas-coloridas",
+      "name": "colored shapes",
+      "origin": "native",
+      "lastModified": 1785859151512,
+      "title": "",
+      "tags": [
+        "concept",
+        "demo"
+      ],
+      "description": "Illustrates P5's drawing commands and color stylization.\n\nNo interaction",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "hershey font draw",
+      "id": "p5-brush-demo-copy",
+      "name": "hershey font draw",
+      "origin": "native",
+      "lastModified": 1785855605956,
+      "title": "",
+      "tags": [
+        "typography",
+        "p5.brush"
+      ],
+      "description": "Draws text using one of several Hershey Fonts. \nUses p5.brush \n\n## Usage\nUse the configuration panels",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "hersheytext.min.json",
+        "hershey.js",
+        "gui.js",
+        "thumbnail.png",
+        "README.md"
+      ]
+    },
+    {
+      "folder": "tubes",
+      "id": "tubes",
+      "name": "tubes",
+      "origin": "native",
+      "lastModified": 1785777025333,
+      "title": "",
+      "tags": [
+        "concept",
+        "texture",
+        "geometry"
+      ],
+      "description": "Introduces code to generate textured tubes from line segments.\n\n## Usage\nThe control panel lets you choose patterns and texturing parameters",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "gui.js",
+        "tube.js",
+        "patterns.js",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "Quilts with shaders",
+      "id": "quilts-with-shaders",
+      "name": "Quilts with shaders",
+      "origin": "imported",
+      "lastModified": 1785704249153,
+      "title": "Image Segmentation",
+      "tags": [
+        "generative",
+        "shader",
+        "symmetry"
+      ],
+      "description": "Creates a symmetric pattern with random interation systems.\n\nClick to generate another\n\n## keyboard commands\n>, <: Zooms in / out\n+, - : increases / decreases color luminosity\np : cycles palette\ns : save image",
+      "hasThumb": true,
+      "files": [
+        "countShader.js",
+        "tfShaderSrc.js",
+        "index.html",
+        "drawShaderSrc.js",
+        "histShader.js",
+        "CPUVersion.js",
+        "mySketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "Mosaic animation",
+      "id": "mosaic-animation",
+      "name": "Mosaic animation",
+      "origin": "openprocessing",
+      "lastModified": 1785704150637,
+      "title": "",
+      "tags": [
+        "generative",
+        "mosaic",
+        "animation",
+        "grain shader"
+      ],
+      "description": "Creates random mosaics using geometric shapes where tiles are animated\n\n## Usage:\nClick to generate another",
+      "hasThumb": true,
+      "files": [
+        "mySketch.js",
+        "drawLib.js",
+        "Tile.js",
+        "shader.js",
+        "shaderSettings.js",
+        "palettes.js",
+        "index.html",
+        "README.md",
+        "thumbnail.png",
+        "style.css"
+      ]
+    },
+    {
+      "folder": "symmetric icons",
+      "id": "symmetric-icons",
+      "name": "symmetric icons",
+      "origin": "openprocessing",
+      "lastModified": 1785703728335,
+      "title": "",
+      "tags": [
+        "generative",
+        "symmetry",
+        "shader"
+      ],
+      "description": "Generates radially symmetric patterns.\n\nClick to generate another\n\n## keyboard commands\nd : toggles debug mode\n>, <: Zooms in / out\n+, - : increases / decreases color luminosity\np : cycles palette\n3-9 : set symmetry \nr : toggles reflection symmetry\nq : toggles square mode\na : toggles auto demo\ns : save image",
+      "hasThumb": true,
+      "files": [
+        "mySketch.js",
+        "drawShaderSrc.js",
+        "tfShaderSrc.js",
+        "countShader.js",
+        "histShader.js",
+        "CPUVersion.js",
+        "index.html",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "Segmentation",
+      "id": "segmentation",
+      "name": "Segmentation",
+      "origin": "imported",
+      "lastModified": 1785703140194,
+      "title": "Image Segmentation",
+      "tags": [
+        "image processing",
+        "connected components",
+        "generative",
+        "segmentation"
+      ],
+      "description": "This is a proof of concept implementation of a simple image segmentation strategy. Several circles rectangles and lines and the connected components created by their overlap are painted with assorted colors.\n\nClick to generate another",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "Connected.js",
+        "style.css",
+        "mySketch.js",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "curved fill",
+      "id": "curved-fill",
+      "name": "curved fill",
+      "origin": "imported",
+      "lastModified": 1785702832878,
+      "title": "",
+      "tags": [
+        "generative",
+        "bauhaus"
+      ],
+      "description": "A random fill using rounded corners. Inspired by Bauhaus posters...\n\nClick to generate another",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "style.css",
+        "mySketch.js",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "p5 brush demo",
+      "id": "brave-garden",
+      "name": "p5 brush demo",
+      "origin": "native",
+      "lastModified": 1785697553939,
+      "title": "",
+      "tags": [
+        "p5 brush"
+      ],
+      "description": "The \"getting started\" demo for p5.brush.\n See https://github.com/acamposuribe/p5.brush",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "RBF draw gpu",
+      "id": "rbf-draw-gpu",
+      "name": "RBF draw gpu",
+      "origin": "imported",
+      "lastModified": 1785696906961,
+      "title": "",
+      "tags": [
+        "radial basis functions",
+        "shader",
+        "smooth curves"
+      ],
+      "description": "This shows how to create and draw closed curves modeled with radial basis functions (RBFs). Several kernels are supported.\n\n## Usage\nClick on the screen to add another control point\nClick on an existing point to remove it\nClick and drag an existing point to relocate it\nUse the panel to change kernels",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "shader.js",
+        "mySketch.js",
+        "RBF.js",
+        "gui.js",
+        "README.md",
+        "thumbnail.png",
+        "style.css"
+      ]
+    },
+    {
+      "folder": "Design by subdivision",
+      "id": "design-by-subdivision",
+      "name": "Design by subdivision",
+      "origin": "openprocessing",
+      "lastModified": 1785696539965,
+      "title": "",
+      "tags": [
+        "catmull-clark",
+        "subdivision",
+        "hansmeyer",
+        "generative"
+      ],
+      "description": "This sketch is inspired by Michael Hansmeyer's work on design by subdivision, \nin particular his Extended Catmull-Clark subdivision scheme, as detailed in the article\n\"Design by Subdivision\" (http://archive.bridgesmathart.org/2010/bridges2010-167.pdf)\npresented at the Bridges 2010 conference. Only the basic features \nof this scheme were implemented, but enough to produce some interesting results.\n\nSeveral other mesh operators are also implemented, including the original \nCatmull-Clark subdivision algorithm (https://en.wikipedia.org/wiki/Catmull%E2%80%93Clark_subdivision_surface), \nthe Doo-Sabin subdivision algorithm (http://graphics.cs.ucdavis.edu/education/CAGDNotes/Doo-Sabin/Doo-Sabin.html), \nvertex cutting, face extrusion, face center extrusion and the dual operator.\n\nBy default, the sketch starts in demo mode, where interesting results are \nshown in rotation. Hit 'd' to toggle. \n\nThe several operations on solids, starting from one of the 5 platonic polyhedra,\ncan be applied in cascade using the interface panel.",
+      "hasThumb": true,
+      "files": [
+        "Arial.ttf",
+        "mySketch.js",
+        "HalfedgeDS.js",
+        "Mesh.js",
+        "Platonic.js",
+        "MeshAlgorithms.js",
+        "SavedSettings.js",
+        "index.html",
+        "style.css",
+        "thumbnail.png",
+        "README.md"
+      ]
+    },
+    {
+      "folder": "Global 2D Illumination",
+      "id": "global-2d-illumination",
+      "name": "Global 2D Illumination",
+      "origin": "imported",
+      "lastModified": 1785696159925,
+      "title": "",
+      "tags": [
+        "generative",
+        "shader",
+        "global illumination",
+        "jump flooding"
+      ],
+      "description": "Follows the ideas in https://samuelbigos.github.io/posts/2dgi1-2d-global-illumination-in-godot.html about computing a global illumination in 2D using ray-marching and jump flooding.\n\n# Usage\nHit space to change the visualization between Illumination / Voronoi Diagram / Distance field",
+      "hasThumb": true,
+      "files": [
+        "uv.png",
+        "index.html",
+        "mySketch.js",
+        "ShaderSources.js",
+        "README.md",
+        "thumbnail.png",
+        "style.css"
+      ]
+    },
+    {
+      "folder": "Lava lamp",
+      "id": "lava-lamp",
+      "name": "Lava lamp",
+      "origin": "openprocessing",
+      "lastModified": 1785696086558,
+      "title": "",
+      "tags": [
+        "generative",
+        "ray marching",
+        "blob"
+      ],
+      "description": "A lava lamp implementation adapted from a shadertoy by Tupto at https://www.shadertoy.com/view/Wt3BWr\n\n# Usage\nno interaction",
+      "hasThumb": true,
+      "files": [
+        "mySketch.js",
+        "lavaShader.js",
+        "index.html",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "Deformable sprite sheets",
+      "id": "deformable-sprite-sheets",
+      "name": "Deformable sprite sheets",
+      "origin": "imported",
+      "lastModified": 1785695964230,
+      "title": "",
+      "tags": [
+        "concept",
+        "animation",
+        "sprites"
+      ],
+      "description": "Demonstrates the concept of using a sprite sheet generated by AI. Sprites are automatically extracted using image segmentation. Animation compounds mesh deformation and texture change.\n\nNo interaction",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "connected.js",
+        "chatGptYellowFlowerAnimation.png",
+        "chatGptRoseAnimation.png",
+        "style.css",
+        "mySketch.js",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "Particles with wallpaper groups",
+      "id": "particles-with-wallpaper-groups",
+      "name": "Particles with wallpaper groups",
+      "origin": "openprocessing",
+      "lastModified": 1785694514544,
+      "title": "",
+      "tags": [
+        "flow fields",
+        "symmetry",
+        "wallpaper groups"
+      ],
+      "description": "Creates symmetric flow field patterns using wallpaper groups\n\n## Keyboard commands:\nf : decrease fade factor (more opaque)\nF : increase fade factor (more transparent)\n+ : zoom in\n- : zoom out\nG,g: New wallpaper group for the same field\n> :  increases tile size\n< :  decreases tile size\nc,C: color scheme cycle\nany other key: randomize",
+      "hasThumb": true,
+      "files": [
+        "mySketch.js",
+        "Groups.js",
+        "index.html",
+        "thumbnail.png",
+        "README.md"
+      ]
+    }
+  ]
+}

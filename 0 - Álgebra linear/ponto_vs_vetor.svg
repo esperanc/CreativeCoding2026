@@ -1,0 +1,14 @@
+<svg viewBox="0 0 320 240" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="0" width="320" height="240" fill="#ffffff"/>
+  <defs>
+    <marker id="arrow2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#2b6cb0"/>
+    </marker>
+  </defs>
+  <circle cx="80" cy="180" r="4" fill="#2d3748"/>
+  <text x="55" y="205" font-size="16" fill="#2d3748">P&#8321;</text>
+  <circle cx="230" cy="60" r="4" fill="#2d3748"/>
+  <text x="238" y="50" font-size="16" fill="#2d3748">P&#8322;</text>
+  <line x1="80" y1="180" x2="222" y2="68" stroke="#2b6cb0" stroke-width="3" marker-end="url(#arrow2)"/>
+  <text x="45" y="90" font-size="18" fill="#2b6cb0"><tspan font-style="italic" font-weight="bold">v</tspan><tspan font-style="italic"> = P&#8322; - P&#8321;</tspan></text>
+</svg>

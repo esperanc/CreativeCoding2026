@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fidenza-inspirado — p5.js</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+<style>
+  :root{
+    --chrome:#0f1113;
+    --chrome-2:#191c1f;
+    --linha:#2c3136;
+    --texto:#b9bfc4;
+    --texto-forte:#f2f4f5;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--chrome);color:var(--texto)}
+  body{
+    font-family:ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
+    font-size:12px;
+    display:flex;flex-direction:column;align-items:center;
+    min-height:100vh;padding:18px 14px 40px;gap:14px;
+  }
+  header{
+    width:100%;max-width:900px;
+    display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 16px;
+    border-bottom:1px solid var(--linha);padding-bottom:10px;
+  }
+  h1{
+    font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--texto-forte);margin:0;
+  }
+  .nota{color:#6f7780;letter-spacing:.04em}
+  .painel{
+    width:100%;max-width:900px;
+    display:flex;flex-wrap:wrap;align-items:center;gap:8px;
+  }
+  button,input{
+    font:inherit;color:var(--texto-forte);
+    background:var(--chrome-2);border:1px solid var(--linha);
+    padding:7px 11px;border-radius:2px;
+  }
+  button{cursor:pointer;letter-spacing:.06em}
+  button:hover{border-color:#4d555c}
+  button:focus-visible,input:focus-visible{outline:2px solid #7fa8c9;outline-offset:1px}
+  input{width:110px}
+  .status{margin-left:auto;color:#6f7780;letter-spacing:.06em}
+  #tela canvas{
+    width:100%;height:auto;display:block;
+    box-shadow:0 18px 50px rgba(0,0,0,.55);
+  }
+  #tela{width:100%;max-width:900px}
+  footer{width:100%;max-width:900px;color:#6f7780;line-height:1.7}
+  footer a{color:#9fb6c6}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Fidenza-inspirado</h1>
+  <span class="nota">campo de fluxo + empacotamento sem sobreposição · p5.js</span>
+</header>
+
+<div class="painel">
+  <button id="btnNova">Gerar nova</button>
+  <label for="campoSemente" class="nota">semente</label>
+  <input id="campoSemente" inputmode="numeric" value="">
+  <button id="btnRefazer">Refazer semente</button>
+  <button id="btnSalvar">Salvar PNG</button>
+  <span class="status" id="status">—</span>
+</div>
+
+<main id="tela"></main>
+
+<footer>
+  Teclas: <b>n</b> nova obra · <b>s</b> salvar PNG. A mesma semente sempre reproduz a mesma imagem.
+</footer>
+
+<script>
+/* ==========================================================================
+   FIDENZA-INSPIRADO — homenagem algorítmica à série Fidenza (Tyler Hobbs, 2021)
+   --------------------------------------------------------------------------
+   Este é um sketch ORIGINAL que implementa as MESMAS TÉCNICAS descritas
+   publicamente por Hobbs (campo de fluxo + curvas que não se sobrepõem),
+   e não uma reprodução do código ou dos resultados da série.
+
+   PIPELINE (na ordem em que o código executa):
+
+     1. PALETA        Sorteia uma paleta; a cor de cada fita é escolhida por um
+                      ruído de baixíssima frequência, o que cria "regiões"
+                      cromáticas coerentes em vez de confete aleatório.
+
+     2. CAMPO DE FLUXO
+                      Cada ponto (x, y) do plano recebe um ângulo:
+                        ângulo = corrente_geral(x,y) + turbulência_local(x,y)
+                      A corrente geral vem de um Perlin noise de frequência
+                      muito baixa (as grandes curvas da composição); a
+                      turbulência vem de um noise de frequência média
+                      (o "nervosismo" orgânico). O parâmetro `turbulencia`
+                      funciona como o feature de mesmo nome no original:
+                      0 = formas retas, valores altos = redemoinhos.
+
+     3. CRESCIMENTO   De um ponto-semente, integramos o campo em passos curtos
+                      (Euler) para frente E para trás, obtendo a espinha da
+                      "fita". A fita é uma faixa de largura constante ao longo
+                      dessa espinha.
+
+     4. COLISÃO       O ponto central de cada passo reserva um disco de raio
+                      = metade da largura numa GRADE ESPACIAL. Antes de dar um
+                      passo, testamos os discos já reservados nas 9 células
+                      vizinhas: se houver interseção, a fita simplesmente para
+                      de crescer ali. Daí vem a característica visual mais
+                      forte da série: curvas que se encostam, se desviam e
+                      nunca se cruzam.
+                      A célula tem lado >= largura máxima + folga, o que garante
+                      que a vizinhança 3x3 cobre todo colisor possível.
+
+     5. ORDEM         As tentativas vão da largura máxima para a mínima
+                      (como em circle packing): as fitas largas definem a
+                      composição, as finas costuram os interstícios.
+
+     6. DESENHO       Cada fita é um polígono (lado esquerdo + lado direito
+                      invertido) com variações de estilo: pontas afiladas ou
+                      retas, versão segmentada em blocos, linhas internas
+                      paralelas e contorno. Por cima, grão de textura.
+
+   COMPLEXIDADE: O(tentativas × passos) com teste de colisão ~O(1) graças à
+   grade. Como a geração é progressiva (algumas tentativas por frame), a
+   interface nunca congela e o observador vê a obra se formar.
+   ========================================================================== */
+
+
+/* --------------------------------------------------------------------------
+   1. PARÂMETROS — todo o "DNA" do sistema num só lugar.
+   -------------------------------------------------------------------------- */
+const CFG = {
+  W: 900,               // largura lógica do canvas (o CSS escala na tela)
+  H: 1200,              // altura lógica
+  SANGRIA: 150,         // margem invisível: fitas nascem/morrem fora do quadro
+
+  // campo de fluxo
+  escalaCorrente: 0.00055,  // frequência do noise que dá a direção geral
+  escalaLocal: 0.0021,      // frequência do noise de turbulência
+  turbulencia: 2.0,         // 0 = retas; 1..3 = orgânico; >4 = caótico
+
+  // integração da curva
+  passo: 4,             // px por passo (menor = curva mais lisa, mais lento)
+  passosMax: 480,       // teto de comprimento (em passos, somando os 2 lados)
+  passosMin: 16,        // fitas mais curtas que isso são descartadas
+
+  // empacotamento
+  tentativas: 2600,     // sementes testadas no total
+  porFrame: 45,         // tentativas processadas por frame (geração progressiva)
+  largMin: 3,
+  largMax: 60,
+  folga: 2.4,           // respiro mínimo entre duas fitas, em px
+
+  // estilo
+  grao: 0.55,           // densidade da textura granulada
+  probSegmentada: 0.20, // fita quebrada em blocos ("super blocks")
+  probLinhasInternas: 0.38,
+  probContorno: 0.30,
+  probPontaAfilada: 0.55
+};
+
+
+/* --------------------------------------------------------------------------
+   2. PALETAS — fundo, tinta (cor de detalhe/contorno) e cores das fitas.
+   -------------------------------------------------------------------------- */
+const PALETAS = [
+  { nome:'Areia',      fundo:'#EDE6D8', tinta:'#17161A',
+    cores:['#17161A','#C0472B','#E2A32C','#3A6B8A','#8FA37A','#E8DFCF'] },
+  { nome:'Cinza-azul', fundo:'#E6E8EA', tinta:'#1B1D22',
+    cores:['#1B1D22','#2E5C8A','#6D97B8','#C9CDD2','#D9542B','#F0F1F2'] },
+  { nome:'Terracota',  fundo:'#F2E7DC', tinta:'#2A1B14',
+    cores:['#2A1B14','#B4472C','#D9803F','#E8C07A','#6F7A5A','#F7F1E8'] },
+  { nome:'Noturno',    fundo:'#15151A', tinta:'#F0EBE2',
+    cores:['#F0EBE2','#C9C2B4','#D8552F','#E8A33D','#4E7FA3','#2C2F36'] },
+  { nome:'Verde-lago', fundo:'#E8EAE1', tinta:'#16211C',
+    cores:['#16211C','#2F6E5E','#7FA893','#D8C9A3','#C4452D','#F2F3EC'] }
+];
+
+
+/* --------------------------------------------------------------------------
+   3. ESTADO GLOBAL
+   -------------------------------------------------------------------------- */
+let paleta;            // paleta sorteada
+let corFundo, corTinta;
+let coresFita = [];    // objetos p5.Color das cores da paleta
+
+let grade = [];        // grade espacial: array de arrays de discos reservados
+let gCols, gLins, LADO;
+
+let semente = 0;
+let tentativa = 0;     // contador da geração progressiva
+let idFita = 0;        // identidade da fita atual (usada no auto-colisão)
+let reservas = [];     // reservas da fita atual, para desfazer se ela for curta
+
+
+/* --------------------------------------------------------------------------
+   4. CICLO p5
+   -------------------------------------------------------------------------- */
+function setup() {
+  const c = createCanvas(CFG.W, CFG.H);
+  c.parent('tela');
+  pixelDensity(Math.min(2, window.devicePixelRatio || 1));
+  novaObra(Math.floor(Math.random() * 1e6));
+}
+
+function draw() {
+  // Gera em fatias para não travar a página e para revelar a obra aos poucos.
+  let feitas = 0;
+  while (feitas < CFG.porFrame && tentativa < CFG.tentativas) {
+    tentarFita(tentativa);
+    tentativa++;
+    feitas++;
+  }
+  atualizarStatus();
+
+  if (tentativa >= CFG.tentativas) {
+    acabamento();
+    noLoop();
+    atualizarStatus(true);
+  }
+}
+
+/** Reinicia tudo com uma semente dada (mesma semente => mesma imagem). */
+function novaObra(s) {
+  semente = s;
+  randomSeed(semente);
+  noiseSeed(semente);
+
+  paleta = random(PALETAS);
+  corFundo = color(paleta.fundo);
+  corTinta = color(paleta.tinta);
+  coresFita = paleta.cores.map(h => color(h));
+
+  iniciarGrade();
+  tentativa = 0;
+  idFita = 0;
+
+  background(corFundo);
+  graoDeFundo();
+
+  document.getElementById('campoSemente').value = semente;
+  loop();
+}
+
+
+/* --------------------------------------------------------------------------
+   5. CAMPO DE FLUXO
+   -------------------------------------------------------------------------- */
+/**
+ * Ângulo do campo em (x, y).
+ * Soma de duas escalas de ruído: uma define para onde a "corrente" vai,
+ * a outra perturba localmente. É essa soma que dá o equilíbrio entre
+ * ordem global e imprevisibilidade local.
+ */
+function campoDeFluxo(x, y) {
+  const corrente = noise(x * CFG.escalaCorrente, y * CFG.escalaCorrente, 11.3) * TWO_PI;
+  const local = (noise(x * CFG.escalaLocal, y * CFG.escalaLocal, 47.7) - 0.5) * CFG.turbulencia;
+  return corrente + local;
+}
+
+/**
+ * Cor da fita conforme a região do plano: um ruído lentíssimo funciona como
+ * um "mapa de zonas", então vizinhos tendem a compartilhar cor.
+ */
+function corDaRegiao(x, y) {
+  const n = noise(x * 0.0009 + 90, y * 0.0009 + 90, 5.5);
+  const i = constrain(floor(n * coresFita.length), 0, coresFita.length - 1);
+  return coresFita[i];
+}
+
+
+/* --------------------------------------------------------------------------
+   6. GRADE ESPACIAL E COLISÃO
+   -------------------------------------------------------------------------- */
+function iniciarGrade() {
+  // Lado >= maior diâmetro + folga garante que 3x3 células cobrem qualquer colisor.
+  LADO = CFG.largMax + CFG.folga + 2;
+  gCols = ceil((CFG.W + 2 * CFG.SANGRIA) / LADO);
+  gLins = ceil((CFG.H + 2 * CFG.SANGRIA) / LADO);
+  grade = new Array(gCols * gLins);
+  for (let i = 0; i < grade.length; i++) grade[i] = [];
+}
+
+function indiceCelula(x, y) {
+  const cx = floor((x + CFG.SANGRIA) / LADO);
+  const cy = floor((y + CFG.SANGRIA) / LADO);
+  if (cx < 0 || cy < 0 || cx >= gCols || cy >= gLins) return -1;
+  return cy * gCols + cx;
+}
+
+/**
+ * O disco (x, y, r) cabe aqui?
+ * `s` é a posição em comprimento de arco dentro da própria fita: pontos da
+ * MESMA fita e muito próximos em arco são ignorados (senão a fita colidiria
+ * com o passo que ela mesma acabou de reservar).
+ */
+function cabe(x, y, r, s) {
+  const cx = floor((x + CFG.SANGRIA) / LADO);
+  const cy = floor((y + CFG.SANGRIA) / LADO);
+  for (let j = cy - 1; j <= cy + 1; j++) {
+    if (j < 0 || j >= gLins) continue;
+    for (let i = cx - 1; i <= cx + 1; i++) {
+      if (i < 0 || i >= gCols) continue;
+      const celula = grade[j * gCols + i];
+      for (let k = 0; k < celula.length; k++) {
+        const p = celula[k];
+        if (p.id === idFita && abs(p.s - s) < r * 3.4) continue; // vizinhança própria
+        const dx = p.x - x, dy = p.y - y;
+        const min = r + p.r + CFG.folga;
+        if (dx * dx + dy * dy < min * min) return false;
+      }
+    }
+  }
+  return true;
+}
+
+function reservar(x, y, r, s) {
+  const idx = indiceCelula(x, y);
+  if (idx < 0) return;
+  const p = { x, y, r, s, id: idFita };
+  grade[idx].push(p);
+  reservas.push({ celula: grade[idx], p });
+}
+
+/** Fita rejeitada: devolve o espaço que ela havia reservado. */
+function desfazerReservas() {
+  for (const { celula, p } of reservas) {
+    const k = celula.indexOf(p);
+    if (k >= 0) celula.splice(k, 1);
+  }
+  reservas.length = 0;
+}
+
+function foraDoQuadro(x, y) {
+  return x < -CFG.SANGRIA || y < -CFG.SANGRIA ||
+         x > CFG.W + CFG.SANGRIA || y > CFG.H + CFG.SANGRIA;
+}
+
+
+/* --------------------------------------------------------------------------
+   7. CRESCIMENTO DAS FITAS
+   -------------------------------------------------------------------------- */
+/**
+ * Uma tentativa de fita. `i` vai de 0 a CFG.tentativas-1 e controla a largura:
+ * começamos grosso e afinamos, para que as fitas largas estruturem a
+ * composição e as finas preencham as sobras.
+ */
+function tentarFita(i) {
+  const t = i / CFG.tentativas;
+  const larguraBase = lerp(CFG.largMax, CFG.largMin, pow(t, 0.45));
+  const largura = max(CFG.largMin, larguraBase * random(0.55, 1.0));
+  const r = largura / 2;
+
+  const x = random(-CFG.SANGRIA, CFG.W + CFG.SANGRIA);
+  const y = random(-CFG.SANGRIA, CFG.H + CFG.SANGRIA);
+
+  idFita++;
+  reservas = [];
+
+  if (!cabe(x, y, r, 0)) return;
+
+  const espinha = crescer(x, y, r);
+  if (espinha.length < CFG.passosMin) { desfazerReservas(); return; }
+
+  desenharFita(espinha, estiloDaFita(r, x, y));
+}
+
+/** Cresce para trás e para frente a partir da semente e junta as duas metades. */
+function crescer(x0, y0, r) {
+  const tras = tracar(x0, y0, r, -1);
+  const frente = tracar(x0, y0, r, +1);
+  tras.reverse();
+  return tras.concat(frente.slice(1)); // slice(1): o ponto-semente é comum
+}
+
+/**
+ * Integra o campo de fluxo em uma direção (dir = +1 ou -1).
+ * Reserva discos ao longo do caminho, com espaçamento proporcional ao raio
+ * (discos grandes precisam de menos amostras para cobrir a faixa).
+ */
+function tracar(x0, y0, r, dir) {
+  const pts = [];
+  let x = x0, y = y0;
+  let s = 0;                       // comprimento de arco assinado
+  let desdeReserva = Infinity;     // força reserva no primeiro ponto
+  const espacamento = max(CFG.passo, r * 0.6);
+  const limite = floor(CFG.passosMax / 2);
+
+  for (let i = 0; i < limite; i++) {
+    if (foraDoQuadro(x, y)) break;
+    if (!cabe(x, y, r, s)) break;
+
+    const a = campoDeFluxo(x, y);   // guardamos o ângulo do CAMPO, não o de marcha:
+    pts.push({ x, y, a });          // assim as duas metades têm normais coerentes
+
+    if (desdeReserva >= espacamento) { reservar(x, y, r, s); desdeReserva = 0; }
+
+    x += cos(a) * CFG.passo * dir;
+    y += sin(a) * CFG.passo * dir;
+    s += CFG.passo * dir;
+    desdeReserva += CFG.passo;
+  }
+  return pts;
+}
+
+
+/* --------------------------------------------------------------------------
+   8. ESTILO E DESENHO
+   -------------------------------------------------------------------------- */
+function estiloDaFita(r, x, y) {
+  const cor = corDaRegiao(x, y);
+  return {
+    r,
+    cor,
+    // detalhe = a cor puxada para a tinta: contornos e grão sempre legíveis
+    detalhe: lerpColor(cor, corTinta, 0.55),
+    pontaAfilada: random() < CFG.probPontaAfilada,
+    segmentada: r > 5 && random() < CFG.probSegmentada,
+    linhasInternas: r > 7 && random() < CFG.probLinhasInternas,
+    contorno: random() < CFG.probContorno
+  };
+}
+
+/** Perfil de largura ao longo da fita: 1 = reta, ou afilada nas duas pontas. */
+function envelope(t, estilo) {
+  if (!estilo.pontaAfilada) return 1;
+  const f = 0.18;                                  // fração afilada de cada ponta
+  const e = constrain(min(t / f, (1 - t) / f), 0, 1);
+  return 0.16 + 0.84 * (e * e * (3 - 2 * e));      // smoothstep
+}
+
+/** Calcula os dois bordos da faixa a partir da espinha. */
+function bordos(espinha, estilo) {
+  const n = espinha.length;
+  const A = [], B = [];
+  for (let i = 0; i < n; i++) {
+    const p = espinha[i];
+    const t = i / (n - 1);
+    const meia = estilo.r * envelope(t, estilo);
+    const na = p.a + HALF_PI;                      // normal ao campo
+    const nx = cos(na) * meia, ny = sin(na) * meia;
+    A.push([p.x + nx, p.y + ny]);
+    B.push([p.x - nx, p.y - ny]);
+  }
+  return { A, B };
+}
+
+function desenharFita(espinha, estilo) {
+  const n = espinha.length;
+  const { A, B } = bordos(espinha, estilo);
+
+  if (estilo.segmentada) {
+    // Variação em blocos: quads consecutivos com um passo de respiro entre eles.
+    noStroke();
+    fill(estilo.cor);
+    const bloco = floor(random(4, 9));
+    for (let i = 0; i < n - 1; i += bloco) {
+      const j = min(i + bloco - 1, n - 1);
+      if (j - i < 1) break;
+      quad(A[i][0], A[i][1], A[j][0], A[j][1], B[j][0], B[j][1], B[i][0], B[i][1]);
+    }
+  } else {
+    // Fita contínua: um polígono fechado (bordo A + bordo B ao contrário).
+    noStroke();
+    fill(estilo.cor);
+    beginShape();
+    for (let i = 0; i < n; i++) vertex(A[i][0], A[i][1]);
+    for (let i = n - 1; i >= 0; i--) vertex(B[i][0], B[i][1]);
+    endShape(CLOSE);
+
+    if (estilo.contorno) {
+      const c = color(estilo.detalhe.toString());
+      c.setAlpha(170);
+      stroke(c); strokeWeight(1); noFill();
+      beginShape();
+      for (let i = 0; i < n; i++) vertex(A[i][0], A[i][1]);
+      for (let i = n - 1; i >= 0; i--) vertex(B[i][0], B[i][1]);
+      endShape(CLOSE);
+    }
+  }
+
+  if (estilo.linhasInternas) linhasInternas(A, B, estilo);
+  graoNaFita(A, B, estilo);
+}
+
+/** Linhas paralelas internas: dão leitura "desenhada à mão" às fitas largas. */
+function linhasInternas(A, B, estilo) {
+  const c = color(estilo.detalhe.toString());
+  c.setAlpha(90);
+  stroke(c); strokeWeight(0.7); noFill();
+  const fracoes = random() < 0.5 ? [0.5] : [0.24, 0.5, 0.76];
+  for (const f of fracoes) {
+    beginShape();
+    for (let i = 0; i < A.length; i++) {
+      vertex(lerp(A[i][0], B[i][0], f), lerp(A[i][1], B[i][1], f));
+    }
+    endShape();
+  }
+  noStroke();
+}
+
+/** Grão dentro da fita: quebra o achatamento do preenchimento vetorial. */
+function graoNaFita(A, B, estilo) {
+  const n = A.length;
+  const qtd = floor(n * estilo.r * CFG.grao * 0.05);
+  const c = color(estilo.detalhe.toString());
+  noStroke();
+  for (let k = 0; k < qtd; k++) {
+    const i = floor(random(n));
+    const u = random();                 // posição lateral entre os dois bordos
+    const x = lerp(A[i][0], B[i][0], u);
+    const y = lerp(A[i][1], B[i][1], u);
+    c.setAlpha(random(8, 34));
+    fill(c);
+    square(x, y, 1);
+  }
+}
+
+
+/* --------------------------------------------------------------------------
+   9. TEXTURA DE FUNDO E ACABAMENTO
+   -------------------------------------------------------------------------- */
+function graoDeFundo() {
+  const tons = [];
+  for (let i = 0; i < 4; i++) {
+    const c = lerpColor(corFundo, corTinta, 0.10 + i * 0.10);
+    c.setAlpha(10 + i * 4);
+    tons.push(c);
+  }
+  noStroke();
+  for (let i = 0; i < 22000; i++) {
+    fill(tons[i & 3]);
+    square(random(width), random(height), 1);
+  }
+}
+
+/** Passada final de grão por cima de tudo, unificando fundo e fitas. */
+function acabamento() {
+  const c = color(paleta.tinta);
+  noStroke();
+  for (let i = 0; i < 9000; i++) {
+    c.setAlpha(random(3, 10));
+    fill(c);
+    square(random(width), random(height), 1);
+  }
+}
+
+
+/* --------------------------------------------------------------------------
+   10. INTERFACE
+   -------------------------------------------------------------------------- */
+function atualizarStatus(pronto = false) {
+  const pct = floor(100 * tentativa / CFG.tentativas);
+  document.getElementById('status').textContent =
+    pronto ? `${paleta.nome} · pronto` : `${paleta.nome} · gerando ${pct}%`;
+}
+
+function keyPressed() {
+  if (key === 'n' || key === 'N') novaObra(floor(random(1e6)));
+  if (key === 's' || key === 'S') saveCanvas(`fidenza-inspirado-${semente}`, 'png');
+}
+
+document.getElementById('btnNova').onclick =
+  () => novaObra(Math.floor(Math.random() * 1e6));
+
+document.getElementById('btnRefazer').onclick = () => {
+  const v = parseInt(document.getElementById('campoSemente').value, 10);
+  novaObra(Number.isFinite(v) ? v : 0);
+};
+
+document.getElementById('btnSalvar').onclick =
+  () => saveCanvas(`fidenza-inspirado-${semente}`, 'png');
+</script>
+</body>
+</html>
