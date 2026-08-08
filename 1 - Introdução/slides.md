@@ -138,11 +138,11 @@ _Harold Cohen, "AARON-Clarrisa" (1992)_
 ## John Maeda
 O computador pessoal e a web popularizam a prática nos anos 1990 e 2000.
 **John Maeda** (MIT Media Lab) — o _Design By Numbers_ une design e código.
-::: col ratio=50%
-::image src="design_by_numbers.jpg" height=90%
+::: col
+::image src="design_by_numbers.jpg" height=70%
 :::
-::: col ratio=50%
-:: image src="Maeda_Florada_2004.png" height=90%
+::: col 
+:: image src="Maeda_Florada_2004.png" height=80%
 _John Maeda, Florada_ (2004)
 :::
 --- 
@@ -251,5 +251,14 @@ Agentic AI (Antigravity IDE, Cursor, VSCode+Copilot)
 - Pode sugerir modificações no código existente
 - Requer conhecimento de programação e das tecnologias utilizadas
 - Mantém o usuário no controle do processo
+---
+# Experimento com AI:
 
- 
+>_Crie um sketch em p5.js inspirado na série Fidenza de Tyler Hobbs. Documente o código e mostre os fontes._
+
+::iframe src="https://esperanc.github.io/CreativeCoding2026/sketches/Fidenza-like%20by%20Claude/"
+
+---
+:::center
+# Obrigado!
+:::
