@@ -259,6 +259,18 @@ Agentic AI (Antigravity IDE, Cursor, VSCode+Copilot)
 ::iframe src="https://esperanc.github.io/CreativeCoding2026/sketches/Fidenza-like%20by%20Claude/"
 
 ---
+# Considerações sobre o experimento
+
+- Claude criou um sketch usando apenas um arquivo index.html. [Veja no p5Front](https://esperanc.github.io/p5front/?repo=https%3A%2F%2Fesperanc.github.io%2FCreativeCoding2026%2Fsketches%2F&project=Fidenza-like+by+Claude)
+- O prompt foi bastante curto mas o resultado foi bom
+  - O próprio Tyler explica seu artefato em grande detalhe no site https://www.tylerxhobbs.com/words/fidenza  
+- O resultado é bastante próximo do original, mas sem tanta flexibilidade. Há também algumas inconsistências na renderização
+- Próximos passos:
+  - Entender o código
+  - Tentar torná-lo mais flexível
+  - Tentar corrigir problemas 
+  - Estendê-lo com outras ideias
+---
 :::center
 # Obrigado!
 :::
