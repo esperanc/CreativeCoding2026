@@ -7,11 +7,31 @@
   <style>
     :root { --fg:#1a1c20; --soft:#888; --line:#e2e5ea; --accent:#d63384; --card:#fff; --bg:#fafbfc; --soft-bg:#eef0f3; }
     * { box-sizing: border-box; }
-    body { font-family: system-ui, -apple-system, sans-serif; max-width: 1080px; margin: 0 auto; padding: 40px 20px; line-height: 1.5; background: var(--bg); color: var(--fg); }
+    body { font-family: system-ui, -apple-system, sans-serif; max-width: 1140px; margin: 0 auto; padding: 40px 20px; line-height: 1.5; background: var(--bg); color: var(--fg); }
     h1 { font-size: 1.5rem; margin: 0 0 .2rem; }
     .meta { color: var(--soft); font-size: .85rem; margin: 0 0 1rem; }
     .instance { display: flex; align-items: center; gap: 8px; font-size: .82rem; color: var(--soft); margin: 0 0 1.8rem; flex-wrap: wrap; }
     .instance input { font: inherit; font-size: .82rem; color: var(--fg); background: var(--card); border: 1px solid var(--line); border-radius: 6px; padding: 5px 8px; min-width: 280px; flex: 1; }
+    /* Browser: collection rail + main (filter, tag facets, grid) */
+    .browser { display: grid; grid-template-columns: 200px 1fr; gap: 26px; align-items: start; }
+    .rail { position: sticky; top: 20px; display: flex; flex-direction: column; gap: 2px; }
+    .rail button { text-align: left; border: 0; background: none; font: inherit; color: var(--fg); cursor: pointer; padding: 6px 10px; border-radius: 7px; display: flex; justify-content: space-between; gap: 8px; }
+    .rail button:hover { background: var(--soft-bg); }
+    .rail button.active { background: var(--accent); color: #fff; }
+    .rail .n { color: var(--soft); font-size: .8em; }
+    .rail button.active .n { color: rgba(255,255,255,.85); }
+    .subhead { margin-bottom: 12px; }
+    .subhead input { font: inherit; width: 100%; color: var(--fg); background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 7px 10px; }
+    .facets { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
+    .facet { border: 1px solid var(--line); background: var(--card); color: var(--fg); border-radius: 999px; padding: 3px 11px; font-size: .78rem; cursor: pointer; }
+    .facet:hover { border-color: var(--accent); }
+    .facet.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+    .facet .fn { opacity: .7; }
+    .empty { color: var(--soft); padding: 30px 4px; }
+    @media (max-width: 640px) {
+      .browser { grid-template-columns: 1fr; }
+      .rail { position: static; flex-direction: row; flex-wrap: wrap; }
+    }
     .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; }
     .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; }
     .thumb { border: 0; padding: 0; cursor: pointer; display: block; width: 100%; aspect-ratio: 1 / 1; background: var(--soft-bg); overflow: hidden; }
@@ -55,179 +75,15 @@
 </head>
 <body>
   <h1>p5front projects</h1>
-  <p class="meta">17 sketches &middot; exported 2026-08-08</p>
+  <p class="meta">24 sketches &middot; exported 2026-08-14</p>
   <label class="instance">Edit opens in: <input id="p5front-url" type="url" spellcheck="false" placeholder="https://your-p5front-instance/" /></label>
-  <div class="grid">
-      <article class="card">
-        <button class="thumb" data-detail="0" aria-label="Details for Fidenza-inspired By Claude.AI"><img loading="lazy" src="Fidenza-like%20by%20Claude/thumbnail.png" alt="Fidenza-inspired By Claude.AI" /></button>
-        <h2><button class="linkish" data-detail="0">Fidenza-inspired By Claude.AI</button></h2>
-        <div class="tags"><span class="tag">Fidenza</span><span class="tag">Flow field</span><span class="tag">AI</span><span class="tag">Claude</span></div>
-        <p class="desc">Este sketch foi criado pelo Claude.AI (Opus 5 Alto) usando o seguinte prompt: Crie um sketch em p5.js inspirado na série Fidenza de Tyler Hobbs. Documente o…</p>
-        <div class="actions">
-          <a class="btn" href="Fidenza-like%20by%20Claude/" target="_blank" rel="noopener" title="Run this sketch standalone">▶ Run</a>
-          <a class="btn primary" data-edit="0" href="#" title="Open in a p5front editor">Edit</a>
-        </div>
-      </article>
-      <article class="card">
-        <button class="thumb" data-detail="1" aria-label="Details for shapes"><img loading="lazy" src="shapes/thumbnail.png" alt="shapes" /></button>
-        <h2><button class="linkish" data-detail="1">shapes</button></h2>
-        <div class="tags"><span class="tag">demo</span><span class="tag">concept</span></div>
-        <p class="desc">Demonstrates P5&#39;s drawing commands No interaction</p>
-        <div class="actions">
-          <a class="btn" href="shapes/" target="_blank" rel="noopener" title="Run this sketch standalone">▶ Run</a>
-          <a class="btn primary" data-edit="1" href="#" title="Open in a p5front editor">Edit</a>
-        </div>
-      </article>
-      <article class="card">
-        <button class="thumb" data-detail="2" aria-label="Details for colored shapes"><img loading="lazy" src="colored%20shapes/thumbnail.png" alt="colored shapes" /></button>
-        <h2><button class="linkish" data-detail="2">colored shapes</button></h2>
-        <div class="tags"><span class="tag">concept</span><span class="tag">demo</span></div>
-        <p class="desc">Illustrates P5&#39;s drawing commands and color stylization. No interaction</p>
-        <div class="actions">
-          <a class="btn" href="colored%20shapes/" target="_blank" rel="noopener" title="Run this sketch standalone">▶ Run</a>
-          <a class="btn primary" data-edit="2" href="#" title="Open in a p5front editor">Edit</a>
-        </div>
-      </article>
-      <article class="card">
-        <button class="thumb" data-detail="3" aria-label="Details for hershey font draw"><img loading="lazy" src="hershey%20font%20draw/thumbnail.png" alt="hershey font draw" /></button>
-        <h2><button class="linkish" data-detail="3">hershey font draw</button></h2>
-        <div class="tags"><span class="tag">typography</span><span class="tag">p5.brush</span></div>
-        <p class="desc">Draws text using one of several Hershey Fonts. Uses p5.brush Usage Use the configuration panels</p>
-        <div class="actions">
-          <a class="btn" href="hershey%20font%20draw/" target="_blank" rel="noopener" title="Run this sketch standalone">▶ Run</a>
-          <a class="btn primary" data-edit="3" href="#" title="Open in a p5front editor">Edit</a>
-        </div>
-      </article>
-      <article class="card">
-        <button class="thumb" data-detail="4" aria-label="Details for tubes"><img loading="lazy" src="tubes/thumbnail.png" alt="tubes" /></button>
-        <h2><button class="linkish" data-detail="4">tubes</button></h2>
-        <div class="tags"><span class="tag">concept</span><span class="tag">texture</span><span class="tag">geometry</span></div>
-        <p class="desc">Introduces code to generate textured tubes from line segments. Usage The control panel lets you choose patterns and texturing parameters</p>
-        <div class="actions">
-          <a class="btn" href="tubes/" target="_blank" rel="noopener" title="Run this sketch standalone">▶ Run</a>
-          <a class="btn primary" data-edit="4" href="#" title="Open in a p5front editor">Edit</a>
-        </div>
-      </article>
-      <article class="card">
-        <button class="thumb" data-detail="5" aria-label="Details for Image Segmentation"><img loading="lazy" src="Quilts%20with%20shaders/thumbnail.png" alt="Image Segmentation" /></button>
-        <h2><button class="linkish" data-detail="5">Image Segmentation</button></h2>
-        <div class="tags"><span class="tag">generative</span><span class="tag">shader</span><span class="tag">symmetry</span></div>
-        <p class="desc">Creates a symmetric pattern with random interation systems. Click to generate another keyboard commands , &lt;: Zooms in / out +, : increases / decreases color…</p>
-        <div class="actions">
-          <a class="btn" href="Quilts%20with%20shaders/" target="_blank" rel="noopener" title="Run this sketch standalone">▶ Run</a>
-          <a class="btn primary" data-edit="5" href="#" title="Open in a p5front editor">Edit</a>
-        </div>
-      </article>
-      <article class="card">
-        <button class="thumb" data-detail="6" aria-label="Details for Mosaic animation"><img loading="lazy" src="Mosaic%20animation/thumbnail.png" alt="Mosaic animation" /></button>
-        <h2><button class="linkish" data-detail="6">Mosaic animation</button></h2>
-        <div class="tags"><span class="tag">generative</span><span class="tag">mosaic</span><span class="tag">animation</span><span class="tag">grain shader</span></div>
-        <p class="desc">Creates random mosaics using geometric shapes where tiles are animated Usage: Click to generate another</p>
-        <div class="actions">
-          <a class="btn" href="Mosaic%20animation/" target="_blank" rel="noopener" title="Run this sketch standalone">▶ Run</a>
-          <a class="btn primary" data-edit="6" href="#" title="Open in a p5front editor">Edit</a>
-        </div>
-      </article>
-      <article class="card">
-        <button class="thumb" data-detail="7" aria-label="Details for symmetric icons"><img loading="lazy" src="symmetric%20icons/thumbnail.png" alt="symmetric icons" /></button>
-        <h2><button class="linkish" data-detail="7">symmetric icons</button></h2>
-        <div class="tags"><span class="tag">generative</span><span class="tag">symmetry</span><span class="tag">shader</span></div>
-        <p class="desc">Generates radially symmetric patterns. Click to generate another keyboard commands d : toggles debug mode , &lt;: Zooms in / out +, : increases / decreases color…</p>
-        <div class="actions">
-          <a class="btn" href="symmetric%20icons/" target="_blank" rel="noopener" title="Run this sketch standalone">▶ Run</a>
-          <a class="btn primary" data-edit="7" href="#" title="Open in a p5front editor">Edit</a>
-        </div>
-      </article>
-      <article class="card">
-        <button class="thumb" data-detail="8" aria-label="Details for Image Segmentation"><img loading="lazy" src="Segmentation/thumbnail.png" alt="Image Segmentation" /></button>
-        <h2><button class="linkish" data-detail="8">Image Segmentation</button></h2>
-        <div class="tags"><span class="tag">image processing</span><span class="tag">connected components</span><span class="tag">generative</span><span class="tag">segmentation</span></div>
-        <p class="desc">This is a proof of concept implementation of a simple image segmentation strategy. Several circles rectangles and lines and the connected components created by…</p>
-        <div class="actions">
-          <a class="btn" href="Segmentation/" target="_blank" rel="noopener" title="Run this sketch standalone">▶ Run</a>
-          <a class="btn primary" data-edit="8" href="#" title="Open in a p5front editor">Edit</a>
-        </div>
-      </article>
-      <article class="card">
-        <button class="thumb" data-detail="9" aria-label="Details for curved fill"><img loading="lazy" src="curved%20fill/thumbnail.png" alt="curved fill" /></button>
-        <h2><button class="linkish" data-detail="9">curved fill</button></h2>
-        <div class="tags"><span class="tag">generative</span><span class="tag">bauhaus</span></div>
-        <p class="desc">A random fill using rounded corners. Inspired by Bauhaus posters... Click to generate another</p>
-        <div class="actions">
-          <a class="btn" href="curved%20fill/" target="_blank" rel="noopener" title="Run this sketch standalone">▶ Run</a>
-          <a class="btn primary" data-edit="9" href="#" title="Open in a p5front editor">Edit</a>
-        </div>
-      </article>
-      <article class="card">
-        <button class="thumb" data-detail="10" aria-label="Details for p5 brush demo"><img loading="lazy" src="p5%20brush%20demo/thumbnail.png" alt="p5 brush demo" /></button>
-        <h2><button class="linkish" data-detail="10">p5 brush demo</button></h2>
-        <div class="tags"><span class="tag">p5 brush</span></div>
-        <p class="desc">The &quot;getting started&quot; demo for p5.brush. See https://github.com/acamposuribe/p5.brush</p>
-        <div class="actions">
-          <a class="btn" href="p5%20brush%20demo/" target="_blank" rel="noopener" title="Run this sketch standalone">▶ Run</a>
-          <a class="btn primary" data-edit="10" href="#" title="Open in a p5front editor">Edit</a>
-        </div>
-      </article>
-      <article class="card">
-        <button class="thumb" data-detail="11" aria-label="Details for RBF draw gpu"><img loading="lazy" src="RBF%20draw%20gpu/thumbnail.png" alt="RBF draw gpu" /></button>
-        <h2><button class="linkish" data-detail="11">RBF draw gpu</button></h2>
-        <div class="tags"><span class="tag">radial basis functions</span><span class="tag">shader</span><span class="tag">smooth curves</span></div>
-        <p class="desc">This shows how to create and draw closed curves modeled with radial basis functions (RBFs). Several kernels are supported. Usage Click on the screen to add…</p>
-        <div class="actions">
-          <a class="btn" href="RBF%20draw%20gpu/" target="_blank" rel="noopener" title="Run this sketch standalone">▶ Run</a>
-          <a class="btn primary" data-edit="11" href="#" title="Open in a p5front editor">Edit</a>
-        </div>
-      </article>
-      <article class="card">
-        <button class="thumb" data-detail="12" aria-label="Details for Design by subdivision"><img loading="lazy" src="Design%20by%20subdivision/thumbnail.png" alt="Design by subdivision" /></button>
-        <h2><button class="linkish" data-detail="12">Design by subdivision</button></h2>
-        <div class="tags"><span class="tag">catmull-clark</span><span class="tag">subdivision</span><span class="tag">hansmeyer</span><span class="tag">generative</span></div>
-        <p class="desc">This sketch is inspired by Michael Hansmeyer&#39;s work on design by subdivision, in particular his Extended Catmull Clark subdivision scheme, as detailed in the…</p>
-        <div class="actions">
-          <a class="btn" href="Design%20by%20subdivision/" target="_blank" rel="noopener" title="Run this sketch standalone">▶ Run</a>
-          <a class="btn primary" data-edit="12" href="#" title="Open in a p5front editor">Edit</a>
-        </div>
-      </article>
-      <article class="card">
-        <button class="thumb" data-detail="13" aria-label="Details for Global 2D Illumination"><img loading="lazy" src="Global%202D%20Illumination/thumbnail.png" alt="Global 2D Illumination" /></button>
-        <h2><button class="linkish" data-detail="13">Global 2D Illumination</button></h2>
-        <div class="tags"><span class="tag">generative</span><span class="tag">shader</span><span class="tag">global illumination</span><span class="tag">jump flooding</span></div>
-        <p class="desc">Follows the ideas in https://samuelbigos.github.io/posts/2dgi1 2d global illumination in godot.html about computing a global illumination in 2D using ray…</p>
-        <div class="actions">
-          <a class="btn" href="Global%202D%20Illumination/" target="_blank" rel="noopener" title="Run this sketch standalone">▶ Run</a>
-          <a class="btn primary" data-edit="13" href="#" title="Open in a p5front editor">Edit</a>
-        </div>
-      </article>
-      <article class="card">
-        <button class="thumb" data-detail="14" aria-label="Details for Lava lamp"><img loading="lazy" src="Lava%20lamp/thumbnail.png" alt="Lava lamp" /></button>
-        <h2><button class="linkish" data-detail="14">Lava lamp</button></h2>
-        <div class="tags"><span class="tag">generative</span><span class="tag">ray marching</span><span class="tag">blob</span></div>
-        <p class="desc">A lava lamp implementation adapted from a shadertoy by Tupto at https://www.shadertoy.com/view/Wt3BWr Usage no interaction</p>
-        <div class="actions">
-          <a class="btn" href="Lava%20lamp/" target="_blank" rel="noopener" title="Run this sketch standalone">▶ Run</a>
-          <a class="btn primary" data-edit="14" href="#" title="Open in a p5front editor">Edit</a>
-        </div>
-      </article>
-      <article class="card">
-        <button class="thumb" data-detail="15" aria-label="Details for Deformable sprite sheets"><img loading="lazy" src="Deformable%20sprite%20sheets/thumbnail.png" alt="Deformable sprite sheets" /></button>
-        <h2><button class="linkish" data-detail="15">Deformable sprite sheets</button></h2>
-        <div class="tags"><span class="tag">concept</span><span class="tag">animation</span><span class="tag">sprites</span></div>
-        <p class="desc">Demonstrates the concept of using a sprite sheet generated by AI. Sprites are automatically extracted using image segmentation. Animation compounds mesh…</p>
-        <div class="actions">
-          <a class="btn" href="Deformable%20sprite%20sheets/" target="_blank" rel="noopener" title="Run this sketch standalone">▶ Run</a>
-          <a class="btn primary" data-edit="15" href="#" title="Open in a p5front editor">Edit</a>
-        </div>
-      </article>
-      <article class="card">
-        <button class="thumb" data-detail="16" aria-label="Details for Particles with wallpaper groups"><img loading="lazy" src="Particles%20with%20wallpaper%20groups/thumbnail.png" alt="Particles with wallpaper groups" /></button>
-        <h2><button class="linkish" data-detail="16">Particles with wallpaper groups</button></h2>
-        <div class="tags"><span class="tag">flow fields</span><span class="tag">symmetry</span><span class="tag">wallpaper groups</span></div>
-        <p class="desc">Creates symmetric flow field patterns using wallpaper groups Keyboard commands: f : decrease fade factor (more opaque) F : increase fade factor (more…</p>
-        <div class="actions">
-          <a class="btn" href="Particles%20with%20wallpaper%20groups/" target="_blank" rel="noopener" title="Run this sketch standalone">▶ Run</a>
-          <a class="btn primary" data-edit="16" href="#" title="Open in a p5front editor">Edit</a>
-        </div>
-      </article>
+  <div class="browser">
+    <aside id="rail" class="rail"></aside>
+    <div class="main">
+      <div class="subhead"><input id="q" type="text" placeholder="Filter by name…" /></div>
+      <div id="facets" class="facets"></div>
+      <div id="grid" class="grid"></div>
+    </div>
   </div>
 
   <div id="detail" class="modal" role="dialog" aria-modal="true">
@@ -246,10 +102,10 @@
 
   <script>
   (function () {
-    var PROJECTS = [{"folder":"Fidenza-like by Claude","title":"Fidenza-inspired By Claude.AI","tags":["Fidenza","Flow field","AI","Claude"],"hasThumb":true,"descHtml":"\u003cp>Este sketch foi criado pelo Claude.AI (Opus 5 - Alto) usando o seguinte prompt:\u003c/p>\n\u003cp>Crie um sketch em p5.js inspirado na série Fidenza de Tyler Hobbs. Documente o código e mostre os fontes.\u003c/p>\n\u003ch2>Uso\u003c/h2>\n\u003cp>Use a interface embutida\u003c/p>","excerpt":"Este sketch foi criado pelo Claude.AI (Opus 5 Alto) usando o seguinte prompt: Crie um sketch em p5.js inspirado na série Fidenza de Tyler Hobbs. Documente o…"},{"folder":"shapes","title":"shapes","tags":["demo","concept"],"hasThumb":true,"descHtml":"\u003cp>Demonstrates P5's drawing commands\u003c/p>\n\u003cp>No interaction\u003c/p>","excerpt":"Demonstrates P5's drawing commands No interaction"},{"folder":"colored shapes","title":"colored shapes","tags":["concept","demo"],"hasThumb":true,"descHtml":"\u003cp>Illustrates P5's drawing commands and color stylization.\u003c/p>\n\u003cp>No interaction\u003c/p>","excerpt":"Illustrates P5's drawing commands and color stylization. No interaction"},{"folder":"hershey font draw","title":"hershey font draw","tags":["typography","p5.brush"],"hasThumb":true,"descHtml":"\u003cp>Draws text using one of several Hershey Fonts. \u003cbr>Uses p5.brush \u003c/p>\n\u003ch2>Usage\u003c/h2>\n\u003cp>Use the configuration panels\u003c/p>","excerpt":"Draws text using one of several Hershey Fonts. Uses p5.brush Usage Use the configuration panels"},{"folder":"tubes","title":"tubes","tags":["concept","texture","geometry"],"hasThumb":true,"descHtml":"\u003cp>Introduces code to generate textured tubes from line segments.\u003c/p>\n\u003ch2>Usage\u003c/h2>\n\u003cp>The control panel lets you choose patterns and texturing parameters\u003c/p>","excerpt":"Introduces code to generate textured tubes from line segments. Usage The control panel lets you choose patterns and texturing parameters"},{"folder":"Quilts with shaders","title":"Image Segmentation","tags":["generative","shader","symmetry"],"hasThumb":true,"descHtml":"\u003cp>Creates a symmetric pattern with random interation systems.\u003c/p>\n\u003cp>Click to generate another\u003c/p>\n\u003ch2>keyboard commands\u003c/h2>\n\u003cblockquote>, &lt;: Zooms in / out\u003c/blockquote>\n\u003cp>+, - : increases / decreases color luminosity\u003cbr>p : cycles palette\u003cbr>s : save image\u003c/p>","excerpt":"Creates a symmetric pattern with random interation systems. Click to generate another keyboard commands , \u003c: Zooms in / out +, : increases / decreases color…"},{"folder":"Mosaic animation","title":"Mosaic animation","tags":["generative","mosaic","animation","grain shader"],"hasThumb":true,"descHtml":"\u003cp>Creates random mosaics using geometric shapes where tiles are animated\u003c/p>\n\u003ch2>Usage:\u003c/h2>\n\u003cp>Click to generate another\u003c/p>","excerpt":"Creates random mosaics using geometric shapes where tiles are animated Usage: Click to generate another"},{"folder":"symmetric icons","title":"symmetric icons","tags":["generative","symmetry","shader"],"hasThumb":true,"descHtml":"\u003cp>Generates radially symmetric patterns.\u003c/p>\n\u003cp>Click to generate another\u003c/p>\n\u003ch2>keyboard commands\u003c/h2>\n\u003cp>d : toggles debug mode\u003c/p>\n\u003cblockquote>, &lt;: Zooms in / out\u003c/blockquote>\n\u003cp>+, - : increases / decreases color luminosity\u003cbr>p : cycles palette\u003cbr>3-9 : set symmetry \u003cbr>r : toggles reflection symmetry\u003cbr>q : toggles square mode\u003cbr>a : toggles auto demo\u003cbr>s : save image\u003c/p>","excerpt":"Generates radially symmetric patterns. Click to generate another keyboard commands d : toggles debug mode , \u003c: Zooms in / out +, : increases / decreases color…"},{"folder":"Segmentation","title":"Image Segmentation","tags":["image processing","connected components","generative","segmentation"],"hasThumb":true,"descHtml":"\u003cp>This is a proof of concept implementation of a simple image segmentation strategy. Several circles rectangles and lines and the connected components created by their overlap are painted with assorted colors.\u003c/p>\n\u003cp>Click to generate another\u003c/p>","excerpt":"This is a proof of concept implementation of a simple image segmentation strategy. Several circles rectangles and lines and the connected components created by…"},{"folder":"curved fill","title":"curved fill","tags":["generative","bauhaus"],"hasThumb":true,"descHtml":"\u003cp>A random fill using rounded corners. Inspired by Bauhaus posters...\u003c/p>\n\u003cp>Click to generate another\u003c/p>","excerpt":"A random fill using rounded corners. Inspired by Bauhaus posters... Click to generate another"},{"folder":"p5 brush demo","title":"p5 brush demo","tags":["p5 brush"],"hasThumb":true,"descHtml":"\u003cp>The \"getting started\" demo for p5.brush.\u003cbr> See https://github.com/acamposuribe/p5.brush\u003c/p>","excerpt":"The \"getting started\" demo for p5.brush. See https://github.com/acamposuribe/p5.brush"},{"folder":"RBF draw gpu","title":"RBF draw gpu","tags":["radial basis functions","shader","smooth curves"],"hasThumb":true,"descHtml":"\u003cp>This shows how to create and draw closed curves modeled with radial basis functions (RBFs). Several kernels are supported.\u003c/p>\n\u003ch2>Usage\u003c/h2>\n\u003cp>Click on the screen to add another control point\u003cbr>Click on an existing point to remove it\u003cbr>Click and drag an existing point to relocate it\u003cbr>Use the panel to change kernels\u003c/p>","excerpt":"This shows how to create and draw closed curves modeled with radial basis functions (RBFs). Several kernels are supported. Usage Click on the screen to add…"},{"folder":"Design by subdivision","title":"Design by subdivision","tags":["catmull-clark","subdivision","hansmeyer","generative"],"hasThumb":true,"descHtml":"\u003cp>This sketch is inspired by Michael Hansmeyer's work on design by subdivision, \u003cbr>in particular his Extended Catmull-Clark subdivision scheme, as detailed in the article\u003cbr>\"Design by Subdivision\" (http://archive.bridgesmathart.org/2010/bridges2010-167.pdf)\u003cbr>presented at the Bridges 2010 conference. Only the basic features \u003cbr>of this scheme were implemented, but enough to produce some interesting results.\u003c/p>\n\u003cp>Several other mesh operators are also implemented, including the original \u003cbr>Catmull-Clark subdivision algorithm (https://en.wikipedia.org/wiki/Catmull%E2%80%93Clark_subdivision_surface), \u003cbr>the Doo-Sabin subdivision algorithm (http://graphics.cs.ucdavis.edu/education/CAGDNotes/Doo-Sabin/Doo-Sabin.html), \u003cbr>vertex cutting, face extrusion, face center extrusion and the dual operator.\u003c/p>\n\u003cp>By default, the sketch starts in demo mode, where interesting results are \u003cbr>shown in rotation. Hit 'd' to toggle. \u003c/p>\n\u003cp>The several operations on solids, starting from one of the 5 platonic polyhedra,\u003cbr>can be applied in cascade using the interface panel.\u003c/p>","excerpt":"This sketch is inspired by Michael Hansmeyer's work on design by subdivision, in particular his Extended Catmull Clark subdivision scheme, as detailed in the…"},{"folder":"Global 2D Illumination","title":"Global 2D Illumination","tags":["generative","shader","global illumination","jump flooding"],"hasThumb":true,"descHtml":"\u003cp>Follows the ideas in https://samuelbigos.github.io/posts/2dgi1-2d-global-illumination-in-godot.html about computing a global illumination in 2D using ray-marching and jump flooding.\u003c/p>\n\u003ch1>Usage\u003c/h1>\n\u003cp>Hit space to change the visualization between Illumination / Voronoi Diagram / Distance field\u003c/p>","excerpt":"Follows the ideas in https://samuelbigos.github.io/posts/2dgi1 2d global illumination in godot.html about computing a global illumination in 2D using ray…"},{"folder":"Lava lamp","title":"Lava lamp","tags":["generative","ray marching","blob"],"hasThumb":true,"descHtml":"\u003cp>A lava lamp implementation adapted from a shadertoy by Tupto at https://www.shadertoy.com/view/Wt3BWr\u003c/p>\n\u003ch1>Usage\u003c/h1>\n\u003cp>no interaction\u003c/p>","excerpt":"A lava lamp implementation adapted from a shadertoy by Tupto at https://www.shadertoy.com/view/Wt3BWr Usage no interaction"},{"folder":"Deformable sprite sheets","title":"Deformable sprite sheets","tags":["concept","animation","sprites"],"hasThumb":true,"descHtml":"\u003cp>Demonstrates the concept of using a sprite sheet generated by AI. Sprites are automatically extracted using image segmentation. Animation compounds mesh deformation and texture change.\u003c/p>\n\u003cp>No interaction\u003c/p>","excerpt":"Demonstrates the concept of using a sprite sheet generated by AI. Sprites are automatically extracted using image segmentation. Animation compounds mesh…"},{"folder":"Particles with wallpaper groups","title":"Particles with wallpaper groups","tags":["flow fields","symmetry","wallpaper groups"],"hasThumb":true,"descHtml":"\u003cp>Creates symmetric flow field patterns using wallpaper groups\u003c/p>\n\u003ch2>Keyboard commands:\u003c/h2>\n\u003cp>f : decrease fade factor (more opaque)\u003cbr>F : increase fade factor (more transparent)\u003c/p>\n\u003cul>\n\u003cli>: zoom in\u003c/li>\n\u003cli>: zoom out\u003c/li>\n\u003cp>G,g: New wallpaper group for the same field\u003c/p>\n\u003c/ul>\n\u003cblockquote>:  increases tile size\u003c/blockquote>\n\u003cp>&lt; :  decreases tile size\u003cbr>c,C: color scheme cycle\u003cbr>any other key: randomize\u003c/p>","excerpt":"Creates symmetric flow field patterns using wallpaper groups Keyboard commands: f : decrease fade factor (more opaque) F : increase fade factor (more…"}];
+    var PROJECTS = [{"folder":"p5 brush demo","title":"p5 brush demo","tags":["p5.brush"],"collection":"techniques/libraries","hasThumb":true,"descHtml":"\u003cp>The \"getting started\" demo for p5.brush.\u003cbr> See https://github.com/acamposuribe/p5.brush\u003c/p>","excerpt":"The \"getting started\" demo for p5.brush. See https://github.com/acamposuribe/p5.brush"},{"folder":"Design by subdivision","title":"Design by subdivision","tags":["catmull-clark","subdivision","hansmeyer","generative"],"collection":"techniques","hasThumb":true,"descHtml":"\u003cp>This sketch is inspired by Michael Hansmeyer's work on design by subdivision, \u003cbr>in particular his Extended Catmull-Clark subdivision scheme, as detailed in the article\u003cbr>\"Design by Subdivision\" (http://archive.bridgesmathart.org/2010/bridges2010-167.pdf)\u003cbr>presented at the Bridges 2010 conference. Only the basic features \u003cbr>of this scheme were implemented, but enough to produce some interesting results.\u003c/p>\n\u003cp>Several other mesh operators are also implemented, including the original \u003cbr>Catmull-Clark subdivision algorithm (https://en.wikipedia.org/wiki/Catmull%E2%80%93Clark_subdivision_surface), \u003cbr>the Doo-Sabin subdivision algorithm (http://graphics.cs.ucdavis.edu/education/CAGDNotes/Doo-Sabin/Doo-Sabin.html), \u003cbr>vertex cutting, face extrusion, face center extrusion and the dual operator.\u003c/p>\n\u003cp>By default, the sketch starts in demo mode, where interesting results are \u003cbr>shown in rotation. Hit 'd' to toggle. \u003c/p>\n\u003cp>The several operations on solids, starting from one of the 5 platonic polyhedra,\u003cbr>can be applied in cascade using the interface panel.\u003c/p>","excerpt":"This sketch is inspired by Michael Hansmeyer's work on design by subdivision, in particular his Extended Catmull Clark subdivision scheme, as detailed in the…"},{"folder":"Global 2D Illumination","title":"Global 2D Illumination","tags":["generative","shader","global illumination","jump flooding"],"collection":"techniques","hasThumb":true,"descHtml":"\u003cp>Follows the ideas in https://samuelbigos.github.io/posts/2dgi1-2d-global-illumination-in-godot.html about computing a global illumination in 2D using ray-marching and jump flooding.\u003c/p>\n\u003ch1>Usage\u003c/h1>\n\u003cp>Hit space to change the visualization between Illumination / Voronoi Diagram / Distance field\u003c/p>","excerpt":"Follows the ideas in https://samuelbigos.github.io/posts/2dgi1 2d global illumination in godot.html about computing a global illumination in 2D using ray…"},{"folder":"Particles with wallpaper groups","title":"Particles with wallpaper groups","tags":["flow fields","symmetry","wallpaper groups"],"collection":"generative","hasThumb":true,"descHtml":"\u003cp>Creates symmetric flow field patterns using wallpaper groups\u003c/p>\n\u003ch2>Keyboard commands:\u003c/h2>\n\u003cp>f : decrease fade factor (more opaque)\u003cbr>F : increase fade factor (more transparent)\u003c/p>\n\u003cul>\n\u003cli>: zoom in\u003c/li>\n\u003cli>: zoom out\u003c/li>\n\u003cp>G,g: New wallpaper group for the same field\u003c/p>\n\u003c/ul>\n\u003cblockquote>:  increases tile size\u003c/blockquote>\n\u003cp>&lt; :  decreases tile size\u003cbr>c,C: color scheme cycle\u003cbr>any other key: randomize\u003c/p>","excerpt":"Creates symmetric flow field patterns using wallpaper groups Keyboard commands: f : decrease fade factor (more opaque) F : increase fade factor (more…"},{"folder":"Deformable sprite sheets","title":"Deformable sprite sheets","tags":["concept","animation","sprites"],"collection":"techniques","hasThumb":true,"descHtml":"\u003cp>Demonstrates the concept of using a sprite sheet generated by AI. Sprites are automatically extracted using image segmentation. Animation compounds mesh deformation and texture change.\u003c/p>\n\u003cp>No interaction\u003c/p>","excerpt":"Demonstrates the concept of using a sprite sheet generated by AI. Sprites are automatically extracted using image segmentation. Animation compounds mesh…"},{"folder":"Lava lamp","title":"Lava lamp","tags":["generative","ray marching","blob"],"collection":"generative","hasThumb":true,"descHtml":"\u003cp>A lava lamp implementation adapted from a shadertoy by Tupto at https://www.shadertoy.com/view/Wt3BWr\u003c/p>\n\u003ch1>Usage\u003c/h1>\n\u003cp>no interaction\u003c/p>","excerpt":"A lava lamp implementation adapted from a shadertoy by Tupto at https://www.shadertoy.com/view/Wt3BWr Usage no interaction"},{"folder":"RBF draw gpu","title":"RBF draw gpu","tags":["radial basis functions","shader","smooth curves"],"collection":"techniques","hasThumb":true,"descHtml":"\u003cp>This shows how to create and draw closed curves modeled with radial basis functions (RBFs). Several kernels are supported.\u003c/p>\n\u003ch2>Usage\u003c/h2>\n\u003cp>Click on the screen to add another control point\u003cbr>Click on an existing point to remove it\u003cbr>Click and drag an existing point to relocate it\u003cbr>Use the panel to change kernels\u003c/p>","excerpt":"This shows how to create and draw closed curves modeled with radial basis functions (RBFs). Several kernels are supported. Usage Click on the screen to add…"},{"folder":"curved fill","title":"curved fill","tags":["generative","bauhaus"],"collection":"generative","hasThumb":true,"descHtml":"\u003cp>A random fill using rounded corners. Inspired by Bauhaus posters...\u003c/p>\n\u003cp>Click to generate another\u003c/p>","excerpt":"A random fill using rounded corners. Inspired by Bauhaus posters... Click to generate another"},{"folder":"Segmentation","title":"Image Segmentation","tags":["image processing","connected components","generative","segmentation"],"collection":"generative","hasThumb":true,"descHtml":"\u003cp>This is a proof of concept implementation of a simple image segmentation strategy. Several circles rectangles and lines and the connected components created by their overlap are painted with assorted colors.\u003c/p>\n\u003cp>Click to generate another\u003c/p>","excerpt":"This is a proof of concept implementation of a simple image segmentation strategy. Several circles rectangles and lines and the connected components created by…"},{"folder":"symmetric icons","title":"symmetric icons","tags":["generative","symmetry","shader"],"collection":"generative","hasThumb":true,"descHtml":"\u003cp>Generates radially symmetric patterns.\u003c/p>\n\u003cp>Click to generate another\u003c/p>\n\u003ch2>keyboard commands\u003c/h2>\n\u003cp>d : toggles debug mode\u003c/p>\n\u003cblockquote>, &lt;: Zooms in / out\u003c/blockquote>\n\u003cp>+, - : increases / decreases color luminosity\u003cbr>p : cycles palette\u003cbr>3-9 : set symmetry \u003cbr>r : toggles reflection symmetry\u003cbr>q : toggles square mode\u003cbr>a : toggles auto demo\u003cbr>s : save image\u003c/p>","excerpt":"Generates radially symmetric patterns. Click to generate another keyboard commands d : toggles debug mode , \u003c: Zooms in / out +, : increases / decreases color…"},{"folder":"Mosaic animation","title":"Mosaic animation","tags":["generative","mosaic","animation","grain shader"],"collection":"generative","hasThumb":true,"descHtml":"\u003cp>Creates random mosaics using geometric shapes where tiles are animated\u003c/p>\n\u003ch2>Usage:\u003c/h2>\n\u003cp>Click to generate another\u003c/p>","excerpt":"Creates random mosaics using geometric shapes where tiles are animated Usage: Click to generate another"},{"folder":"Quilts with shaders","title":"Quilts with shaders","tags":["generative","shader","symmetry"],"collection":"generative","hasThumb":true,"descHtml":"\u003cp>Creates a symmetric pattern with random interation systems.\u003c/p>\n\u003cp>Click to generate another\u003c/p>\n\u003ch2>keyboard commands\u003c/h2>\n\u003cul>\n\u003cli>&gt;, &lt;: Zooms in / out\u003c/li>\n\u003cli>+, - : increases / decreases color luminosity\u003c/li>\n\u003cli>p : cycles palette\u003c/li>\n\u003cli>s : save image\u003c/li>\n\u003c/ul>","excerpt":"Creates a symmetric pattern with random interation systems. Click to generate another keyboard commands , \u003c: Zooms in / out +, : increases / decreases color…"},{"folder":"colored shapes","title":"colored shapes","tags":["concept","demo"],"collection":"aula 2","hasThumb":true,"descHtml":"\u003cp>Illustrates P5's drawing commands and color stylization.\u003c/p>\n\u003cp>No interaction\u003c/p>","excerpt":"Illustrates P5's drawing commands and color stylization. No interaction"},{"folder":"tubes","title":"tubes","tags":["concept","texture","geometry"],"collection":"techniques","hasThumb":true,"descHtml":"\u003cp>Introduces code to generate textured tubes from line segments.\u003c/p>\n\u003ch2>Usage\u003c/h2>\n\u003cp>The control panel lets you choose patterns and texturing parameters\u003c/p>","excerpt":"Introduces code to generate textured tubes from line segments. Usage The control panel lets you choose patterns and texturing parameters"},{"folder":"hershey font draw","title":"hershey font draw","tags":["typography","p5.brush"],"collection":"techniques/libraries","hasThumb":true,"descHtml":"\u003cp>Draws text using one of several Hershey Fonts. \u003cbr>Uses p5.brush \u003c/p>\n\u003ch2>Usage\u003c/h2>\n\u003cp>Use the configuration panels\u003c/p>","excerpt":"Draws text using one of several Hershey Fonts. Uses p5.brush Usage Use the configuration panels"},{"folder":"Fidenza-like by Claude","title":"Fidenza-inspired By Claude.AI","tags":["Fidenza","Flow field","AI","Claude"],"collection":"aula 1","hasThumb":true,"descHtml":"\u003cp>Este sketch foi criado pelo Claude.AI (Opus 5 - Alto) usando o seguinte prompt:\u003c/p>\n\u003cp>Crie um sketch em p5.js inspirado na série Fidenza de Tyler Hobbs. Documente o código e mostre os fontes.\u003c/p>\n\u003ch2>Uso\u003c/h2>\n\u003cp>Use a interface embutida\u003c/p>","excerpt":"Este sketch foi criado pelo Claude.AI (Opus 5 Alto) usando o seguinte prompt: Crie um sketch em p5.js inspirado na série Fidenza de Tyler Hobbs. Documente o…"},{"folder":"shapes","title":"shapes","tags":["demo","concept"],"collection":"aula 2","hasThumb":true,"descHtml":"\u003cp>Demonstrates P5's drawing commands\u003c/p>\n\u003cp>No interaction\u003c/p>","excerpt":"Demonstrates P5's drawing commands No interaction"},{"folder":"Non overlapping animated flowers","title":"Non overlapping animated flowers","tags":["generative","animation","concept"],"collection":"aula 2","hasThumb":true,"descHtml":"\u003cp>Generates a bunch of _non overlapping_ \"flowers\" with random properties that are animated.\u003c/p>\n\u003cp>No interaction.\u003c/p>","excerpt":"Generates a bunch of non overlapping \"flowers\" with random properties that are animated. No interaction."},{"folder":"Non overlapping flowers","title":"Non overlapping flowers","tags":["generative","animation","concept"],"collection":"aula 2","hasThumb":true,"descHtml":"\u003cp>Generates a bunch of _non overlapping_ \"flowers\" with random properties. \u003c/p>\n\u003cp>No interaction.\u003c/p>","excerpt":"Generates a bunch of non overlapping \"flowers\" with random properties. No interaction."},{"folder":"Random Flowers","title":"random flowers","tags":["generative","animation","concept"],"collection":"aula 2","hasThumb":true,"descHtml":"\u003cp>Generates a bunch of \"flowers\" with random properties.\u003c/p>\n\u003cp>No interaction.\u003c/p>","excerpt":"Generates a bunch of \"flowers\" with random properties. No interaction."},{"folder":"gray grid","title":"gray grid","tags":["concept"],"collection":"aula 2","hasThumb":false,"descHtml":"\u003cp>Generates a grid of gray lines\u003c/p>\n\u003cp>No interaction\u003c/p>","excerpt":"Generates a grid of gray lines No interaction"},{"folder":"circle paint","title":"circle paint","tags":["concept","interactive"],"collection":"aula 2","hasThumb":true,"descHtml":"\u003cp>Uses the mouse to paint transparent circles. Color depends on quadrant\u003c/p>","excerpt":"Uses the mouse to paint transparent circles. Color depends on quadrant"},{"folder":"scribbler","title":"scribbler","tags":["concept","interactive"],"collection":"aula 2","hasThumb":true,"descHtml":"\u003cp>Scribble using the mouse\u003c/p>\n\u003ch1>Usage\u003c/h1>\n\u003cul>\n\u003cli>Mouse drag: draws\u003c/li>\n\u003cli>Middle button: clears the screen\u003c/li>\n\u003c/ul>","excerpt":"Scribble using the mouse Usage Mouse drag: draws Middle button: clears the screen"},{"folder":"Composition 1","title":"composition 1","tags":["generative","ai","chatgpt","composition rules"],"collection":"aula 1","hasThumb":true,"descHtml":"\u003cp>Sketch created by Chat GPT for a creative coding class. \u003c/p>\n\u003cp>\u003cstrong>Author\u003c/strong>: Claudio Esperança\u003c/p>\n\u003cp>Here's the _prompt_\u003c/p>\n\u003cblockquote>Crie um sketch estático (sem animação) em p5.js. Apresente o resultado sob a forma de um único script em javascript a ser colado num ambiente de desenvolvimento como o editor.p5js.org. O sketch deve usar como primitiva de desenho apenas o comando quad. É permitido usar comandos de estilização como stroke, fill, strokeWeight, etc. O programa fonte deve ser documentado para ser explicado para uma plateia de iniciantes em programação de computadores. Use aleatoriedade mas de forma que a seguir regras de composição clássicas.\u003c/blockquote>","excerpt":"Sketch created by Chat GPT for a creative coding class. Author : Claudio Esperança Here's the prompt Crie um sketch estático (sem animação) em p5.js. Apresente…"}];
     var CANONICAL_DEFAULT = "https://esperanc.github.io/p5front/";
     var LS_KEY = 'p5front_gallery_instance';
-    var repoRoot = new URL('.', location.href).href;
+    var repoRoot = ''; try { repoRoot = new URL('.', location.href).href; } catch (e) {}
     var urlInput = document.getElementById('p5front-url');
     urlInput.value = localStorage.getItem(LS_KEY) || CANONICAL_DEFAULT;
     urlInput.addEventListener('change', function () { localStorage.setItem(LS_KEY, urlInput.value.trim()); });
@@ -267,6 +123,104 @@
     }
     function openEdit(folder) { var u = editUrl(folder); if (u !== '#') window.open(u, '_blank', 'noopener'); }
 
+    // ---- Filtering by collection (rail) + tags (facets) + name -------------
+    var UNCOLLECTED = {};               // JS-only sentinel (never round-trips through the DOM)
+    var activeColl = '';                // '' = all; UNCOLLECTED = uncollected; else a collection path
+    var activeTags = [];                // selected tags (AND-combined)
+    var textFilter = '';
+    var railNodes = [];                 // rail button index → its collection value
+
+    function collOf(p) { return p.collection || ''; }
+    function inColl(p) {
+      if (activeColl === UNCOLLECTED) return !collOf(p);
+      if (!activeColl) return true;
+      var c = collOf(p);
+      return c === activeColl || c.indexOf(activeColl + '/') === 0;
+    }
+    function matches(p) {
+      if (textFilter && (String(p.title || '')).toLowerCase().indexOf(textFilter) < 0) return false;
+      if (!inColl(p)) return false;
+      for (var i = 0; i < activeTags.length; i++) if ((p.tags || []).indexOf(activeTags[i]) < 0) return false;
+      return true;
+    }
+    function countUnder(n) {
+      return PROJECTS.filter(function (p) { var c = collOf(p); return c === n || c.indexOf(n + '/') === 0; }).length;
+    }
+
+    function renderRail() {
+      var nodes = {}, uncollected = 0;
+      PROJECTS.forEach(function (p) {
+        var c = collOf(p);
+        if (!c) { uncollected++; return; }
+        var parts = c.split('/');
+        for (var i = 1; i <= parts.length; i++) nodes[parts.slice(0, i).join('/')] = 1;
+      });
+      var items = [{ label: 'All sketches', value: '', depth: 0, count: PROJECTS.length }];
+      Object.keys(nodes).sort().forEach(function (n) {
+        items.push({ label: n.split('/').pop(), value: n, depth: n.split('/').length, count: countUnder(n) });
+      });
+      if (uncollected) items.push({ label: 'Uncollected', value: UNCOLLECTED, depth: 0, count: uncollected });
+      railNodes = items;
+      var rail = document.getElementById('rail');
+      rail.innerHTML = items.map(function (it, i) {
+        var active = (it.value === activeColl) ? ' active' : '';
+        return '<button class="ri' + active + '" data-i="' + i + '" style="padding-left:' + (8 + it.depth * 14) + 'px">' +
+               '<span>' + esc(it.label) + '</span><span class="n">' + it.count + '</span></button>';
+      }).join('');
+      rail.querySelectorAll('.ri').forEach(function (b) {
+        b.addEventListener('click', function () { activeColl = railNodes[+b.dataset.i].value; activeTags = []; renderAll(); });
+      });
+    }
+
+    function renderFacets() {
+      var counts = {};
+      PROJECTS.forEach(function (p) { if (inColl(p)) (p.tags || []).forEach(function (t) { counts[t] = (counts[t] || 0) + 1; }); });
+      var tags = Object.keys(counts).sort();
+      var el = document.getElementById('facets');
+      if (!tags.length) { el.innerHTML = ''; el.style.display = 'none'; return; }
+      el.style.display = '';
+      el.innerHTML = tags.map(function (t) {
+        var active = activeTags.indexOf(t) >= 0 ? ' active' : '';
+        return '<button class="facet' + active + '" data-tag="' + esc(t) + '">' + esc(t) + ' <span class="fn">' + counts[t] + '</span></button>';
+      }).join('');
+      el.querySelectorAll('.facet').forEach(function (b) {
+        b.addEventListener('click', function () {
+          var t = b.dataset.tag, i = activeTags.indexOf(t);
+          if (i >= 0) activeTags.splice(i, 1); else activeTags.push(t);
+          renderAll();
+        });
+      });
+    }
+
+    function cardHtml(p, idx) {
+      var href = encodeURIComponent(p.folder) + '/';
+      var title = esc(p.title);
+      var thumb = p.hasThumb
+        ? '<img loading="lazy" src="' + href + 'thumbnail.png" alt="' + title + '" />'
+        : '<span class="thumb-ph">' + title + '</span>';
+      var tags = p.tags.length
+        ? '<div class="tags">' + p.tags.map(function (t) { return '<span class="tag">' + esc(t) + '</span>'; }).join('') + '</div>' : '';
+      var desc = p.excerpt ? '<p class="desc">' + esc(p.excerpt) + '</p>' : '';
+      return '<article class="card">' +
+        '<button class="thumb" data-detail="' + idx + '" aria-label="Details for ' + title + '">' + thumb + '</button>' +
+        '<h2><button class="linkish" data-detail="' + idx + '">' + title + '</button></h2>' +
+        tags + desc +
+        '<div class="actions">' +
+        '<a class="btn" href="' + href + '" target="_blank" rel="noopener" title="Run this sketch standalone">▶ Run</a>' +
+        '<a class="btn primary" data-edit="' + idx + '" href="#" title="Open in a p5front editor">Edit</a>' +
+        '</div></article>';
+    }
+
+    function renderGrid() {
+      var html = '';
+      PROJECTS.forEach(function (p, idx) { if (matches(p)) html += cardHtml(p, idx); });
+      document.getElementById('grid').innerHTML = html || '<div class="empty">No sketches match.</div>';
+    }
+
+    function renderAll() { renderRail(); renderFacets(); renderGrid(); }
+
+    document.getElementById('q').addEventListener('input', function (e) { textFilter = e.target.value.trim().toLowerCase(); renderGrid(); });
+
     var modal = document.getElementById('detail');
     function openDetail(idx) {
       var p = PROJECTS[idx];
@@ -282,15 +236,17 @@
     }
     function closeDetail() { modal.style.display = 'none'; }
 
-    document.querySelectorAll('[data-detail]').forEach(function (el) {
-      el.addEventListener('click', function () { openDetail(+el.dataset.detail); });
-    });
-    document.querySelectorAll('[data-edit]').forEach(function (a) {
-      a.addEventListener('click', function (e) { e.preventDefault(); openEdit(PROJECTS[+a.dataset.edit].folder); });
+    // Grid is re-rendered on every filter change, so use event delegation.
+    document.getElementById('grid').addEventListener('click', function (e) {
+      var d = e.target.closest('[data-detail]'), ed = e.target.closest('[data-edit]');
+      if (ed) { e.preventDefault(); openEdit(PROJECTS[+ed.dataset.edit].folder); return; }
+      if (d) openDetail(+d.dataset.detail);
     });
     document.getElementById('d-close').addEventListener('click', closeDetail);
     modal.addEventListener('click', function (e) { if (e.target === modal) closeDetail(); });
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeDetail(); });
+
+    renderAll();
   })();
   </script>
 </body>

@@ -1,5 +1,6 @@
 ---
 tags: [generative, symmetry, shader]
+collection: generative
 ---
 
 Generates radially symmetric patterns.

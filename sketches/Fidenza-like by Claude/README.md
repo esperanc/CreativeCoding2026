@@ -1,6 +1,7 @@
 ---
 title: Fidenza-inspired By Claude.AI
 tags: [Fidenza, Flow field, AI, Claude]
+collection: aula 1
 ---
 
 Este sketch foi criado pelo Claude.AI (Opus 5 - Alto) usando o seguinte prompt:

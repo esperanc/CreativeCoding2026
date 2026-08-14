@@ -1,5 +1,6 @@
 ---
 tags: [concept, texture, geometry]
+collection: techniques
 ---
 
 Introduces code to generate textured tubes from line segments.

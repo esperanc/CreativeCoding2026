@@ -48,5 +48,9 @@ function setup() {
   strokeWeight(10);
   point(500, 500);
 
-  describe('Desenhos geométricos básicos com cores diversas');
+  // Curva spline
+  stroke (20)
+  spline(50, 700, 150, 600, 300, 700, 400, 680);
+  
+  
 }

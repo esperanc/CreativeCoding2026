@@ -1,5 +1,6 @@
 ---
 tags: [radial basis functions, shader, smooth curves]
+collection: techniques
 ---
 
 This shows how to create and draw closed curves modeled with radial basis functions (RBFs). Several kernels are supported.

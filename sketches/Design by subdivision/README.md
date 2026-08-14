@@ -1,5 +1,6 @@
 ---
 tags: [catmull-clark, subdivision, hansmeyer, generative]
+collection: techniques
 ---
 
 This sketch is inspired by Michael Hansmeyer's work on design by subdivision, 

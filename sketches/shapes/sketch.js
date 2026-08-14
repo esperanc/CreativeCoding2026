@@ -28,6 +28,9 @@ function setup() {
 
   // Curva Bézier
   bezier(50, 500, 150, 400, 300, 600, 400, 480);
+  
+   // Curva spline
+  spline(50, 700, 150, 600, 300, 700, 400, 680);
 
   // Ponto
   point(500, 500);

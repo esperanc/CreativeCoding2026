@@ -1,5 +1,6 @@
 ---
 tags: [flow fields, symmetry, wallpaper groups]
+collection: generative
 ---
 
 Creates symmetric flow field patterns using wallpaper groups
