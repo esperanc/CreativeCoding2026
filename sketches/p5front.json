@@ -1,14 +1,537 @@
 {
   "format": "p5front-export",
   "version": 1,
-  "createdAt": "2026-08-14T21:04:13.240Z",
+  "createdAt": "2026-08-15T14:46:05.978Z",
   "projects": [
+    {
+      "folder": "vaporwave",
+      "id": "vaporwave",
+      "name": "vaporwave",
+      "origin": "native",
+      "lastModified": 1786805163054,
+      "title": "Vaporwave em Quads",
+      "tags": [
+        "quads",
+        "IA",
+        "ChatGPT",
+        "Generative"
+      ],
+      "collection": "artefato da semana/1",
+      "description": "Um Sketch feito pelo ChatGPT usando apenas Quads.\nAutor: Ysabelle Estevão de Oliveira\nPrompot usado: Crie um sketch estático (sem animação) em p5.js. Apresente o  resultado sob a forma de um único script em javascript a ser colado num  ambiente de desenvolvimento como o editor.p5js.org. O sketch deve usar  como primitiva de desenho apenas o comando quad. É permitido usar  comandos de estilização como stroke, fill, strokeWeight, etc. O programa  fonte deve ser documentado para ser explicado para uma plateia de  iniciantes em programação de computadores.  Gostaria que fosse criado com o codigo uma arte estilo vaporwave, com bastante neon e elementos de programas antigos de computador como por exemplo o windows 98.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "programaçãoCriativa2026 2Artefato1Introdutorio PedroPaulo",
+      "id": "programacaocriativa2026-2artefato1introdutorio-pedropaulo",
+      "name": "programaçãoCriativa2026 2Artefato1Introdutorio PedroPaulo",
+      "origin": "native",
+      "lastModified": 1786803963833,
+      "title": "Caquinhos",
+      "tags": [],
+      "collection": "artefato da semana/1",
+      "description": "Nome: Pedro Paulo de Oliveira Rocha - DRE:121050964\n\nUm mosaico de arte generativa em p5.js formado por quadriláteros irregulares em terracota, branco e preto, revelando um fundo azul marinho através de suas frestas caóticas.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "Trab1 ProgCriativa HAlmico",
+      "id": "trab1-progcriativa-halmico",
+      "name": "Trab1 ProgCriativa HAlmico",
+      "origin": "native",
+      "lastModified": 1786803780397,
+      "title": "Composição neoconcreta com quads",
+      "tags": [
+        "quads",
+        "ai",
+        "claude",
+        "generative"
+      ],
+      "collection": "artefato da semana/1",
+      "description": "Um sketch feito pelo Claude usando apenas quads.\n\nAutor: Henrique Almico Dias da Silva\n\nPrompt usado: Crie um sketch estático (sem animação) em p5.js, em um único script para colar no editor.p5js.org. Use apenas o comando quad como primitiva de desenho (stroke, fill, strokeWeight e transparência são permitidos para estilização). A composição deve ter inspiração neoconcreta: fundo escuro sofisticado, paleta pastel com uma única cor vibrante de destaque, formas dispostas em diagonal (evitando grades retas), proporções variadas (de finas e alongadas a robustas) e sobreposições com transparência para gerar novos tons nas interseções. O código deve ser bem documentado em português, explicando a lógica matemática por trás da distorção dos vértices e as escolhas de composição, de forma acessível a iniciantes.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "README.md",
+        "sketch.js",
+        "style.css",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "EEL880 artefato1 Gabriel Rodrigues da Silva",
+      "id": "eel880-artefato1-gabriel-rodrigues-da-silva",
+      "name": "EEL880 artefato1 Gabriel Rodrigues da Silva",
+      "origin": "native",
+      "lastModified": 1786803733632,
+      "title": "Composição no estilo cyberpunk com quads",
+      "tags": [
+        "quads",
+        "ai",
+        "gemini",
+        "generative",
+        "cyberpunk"
+      ],
+      "collection": "artefato da semana/1",
+      "description": "Um sketch feito pelo Gemini usando apenas quads, contendo algumas adições pessoais. \n\nAutor: Gabriel Rodrigues da Silva\nDRE: 121044858\n\nPara a construção desse trabalho, foram usados vários prompts, partindo de um código inicial gerado pelo Gemini 3.1 Pro.\n\n1º prompt:\n\n```plain\nCrie um sketch estático (sem animação) em p5.js. Apresente o resultado sob a forma de um único script em javascript a ser colado num ambiente de desenvolvimento como o editor.p5js.org. O sketch deve usar como primitiva de desenho apenas o comando quad. É permitido usar comandos de estilização como stroke, fill, strokeWeight, etc. O programa fonte deve ser documentado para ser explicado para uma plateia de iniciantes em programação de computadores.\n\nTente criar uma arte com cores parecidas com um tema de cyberpunk (subgênero distópico de ficção científica), com contrastes e cores vibrantes. Se possível, crie uma seed aleatória antes de começar a desenhar a cena com os quadrados. \n\nPor fim, para deixar o trabalho diferente, reserve um pequeno espaço no canto inferior direito do canvas e desenhe um celular de botão, parecido com aqueles de antigamente com uma tela e 12 botões. Lembrando que esse \"celular\" precisa ser feito inteiramente de quadrados com o quad() ! Não precisa ficar tão bonito ou detalhado, visto que temos algumas limitações por ser o primeiro trabalho de uma disciplina que estou cursando.\n```\n\n1º código gerado:\n\n```javascript\n/*\n  CENÁRIO CYBERPUNK COM CELULAR RETRÔ\n  ----------------------------------------\n\n  Este programa cria uma arte abstrata inspirada no gênero \"Cyberpunk\",\n  caracterizado por cenários noturnos, distópicos e com muitas luzes neon \n  (cores vibrantes e de alto contraste como magenta, ciano e amarelo).\n\n  REGRA PRINCIPAL: A única função geométrica permitida para desenhar \n  as formas é o quad() - um polígono de quatro lados. \n\n  Para iniciantes em programação:\n  - Variáveis (let): Guardam valores que podemos usar várias vezes.\n  - Arrays ([]): Guardam listas de valores, como nossa paleta de cores.\n  - Laço de repetição (for): Executa um bloco de código repetidas vezes,\n    poupando a necessidade de escrever dezenas de linhas de código.\n  - quad(x1,y1, x2,y2, x3,y3, x4,y4): Cada par de (x,y) representa a \n    posição de uma \"ponta\" do quadrilátero na nossa tela.\n*/\n\nfunction setup() {\n  // createCanvas define o tamanho do nosso quadro (largura, altura).\n  createCanvas(800, 800);\n  \n  // noLoop avisa o p5.js que este é um desenho estático, \n  // ou seja, não precisa ser atualizado continuamente como uma animação.\n  noLoop();\n  \n  // randomSeed congela a aleatoriedade. O número \"2077\" (uma brincadeira \n  // com o jogo Cyberpunk 2077) funciona como uma \"semente\". Isso garante \n  // que toda vez que você der play, os quadrados aleatórios ficarão \n  // exatamente no mesmo lugar.\n  randomSeed(2077);\n  \n  // background pinta o fundo do quadro. Usamos um azul escuro/cinza \n  // quase preto para simular a noite da cidade.\n  background(\"#0a0b14\");\n\n  // 1. DESENHANDO O FUNDO CYBERPUNK (Prédios e luzes abstratas)\n  desenharFundoNeon();\n\n  // 2. DESENHANDO O CELULAR RETRÔ (No canto inferior direito)\n  desenharCelularRetro();\n}\n\n/*\n  FUNÇÃO: desenharFundoNeon()\n  Cria uma série de quadriláteros aleatórios espalhados pela tela\n  para simular luzes, hologramas e blocos de concreto de uma metrópole.\n*/\nfunction desenharFundoNeon() {\n  // Paleta de cores neon para as luzes da cidade\n  let coresNeon = [\n    \"#ff00ff\", // Magenta\n    \"#00ffff\", // Ciano\n    \"#ffff00\", // Amarelo\n    \"#00ff66\", // Verde Neon\n    \"#222233\"  // Cinza escuro (para contraste de prédios no fundo)\n  ];\n\n  // Vamos usar um laço de repetição para desenhar 60 quadriláteros\n  for (let i = 0; i < 60; i++) {\n    // Escolhemos uma posição base X e Y de forma aleatória\n    let x = random(0, width);\n    let y = random(0, height);\n    \n    // Sorteamos a largura e a altura desse polígono\n    let w = random(20, 200);\n    let h = random(20, 200);\n    \n    // Para deixar as formas mais caóticas (Cyberpunk não é perfeitinho!),\n    // adicionamos uma deformação (inclinação) para cada ponto.\n    let deformacao = random(-40, 40);\n\n    // Sorteamos uma cor da nossa paleta usando a função random() com a lista\n    let corEscolhida = random(coresNeon);\n    \n    // fill() define a cor do preenchimento da forma\n    fill(corEscolhida);\n    \n    // Dependendo da cor, mexemos na borda para criar um efeito de contorno brilhante\n    if (corEscolhida === \"#222233\") {\n      stroke(\"#000000\"); // Bordas escuras para os blocos escuros\n      strokeWeight(1);\n    } else {\n      stroke(255); // Bordas brancas brilhantes para o neon\n      strokeWeight(2);\n    }\n\n    // Finalmente, desenhamos o quadrilátero com os 4 pontos calculados\n    quad(\n      x, y,                              // Ponto 1 (Superior Esquerdo)\n      x + w, y + deformacao,             // Ponto 2 (Superior Direito)\n      x + w - deformacao, y + h,         // Ponto 3 (Inferior Direito)\n      x - deformacao, y + h + deformacao // Ponto 4 (Inferior Esquerdo)\n    );\n  }\n}\n\n/*\n  FUNÇÃO: desenharCelularRetro()\n  Desenha o celular \"tijolão\" usando apenas quad(), posicionando-o \n  no canto inferior direito da nossa tela (x a partir de 620, y a partir de 520).\n*/\nfunction desenharCelularRetro() {\n  // Posições iniciais (base) do celular para facilitar a conta\n  let baseX = 640;\n  let baseY = 500;\n  \n  // --- CORPO DO CELULAR ---\n  fill(\"#111111\");     // Corpo preto de plástico\n  stroke(\"#ff00ff\");   // Borda magenta estilosa para combinar com o fundo\n  strokeWeight(3);\n  \n  // Um retângulo convencional usando quad (ângulos retos)\n  quad(\n    baseX, baseY,               // Topo-esquerda\n    baseX + 120, baseY,         // Topo-direita\n    baseX + 120, baseY + 260,   // Embaixo-direita\n    baseX, baseY + 260          // Embaixo-esquerda\n  );\n\n  // --- TELA DO CELULAR ---\n  fill(\"#003300\");     // Cor verde escura clássica das telas de cristal líquido (LCD) antigas\n  stroke(\"#00ff66\");   // Borda iluminada verde-neon\n  strokeWeight(2);\n\n  quad(\n    baseX + 15, baseY + 20,     // Topo-esquerda da tela\n    baseX + 105, baseY + 20,    // Topo-direita da tela\n    baseX + 105, baseY + 100,   // Embaixo-direita da tela\n    baseX + 15, baseY + 100     // Embaixo-esquerda da tela\n  );\n\n  // --- BOTÕES DO CELULAR (12 botões num teclado 3x4) ---\n  // Vamos usar dois laços de repetição (um dentro do outro) para\n  // criar uma pequena grade para o teclado sem escrever o quad() 12 vezes.\n  \n  fill(\"#333333\");     // Cor de preenchimento dos botões\n  stroke(\"#00ffff\");   // Borda ciano neon para dar leitura no escuro\n  strokeWeight(1.5);\n  \n  // Laço das Linhas (4 linhas no celular)\n  for (let linha = 0; linha < 4; linha++) {\n    // Laço das Colunas (3 colunas no celular)\n    for (let coluna = 0; coluna < 3; coluna++) {\n      \n      // Calculamos a posição de cada botão com base na linha e na coluna atuais\n      // baseX + 22 (margem esquerda) + espaçamento das colunas\n      let botaoX = baseX + 22 + (coluna * 30);\n      // baseY + 130 (espaço abaixo da tela) + espaçamento das linhas\n      let botaoY = baseY + 130 + (linha * 25);\n      \n      let larguraBotao = 20;\n      let alturaBotao = 12;\n      \n      // Desenha o botãozinho atual, formando um retângulo usando quad()\n      quad(\n        botaoX, botaoY,                               // Sup-Esq\n        botaoX + larguraBotao, botaoY,                // Sup-Dir\n        botaoX + larguraBotao, botaoY + alturaBotao,  // Inf-Dir\n        botaoX, botaoY + alturaBotao                  // Inf-Esq\n      );\n    }\n  }\n}\n```\n\n2º prompt:\n\n```plain\nA arte ficou meio embolada, com quadrados se sobrepondo e com formas muito irregulares (quase triangulares). Tente suavizar um pouco essas variações no desenho dos quadrados.\n```\n\n2º código gerado:\n\nAqui está a versão ajustada do código!\n\nPara resolver o problema das formas \"emboladas\" e quase triangulares, reduzi a quantidade de quadrados no fundo (de 60 para 35) para deixar a cena mais limpa. Além disso, mudei a forma como a \"deformação\" é calculada: em vez de um deslocamento muito drástico que cruzava as linhas e quebrava a forma, agora aplicamos apenas um leve \"tremor\" (uma pequena variação aleatória de no máximo 10 pixels) em cada ponta. Isso mantém a estética de blocos urbanos, mas garante que eles continuem parecendo quadriláteros.\n\n```javascript\n/*\n  CENÁRIO CYBERPUNK COM CELULAR RETRÔ (Versão Suavizada)\n  ------------------------------------------------------\n\n  Este programa cria uma arte abstrata inspirada no gênero \"Cyberpunk\",\n  caracterizado por cenários noturnos, distópicos e com muitas luzes neon \n  (cores vibrantes e de alto contraste como magenta, ciano e amarelo).\n\n  Nesta versão, as deformações dos quadriláteros foram suavizadas para \n  evitar formas irreconhecíveis e a quantidade de elementos foi reduzida \n  para melhorar a clareza visual da composição.\n\n  REGRA PRINCIPAL: A única função geométrica permitida para desenhar \n  as formas é o quad() - um polígono de quatro lados. \n\n  Para iniciantes em programação:\n  - Variáveis (let): Guardam valores que podemos usar várias vezes.\n  - Arrays ([]): Guardam listas de valores, como nossa paleta de cores.\n  - Laço de repetição (for): Executa um bloco de código repetidas vezes,\n    poupando a necessidade de escrever dezenas de linhas de código.\n  - quad(x1,y1, x2,y2, x3,y3, x4,y4): Cada par de (x,y) representa a \n    posição de uma \"ponta\" do quadrilátero na nossa tela.\n*/\n\nfunction setup() {\n  // createCanvas define o tamanho do nosso quadro (largura, altura).\n  createCanvas(800, 800);\n  \n  // noLoop avisa o p5.js que este é um desenho estático, \n  // ou seja, não precisa ser atualizado continuamente.\n  noLoop();\n  \n  // randomSeed congela a aleatoriedade. O número \"2077\" garante que\n  // toda vez que você der play, o desenho gerado será exatamente o mesmo.\n  randomSeed(2077);\n  \n  // background pinta o fundo do quadro com um azul escuro/cinza.\n  background(\"#0a0b14\");\n\n  // 1. DESENHANDO O FUNDO CYBERPUNK (Prédios e luzes abstratas)\n  desenharFundoNeon();\n\n  // 2. DESENHANDO O CELULAR RETRÔ (No canto inferior direito)\n  desenharCelularRetro();\n}\n\n/*\n  FUNÇÃO: desenharFundoNeon()\n  Cria uma série de quadriláteros espalhados pela tela.\n  As formas possuem pequenas variações para não serem retângulos perfeitos,\n  mas mantêm sua estrutura básica para não virarem triângulos bagunçados.\n*/\nfunction desenharFundoNeon() {\n  // Paleta de cores neon para as luzes da cidade\n  let coresNeon = [\n    \"#ff00ff\", // Magenta\n    \"#00ffff\", // Ciano\n    \"#ffff00\", // Amarelo\n    \"#00ff66\", // Verde Neon\n    \"#222233\"  // Cinza escuro (para contraste e profundidade)\n  ];\n\n  // Reduzimos o número de formas para 35, para a cena \"respirar\" mais\n  for (let i = 0; i < 35; i++) {\n    // Escolhemos uma posição base X e Y de forma aleatória\n    let x = random(20, width - 150);\n    let y = random(20, height - 150);\n    \n    // Sorteamos a largura e a altura desse bloco\n    let w = random(40, 160);\n    let h = random(40, 160);\n    \n    // Em vez de uma grande deformação estrutural, usamos um \"tremor\" leve.\n    // Cada vértice do quadrado vai sair do lugar no máximo 10 pixels.\n    let tremor = 10;\n\n    // Sorteamos uma cor da nossa paleta\n    let corEscolhida = random(coresNeon);\n    fill(corEscolhida);\n    \n    // Dependendo da cor, ajustamos o contorno\n    if (corEscolhida === \"#222233\") {\n      stroke(\"#000000\"); // Bordas escuras para os blocos escuros\n      strokeWeight(2);\n    } else {\n      stroke(255); // Bordas brancas brilhantes para o neon\n      strokeWeight(1.5);\n    }\n\n    // Desenhamos o quadrilátero adicionando o leve \"tremor\" em cada ponto\n    quad(\n      x + random(-tremor, tremor), y + random(-tremor, tremor),                         // Ponto 1 (Superior Esquerdo)\n      x + w + random(-tremor, tremor), y + random(-tremor, tremor),                     // Ponto 2 (Superior Direito)\n      x + w + random(-tremor, tremor), y + h + random(-tremor, tremor),                 // Ponto 3 (Inferior Direito)\n      x + random(-tremor, tremor), y + h + random(-tremor, tremor)                      // Ponto 4 (Inferior Esquerdo)\n    );\n  }\n}\n\n/*\n  FUNÇÃO: desenharCelularRetro()\n  Desenha o celular \"tijolão\" usando apenas quad(), posicionando-o \n  no canto inferior direito da nossa tela.\n*/\nfunction desenharCelularRetro() {\n  // Posições iniciais (base) do celular para facilitar a conta\n  let baseX = 640;\n  let baseY = 500;\n  \n  // --- CORPO DO CELULAR ---\n  fill(\"#111111\");     // Corpo preto de plástico\n  stroke(\"#ff00ff\");   // Borda magenta estilosa para combinar com o fundo\n  strokeWeight(3);\n  \n  // Um retângulo convencional usando quad (ângulos retos)\n  quad(\n    baseX, baseY,               // Topo-esquerda\n    baseX + 120, baseY,         // Topo-direita\n    baseX + 120, baseY + 260,   // Embaixo-direita\n    baseX, baseY + 260          // Embaixo-esquerda\n  );\n\n  // --- TELA DO CELULAR ---\n  fill(\"#003300\");     // Cor verde escura clássica das telas de LCD\n  stroke(\"#00ff66\");   // Borda iluminada verde-neon\n  strokeWeight(2);\n\n  quad(\n    baseX + 15, baseY + 20,     // Topo-esquerda da tela\n    baseX + 105, baseY + 20,    // Topo-direita da tela\n    baseX + 105, baseY + 100,   // Embaixo-direita da tela\n    baseX + 15, baseY + 100     // Embaixo-esquerda da tela\n  );\n\n  // --- BOTÕES DO CELULAR (12 botões num teclado 3x4) ---\n  fill(\"#333333\");     // Cor de preenchimento dos botões\n  stroke(\"#00ffff\");   // Borda ciano neon para dar leitura no escuro\n  strokeWeight(1.5);\n  \n  // Laço das Linhas (4 linhas no celular)\n  for (let linha = 0; linha < 4; linha++) {\n    // Laço das Colunas (3 colunas no celular)\n    for (let coluna = 0; coluna < 3; coluna++) {\n      \n      // Calculamos a posição de cada botão com base na linha e na coluna atuais\n      let botaoX = baseX + 22 + (coluna * 30);\n      let botaoY = baseY + 130 + (linha * 25);\n      \n      let larguraBotao = 20;\n      let alturaBotao = 12;\n      \n      // Desenha o botãozinho atual, formando um retângulo estrito usando quad()\n      quad(\n        botaoX, botaoY,                               // Sup-Esq\n        botaoX + larguraBotao, botaoY,                // Sup-Dir\n        botaoX + larguraBotao, botaoY + alturaBotao,  // Inf-Dir\n        botaoX, botaoY + alturaBotao                  // Inf-Esq\n      );\n    }\n  }\n}\n```\n\n3º prompt:\n\n```plain\nFicou melhor, mas agora ficou muito concentrado no meio. Pode espalhar mais esses quadrados nas laterais. \n```\n\n3º código gerado:\n\n```javascript\n/*\n  CENÁRIO CYBERPUNK COM CELULAR RETRÔ (Laterais Preenchidas)\n  ----------------------------------------------------------\n\n  Este programa cria uma arte abstrata inspirada no gênero \"Cyberpunk\",\n  caracterizado por cenários noturnos, distópicos e com muitas luzes neon.\n\n  Nesta versão, ajustamos as coordenadas de geração dos quadrados do fundo\n  para que eles se espalhem por toda a tela, inclusive ultrapassando as \n  bordas (sangria), evitando que fiquem concentrados apenas no meio.\n\n  REGRA PRINCIPAL: A única função geométrica permitida para desenhar \n  as formas é o quad() - um polígono de quatro lados. \n\n  Para iniciantes em programação:\n  - Variáveis (let): Guardam valores que podemos usar várias vezes.\n  - Arrays ([]): Guardam listas de valores, como nossa paleta de cores.\n  - Laço de repetição (for): Executa um bloco de código repetidas vezes,\n    poupando a necessidade de escrever dezenas de linhas de código.\n  - quad(x1,y1, x2,y2, x3,y3, x4,y4): Cada par de (x,y) representa a \n    posição de uma \"ponta\" do quadrilátero na nossa tela.\n*/\n\nfunction setup() {\n  // createCanvas define o tamanho do nosso quadro (largura, altura).\n  createCanvas(800, 800);\n  \n  // noLoop avisa o p5.js que este é um desenho estático, \n  // ou seja, não precisa ser atualizado continuamente.\n  noLoop();\n  \n  // randomSeed congela a aleatoriedade. O número \"2077\" garante que\n  // toda vez que você der play, o desenho gerado será exatamente o mesmo.\n  randomSeed(2077);\n  \n  // background pinta o fundo do quadro com um azul escuro/cinza.\n  background(\"#0a0b14\");\n\n  // 1. DESENHANDO O FUNDO CYBERPUNK (Prédios e luzes abstratas)\n  desenharFundoNeon();\n\n  // 2. DESENHANDO O CELULAR RETRÔ (No canto inferior direito)\n  desenharCelularRetro();\n}\n\n/*\n  FUNÇÃO: desenharFundoNeon()\n  Cria uma série de quadriláteros espalhados pela tela.\n  Os limites de posição foram expandidos para além das bordas (valores negativos \n  e maiores que width/height) para garantir que as laterais também sejam preenchidas.\n*/\nfunction desenharFundoNeon() {\n  // Paleta de cores neon para as luzes da cidade\n  let coresNeon = [\n    \"#ff00ff\", // Magenta\n    \"#00ffff\", // Ciano\n    \"#ffff00\", // Amarelo\n    \"#00ff66\", // Verde Neon\n    \"#222233\"  // Cinza escuro (para contraste e profundidade)\n  ];\n\n  // Aumentamos levemente a quantidade (para 45) para preencher a área maior\n  for (let i = 0; i < 45; i++) {\n    // Expandimos a área de sorteio para -50 até width+50 / height+50\n    // Isso faz com que os quadrados se espalhem por toda a extensão do canvas\n    let x = random(-50, width + 50);\n    let y = random(-50, height + 50);\n    \n    // Sorteamos a largura e a altura desse bloco\n    let w = random(40, 160);\n    let h = random(40, 160);\n    \n    // Em vez de uma grande deformação estrutural, usamos um \"tremor\" leve.\n    // Cada vértice do quadrado vai sair do lugar no máximo 10 pixels.\n    let tremor = 10;\n\n    // Sorteamos uma cor da nossa paleta\n    let corEscolhida = random(coresNeon);\n    fill(corEscolhida);\n    \n    // Dependendo da cor, ajustamos o contorno\n    if (corEscolhida === \"#222233\") {\n      stroke(\"#000000\"); // Bordas escuras para os blocos escuros\n      strokeWeight(2);\n    } else {\n      stroke(255); // Bordas brancas brilhantes para o neon\n      strokeWeight(1.5);\n    }\n\n    // Desenhamos o quadrilátero adicionando o leve \"tremor\" em cada ponto\n    quad(\n      x + random(-tremor, tremor), y + random(-tremor, tremor),                         // Ponto 1 (Superior Esquerdo)\n      x + w + random(-tremor, tremor), y + random(-tremor, tremor),                     // Ponto 2 (Superior Direito)\n      x + w + random(-tremor, tremor), y + h + random(-tremor, tremor),                 // Ponto 3 (Inferior Direito)\n      x + random(-tremor, tremor), y + h + random(-tremor, tremor)                      // Ponto 4 (Inferior Esquerdo)\n    );\n  }\n}\n\n/*\n  FUNÇÃO: desenharCelularRetro()\n  Desenha o celular \"tijolão\" usando apenas quad(), posicionando-o \n  no canto inferior direito da nossa tela.\n*/\nfunction desenharCelularRetro() {\n  // Posições iniciais (base) do celular para facilitar a conta\n  let baseX = 640;\n  let baseY = 500;\n  \n  // --- CORPO DO CELULAR ---\n  fill(\"#111111\");     // Corpo preto de plástico\n  stroke(\"#ff00ff\");   // Borda magenta estilosa para combinar com o fundo\n  strokeWeight(3);\n  \n  // Um retângulo convencional usando quad (ângulos retos)\n  quad(\n    baseX, baseY,               // Topo-esquerda\n    baseX + 120, baseY,         // Topo-direita\n    baseX + 120, baseY + 260,   // Embaixo-direita\n    baseX, baseY + 260          // Embaixo-esquerda\n  );\n\n  // --- TELA DO CELULAR ---\n  fill(\"#003300\");     // Cor verde escura clássica das telas de LCD\n  stroke(\"#00ff66\");   // Borda iluminada verde-neon\n  strokeWeight(2);\n\n  quad(\n    baseX + 15, baseY + 20,     // Topo-esquerda da tela\n    baseX + 105, baseY + 20,    // Topo-direita da tela\n    baseX + 105, baseY + 100,   // Embaixo-direita da tela\n    baseX + 15, baseY + 100     // Embaixo-esquerda da tela\n  );\n\n  // --- BOTÕES DO CELULAR (12 botões num teclado 3x4) ---\n  fill(\"#333333\");     // Cor de preenchimento dos botões\n  stroke(\"#00ffff\");   // Borda ciano neon para dar leitura no escuro\n  strokeWeight(1.5);\n  \n  // Laço das Linhas (4 linhas no celular)\n  for (let linha = 0; linha < 4; linha++) {\n    // Laço das Colunas (3 colunas no celular)\n    for (let coluna = 0; coluna < 3; coluna++) {\n      \n      // Calculamos a posição de cada botão com base na linha e na coluna atuais\n      let botaoX = baseX + 22 + (coluna * 30);\n      let botaoY = baseY + 130 + (linha * 25);\n      \n      let larguraBotao = 20;\n      let alturaBotao = 12;\n      \n      // Desenha o botãozinho atual, formando um retângulo estrito usando quad()\n      quad(\n        botaoX, botaoY,                               // Sup-Esq\n        botaoX + larguraBotao, botaoY,                // Sup-Dir\n        botaoX + larguraBotao, botaoY + alturaBotao,  // Inf-Dir\n        botaoX, botaoY + alturaBotao                  // Inf-Esq\n      );\n    }\n  }\n}\n```\n\n4º prompt:\n\n```plain\nFicou quase bom! Percebi que o canto superior esquerdo ficou com um buraco. Mude o celular de posição e coloque ele no canto superior esquerdo.\n```\n\n4º código gerado:\n\n```javascript\n/*\n  CENÁRIO CYBERPUNK COM CELULAR RETRÔ (Celular no Canto Superior Esquerdo)\n  ----------------------------------------------------------------------\n\n  Este programa cria uma arte abstrata inspirada no gênero \"Cyberpunk\",\n  caracterizado por cenários noturnos, distópicos e com muitas luzes neon.\n\n  Nesta versão, os quadrados do fundo se espalham por toda a tela, inclusive \n  ultrapassando as bordas (sangria). O celular retrô foi movido para o canto \n  superior esquerdo para preencher aquela área e equilibrar a composição.\n\n  REGRA PRINCIPAL: A única função geométrica permitida para desenhar \n  as formas é o quad() - um polígono de quatro lados. \n\n  Para iniciantes em programação:\n  - Variáveis (let): Guardam valores que podemos usar várias vezes.\n  - Arrays ([]): Guardam listas de valores, como nossa paleta de cores.\n  - Laço de repetição (for): Executa um bloco de código repetidas vezes,\n    poupando a necessidade de escrever dezenas de linhas de código.\n  - quad(x1,y1, x2,y2, x3,y3, x4,y4): Cada par de (x,y) representa a \n    posição de uma \"ponta\" do quadrilátero na nossa tela.\n*/\n\nfunction setup() {\n  // createCanvas define o tamanho do nosso quadro (largura, altura).\n  createCanvas(800, 800);\n  \n  // noLoop avisa o p5.js que este é um desenho estático, \n  // ou seja, não precisa ser atualizado continuamente.\n  noLoop();\n  \n  // randomSeed congela a aleatoriedade. O número \"2077\" garante que\n  // toda vez que você der play, o desenho gerado será exatamente o mesmo.\n  randomSeed(2077);\n  \n  // background pinta o fundo do quadro com um azul escuro/cinza.\n  background(\"#0a0b14\");\n\n  // 1. DESENHANDO O FUNDO CYBERPUNK (Prédios e luzes abstratas)\n  desenharFundoNeon();\n\n  // 2. DESENHANDO O CELULAR RETRÔ (Agora no canto superior esquerdo)\n  desenharCelularRetro();\n}\n\n/*\n  FUNÇÃO: desenharFundoNeon()\n  Cria uma série de quadriláteros espalhados pela tela.\n  Os limites de posição foram expandidos para além das bordas (valores negativos \n  e maiores que width/height) para garantir que as laterais também sejam preenchidas.\n*/\nfunction desenharFundoNeon() {\n  // Paleta de cores neon para as luzes da cidade\n  let coresNeon = [\n    \"#ff00ff\", // Magenta\n    \"#00ffff\", // Ciano\n    \"#ffff00\", // Amarelo\n    \"#00ff66\", // Verde Neon\n    \"#222233\"  // Cinza escuro (para contraste e profundidade)\n  ];\n\n  // Mantemos a quantidade (45) para preencher a área\n  for (let i = 0; i < 45; i++) {\n    // Expandimos a área de sorteio para -50 até width+50 / height+50\n    // Isso faz com que os quadrados se espalhem por toda a extensão do canvas\n    let x = random(-50, width + 50);\n    let y = random(-50, height + 50);\n    \n    // Sorteamos a largura e a altura desse bloco\n    let w = random(40, 160);\n    let h = random(40, 160);\n    \n    // Em vez de uma grande deformação estrutural, usamos um \"tremor\" leve.\n    // Cada vértice do quadrado vai sair do lugar no máximo 10 pixels.\n    let tremor = 10;\n\n    // Sorteamos uma cor da nossa paleta\n    let corEscolhida = random(coresNeon);\n    fill(corEscolhida);\n    \n    // Dependendo da cor, ajustamos o contorno\n    if (corEscolhida === \"#222233\") {\n      stroke(\"#000000\"); // Bordas escuras para os blocos escuros\n      strokeWeight(2);\n    } else {\n      stroke(255); // Bordas brancas brilhantes para o neon\n      strokeWeight(1.5);\n    }\n\n    // Desenhamos o quadrilátero adicionando o leve \"tremor\" em cada ponto\n    quad(\n      x + random(-tremor, tremor), y + random(-tremor, tremor),                         // Ponto 1 (Superior Esquerdo)\n      x + w + random(-tremor, tremor), y + random(-tremor, tremor),                     // Ponto 2 (Superior Direito)\n      x + w + random(-tremor, tremor), y + h + random(-tremor, tremor),                 // Ponto 3 (Inferior Direito)\n      x + random(-tremor, tremor), y + h + random(-tremor, tremor)                      // Ponto 4 (Inferior Esquerdo)\n    );\n  }\n}\n\n/*\n  FUNÇÃO: desenharCelularRetro()\n  Desenha o celular \"tijolão\" usando apenas quad(), posicionando-o \n  no canto superior esquerdo da nossa tela.\n*/\nfunction desenharCelularRetro() {\n  // Posições iniciais (base) do celular alteradas para o canto superior esquerdo.\n  // Deixamos uma pequena margem de 20 pixels da borda.\n  let baseX = 20;\n  let baseY = 20;\n  \n  // --- CORPO DO CELULAR ---\n  fill(\"#111111\");     // Corpo preto de plástico\n  stroke(\"#ff00ff\");   // Borda magenta estilosa para combinar com o fundo\n  strokeWeight(3);\n  \n  // Um retângulo convencional usando quad (ângulos retos)\n  quad(\n    baseX, baseY,               // Topo-esquerda\n    baseX + 120, baseY,         // Topo-direita\n    baseX + 120, baseY + 260,   // Embaixo-direita\n    baseX, baseY + 260          // Embaixo-esquerda\n  );\n\n  // --- TELA DO CELULAR ---\n  fill(\"#003300\");     // Cor verde escura clássica das telas de LCD\n  stroke(\"#00ff66\");   // Borda iluminada verde-neon\n  strokeWeight(2);\n\n  quad(\n    baseX + 15, baseY + 20,     // Topo-esquerda da tela\n    baseX + 105, baseY + 20,    // Topo-direita da tela\n    baseX + 105, baseY + 100,   // Embaixo-direita da tela\n    baseX + 15, baseY + 100     // Embaixo-esquerda da tela\n  );\n\n  // --- BOTÕES DO CELULAR (12 botões num teclado 3x4) ---\n  fill(\"#333333\");     // Cor de preenchimento dos botões\n  stroke(\"#00ffff\");   // Borda ciano neon para dar leitura no escuro\n  strokeWeight(1.5);\n  \n  // Laço das Linhas (4 linhas no celular)\n  for (let linha = 0; linha < 4; linha++) {\n    // Laço das Colunas (3 colunas no celular)\n    for (let coluna = 0; coluna < 3; coluna++) {\n      \n      // Calculamos a posição de cada botão com base na linha e na coluna atuais\n      let botaoX = baseX + 22 + (coluna * 30);\n      let botaoY = baseY + 130 + (linha * 25);\n      \n      let larguraBotao = 20;\n      let alturaBotao = 12;\n      \n      // Desenha o botãozinho atual, formando um retângulo estrito usando quad()\n      quad(\n        botaoX, botaoY,                               // Sup-Esq\n        botaoX + larguraBotao, botaoY,                // Sup-Dir\n        botaoX + larguraBotao, botaoY + alturaBotao,  // Inf-Dir\n        botaoX, botaoY + alturaBotao                  // Inf-Esq\n      );\n    }\n  }\n}\n```\n\n5º prompt:\n\n```plain\nAcho que a ideia do celular antigo não ficou boa. Consegue transformar ele em um celular moderno, simulando uma tela inicial com ícones de aplicativos ou algum deles aberto? Pode manter a posição do celular.\n```\n\n5º código gerado:\n\n```javascript\n/*\n  CENÁRIO CYBERPUNK COM CELULAR MODERNO (Canto Superior Esquerdo)\n  ----------------------------------------------------------------------\n\n  Este programa cria uma arte abstrata inspirada no gênero \"Cyberpunk\",\n  caracterizado por cenários noturnos, distópicos e com muitas luzes neon.\n\n  Nesta versão, os quadrados do fundo se espalham por toda a tela, inclusive \n  ultrapassando as bordas (sangria). O antigo celular retrô foi substituído por \n  um smartphone moderno no canto superior esquerdo, simulando uma tela \n  inicial com ícones de aplicativos e uma \"dock\" inferior.\n\n  REGRA PRINCIPAL: A única função geométrica permitida para desenhar \n  as formas é o quad() - um polígono de quatro lados. \n\n  Para iniciantes em programação:\n  - Variáveis (let): Guardam valores que podemos usar várias vezes.\n  - Arrays ([]): Guardam listas de valores, como nossa paleta de cores.\n  - Laço de repetição (for): Executa um bloco de código repetidas vezes,\n    poupando a necessidade de escrever dezenas de linhas de código.\n  - quad(x1,y1, x2,y2, x3,y3, x4,y4): Cada par de (x,y) representa a \n    posição de uma \"ponta\" do quadrilátero na nossa tela.\n*/\n\nfunction setup() {\n  // createCanvas define o tamanho do nosso quadro (largura, altura).\n  createCanvas(800, 800);\n  \n  // noLoop avisa o p5.js que este é um desenho estático, \n  // ou seja, não precisa ser atualizado continuamente.\n  noLoop();\n  \n  // randomSeed congela a aleatoriedade. O número \"2077\" garante que\n  // toda vez que você der play, o desenho gerado será exatamente o mesmo.\n  randomSeed(2077);\n  \n  // background pinta o fundo do quadro com um azul escuro/cinza.\n  background(\"#0a0b14\");\n\n  // 1. DESENHANDO O FUNDO CYBERPUNK (Prédios e luzes abstratas)\n  desenharFundoNeon();\n\n  // 2. DESENHANDO O CELULAR MODERNO (No canto superior esquerdo)\n  desenharCelularModerno();\n}\n\n/*\n  FUNÇÃO: desenharFundoNeon()\n  Cria uma série de quadriláteros espalhados pela tela.\n  Os limites de posição foram expandidos para além das bordas (valores negativos \n  e maiores que width/height) para garantir que as laterais também sejam preenchidas.\n*/\nfunction desenharFundoNeon() {\n  // Paleta de cores neon para as luzes da cidade\n  let coresNeon = [\n    \"#ff00ff\", // Magenta\n    \"#00ffff\", // Ciano\n    \"#ffff00\", // Amarelo\n    \"#00ff66\", // Verde Neon\n    \"#222233\"  // Cinza escuro (para contraste e profundidade)\n  ];\n\n  // Mantemos a quantidade (45) para preencher a área\n  for (let i = 0; i < 45; i++) {\n    // Expandimos a área de sorteio para -50 até width+50 / height+50\n    // Isso faz com que os quadrados se espalhem por toda a extensão do canvas\n    let x = random(-50, width + 50);\n    let y = random(-50, height + 50);\n    \n    // Sorteamos a largura e a altura desse bloco\n    let w = random(40, 160);\n    let h = random(40, 160);\n    \n    // Em vez de uma grande deformação estrutural, usamos um \"tremor\" leve.\n    // Cada vértice do quadrado vai sair do lugar no máximo 10 pixels.\n    let tremor = 10;\n\n    // Sorteamos uma cor da nossa paleta\n    let corEscolhida = random(coresNeon);\n    fill(corEscolhida);\n    \n    // Dependendo da cor, ajustamos o contorno\n    if (corEscolhida === \"#222233\") {\n      stroke(\"#000000\"); // Bordas escuras para os blocos escuros\n      strokeWeight(2);\n    } else {\n      stroke(255); // Bordas brancas brilhantes para o neon\n      strokeWeight(1.5);\n    }\n\n    // Desenhamos o quadrilátero adicionando o leve \"tremor\" em cada ponto\n    quad(\n      x + random(-tremor, tremor), y + random(-tremor, tremor),                         // Ponto 1 (Superior Esquerdo)\n      x + w + random(-tremor, tremor), y + random(-tremor, tremor),                     // Ponto 2 (Superior Direito)\n      x + w + random(-tremor, tremor), y + h + random(-tremor, tremor),                 // Ponto 3 (Inferior Direito)\n      x + random(-tremor, tremor), y + h + random(-tremor, tremor)                      // Ponto 4 (Inferior Esquerdo)\n    );\n  }\n}\n\n/*\n  FUNÇÃO: desenharCelularModerno()\n  Desenha um smartphone simulando uma tela inicial de aplicativos\n  usando apenas a função quad(), no canto superior esquerdo da tela.\n*/\nfunction desenharCelularModerno() {\n  // Margem de 20 pixels da borda (mantendo a posição).\n  let baseX = 20;\n  let baseY = 20;\n  \n  // --- CORPO DO SMARTPHONE ---\n  // Celulares modernos são mais finos e altos, quase sem bordas (bezels)\n  fill(\"#111111\");     // Corpo escuro\n  stroke(\"#00ffff\");   // Borda ciano para destacar na arte\n  strokeWeight(3);\n  \n  quad(\n    baseX, baseY,               // Topo-esquerda\n    baseX + 140, baseY,         // Topo-direita\n    baseX + 140, baseY + 280,   // Embaixo-direita\n    baseX, baseY + 280          // Embaixo-esquerda\n  );\n\n  // --- TELA DO SMARTPHONE ---\n  fill(\"#1a1c29\");     // Fundo da tela imitando um \"dark mode\"\n  stroke(\"#ff00ff\");   // Borda interna magenta\n  strokeWeight(1.5);\n\n  quad(\n    baseX + 5, baseY + 5,       // Topo-esquerda da tela\n    baseX + 135, baseY + 5,     // Topo-direita da tela\n    baseX + 135, baseY + 275,   // Embaixo-direita da tela\n    baseX + 5, baseY + 275      // Embaixo-esquerda da tela\n  );\n\n  // --- NOTCH / CÂMERA FRONTAL ---\n  // O detalhe preto no topo da tela do celular\n  fill(\"#000000\");\n  stroke(\"#000000\");\n  \n  quad(\n    baseX + 40, baseY + 5,\n    baseX + 100, baseY + 5,\n    baseX + 100, baseY + 20,\n    baseX + 40, baseY + 20\n  );\n\n  // --- ÍCONES DE APLICATIVOS (Tela Inicial) ---\n  // Vamos desenhar uma grade de 4 linhas e 3 colunas para os apps\n  let appSize = 25;\n  let espacoX = 15;\n  let espacoY = 20;\n  \n  // Ponto de partida para o primeiro aplicativo\n  let inicioX = baseX + 18;\n  let inicioY = baseY + 45;\n\n  let coresApps = [\"#ff00ff\", \"#00ffff\", \"#ffff00\", \"#00ff66\"];\n  strokeWeight(1.5);\n\n  for (let linha = 0; linha < 4; linha++) {\n    for (let coluna = 0; coluna < 3; coluna++) {\n      \n      let appX = inicioX + (coluna * (appSize + espacoX));\n      let appY = inicioY + (linha * (appSize + espacoY));\n      \n      // Escolhemos as cores de forma alternada para os ícones\n      let corIndex = (linha + coluna) % 4;\n      fill(coresApps[corIndex]);\n      stroke(\"#ffffff\"); // Contorno branco nos apps\n      \n      quad(\n        appX, appY,\n        appX + appSize, appY,\n        appX + appSize, appY + appSize,\n        appX, appY + appSize\n      );\n    }\n  }\n\n  // --- DOCK INFERIOR ---\n  // Aquela barrinha no rodapé do celular onde ficam os apps principais\n  fill(\"#2b2d42\");\n  stroke(\"#222233\");\n  quad(\n    baseX + 10, baseY + 215,\n    baseX + 130, baseY + 215,\n    baseX + 130, baseY + 265,\n    baseX + 10, baseY + 265\n  );\n\n  // Desenhando 3 aplicativos na Dock\n  for (let i = 0; i < 3; i++) {\n    let appX = inicioX + (i * (appSize + espacoX));\n    let appY = baseY + 228;\n    \n    // Usamos cores em ordem diferente\n    fill(coresApps[(i + 2) % 4]);\n    stroke(\"#ffffff\");\n    \n    quad(\n      appX, appY,\n      appX + appSize, appY,\n      appX + appSize, appY + appSize,\n      appX, appY + appSize\n    );\n  }\n}\n```\n\nPor fim, na função desenharCelularModerno(), mudei os seguintes parâmetros: \n\nlet baseX = 50;\nlet baseY = 70;\n\nCuriosidade: a seed que o Gemini escolheu foi 2077, por causa do jogo Cyberpunk 2077. Como a ideia do prompt era criar uma estética baseada no gênero cyberpunk (com luzes de neon vibrantes, contrastes e fundos escuros), a IA achou que seria um easter egg divertido usar esse valor como seed da aleatoriedade.\n\nPor fim, a arte foi finalizada.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "MariaEduardaAraujo Artefato 1",
+      "id": "mariaeduardaaraujo-artefato-1",
+      "name": "MariaEduardaAraujo Artefato 1",
+      "origin": "native",
+      "lastModified": 1786803372947,
+      "title": "",
+      "tags": [],
+      "collection": "artefato da semana/1",
+      "description": "# Artefato da Semana 1: Introdutório\n\n**Autora:** Maria Eduarda Araújo  \n**DRE:** 119054059  \n\n## Sobre o Projeto\nDecidi usar a ferramenta que foi recomendada e que estava sendo usada no vídeo porque achei bem simples de usar. Montei o `.zip` exatamente com os mesmos nomes dos arquivos que estavam no exemplo que o professor deu. \n\n## Processo de Criação\nA principio, vi o que o Gemini me recomendava e rodei, mas o resultado ficou meio sem graça. Então, decidi começar a fazer especificações: fiz outro prompt para ele criar vários `quad`s em formato de coração e para variar a cor entre rosa e vermelho, porque achei que ficaria legal. Testei mais de um prompt até chegar em um que me deu o coração que eu queria e para cada prompt que testei abri um chat diferente. \n\nO prompt que me deu o coração que eu gostei foi o que está abaixo. Eu baseei meu prompt no exemplo do professor, então também pedi para ele colocar a explicação e a documentação. Quando eu coloquei o código que a IA me deu no editor, o coração já ficou exatamente como eu estava imaginando, então nem pedi para fazer alterações.\n\n## Meu prompt utilizado no Gemini: \n\n> \"Crie um sketch estático em p5.js. Apresente o resultado sob a forma de um único script em javascript.\n> \n> **Ideia visual:** Crie o desenho de um coração em estilo mosaico, composto por vários pequenos quadrados dispostos em uma grade. A paleta de cores deve ser linda e variada, alternando entre diferentes tons de vermelho (carmesim, rubi, vinho) e rosa (magenta, rosa choque, tons pastéis), com um fundo escuro contrastante e uma moldura ao redor.\n> \n> **Regra de desenho:** O sketch deve usar como primitiva de desenho apenas o comando `quad`. É permitido usar comandos de estilização como `stroke`, `fill`, `strokeWeight`, etc.\n> \n> O programa fonte deve ser bem documentado e comentado para ser explicado para uma plateia de iniciantes em programação de computadores.\"",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "README.md",
+        "sketch.js",
+        "style.css",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "artefato1 joao galetti",
+      "id": "artefato1-joao-galetti",
+      "name": "artefato1 joao galetti",
+      "origin": "native",
+      "lastModified": 1786747760954,
+      "title": "",
+      "tags": [],
+      "collection": "artefato da semana/1",
+      "description": "João Galetti Carvalho - DRE: 122034351\n\nTrabalho 100% sem IA\n\nGrid de quadrados que se comprimem e descomprimem verticalmente no tempo, alternando estado pelas linhas.\n\nParâmetros variáveis através de constantes declaradas no começo do programa:\n\nTamanho do quadrado: SQUARE_SIZE\nNúmero de linhas: N_ROWS\nNúmero de Colunas: N_COLUMNS\nTamanho da borda horizontal: WIDTH_BORDER\nTamanho da borda vertical: HEIGHT_BORDER\n\nVárias outras ideias vieram para continuar incrementando o desenho e suas interações como interação com o mouse, outros movimentos, adição de aleatoriedade e velocidade variável via parâmetro",
+      "hasThumb": true,
+      "files": [
+        "README.md",
+        "thumbail.png",
+        "my-result.js",
+        "index.html",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "helena giovanna artefato 1 introdutrio",
+      "id": "helena-giovanna-artefato-1-introdutrio",
+      "name": "helena giovanna artefato 1 introdutrio",
+      "origin": "native",
+      "lastModified": 1786747538099,
+      "title": "Cidade futurista durante a noite - usando quads",
+      "tags": [
+        "quads",
+        "ai",
+        "chatgpt"
+      ],
+      "collection": "artefato da semana/1",
+      "description": "Um sketch feito pelo ChatGPT usando apenas quads.\n\nAutora: Helena Giovanna\n\nPrompt usado: \"Crie um sketch estático, sem animação, em p5.js, apresentando o resultado como um único script JavaScript que possa ser colado e executado diretamente no editor.p5js.org.\n\nO tema visual do sketch será uma cidade futurista durante a noite, vista de frente, com diferentes prédios, janelas iluminadas, ruas e reflexos.\n\nRegras obrigatórias\n\n* Utilize como única primitiva geométrica de desenho o comando `quad()` do p5.js.\n* Não utilize `rect()`, `ellipse()`, `circle()`, `triangle()`, `line()`, `arc()` ou outras primitivas geométricas.\n* É permitido utilizar comandos de estilização, como `fill()`, `stroke()`, `noStroke()`, `strokeWeight()`, entre outros.\n* O sketch deve ser completamente estático, portanto não deve possuir animações ou elementos que mudem com o tempo.\n* Utilize um canvas de 800 × 600 pixels.\n\nComposição visual\n\nConstrua a imagem utilizando diferentes quadriláteros:\n\n* O fundo deve representar um céu noturno.\n* Crie vários prédios com alturas e larguras diferentes.\n* Alguns prédios podem apresentar pequenas inclinações ou perspectivas, aproveitando os quatro pontos independentes do `quad()`.\n* As janelas devem ser pequenos quadriláteros organizados em padrões, com algumas iluminadas e outras apagadas.\n* Na parte inferior da imagem, crie uma rua ou superfície que apresente sensação de perspectiva.\n* Utilize quadriláteros alongados para criar reflexos das luzes dos prédios sobre a rua.\n* Acrescente alguns elementos abstratos no céu construídos também exclusivamente com `quad()`.\n* Procure criar sensação de profundidade utilizando sobreposição, diferenças de tamanho e variações de tonalidade.\n\nOrganização do código\n\nO código deve ser simples e adequado para estudantes iniciantes em programação.\n\nComente o programa em português explicando:\n\n1. a criação do canvas;\n2. a definição das cores;\n3. como funciona o comando `quad()`;\n4. quais grupos de quadriláteros formam cada elemento da imagem;\n5. como as coordenadas dos quatro vértices determinam o formato de cada quadrilátero.\n\nEvite estruturas excessivamente complexas. Dê preferência a código claro e fácil de modificar posteriormente.\n\nAo final, entregue somente o código JavaScript completo, pronto para ser copiado para o editor do p5.js.\"",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "Artefato 1 Gabriella Murta",
+      "id": "artefato-1-gabriella-murta",
+      "name": "Artefato 1   Gabriella Murta",
+      "origin": "native",
+      "lastModified": 1786747456252,
+      "title": "Composição com quadros",
+      "tags": [
+        "quads",
+        "ia",
+        "generative"
+      ],
+      "collection": "artefato da semana/1",
+      "description": "Um sketch feito pelo GPT usando somente quads.\n\nAutor: Gabriella Murta\n\nPrompt usado: Crie um sketch estático (sem animação) em p5.js. Apresente o resultado sob a forma de um único script em javascript a ser colado num ambiente de desenvolvimento como o editor.p5js.org. O sketch deve usar como primitiva de desenho apenas o comando quad. É permitido usar comandos de estilização como stroke, fill, strokeWeight, etc. O programa fonte deve ser documentado para ser explicado para uma plateia de iniciantes em programação de computadores. Use aleatoriedade mas deve seguir as regras dos trabalhos artísticos de Wassily Kandinsky.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "mellow garden",
+      "id": "mellow-garden",
+      "name": "mellow garden",
+      "origin": "native",
+      "lastModified": 1786747379321,
+      "title": "Composição com quads",
+      "tags": [
+        "quads",
+        "ai",
+        "chatgpt",
+        "generative"
+      ],
+      "collection": "artefato da semana/1",
+      "description": "Um sketch feito pelo ChatGPT usando apenas quads.\n\nAutor: Claudio Esperança\n\nPrompt usado: Crie um sketch estático (sem animação) em p5.js. Apresente o resultado sob a forma de um único script em javascript a ser colado num ambiente de desenvolvimento como o editor.p5js.org. O sketch deve usar como primitiva de desenho apenas o comando quad. É permitido usar comandos de estilização como stroke, fill, strokeWeight, etc. O programa fonte deve ser documentado para ser explicado para uma plateia de iniciantes em programação de computadores. Use aleatoriedade mas de forma que a seguir regras de composição usadas em desenho artístico.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "2026 08 14 Carolina Abdu",
+      "id": "2026-08-14-carolina-abdu",
+      "name": "2026 08 14 Carolina Abdu",
+      "origin": "native",
+      "lastModified": 1786747226224,
+      "title": "Sketch de um Girassol usando `quad()`",
+      "tags": [],
+      "collection": "artefato da semana/1",
+      "description": "**Autor:** Carolina Abdu\n\n\n**Prompt usado no ChatGPT:**\nCrie um sketch estático em p5.js de um girassol. Apresente o resultado sob a forma de um único script em javascript a ser colado num ambiente de desenvolvimento como o editor.p5js.org. O sketch deve usar como primitiva de desenho apenas o comando quad. É permitido usar comandos de estilização como stroke, fill, strokeWeight, etc. \n\nDepois precisei enviar outro prompt pois ele usou funções como seno e cosseno, então para manter a simplicidade do trabalho, investiguei e pedi para ele adptar.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "README.md",
+        "sketch.js",
+        "style.css",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "Artefato1ArturTaboada",
+      "id": "artefato1arturtaboada",
+      "name": "Artefato1ArturTaboada",
+      "origin": "native",
+      "lastModified": 1786747175454,
+      "title": "",
+      "tags": [],
+      "collection": "artefato da semana/1",
+      "description": "# Composição Geométrica com Quadriláteros\n\nEste sketch cria uma composição abstrata utilizando apenas a primitiva `quad()` do p5.js. O objetivo foi explorar princípios de composição artística, como repetição, variação, hierarquia e contraste, mantendo um estilo geométrico minimalista e organizado.\n\n## Como o sketch funciona\n- O código percorre uma estrutura lógica para desenhar formas, variando sua posição e tamanho.\n- Utiliza-se uma paleta de cores definida para garantir a harmonia visual.\n- A função `linhaquad()` automatiza o preenchimento de cada \"linha\" de elementos com uma cor diferente da paleta.\n- Não se utiliza bordas (`noStroke()`) para obter um visual mais limpo.\n\n## Autor\nArtur Taboada Dios Carvalho\n\n## Como visualizar este projeto\n\n**Usando o ambiente online (p5front)**\n1. Acesse o ambiente de desenvolvimento utilizado na disciplina: [https://esperanc.github.io/p5front/](https://esperanc.github.io/p5front/).\n2. Copie todo o conteúdo do arquivo `sketch.js` deste zip e cole na área de edição de código do site.\n3. O resultado será renderizado na tela de visualização após o botão \"Run\" ser clicado.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "thumbnail.png",
+        "README.md"
+      ]
+    },
+    {
+      "folder": "artefato 01 quadrilateros",
+      "id": "artefato-01-quadrilateros",
+      "name": "artefato 01 quadrilateros",
+      "origin": "native",
+      "lastModified": 1786746730461,
+      "title": "",
+      "tags": [],
+      "collection": "artefato da semana/1",
+      "description": "# Marcha Digital — Desenho com Quadriláteros\n\n**Autor:** Victor Hugo Figueiredo Pereira da Silva\n\n**Artefato da semana 01** — tema: *desenho com quadriláteros* (primitiva `quad` do p5.js)\n\n![thumbnail](thumbnail.png)\n\n## Ideia do trabalho\n\nO sketch é uma releitura semiabstrata da famosa ilustração **\"A Marcha do\nProgresso\"** (aquela sequência em que uma figura vai, passo a passo, se\ntornando mais ereta e mais alta). Aqui a marcha vai da **Idade da Pedra**\naté a **fusão do ser humano com a Inteligência Artificial**, mostrando a\nevolução das ferramentas e da tecnologia que o ser humano usa.\n\nDa esquerda para a direita, as 5 estações da marcha são:\n\n1. **Hominídeo agachado com um osso** — a primeira ferramenta da história (Idade da Pedra).\n2. **Homo erectus com uma lança** — ferramenta composta e postura ereta.\n3. **Trabalhador da Revolução Industrial** — máquina a engrenagem, alavanca e chaminé.\n4. **Pessoa em frente ao computador** — a era digital pessoal.\n5. **Fusão humano + Inteligência Artificial** — corpo com gradiente \"digital\" e um halo de rede neural (nós conectados por cabos) pairando sobre a cabeça.\n\nDois recursos visuais reforçam a ideia de evolução, como na imagem original:\na postura das figuras fica cada vez mais ereta e a altura aumenta a cada\nestação; e o céu passa de um amanhecer quente e terreno (à esquerda, Idade\nda Pedra) para uma \"noite digital\" neon, com estrelas que viram pontinhos\nde dado (à direita, era da IA).\n\n## Prompt utilizado\n\nSegui o modelo de prompt sugerido no enunciado, adaptado para descrever a\nideia acima:\n\n> Crie um sketch estático (sem animação) em p5.js, em um único script\n> JavaScript pronto para colar no editor.p5js.org. Use apenas a primitiva\n> `quad` para desenhar (estilização com `stroke`, `fill`, `strokeWeight`\n> etc. é permitida). Tema: uma arte semiabstrata inspirada na icônica\n> imagem \"A Marcha do Progresso\", mostrando a evolução das ferramentas e\n> da tecnologia usadas pelo ser humano — da Idade da Pedra até uma figura\n> fundida com inteligência artificial — em estilo low-poly, com paleta de\n> cores evoluindo de tons terrosos para tons digitais neon. Comente o\n> código para iniciantes em programação.\n\n## Regra técnica (só `quad`)\n\nA única primitiva de desenho usada em todo o sketch é `quad()`. Não há\n`ellipse`, `rect`, `line` ou `triangle` em nenhum lugar do código — inclusive\nos \"círculos\" (cabeças, engrenagem, sol, halo de dados) e os \"retângulos\"\n(monitor, mesa, chão) são construídos combinando vários quadriláteros\npequenos:\n\n- `quadRect(x, y, w, h)` — um retângulo é só um quadrilátero com 4 ângulos retos.\n- `quadLimb(x1, y1, x2, y2, w1, w2)` — desenha um \"membro\" afunilado entre\n  dois pontos (braço, perna, lança, cabo, alavanca...). Quando a largura\n  numa das pontas é `0`, o quadrilátero degenera numa ponta bem fina — é\n  assim que a ponta de lança e os \"cabos\" da rede neural são desenhados.\n- `quadDisc(cx, cy, r, segments, corA, corB)` — aproxima um círculo\n  fatiando-o em vários quadriláteros bem finos (como pedaços de pizza),\n  usado nas cabeças, na engrenagem, no sol e no halo de IA.\n\nO sketch é **estático**: todo o desenho acontece uma única vez dentro de\n`setup()`, e `noLoop()` garante que nada seja redesenhado depois — por isso\nnão existe função `draw()` no arquivo.\n\nO código-fonte (`sketch.js`) está comentado em português, pensado para ser\nexplicado a uma plateia iniciante em programação.\n\n## Como executar\n\n1. Abra [editor.p5js.org](https://editor.p5js.org).\n2. Cole o conteúdo de `sketch.js` no editor.\n3. Rode o sketch (▶). A imagem é desenhada uma única vez, sem animação.\n\n(Também é possível abrir `index.html` diretamente no navegador — ele já\ncarrega o p5.js e o `sketch.js`.)\n\n## Arquivos deste pacote\n\n- `sketch.js` — o script p5.js (única primitiva de desenho: `quad`).\n- `index.html` — página simples para rodar `sketch.js` fora do editor.\n- `thumbnail.png` — imagem representativa do resultado gerado pelo sketch.\n- `README.md` — este arquivo.",
+      "hasThumb": true,
+      "files": [
+        "sketch.js",
+        "index.html",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "luz noceda quads (1)",
+      "id": "luz-noceda-quads-1",
+      "name": "luz noceda quads (1)",
+      "origin": "native",
+      "lastModified": 1786746591520,
+      "title": "Luz Noceda reimaginada com quadriláteros",
+      "tags": [
+        "chatgpt",
+        "luz nocedo",
+        "the owl house",
+        "witches"
+      ],
+      "collection": "artefato da semana/1",
+      "description": "O chatgpt é muito melhor nisso que o Gemini\n\nEu tive a ideia de reimaginar uma cena de um desenho que eu gosto, como ficaria com quadriláteros.\n\nAutor: Thomas Cardoso de Miranda\n\nPrompt usado:\n\nCrie um sketch estático (sem animação) em p5.js. Apresente o resultado sob a forma de um único script em javascript a ser colado num ambiente de desenvolvimento como o editor.p5js.org. O sketch deve usar como primitiva de desenho apenas o comando quad. É permitido usar comandos de estilização como stroke, fill, strokeWeight, etc. O programa fonte deve ser documentado para ser explicado para uma plateia de iniciantes em programação de computadores. Gostaria que fizesse uma reinterpretação dessa imagem seguindo as diretrizes apresentadas. \n\nAqui está a imagem usada como exemplo:\n\nhttps://i.pinimg.com/originals/bf/d3/f1/bfd3f1bc996220a087324c9deecba58e.jpg",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "artefato 1 samuel vitor",
+      "id": "artefato-1-samuel-vitor",
+      "name": "artefato 1 samuel vitor",
+      "origin": "native",
+      "lastModified": 1786746439057,
+      "title": "",
+      "tags": [],
+      "collection": "artefato da semana/1",
+      "description": "# Noite em Quadriláteros\n\n**Autor:** Samuel Vitor Pedro e Araujo\n**Disciplina:** Programação Criativa  \n**Atividade:** Artefato da semana 1 — Desenho com quadriláteros\n\n## Descrição\n\nEste trabalho é um sketch estático em p5.js inspirado na atmosfera noturna, nas cores vibrantes e no movimento das pinceladas de *A Noite Estrelada*, de Vincent van Gogh. A composição apresenta um céu azul profundo, estrelas amarelas, uma lua crescente luminosa, grandes espirais, montanhas, uma aldeia silenciosa e um cipreste escuro em primeiro plano.\n\nA regra criativa foi usar `quad()` como a única primitiva de desenho. O próprio fundo, as casas, os telhados, as janelas, as estrelas, a lua, as montanhas, o cipreste, os brilhos e todas as texturas são formados por quadriláteros.\n\n## Execução\n\nSolicitei ao ChatGPT 5.6 Luna xHigh:\n*me de uma ideia criativa de sketch estatico com as seguites limitações 'O sketch deve usar como primitiva de desenho apenas o comando quad. É permitido usar comandos de estilização como stroke, fill, strokeWeight, etc.'*\n\nRecebi a idéia \"A cidade refletida numa poça\" e lembrei de noite estrelada, então segui:\n*me de um prompt pra gerar noite estrelada, de van gogh, com as limitações da mensagem anterior*\n\nO retorno foi:\n\n*Crie um sketch estático em p5.js inspirado na atmosfera de A Noite Estrelada, de Vincent van Gogh, com céu noturno azul profundo, estrelas amarelas intensas, uma lua luminosa, espirais no céu, uma aldeia silenciosa e um grande cipreste escuro em primeiro plano.*\n*Existe uma limitação rígida: a única primitiva de desenho permitida é quad(). Todas as formas visíveis — estrelas, lua, casas, janelas, montanhas, cipreste, espirais, brilho e textura — devem ser construídas exclusivamente com quadriláteros. Use quads finos, sobrepostos, rotacionados e deformados para criar pinceladas curvas e orgânicas.*  \n*Não use ellipse(), circle(), rect(), line(), triangle(), arc(), point(), imagens ou SVGs. Comandos de estilização como fill(), stroke(), strokeWeight(), noStroke(), transparência e transformações são permitidos. O resultado deve parecer uma pintura feita com pinceladas geométricas, mantendo a composição e as cores vibrantes associadas à obra de Van Gogh, sem animação e sem interação.*\n\nEnviei ao ChatGPT 5.6 Sol Ultra que gerou p5.js.\n## Ideia e processo\n\nO desenho transforma pequenos quads em \"pinceladas geométricas\". Há três técnicas principais:\n\n1. **Pinceladas afiladas:** um quadrilátero estreito liga dois pontos, com uma largura diferente em cada extremidade.\n2. **Fitas curvas:** uma sequência de quads encostados acompanha pontos calculados matematicamente e cria a ilusão de uma curva ou espiral.\n3. **Mosaicos radiais:** setores quadrilaterais organizados em anéis formam os halos, as estrelas e a lua.\n\nAs formas são sobrepostas com diferentes tons de azul, amarelo, verde e transparência. Um gerador pseudoaleatório com semente fixa varia as pinceladas, mas preserva exatamente o mesmo resultado a cada execução.\n\nO sketch produz **6.287 quadriláteros**, não contém animação nem interação e chama `noLoop()` após terminar a pintura.\n\n## Arquivos\n\n- `sketch.js`: script completo, comentado em português para facilitar a leitura por iniciantes;\n- `thumbnail.png`: imagem representativa do resultado final;\n- `README.md`: esta descrição.\n\n## Como executar\n\n### p5Front\n\n1. Abra o [p5Front](https://esperanc.github.io/p5front/).\n2. Crie um novo sketch.\n3. Copie todo o conteúdo de `sketch.js` para o editor.\n4. Execute o sketch e confira o resultado.\n\n### Editor oficial do p5.js\n\n1. Abra o [editor.p5js.org](https://editor.p5js.org/).\n2. Crie um novo sketch.\n3. Substitua o conteúdo de `sketch.js` pelo código deste trabalho.\n4. Clique em **Play**.\n\n## Restrição técnica\n\nA única chamada que gera geometria no canvas é `quad()`, centralizada na função auxiliar `patch()`. Não são utilizadas outras primitivas, imagens, SVGs, animações ou eventos de entrada.",
+      "hasThumb": true,
+      "files": [
+        "sketch.js",
+        "README.md",
+        "thumbnail.png",
+        "index.html"
+      ]
+    },
+    {
+      "folder": "sketch estatico de genebra",
+      "id": "sketch-estatico-de-genebra",
+      "name": "sketch estatico de genebra",
+      "origin": "native",
+      "lastModified": 1786746109486,
+      "title": "Sketch Estático de Genebra",
+      "tags": [
+        "quads",
+        "ai",
+        "claude"
+      ],
+      "collection": "artefato da semana/1",
+      "description": "Um sketch feito com Claude Ai usando apenas quads. \n\nAutora: Rafaella Lenzi Romano\n\nPrompt usado: Crie um sketch estático (sem animação) em p5.js que se assemelhe à paisagem do lago de Genebra com o jet d'eau e as montanhas. Apresente o resultado sob a forma de um único script em javascript a ser colado num ambiente de desenvolvimento como o editor.p5js.org. O sketch deve usar como primitiva de desenho apenas o comando quad. É permitido usar comandos de estilização como stroke, fill, strokeWeight, etc. O programa fonte deve ser documentado para ser explicado para uma plateia de iniciantes em programação de computadores. \n\nLink da imagem enviada: https://share.google/E8wO1ASHej2dTpFOZ \n\nAlém dos prompts iniciais, foram feitas iterações para adicionar telhados aos prédios e para melhorar o aspecto da margem do lago, do arco-íris e do barco de passeio. Ajustes de escala, cor, posição e etc foram feitos manualmente.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "despair",
+      "id": "despair",
+      "name": "despair",
+      "origin": "native",
+      "lastModified": 1786746032714,
+      "title": "Despair",
+      "tags": [
+        "Generative",
+        "AI",
+        "ChatGPT",
+        "Quads",
+        "Games<league of legends",
+        "Trauma"
+      ],
+      "collection": "artefato da semana/1",
+      "description": "replicação de uma captura de tela feita no jogo League of Legends.\n\nAutor: Paulo Barbosa.\n\nPrompt utilizado:\n\nCrie um sketch estático (sem animação) em p5.js. Apresente o resultado sob a forma de um único script em javascript a ser colado num ambiente de desenvolvimento como o editor.p5js.org. O sketch deve usar como primitiva de desenho apenas o comando quad. É permitido usar comandos de estilização como stroke, fill, strokeWeight, etc. replique uma captura de tela do jogo league of legends",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "cavaloxadrez",
+      "id": "cavaloxadrez",
+      "name": "cavaloxadrez",
+      "origin": "native",
+      "lastModified": 1786745865910,
+      "title": "Cavalo Xadrez",
+      "tags": [],
+      "collection": "artefato da semana/1",
+      "description": "### Autor: Nick Correa\n\nRepresentação de possíveis movimentos de um cavalo num tabuleiro de xadrez. ChatGPT foi usado para o código iterativo de pintar o tabuleiro. O cavalo foi feito manualmente calculando coordenadas no figma a partir de uma imagem de exemplo também gerada por IA.\n\n### Prompts usados:\n\n\"escreva um código usando a primitiva quad para p5 front para desenhar um tabuleiro de xadrez\"\n\n\"quero que \ndesenhe um 'cavalo' usando apenas a primitiva quad em uma das casas do tabuleiro\nAs casas que o cavalo poderia se mover devem estar em verde\"",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "Artefato1 Natan Azevedo Gomes",
+      "id": "artefato1-natan-azevedo-gomes",
+      "name": "Artefato1 Natan Azevedo Gomes",
+      "origin": "native",
+      "lastModified": 1786745709555,
+      "title": "Artefato 1 - quads",
+      "tags": [
+        "quads",
+        "generative",
+        "ai",
+        "gemini"
+      ],
+      "collection": "artefato da semana/1",
+      "description": "Um sketch feito pelo Gemini apenas com quads.\n\nAutor: Natan Azevedo Gomes\n\nPrompt: Crie um sketch estático (sem animação) em p5.js. Apresente o resultado sob a forma de um único script em javascript a ser colado num ambiente de desenvolvimento como o editor.p5js.org. O sketch deve usar como primitiva de desenho apenas o comando quad. É permitido usar comandos de estilização como stroke, fill, strokeWeight, etc. O programa fonte deve ser documentado para ser explicado para uma plateia de iniciantes em programação de computadores. Pode criar quadriláteros sobrepostos e dispersos, de tamanhos e orientações diferentes. Utilize uma paleta de cores pastel com uma saturação baixa.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "artefato 1 Murilo Jorge de Figueiredo",
+      "id": "artefato-1-murilo-jorge-de-figueiredo",
+      "name": "artefato 1   Murilo Jorge de Figueiredo",
+      "origin": "native",
+      "lastModified": 1786745624826,
+      "title": "",
+      "tags": [],
+      "collection": "artefato da semana/1",
+      "description": "# Artefato 2 — Quadriláteros Aninhados\n\n**Autor:** Murilo Jorge de Figueiredo\n\n![thumbnail](thumbnail.png)\n\n## Descrição\n\nSketch estático em **p5.js** que usa **exclusivamente a primitiva `quad()`** como\ncomando de desenho. Os demais comandos são apenas de estilização (`fill`,\n`stroke`, `strokeWeight`, `strokeJoin`, `background`) e de sorteio (`random`,\n`randomSeed`).\n\nA regra construtiva é simples e cabe em duas frases:\n\n> Sorteamos 4 pontos aleatórios dentro de um quadrado de lado **n** e ligamos os\n> quatro com um `quad()`. Em seguida o quadrado **encolhe** (`n` vira\n> `n × FATOR`) e tudo se repete — de modo que cada quadrilátero só pode nascer\n> em um espaço **menor** do que o do anterior.\n\nComo o espaço de sorteio nunca cresce, cada forma cai necessariamente dentro da\nregião da anterior. Empilhadas, as camadas produzem um túnel que gira para\ndentro: o acaso decide a forma de cada peça, mas a regra de encolhimento decide\na estrutura inteira. A tela é dividida em uma grade 3 × 3 e cada célula recebe\numa pilha independente — mesma regra, sorteios diferentes.\n\n## Como funciona\n\n1. **O quadrado de sorteio.** A cada camada existe um quadrado imaginário\n   centrado em (cx, cy) e de lado `n`. Ele nunca é desenhado; serve apenas para\n   delimitar onde os pontos podem cair.\n\n2. **Os 4 pontos.** Cada vértice é sorteado em um **canto** desse quadrado: o\n   vértice superior esquerdo só pode cair numa caixinha junto ao canto superior\n   esquerdo, e assim por diante. Duas consequências: os pontos ficam sempre em\n   ordem ao redor do centro (o quadrilátero nunca se cruza em forma de\n   gravata-borboleta) e cada forma sai como um quadrado amassado, e não como um\n   triângulo espetado. O parâmetro `CANTO` controla o tamanho dessas caixinhas —\n   ou seja, quanta liberdade o acaso tem.\n\n3. **O encolhimento.** Depois de desenhar, faz-se `n = n × FATOR`. Com\n   `FATOR = 0.89`, cada camada perde 11% do lado. É uma progressão geométrica:\n   ao fim de 20 camadas o quadrado tem cerca de 10% do tamanho inicial.\n\n4. **A cor.** Cada pilha sorteia um ponto de partida na paleta e caminha por ela\n   uma cor por camada, o que produz a sensação de rotação cromática para dentro.\n   O contorno preto grosso separa as camadas e faz a sobreposição ficar legível.\n\n5. **Determinismo.** `randomSeed(SEMENTE)` garante que o sorteio seja sempre o\n   mesmo — o desenho é aleatório, mas reprodutível.\n\n## Como executar\n\n**Opção 1 — editor online:** abra <https://editor.p5js.org>, cole o conteúdo de\n`sketch.js` e clique em *Play*.\n\n**Opção 2 — local:** abra o arquivo `index.html` no navegador (ele já carrega o\np5.js por CDN).\n\nCom o sketch rodando, aperte a tecla **S** para salvar um PNG da imagem.\n\n## Experimente mudar\n\nTodos os parâmetros estão no topo do `sketch.js`, comentados um a um:\n\n- `SEMENTE` — troque o número e todos os pontos mudam, no mesmo estilo.\n- `FATOR` — perto de 1 o quadrado encolhe devagar e as camadas se sobrepõem\n  muito; perto de 0.7 o desenho mergulha rápido para o centro.\n- `CANTO` — 0.2 dá quadriláteros quase quadrados e comportados; 1.0 dá formas\n  retorcidas e pontudas.\n- `CAMADAS` — a profundidade do túnel.\n- `GRADE` — 1 devolve uma única pilha gigante ocupando toda a tela; 5 ou 6\n  transformam o desenho em um mosaico de pilhas pequenas.\n\n## Arquivos\n\n```\nsketch.js       o sketch em p5.js, comentado para iniciantes\nindex.html      página para rodar o sketch localmente\nthumbnail.png   imagem representativa do resultado\nREADME.md       este arquivo\n```",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "README.md",
+        "sketch.js",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "Artefato 1 Manoel V C Carvalho",
+      "id": "artefato-1-manoel-v-c-carvalho",
+      "name": "Artefato 1   Manoel V C Carvalho",
+      "origin": "native",
+      "lastModified": 1786745398740,
+      "title": "Saffron City Night",
+      "tags": [
+        "AI",
+        "Chat GPT",
+        "Pokemon"
+      ],
+      "collection": "artefato da semana/1",
+      "description": "Sketch feito pelo Chat GPT usando apenas quads.\n\nAutor: Manoel V C Carvalho\n\nPrompt usado: Crie um sketch estático (sem animação) em p5.js. Apresente o resultado sob a forma de um único script em javascript a ser colado num ambiente de desenvolvimento como o editor.p5js.org. O sketch deve usar como primitiva de desenho apenas o comando quad. O sketch dever conter tonalidades de rosa, roxo, fúcsia e lilás, criando um skyline (Panorama Urbano) usando como base a cidade de Saffron da franquia de jogos Pokémon, usar prioritariamente o modelo da cidade presente no jogo Let´s Go Pikachu. É permitido usar comandos de estilização como stroke, fill, strokeWeight, etc. O programa fonte deve ser documentado para ser explicado para uma plateia de iniciantes em programação de computadores.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "thumbnail.png",
+        "README.md"
+      ]
+    },
+    {
+      "folder": "Artefato 1 Flip LuizPacheco",
+      "id": "artefato-1-flip-luizpacheco",
+      "name": "Artefato 1 Flip LuizPacheco",
+      "origin": "native",
+      "lastModified": 1786744994012,
+      "title": "Flip",
+      "tags": [
+        "Quads",
+        "ClaudeAI",
+        "Movimento",
+        "CoCriatividade"
+      ],
+      "collection": "artefato da semana/1",
+      "description": "Autor: Luiz Pacheco \n\nO Sketch utiliza diversos quadriláteros estáticos para representar movimento. Foi criado com o auxílio da IA Claude com ajustes manuais feitos pelo autor.\n\nPrompt utilizado:\n\nCrie um sketch estático (sem animação) em p5.js. Apresente o resultado sob a forma de um único script em javascript a ser colado num ambiente de desenvolvimento como o editor.p5js.org. O sketch deve usar como primitiva de desenho apenas o comando quad. É permitido usar comandos de estilização como stroke, fill, strokeWeight, etc. O programa fonte deve ser documentado para ser explicado para uma plateia de iniciantes em programação de computadores. \nA arte final do sketch deverá ser em um formato de um quadro em retrato. O quadro será uma ilusão de ótica. O quadrilátero mais exterior deverá ter uma margem do Canva,  este quadrilátero será dividido exatamente ao meio com um retangulo fino cujo comprimento irá de ponta a ponta do quadrilátero exterior. Os retângulos restantes, de cima e de baixo, deverão ter quadriláteros internos nos quais a base superior irá diminuir cada vez mais. Crie uma fórmula para que a diminuição da base superior seja constante até chegar perto do retângulo que divide o quadrilátero maior ao meio, a base inferior dos trapézios internos deverão manter a largura da figura exterior, de forma que sua base inferior será constante e igual. O mesmo desenho deverá ser repetido na parte inferior, abaixo do retâgulo que divide a figura maior. A ideia é que pareça um calendário flip (sem nenhum número) e que suas folhas estejam constantemente virando. Para o observador as folhas poderão estar virando tanto de um lado quanto do outro, por isto importante manter a simetria. Os quadriláteros desenhados deverão apenas ter sua cor no traço, sem nenhum preenchimento interno, deixando o canva visível.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "artefato #01 Leo Nunes",
+      "id": "artefato-01-leo-nunes",
+      "name": "artefato #01   Leo Nunes",
+      "origin": "native",
+      "lastModified": 1786744834580,
+      "title": "Composição com quads",
+      "tags": [
+        "quads",
+        "ai",
+        "chatgpt",
+        "generative"
+      ],
+      "collection": "artefato da semana/1",
+      "description": "Um sketch feito pelo ChatGPT usando apenas quads. E modificado por um aluno.\n\nAutor: Claudio Esperança\nCoAutor: Leonardo Nunes Guimarães Costa\n\n\n\nPrompt usado: Crie um sketch estático (sem animação) em p5.js. Apresente o resultado sob a forma de um único script em javascript a ser colado num ambiente de desenvolvimento como o editor.p5js.org. O sketch deve usar como primitiva de desenho apenas o comando quad. É permitido usar comandos de estilização como stroke, fill, strokeWeight, etc. O programa fonte deve ser documentado para ser explicado para uma plateia de iniciantes em programação de computadores. Use aleatoriedade mas de forma que a seguir regras de composição usadas em desenho artístico.\n\n\nModificações Feitas: apaguei os comentários e construí uma versão mais \"clean\" do trabalho.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "README.md",
+        "sketch.js",
+        "style.css",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "artefato 1",
+      "id": "artefato-1",
+      "name": "artefato 1",
+      "origin": "native",
+      "lastModified": 1786744577994,
+      "title": "",
+      "tags": [],
+      "collection": "artefato da semana/1",
+      "description": "# Desenho com Quadriláteros\n\n**Nome:** Laura Daflon dos Santos Santana Meira\n**DRE:** 120053993\n\n## Descrição\n\nEste sketch foi desenvolvido em p5.js como parte da atividade **\"Desenho com Quadriláteros\"**. A composição utiliza apenas o `quad()` para desenhar as formas visuais e a ideia foi criar um padrão geométrico formado por quadriláteros coloridos organizados em faixas diagonais. As core foram escolhidas a partir de preferência pessoal.\n\n## Construção do desenho\n\nO desenho é construído a partir de um nested loop, onde o loop interno faz a repetição dos quadrados em uma linha diagonal, enquanto o loop externo desloca essa linha em outra linha diagonal. O objetivo era preencher todo espaço disponível.\n\n## Recursos utilizados\n\n- p5.js\n- `quad()`\n- `fill()` \n- `noStroke()` para tirar a borda",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "README.md",
+        "sketch.js",
+        "style.css",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "quadflu",
+      "id": "quadflu",
+      "name": "quadflu",
+      "origin": "native",
+      "lastModified": 1786744015824,
+      "title": "",
+      "tags": [
+        "quads",
+        "flu",
+        "chatgpt",
+        "ai",
+        "generative"
+      ],
+      "collection": "artefato da semana/1",
+      "description": "Um sketch feito pelo ChatGPT usando apenas quads\n\nAutor: João Pedro Moretti Fontes Ferreira\n\nprompt usado: \"Crie um sketch estático (sem animação) em p5.js. Apresente o resultado sob a forma de um único script em JavaScript a ser colado no editor.p5js.org.\n\nO tema da arte deve ser inspirado no Fluminense Football Club, especialmente em suas cores tradicionais: verde, branco e grená. Não quero simplesmente reproduzir o escudo do clube; quero criar uma composição artística e abstrata que remeta ao Fluminense.\n\nRegras obrigatórias:\n\nA única primitiva geométrica de desenho permitida é quad().\nNão use rect(), ellipse(), triangle(), line(), arc(), beginShape() ou outras primitivas de desenho.\nÉ permitido usar comandos de estilização como fill(), stroke(), strokeWeight() etc.\nO sketch deve ser completamente estático, sem animação.\nTodo o desenho deve ser construído exclusivamente pela combinação de quadriláteros.\nO código deve funcionar diretamente no editor.p5js.org.\nOrganize o código de forma simples e clara e documente-o com comentários para que possa ser explicado a uma plateia de iniciantes em programação.\n\nIdeia visual:\nCrie uma composição elegante formada por vários quadriláteros que lembrem faixas diagonais de uma camisa ou bandeira tricolor. Use predominantemente verde, branco e grená, alternando essas cores de maneira organizada. Os quadriláteros podem variar levemente de tamanho, posição e inclinação para criar uma composição dinâmica, mas devem manter uma aparência harmoniosa.\n\nQuero que a arte tenha uma identidade visual que lembre o Fluminense sem precisar desenhar literalmente seu escudo, jogadores ou outros símbolos. Dê preferência a uma composição geométrica moderna e artística, com profundidade visual criada apenas pela sobreposição, disposição e cores dos quadriláteros.\n\nInclua também um fundo coerente com a composição.\n\nNo final, forneça apenas o código JavaScript completo, pronto para ser copiado para o editor.p5js.org.\"",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
     {
       "folder": "p5 brush demo",
       "id": "p5-brush-demo",
       "name": "p5 brush demo",
       "origin": "native",
-      "lastModified": 1786741450175,
+      "lastModified": 1786743930697,
       "title": "",
       "tags": [
         "p5.brush"
