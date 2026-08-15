@@ -1,23 +1,18 @@
 {
   "format": "p5front-export",
   "version": 1,
-  "createdAt": "2026-08-15T14:46:05.978Z",
+  "createdAt": "2026-08-15T15:19:13.606Z",
   "projects": [
     {
-      "folder": "vaporwave",
-      "id": "vaporwave",
-      "name": "vaporwave",
+      "folder": "artefato1-pedropaulo",
+      "id": "artefato1-pedropaulo",
+      "name": "artefato1-pedropaulo",
       "origin": "native",
-      "lastModified": 1786805163054,
-      "title": "Vaporwave em Quads",
-      "tags": [
-        "quads",
-        "IA",
-        "ChatGPT",
-        "Generative"
-      ],
+      "lastModified": 1786807149096,
+      "title": "Caquinhos",
+      "tags": [],
       "collection": "artefato da semana/1",
-      "description": "Um Sketch feito pelo ChatGPT usando apenas Quads.\nAutor: Ysabelle Estevão de Oliveira\nPrompot usado: Crie um sketch estático (sem animação) em p5.js. Apresente o  resultado sob a forma de um único script em javascript a ser colado num  ambiente de desenvolvimento como o editor.p5js.org. O sketch deve usar  como primitiva de desenho apenas o comando quad. É permitido usar  comandos de estilização como stroke, fill, strokeWeight, etc. O programa  fonte deve ser documentado para ser explicado para uma plateia de  iniciantes em programação de computadores.  Gostaria que fosse criado com o codigo uma arte estilo vaporwave, com bastante neon e elementos de programas antigos de computador como por exemplo o windows 98.",
+      "description": "Nome: Pedro Paulo de Oliveira Rocha - DRE:121050964\n\nUm mosaico de arte generativa em p5.js formado por quadriláteros irregulares em terracota, branco e preto, revelando um fundo azul marinho através de suas frestas caóticas.",
       "hasThumb": true,
       "files": [
         "index.html",
@@ -28,15 +23,20 @@
       ]
     },
     {
-      "folder": "programaçãoCriativa2026 2Artefato1Introdutorio PedroPaulo",
-      "id": "programacaocriativa2026-2artefato1introdutorio-pedropaulo",
-      "name": "programaçãoCriativa2026 2Artefato1Introdutorio PedroPaulo",
+      "folder": "vaporwave",
+      "id": "vaporwave",
+      "name": "vaporwave",
       "origin": "native",
-      "lastModified": 1786803963833,
-      "title": "Caquinhos",
-      "tags": [],
+      "lastModified": 1786806575191,
+      "title": "Vaporwave em Quads",
+      "tags": [
+        "quads",
+        "IA",
+        "ChatGPT",
+        "Generative"
+      ],
       "collection": "artefato da semana/1",
-      "description": "Nome: Pedro Paulo de Oliveira Rocha - DRE:121050964\n\nUm mosaico de arte generativa em p5.js formado por quadriláteros irregulares em terracota, branco e preto, revelando um fundo azul marinho através de suas frestas caóticas.",
+      "description": "Um Sketch feito pelo ChatGPT usando apenas Quads.\nAutor: Ysabelle Estevão de Oliveira\nPrompot usado: Crie um sketch estático (sem animação) em p5.js. Apresente o  resultado sob a forma de um único script em javascript a ser colado num  ambiente de desenvolvimento como o editor.p5js.org. O sketch deve usar  como primitiva de desenho apenas o comando quad. É permitido usar  comandos de estilização como stroke, fill, strokeWeight, etc. O programa  fonte deve ser documentado para ser explicado para uma plateia de  iniciantes em programação de computadores.  Gostaria que fosse criado com o codigo uma arte estilo vaporwave, com bastante neon e elementos de programas antigos de computador como por exemplo o windows 98.",
       "hasThumb": true,
       "files": [
         "index.html",
