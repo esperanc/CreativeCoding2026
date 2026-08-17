@@ -4,6 +4,87 @@
   "createdAt": "2026-08-15T15:19:13.606Z",
   "projects": [
     {
+      "folder": "nested rects",
+      "id": "nested-rects",
+      "name": "nested rects",
+      "origin": "native",
+      "lastModified": 1786988632866,
+      "title": "nested rects",
+      "tags": [
+        "concept"
+      ],
+      "collection": "aula 3",
+      "description": "Retângulos aninhados construídos com lerp(): posição, tamanho e cor interpolados entre um retângulo grande e um pequeno.\n\nSem interação.",
+      "hasThumb": false,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md"
+      ]
+    },
+    {
+      "folder": "polar flower",
+      "id": "polar-flower",
+      "name": "polar flower",
+      "origin": "native",
+      "lastModified": 1786988631866,
+      "title": "polar flower",
+      "tags": [
+        "concept"
+      ],
+      "collection": "aula 3",
+      "description": "Contornos em coordenadas polares: o raio varia com o ângulo e cada ponto é convertido para cartesiano com cos() e sin().\n\nSem interação.",
+      "hasThumb": false,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md"
+      ]
+    },
+    {
+      "folder": "vector field",
+      "id": "vector-field",
+      "name": "vector field",
+      "origin": "native",
+      "lastModified": 1786988630866,
+      "title": "vector field",
+      "tags": [
+        "concept",
+        "interactive"
+      ],
+      "collection": "aula 3",
+      "description": "Campo de vetores com p5.Vector: cada risco aponta para o alvo, com comprimento e cor dependentes da distância.\n\nMova o mouse para deslocar o alvo.",
+      "hasThumb": false,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md"
+      ]
+    },
+    {
+      "folder": "transform mosaic",
+      "id": "transform-mosaic",
+      "name": "transform mosaic",
+      "origin": "native",
+      "lastModified": 1786988629866,
+      "title": "transform mosaic",
+      "tags": [
+        "concept"
+      ],
+      "collection": "aula 3",
+      "description": "Uma única pétala repetida por transformações afins: translate(), rotate() e scale(), isolados por push()/pop().\n\nSem interação.",
+      "hasThumb": false,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md"
+      ]
+    },
+    {
       "folder": "artefato1-pedropaulo",
       "id": "artefato1-pedropaulo",
       "name": "artefato1-pedropaulo",
