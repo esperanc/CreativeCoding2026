@@ -1,46 +1,203 @@
 {
   "format": "p5front-export",
   "version": 1,
-  "createdAt": "2026-08-15T15:19:13.606Z",
+  "createdAt": "2026-08-18T21:04:49.295Z",
   "projects": [
     {
-      "folder": "nested rects",
-      "id": "nested-rects",
-      "name": "nested rects",
-      "origin": "native",
-      "lastModified": 1786988632866,
-      "title": "nested rects",
+      "folder": "grafico funcao",
+      "id": "grafico-funcao",
+      "name": "grafico funcao",
+      "origin": "shared",
+      "lastModified": 1787087082019,
+      "title": "",
       "tags": [
-        "concept"
+        "example",
+        "function plot"
       ],
       "collection": "aula 3",
-      "description": "Retângulos aninhados construídos com lerp(): posição, tamanho e cor interpolados entre um retângulo grande e um pequeno.\n\nSem interação.",
-      "hasThumb": false,
+      "description": "shows hwo to use map to create a function plot",
+      "hasThumb": true,
       "files": [
         "index.html",
         "sketch.js",
         "style.css",
-        "README.md"
+        "README.md",
+        "thumbnail.png"
       ]
     },
     {
-      "folder": "polar flower",
-      "id": "polar-flower",
-      "name": "polar flower",
-      "origin": "native",
-      "lastModified": 1786988631866,
-      "title": "polar flower",
+      "folder": "polar pontos",
+      "id": "polar-pontos",
+      "name": "polar pontos",
+      "origin": "shared",
+      "lastModified": 1787086990086,
+      "title": "",
       "tags": [
-        "concept"
+        "example",
+        "polar coords"
       ],
       "collection": "aula 3",
-      "description": "Contornos em coordenadas polares: o raio varia com o ângulo e cada ponto é convertido para cartesiano com cos() e sin().\n\nSem interação.",
-      "hasThumb": false,
+      "description": "A simple example of polar coordinates",
+      "hasThumb": true,
       "files": [
         "index.html",
         "sketch.js",
         "style.css",
-        "README.md"
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "polar raios",
+      "id": "polar-raios",
+      "name": "polar raios",
+      "origin": "shared",
+      "lastModified": 1787086920719,
+      "title": "",
+      "tags": [
+        "example",
+        "polar coords"
+      ],
+      "collection": "aula 3",
+      "description": "An example of polar coordinates",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "artefato quadrilateros paulo vitor",
+      "id": "artefato-quadrilateros-paulo-vitor",
+      "name": "artefato quadrilateros paulo vitor",
+      "origin": "native",
+      "lastModified": 1787086873746,
+      "title": "",
+      "tags": [],
+      "collection": "artefato da semana/1",
+      "description": "# Entre Prédios\n\n**Autor:** Paulo Vitor Couto\n\n## Descrição\n\nEste sketch estático apresenta uma homenagem gráfica a um herói aracnídeo atravessando uma cidade à noite. A imagem procura transmitir movimento por meio da pose diagonal do personagem, das linhas de teia e da perspectiva dos prédios.\n\nToda a composição foi construída usando `quad()` como única primitiva geométrica do p5.js. Até os elementos que normalmente seriam desenhados como linhas — teias, contornos e detalhes da roupa — são quadriláteros muito finos.\n\n## Ideia visual\n\n- O fundo usa faixas quadriláteras em diferentes tons de azul para criar profundidade.\n- Os prédios são quadriláteros irregulares que convergem em direção ao centro.\n- As janelas são pequenos quadriláteros amarelos e azulados.\n- O personagem é formado por várias peças quadriláteras vermelhas, azuis e escuras.\n- A teia é composta por quadriláteros longos e estreitos.\n\n## Como executar\n\n1. Extraia o arquivo `.zip`.\n2. Abra `index.html` em um navegador com acesso à internet; ou\n3. Copie o conteúdo de `sketch.js` para o [editor online do p5.js](https://editor.p5js.org/).\n\nO sketch não possui animação. A função `noLoop()` faz com que a imagem seja desenhada apenas uma vez.\n\n## Arquivos\n\n- `index.html`: carrega a biblioteca p5.js e o sketch.\n- `style.css`: centraliza o canvas na página.\n- `sketch.js`: contém o desenho e os comentários explicativos.\n- `thumbnail.png`: prévia do resultado gerado.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "README.md",
+        "sketch.js",
+        "style.css",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "Atividade1 Marina",
+      "id": "atividade1-marina",
+      "name": "Atividade1 Marina",
+      "origin": "native",
+      "lastModified": 1787078585479,
+      "title": "Homem-Aranha com quads",
+      "tags": [
+        "Quads",
+        "linhas"
+      ],
+      "collection": "artefato da semana/1",
+      "description": "Uma composição que se assemelha ao homem aranha usando quads e linhas.\n\nAutora: Marina Corais",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "README.md",
+        "sketch.js",
+        "style.css",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "estrada em perspectiva Arthur Ramos",
+      "id": "estrada-em-perspectiva-arthur-ramos",
+      "name": "estrada em perspectiva Arthur Ramos",
+      "origin": "native",
+      "lastModified": 1787078409753,
+      "title": "Estrada em Perspectiva",
+      "tags": [
+        "p5js",
+        "quad",
+        "perspectiva",
+        "paisagem"
+      ],
+      "collection": "artefato da semana/1",
+      "description": "# Estrada em Perspectiva\n\nEste sketch estático cria uma paisagem de estrada durante o pôr do sol usando `quad()` como única primitiva de desenho. Os quadriláteros formam o céu, o brilho do sol, as montanhas, o terreno, a estrada, as faixas e os postes.\n\nA sensação de profundidade aparece porque as bordas da estrada e os demais elementos convergem para um ponto próximo ao centro do horizonte. Os objetos mais distantes são menores e ficam mais próximos uns dos outros, enquanto os objetos na parte inferior são maiores.\n\nO trabalho explora especialmente trapézios, paralelogramos e quadriláteros irregulares. Com isso, o comando `quad()` não funciona apenas como substituto de um retângulo, mas como ferramenta para construir perspectiva.\n\n**Autor:** Arthur Ramos\n\n## Como executar\n\nAbra o arquivo `index.html` em um navegador com acesso à internet ou copie o conteúdo de `sketch.js` para o editor do p5.js.\n\n## Regra visual\n\nTodas as formas visíveis da composição são desenhadas com `quad()`. Os demais comandos são usados apenas para configurar cores, contornos e a tela.\n\nOBS: A ideia foi inspirada na estrada que eu dirigi hoje voltando da serra do Rio de Janeiro",
+      "hasThumb": true,
+      "files": [
+        "thumbnail.png",
+        "index.html",
+        "README.md",
+        "sketch.js",
+        "style.css"
+      ]
+    },
+    {
+      "folder": "polar espiral",
+      "id": "polar-espiral",
+      "name": "polar espiral",
+      "origin": "shared",
+      "lastModified": 1787069440803,
+      "title": "",
+      "tags": [
+        "polar coords",
+        "example"
+      ],
+      "collection": "aula 3",
+      "description": "Example of polar coords",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "polar rosacea",
+      "id": "polar-rosacea",
+      "name": "polar rosacea",
+      "origin": "shared",
+      "lastModified": 1787069143895,
+      "title": "",
+      "tags": [
+        "example",
+        "polar coords"
+      ],
+      "collection": "aula 3",
+      "description": "Example of polar coordinates",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "pushpop grade",
+      "id": "pushpop-grade",
+      "name": "pushpop grade",
+      "origin": "shared",
+      "lastModified": 1787069031591,
+      "title": "",
+      "tags": [
+        "example",
+        "transforms"
+      ],
+      "collection": "aula 3",
+      "description": "Shows the utility of push / pop",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
       ]
     },
     {
@@ -48,7 +205,7 @@
       "id": "vector-field",
       "name": "vector field",
       "origin": "native",
-      "lastModified": 1786988630866,
+      "lastModified": 1787068974493,
       "title": "vector field",
       "tags": [
         "concept",
@@ -56,44 +213,28 @@
       ],
       "collection": "aula 3",
       "description": "Campo de vetores com p5.Vector: cada risco aponta para o alvo, com comprimento e cor dependentes da distância.\n\nMova o mouse para deslocar o alvo.",
-      "hasThumb": false,
+      "hasThumb": true,
       "files": [
         "index.html",
         "sketch.js",
         "style.css",
-        "README.md"
+        "README.md",
+        "thumbnail.png"
       ]
     },
     {
-      "folder": "transform mosaic",
-      "id": "transform-mosaic",
-      "name": "transform mosaic",
+      "folder": "coords normalizadas",
+      "id": "coords-normalizadas",
+      "name": "coords normalizadas",
       "origin": "native",
-      "lastModified": 1786988629866,
-      "title": "transform mosaic",
+      "lastModified": 1787065366807,
+      "title": "",
       "tags": [
-        "concept"
+        "example",
+        "pattern"
       ],
       "collection": "aula 3",
-      "description": "Uma única pétala repetida por transformações afins: translate(), rotate() e scale(), isolados por push()/pop().\n\nSem interação.",
-      "hasThumb": false,
-      "files": [
-        "index.html",
-        "sketch.js",
-        "style.css",
-        "README.md"
-      ]
-    },
-    {
-      "folder": "artefato1-pedropaulo",
-      "id": "artefato1-pedropaulo",
-      "name": "artefato1-pedropaulo",
-      "origin": "native",
-      "lastModified": 1786807149096,
-      "title": "Caquinhos",
-      "tags": [],
-      "collection": "artefato da semana/1",
-      "description": "Nome: Pedro Paulo de Oliveira Rocha - DRE:121050964\n\nUm mosaico de arte generativa em p5.js formado por quadriláteros irregulares em terracota, branco e preto, revelando um fundo azul marinho através de suas frestas caóticas.",
+      "description": "An example on how to create a pattern and draw it in two plaes",
       "hasThumb": true,
       "files": [
         "index.html",
@@ -108,7 +249,7 @@
       "id": "vaporwave",
       "name": "vaporwave",
       "origin": "native",
-      "lastModified": 1786806575191,
+      "lastModified": 1787062145535,
       "title": "Vaporwave em Quads",
       "tags": [
         "quads",
@@ -123,6 +264,113 @@
         "index.html",
         "sketch.js",
         "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "polar flower",
+      "id": "polar-flower",
+      "name": "polar flower",
+      "origin": "native",
+      "lastModified": 1786999752725,
+      "title": "polar flower",
+      "tags": [
+        "concept"
+      ],
+      "collection": "aula 3",
+      "description": "Contornos em coordenadas polares: o raio varia com o ângulo e cada ponto é convertido para cartesiano com cos() e sin().\n\nSem interação.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "nested rects",
+      "id": "nested-rects",
+      "name": "nested rects",
+      "origin": "native",
+      "lastModified": 1786999616479,
+      "title": "nested rects",
+      "tags": [
+        "concept"
+      ],
+      "collection": "aula 3",
+      "description": "Retângulos aninhados construídos com lerp(): posição, tamanho e cor interpolados entre um retângulo grande e um pequeno.\n\nSem interação.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "transform mosaic",
+      "id": "transform-mosaic",
+      "name": "transform mosaic",
+      "origin": "native",
+      "lastModified": 1786999587791,
+      "title": "transform mosaic",
+      "tags": [
+        "concept"
+      ],
+      "collection": "aula 3",
+      "description": "Uma única pétala repetida por transformações afins: translate(), rotate() e scale(), isolados por push()/pop().\n\nSem interação.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "artefato1-pedropaulo",
+      "id": "artefato1-pedropaulo",
+      "name": "artefato1-pedropaulo",
+      "origin": "native",
+      "lastModified": 1786828597487,
+      "title": "Caquinhos",
+      "tags": [],
+      "collection": "artefato da semana/1",
+      "description": "Nome: Pedro Paulo de Oliveira Rocha - DRE:121050964\n\nUm mosaico de arte generativa em p5.js formado por quadriláteros irregulares em terracota, branco e preto, revelando um fundo azul marinho através de suas frestas caóticas.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "Joao Ricardo S Magalhaes 2026 08 15 19 02 59",
+      "id": "joao-ricardo-s-magalhaes-2026-08-15-19-02-59",
+      "name": "Joao Ricardo S Magalhaes 2026 08 15 19 02 59",
+      "origin": "p5editor",
+      "lastModified": 1786828579316,
+      "title": "Mosaico com quads",
+      "tags": [
+        "quads",
+        "ai",
+        "gemini",
+        "generative"
+      ],
+      "collection": "artefato da semana/1",
+      "description": "Um sketch feito pelo ChatGPT usando apenas quads.\n\nAutor: Joao Ricardo S. Magalhaes\n\nPrompts usados: faca um codigo para p5.js de quads sem animacoes comentado para qualquer pessoa entender. tente fazer um arranjo mais complexo.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "p5.js",
         "README.md",
         "thumbnail.png"
       ]
