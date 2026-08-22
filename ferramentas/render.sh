@@ -10,11 +10,11 @@ mkdir -p "$TMP"
 
 targets=("$@")
 if [ ${#targets[@]} -eq 0 ]; then
-  targets=("$BUILD"/gen/*.js)
+  targets=("$BUILD"/gen/"${AULA:-3 - Posição, Direção e Tamanho}"/*.js)
 fi
 
 for f in "${targets[@]}"; do
-  [ -f "$f" ] || f="$BUILD/gen/$f.js"
+  [ -f "$f" ] || f="$BUILD/gen/${AULA:-3 - Posição, Direção e Tamanho}/$f.js"
   name="$(basename "$f" .js)"
   dims=$(head -1 "$f" | sed -n 's|^// canvas \([0-9]*\) \([0-9]*\).*|\1 \2|p')
   if [ -z "$dims" ]; then echo "SEM DIMENSAO: $name"; continue; fi

@@ -1,19 +1,29 @@
 # -*- coding: utf-8 -*-
 """Monta, para cada exemplo, o sketch completo = pre + trecho do slide + post.
-O trecho vem literalmente do slides.md, então código, imagem e link nunca divergem."""
-import re, os, sys, subprocess, json
+O trecho vem literalmente do slides.md, então código, imagem e link nunca divergem.
+
+  AULA="4 - ..." python3 ferramentas/gerar.py
+"""
+import re, os, sys, importlib.util
 
 BUILD = os.path.dirname(os.path.abspath(__file__))
-sys.path.insert(0, BUILD)
-from manifesto import M
-
 AULA = os.environ.get("AULA", "3 - Posição, Direção e Tamanho")
 SLIDES = os.path.join(os.path.dirname(BUILD), AULA)
-GEN = os.path.join(BUILD, "gen")  # sketches gerados (não versionados)
+CONF = os.path.join(BUILD, "aulas", AULA)
+GEN = os.path.join(BUILD, "gen", AULA)   # sketches gerados (não versionados)
 os.makedirs(GEN, exist_ok=True)
 
+def carrega_manifesto():
+    p = os.path.join(CONF, "manifesto.py")
+    if not os.path.exists(p):
+        print("sem manifesto para", AULA); return {}
+    spec = importlib.util.spec_from_file_location("manifesto_" + str(abs(hash(AULA))), p)
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    return mod.M
+
 def trechos_por_imagem(md):
-    """Devolve {nome_da_imagem: (titulo, [blocos de codigo])} para cada slide."""
+    """{nome_da_imagem: (titulo, [blocos de codigo])} para cada slide."""
     out = {}
     for sl in md.split("\n---\n"):
         img = re.search(r'::img src="([^"]+)\.png"', sl)
@@ -23,40 +33,43 @@ def trechos_por_imagem(md):
         out[img.group(1)] = (tit, [c.rstrip("\n") for c in cod])
     return out
 
-def monta(nome, trecho):
-    cfg = M[nome]
-    ind = " " * cfg["indent"]
-    corpo = "\n".join((ind + l if l.strip() else "") for l in trecho.split("\n"))
+def indenta(txt, n):
+    ind = " " * n
+    return "\n".join((ind + l if l.strip() else "") for l in txt.split("\n"))
+
+def monta(cfg, trecho, mapa):
     pre = cfg["pre"].replace("{w}", str(cfg["w"])).replace("{h}", str(cfg["h"]))
-    return pre + corpo + "\n" + cfg["post"]
+    # {frag:nome} traz, literalmente, o trecho de outro slide — assim um passo
+    # da construção não pode divergir do passo anterior.
+    for outro in re.findall(r"\{frag:([^}]+)\}", pre):
+        if outro not in mapa:
+            raise SystemExit("{frag:%s}: slide não encontrado" % outro)
+        pre = pre.replace("{frag:%s}" % outro,
+                          indenta(mapa[outro][1][0], cfg["indent"]))
+    return pre + indenta(trecho, cfg["indent"]) + "\n" + cfg["post"]
 
 def main():
+    M = carrega_manifesto()
     md = open(os.path.join(SLIDES, "slides.md"), encoding="utf-8").read()
     mapa = trechos_por_imagem(md)
     feitos = []
     for nome, cfg in M.items():
         if nome not in mapa:
             print("  ! slide não encontrado para", nome); continue
-        tit, blocos = mapa[nome]
-        src = monta(nome, blocos[cfg["frag"]])
-        cab = "// canvas %d %d\n" % (cfg["w"], cfg["h"])
-        open(os.path.join(GEN, nome + ".js"), "w", encoding="utf-8").write(cab + src)
+        src = monta(cfg, mapa[nome][1][cfg["frag"]], mapa)
+        open(os.path.join(GEN, nome + ".js"), "w", encoding="utf-8").write(
+            "// canvas %d %d\n" % (cfg["w"], cfg["h"]) + src)
         feitos.append(nome)
-    # pushpop_sem: o MESMO sketch da grade, sem push()/pop()
-    g = os.path.join(GEN, "pushpop_grade.js")
-    if os.path.exists(g):
-        src = open(g, encoding="utf-8").read()
-        sem = [l for l in src.split("\n") if not re.match(r"\s*(push|pop)\(\);", l)]
-        out = "\n".join(sem).replace(
-            "function setup() {",
-            "// O MESMO codigo da grade, sem push() e pop():\n"
-            "// as transformacoes se acumulam e o desenho foge do canvas.\n"
-            "function setup() {")
-        open(os.path.join(GEN, "pushpop_sem.js"), "w", encoding="utf-8").write(out)
-        feitos.append("pushpop_sem")
 
-    # sketches escritos a mao (nao derivam de um unico trecho do slide)
-    MAN = os.path.join(BUILD, "manuais")
+    # derivados: variantes de um sketch já gerado (ex.: o mesmo código sem push/pop)
+    der = os.path.join(CONF, "derivados.py")
+    if os.path.exists(der):
+        spec = importlib.util.spec_from_file_location("derivados", der)
+        mod = importlib.util.module_from_spec(spec); spec.loader.exec_module(mod)
+        feitos += mod.gerar(GEN)
+
+    # sketches escritos à mão (não derivam de um único trecho do slide)
+    MAN = os.path.join(CONF, "manuais")
     if os.path.isdir(MAN):
         for f in sorted(os.listdir(MAN)):
             if f.endswith(".js"):
@@ -64,7 +77,7 @@ def main():
                     open(os.path.join(MAN, f), encoding="utf-8").read())
                 feitos.append(f[:-3])
 
-    print("sketches gerados:", len(feitos))
+    print("sketches gerados: %d  (%s)" % (len(feitos), AULA))
     return feitos
 
 if __name__ == "__main__":

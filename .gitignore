@@ -2,5 +2,5 @@
 *.vscode
 SKILL.md
 syntax.md
-ferramentas/gen
-ferramentas/tmp
+ferramentas/*
+__pycache__/

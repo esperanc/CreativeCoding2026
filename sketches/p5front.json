@@ -1,14 +1,759 @@
 {
   "format": "p5front-export",
   "version": 1,
-  "createdAt": "2026-08-18T21:04:49.295Z",
+  "createdAt": "2026-08-22T14:01:13.848Z",
   "projects": [
+    {
+      "folder": "cidade abstrata",
+      "id": "cidade-abstrata",
+      "name": "cidade abstrata",
+      "origin": "native",
+      "lastModified": 1787407271524,
+      "title": "",
+      "tags": [],
+      "collection": "artefato da semana/2",
+      "description": "# Cidade Abstrata ao Crepúsculo com Ondas de Bézier\n\n**Autor:** Thalisson Braga Lisboa de Oliveira - 123671198\n\n## Sobre o Projeto\nEste sketch foi desenvolvido para a disciplina de Programação Criativa (Aula 2) e explora a geração procedural de uma paisagem urbana. A cada execução do código, uma nova metrópole é desenhada contra um céu de crepúsculo recortado por \"ondas\" espessas e translúcidas, garantindo que a imagem gerada seja única a cada recarregamento da página.\n\nPara chegar a este resultado, idealizei o conceito de uma cidade ancorada na base da tela, recortada por correntes de vento ou auroras. Utilizei inteligência artificial como ferramenta de apoio para me auxiliar no processo de iteração e construção da lógica em p5.js, ajustando parâmetros como a sobreposição das curvas de Bézier, a transparência das cores e o laço de repetição das janelas acesas até alcançar o visual desejado, seguindo a dinâmica proposta para a atividade.\n\n## Conceitos Aplicados\nPara atender aos requisitos do \"Artefato da Semana\", o código faz uso dos seguintes recursos técnicos abordados em sala de aula:\n\n* **Responsividade:** O canvas não possui tamanho fixo. Utilizei `windowWidth` e `windowHeight` dentro da função `createCanvas()` para garantir que a arte ocupe perfeitamente qualquer tamanho de janela.\n* **Arte Generativa:** Através do uso extensivo da função `random()`, o programa sorteia a cada execução:\n  * A altura, largura e cor dos prédios.\n  * Quais janelas estarão com as luzes acesas (probabilidade de 30%).\n  * A posição dos pontos de controle e a espessura das curvas de Bézier no fundo.\n* **Múltiplas Primitivas:** O sketch vai além de uma única forma e utiliza uma combinação de primitivas:\n  * `rect()` para o fundo, o degradê do céu e os blocos dos prédios.\n  * `circle()` para compor a lua/sol no céu.\n  * `square()` para desenhar as janelas iluminadas.\n  * `bezier()` para desenhar as ondas fluidas e translúcidas que atravessam o horizonte.\n* **Controle de Loop:** A função `noLoop()` foi utilizada no `setup()` para garantir que o resultado seja uma arte estática ao invés de uma animação caótica.\n\n## Como visualizar\nPara ver o projeto, você pode abrir o arquivo fonte em um ambiente de desenvolvimento como o [Editor Web do p5.js](https://editor.p5js.org/) ou apenas abrir o arquivo `index.html` no seu navegador (caso esteja usando o p5Front). Atualize a página algumas vezes para ver o algoritmo gerando novas composições procedurais.",
+      "hasThumb": true,
+      "files": [
+        "thumbnail.png",
+        "index.html",
+        "README.md",
+        "sketch.js",
+        "style.css"
+      ]
+    },
+    {
+      "folder": "composio de formas em contraste pedro paulo",
+      "id": "composio-de-formas-em-contraste-pedro-paulo",
+      "name": "composio de formas em contraste pedro paulo",
+      "origin": "native",
+      "lastModified": 1787406898001,
+      "title": "Composição de formas em contraste",
+      "tags": [],
+      "collection": "artefato da semana/2",
+      "description": "A ideia aqui foi brincar com a mistura de cores. Primeiro, criei um fundo com listras verticais aleatórias usando vários tons de azul. Depois, espalhei grandes círculos amarelos por cima. Usei transparência nos círculos para que, ao passarem pelas listras, o amarelo se misturasse com o azul do fundo, gerando novas cores e um efeito de profundidade legal.\n\nNome: Pedro Paulo de Oliveira Rocha",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "artefato2",
+      "id": "artefato2",
+      "name": "artefato2",
+      "origin": "native",
+      "lastModified": 1787406800720,
+      "title": "Cidade Cyberpunk Generativa",
+      "tags": [
+        "generativo",
+        "p5js",
+        "cyberpunk",
+        "random"
+      ],
+      "collection": "artefato da semana/2",
+      "description": "Uma versão generativa da cidade cyberpunk desenvolvida no artefato anterior. A estrutura da cidade e sua perspectiva são mantidas, mas diversos elementos variam a cada execução.\n\nAutor: Pedro Elias\n\nPrompt usado: Altere o código da cidade cyberpunk que fizemos anteriormente para transformá-la em um sketch estático, mas generativo. Mantenha a ideia e o estilo visual do desenho original, mas faça com que a cidade seja diferente a cada execução, variando elementos como prédios, janelas, placas neon, reflexos e chuva. O desenho também não deve ter um tamanho fixo e deve se adaptar ao tamanho da janela usando windowWidth e windowHeight. Mesmo com os elementos aleatórios, mantenha a composição organizada e a perspectiva da rua.",
+      "hasThumb": true,
+      "files": [
+        "README.md",
+        "sketch.js",
+        "style.css",
+        "thumbnail.png",
+        "thumbnail2.png",
+        "thumbnail3.png",
+        "index.html"
+      ]
+    },
+    {
+      "folder": "olho aleatorio",
+      "id": "olho-aleatorio",
+      "name": "olho aleatorio",
+      "origin": "native",
+      "lastModified": 1787406715113,
+      "title": "olho aleatorio",
+      "tags": [],
+      "collection": "artefato da semana/2",
+      "description": "ao rodar cria um olho no centro da tela, com íris de cor aleatoria, e um traço especial, esse podendo ser uma estrela em qualquer rotação ou vários cículos concentricos\n\nem parte do codigo, com o seguinte prompt:\n\n\"faça um snippet em p5.js que desenhe um pentagrama no centro da tela e rotação aleatoria\"\n\nautor: Paulo Barbosa",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "thumbnail.png",
+        "README.md"
+      ]
+    },
+    {
+      "folder": "MariaEduardaAraujo Artefato 2",
+      "id": "mariaeduardaaraujo-artefato-2",
+      "name": "MariaEduardaAraujo Artefato 2",
+      "origin": "native",
+      "lastModified": 1787406621112,
+      "title": "",
+      "tags": [],
+      "collection": "artefato da semana/2",
+      "description": "# Artefato da Semana 2: Responsividade e Aleatoriedade\n\n**Autora:** Maria Eduarda Araújo  \n**DRE:** 119054059  \n\n## Sobre o Projeto\nPara esta segunda semana decidi manter o mesmo estilo da anterior, antes fiz um coração feito de vários quadradinho e pra essa vez fiz vários corações de tamanhos diferentes em posições e rotações diferentes.\n\n\nPara cumprir os requisitos:\n* **Responsividade:** O canvas foi criado utilizando `windowWidth` e `windowHeight` para ocupar todo o espaço disponível na janela do navegador. Além disso, a função `windowResized()` foi implementada para garantir que a arte se reajuste caso o usuário redimensione a tela.\n* **Aleatoriedade:** O código utiliza a função `random()` dentro de um loop para espalhar os corações em posições (x, y) totalmente sorteadas. O tamanho e a rotação de cada coração também são definidos aleatoriamente a cada vez que o programa é executado, garantindo que o desenho nunca seja igual ao anterior.\n* **Primitivas Geométricas:** Em vez de usar imagens prontas ou a curva complexa do primeiro trabalho, cada coração nesta versão é construído puramente através da combinação de primitivas básicas ensinadas em sala de aula (como `triangle` e `circle`/`arc`).\n\n## Processo de Criação\n\nUtilizei a IA para me ajudar a estruturar o código. O meu foco no prompt foi garantir que a IA entendesse que não bastava espalhar formas soltas, ela precisava usar a lógica de transformação (`push`, `pop`, `translate` e `rotate`) para girar as formas combinadas, criando o efeito de uma \"chuva\" de elementos em posições variadas. \n\nApós a IA gerar o código, testei o redimensionamento da janela e executei o programa várias vezes para ter certeza de que o desenho se adaptava e mudava completamente a cada *play*, o que fazia.\n\n## Meu prompt utilizado no Gemini: \n\n> \"Crie um sketch estático (sem animação) em p5.js. Apresente o resultado sob a forma de um único script em javascript para rodar no editor.p5js.org. O programa deve cumprir estes requisitos rigorosamente:\n>\n> **Responsividade:** O canvas deve se adaptar dinamicamente ao tamanho da tela usando createCanvas(windowWidth, windowHeight) e implementando a função windowResized() com resizeCanvas().\n>\n> **Aleatoriedade:** O desenho não pode ser igual a cada execução. Use um loop (como for) e a função random() para espalhar dezenas de corações em posições completamente aleatórias por toda a área da tela (do eixo x=0 até windowWidth, e y=0 até windowHeight). Use random() também para variar bastante o tamanho de cada coração e aplicar diferentes rotações a eles (usando push, pop, translate e rotate).\n>\n> **Primitivas Geométricas:** Para desenhar cada coração, construa a forma combinando primitivas básicas, como triangle e circle (ou arc).\n>\n> **Tema visual:** O fundo deve ser de uma cor roxo vinho elegante. Os corações podem variar em tons pastéis ou vibrantes de rosa, lilás e vermelho.\n>\n> **Documentação:** O código deve ser totalmente comentado, explicando a lógica matemática e as funções para uma plateia de iniciantes em programação.",
+      "hasThumb": true,
+      "files": [
+        "thumbnail.png",
+        "README.md",
+        "index.html",
+        "sketch.js",
+        "style.css"
+      ]
+    },
+    {
+      "folder": "Mosaico com Tsuru 2026 08 21 17 29 25",
+      "id": "mosaico-com-tsuru-2026-08-21-17-29-25",
+      "name": "Mosaico com Tsuru 2026 08 21 17 29 25",
+      "origin": "p5editor",
+      "lastModified": 1787406462784,
+      "title": "Mosaico aleatório com Tsuru",
+      "tags": [
+        "primitives",
+        "ai",
+        "gemini",
+        "generative"
+      ],
+      "collection": "artefato da semana/2",
+      "description": "Um sketch feito pelo ChatGPT usando apenas primitivas 2D.\n\nAutor: Joao Ricardo S. Magalhaes\n\nPrompts usados: Faça um código que faça um mosaico aleatório usando somente as primitivas 2D do p5.js com a figura central de um Tsuru que não muda; Faça o Tsuru parecer mais um origami e as cores mais dinâmicas; poderia tentar fazer o rabo e as asas ficarem mais dobradas?",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "p5.js",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "FFC",
+      "id": "ffc",
+      "name": "FFC",
+      "origin": "native",
+      "lastModified": 1787406292568,
+      "title": "FFC",
+      "tags": [
+        "Futebol",
+        "Fluminense"
+      ],
+      "collection": "artefato da semana/2",
+      "description": "Inicias do Fluminense Football Club com primitivas\n\nAutor: João Pedro Moretti Fontes Ferreira",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "jardim cosmico generativo",
+      "id": "jardim-cosmico-generativo",
+      "name": "jardim cosmico generativo",
+      "origin": "native",
+      "lastModified": 1787406235308,
+      "title": "",
+      "tags": [],
+      "collection": "artefato da semana/2",
+      "description": "# Jardim Cósmico Generativo\n\n**Autor:** Henrique Kezen V. H. Leite\n\n## Descrição\n\nEste sketch cria uma paisagem espacial generativa usando p5.js. A composição combina estrelas, constelações, órbitas, planetas, formas geométricas e uma silhueta no primeiro plano.\n\nCada execução utiliza uma nova semente aleatória, portanto a imagem gerada não é sempre a mesma. Também é possível gerar uma nova composição clicando com o mouse ou pressionando `Espaço`/`R`.\n\n## Responsividade\n\nO canvas é criado com `windowWidth` e `windowHeight`, ocupando todo o espaço disponível da janela. Os tamanhos dos elementos são calculados proporcionalmente a `min(width, height)`, evitando depender de dimensões fixas. Quando a janela é redimensionada, o canvas também é redimensionado e uma nova composição é gerada.\n\n## Primitivas e recursos utilizados\n\nO trabalho utiliza diferentes primitivas e recursos do p5.js, incluindo:\n\n- `circle()`\n- `rect()`\n- `triangle()`\n- `line()`\n- `arc()`\n- `beginShape()` / `vertex()` / `endShape()`\n- transformações com `translate()` e `rotate()`\n- transparência de cores\n- geração aleatória com `random()` e `randomSeed()`\n\n## Interação\n\n- Clique do mouse: gera uma nova composição.\n- Tecla `R`: gera uma nova composição.\n- Barra de espaço: gera uma nova composição.\n- Redimensionar a janela: adapta o canvas ao novo tamanho e gera outra composição.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "EEL880 artefato2 Gabriel Rodrigues da Silva",
+      "id": "eel880-artefato2-gabriel-rodrigues-da-silva",
+      "name": "EEL880 artefato2 Gabriel Rodrigues da Silva",
+      "origin": "native",
+      "lastModified": 1787406049761,
+      "title": "Versão 2 - Composição no estilo cyberpunk com quads",
+      "tags": [
+        "quads",
+        "ai",
+        "gemini",
+        "generative",
+        "cyberpunk"
+      ],
+      "collection": "artefato da semana/2",
+      "description": "Uma continuação do sketch da aula 1 feito pelo Gemini (agora usando as primitivas da aula 2).\n\nAutor: Gabriel Rodrigues da Silva\nDRE: 121044858\n\nPara a construção desse trabalho, foram usados vários prompts, partindo de um código inicial gerado pelo Gemini 3.1 Pro.\n\nPrompt inicial utilizado:\n\n```plain\n\"Quero fazer uma continuação do meu trabalho. Crie um sketch estático e generativo em p5.js. O canvas deve agora ocupar todo o espaço disponível do navegador usando windowWidth e windowHeight. Mantenha a estética Cyberpunk e o desenho do celular moderno no canto superior esquerdo, mas faça as seguintes evoluções:\n\nNo fundo, pare de usar quad() e gere dezenas de formas geométricas variadas da nova aula (ellipse, rect, triangle).\n\nImplemente um algoritmo para garantir que nenhuma dessas formas geradas no fundo se sobreponha à outra.\n\nPor fim, adicione a função windowResized() para recriar o canvas e redesenhar a arte automaticamente se o usuário mudar o tamanho da janela. Documente o código de forma didática focando nessas novidades.\"",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "trabalho p5js arthur cury sampaio",
+      "id": "trabalho-p5js-arthur-cury-sampaio",
+      "name": "trabalho p5js arthur cury sampaio",
+      "origin": "native",
+      "lastModified": 1787405897264,
+      "title": "",
+      "tags": [],
+      "collection": "artefato da semana/2",
+      "description": "# Trabalho 2 - Arte Generativa com Primitivas Geométricas\n\n**Nome:** Arthur Cury Sampaio\n\n## Descrição do Trabalho\nEste projeto é uma composição visual gerativa abstrata desenvolvida utilizando a biblioteca **p5.js**. O trabalho utiliza diversas primitivas geométricas 2D (`circle`, `rect`, `triangle`, `arc`, `quad`, `line`) para construir uma tapeçaria visual modular dinâmica e interativa.\n\n## Aspectos Técnicos e Requisitos Atendidos\n* **Responsividade e Aspect Ratio:** O canvas é instanciado com `windowWidth` e `windowHeight`, adaptando a área quadrada da obra proporcionalmente ao menor eixo da janela (`min(windowWidth, windowHeight) * 0.9`) e centralizando-a na tela. Em caso de redimensionamento da janela, a função `windowResized()` atualiza a escala sem deformações.\n* **Variabilidade e Generatividade:** O sketch não gera imagens estáticas fixas. A cada execução ou clique do mouse (`mousePressed()`), novas paletas de cores, divisões de grade (3x3 até 5x5) e combinações de formas geométricas são sorteadas.\n* **Primitivas Utilizadas:**\n  * `circle()`: Círculos concêntricos e pontos focais.\n  * `rect()`: Fundos modulares e molduras.\n  * `triangle()`: Triângulos opostos com rotação angular.\n  * `arc()`: Setores circulares (estilo leque/pizza) e arcos concêntricos de sobreposição.\n  * `quad()`: Polígonos de quatro vértices assimétricos.\n  * `line()`: Tramas lineares paralelas e cruzamentos em X.\n\n## Como Executar\nBasta abrir o arquivo `index.html` em qualquer navegador web ou carregar os arquivos na ferramenta [p5Front](https://speranc.github.io/p5front/). Clique na tela para gerar uma nova composição a qualquer momento.",
+      "hasThumb": true,
+      "files": [
+        "sketch.js",
+        "index.html",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "Artefato 2 O Ocaso dos Sete Sois Angel Mansilla",
+      "id": "artefato-2-o-ocaso-dos-sete-sois-angel-mansilla",
+      "name": "Artefato 2 O Ocaso dos Sete Sois Angel Mansilla",
+      "origin": "native",
+      "lastModified": 1787405797404,
+      "title": "",
+      "tags": [],
+      "collection": "artefato da semana/2",
+      "description": "# O Ocaso dos Sete Sóis\n\n**Autor:** Angel Mansilla  \n**DRE:** 123691897\n\n## Descrição\n\nEsse desenho foi baseado em um conceito de um jogo que eu gosto muito, chamado *DELTARUNE*, ele retrata oque seria, segundo a [música tema do jogo](https://www.youtube.com/watch?v=ohBLWsjZD4w), um \"Ocaso de 7 Sóis\", ou *Sunset of Seven Suns*, isso tem uma grande simbologia no jogo em si, mas demoraria muito para explicar aqui, eu tentei retratar algo que faltou no jogo, que seria uma cena em que os 7 sóis aparecem juntos, no jogo eles geralmente aparecem em sequência de modo separado.\n\nO desenho se adapta ao tamanho da janela e cria uma paisagem diferente em cada execução, porém os sete sóis continuam sempre presentes e usam as mesmas cores dos sóis que aparecem no jogo.\n\n## Como abrir\n\nÉ só abrir o arquivo `index.html` no navegador, dai pra gerar outra variação é só clicar na imagem, apertar `R` ou recarregar a página.\n\n## Uso de inteligência artificial\n\nUsei o ChatGPT/Codex pra pesquisar o conceito dos sete sóis, ajudar na criação do código e testar se o sketch funcionava em tamanhos diferentes de janela.\n\n**Prompt principal:** criar um ocaso generativo inspirado nos sete sóis de *Deltarune*.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "README.md",
+        "sketch.js",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "Artefato2ArturTaboada",
+      "id": "artefato2arturtaboada",
+      "name": "Artefato2ArturTaboada",
+      "origin": "native",
+      "lastModified": 1787351789558,
+      "title": "",
+      "tags": [],
+      "collection": "artefato da semana/2",
+      "description": "# Composição com Triângulos Rotativos Aleatórios\n\nEste sketch cria uma composição abstrata utilizando a primitiva `triangle()` do p5.js. O objetivo foi explorar princípios de recursão, geometria analítica e aleatoriedade para gerar padrões dinâmicos espalhados pela tela.\n\n## Como o sketch funciona\n- O código utiliza um laço de repetição para gerar múltiplas composições (vários grupos de triângulos) espalhadas em posições aleatórias pela tela.\n- Uma função recursiva chamada `giro()` é responsável por rotacionar os triângulos no sentido anti-horário ao redor de um eixo fixo, calculando os vértices matematicamente sem mover o centro do canvas.\n- O tamanho dos triângulos alterna a cada passo (entre o tamanho original e um tamanho reduzido), criando um efeito visual que pode remeter a uma estrela/flor.\n- Cada grupo de triângulos recebe uma paleta de cores gerada de forma completamente aleatória para garantir grande variação visual.\n- Não se utiliza bordas (`noStroke()`) para obter um visual mais limpo e contínuo.\n\n## Autor\nArtur Taboada Dios Carvalho\n\n## Como visualizar este projeto\n\n**Usando o ambiente online (p5front)**\n1. Acesse o ambiente de desenvolvimento utilizado na disciplina: [https://esperanc.github.io/p5front/](https://esperanc.github.io/p5front/).\n2. Copie todo o conteúdo do arquivo `sketch.js` deste zip e cole na área de edição de código do site.\n3. O resultado será renderizado na tela de visualização após o botão \"Run\" ser clicado.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "tumbnail.png",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "kaleidoscopio estelar",
+      "id": "kaleidoscopio-estelar",
+      "name": "kaleidoscopio estelar",
+      "origin": "native",
+      "lastModified": 1787351698016,
+      "title": "Kaleidoscópio Estelar",
+      "tags": [
+        "galaxy",
+        "ai",
+        "kaleidoscope"
+      ],
+      "collection": "artefato da semana/2",
+      "description": "Um sketch estático mas generativo. \n\nAutora: Rafaella Lenzi Romano\n\n# Kaleidoscópio Estelar\n\nUm kaleidoscópio generativo que imita uma galáxia feito com ajuda do Claude. Formado por um centro \"brilhante\" e braços em espiral cheios de estrelas, repetidos com simetria rotacional e de espelho. O resultado é estático, mas a cada clique gera uma imagem diferente.\n\n## Técnicas utilizadas\n\n- **Canvas responsivo**: `createCanvas(windowWidth, windowHeight)` + `windowResized()`, sem tamanho fixo.\n- **Encaixe de proporção**: o desenho é criado num espaço de design fixo (`DESIGN_SIZE`) e reescalado com `translate()` + `scale()` para caber na janela disponível, mantendo aspecto quadrado.\n- **Coordenadas polares**: cada estrela é posicionada por raio e ângulo (`r`, `θ`), convertidos para cartesiano com `cos()`/`sin()`.\n- **Espiral logarítmica**: os braços seguem `r = a · e^(b·θ)`, com amostragem não-uniforme de `θ` para concentrar mais estrelas perto do centro.\n- **Simetria via transformações afins**: um \"gomo\" é desenhado uma vez e replicado com `rotate()` em loop (simetria rotacional) e `scale(1, -1)` (simetria de espelho), aproveitando que as transformações se acumulam com `push()`/`pop()`.\n- **`map()`**: usado para variar brilho e tamanho das estrelas em função da distância ao centro.\n- **Geração estática controlada**: `noLoop()` + `randomSeed()`, garantindo que o padrão só muda quando o usuário clica (nova seed), não a cada frame.\n\n## Como funciona\n\n1. `drawGalaxyCore()` desenha o núcleo: camadas de círculos translúcidos sobrepostos, do maior/mais fraco ao menor/mais forte.\n2. `drawArtwork()` repete um gomo `SEGMENTS` vezes, girando e espelhando alternadamente.\n3. Dentro de cada gomo, `drawWedge()` posiciona estrelas ao longo de uma espiral com jitter (variação aleatória em `r` e `θ`) para parecer pó estelar, não uma linha.\n4. `drawStar()` desenha cada estrela: a maioria pequena e fraca, ~6% maiores e com um flare de difração (duas linhas cruzadas).",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "artefato generativo paulo vitor",
+      "id": "artefato-generativo-paulo-vitor",
+      "name": "artefato generativo paulo vitor",
+      "origin": "native",
+      "lastModified": 1787351494978,
+      "title": "",
+      "tags": [],
+      "collection": "artefato da semana/2",
+      "description": "# Entre Prédios: Multiverso Generativo\n\n**Autor:** Paulo Vitor Couto\n\n## Descrição\n\nEste sketch é uma extensão generativa do trabalho **Entre Prédios**, produzido na semana anterior somente com quadriláteros. A nova versão continua sendo uma homenagem gráfica autoral a um herói aracnídeo atravessando uma cidade, mas agora utiliza diferentes primitivas do p5.js, adapta-se à janela e cria uma composição nova a cada execução.\n\nO desenho não usa dimensões fixas: o canvas é criado com `windowWidth` e `windowHeight`. Todos os elementos são posicionados a partir de proporções da largura, da altura ou da menor dimensão disponível. A função `windowResized()` recria o canvas quando a janela muda de tamanho.\n\n## O que varia\n\nA cada abertura — ou clique do mouse — são sorteados:\n\n- as cores do céu e do horizonte;\n- a quantidade e a posição das estrelas;\n- o tamanho e a posição da lua;\n- as alturas, larguras e cores dos prédios;\n- as janelas acesas;\n- a posição, o tamanho, a inclinação e a pose do herói;\n- o lado e o ponto em que a teia se prende.\n\n## Interação\n\n- **Clique do mouse:** gera uma nova cena.\n- **Tecla `S`:** salva a cena atual em PNG.\n- **Redimensionar a janela:** ajusta o canvas e cria outra composição.\n\n## Primitivas utilizadas\n\nO sketch combina `rect()`, `ellipse()`, `triangle()`, `quad()`, `line()` e `arc()`, além de comandos de transformação e estilização.\n\n## Como executar\n\n1. Extraia o arquivo `.zip`.\n2. Abra `index.html` em um navegador com acesso à internet; ou\n3. Copie o conteúdo de `sketch.js` para o editor online do p5.js.\n\n## Arquivos\n\n- `index.html`: carrega o p5.js e o sketch.\n- `style.css`: remove margens e permite que o canvas ocupe toda a janela.\n- `sketch.js`: contém o desenho generativo, responsivo e comentado.\n- `thumbnail.png`: imagem representativa de uma das possíveis cenas.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "README.md",
+        "sketch.js",
+        "style.css",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "circles-nick correa",
+      "id": "circles-nick-correa",
+      "name": "circles-nick correa",
+      "origin": "native",
+      "lastModified": 1787351440957,
+      "title": "circles",
+      "tags": [
+        "demo",
+        "concept"
+      ],
+      "collection": "artefato da semana/2",
+      "description": "## Autor: Nick Correa\n\n## Ideia\nA ideia foi criar 7 círculos cocêntricos com posição, raios e ordem de cores aleatórias baseado nas 7 cores do arco-íris.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "style.css",
+        "sketch.js",
+        "thumbnail.png",
+        "README.md"
+      ]
+    },
+    {
+      "folder": "Artefato2 Natan Azevedo Gomes",
+      "id": "artefato2-natan-azevedo-gomes",
+      "name": "Artefato2 Natan Azevedo Gomes",
+      "origin": "native",
+      "lastModified": 1787351314468,
+      "title": "Artefato 2 - Estático mas Generativo Natan",
+      "tags": [
+        "generative",
+        "ai",
+        "gemini",
+        "landscape"
+      ],
+      "collection": "artefato da semana/2",
+      "description": "Paisagem gerada com primitivas, de forma generativa. \n\nNome: Natan Azevedo Gomes\n\nPrompt: Crie um sketch estático (sem animação) em p5.js. Apresente o resultado sob a forma de um único script em javascript a ser colado num ambiente de desenvolvimento como o editor.p5js.org. O sketch deve usar apenas, mas não necessariamente, as primitivas background, point, line, rect, ellipse, triangle, circle, square, quad, arc ou bezier. É permitido usar comandos de estilização como stroke, fill, strokeWeight, etc. O programa fonte deve ser documentado para ser explicado para uma plateia de iniciantes em programação de computadores. Os elementos podem ter tamanhos e orientações diferentes, além de poderem estar sobrepostos, mas eu queria que eles formassem uma paisagem. Utilize uma paleta de cores pastel com uma saturação baixa. O sketch deve se adequar ao tamanho da janela, usando windowWidth e windowHeight, e usar random para gerar imagens diferentes a cada execução",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "camadas Murilo",
+      "id": "camadas-murilo",
+      "name": "camadas   Murilo",
+      "origin": "native",
+      "lastModified": 1787351221099,
+      "title": "",
+      "tags": [],
+      "collection": "artefato da semana/2",
+      "description": "# Camadas — acúmulo de figuras translúcidas\n\n**Autor:** Murilo Jorge de Figueiredo\n\n![thumbnail](thumbnail.png)\n\n## Descrição\n\nSketch estático em **p5.js** que usa **todas as primitivas de desenho** vistas em\naula: `rect`, `ellipse`, `triangle`, `quad`, `arc`, `line` e `point`.\n\nA premissa é que **nenhuma figura sozinha faz nada**. Cada uma é pequena, torta,\ngirada por um ângulo qualquer e quase transparente. Mas alguns milhares delas,\njogadas umas por cima das outras, vão somando cor até o branco do fundo\ndesaparecer por completo. A imagem final não é desenhada — ela é **acumulada**.\nO que se vê são as sobreposições: onde duas dezenas de figuras coincidem, a cor\nsatura e a região ganha peso; onde poucas se cruzam, sobra um véu leve.\n\nO sketch **se adapta ao tamanho da janela** e **não usa semente fixa**: cada\nexecução produz um quadro inédito. Redimensionar a janela, clicar ou apertar\n**R** gera outro na hora.\n\n## As três camadas\n\nO desenho é construído da mais grossa para a mais fina:\n\n| Camada | Quantidade¹ | Tamanho² | Opacidade | Função |\n|---|---|---|---|---|\n| **Fundo** | 260 | 25%–55% | 40–85 | mata o branco de uma vez |\n| **Meio** | 700 | 7%–22% | 25–60 | cria as manchas e o clima de cor |\n| **Detalhe** | 3000 | 1%–6% | 40–95 | dá textura e granulação |\n\n¹ para uma janela de referência de 1280 × 800; o número real é reescalado pela\nárea da janela, de modo que a densidade visual seja a mesma numa tela pequena e\nnum monitor grande.\n² como fração do **menor** lado da janela — usar o menor lado (e não a largura)\né o que faz o design se encaixar bem tanto em janela deitada quanto em pé.\n\nSó a camada de fundo é espalhada **por igual**: é ela que precisa garantir que\nnão sobre nenhum canto branco. As outras duas podem se aglomerar à vontade,\nporque já estão pintando sobre cor.\n\n## As duas decisões que salvaram o quadro\n\nNa primeira versão, tudo era sorteado de forma uniforme e o resultado era uma\npapa cinzenta homogênea — tecnicamente correta e visualmente morta. Duas\nmudanças resolveram:\n\n**1. A cor depende de ONDE a figura está.** Existe um matiz base e uma direção,\nambos sorteados a cada execução. Ao caminhar nessa direção pelo quadro, o matiz\nescorrega pela roda de cores — um lado fica roxo, o outro verde. Sobre esse\ngradiente cada figura ainda varia um pouco, e 18% delas saltam para o lado\noposto da roda (a cor complementar): são os acentos que fazem a massa de cor\nvibrar em vez de estagnar.\n\n**2. As figuras se aglomeram.** Sete focos são sorteados a cada execução. 62%\ndas figuras caem perto de um deles, com desvio dado por `randomGaussian()` —\nperto do foco é muito provável, longe é raro mas possível. Os outros 38%\ncontinuam espalhados, para que nenhuma região fique órfã. O resultado são\nregiões densas e regiões arejadas, ou seja, composição.\n\nUm detalhe menor, mas que importa: as posições podem cair **fora** da tela. As\nfiguras vazam pelas bordas de propósito — sem isso o quadro ganha uma moldura\ninvisível de figuras alinhadas na margem.\n\n## Notas de implementação\n\n- `push()` / `pop()` isolam a rotação de cada figura. Sem eles, o giro de uma\n  contaminaria todas as seguintes.\n- As figuras cheias vão **sem contorno**: um `stroke` somaria linhas escuras\n  demais quando milhares se empilham.\n- `line` e `point` são as únicas que usam `stroke` — e um `point` com\n  `strokeWeight` grande vira uma bolinha macia, que é como ele entra na\n  composição.\n- `colorMode(HSB, 360, 100, 100, 255)` porque em HSB o matiz é um número só,\n  o que torna trivial \"andar pela roda de cores\"; em RGB isso exigiria\n  malabarismo.\n\n## Como executar\n\n**Opção 1 — editor online:** abra <https://editor.p5js.org>, cole o conteúdo de\n`sketch.js` e clique em *Play*.\n\n**Opção 2 — local:** abra o arquivo `index.html` no navegador.\n\n## Controles\n\n| Tecla | Ação |\n|---|---|\n| **R** ou clique | gera um quadro completamente novo |\n| **S** | salva a imagem atual em PNG |\n| redimensionar a janela | refaz o canvas e sorteia outro quadro |\n\n## Experimente mudar\n\nOs parâmetros estão todos no topo do `sketch.js`:\n\n- `N_DETALHE` — a granulação. Zere e o quadro fica liso como aquarela.\n- `ALFA_*` — o coração do sketch. Opacidades altas fazem cada figura aparecer\n  individualmente (vira colagem); baixas demais e o branco nunca morre.\n- `TAM_FUNDO` — se diminuir muito, sobram falhas brancas: a camada de fundo\n  deixa de dar conta do recado.\n- `NUCLEOS` — poucos focos dão grandes massas; muitos aproximam do chuvisco\n  uniforme.\n\n## Arquivos\n\n```\nsketch.js       o sketch em p5.js, comentado para iniciantes\nindex.html      página para rodar o sketch localmente\nthumbnail.png   imagem representativa (uma das infinitas saídas possíveis)\nREADME.md       este arquivo\n```",
+      "hasThumb": true,
+      "files": [
+        "sketch.js",
+        "index.html",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "Artefato 2 Marina",
+      "id": "artefato-2-marina",
+      "name": "Artefato 2  Marina",
+      "origin": "native",
+      "lastModified": 1787351131788,
+      "title": "Cidade",
+      "tags": [
+        "Rects",
+        "IA"
+      ],
+      "collection": "artefato da semana/2",
+      "description": "Uma composição que utiliza retângulos e pontos gerados aleatoriamente e se assemelha a uma cidade. Utilizei o ChatGPT, mas também fiz alterações.\n\nAutora: Marina Corais\n\nPrompt 1: Utilizando o P5.js, queria criar o seguinte codigo - ele gera retangulos verticais em lugares aleatorios e com cores aleatorias (de preferencia cinzas azulados). acima de cada retangulo tem uma destribuicao aleatoria de retangulos amarelos menores, como se fossem janelas.\n\ndepois tive a ideia das estrelas.\n\nPrompt 2: Agora preciso de um código capaz de fazer diversos pontos brancos em lugares variados, se assemelhando a um céu estrelado.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "Artefato 2 Manoel V C Carvalho",
+      "id": "artefato-2-manoel-v-c-carvalho",
+      "name": "Artefato 2   Manoel V C Carvalho",
+      "origin": "native",
+      "lastModified": 1787351010313,
+      "title": "Rectangle, trinagle, elipse and lines",
+      "tags": [
+        "Generative",
+        "color",
+        "IA"
+      ],
+      "collection": "artefato da semana/2",
+      "description": "Sketche feito utilizando os comandos rect, elipse, triangle e line. Além de definição de cores do background e fill's.\n\nUtilizou-se o Chat GPT para tornar o sketch estático mas generativo, utilizando o prompt a segui:\n\nTornar o código a seguir, do p5front em Estático mas generativo, assegurando que o sketch não gera sempre a mesma imagem. Manter o código original sem modificação, apenas incluindo o código para o sketch se tornar generativo: \n\nfunction setup() {\n  createCanvas(windowWidth, windowHeight);\n}\n\nfunction draw() {\n  background(10);\n  \n  // Rectangle\n  fill(175);\n  stroke (175)\n  rect (0, 0, 650, 275)\n  \n  // Elipse\n  fill( 128, 0, 0);\n  ellipse(560, 275, 100, 100);\n  \n   // Triangle\n  fill(10);\n  triangle(500, 200, 500, 275, 380, 275);\n  \n  // Triangle\n  fill(175);\n  triangle(500, 350, 500, 275, 380, 275);\n  \n  // Elipse\n  fill(120, 0, 40);\n  ellipse(300, 275, 150, 150);\n  \n  // Elipse\n  fill(220, 20, 60);\n  ellipse(120, 275, 200, 200);\n  \n  // Line\n  stroke(120, 0, 40);\n  strokeWeight(5);\n  line(0, 0, 800, 700)\n  \n  // Line\n  stroke(220, 20, 60);\n  strokeWeight(5);\n  line(0, 150, 500, 600)\n  \n}\n\nAutor: Manoel V C Carvalho",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "you just never quite know 2",
+      "id": "you-just-never-quite-know-2",
+      "name": "you just never quite know 2",
+      "origin": "native",
+      "lastModified": 1787350965698,
+      "title": "You Just Never Quite Know",
+      "tags": [
+        "Generativo",
+        "Bolinhas"
+      ],
+      "collection": "artefato da semana/2",
+      "description": "Autor: Luiz Henrique da Costa Pacheco\nDRE: 125056085\n\nComo um segundo exercício, busquei recriar uma arte de Emmet William, Four Directional Song of Doubt for Five Voices, de forma que pudesse torná-la geracional criando um algoritmo simples para gerar aleatoriamente as bolinhas no centro de cada quadrado.\n\nhttps://www.moma.org/collection/works/127613\n\nCódigo feito 90% pelo autor, pedindo uma ajuda para a IA na questão de redimensionamento da tela para formar um quadrado perfeito e no debug do Array de cores. Segue abaixo o link do chat\n\nhttps://share.gemini.google/RQfmefl3ZGJh",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "artefato #02 Leo Nunes",
+      "id": "artefato-02-leo-nunes",
+      "name": "artefato #02   Leo Nunes",
+      "origin": "native",
+      "lastModified": 1787326344558,
+      "title": "Jogo da Vida de Conway ArcoIris Piscante",
+      "tags": [
+        "square",
+        "ai",
+        "chatgpt",
+        "generative"
+      ],
+      "collection": "artefato da semana/2",
+      "description": "Um sketch feito pelo ChatGPT com modificações do Aluno.\n\nAutor: Leonardo Nunes Guimarães Costa\n\n\n\nPrompt usado:just made an p5 incomplete code, please complete it, its for a conways game of life \n\nfunction setup() {\n     createCanvas(windowWidth, windowHeight);\n      state = randomState(100) \n} \nfunction randomState(cellSize){} \nfunction drawCell(x,y,nxtState,cellSize){ \n    if(nxtState == 0){ \n        fill(black); } \n    else{ \n        fill(white); \n    } \n    square((x-1)*cellSize,(y-1)*cellSize,cellSize) \n} \nfunction updateState (currentState){} \nfunction draw() {\n     background(220); updateState(state) \n}\n\nInicialmente pensei em fazer uma versão mais interativa(com vários botões), implementação que ja fiz em outras linguagens, mas confesso que depois de experimentar com as cores a criatividade do que fazer a mais esgotou, portanto decidi entregar esta versão rasa, mas que me hipnotizou. Depois que vi que era pra ser um trabalho \"Estático\", mas mexi no código para ele começar assim.\n\nControles:\n    Barra de Espaço: Pausa\n    Clique do Mouse: Aciona uma Célula",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "README.md",
+        "sketch.js",
+        "style.css",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "Laura artefato 2",
+      "id": "laura-artefato-2",
+      "name": "Laura artefato 2",
+      "origin": "native",
+      "lastModified": 1787326205109,
+      "title": "",
+      "tags": [],
+      "collection": "artefato da semana/2",
+      "description": "",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "Trab2 ProgCriativa HAlmico",
+      "id": "trab2-progcriativa-halmico",
+      "name": "Trab2 ProgCriativa HAlmico",
+      "origin": "native",
+      "lastModified": 1787326097089,
+      "title": "Composição neoconcreta com primitivas variadas",
+      "tags": [
+        "p5js",
+        "generative",
+        "neoconcreto",
+        "claude"
+      ],
+      "collection": "artefato da semana/2",
+      "description": "Extensão do trabalho da semana anterior (que usava apenas `quad()`).\nAgora a composição combina várias primitivas vistas em aula —\n`quad`, `triangle`, `circle`, `line`, `point`, `bezier` e `arc` —\nmantendo o espírito neoconcreto: fundo escuro, paleta pastel com um\núnico ponto de cor vibrante, formas concentradas numa diagonal e\nfragmentos menores dispersos nas bordas.\n\nO canvas é quadrado e se adapta ao tamanho da janela (usa\n`windowWidth`/`windowHeight` e se redesenha em `windowResized()`).\nO sketch também não usa uma semente fixa de aleatoriedade, então\ncada vez que a página é aberta (ou a janela é redimensionada) uma\ncomposição nova é gerada, seguindo sempre as mesmas regras.\n\nAutor: Henrique Almico Dias da Silva\n\nPrompt usado: Estenda o sketch da semana passada (que usava apenas quad) podendo agora usar qualquer primitiva de desenho vista em aula. O sketch não deve gerar sempre a mesma imagem nem usar tamanho fixo: o canvas deve se adequar ao tamanho da janela disponível (usando windowWidth/windowHeight), encaixando o formato quadrado original no espaço disponível.",
+      "hasThumb": true,
+      "files": [
+        "thumbnail.png",
+        "README.md",
+        "sketch.js",
+        "style.css",
+        "index.html"
+      ]
+    },
+    {
+      "folder": "helena giovanna artefato 2 esttico mas generativo",
+      "id": "helena-giovanna-artefato-2-esttico-mas-generativo",
+      "name": "helena giovanna artefato 2 esttico mas generativo",
+      "origin": "native",
+      "lastModified": 1787325840661,
+      "title": "Cidade futurista durante a noite - estático mas generativo",
+      "tags": [
+        "generative",
+        "static",
+        "ai",
+        "chatgpt"
+      ],
+      "collection": "artefato da semana/2",
+      "description": "Um sketch feito pelo ChatGPT - artefato estático mas generativo\n\nAutora: Helena Giovanna\n\nPrompt usado: \"Crie um sketch em p5.js de uma **cidade futurista à noite**.\nQuero que o desenho seja **estático**, sem nenhuma animação, mas que seja diferente cada vez que o código for executado. Para isso, use `random()` para variar coisas como altura e largura dos prédios, posição das estrelas, janelas acesas e cores das luzes.\nO canvas deve se adaptar ao tamanho da janela usando `createCanvas(windowWidth, windowHeight)`, e os elementos do desenho devem usar `width` e `height` como referência para também se adaptarem ao tamanho disponível.\nPode usar as primitivas do p5.js que forem necessárias, como `rect()`, `circle()`, `triangle()`, `quad()` e `line()`.\nA cidade deve ter prédios, janelas, céu com estrelas, uma rua e alguns elementos que deem uma aparência futurista. Use `noLoop()` para manter o resultado estático depois que ele for gerado.\nTente manter o código relativamente simples, sem usar recursos muito avançados, e coloque comentários explicando as partes mais importantes.\"",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "Artefato 2 Gabriella Murta",
+      "id": "artefato-2-gabriella-murta",
+      "name": "Artefato 2   Gabriella Murta",
+      "origin": "native",
+      "lastModified": 1787325755538,
+      "title": "Artefato 2 - Estático mas generativo",
+      "tags": [
+        "circle",
+        "ia",
+        "generative"
+      ],
+      "collection": "artefato da semana/2",
+      "description": "Autora: Gabriella Pinheiro\n\nCriado com Chat GPT.\n\nTexto original: Crie um sketch generativo (sem animação) em p5.js. Apresente o resultado sob a forma de um único script em javascript a ser colado num ambiente de desenvolvimento como o editor.p5js.org. O sketch deve usar como primitiva de desenho os comandos createCanvas(width, height, [renderer]) , ellipse(x, y, width, height) , arc(x, y, width, height, start, stop, [mode]). Além disso, deve permitir a interação por meio da função function mousePressed() {  if (mouseButton.center) background(200)} function mouseDragged() {  line (mouseX, mouseY, pmouseX, pmouseY). É permitido usar comandos de estilização como stroke, fill, strokeWeight, etc. O programa fonte deve ser documentado para ser explicado para uma plateia de iniciantes em programação de computadores. Use como inspiração as obras de Beatriz Milhazes.\n\nMudanças realizadas nas cores, formas, posições e fundo.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "projeto gatinho",
+      "id": "projeto-gatinho",
+      "name": "projeto gatinho",
+      "origin": "native",
+      "lastModified": 1787325609356,
+      "title": "",
+      "tags": [],
+      "collection": "artefato da semana/2",
+      "description": "# Gatinho Generativo\n\n**Aluna:** Gabriela Oliveira de Alcantara\n\n## Descrição do Projeto\nEste trabalho foi desenvolvido para a segunda aula de programação criativa. O sketch desenha um gatinho de forma generativa utilizando primitivas gráficas do p5.js, como `ellipse`, `triangle` e `line`.\n\n### Regras Aplicadas:\n- **Responsividade:** O canvas é criado utilizando `windowWidth` e `windowHeight` para se adequar dinamicamente ao espaço disponível na janela. O gatinho é desenhado com base em proporções relativas usando `min(width, height)`, garantindo que ele não sofra distorção independentemente da razão de aspecto da janela.\n- **Arte Generativa:** A imagem nunca é idêntica. A cor de fundo da tela, a pelagem do gatinho e as cores das pupilas são sorteadas através da função `random()` a cada nova execução do código ou quando a janela é redimensionada.\n- **Primitivas:** Todo o desenho foi feito utilizando apenas as formas geométricas básicas vistas em sala de aula.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "Artefato 2 diego",
+      "id": "artefato-2-diego",
+      "name": "Artefato 2   diego",
+      "origin": "native",
+      "lastModified": 1787325525396,
+      "title": "",
+      "tags": [],
+      "collection": "artefato da semana/2",
+      "description": "# Placa de Circuito Eletrônico Gerativa (PCB)\n\n**Autor:** Diego d'Orsi Duarte \n**Ferramenta:** p5.js (Editor / p5Front)  \n\n## Descrição do Trabalho\n\nEm vez de formas abstratas aleatórias simples, o programa constrói elementos eletrônicos combinando as primitivas 2D do p5.js (`rect`, `ellipse`, `line`, `arc`, `triangle`, `quad`, `circle`, `beginShape`/`vertex`):\n- **Microchips / CIs (DIP packages):** Com corpo preto em resina, pinos metálicos estanhados, ponto indicador de Pino 1, entalhe de orientação e código gravado.\n- **Resistores:** Com fios de cobre e corpo bege contendo faixas do código internacional de cores.\n- **Capacitores Eletrolíticos e Cerâmicos:** Detalhados com topos de alumínio, ranhuras de segurança e valores de capacitância.\n- **LEDs Iluminados:** Com transparência, filamentos internos e halo de luz cintilante.\n- **Trilhas e Vias de Cobre:** Malha de conexões em 45° e 90° com ilhas de solda douradas.\n- **Silkscreen:** Rotulagem técnica com designações como `GND`, `VCC`, `5V`, `TX` e `RX`.\n\n## Adaptabilidade e Responsividade\n- O canvas adapta-se dinamicamente ao tamanho da janela usando `windowWidth` e `windowHeight`.\n- As dimensões dos componentes e da grade de trilhas se escalam proporcionalmente à menor dimensão da tela (`min(width, height)`), garantindo nitidez e visual adequado em qualquer dispositivo.\n- A função `windowResized()` ajusta o canvas e recalcula o layout automaticamente em caso de mudança no tamanho do navegador.\n\n## Interatividade\n- **Clique com o Mouse:** A cada clique do usuário sobre o canvas (`mousePressed`), uma nova composição de circuito é gerada proceduralmente.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "Artefato2 Carolina Abdu",
+      "id": "artefato2-carolina-abdu",
+      "name": "Artefato2 Carolina Abdu",
+      "origin": "native",
+      "lastModified": 1787325344009,
+      "title": "Sketch de um jardim de girassóis",
+      "tags": [],
+      "collection": "artefato da semana/2",
+      "description": "**Autor:** Carolina Abdu\n\n\n**Prompt usado no ChatGPT:**\nA parti do trabalho anterior , mas desta vez você pode usar novas primitivas além do squad() . Se assegure que o sketch não gera sempre a mesma imagem e nem use um tamanho fixo, mas se adeque ao tamanho da janela disponível. Use windowWidth/windowHeight para criar o canvas, por exemplo. O girassol único deve ser substituído por um jardim de flores que mudam a cada nova geração da imagem. \n\n**Observação:**\nForam necessários ajustes adicionais, pois algumas flores inicialmente estavam \"voando\", entre outros problemas corrigidos.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "README.md",
+        "sketch.js",
+        "style.css",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "Artefato2 Arthur Ramos",
+      "id": "artefato2-arthur-ramos",
+      "name": "Artefato2 Arthur Ramos",
+      "origin": "native",
+      "lastModified": 1787325058630,
+      "title": "Estrada Generativa",
+      "tags": [
+        "p5js",
+        "arte-generativa",
+        "perspectiva",
+        "responsivo"
+      ],
+      "collection": "artefato da semana/2",
+      "description": "# Estrada Generativa\n\nEste trabalho é uma evolução do sketch **Estrada em Perspectiva** entreque no artefato 1. Este trabalho é uma evolução do sketch **Estrada em Perspectiva** entreque no artefato 1. A ideia da arte é a mesma, no entanto dessa vez foram usadas outras primitivas, aumentando a complexidade das formas presentes na imagem gerada. Alem disso, dessa vez foram usadas formulas de randomização para gerar uma paisagem nova a cada execução.\n\nO programa sorteia a paleta de cores, a posição do horizonte e do ponto de fuga, o formato das montanhas, a localização do sol ou da lua, as nuvens, as estrelas, as faixas da pista, as plantas e os postes. O desenho, portanto, segue regras de perspectiva, mas não produz sempre a mesma imagem.\n\nO canvas é criado com `windowWidth` e `windowHeight`. Todas as posições e dimensões são calculadas a partir do espaço disponível, fazendo o desenho se adaptar a janelas de tamanhos e proporções diferentes. Quando a janela é redimensionada, a composição é recalculada.\n\nTambém é possível clicar na imagem para gerar uma nova variação.\n\n**Autor:** Arthur Ramos",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "README.md",
+        "sketch.js",
+        "style.css",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "artefato 02 marcha generativa",
+      "id": "artefato-02-marcha-generativa",
+      "name": "artefato 02 marcha generativa",
+      "origin": "native",
+      "lastModified": 1787324898188,
+      "title": "",
+      "tags": [],
+      "collection": "artefato da semana/2",
+      "description": "# A Marcha Generativa do Progresso\n\n**Autor:** Victor Hugo Figueiredo Pereira da Silva\n\n**Artefato da semana 02** — extensão do trabalho da semana 01, agora com\nqualquer primitiva vista em sala, com **aleatoriedade** e com **canvas do\ntamanho da janela**.\n\n![thumbnail](thumbnail.png)\n\n## Ideia do trabalho\n\nNa semana passada eu desenhei \"A Marcha do Progresso\" usando **só** a primitiva\n`quad`: um quadro fixo, com cinco figuras fixas, que era sempre exatamente o\nmesmo. Esta semana o mesmo tema virou um **sistema generativo**: em vez de\ndesenhar *uma* marcha do progresso, o sketch desenha *uma máquina que inventa\nmarchas do progresso*. Cada execução sorteia uma história diferente da\nhumanidade — da Idade da Pedra até a era da Inteligência Artificial — e a\ncompõe na janela disponível.\n\nA leitura é sempre da esquerda para a direita, como na ilustração original:\n\n- a **postura** vai do hominídeo agachado até a figura completamente ereta;\n- a **altura** das figuras cresce a cada etapa;\n- a **ferramenta** de cada figura fica mais complexa (osso → lança → roda →\n  engrenagem → lâmpada → celular → rede neural);\n- o **céu** viaja de um amanhecer quente para uma noite digital cheia de\n  estrelas, bits e blocos de dados;\n- a **paisagem de fundo** se transforma junto: as árvores da esquerda vão\n  virando chaminés no meio e arranha-céus acesos na direita.\n\nO detalhe conceitual de que eu mais gostei é que a postura e a altura de cada\nfigura são calculadas a partir da **era** que ela representa, e não da posição\ndela na fila. Como as eras sorteadas sempre saem em ordem crescente, a marcha\ncontinua funcionando visualmente com 3 ou com 7 estações — e um operário da\nRevolução Industrial nunca aparece agachado como um hominídeo só porque o\nsorteio o colocou na segunda posição.\n\n## A parte da aleatoriedade\n\nO sketch **não gera a mesma imagem duas vezes**. No começo de tudo ele sorteia\numa **semente** (um número inteiro) e a usa em `randomSeed()` / `noiseSeed()`.\nA semente aparece na legenda do canto, então qualquer imagem gerada pode ser\nreencontrada depois.\n\nO que é sorteado a cada execução:\n\n| O que muda | Como |\n| --- | --- |\n| Atmosfera | 5 paletas (Amanhecer, Poeira Vermelha, Névoa Fria, Crepúsculo Ácido, Azul Profundo) + um desvio de cor em cada canal, para que duas execuções da mesma paleta nunca sejam idênticas |\n| Nº de estações | 3 a 7, calculado a partir do formato da janela |\n| Eras presentes | a Idade da Pedra e a era da IA são fixas (são as pontas da marcha); as do meio são sorteadas e ordenadas |\n| Ferramenta de cada era | 3 objetos possíveis por era = **21 ferramentas** desenhadas no código |\n| As figuras | altura, postura, espessura dos membros, tamanho da cabeça, abertura das pernas, ângulo do tronco, tom de pele e cor da roupa |\n| Cenário | montanhas, árvores, chaminés, torres com janelas acesas, nuvens, blocos de dados, estrelas, pássaros, drones, multidão de fundo, pedras e trilhas de circuito no primeiro plano |\n| Composição | altura do horizonte, posição da linha dos pés, posição e tamanho do sol e do orbe digital |\n\nUm detalhe que valeu a pena: sementes vizinhas (1, 2, 3…) começam com números\npseudoaleatórios parecidos, então logo depois de semear o sketch descarta os\n12 primeiros sorteios para \"aquecer\" o gerador. Sem isso, sementes próximas\ngeravam imagens suspeitosamente parecidas.\n\nPara gerar uma nova imagem basta **clicar** (ou apertar qualquer tecla).\n\n## A parte do tamanho da janela\n\nNão existe **nenhuma** medida em pixels fixos no desenho:\n\n```js\nfunction setup() {\n  createCanvas(windowWidth, windowHeight);   // canvas = janela\n  ...\n}\n\nfunction windowResized() {\n  resizeCanvas(windowWidth, windowHeight);   // ao redimensionar, refaz o desenho\n  redraw();\n}\n```\n\nTodo o resto é calculado em `calcularLayout()` como fração de `width` /\n`height`: a altura do horizonte, a linha do chão, a largura da \"vaga\" de cada\nfigura, a altura das figuras, o tamanho das montanhas, a espessura das linhas\ne até o corpo da letra da legenda (que encolhe sozinho se não couber na\nlargura da janela).\n\nO número de estações também responde ao espaço: janelas largas ganham mais\netapas da história (até 7), janelas estreitas ficam com as 3 mínimas — e nesse\ncaso as figuras recebem um fator de ampliação para não virarem formiguinhas.\nAssim o sketch funciona tanto em um monitor ultrawide quanto em uma janela\nvertical de celular, sem esticar nem cortar o desenho.\n\n## Primitivas usadas\n\nDiferente da semana passada (que era `quad` e nada mais), aqui as primitivas\nsão combinadas livremente:\n\n| Primitiva | Onde aparece |\n| --- | --- |\n| `rect` | degradês do céu e do chão, prédios, mesas, telas, blocos de dados, vinheta |\n| `circle` | cabeças, juntas, rodas, engrenagens, lâmpada, nós da rede neural, halos |\n| `ellipse` | troncos (elipse girada), nuvens, fumaça, sombras, hélices de drone, pedras |\n| `line` | raios de sol, alavancas, treliça da antena, raios da roda, conexões da rede neural, faíscas |\n| `triangle` | montanhas, pinheiros, pontas de lança e de flecha, chamas, cone de luz do celular |\n| `quad` | membros afunilados (braços, pernas, hastes), tangas, base da chaminé |\n| `arc` | arco de caça, alças do vaso, cabelo e barba, ondas de rádio, anéis do orbe, asas dos pássaros, olho da IA |\n| `point` | estrelas e o grão da imagem |\n| `text` | apenas a legenda do canto (o desenho em si não usa texto) |\n\nAs funções auxiliares `membro()`, `bastao()`, `brilho()`, `fumaca()` e\n`engrenagemForma()` só existem para não repetir a mesma conta de geometria\nvárias vezes — internamente elas são feitas dessas mesmas primitivas.\n\nO sketch é **estático**: `noLoop()` no `setup()` garante que a imagem é\ndesenhada uma única vez. `draw()` existe (em vez de tudo dentro de `setup()`)\njustamente para que `redraw()` possa refazer a obra quando a janela muda de\ntamanho ou quando o usuário pede uma nova composição.\n\n## Controles\n\n| Tecla / ação | Efeito |\n| --- | --- |\n| clique do mouse | gera uma nova marcha (nova semente) |\n| qualquer tecla | gera uma nova marcha |\n| `S` | salva a imagem atual em PNG |\n| `H` | mostra / esconde a legenda do canto |\n| redimensionar a janela | refaz a mesma obra no novo tamanho |\n\n## Como executar\n\n1. Abra o arquivo `index.html` diretamente no navegador (ele já carrega o\n   p5.js e o `sketch.js`), **ou**\n2. cole o conteúdo de `sketch.js` no [editor.p5js.org](https://editor.p5js.org)\n   e rode (▶).\n\n## Prompt utilizado (Claude Code, modelo Opus 5, esforço máximo)\n\n> Estenda o meu artefato da semana passada (\"A Marcha do Progresso\", feita só\n> com `quad`) para um sketch **generativo** em p5.js, podendo usar todas as\n> primitivas vistas em sala. Requisitos: (1) o sketch não pode gerar sempre a\n> mesma imagem — use uma semente aleatória por execução e sorteie paleta,\n> número de estações, eras, ferramentas, proporções das figuras e todo o\n> cenário; (2) não use tamanho fixo — crie o canvas com\n> `windowWidth`/`windowHeight`, derive todas as medidas do tamanho da janela e\n> reaja a `windowResized()`; (3) a leitura da marcha (postura ficando ereta,\n> altura crescendo, ferramentas evoluindo, céu indo do amanhecer à noite\n> digital) tem que continuar legível com qualquer número de estações; (4)\n> comente o código em português, pensando em quem está começando a programar.\n\nDepois disso, o resultado foi ajustado a partir de renderizações de teste em\nvários tamanhos de janela e várias sementes: correção da cabeça que afundava\nnos ombros, curva de postura por era, degradês do céu e do chão redesenhados\ncomo grade opaca (as faixas com transparência sobrepostas criavam listras),\nvinheta sem anéis, e um teste automático que renderiza as 21 ferramentas e 10\nformatos de janela procurando erros de execução.\n\n## Arquivos deste pacote\n\n- `sketch.js` — o sketch p5.js (comentado em português).\n- `index.html` — página para rodar o sketch fora do editor.\n- `thumbnail.png` — uma das imagens geradas pelo sketch (semente 4242).\n- `README.md` — este arquivo.",
+      "hasThumb": true,
+      "files": [
+        "sketch.js",
+        "index.html",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "the owl house friends",
+      "id": "the-owl-house-friends",
+      "name": "the owl house friends",
+      "origin": "native",
+      "lastModified": 1787324708349,
+      "title": "",
+      "tags": [
+        "chatgpt",
+        "luz noceda",
+        "the owl house",
+        "witches",
+        "eda",
+        "king"
+      ],
+      "collection": "artefato da semana/2",
+      "description": "Autor: Thomas Cardoso de Miranda\n\nPrompt usado:\namos fazer uma extensão do trabalho da semana passada, mas desta vez você pode usar qualquer uma das primitivas. Se assegure que o sketch não gera sempre a mesma imagem e nem use um tamanho fixo, mas se adeque ao tamanho da janela disponível. Use windowWidth/windowHeight para criar o canvas, por exemplo. Se precisar usar uma razão de aspecto particular, (uma imagem quadrada, por exemplo), encaixe seu design no espaço disponível. Usaremos a imagem anexada, comente no topo do código as primitivas utilizadas.\n\nAqui está a imagem usada como exemplo:\n\nhttps://disney.images.edge.bamgrid.com/ripcut-delivery/v2/variant/disney/39f0b3cb-6ea5-4d11-a68a-575543c24bc0/compose?format=webp&width=2560",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "Taisa artefato 2",
+      "id": "taisa-artefato-2",
+      "name": "Taisa artefato 2",
+      "origin": "native",
+      "lastModified": 1787324625691,
+      "title": "",
+      "tags": [
+        "static",
+        "generative",
+        "stained glass",
+        "colorful"
+      ],
+      "collection": "artefato da semana/2",
+      "description": "# Vitral aleatório\n## Descrição\nO sketch representa um vitral generativo, formado por diferentes pedaços de vidro colorido separados por linhas escuras, simulando a estrutura de um vitral tradicional.\n\nO desenho é estático, ou seja, ele é construído uma única vez durante a execução do programa e não possui animação. Entretanto, ele é generativo, pois utiliza valores aleatórios para determinar diferentes características da composição.\n\nA imagem é construída a partir de uma malha de pontos distribuídos pelo canvas. Os pontos internos sofrem pequenos deslocamentos aleatórios, fazendo com que as formas não sejam sempre iguais. As regiões formadas por esses pontos são divididas em triângulos, e suas cores também são escolhidas aleatoriamente a partir de uma paleta pré-definida.\n\nDessa forma, cada execução do programa pode produzir um vitral diferente, mesmo mantendo a mesma lógica de construção.\n\n## Prompt utilizado\n\nCrie um sketch estático (sem animação) em p5.js. Apresente o resultado sob a forma de um único script em javascript a ser colado num ambiente de desenvolvimento como o editor.p5js.org. O sketch deve usar as primitivas vistas em sala, vou te enviar depois. É permitido usar comandos de estilização como stroke, fill, strokeWeight, etc. O programa fonte deve ser documentado para ser explicado para uma plateia de iniciantes em programação de computadores. Se assegure que o sketch não gera sempre a mesma imagem e nem use um tamanho fixo, mas se adeque ao tamanho da janela disponível. Use windowWidth/windowHeight para criar o canvas, por exemplo. Em resumo, quero um sketch estático, mas generativo. no caso, o tema seriam vitrais.\nPrimitivas:\nbackground(cor): pinta todo o canvas com a cor cor.\npoint(x, y): desenha um ponto em (x, y).\nline(x1, y1, x2, y2): desenha uma linha de (x1, y1) até (x2, y2).\nrect(x, y, width, height): desenha um retângulo com canto superior esquerdo em (x, y), largura width e altura height.\nellipse(x, y, width, height): desenha uma elipse com centro em (x, y), largura width e altura height.\ntriangle(x1, y1, x2, y2, x3, y3): desenha um triângulo com vértices em (x1, y1), (x2, y2) e (x3, y3).\ncircle(x, y, diameter): desenha um círculo com centro em (x, y) e diâmetro diameter.\nsquare(x, y, size): desenha um quadrado com canto superior esquerdo em (x, y) e lado size.\nquad(x1, y1, x2,y2, x3,y3, x4,y4): desenha um quadrilátero com vértices em (x1, y1), (x2, y2), (x3, y3) e (x4, y4).\narc(x, y, width, height, start, stop, [mode]): desenha um arco de elipse\nbezier(x1, y1, x2,y2, x3,y3, x4,y4): desenha uma curva de Bézier\n\nAluna: Taísa Evangelista de Oliveira Martello DRE: 120024033",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "Samuel Vitor Gaia",
+      "id": "samuel-vitor-gaia",
+      "name": "Samuel Vitor   Gaia",
+      "origin": "native",
+      "lastModified": 1787324564936,
+      "title": "",
+      "tags": [],
+      "collection": "artefato da semana/2",
+      "description": "# Gaia Respira\n\n**Autor:** Samuel Vitor  \n**Disciplina:** Programação Criativa  \n**Atividade:** Artefato da semana 2\n\n## Estado do trabalho\n\nVersão inicial para desenvolvimento artístico. O ZIP de entrega e o `thumbnail.png` serão produzidos depois que a composição final estiver definida.\n\n## Conceito\n\nO sketch apresenta Gaia como uma paisagem-corpo abstrata. Três morros de alturas e larguras diferentes fazem parte de uma única formação contínua e assimétrica, sem detalhes anatômicos explícitos. A perspectiva baixa aproxima quem observa do terreno sem representar literalmente uma parte do corpo.\n\nO slider controla o pulso vertical da paisagem. A mudança não acontece instantaneamente: uma simulação fortemente amortecida cria peso, inércia e acomodação sem balanço excessivo. Para sugerir matéria macia com volume preservado, a formação se estreita quando cresce e se espalha quando baixa. Uma deformação secundária discreta acompanha o movimento dos três morros.\n\n## Requisitos técnicos\n\n- canvas responsivo criado com `windowWidth` e `windowHeight`;\n- nova composição a cada execução;\n- slider para controlar os montes;\n- física de mola e amortecimento;\n- desenho feito apenas com `rect()`, `circle()`, `ellipse()`, `arc()` e `line()`;\n- compatibilidade com p5.js 2.2.3 e p5Front;\n- redimensionamento automático da composição.",
+      "hasThumb": true,
+      "files": [
+        "README.md",
+        "sketch.js",
+        "thumbnail.png",
+        "index.html"
+      ]
+    },
+    {
+      "folder": "BolhasNeon",
+      "id": "bolhasneon",
+      "name": "BolhasNeon",
+      "origin": "native",
+      "lastModified": 1787322297890,
+      "title": "Bolhas em neon",
+      "tags": [
+        "neon",
+        "chatgpt",
+        "generative"
+      ],
+      "collection": "artefato da semana/2",
+      "description": "Um sketch feito pelo ChatGPT e analisado/modificado levemente por mim, de bolhas de sabão neon.\n\nAutor: Ysabelle Estevão de Oliveira\n\nPrompt usado: Crie um sketch estático em p5.js. Apresente o  resultado sob a forma de um único script em javascript a ser colado num  ambiente de desenvolvimento como o editor.p5js.org. O programa  fonte deve ser documentado para ser explicado para uma plateia de  iniciantes em programação de computadores. Pode usar qualquer uma das primitivas. Se assegure que o sketch não gera sempre a mesma imagem e nem use um tamanho fixo, mas se adeque ao tamanho da janela disponível. Use windowWidth/windowHeight para criar o canvas. Gostaria que o código gera-se um bolhas de sabão que mudassem de posição e tamanho a cada execução, elas não podem ficar umas em cimas das outras e tenham cores neons diferentes entre si.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "polar espiral",
+      "id": "polar-espiral",
+      "name": "polar espiral",
+      "origin": "shared",
+      "lastModified": 1787322082352,
+      "title": "",
+      "tags": [
+        "polar coords",
+        "example"
+      ],
+      "collection": "aula 3",
+      "description": "Example of polar coords",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
     {
       "folder": "grafico funcao",
       "id": "grafico-funcao",
       "name": "grafico funcao",
       "origin": "shared",
-      "lastModified": 1787087082019,
+      "lastModified": 1787087116919,
       "title": "",
       "tags": [
         "example",
@@ -132,28 +877,6 @@
         "README.md",
         "sketch.js",
         "style.css"
-      ]
-    },
-    {
-      "folder": "polar espiral",
-      "id": "polar-espiral",
-      "name": "polar espiral",
-      "origin": "shared",
-      "lastModified": 1787069440803,
-      "title": "",
-      "tags": [
-        "polar coords",
-        "example"
-      ],
-      "collection": "aula 3",
-      "description": "Example of polar coords",
-      "hasThumb": true,
-      "files": [
-        "index.html",
-        "sketch.js",
-        "style.css",
-        "README.md",
-        "thumbnail.png"
       ]
     },
     {

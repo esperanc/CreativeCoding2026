@@ -5,10 +5,19 @@ const { buildShareURL } = require(path.join(__dirname, 'mkshare.js'));
 
 const GEN = process.argv[2];
 const MD  = process.argv[3];
+// figuras que não devem receber link (o slide mostra outro código)
+const EXC = new Set();
+if (process.argv[4] && fs.existsSync(process.argv[4])) {
+  for (const l of fs.readFileSync(process.argv[4], 'utf8').split('\n')) {
+    const t = l.trim();
+    if (t && !t.startsWith('#')) EXC.add(t);
+  }
+}
 
 const links = {};
 for (const f of fs.readdirSync(GEN).filter(f => f.endsWith('.js'))) {
   const nome = path.basename(f, '.js');
+  if (EXC.has(nome)) continue;
   // tira o cabeçalho "// canvas W H" — é só para o renderizador
   const src = fs.readFileSync(path.join(GEN, f), 'utf8').replace(/^\/\/ canvas \d+ \d+\n/, '');
   links[nome] = buildShareURL(src, nome.replace(/_/g, ' '));
