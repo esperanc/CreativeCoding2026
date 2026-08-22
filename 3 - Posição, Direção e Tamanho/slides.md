@@ -3,10 +3,10 @@
 ## Aula 3 - Posição, direção e tamanho
 :::
 ---
-# O problema de hoje
-Na aula passada aprendemos a desenhar **uma** forma: `circle`, `rect`, `line`...
+# Layout geométrico
 
-Hoje o assunto é **onde**, **para onde** e **de que tamanho** — quando as formas são muitas e precisam ter relação umas com as outras.
+Em outras palavras, **onde**, **para onde** e **de que tamanho** desenhar formas.
+
 :::col
 - Proporções: `lerp`, `map`, `constrain`, `norm`
 - Sistemas de coordenadas
@@ -20,7 +20,7 @@ Hoje o assunto é **onde**, **para onde** e **de que tamanho** — quando as for
 ---
 # Cinco círculos numa reta
 :::col ratio=65%
-A primeira tentativa costuma ser escrever cada forma na mão.
+Podemos escrever cada forma na mão:
 - Funciona.
 - Mas os números não dizem nada sobre a **ideia** do desenho.
 - Mudar qualquer coisa exige reescrever tudo.
