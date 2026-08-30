@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Artefato 3 — Bússola de Campo</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+<style>
+  :root { color-scheme: dark; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    background: #111318;
+    color: #e8e8ea;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 16px 60px;
+  }
+  h1 { font-size: 1.3rem; margin: 0 0 4px; }
+  p.sub { color: #9a9aa5; margin: 0 0 20px; font-size: 0.9rem; text-align: center; max-width: 640px; }
+  #sketch-holder canvas {
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+  }
+  .hint { margin-top: 10px; color: #767683; font-size: 0.8rem; }
+  details {
+    margin-top: 40px;
+    width: 100%;
+    max-width: 820px;
+    background: #1a1c22;
+    border-radius: 8px;
+    padding: 12px 18px;
+  }
+  summary { cursor: pointer; font-weight: 600; }
+  pre {
+    overflow-x: auto;
+    background: #0d0e12;
+    padding: 16px;
+    border-radius: 6px;
+    font-size: 0.82rem;
+    line-height: 1.5;
+  }
+  code { font-family: "SFMono-Regular", Menlo, Consolas, monospace; }
+</style>
+</head>
+<body>
+  <h1>Bússola de Campo</h1>
+  <p class="sub">Grade de agulhas em coordenadas polares: a posição vem do raio e ângulo, a direção de um campo vetorial baseado em ruído e o tamanho cresce com a distância ao centro.</p>
+  <div id="sketch-holder"></div>
+  <p class="hint">Clique no desenho para gerar um novo campo.</p>
+
+  <details>
+    <summary>Ver código-fonte (sketch.js)</summary>
+    <pre><code id="code-view">Carregando...</code></pre>
+  </details>
+
+  <script src="sketch.js"></script>
+  <script>
+    fetch('sketch.js')
+      .then(r => r.text())
+      .then(txt => { document.getElementById('code-view').textContent = txt; })
+      .catch(() => { document.getElementById('code-view').textContent = '// não foi possível carregar sketch.js'; });
+  </script>
+</body>
+</html>

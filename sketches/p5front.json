@@ -1,14 +1,779 @@
 {
   "format": "p5front-export",
   "version": 1,
-  "createdAt": "2026-08-22T14:01:13.848Z",
+  "createdAt": "2026-08-30T19:20:41.441Z",
   "projects": [
+    {
+      "folder": "Artefact 3 Yasmine",
+      "id": "artefact-3-yasmine",
+      "name": "Artefact 3 Yasmine",
+      "origin": "p5editor",
+      "lastModified": 1788117613041,
+      "title": "",
+      "tags": [],
+      "collection": "artefato da semana/3",
+      "description": "",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "p5.js",
+        "p5.sound.min.js",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "Artefato 3 Samuel Araujo",
+      "id": "artefato-3-samuel-araujo",
+      "name": "Artefato 3   Samuel Araujo",
+      "origin": "native",
+      "lastModified": 1788043005044,
+      "title": "",
+      "tags": [],
+      "collection": "artefato da semana/3",
+      "description": "# Decolagem\n\n**Autor:** Samuel Vitor  \n**Disciplina:** Programação Criativa  \n**Atividade:** Artefato 3 — Layout\n\n## Conceito\n\nO sketch mostra um foguete subindo no céu a 45º, atrás dele o rastro de fumaça concentrado que vai se espalhando e perdendo opacidade.\n\n## Criação\n\nO mais interessante foi perceber que “layout geométrico” não precisa significar uma composição cheia de cálculos aparecendo na tela. Uma regra simples já pode organizar o desenho inteiro. Nesse caso, defini dois pontos e usei uma linha imaginária entre eles para controlar a posição, o tamanho e a direção dos elementos.\nEu comecei complicando bastante a ideia. O foguete resolveu isso de uma forma bem mais direta. O lerp() distribui a fumaça pelo caminho, o tamanho dos círculos muda gradualmente e o atan2() aponta o foguete na direção correta. No fim, gostei mais da versão simples\n\nA composição se adapta automaticamente ao tamanho da janela.\n\n## Requisitos técnicos\n\n- canvas responsivo com `windowWidth` e `windowHeight`;\n- layout definido por posição, dimensão e direção;\n- redimensionamento automático;\n- compatibilidade com p5.js 2.2.3 e p5Front.",
+      "hasThumb": true,
+      "files": [
+        "sketch.js",
+        "thumbnail.png",
+        "README.md",
+        "index.html"
+      ]
+    },
+    {
+      "folder": "artefato3 joao galetti",
+      "id": "artefato3-joao-galetti",
+      "name": "artefato3 joao galetti",
+      "origin": "native",
+      "lastModified": 1788042808125,
+      "title": "",
+      "tags": [],
+      "collection": "artefato da semana/3",
+      "description": "# Artefato 3 — Bússola de Campo\n\nEste artefato segue explicitamente uma especificação geométrica em termos de **posição, direção e tamanho**, os conceitos trabalhados na aula \"Posição, direção e tamanho\".\n\n## A especificação geométrica\n\nO desenho é um campo de \"agulhas\" organizadas em anéis concêntricos ao redor do centro do canvas:\n\n- **Posição**: cada agulha é posicionada por **coordenadas polares** — um raio `r` (distância ao centro, definido pelo anel) e um ângulo `theta` (posição ao longo do anel). A posição cartesiana é derivada com `cos(theta) * r` e `sin(theta) * r`.\n- **Direção**: cada agulha aponta em uma direção resultante de um **campo vetorial**: o ângulo polar somado a uma perturbação de ruído Perlin (`noise()`), criando um padrão de fluxo em espiral em vez de agulhas alinhadas radialmente.\n- **Tamanho**: o comprimento e a espessura de cada agulha crescem **proporcionalmente à distância do centro** (`t = r / maxR`), junto com a cor, que faz uma transição entre dois tons conforme o raio e o ângulo.\n\nAnéis de referência (`ellipse` sem preenchimento) marcam visualmente as distâncias radiais usadas para posicionar cada anel de agulhas.\n\n## Técnica\n\nUma semente aleatória (`seed`) controla o ruído usado no campo vetorial; clicar no desenho sorteia uma nova semente e gera um novo campo, mantendo a mesma lógica de posição/direção/tamanho.\n\n## Arquivos\n\n- `sketch.js` — código-fonte do sketch em p5.js.\n- `index.html` — executa o sketch (responsivo) e exibe o código-fonte visualmente.\n- `thumbnail.png` — imagem representativa do resultado.\n\n---\n\nFeito por **João Galetti**.",
+      "hasThumb": true,
+      "files": [
+        "sketch.js",
+        "index.html",
+        "thumbnail.png",
+        "README.md"
+      ]
+    },
+    {
+      "folder": "matriz 1",
+      "id": "matriz-1",
+      "name": "matriz 1",
+      "origin": "native",
+      "lastModified": 1788038628240,
+      "title": "",
+      "tags": [],
+      "collection": "artefato da semana/3",
+      "description": "# Matriz — campo de transformações lineares\n\n**Autor:** Murilo Jorge de Figueiredo\n\n![thumbnail](thumbnail.png)\n\n## O que é\n\nUma grade cobre a tela. Em toda célula é desenhado o mesmo quadrado — o mesmo\n`rect(-0.5, -0.5, 1, 1)`. O que muda é a matriz 2×2 aplicada antes de desenhar,\ncom `applyMatrix()`. Toda a variedade da imagem vem da matriz.\n\n## A matriz\n\n`M = R(θ) · C`, onde `C` faz cisalhamento em x e escala em y, e `R` é uma\nrotação. Os três números vêm da posição da célula na tela:\n\n- `θ` cresce da esquerda para a direita → as peças giram\n- `k` (cisalhamento) cresce da esquerda para a direita → o quadrado vira losango\n- `sy` = `sen(v · 0,9π)`, de cima para baixo → a escala vertical\n\n## O determinante\n\nComo `det(R) = 1`, o determinante da matriz é o próprio `sy`. Ele explica as\nduas coisas mais visíveis da imagem:\n\n- **A dobra escura no meio.** Ali `sy = 0`, a matriz é singular e esmaga o\n  quadrado num segmento de reta. Não foi desenhada — é a matriz perdendo posto.\n- **As duas famílias de cor.** Embaixo o determinante é negativo, ou seja, a\n  figura é espelhada. Cada peça tem um marcador claro num canto que troca de\n  lado ao cruzar a dobra, para o espelhamento ficar visível.\n\nPor ser uma transformação linear, e não perspectiva, retas paralelas continuam\nparalelas: as peças estão inclinadas, mas não há ponto de fuga.\n\n## O acaso\n\nEntra só na rotação, e é multiplicado por `1 − |det|`: nulo onde a transformação\npreserva área, máximo em cima da dobra, onde ela é quase singular.\n\n## Como rodar\n\nCole o `sketch.js` em <https://editor.p5js.org> e dê Play, ou abra o\n`index.html` no navegador.\n\nClique ou aperte **R** para gerar outro. **S** salva um PNG. O canvas usa\n`windowWidth`/`windowHeight` e se refaz ao redimensionar a janela.\n\n## Parâmetros\n\nNo topo do `sketch.js`: `DIVISOES` (finura da grade), `GIRO`, `CISALHAMENTO` e\n`BAGUNCA`. Zerar `GIRO` deixa o cisalhamento puro à vista; zerar `BAGUNCA`\nmostra a estrutura sem ruído nenhum.",
+      "hasThumb": true,
+      "files": [
+        "sketch.js",
+        "index.html",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "MariaEduardaAraujo Artefato 3",
+      "id": "mariaeduardaaraujo-artefato-3",
+      "name": "MariaEduardaAraujo Artefato 3",
+      "origin": "native",
+      "lastModified": 1788038589451,
+      "title": "",
+      "tags": [],
+      "collection": "artefato da semana/3",
+      "description": "# Artefato da Semana 3: Layout Geométrico e Transformações\n\n**Autora:** Maria Eduarda Araújo  \n**DRE:** 119054059  \n\n## Sobre o Projeto\nPra terceira semana, mantive a mesma tematica dos artefatos anteriores — o uso de corações e tons de vermelho/rosa —, mas mudei a abordagem técnica. Nesse trabalho ao contrario dos antigos que tinham uma aleatoriedade, possui cálculos matemáticos exatos e proporcionais.\n\nPara cumprir os requisitos da aula sobre Posição, Direção e Tamanho, este sketch implementa:\n\n* **Fim dos \"Números Mágicos\":** A posição de cada coração não foi definida manualmente no código, mas sim calculada através de laços de repetição (`for`).\n* **Uso da função `map()`:** Utilizei o `map()` pra transformar os índices da grade geométrica em coordenadas de pixels (x e y) na tela, mantendo a proporção exata independentemente da quantidade de elementos. A função também foi usada pra atrelar matematicamente a rotação e a escala de cada forma à sua posição.\n* **Transformações Afins:** Em vez de recalcular os vértices de cada primitivo geométrico que compõe o coração, o código move e transforma o próprio sistema de coordenadas utilizando `translate()`, `rotate()` e `scale()`.\n* **Isolamento de Estado:** As funções `push()` e `pop()` envolvem o bloco de desenho de cada coração pra garantir que a transformação de um elemento não afete os seguintes na grade.\n\n## Processo de Criação\nUtilizei a inteligência artificial para auxiliar na estruturação do código, focando na correta aplicação geométrica. O meu prompt foi formulado para proibir especificamente o uso da função `random()`, forçando a IA a utilizar regras de proporção (`map`) para gerar o padrão visual dos corações. \n\nO resultado foi um grid fluido onde os corações mudam de tamanho e ângulo de forma ordenada.\n\n## Meu prompt utilizado: \n\n> \"Crie um sketch estático em p5.js. O objetivo é demonstrar o domínio de layouts geométricos calculados matematicamente, sem usar 'números mágicos' ou aleatoriedade (random). O código deve seguir estritamente estas regras:\n> \n> 1. O Desenho: A forma base a ser desenhada deve ser um coração, construído através da combinação de primitivas básicas (como triangle e circle/arc).\n> 2. O Layout: Use laços de repetição aninhados (for) para criar uma grade geométrica (grid) ordenada com esses corações na tela.\n> 3. Proporções: Utilize a função map() para calcular a posição X e Y exata de cada coração com base nos índices do laço de repetição.\n> 4. Variação Matemática: Use map() ou a distância até o centro para variar matematicamente a escala e a rotação dos corações.\n> 5. Transformações Afins: Desenhe os corações movendo o sistema de coordenadas com push(), translate(), rotate(), scale() e pop().\n> 6. Tema visual: Fundo em tons escuros (como vinho ou marinho) e corações em uma paleta elegante de vermelhos e rosas.\n> \n> Apresente o código totalmente comentado e documentado para explicar a lógica por trás do map(), push() e pop().\"",
+      "hasThumb": true,
+      "files": [
+        "README.md",
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "infinite grid systems",
+      "id": "infinite-grid-systems",
+      "name": "infinite grid systems",
+      "origin": "native",
+      "lastModified": 1788038547179,
+      "title": "Infinite Grid Systems",
+      "tags": [],
+      "collection": "artefato da semana/3",
+      "description": "Aluno: Luiz Henrique da Costa Pacheco\nDRE: 125056085\n\nPara este sketch sobre layout, procurei inspiração em duas obras muito semelhantes. A primeira é a capa do livro Grid Systems, considerado o guia essencial do design de layouts. A segunda vem de uma imagem num artigo que li recentemente sobre o estudo de formas primárias feito por alunos na Bauhaus.  \n\nPensei em combinar a identidade da capa com a ideia de subdivisão dos quadrados de uma das imagens do artigo para criar um gerador de layouts infinito.  \n\nInspirado pelo seminário da semana anterior, decidi realizar este sketch apenas com o Antigravity 2.0, sem alterar o código manualmente, assumindo o papel de orientador da IA. O resultado revelou-se muito PIOR do que se tivesse usado a IA apenas como uma ferramenta de apoio e pesquisa, como nos sketches anteriores.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "carrinho vrum",
+      "id": "carrinho-vrum",
+      "name": "carrinho vrum",
+      "origin": "native",
+      "lastModified": 1788038488501,
+      "title": "carrinho vrum",
+      "tags": [],
+      "collection": "artefato da semana/3",
+      "description": "## Autor: Nick Correa\n\n## Ideia: Gerar uma animação de um 'carrinho' se movendo num plano inclinado usando conceitos de rotação e translação estudados.\n\nCódigo gerado pelo ChatGPT com o seguinte prompt:\nFaça um script em p5front js que utiliza os conceitos de rotação e translação para gerar o seguinte visual\n\num fundo com um ceu azul, chão inclinado na cor marrom\nUm carro composto de um retangulo amarelo e rodas azuis, com marcas de aro na cor preta como se fosse de roda de biciceleta\n\nO carrinho deve mover-se subindo o chão inclinado até sair da tela, depois aparecer no canto esquerdo novamente e repetir",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "artefato3",
+      "id": "artefato3",
+      "name": "artefato3",
+      "origin": "native",
+      "lastModified": 1788038465539,
+      "title": "Círculo Arcano de D&D",
+      "tags": [
+        "geometria",
+        "p5js",
+        "dnd",
+        "arcano"
+      ],
+      "collection": "artefato da semana/3",
+      "description": "Um círculo arcano inspirado em Dungeons & Dragons, construído a partir de especificações geométricas de posição, dimensões e direção. Runas e símbolos são distribuídos em anéis concêntricos por meio de ângulos e raios, formando uma composição ritualística ao redor de um D20 central.\n\nAutor: Pedro Elias\n\nPrompt usado: Crie um círculo arcano inspirado em Dungeons & Dragons em p5.js, utilizando os conceitos de posição, dimensões e direção da aula. Faça uma composição estática com anéis concêntricos, runas e símbolos arcanos distribuídos geometricamente ao redor do centro. Utilize ângulos e raios para definir a posição e a orientação dos elementos, mantendo um D20 como elemento central da composição.",
+      "hasThumb": true,
+      "files": [
+        "style.css",
+        "thumbnail.png",
+        "index.html",
+        "README.md",
+        "sketch.js"
+      ]
+    },
+    {
+      "folder": "artefato3 natan azevedo gomes",
+      "id": "artefato3-natan-azevedo-gomes",
+      "name": "artefato3 natan azevedo gomes",
+      "origin": "native",
+      "lastModified": 1788038433743,
+      "title": "Artefato 3 - Layout Natan",
+      "tags": [
+        "generative",
+        "ai",
+        "gemini",
+        "landscape"
+      ],
+      "collection": "artefato da semana/3",
+      "description": "Um sketch usando coordenadas polares e transformações afim para desenhar uma mandala.\n\nAutor: Natan Azevedo Gomes\n\nPrompt: Crie um sketch estático (sem animação) em p5.js. Apresente o resultado sob a forma de um único script em javascript a ser colado num ambiente de desenvolvimento como o editor.p5js.org. O sketch pode usar as primitivas background, point, line, rect, ellipse, triangle, circle, square, quad, arc ou bezier. É permitido usar comandos de estilização como stroke, fill, strokeWeight, etc. O programa fonte deve ser documentado para ser explicado para uma plateia de iniciantes em programação de computadores. O sketch deve usar coordenadas polares, podendo usar as funções sin e cos, e transformadas afins como translate, rotate, scale e shear (usando push e pop) para desenhar uma mandala. Não preencha os elementos da mandala com cores, deixe ela apenas com os contornos. Utilize uma paleta de cores variada e intensa, e faça um fundo preto. O sketch deve se adequar ao tamanho da janela, usando windowWidth e windowHeight. Tome cuidado para que a mandala não fique \"cortada\" pela janela.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "artefato 3 (2)",
+      "id": "artefato-3-2",
+      "name": "artefato 3 (2)",
+      "origin": "native",
+      "lastModified": 1788038405170,
+      "title": "Horizonte de eventos de Fourier",
+      "tags": [
+        "fourier"
+      ],
+      "collection": "artefato da semana/3",
+      "description": "Distorção Gravitacional via Séries de Fourier - Pedro Paulo O. R.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "artefato 3 (1)",
+      "id": "artefato-3-1",
+      "name": "artefato 3 (1)",
+      "origin": "native",
+      "lastModified": 1788038343979,
+      "title": "",
+      "tags": [],
+      "collection": "artefato da semana/3",
+      "description": "# Artefato 3\n\n**Nome:** Laura Daflon dos Santos Santana Meira\n**DRE:** 120053993\n\n## Descrição\n\nO presente sketch foi desenvolvido em p5.js com a proposta de explorar conceitos de posição, direção e tamanho por meio da construção de espirais compostas por quadrados.\n\nA composição é formada por diferentes camadas de espirais, todas originadas a partir do centro da tela. Cada quadrado possui uma rotação aleatória e recebe cores de diferentes paletas, criando uma sobreposição de formas e cores com aparência psicodélica.\n\n## Construção\n\nA posição de cada quadrado é calculada a partir de coordenadas polares, utilizando um raio e um ângulo para determinar suas coordenadas no canvas. Ao longo de cada espiral, o raio é progressivamente aumentado enquanto o ângulo também é atualizado. Dessa forma, os quadrados se afastam gradualmente do centro e formam trajetórias espirais.\n\nTambém são utilizadas transformações como `translate()` e `rotate()` para posicionar e rotacionar individualmente cada elemento. As funções `push()` e `pop()` permitem que essas transformações sejam aplicadas a cada quadrado sem interferir nos demais elementos do desenho.\n\nDiferentes espirais utilizam tamanhos, velocidades de crescimento, níveis de transparência e paletas de cores distintas. O tamanho dos elementos também é calculado de maneira proporcional às dimensões da tela, permitindo que a composição se adapte a diferentes resoluções.\n\n## Recursos utilizados\n\n- p5.js\n- Coordenadas polares para definição das posições\n- `cos()` e `sin()` para cálculo das coordenadas\n- `translate()` para deslocamento do sistema de coordenadas\n- `rotate()` para rotação dos quadrados\n- `push()` e `pop()` para isolamento das transformações\n- `random()` para variação de cores, opacidade e rotação\n- `color()` e `setAlpha()` para controle das cores e transparência\n- `windowWidth` e `windowHeight` para adaptação ao tamanho da tela",
+      "hasThumb": true,
+      "files": [
+        "sketch.js",
+        "style.css",
+        "thumbnail.png",
+        "README.md",
+        "index.html"
+      ]
+    },
+    {
+      "folder": "Artefato 3 Manoel V C Carvalho",
+      "id": "artefato-3-manoel-v-c-carvalho",
+      "name": "Artefato 3   Manoel V C Carvalho",
+      "origin": "native",
+      "lastModified": 1788038313001,
+      "title": "Mandala",
+      "tags": [
+        "flower",
+        "circles",
+        "espiral"
+      ],
+      "collection": "artefato da semana/3",
+      "description": "Sketch feito utilizando ellipses, shapes e comandos de especificação geométrica (distribuindo pontos num círculo, espirais e 'r' como função do ângulo).\n\nAutor: Manoel V C Carvalho",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "artefato #03 Leo Nunes",
+      "id": "artefato-03-leo-nunes",
+      "name": "artefato #03   Leo Nunes",
+      "origin": "native",
+      "lastModified": 1788038278630,
+      "title": "Visão do Túnel",
+      "tags": [
+        "NoAI",
+        "interactive",
+        "animation",
+        "incomplete"
+      ],
+      "collection": "artefato da semana/3",
+      "description": "Minha intenção inicial era fazer a simulação de uma nave percorrendo um túnel, mas percebi que teria que ter alguma forma de memorizar os rects passados e trabalhar as linhas e preferi deixar como está. Também preferi não inserir controles ou cores, deixo para alguém melhorar esses pontos.\n\nAutor: Leonardo Nunes Guimarães Costa",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "README.md",
+        "sketch.js",
+        "style.css",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "tunel escuro",
+      "id": "tunel-escuro",
+      "name": "tunel escuro",
+      "origin": "native",
+      "lastModified": 1788037415959,
+      "title": "Túnel escuro",
+      "tags": [
+        "p5.js",
+        "arte generativa",
+        "arte digital",
+        "túnel",
+        "movimento",
+        "perspectiva",
+        "abstração",
+        "noite",
+        "chatgpt"
+      ],
+      "collection": "artefato da semana/3",
+      "description": "Traços luminosos emergem de um horizonte distante e avançam continuamente sobre um fundo escuro. Entre estrada, túnel e fluxo de luz, o movimento permanece em repetição, sem revelar um destino ou uma saída.\n\nSerá que um dia iremos atravessar esse túnel?",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "Trab3 ProgCriativa HAlmico",
+      "id": "trab3-progcriativa-halmico",
+      "name": "Trab3 ProgCriativa HAlmico",
+      "origin": "native",
+      "lastModified": 1788037373539,
+      "title": "Layout neoconcreto — posição, dimensão e inclinação",
+      "tags": [
+        "p5js",
+        "generative",
+        "neoconcreto",
+        "claude",
+        "layout",
+        "transformacoes"
+      ],
+      "collection": "artefato da semana/3",
+      "description": "Terceiro artefato da série (extensão dos dois anteriores). O tema\ndesta semana é layout: cada forma tem sua posição, dimensões e\ninclinação especificadas por uma regra geométrica explícita, usando\nos conceitos vistos em aula — em vez de sorteadas de forma\ntotalmente livre.\n\nTécnicas usadas:\n- `translate()` / `rotate()` / `scale()` com `push()`/`pop()` para\n  posicionar, orientar e dimensionar cada forma (substituindo a\n  rotação manual do primeiro artefato).\n- `lerp()`, `map()`, `norm()` e `constrain()` para a série principal\n  de formas ao longo da diagonal (posição, tamanho em forma de sino\n  e ângulo variam com um único parâmetro `t`).\n- Coordenadas polares (ângulo igualmente espaçado + raio em faixas)\n  para os fragmentos menores e para os raios ao redor do ponto focal.\n- `p5.Vector` (`lerp`, `sub`, `normalize`, `add`, `mult`) para a\n  geometria da diagonal.\n\nMantém o canvas quadrado adaptável à janela (`windowWidth`/\n`windowHeight`, com `windowResized()`) e a ausência de semente fixa,\nentão cada execução gera uma composição nova.\n\nAutor: Henrique Almico Dias da Silva\n\nPrompt usado: Crie uma nova versão do sketch anterior que siga uma especificação geométrica de posição, dimensão e inclinação/direção, usando os conceitos vistos em aula: interpolação (lerp), mapeamento de faixas (map), coordenadas polares, vetores (p5.Vector) e transformações afins (translate, rotate, scale, push/pop). Envie apenas um arquivo zip com o sketch, sem pastas dentro.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "image.png",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "tornado esferas julia vilela",
+      "id": "tornado-esferas-julia-vilela",
+      "name": "tornado esferas julia vilela",
+      "origin": "native",
+      "lastModified": 1788037326726,
+      "title": "",
+      "tags": [],
+      "collection": "artefato da semana/3",
+      "description": "# Tornado de esferas\n\nA ideia aqui foi criar a ilusão de um tornado usando apenas esferas. Primeiro, tracei uma única hélice que sobe girando em torno de um eixo vertical central — o \"olho\" do tornado —, com o raio abrindo aos poucos conforme ganha altura, o que dá o formato de funil: estreito embaixo e largo em cima. Depois, distribuí as esferas ao longo dessa hélice e fiz o tamanho de cada uma depender da distância dela ao eixo: bem pequenas perto do olho e maiores conforme se afastam, o que reforça a silhueta do funil. \n\nAutor: Júlia Vilela\n\n\nPrompt usado: Crie um sketch estático (sem animação) em p5.js. Apresente o resultado sob a forma de um único script em javascript a ser colado num ambiente de desenvolvimento como o editor.p5js.org. O sketch deve seguir algum tipo de especificação geométrica em termos de posição, dimensões ou inclinação / direção, e deve usar sólidos geométricos tridimensionais (renderizador WEBGL). Represente um tornado formado por sólidos esféricos de tamanhos diferentes, distribuídos ao longo de uma única hélice que sobe girando ao redor de um eixo vertical central (o \"olho\" do tornado). O raio do funil deve crescer com a altura seguindo um perfil côncavo, e o tamanho de cada esfera deve ser função da distância dela ao eixo: esferas menores ao se aproximar do olho do tornado e maiores ao se afastar. O programa fonte deve ser documentado para ser explicado para uma plateia de iniciantes em programação de computadores. Use aleatoriedade (com semente fixa, para manter o resultado estático e reprodutível) de forma que ainda respeite a especificação geométrica da composição.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "thumbnail.png",
+        "README.md"
+      ]
+    },
+    {
+      "folder": "sketch geometrico p5",
+      "id": "sketch-geometrico-p5",
+      "name": "sketch geometrico p5",
+      "origin": "native",
+      "lastModified": 1788037266030,
+      "title": "",
+      "tags": [],
+      "collection": "artefato da semana/3",
+      "description": "# Campo Geométrico Direcional\n\n**Autor:** Henrique Kezen V. H. Leite\n\nEste sketch em p5.js explora posição, dimensão e direção por meio de uma grade adaptativa de segmentos orientados.\n\nCada segmento possui uma posição fixa na grade, mas sua inclinação é calculada em tempo real para apontar para um ponto de referência definido pelo cursor. A direção de cada elemento é obtida pelo vetor entre sua posição `(x, y)` e o ponto `(mouseX, mouseY)`, usando `atan2`.\n\nA dimensão dos segmentos também varia de acordo com a distância até o ponto de referência. Além disso, círculos concêntricos reforçam visualmente a relação geométrica de distância ao centro comum.\n\nO canvas usa `windowWidth` e `windowHeight`, portanto a composição se adapta ao tamanho da janela.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "semana3",
+      "id": "semana3",
+      "name": "semana3",
+      "origin": "native",
+      "lastModified": 1788037215645,
+      "title": "",
+      "tags": [],
+      "collection": "artefato da semana/3",
+      "description": "Este projeto consiste em uma composição visual estática e gerativa desenvolvida com a biblioteca **p5.js**. A obra adapta-se automaticamente às dimensões da janela do navegador e cria padrões geométricos abstratos e inéditos a cada execução.\n\n---\n\n## 📐 Conceitos Geométricos Aplicados\n\n1. **Posição (Grade Adaptativa e Centralização):**\n   - A tela utiliza `windowWidth` e `windowHeight` para ocupar 100% da área disponível.\n   - A composição se organiza em uma grade cujas margens são recalculadas automaticamente para manter os elementos perfeitamente centralizados na tela.\n   - Utilização de `translate(posX, posY)` para mover a origem do sistema de coordenadas para o centro de cada célula.\n\n2. **Dimensões (Escala Proporcional):**\n   - Todas as formas e espessuras de linha têm tamanhos definidos em função da menor dimensão da janela (`min(width, height)`).\n   - Essa abordagem impede que o design fique distorcido em telas verticais (monitores mobile) ou ultra-wide.\n\n3. **Inclinação e Direção (Transformações Geométricas):**\n   - Aplicação de rotações (`rotate()`) aleatórias em ângulos retos ($0^\\circ$, $90^\\circ$, $180^\\circ$, $270^\\circ$) e diagonais ($45^\\circ$).\n   - Controle das matrizes de transformação usando o par `push()` e `pop()` para isolar as rotações e translações dentro de cada célula individual.\n\n---\n\n## 🎨 Principais Funcionalidades\n\n- **Gerativa:** A paleta de cores harmoniosa (em modo HSB) e as escolhas de formas em cada célula são calculadas aleatoriamente via `random()`.\n- **Estática:** Utiliza `noLoop()` no setup para evitar renderização contínua e manter o foco em uma única imagem estática gerada.\n- **Responsiva:** A função nativa `windowResized()` recalcula a grade e gera um novo arranjo sempre que o navegador muda de tamanho.\n\n---\n\n## 🚀 Como Executar\n\n1. Abra o editor online do p5.js em: https://esperanc.github.io/p5front/\n2. Substitua o código existente pelo script JavaScript fornecido no projeto (`sketch.js`).\n3. Pressione o botão **Play** (▶) no canto superior direito para visualizar a imagem.\n4. Para gerar uma nova variação da arte, aperte **Play** novamente ou redimensione a janela do navegador.\n\n---\n\n## 🛠️ Tecnologias Utilizadas\n\n- **JavaScript (ES6+)**\n- **p5.js** (Biblioteca para computação gráfica)",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "proporcoes aurealeatorias",
+      "id": "proporcoes-aurealeatorias",
+      "name": "proporcoes aurealeatorias",
+      "origin": "native",
+      "lastModified": 1788037194840,
+      "title": "Proporções Áurealeatórias",
+      "tags": [
+        "generative",
+        "aleatório",
+        "ai",
+        "layout"
+      ],
+      "collection": "artefato da semana/3",
+      "description": "Um sketch feito com ajuda do ChatGPT, com cores, posições e inclinações variáveis, seguindo dimensões da proporção áurea.\n\nAutor: Diogo dos Santos Machado Vieira\n\nPrompt usado: Crie um sketch estático em p5.js, sem animações, e apresente o resultado em um único código JavaScript que possa ser copiado e executado diretamente em um ambiente como o editor.p5js.org. O tamanho do canvas deve se ajustar ao espaço disponível na janela, utilizando windowWidth e windowHeight em vez de dimensões fixas.  O sketch também deve apresentar alguma variação a cada vez que for executado, para que o resultado não seja sempre exatamente o mesmo. Mesmo com essas variações, o desenho deve seguir uma lógica geométrica definida, considerando elementos como posição, tamanho, direção e inclinação das formas.\n\nPara a parte visual, faça uma composição inspirada na razão áurea, usando suas formas e proporções como referência para criar o design.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "Objetos com irradiações 2026 08 29 03 20 50",
+      "id": "objetos-com-irradiacoes-2026-08-29-03-20-50",
+      "name": "Objetos com irradiações 2026 08 29 03 20 50",
+      "origin": "p5editor",
+      "lastModified": 1788037145969,
+      "title": "Objetos com irradiações",
+      "tags": [
+        "primitives",
+        "ai",
+        "gemini",
+        "generative"
+      ],
+      "collection": "artefato da semana/3",
+      "description": "Um sketch feito pelo Gemini usando primitivas e seus contornos para fazer irradiações.\n\nAutor: Joao Ricardo S. Magalhaes\n\nPrompts usados: Escreva um código um p5.js que tenha um fundo pastel, a tela de ajusta ao tamanho da janela, tenha 5 objetos, uma linha, um quadrado, um triângulo, um círculo e um losango que ficarão em 5 posições aleatoriamente, nunca se sobrepondo, meio da tela e as quatro posições restantes obedecendo a proporção da tela nos eixos x e y, respectivamente: 25% e 25%, 25% e 75%, 75% e 25% e por último 75% e 75%; Agora gostaria que os objetos tenham sua cor de fill e contorno sejam geradas aleatoriamente porém nunca a mesma cor para as duas e seu contorno irradie 3 vezes ao redor de si próprio; Gostaria que cada irradiação tivesse uma cor diferente e que sejam coladas umas nas outras ao mesmo tempo que a primeira esteja colada ao contorno do objeto; Quase tudo perfeito só gostaria que as cores também estivessem numa gama de cores pastel sem repetir nenhuma e nunca alguma parecida com a de fundo; Último retoque, gostaria que as irradiações repetissem as mesmas duas cores porém há de serem diferentes de objeto a objeto; Não quero que o fill tenha a mesma cor que alguma das irradiações.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "p5.js",
+        "thumbnail.png",
+        "README.md"
+      ]
+    },
+    {
+      "folder": "helena giovanna artefato 3 layout",
+      "id": "helena-giovanna-artefato-3-layout",
+      "name": "helena giovanna artefato 3 layout",
+      "origin": "native",
+      "lastModified": 1788037091960,
+      "title": "Formas geométricas futuristas ao redor de um ponto central",
+      "tags": [
+        "generative",
+        "geometric",
+        "static",
+        "ai",
+        "chatgpt"
+      ],
+      "collection": "artefato da semana/3",
+      "description": "Um sketch feito pelo ChatGPT com uma composição geométrica estática baseada em posição, direção e tamanho.\n\nAutora: Helena Giovanna\n\nPrompt usado: \"Crie um sketch estático em p5.js com uma composição de formas geométricas futuristas organizadas ao redor de um ponto central.\n\nQuero que as formas sejam posicionadas seguindo uma regra geométrica, usando ângulos e distâncias em relação ao centro da tela. Use `sin()` e `cos()` para calcular as posições e `rotate()` para fazer com que as formas tenham direções diferentes de acordo com sua posição.\n\nO tamanho das formas também deve variar de maneira organizada, por exemplo aumentando ou diminuindo conforme a distância do centro. Pode usar `map()` para fazer essa variação.\n\nO canvas deve se adaptar ao tamanho da janela usando `windowWidth` e `windowHeight`, e o desenho também deve se ajustar usando `width` e `height` como referência.\n\nPode usar diferentes primitivas do p5.js e cores para deixar o resultado mais interessante, mas tente manter o código relativamente simples e com comentários explicando as partes principais.\n\nO resultado deve ser estático, sem animação, e usar `noLoop()`.\"\"",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "flu",
+      "id": "flu",
+      "name": "flu",
+      "origin": "native",
+      "lastModified": 1788037072429,
+      "title": "Flor",
+      "tags": [
+        "flu",
+        "flor"
+      ],
+      "collection": "artefato da semana/3",
+      "description": "Flor com as cores do fluminense\n\nAutor: João Pedro Moretti Fontes Ferreira",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "eel880 artefato3 gabriel rodrigues da silva",
+      "id": "eel880-artefato3-gabriel-rodrigues-da-silva",
+      "name": "eel880 artefato3 gabriel rodrigues da silva",
+      "origin": "native",
+      "lastModified": 1788037020396,
+      "title": "Sistema Estelar Geométrico e Interativo",
+      "tags": [
+        "interactive",
+        "ai",
+        "gemini",
+        "generative",
+        "stellar system"
+      ],
+      "collection": "artefato da semana/3",
+      "description": "Sketch da aula 3 feito pelo Gemini e com alguns ajustes pessoais meus. \n\nAutor: Gabriel Rodrigues da Silva\nDRE: 121044858\n\nConforme o enunciado, o artefato deve seguir algum tipo de especificação geométrica em termos de posição, dimensões ou inclinação / direção.\n\nSendo assim, para a construção desse trabalho, foram usados vários prompts, partindo de um código inicial gerado pelo Gemini 3.1 Pro.\n\nPrompts utilizados em sequência:\n\n1º Prompt:\n\n```plain\nQuero desenvolver um sketch para a disciplina de Programação Criativa focando em layout geométrico, restrições de posicionamento, proporções de tamanho e uso de funções trigonométricas no p5.js.\n(texto até o slide 26 aqui)\n(código do meu trabalho 2)\n```\n\n2º Prompt:\n\n```plain\nEsqueça o celular. Vamos focar em um céu noturno estelar com a perspectiva de um planeta central (Saturno) inclinado e com anéis, rodeado por formas geométricas variadas.\n\nPreciso de uma especificação geométrica de posição, dimensões e direção, com coisas grandes aqui, coisas pequenas lá, proporção e uso de transformações (translate, rotate...). As estrelas do fundo devem surgir de forma sequencial ao iniciar.\n```\n\n3º Prompt:\n\n```plain\nCrie profundidade ao trabalho como se tivesse uma linha diagonal. Acima dela, apenas formas geométricas complexas grandes e abaixo dela, apenas formas pequenas, sem que nenhuma forma sobreponha a outra nem invada a área de segurança do Saturno.\n```\n\n4º Prompt:\n\n```plain\nPor fim, adicione um movimento dinâmico de 'gangorra' nos anéis de Saturno e use mousePressed para fazer a seguinte animação: se o usuário clicar em uma forma grande da metade superior esquerda, ela deve trocar de lugar com uma forma pequena da metade inferior direita, fazendo a pequena subir e ocupar o lugar da grande.\n```",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "Artefato3ArturTaboada",
+      "id": "artefato3arturtaboada",
+      "name": "Artefato3ArturTaboada",
+      "origin": "native",
+      "lastModified": 1788036974959,
+      "title": "",
+      "tags": [],
+      "collection": "artefato da semana/3",
+      "description": "# Composição Geométrica em Malha Trihexagonal\n\nEste sketch cria uma composição geométrica abstrata utilizando exclusivamente a primitiva `triangle()` do p5.js. O objetivo foi explorar princípios de geometria analítica, repetição estruturada e encaixe topológico para gerar um mosaico contínuo que preenche toda a tela.\n\n## Como o sketch funciona\n- O código utiliza laços de repetição para construir uma grade estruturada que se adapta automaticamente ao tamanho da janela.\n- Toda a arte é desenhada utilizando apenas a função nativa `triangle()`. Os ângulos e vértices são calculados matematicamente usando seno e cosseno para garantir um encaixe sem espaços vazios.\n- A malha visual intercala hexágonos e triângulos. O que aparentam ser hexágonos maciços são, na verdade, construções de 6 triângulos equiláteros menores que compartilham o mesmo centro.\n- As formas recebem cores sorteadas a cada execução, criando um forte contraste visual: tons frios para as subpartes dos hexágonos e tons quentes para os outros triângulos .\n- O tamanho base da malha geométrica é sorteado aleatoriamente toda vez que o programa é executado (`random(30, 60)`), e não se utilizam linhas de contorno (`noStroke()`) para reforçar a estética de um mosaico limpo e contínuo.\n\n## Autor\nArtur Taboada Dios Carvalho\n\n## Como visualizar este projeto\n\n**Usando o ambiente online (p5front)**\n1. Acesse o ambiente de desenvolvimento utilizado na disciplina: [https://esperanc.github.io/p5front/](https://esperanc.github.io/p5front/).\n2. Copie todo o conteúdo do arquivo `sketch.js` deste zip e cole na área de edição de código do site.\n3. O resultado será renderizado na tela de visualização após o botão \"Run\" ser clicado.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "thumbnail.png",
+        "README.md"
+      ]
+    },
+    {
+      "folder": "artefato3 Arthur Ramos",
+      "id": "artefato3-arthur-ramos",
+      "name": "artefato3 Arthur Ramos",
+      "origin": "native",
+      "lastModified": 1788036942137,
+      "title": "Estrada Vetorial",
+      "tags": [
+        "p5js",
+        "geometria",
+        "vetores",
+        "perspectiva",
+        "arte-generativa"
+      ],
+      "collection": "artefato da semana/3",
+      "description": "# Estrada Vetorial\n\n**Estrada Vetorial** é o artefato 3, decidi por seguir com a sequência do primeiro e segundo artefatod da estrada em perspectiva. Nesta versão, a composição é organizada a partir de uma especificação geométrica: um ponto de fuga controla a posição, o tamanho e a direção dos elementos da cena.\n\nAs bordas da pista são segmentos que ligam a parte inferior da tela ao ponto de fuga. As faixas centrais, os postes e os marcadores laterais são posicionados com `p5.Vector.lerp()`, sempre como uma proporção do caminho entre dois pontos. Quanto mais próximo um objeto está da parte inferior da tela, maior ele se torna. As setas laterais usam `heading()` para descobrir o ângulo do vetor que liga sua posição ao ponto de fuga e são giradas com `rotate()` para apontar nessa direção.\n\nO sketch também usa coordenadas normalizadas entre 0 e 1. Por isso, todo o desenho se adapta ao tamanho da janela. A paleta, a posição do horizonte, o ponto de fuga e vários detalhes são sorteados a cada execução, mantendo o caráter generativo do artefato anterior.\n\n**Autor:** Arthur Ramos\n\n## Conceitos geométricos utilizados\n\n- **Posição:** interpolação entre vetores com `p5.Vector.lerp()`.\n- **Dimensão:** tamanhos calculados com `map()` a partir da profundidade.\n- **Direção:** ângulo obtido com `heading()` e aplicado com `rotate()`.\n- **Proporção:** coordenadas normalizadas e medidas relativas a `width` e `height`.\n- **Transformações:** `translate()`, `rotate()`, `scale()`, `push()` e `pop()`.\n\n## Como executar\n\nAbra `index.html` em um navegador com acesso à internet ou copie `sketch.js` para o editor do p5.js.\n\n## Interação\n\n- **Clique do mouse:** cria uma nova estrada com outra configuração geométrica.\n- **Redimensionar a janela:** recalcula a composição para o espaço disponível.",
+      "hasThumb": true,
+      "files": [
+        "sketch.js",
+        "style.css",
+        "thumbnail.png",
+        "index.html",
+        "README.md"
+      ]
+    },
+    {
+      "folder": "Artefato 3 Gargantua Interstellar Angel Mansilla",
+      "id": "artefato-3-gargantua-interstellar-angel-mansilla",
+      "name": "Artefato 3 Gargantua Interstellar Angel Mansilla",
+      "origin": "native",
+      "lastModified": 1788036912155,
+      "title": "",
+      "tags": [],
+      "collection": "artefato da semana/3",
+      "description": "# Gargantua: Geometria do Horizonte\n\n**Autor:** Angel Mansilla  \n**DRE:** 123691897\n\n## Descrição\n\nMinha ideia aqui foi recriar uma cena do meu filme favorito, Interstellar, principalmente a cena em que aparecer o Gargantua, o buraco negro do filme, então tentei recriar toda a majestosidade desse corpo celeste, da maneira como ele é retratado no filme.\n\nPra seguir a proposta da atividade, eu usei conceitos geométricos na posição, no tamanho e na inclinação dos elementos, tudo parte do centro e do tamanho do buraco negro, daí o disco é formado usando diferentes raios e uma inclinação fixa, além disso as estrelas que ficam próximas mudam de posição, como se a gravidade estivesse desviando a luz delas.\n\nO desenho se adapta ao tamanho da janela e gera uma distribuição diferente de estrelas e matéria sempre que é executado, porém a estrutura principal do Gargantua continua a mesma, também coloquei a Endurance próxima do buraco negro pra representar a escala dele. Para mim, a parte mais interessante foi o efeito da luz das estrelas próximas ao corpo celeste, com a gravidade realmente afetando cada vez mais.\n\n## Como abrir\n\nÉ só abrir o arquivo `index.html` no navegador, pra gerar outra variação basta clicar na imagem, apertar `R` ou recarregar a página.\n\n## Uso de inteligência artificial\n\nUsei o ChatGPT/Codex pra pesquisar como o buraco negro de Interstellar foi representado, ajudar na criação do código e testar se o sketch funcionava em diferentes tamanhos de janela.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "Artefato 3 Gabriella Murta",
+      "id": "artefato-3-gabriella-murta",
+      "name": "Artefato 3   Gabriella Murta",
+      "origin": "native",
+      "lastModified": 1788036871238,
+      "title": "Trabalho 3",
+      "tags": [
+        "angulo",
+        "posição",
+        "ia",
+        "generative"
+      ],
+      "collection": "artefato da semana/3",
+      "description": "Trabalho feito com IA do Claude, com o seguinte texto inicial:\n Crie um sketch estático (sem animação) em p5.js. Apresente o resultado sob a forma de um único script em javascript a ser colado num ambiente de desenvolvimento como o editor.p5js.org. O sketch deve usar como primitiva de desenho comandos de posição, dimensões e direção. O sketch deve ter quatro linhas de espessura grossas que iniciam nos cantos do canva. Essa linha inicial se ramifica em três outras na sua extremidade com inclinação de 30 graus entre elas. Nas extremidades dessas segundas linhas  surgem mais três linhas e assim sucessivamente até ocupar todo o espaço da tela. O tamanho das linhas é sempre 2/3 da linha anterior a elas. E o limite de multiplicação é o encontro das linhas no centro da tela. As linhas devem se ajustar para não sobrepor umas as outras. Sua espessura deve seguir a regra de diminuição proporcional ao seu comprimento. O tamanho e espessura da linha inicial que está nos cantos deve variar aleatoriamente dentre do limite máximo de 1/4 do canva.  O programa fonte deve ser documentado para ser explicado para uma plateia de iniciantes em programação de computadores.\n\nMudanças foram realizadas no código original.\n\nAutora: Gabriella Pinheiro",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "24 08 2026 Carolina Abdu",
+      "id": "24-08-2026-carolina-abdu",
+      "name": "24 08 2026 Carolina Abdu",
+      "origin": "native",
+      "lastModified": 1788036846105,
+      "title": "Caminhada",
+      "tags": [],
+      "collection": "artefato da semana/3",
+      "description": "**Autor:** Carolina Abdu\n\n**Uso do ChatGPT:**\nForam feitas diversas iterações até chegar no resultado desejado e por isso não faz sentido colar um prompt aqui. Depois de diversas iterações consegui obter o resultado que eu inicialmente desejava.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "README.md",
+        "sketch.js",
+        "style.css",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "cosmic spark (3)",
+      "id": "cosmic-spark-3",
+      "name": "cosmic spark (3)",
+      "origin": "native",
+      "lastModified": 1787955176049,
+      "title": "sketch_espiral",
+      "tags": [],
+      "collection": "artefato da semana/3",
+      "description": "**Nome:** Nicole Cardozo dos Santos\n**DRE:** 1231749884\n\nEste sketch representa uma espiral de estrelas cuja posição é determinada pela equação da **Espiral de Arquimedes**:\n\nr = a * θ\n\n* **r (raio):** distância do ponto até o centro.\n* **θ (theta/ângulo):** rotação em graus.\n* **a (constante):** espaçamento entre as voltas.\n\nComo as telas usam coordenadas cartesianas (x, y), convertemos polar para cartesiano usando trigonometria básica:\n\n* x = r * cos(θ)\n* y = r * sin(θ)",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "artefato geometrico paulo vitor",
+      "id": "artefato-geometrico-paulo-vitor",
+      "name": "artefato geometrico paulo vitor",
+      "origin": "native",
+      "lastModified": 1787955089013,
+      "title": "",
+      "tags": [],
+      "collection": "artefato da semana/3",
+      "description": "# Entre Prédios: Geometria do Balanço\n\n**Autor:** Paulo Vitor Couto\n\n## Descrição\n\nEste sketch é uma nova extensão do artefato **Entre Prédios**. A cena mostra um herói aracnídeo balançando entre prédios e segue uma especificação geométrica baseada em **posição, dimensões, inclinação e direção**.\n\n## Especificação geométrica\n\n1. A extremidade da teia é definida como o ponto de ancoragem **A**.\n2. A posição do centro do herói **H** é calculada em coordenadas polares a partir de **A**, usando um raio `r` e um ângulo `theta`:\n\n   `H = A + r * (cos(theta), sin(theta))`\n\n3. A inclinação do corpo é tangente ao arco do balanço e vale `theta - 90 graus`.\n4. Todas as dimensões do personagem são múltiplos de uma unidade `u`, calculada a partir da menor dimensão da janela. Por exemplo, o tronco mede `3,6u` por `5u`, enquanto a cabeça mede `2,5u` por `3u`.\n5. Os prédios apresentam pequenas inclinações direcionadas para uma região central de fuga, reforçando a perspectiva.\n\nA tecla **G** exibe a circunferência de raio `r`, os pontos **A** e **H** e o segmento usado na construção. Assim, a regra geométrica pode ser observada diretamente na imagem.\n\n## Responsividade e variação\n\nO canvas é criado com `windowWidth` e `windowHeight`. Posições e tamanhos dependem da largura, da altura ou de `min(width, height)`, evitando um tamanho fixo. A cada abertura, clique ou redimensionamento, mudam:\n\n- a paleta do céu, as estrelas e a lua;\n- as dimensões e janelas dos prédios;\n- o lado da ancoragem, o raio e o ângulo da teia;\n- a posição, a escala e a inclinação do personagem.\n\n## Interação\n\n- **Clique:** gera uma nova composição.\n- **Tecla G:** mostra ou esconde a construção geométrica.\n- **Tecla S:** salva a cena atual em PNG.\n- **Redimensionar a janela:** adapta e recria a composição.\n\n## Como executar\n\nAbra `index.html` em um navegador com acesso à internet ou copie `sketch.js` para o editor online do p5.js.\n\n## Arquivos\n\n- `index.html`: carrega o p5.js e o sketch.\n- `style.css`: faz o canvas ocupar toda a janela.\n- `sketch.js`: contém o código comentado.\n- `thumbnail.png`: imagem representativa do resultado.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "style.css",
+        "sketch.js",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "borbeleta simtrica",
+      "id": "borbeleta-simtrica",
+      "name": "borbeleta simtrica",
+      "origin": "native",
+      "lastModified": 1787955027600,
+      "title": "Borboleta Simétrica",
+      "tags": [
+        "ai",
+        "claude"
+      ],
+      "collection": "artefato da semana/3",
+      "description": "Autora: Rafaella Lenzi Romano\n\nBorboleta simétrica desenhada com um único setor polar por asa, espelhado em X para criar o lado esquerdo automaticamente. O contorno preto pontilhado, as nervuras e a mancha escura seguem a borda de cada asa via posição (`r`, `θ`) e raio variável em função do ângulo. Ao clicar no sketch, as asas abrem e fecham, e o fundo desfocado, que tenta imitar flores e grama, é gerado novamente sempre de maneira distinta.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "artefato 3",
+      "id": "artefato-3",
+      "name": "artefato 3",
+      "origin": "native",
+      "lastModified": 1787954975716,
+      "title": "Artefato 3",
+      "tags": [
+        "static",
+        "layout",
+        "scenery",
+        "bucolic"
+      ],
+      "collection": "artefato da semana/3",
+      "description": "# Cenário bucólico\n## Descrição\nEste projeto consiste em um sketch estático representando uma paisagem com um rio, jardins nas margens, flores, montanhas e um sol durante o pôr do sol.\n\nO principal objetivo do sketch é aplicar conceitos de **layout geométrico**, utilizando relações entre posições, dimensões e proporções para determinar onde e como os elementos da cena são desenhados.\n\nO cenário não utiliza coordenadas fixas para definir todo o desenho. As posições e dimensões são calculadas pelo programa de acordo com o tamanho disponível para o canvas, permitindo que a composição se adapte a diferentes tamanhos de tela.\n\n## Prompt \n\nPreciso de um Sketch em p5.js(vou usar o p5 front) e esse sketch deverá ter algum tipo de especificação geométrica em termos de posição, dimensões ou inclinação/dimensão, configurando um layout. Mas eu não quero simplesmente que vc calcule as posições e me envie números que eu não vou entender. Quero que o programinha calcule as posições e que o sketch se adapte à tela. o que acha, dá pra fazer? Pensei em fazer um cenário simples, um rio, jardins nas margens e o sol se pondo no fundo. Vou te enviar algumas informações da aula. Layout geométrico\nEm outras palavras, onde, para onde e de que tamanho desenhar formas.\n\nProporções: lerp, map, constrain, norm\nSistemas de coordenadas\nCoordenadas polares\nVetores (p5.Vector)\nTransformações afins\npush() e pop()\n\n## Aluna: Taísa Evangelista de Oliveira Martello",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "espiral",
+      "id": "espiral",
+      "name": "espiral",
+      "origin": "native",
+      "lastModified": 1787954931813,
+      "title": "",
+      "tags": [],
+      "collection": "artefato da semana/3",
+      "description": "# Túnel Espiral Monocromático\n\n**Autor:** Thalisson Braga - 123671198\n\n## Sobre o Projeto\nEste sketch foi desenvolvido para o Artefato da Semana 3 da disciplina de Programação Criativa. O objetivo do projeto é abandonar o uso de \"números mágicos\" e posicionamentos manuais, utilizando matemática, proporções e transformações afins para gerar uma ilusão de ótica procedural. \n\nA cada execução, o algoritmo gera um túnel geométrico único em tons monocromáticos, variando a quantidade de camadas, o grau de rotação da espiral e a direção da iluminação (do centro para as bordas ou vice-versa).\n\nComo sugerido em aula, utilizei Inteligência Artificial generativa para auxiliar na estruturação matemática do laço de repetição e para iterar sobre os parâmetros visuais de contraste e espessura das linhas, garantindo um efeito de profundidade fluido.\n\n## Conceitos Geométricos Aplicados\n\nPara atender à especificação geométrica desta semana, o código foi construído em cima dos seguintes pilares:\n\n* **Sistemas de Coordenadas e Transformações Afins:**\n  * Em vez de calcular posições `X` e `Y` complexas, utilizei `translate(width / 2, height / 2)` para mover a origem `(0,0)` para o centro do canvas. \n  * A ilusão da espiral é criada girando o sistema de coordenadas com `rotate()` progressivamente a cada nova camada.\n  * O uso de `push()` e `pop()` foi fundamental para isolar o sistema de coordenadas a cada iteração do laço, garantindo que o quadrado seja desenhado exatamente no centro girado, sem que a rotação afete o eixo do canvas de forma descontrolada.\n  * O `rectMode(CENTER)` foi aplicado para que a rotação da forma geométrica (quadrado) ocorresse em seu próprio eixo central.\n\n* **Proporções (`lerp` e `map`):**\n  * **`lerp()`:** Utilizado para interpolar o tamanho dos quadrados. Em vez de diminuir o tamanho subtraindo um valor fixo, o `lerp()` calcula o tamanho exato da forma baseada na fração `t` (que vai de 0 a 1, do início ao fim do laço), garantindo uma escala perfeita do maior quadrado até o menor no centro.\n  * **`map()`:** Aplicado intensamente no design monocromático. A função converte a posição da camada atual (fração `t`) em tons de cinza (indo de 10 a 255 ou vice-versa). Também foi usado para afinar a espessura da linha (`strokeWeight`) à medida que a forma se aproxima do centro.\n\n* **Responsividade e Aleatoriedade:**\n  * O desenho é completamente adaptável ao tamanho da tela graças ao uso de `windowWidth`, `windowHeight` e ao cálculo do tamanho máximo da forma geométrica baseado nas dimensões do canvas.\n  * O `noLoop()` garante que a imagem gerada seja estática.\n\n## Como visualizar\nPara executar o projeto, abra o arquivo fonte em um ambiente como o [Editor Web do p5.js](https://editor.p5js.org/) ou abra o arquivo `index.html` gerado no navegador. Aperte \"Play\" ou recarregue a página múltiplas vezes para visualizar as diferentes configurações generativas geradas pelo algoritmo!",
+      "hasThumb": true,
+      "files": [
+        "thumbnail.png",
+        "index.html",
+        "README.md",
+        "sketch.js",
+        "style.css"
+      ]
+    },
+    {
+      "folder": "artefato 03 espiral do progresso",
+      "id": "artefato-03-espiral-do-progresso",
+      "name": "artefato 03 espiral do progresso",
+      "origin": "native",
+      "lastModified": 1787954889722,
+      "title": "",
+      "tags": [],
+      "collection": "artefato da semana/3",
+      "description": "# A Espiral do Progresso\n\n**Autor:** Victor Hugo Figueiredo Pereira da Silva\n\n**Artefato da semana 03** — extensão dos trabalhos das semanas 01 e 02, agora\nseguindo uma **especificação geométrica** de posição, dimensões e inclinação /\ndireção (aula 3: *Posição, direção e tamanho*).\n\n![thumbnail](thumbnail.png)\n\n## Ideia do trabalho\n\nNas semanas anteriores a marcha do progresso caminhava em linha reta, da\nesquerda para a direita. Esta semana ela foi **enrolada numa espiral**: o\ntempo nasce no sol do centro (a Idade da Pedra) e desenrola para fora, volta\napós volta, até a era da Inteligência Artificial — que caminha na borda\nescura, entre estrelas e bits. A estrada do tempo é uma **espiral de\nArquimedes**, e as figuras das semanas passadas continuam lá, com a mesma\npostura que evolui de curvada para ereta e as mesmas ferramentas que evoluem\nde osso a rede neural.\n\n## A especificação geométrica (o requisito da semana)\n\nNada na imagem é posicionado \"no olho\" — cada elemento obedece a uma regra\nexplícita de posição, dimensão ou direção, usando exatamente as ferramentas\nda aula 3:\n\n**Posição — coordenadas polares.** A estrada, as figuras, os raios do sol,\nas estrelas e os bits são todos colocados por um par (ângulo, raio) medido a\npartir do centro, convertido para x/y com `p5.Vector.fromAngle()`. A espiral\né `r(θ) = lerp(rIn, rMax, θ/θmax)` — o raio cresce em linha reta com o\nângulo, que é a definição da espiral de Arquimedes. As estações **não** são\nespaçadas por ângulo, e sim por **comprimento andado**: o sketch amostra a\nespiral em 1200 pontos, acumula um \"odômetro\" e crava cada figura numa fração\nda distância total (perto do centro uma volta é curtinha; na borda, longa —\npor ângulo o espaçamento ficaria injusto).\n\n**Dimensões — `map()` + `constrain()` + `lerp()`.** O tamanho é função do\nraio: quanto mais longe do centro (mais adiante no tempo), maior a figura,\nmais larga a estrada e maior a ferramenta — tudo com `map(raio, rIn, rMax,\nmín, máx)`, e `constrain()` garantindo que ninguém bata a cabeça na volta de\ncima da espiral. As cores do céu interpolam com `lerpColor()` do amanhecer\n(centro) para a noite digital (borda), desenhadas como anéis concêntricos —\num degradê **radial**, não vertical.\n\n**Inclinação / direção — vetores + transformações.** Nenhuma figura fica \"em\npé\" em relação à tela: cada uma é perpendicular à estrada no ponto em que\npisa (na parte de baixo da espiral elas aparecem de cabeça para baixo, como\nquem anda ao redor de um pequeno planeta). A direção da estrada é o **vetor\ntangente** (diferença entre dois pontos vizinhos da amostragem), o ângulo vem\nde `.heading()` e o giro é feito com `translate()` + `rotate()` + `scale()`\nentre `push()` e `pop()`. Um **produto escalar** (`.dot`) confere se a cabeça\nda figura aponta para fora da espiral; se não, um `rotate(PI)` + `scale(-1,1)`\nespelham a figura sem inverter o sentido da caminhada. Os tracinhos da\nestrada (os \"dormentes\" da ferrovia do tempo) usam o mesmo truque, girados\n90° em relação à tangente.\n\nDe sobremesa, uma **rosácea** — `r(θ) = R·|cos(k·θ/2)|`, direto dos slides —\naparece bem de leve ao fundo, atravessada pela espiral.\n\n## A parte da aleatoriedade\n\nComo nas semanas anteriores, o sketch **não gera a mesma imagem duas vezes**:\nsorteia uma **semente** por execução (`randomSeed()` / `noiseSeed()`), mostra\no número na legenda e \"aquece\" o gerador descartando os primeiros sorteios.\nO que muda a cada execução:\n\n| O que muda | Como |\n| --- | --- |\n| Atmosfera | 5 paletas (Amanhecer, Poeira Vermelha, Névoa Fria, Crepúsculo Ácido, Azul Profundo) + desvio de cor por canal |\n| A espiral | número de voltas (conforme o espaço da janela + sorte), sentido (horário/anti-horário) e fase inicial |\n| Eras presentes | 5 a 7 estações; Idade da Pedra e era da IA são fixas nas pontas, as do meio são sorteadas e ordenadas |\n| As figuras | altura, postura, passada e dobra do joelho vêm da era; a inclinação vem do ponto da espiral |\n| Cenário | rosácea (nº de pétalas e giro), raios do sol, estrelas, bits girados e o grão da imagem |\n\nPara gerar uma nova espiral basta **clicar** (ou apertar qualquer tecla).\n\n## A parte do tamanho da janela\n\nO canvas continua sendo `createCanvas(windowWidth, windowHeight)` com\n`windowResized()` refazendo a **mesma** obra (mesma semente) no novo formato.\nTodas as medidas derivam do lado mais apertado da janela, e o raio máximo da\nespiral **desconta a altura da figura mais externa** — como as figuras ficam\nde pé apontando para fora, sem essa folga a última teria a cabeça cortada\npela borda. Janelas maiores ganham mais voltas e mais estações; janelas\nestreitas ficam com espirais de menos voltas, para o vão entre as voltas não\nesmagar as figuras.\n\n## Primitivas usadas\n\n| Primitiva | Onde aparece |\n| --- | --- |\n| `circle` | anéis do céu, sol, halos, cabeças, juntas, roda, engrenagem, lâmpada, nós da rede neural |\n| `line` | corpo da estrada (segmento a segmento), raios do sol, dormentes, raios da roda, conexões da rede |\n| `quad` | membros afunilados (tronco, braços, pernas) e os pés |\n| `rect` | bits girados, osso, haste da lança, dentes da engrenagem, celular, rosca da lâmpada, vinheta |\n| `triangle` | ponta da lança |\n| `ellipse` | halo e sombra das figuras |\n| `point` | grão da imagem |\n| `vertex` | a curva da rosácea |\n| `text` | apenas a legenda do canto |\n\n## Controles\n\n| Tecla / ação | Efeito |\n| --- | --- |\n| clique do mouse | gera uma nova espiral (nova semente) |\n| qualquer tecla | gera uma nova espiral |\n| `S` | salva a imagem atual em PNG |\n| `H` | mostra / esconde a legenda do canto |\n| redimensionar a janela | refaz a mesma obra no novo tamanho |\n\n## Como executar\n\n1. Abra o arquivo `index.html` diretamente no navegador (ele já carrega o\n   p5.js e o `sketch.js`), **ou**\n2. cole o conteúdo de `sketch.js` no [editor.p5js.org](https://editor.p5js.org)\n   e rode (▶).\n\n## Prompt utilizado (Claude Code, modelo Fable 5, esforço alto)\n\n> Baseado nos últimos dois trabalhos, entregue o zip completo para o trabalho\n> abaixo: esta semana, seu artefato deverá seguir algum tipo de especificação\n> geométrica em termos de posição, dimensões ou inclinação / direção\n> (conceitos da aula de hoje — posição, direção e tamanho: `lerp`, `map`,\n> `constrain`, coordenadas polares, vetores e transformações). Como sempre, a\n> submissão deve ser um único arquivo zip com o sketch em p5.js, sem pastas\n> dentro do zip. Lembre de fazer sempre o desenho aleatório generativo, que\n> muda nas execuções.\n\nDepois disso, o resultado foi ajustado a partir de renderizações de teste em\nvários tamanhos de janela e várias sementes: verificação de que cada figura\nfica perpendicular à estrada com a cabeça para fora (e caminhando no sentido\ndo tempo mesmo quando a espiral é espelhada), e a correção do raio máximo da\nespiral, que descontou a altura das figuras para nenhuma cabeça ser cortada\npela borda da janela.\n\n## Arquivos deste pacote\n\n- `sketch.js` — o sketch p5.js (comentado em português).\n- `index.html` — página para rodar o sketch fora do editor.\n- `thumbnail.png` — uma das imagens geradas pelo sketch (semente 55).\n- `README.md` — este arquivo.",
+      "hasThumb": true,
+      "files": [
+        "sketch.js",
+        "index.html",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "garnet",
+      "id": "garnet",
+      "name": "garnet",
+      "origin": "native",
+      "lastModified": 1787954878685,
+      "title": "Garnet from Steven Universe",
+      "tags": [
+        "chatgpt",
+        "garnet",
+        "steven universo"
+      ],
+      "collection": "artefato da semana/3",
+      "description": "Autor: Thomas Cardoso de Miranda\n\nhttps://images.alphacoders.com/736/thumb-1920-736047.png",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "grid polygons",
+      "id": "grid-polygons",
+      "name": "grid polygons",
+      "origin": "native",
+      "lastModified": 1787954771736,
+      "title": "",
+      "tags": [],
+      "collection": "",
+      "description": "",
+      "hasThumb": false,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css"
+      ]
+    },
     {
       "folder": "cidade abstrata",
       "id": "cidade-abstrata",
       "name": "cidade abstrata",
       "origin": "native",
-      "lastModified": 1787407271524,
+      "lastModified": 1787672840378,
       "title": "",
       "tags": [],
       "collection": "artefato da semana/2",
