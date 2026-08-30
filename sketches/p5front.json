@@ -1,14 +1,38 @@
 {
   "format": "p5front-export",
   "version": 1,
-  "createdAt": "2026-08-30T19:20:41.441Z",
+  "createdAt": "2026-08-30T19:56:45.317Z",
   "projects": [
+    {
+      "folder": "objetos_com_irradiacoes",
+      "id": "objetos_com_irradiacoes",
+      "name": "objetos_com_irradiacoes",
+      "origin": "p5editor",
+      "lastModified": 1788119800853,
+      "title": "Objetos com irradiações",
+      "tags": [
+        "primitives",
+        "ai",
+        "gemini",
+        "generative"
+      ],
+      "collection": "artefato da semana/3",
+      "description": "Um sketch feito pelo Gemini usando primitivas e seus contornos para fazer irradiações.\n\nAutor: Joao Ricardo S. Magalhaes\n\nPrompts usados: Escreva um código um p5.js que tenha um fundo pastel, a tela de ajusta ao tamanho da janela, tenha 5 objetos, uma linha, um quadrado, um triângulo, um círculo e um losango que ficarão em 5 posições aleatoriamente, nunca se sobrepondo, meio da tela e as quatro posições restantes obedecendo a proporção da tela nos eixos x e y, respectivamente: 25% e 25%, 25% e 75%, 75% e 25% e por último 75% e 75%; Agora gostaria que os objetos tenham sua cor de fill e contorno sejam geradas aleatoriamente porém nunca a mesma cor para as duas e seu contorno irradie 3 vezes ao redor de si próprio; Gostaria que cada irradiação tivesse uma cor diferente e que sejam coladas umas nas outras ao mesmo tempo que a primeira esteja colada ao contorno do objeto; Quase tudo perfeito só gostaria que as cores também estivessem numa gama de cores pastel sem repetir nenhuma e nunca alguma parecida com a de fundo; Último retoque, gostaria que as irradiações repetissem as mesmas duas cores porém há de serem diferentes de objeto a objeto; Não quero que o fill tenha a mesma cor que alguma das irradiações.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "thumbnail.png",
+        "README.md"
+      ]
+    },
     {
       "folder": "Artefact 3 Yasmine",
       "id": "artefact-3-yasmine",
       "name": "Artefact 3 Yasmine",
       "origin": "p5editor",
-      "lastModified": 1788117613041,
+      "lastModified": 1788119655334,
       "title": "",
       "tags": [],
       "collection": "artefato da semana/3",
@@ -403,31 +427,6 @@
         "style.css",
         "README.md",
         "thumbnail.png"
-      ]
-    },
-    {
-      "folder": "Objetos com irradiações 2026 08 29 03 20 50",
-      "id": "objetos-com-irradiacoes-2026-08-29-03-20-50",
-      "name": "Objetos com irradiações 2026 08 29 03 20 50",
-      "origin": "p5editor",
-      "lastModified": 1788037145969,
-      "title": "Objetos com irradiações",
-      "tags": [
-        "primitives",
-        "ai",
-        "gemini",
-        "generative"
-      ],
-      "collection": "artefato da semana/3",
-      "description": "Um sketch feito pelo Gemini usando primitivas e seus contornos para fazer irradiações.\n\nAutor: Joao Ricardo S. Magalhaes\n\nPrompts usados: Escreva um código um p5.js que tenha um fundo pastel, a tela de ajusta ao tamanho da janela, tenha 5 objetos, uma linha, um quadrado, um triângulo, um círculo e um losango que ficarão em 5 posições aleatoriamente, nunca se sobrepondo, meio da tela e as quatro posições restantes obedecendo a proporção da tela nos eixos x e y, respectivamente: 25% e 25%, 25% e 75%, 75% e 25% e por último 75% e 75%; Agora gostaria que os objetos tenham sua cor de fill e contorno sejam geradas aleatoriamente porém nunca a mesma cor para as duas e seu contorno irradie 3 vezes ao redor de si próprio; Gostaria que cada irradiação tivesse uma cor diferente e que sejam coladas umas nas outras ao mesmo tempo que a primeira esteja colada ao contorno do objeto; Quase tudo perfeito só gostaria que as cores também estivessem numa gama de cores pastel sem repetir nenhuma e nunca alguma parecida com a de fundo; Último retoque, gostaria que as irradiações repetissem as mesmas duas cores porém há de serem diferentes de objeto a objeto; Não quero que o fill tenha a mesma cor que alguma das irradiações.",
-      "hasThumb": true,
-      "files": [
-        "index.html",
-        "sketch.js",
-        "style.css",
-        "p5.js",
-        "thumbnail.png",
-        "README.md"
       ]
     },
     {
