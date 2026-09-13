@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Henrique Kezen">
+  <meta name="description" content="O Mar entre as Dobras — uma paisagem generativa entre tecido, sombra e oceano.">
+  <meta name="theme-color" content="#edece5">
+  <title>O Mar entre as Dobras · Henrique Kezen</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/p5@1.11.13/lib/p5.min.js"></script>
+  <script defer src="sketch.js"></script>
+</head>
+<body>
+  <main>
+    <header class="heading">
+      <div>
+        <p class="eyebrow">HENRIQUE KEZEN <span>/</span> ESTUDO GENERATIVO 01</p>
+        <h1>O Mar entre <em>as Dobras</em></h1>
+      </div>
+      <p class="introduction">Entre o peso do tecido<br>e a leveza da água.</p>
+    </header>
+
+    <figure class="artwork">
+      <div id="sketch-container" aria-label="Paisagem animada de ondas que se assemelham a dobras de tecido">
+        <p id="loading" role="status">Preparando a paisagem…</p>
+      </div>
+      <figcaption>
+        <span class="live"><i aria-hidden="true"></i><span id="motion-status">MARÉ EM MOVIMENTO</span></span>
+        <span id="palette-status">01 — AZUL DE LINHO</span>
+      </figcaption>
+    </figure>
+
+    <div class="toolbar" aria-label="Controles da paisagem">
+      <p class="hint">Passe o mouse sobre o mar e mova suas dobras.</p>
+      <div class="buttons">
+        <button id="pause" type="button" aria-pressed="false" title="Pausar ou continuar (Espaço)">Pausar <kbd>␣</kbd></button>
+        <button id="palette" type="button" title="Mudar as cores (C)">Outra luz <kbd>C</kbd></button>
+        <button id="regenerate" type="button" title="Criar outra paisagem (R)">Nova maré <kbd>R</kbd></button>
+        <button id="save" class="save" type="button" title="Baixar a imagem em PNG (S)">Guardar imagem <span aria-hidden="true">↗</span></button>
+      </div>
+    </div>
+
+    <footer>
+      <p>Uma paisagem feita de linhas, silêncio e pequenas variações.</p>
+      <a href="https://www.reddit.com/r/generative/comments/w08ygj/" target="_blank" rel="noopener noreferrer">Inspirado em <em>Under Dark</em> <span aria-hidden="true">↗</span></a>
+    </footer>
+  </main>
+  <noscript>Ative o JavaScript para visualizar este sketch.</noscript>
+</body>
+</html>

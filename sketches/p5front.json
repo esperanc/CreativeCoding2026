@@ -1,8 +1,772 @@
 {
   "format": "p5front-export",
   "version": 1,
-  "createdAt": "2026-08-30T19:56:45.317Z",
+  "createdAt": "2026-09-13T21:30:11.689Z",
   "projects": [
+    {
+      "folder": "grid polygons",
+      "id": "grid-polygons",
+      "name": "grid polygons",
+      "origin": "native",
+      "lastModified": 1789335006758,
+      "title": "",
+      "tags": [],
+      "collection": "",
+      "description": "",
+      "hasThumb": false,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css"
+      ]
+    },
+    {
+      "folder": "torcidas",
+      "id": "torcidas",
+      "name": "torcidas",
+      "origin": "native",
+      "lastModified": 1789323212936,
+      "title": "Torcidas",
+      "tags": [
+        "flu",
+        "fla",
+        "vasco",
+        "cliques"
+      ],
+      "collection": "artefato da semana/4",
+      "description": "Representação de torcidas como cliques de um grafo onde vértices formam os torcedores.\n\nhttps://engineering.fb.com/2010/12/13/core-infra/visualizing-friendships/ --- Página do facebook representando continentes como um grafo.\nTomei dessa página a inspiração para transformat vértices em pessoas.\n\nhttps://commons.wikimedia.org/wiki/File:Social_Network_Visualization.png --- Grafo representando uma rede social.\nDesta imagem tirei a ideia de fazer as cliques.\n\nA ideia é mostrar relacionamentos mais próximos entre torcedores dos mesmos clubes, mas não excluir relacionamentos de pessoas de clubes diferentes.\nNa imagem do zip, a clique de cima representa o fluminense, a clique mais à esquerda representa o Vasco da Gama e clique à direita representa o Flamengo.\n\nAutor: João Pedro Moretti Fontes Ferreira",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "Samuel Vitor Insônia",
+      "id": "samuel-vitor-insonia",
+      "name": "Samuel Vitor   Insônia",
+      "origin": "native",
+      "lastModified": 1789310998523,
+      "title": "",
+      "tags": [],
+      "collection": "artefato da semana/4",
+      "description": "# Insônia\n\n**Autor:** Samuel Vitor  \n**Disciplina:** Programação Criativa  \n**Atividade:** Artefato 4 — Inspirado em ...\n\n## Inspirações\n\n- \"SEU POTENCIAL ESTÁ TE ESPERANDO!\" - (https://www.instagram.com/p/DYfPED8lNoe/?img_index=1)\n- https://www.instagram.com/reels/C4BSINUr8Sm/\n\n## Ligação com o sketch\n\nDar um olhar humano e neurótico pro desenho, desde a primeira vez que vi os posts fiquei obcecado. Primeiro com o tom e a criatividade, mas também com a forma de enxergar as coisas cujo a qual me identifiquei bastante. E mesmo já tendo feito um slider, não tinha feito uma animação automática até então.\n\n## Técnica\n\n- p5.js 2.x, compatível com o p5Front; sem bibliotecas extras e sem arquivos de imagem;\n- composição responsiva com `windowWidth` / `windowHeight` e `windowResized()`;\n- determinística: `randomSeed(4112026)` garante a mesma rua em toda execução;\n- o arquivo thumbnail é um animated png, então dependendo do que você usar pra abrir, ele não vai carregar corretamente, sugiro tentar abrir com o Google Chrome ou um navegador pra conseguir enxergar a animação corretamente.\n- Deepseek V4.1 Flash me ajudou nisso, dessa vez a ajuda veio da china! Ni-hao!",
+      "hasThumb": true,
+      "files": [
+        "sketch.js",
+        "thumbnail.png",
+        "README.md",
+        "index.html"
+      ]
+    },
+    {
+      "folder": "Patrick Mucio",
+      "id": "patrick-mucio",
+      "name": "Patrick Mucio",
+      "origin": "native",
+      "lastModified": 1789310956370,
+      "title": "",
+      "tags": [],
+      "collection": "artefato da semana/4",
+      "description": "# Artefato da Semana — Piet Mondrian\n\n**Nome:** Patrick Mucio \n\n## Descrição\n\nEste sketch foi desenvolvido em p5.js e apresenta uma composição geométrica estática inspirada nas obras de Piet Mondrian.\n\nA composição utiliza retângulos, linhas pretas grossas e áreas preenchidas com vermelho, azul e amarelo, além de espaços em branco, criando uma interpretação própria baseada no estilo visual de Mondrian.\n\n## Inspiração\n\nEste sketch foi inspirado na obra **Composition with Red, Blue, and Yellow (1930)**, de **Piet Mondrian**.\n\nObra usada como referência:\n\nhttps://smarthistory.org/mondrian-composition-ii-in-red-blue-and-yellow/\n\nTambém foi consultada a página do MoMA sobre as composições de Mondrian:\n\nhttps://www.moma.org/collection/works/80160\n\n## Relação com a obra usada como inspiração\n\nA obra de Piet Mondrian utiliza linhas pretas bem marcadas para dividir a tela em formas geométricas. Algumas dessas áreas recebem cores primárias, enquanto outras permanecem em branco.\n\nNo meu sketch, usei essa mesma ideia como base. Criei uma composição abstrata com retângulos organizados por uma grade irregular, preenchendo alguns espaços com vermelho, azul e amarelo. Apesar de manter os principais elementos visuais do estilo de Mondrian, a distribuição das formas foi criada por mim, resultando em uma composição própria.\n\n## Arquivos\n\n- `index.html` — página que carrega a biblioteca p5.js pela internet;\n- `sketch.js` — código do desenho;\n- `README.md` — descrição do trabalho e referências;\n- `thumbnail.png` — imagem representativa do resultado.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "README.md",
+        "sketch.js",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "O Mar entre as Dobras Henrique Kezen",
+      "id": "o-mar-entre-as-dobras-henrique-kezen",
+      "name": "O Mar entre as Dobras Henrique Kezen",
+      "origin": "native",
+      "lastModified": 1789310907452,
+      "title": "",
+      "tags": [],
+      "collection": "artefato da semana/4",
+      "description": "# O Mar entre as Dobras\n\n> Há um instante em que a dobra de um tecido parece guardar um oceano.\n\n**Autor:** Henrique Kezen  \n**Linguagem:** JavaScript, com p5.js  \n**Categoria:** arte generativa interativa  \n**Desenvolvimento:** Henrique Kezen, com assistência de IA na elaboração do código e da documentação.\n\n![Imagem representativa do sketch](thumbnail.png)\n\n## Descrição\n\nUma paisagem marítima que também pode ser vista como um tecido em movimento. Camadas de ondas se sobrepõem como pregas: linhas claras acompanham as cristas, enquanto sombras azuis e verdes dão profundidade às dobras. O ritmo lento convida a observar pequenas mudanças na superfície.\n\nO movimento combina ondas senoidais e ruído suave. Ao passar o mouse sobre a imagem, o observador altera delicadamente a água, como se uma corrente de ar tocasse o tecido. Duas paletas permitem experimentar diferentes atmosferas, e cada nova composição modifica o desenho das ondas. A moldura clara e a tipografia completam a apresentação como uma pequena gravura animada.\n\n## Inspiração e relação com a obra\n\nA referência principal é [*Under Dark (R Code)*, publicada na comunidade r/generative do Reddit em 16 de julho de 2022](https://www.reddit.com/r/generative/comments/w08ygj/).\n\nNa publicação, o criador explica que a obra começou com a observação de sombras em cortinas e evoluiu para uma paisagem oceânica. O trabalho utiliza painéis verticais e ondas senoidais como base para polígonos com formato de ondas.\n\nEssa passagem entre um objeto cotidiano e uma paisagem é o ponto de partida de **O Mar entre as Dobras**. As faixas sobrepostas e os contornos retomam a associação visual entre tecido, sombra e água. Aqui, a interpretação ganha animação contínua, variações orgânicas, interação pelo mouse e duas atmosferas de cor. A referência orienta o conceito e a construção em camadas; a composição foi desenvolvida para este sketch em p5.js.\n\n## Prompt de criação\n\n> Crie um sketch interativo em p5.js chamado “O Mar entre as Dobras”, de Henrique Kezen. Imagine que um tecido extenso e delicado se transforma lentamente em oceano: suas pregas tornam-se ondas, as sombras revelam profundidade e cada fio de luz desenha uma crista. Parta da relação entre cortinas e paisagem marítima apresentada em “Under Dark (R Code)”, publicado no r/generative, e desenvolva uma interpretação própria dessa ideia.\n>\n> Construa a paisagem com muitas camadas de curvas orgânicas, combinando funções senoidais e ruído suave. Varie a altura, a largura e o espaçamento das ondas para sugerir distância e volume. Use azuis profundos, verdes azulados e reflexos claros, quase prateados. Ofereça também uma segunda paleta, com a sensação mais quente do entardecer. Faça as curvas se moverem devagar, como um tecido que respira, preservando a continuidade e a sensação de calma.\n>\n> O mouse deve provocar uma perturbação local e delicada na superfície. Inclua controles para pausar e retomar a animação, alternar a paleta, gerar uma nova composição e salvar a imagem em PNG. Apresente a obra dentro de uma moldura clara, com título e instruções discretas. A imagem deve ser interessante tanto em movimento quanto como uma gravura estática. Gere todos os elementos visuais por código, sem imagens externas ou áudio. Importe apenas p5.js por CDN e mantenha o pacote de entrega pequeno.\n\n## Como executar\n\n1. Extraia o arquivo ZIP para uma pasta.\n2. Abra `index.html` em um navegador atualizado.\n3. Mantenha a conexão com a internet para carregar p5.js pelo CDN.\n\n## Interação\n\n| Controle | Ação |\n| --- | --- |\n| Mover o mouse sobre a obra | Perturbar suavemente as ondas próximas ao cursor. |\n| Botão de pausa ou **Espaço** | Pausar ou retomar a animação. |\n| Botão de paleta ou **C** | Alternar as duas atmosferas de cor. |\n| **R** | Gerar uma nova composição. |\n| **S** | Salvar a imagem atual em PNG. |\n\n## Arquivos da entrega\n\n- `index.html`: página de entrada e importação de p5.js pelo CDN.\n- `style.css`: apresentação e adaptação da página à tela.\n- `sketch.js`: desenho generativo, animação e controles.\n- `README.md`: descrição, autoria, referência e prompt de criação.\n- `thumbnail.png`: imagem representativa gerada pelo próprio sketch.\n\nO pacote não contém cópias locais de p5.js nem de p5.sound. O sketch não utiliza áudio e não importa p5.sound.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "style.css",
+        "sketch.js",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "monoculturas",
+      "id": "monoculturas",
+      "name": "monoculturas",
+      "origin": "native",
+      "lastModified": 1789310827142,
+      "title": "Monoculturas",
+      "tags": [
+        "generative"
+      ],
+      "collection": "artefato da semana/4",
+      "description": "Nome: Pedro Paulo de Oliveira Rocha\n\nInspirado em: https://www.instagram.com/reel/DOsHnLRDLTO/?stkn=YXMxNm12eDFmNXp6\n\nQuis fazer algo parecido com as formas da referência e aí lembrei como são as plantações de monoculturas, como milho e soja, vistas de uma certa altitude.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "desordre",
+      "id": "desordre",
+      "name": "desordre",
+      "origin": "native",
+      "lastModified": 1789310792319,
+      "title": "",
+      "tags": [],
+      "collection": "artefato da semana/4",
+      "description": "# Désordre — homenagem a Vera Molnár\n\nA ideia aqui foi partir de uma regra geométrica bem simples e deixar o acaso — controlado — fazer o resto. Montei uma grade de células e, dentro de cada uma, empilhei vários quadrados concêntricos. No canto superior esquerdo eles são perfeitos e alinhados; conforme se caminha para o canto inferior direito, cada quadrado recebe cada vez mais rotação e um \"tremor\" aleatório nos cantos, e as próprias células começam a escorregar e a invadir as vizinhas. O resultado é uma transição visível de **ordem para desordem** ao longo da diagonal. Uns poucos miolos ganham preenchimento vermelho ou azul, para dar ritmo à composição sem quebrar a sobriedade do conjunto.\n\n## Autor\n\nJúlia Vilela\n\n## Inspiração\n\n- Vera Molnár, série *Transformations* / *Transformation de carrés concentriques* (1976).\n- Thaddaeus Ropac — página da artista: https://ropac.net/artists/231-vera-molnar/\n- Artnet — Vera Molnár na Bienal de Veneza: https://news.artnet.com/art-world/vera-molnar-venice-biennale-2098046\n- Artland Magazine — perfil e obra: https://magazine.artland.com/vera-molnar/\n\n## Ligação entre o sketch e a obra\n\nVera Molnár (1924–2023), húngara radicada em Paris e apontada como uma das pioneiras (a \"madrinha\") da arte generativa, construía suas abstrações a partir de um método composicional rigoroso: um conjunto pré-determinado de regras seguido de uma dose de acaso — o que ela chamava de *machine imaginaire*, \"algoritmos executados à mão\" antes mesmo de ter acesso a um computador (o que aconteceu em 1968, quando aprendeu Fortran).\n\nEste sketch reencena diretamente o motivo mais reconhecível dela — os **quadrados concêntricos** — e a operação central do seu trabalho: começar de uma forma geométrica ordenada e introduzir, por algoritmo, padrões de perturbação que fazem as linhas \"vibrar\". As correspondências são:\n\n- **Grade + quadrados concêntricos** ↔ a estrutura básica da série *Transformations*.\n- **Tremor nos vértices e rotação crescente** ↔ o \"ruído\" algorítmico que ela injetava para desestabilizar a forma.\n- **Gradiente de ordem → desordem na diagonal** ↔ a lógica de série, em que cada quadro parte do arranjo regular e se afasta dele progressivamente (como nas *Molnaroglyphes*, em que os quadrados se deslocam e se sobrepõem).\n- **Acaso com semente fixa (`randomSeed`)** ↔ o acaso *controlado* de Molnár: aleatório, mas subordinado a uma regra e reprodutível.\n- **Paleta contida (papel, tinta quase preta, acentos de vermelho e azul)** ↔ o vocabulário cromático mínimo característico dela.\n\nEm resumo: a obra de Molnár é a fonte tanto da **forma** (quadrados concêntricos em grade) quanto do **método** (regra geométrica + aleatoriedade controlada) deste sketch.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "thumbnail.png",
+        "README.md"
+      ]
+    },
+    {
+      "folder": "colonia generativa",
+      "id": "colonia-generativa",
+      "name": "colonia generativa",
+      "origin": "native",
+      "lastModified": 1789310702270,
+      "title": "colonia generativa",
+      "tags": [],
+      "collection": "artefato da semana/4",
+      "description": "controles:\nespaço: pausa simulação\nbotão esquerdo: cria bolhas\nr: cria uma nova simulação\n\nfeito com chatGPT.\n\nprompt:\nCrie um sketch em p5.js. Apresente o resultado sob a forma de um único script em javascript a ser colado num ambiente de desenvolvimento como o editor.p5js.org. O sketch deve se assemelhar a uma captura de tela de uma base no jogo \"oxygen not included\". deve criar um resultado diferente cada vez que rodar.\n\nMinha inspiração foi jogos de simulação e criação de colonias.\nA ideia inicial era parecer com o jogo \"oxygen not included\", e apesar de não se assemelhar muito existem elementos que surgem dele. \nhttps://store.steampowered.com/app/457140/Oxygen_Not_Included/\nacabou ficando parecido com outro jogo de simulação chamado \"rimworld\"\nhttps://store.steampowered.com/app/294100/RimWorld/\n\nAutor: Paulo Barbosa",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "thumbnail.png",
+        "README.md"
+      ]
+    },
+    {
+      "folder": "ciclo lunar",
+      "id": "ciclo-lunar",
+      "name": "ciclo lunar",
+      "origin": "native",
+      "lastModified": 1789310570279,
+      "title": "",
+      "tags": [
+        "#moon",
+        "#sky",
+        "#generativa",
+        "#neon"
+      ],
+      "collection": "artefato da semana/4",
+      "description": "Um sketch feito a partir de uma inspiração com auxílio de inteligência artificial.\n\nlink: https://www.instagram.com/p/DcxYkN_ug5X/\n\nLigação: A obra inspirada me lembrou um planeta em um universo e decidi fazer uma releitura com as fases da lua.\n\nAutor: Ysabelle Estevão de Oliveira.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "batalha pokemon",
+      "id": "batalha-pokemon",
+      "name": "batalha pokemon",
+      "origin": "native",
+      "lastModified": 1789310507888,
+      "title": "Lycanroc prestes a vencer de um kricketune após usar RockSlide",
+      "tags": [
+        "pokemon",
+        "chatgpt",
+        "lycanroc",
+        "kricktune",
+        "briga"
+      ],
+      "collection": "artefato da semana/4",
+      "description": "Autor: Thomas Cardoso de Miranda\n\nhttps://pokemonshowdown.com/\n\nultimamente a minha maior diversão tem sido jogar o jogo de navegador chamado \"pokemon showdown\" que é um jogo de pokemon pirata para que não tem 4,5 mil reais para comprar um nitendo switch\n\neu decidi então retratar uma batalha pokemon.\n\nno estilo do pokemon showdown",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "artefato4",
+      "id": "artefato4",
+      "name": "artefato4",
+      "origin": "native",
+      "lastModified": 1789310426806,
+      "title": "Taverna Medieval",
+      "tags": [
+        "taverna",
+        "medieval",
+        "p5js",
+        "fantasia"
+      ],
+      "collection": "artefato da semana/4",
+      "description": "Uma taverna medieval inspirada em diferentes artes de ambientes de fantasia, construída em p5.js com formas geométricas, iluminação e elementos animados. A cena possui lareira, balcão, prateleiras, mesas, bancos, alimentos, objetos decorativos e uma janela para o exterior, além de animações como fogo, brasas, velas, chuva, nuvens, vapor e partículas de poeira.\n\nAutor: Pedro Elias\n\nReferências:\n\nhttps://www.artstation.com/artwork/JvZ98A  \nInspiração: composição geral do interior da taverna, estrutura de madeira, balcão, prateleiras e distribuição dos elementos no ambiente.\n\nhttps://br.pinterest.com/pin/727964727314642115/  \nInspiração: atmosfera medieval, decoração, presença de alimentos e objetos espalhados pelo ambiente e sensação de uma taverna preenchida e habitada.\n\nhttps://www.deviantart.com/crazymann11/art/Tavern-Inside-863001244  \nInspiração: iluminação quente, profundidade da cena, mobiliário e ambientação do interior de uma taverna fantástica.\n\nPrompt usado: Crie uma cena de interior de uma taverna medieval em p5.js utilizando como inspiração as três imagens de referência anexadas a este prompt. Analise as imagens anexadas e use como referência a composição do ambiente, a iluminação, a estrutura de madeira, o mobiliário, o balcão, a lareira e os objetos decorativos, sem copiar diretamente nenhuma delas. Utilize formas geométricas para construir a cena e acrescente profundidade por meio de sombras, texturas e diferentes planos. Inclua também animações simples para dar vida ao ambiente, como fogo e brasas na lareira, chamas das velas, chuva e nuvens vistas pela janela, vapor e partículas de poeira.",
+      "hasThumb": true,
+      "files": [
+        "README.md",
+        "sketch.js",
+        "style.css",
+        "thumbnail.png",
+        "index.html"
+      ]
+    },
+    {
+      "folder": "artefato4 joao galetti",
+      "id": "artefato4-joao-galetti",
+      "name": "artefato4 joao galetti",
+      "origin": "native",
+      "lastModified": 1789310221605,
+      "title": "",
+      "tags": [
+        "terrain",
+        "cartography",
+        "erosion"
+      ],
+      "collection": "artefato da semana/4",
+      "description": "# Terra Ficta\n\n*Carta de levantamento de uma ilha que nunca existiu.*\n\nCada execução gera uma ilha nova e a publica no formato de uma carta náutica\ngravada: costa, curvas de nível, sombreado a ponto, rios, lagos, sondagens de\nprofundidade, topônimos, rosa dos ventos, linhas de rumo e cartucho.\n\nClique para levantar outra ilha. A tecla **s** salva a carta em PNG.\n\n---\n\n## O que o sketch faz\n\nO sketch não *desenha* um relevo — ele o fabrica e depois o levanta. São cinco\netapas, nessa ordem:\n\n1. **Matéria-prima.** Um campo de ruído de Perlin de seis oitavas, com o\n   domínio deformado por outro ruído, multiplicado por uma máscara de lóbulos\n   sobrepostos que decide o que é terra e o que é mar. Isso dá um relevo\n   plausível — e completamente inerte.\n\n2. **Erosão fluvial.** Oitenta e cinco passos de um modelo de incisão por lei\n   de potência de fluxo. A cada passo:\n   - um *priority-flood* enche as depressões (o que sobra são os lagos) e\n     devolve, de quebra, a ordem em que a água desce;\n   - a acumulação de fluxo é calculada por escoamento multidirecional — cada\n     célula reparte sua água entre todos os vizinhos mais baixos, na proporção\n     do declive elevado à quarta potência;\n   - o terreno é rebaixado onde passa muita água em declive forte\n     (incisão ∝ √área · declive);\n   - uma difusão suave arredonda as encostas, como faz o intemperismo.\n\n   A razão entre cavar e desmoronar é o parâmetro que decide tudo: muito\n   desmoronamento e a ilha vira uma duna lisa; pouco, e vira uma serra de facas.\n\n3. **Hidrologia.** Com o relevo estabilizado, cada cabeceira é seguida célula a\n   célula até o mar. O traço engrossa conforme a vazão acumulada.\n\n4. **Gravura.** Marching squares extrai a linha de costa, as curvas de nível e\n   a auréola batimétrica. O sombreado do relevo é feito a pontos distribuídos\n   por *blue noise* (melhor candidato de Mitchell), com densidade proporcional\n   à sombra — espalhados, nunca alinhados, como numa gravura em metal.\n\n5. **Toponímia.** Sílabas portuguesas recombinadas dão nomes a vilas, picos e\n   acidentes do litoral. Cada rótulo reserva o retângulo que ocupa; quem não\n   couber sem encostar em outro simplesmente não é escrito, como faria um\n   cartógrafo à mão.\n\n**O ponto do trabalho é a etapa 2.** A rede de rios ramificada que aparece em\ncada ilha não está programada em lugar nenhum: nenhuma linha do código diz\n\"faça uma bifurcação\". A ramificação é a única forma estável do jogo entre\ncavar e desmoronar — ela emerge. Ruído nenhum produz aquela forma; só a água\nproduz. É por isso que o cartucho diz *\"os rios não foram desenhados: foram\nencontrados\"*.\n\nTudo é reprodutível: a mesma semente devolve exatamente a mesma ilha, e a\nsemente vem impressa no rodapé do cartucho.\n\n---\n\n## Inspiração\n\n**Robert Hodgin — *Meander* (2020)**\n<https://roberthodgin.com/project/meander>\n\n**Robert Hodgin — *River Scars* (2024)**\n<https://roberthodgin.com/project/river-scars>\n\nEm *Meander*, Hodgin gera mapas históricos ficcionais de rios que nunca\nexistiram, simulando em Houdini a migração lateral de um curso d'água — a\nerosão da margem externa, a deposição na interna, os lagos em ferradura que\nsobram das curvas abandonadas. O resultado é apresentado no registro visual das\npranchas de Harold Fisk sobre o Mississippi. *River Scars* estende a ideia para\nrios ramificados que cicatrizam um terreno inteiro.\n\n**O que eu peguei dessas obras foram duas decisões, não uma técnica:**\n\n1. *O artefato é um mapa.* Não uma imagem abstrata que lembra um mapa, mas um\n   documento com a pretensão de um mapa — com escala, coordenadas, sondagens,\n   nomes próprios e assinatura de quem levantou. É essa pretensão que produz o\n   efeito: um mapa afirma que o lugar existe. Daí toda a camada cartográfica do\n   meu sketch, que em outro contexto seria enfeite e aqui é o argumento.\n\n2. *A beleza está no processo, não no traço.* Hodgin não desenha meandros\n   bonitos; ele simula o mecanismo que produz meandros e deixa a forma\n   aparecer. Foi essa inversão que me fez jogar fora a primeira versão deste\n   sketch — que desenhava rios com ruído — e simular a erosão de verdade.\n\n**E o que eu fiz diferente:** em Hodgin, o rio é o assunto e o terreno é o\npalco. Aqui é o contrário — eu erodo uma ilha inteira e os rios são a\n*consequência* que aparece no fim. Ele simula a migração lateral de um curso\núnico; eu simulo a incisão de uma bacia inteira, e por isso o que emerge é uma\nrede dendrítica, não um meandro. E onde ele renderiza no estilo colorido das\npranchas de Fisk, eu gravo uma carta náutica em sépia sobre papel envelhecido.\nMesma ambição, mecanismo e registro diferentes.\n\n**Sebastian Lague — *Coding Adventure: Hydraulic Erosion***\n<https://www.youtube.com/watch?v=eaXk97ujbPQ>\n\nFoi por aqui que entrei na ideia de erodir um mapa de alturas de ruído. Comecei\nimplementando exatamente o modelo do vídeo — gotas individuais que descem o\nrelevo carregando sedimento — e ele está no histórico deste sketch. Acabei\ntrocando: nessa resolução de grade, as gotas cavavam milhares de sulcos\nparalelos e independentes, sem nunca integrar bacias grandes, e o resultado\nparecia um terreno penteado. A lei de potência de fluxo resolve isso porque\ncalcula o relevo e a drenagem *juntos*, num laço de realimentação. Registro a\ntroca porque a pergunta do trabalho é sobre a ligação com a inspiração, e essa\nligação inclui o que não deu certo.\n\n---\n\n## O que veio da aula\n\nDa aula *Imprevisibilidade e ruído*, quase tudo tem uso funcional aqui, não\ndecorativo:\n\n| Conceito | Onde está |\n|---|---|\n| `noise()` com `noiseDetail()` | o relevo bruto, em seis oitavas |\n| deformação do domínio | a costa deixa de ser uma bolha e ganha reentrâncias |\n| `noiseSeed()` / `randomSeed()` | cada ilha é reprodutível pela semente |\n| *blue noise* (melhor candidato de Mitchell) | o pontilhado do sombreado e a distribuição das sondagens |\n| `random(array)` | as sílabas dos topônimos |\n| ruído como campo de deslocamento | o meandro dado aos rios — aplicado em função da posição, para que as confluências continuem coincidindo depois de deformadas |\n\nDa aula de posição e direção vêm as coordenadas polares da rosa dos ventos e\ndas linhas de rumo.\n\n---\n\n## Arquivos\n\n- `sketch.js` — o sketch em p5.js, sem nenhuma biblioteca externa além do p5.\n- `index.html` — executa o sketch e exibe o código-fonte.\n- `thumbnail.png` — uma das cartas geradas (semente 12321).\n\nO p5.js é carregado de um CDN; não há cópia da biblioteca neste zip.\n\n---\n\nFeito por **João Galetti**.",
+      "hasThumb": true,
+      "files": [
+        "README.md",
+        "index.html",
+        "sketch.js",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "artefato 4",
+      "id": "artefato-4",
+      "name": "artefato 4",
+      "origin": "native",
+      "lastModified": 1789309855399,
+      "title": "Artefato 4",
+      "tags": [
+        "static",
+        "dance",
+        "generative"
+      ],
+      "collection": "artefato da semana/4",
+      "description": "# Dance\n## Descrição\nEste projeto consiste em um sketch estático e generativo em que a palavra \"dance\" dança a cada execução. Inspirado na sketch desse link: https://www.instagram.com/p/DHOYsHpSn4_/?stkn=eHh6dDQwbWprMjdj. Em que a palavra distortion sofre distorções.\n\n## Aluna: Taísa Evangelista de Oliveira Martello",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "Artefato 4 Manoel V C Carvalho (1)",
+      "id": "artefato-4-manoel-v-c-carvalho-1",
+      "name": "Artefato 4   Manoel V C Carvalho (1)",
+      "origin": "native",
+      "lastModified": 1789309811737,
+      "title": "The art of clean up",
+      "tags": [
+        "circles and squares"
+      ],
+      "collection": "artefato da semana/4",
+      "description": "Sketch feito utilizando círculos e quadrados inspirado nas obras do artista Ursus Wehrli, mais especificamente na piscina de bolinhas. Os trabalho do artista são conhecidos como The Art of Clean Up, pois buscam \"organizar\" objetos que se apresentam \"desorganizados\" no cotidiano. \n\nO sketch desenvolvido criou círculos coloridos \"desorganizados\" na parte superior do desenho, na parte inferior criei quadro quedados sólidos utilizando as mesmas cores dos círculos, dando uma ideia de \"organização\".\n\nlinks para a obra: \n<https://design-milk.com/the-art-of-clean-up-book-ursus-wehrli/>\n<https://nz.pinterest.com/ginamurray1428/ursus-wehrli/>\n<https://de.pinterest.com/pin/392235448793286656/>",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "artefato #04 Leo Nunes",
+      "id": "artefato-04-leo-nunes",
+      "name": "artefato #04   Leo Nunes",
+      "origin": "native",
+      "lastModified": 1789309662692,
+      "title": "Inspirado em ... Data de entrega 11 de set.",
+      "tags": [
+        "NoAI",
+        "Collage",
+        "Animation",
+        "Interactive",
+        "Soundful"
+      ],
+      "collection": "artefato da semana/4",
+      "description": "Dada a promessa de maior rigor nas correções e o fato de já ter sido bastante exposto a obras de arte e outras manifestações culturais, criei em mim uma expectativa muito grande do que fazer.\n\nMas como o tempo ruge e a sapucaí é grande, com o prazo se aproximando vi nele a grande inspiração para produzir algo. 11/set - uma data significativa dotada de acontecimentos marcantes(tal qual as outras 365 datas possíveis).\n\nInicialmente voltei minhas pesquisas para 11/09/1973 do golpe chileno, mas muito me incomodou me debruçar sobre o tema com um prazo tão curto. Voltei o foco para a data em si e fui na [lista de fatos históricos ocorridos em 11/09](https://pt.wikipedia.org/wiki/11_de_setembro).\n\nNuma das primeiras ocorrências: \"1185 — Isaac II Ângelo mata Estêvão Hagiocristoforita e, em seguida, apela ao povo, resultando na revolta que depôs Andrônico I Comneno e coloca Isaac no trono do Império Bizantino.\" Pude ver a figura, ou melhor [ILUMINURA](https://pt.wikipedia.org/wiki/Est%C3%AAv%C3%A3o_Hagiocristoforita#/media/Ficheiro:Fran%C3%A7ais_5594,_fol._193v_haut,_Mort_d'%C3%89tienne_Hagiochristophorit%C3%A8s.jpeg) (nem sabia o que era uma por esse nome) que vou usar como base para celebrar a data.\n\nParei de produzir, pois me falta menos de uma hora para o prazo, meu código tem alguns problemas e quis fazer muito mais, mas infelizmente a viagem de animar varias referências com som e os elementos todos se mexendo não foi possível. Entrego um artefato que faz o mínimo daquilo que queria propor, peço perdão pelo uso de números mágicos e pelos trechos de debug que sobraram.\n\nUtilização: clique em qualquer lugar da tela para habilitar os sons.\n\n\nAutor: Leonardo Nunes Guimarães Costa",
+      "hasThumb": true,
+      "files": [
+        "base.jpeg",
+        "base.png",
+        "base.xcf",
+        "head.png",
+        "index.html",
+        "inner.png",
+        "innerplussword.png",
+        "outter.png",
+        "README.md",
+        "sketch.js",
+        "slash.mp3",
+        "style.css",
+        "sword.png",
+        "thumbnail.png",
+        "victory.mp3",
+        "yay.mp3"
+      ]
+    },
+    {
+      "folder": "Trab4 ProgCriativa HAlmico",
+      "id": "trab4-progcriativa-halmico",
+      "name": "Trab4 ProgCriativa HAlmico",
+      "origin": "native",
+      "lastModified": 1789309036097,
+      "title": "Trab4-ProgCriativa-HAlmico",
+      "tags": [],
+      "collection": "artefato da semana/4",
+      "description": "title: Colcha e Olho tags: [p5js, generative, claude, colcha, olho, ruido]\nComposição generativa: uma colcha de retalhos emoldura a cena — uma moldura amarela com friso de costura, uma faixa de retalhos coloridos costurados entre si — enquanto no centro um grande motivo de olho/espiral em traço vinho domina a composição. Ao redor, uma lua crescente hachurada, uma pequena grade de janelas quadriculadas e marcas de faísca espalhadas pelo fundo, sobre um campo de cor que se comporta como um terreno, com transições orgânicas entre azul-acinzentado, verde-musgo e bege.\nO canvas é quadrado e se adapta ao tamanho da janela disponível; não há semente fixa de aleatoriedade, então cada execução gera uma variação nova da mesma composição.\nTécnicas usadas:\ndeslocamento de vértices por ruído coerente (noise()), consultado na posição de cada ponto, para um tremor suave e orgânico nas bordas da moldura e dos retalhos — em vez de vértices deslocados de forma independente, o que resultaria numa borda serrilhada;\no fundo lido como um terreno: noise(x, y) tratado como \"altitude\" e convertido em cor por faixas, para uma transição orgânica entre as zonas de cor;\ncoordenadas polares para o motivo de olho/espiral — uma \"rosácea\" (raio como função periódica do ângulo) para o contorno externo, e uma espiral (ângulo e raio crescendo juntos) para o redemoinho interno, ambas com uma perturbação de ruído somada à fórmula; o contorno externo consulta o ruído em (cos(ângulo), sin(ângulo)) para fechar sem descontinuidade;\nvetores (direção, perpendicular, interpolação) para desenhar a costura ao longo de uma borda;\ntransformações afins (translate/rotate/scale + push()/pop()) para posicionar as marcas de faísca e as células da grade de janelas a partir de uma forma local única;\nbeginShape()/vertex()/endShape() para os polígonos de vértices variáveis (moldura, contorno do olho, espiral).\nInspiração: três obras de Ivo Almico, vistas em posts do Instagram —\nhttps://www.instagram.com/p/CbGDDStOByh/ — uma aquarela: fundo em blocos de cor suave, emoldurado por uma faixa de retalhos coloridos com marcas de costura nas bordas, dentro de uma moldura amarela com friso verde. Inspirou diretamente a moldura, a faixa de retalhos e a técnica de costura, além da paleta de cor do fundo.\nhttps://www.instagram.com/p/CPdbeXXhpBc/ — uma pintura mais abstrata: sobre um fundo tipo colcha de retalhos, um traço grosso em tom vinho desenha formas de olho/espiral e pequenas marcas de \"faísca\" (asterisco), com uma pequena grade quadriculada ao lado. Inspirou o motivo central de olho/espiral, as faíscas e a grade de janelas.\nhttps://www.instagram.com/p/DAwuoo5JYsE/ — um desenho recente: lua amarela crescente com hachura diagonal na parte escura, sobre um céu com estrelas em forma de asterisco. Inspirou a lua hachurada.\n\nhttps://iaalmico.wixsite.com/almico\n\nCada um desses elementos foi reinterpretado como uma construção generativa (curvas em coordenadas polares, ruído coerente, transformações), não copiado diretamente das imagens.\nAutor: Henrique Almico Dias da Silva\nPrompt usado: Use redes sociais e páginas web como inspiração para o próximo artefato. Inclua no README os links para a(s) obra(s) usadas como inspiração e esclareça a ligação entre elas e o sketch.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "sketch flow field",
+      "id": "sketch-flow-field",
+      "name": "sketch flow field",
+      "origin": "native",
+      "lastModified": 1789308902085,
+      "title": "",
+      "tags": [],
+      "collection": "artefato da semana/4",
+      "description": "# Curvature: Estudo em Campos de Fluxo\n\n## Inspiração\n- **Obra de referência:** Fidenza (Série de Arte Generativa)\n- **Autor:** Tyler Hobbs\n- **Link:** https://tylerxhobbs.com/fidenza\n\n## Relação entre o Sketch e a Obra\nEste artefato foi diretamente inspirado na abordagem estrutural da série *Fidenza*, de Tyler Hobbs, que utiliza campos vetoriais contínuos para guiar curvas orgânicas com espessuras e densidades variáveis. \n\nNo sketch implementado:\n1. Um campo vetorial é gerado dinamicamente utilizando **Perlin Noise** bidimensional (`noise()`), mapeando ângulos trigonométricos contínuos pelo plano.\n2. Centenas de partículas percorrem trajetórias orientadas por esses vetores, desenhando traços com larguras (`strokeWeight`) distintas e pontas projetadas (`PROJECT`), emulando as fitas e blocos sólidos característicos da obra.\n3. A paleta de cores balanceia tons escuros de fundo com toques quentes e terrosos, recriando o contraste visual marcante das gravuras generativas de Hobbs.\n4. O sketch inclui interatividade: clicar com o mouse gera uma nova semente de ruído e reexecuta o algoritmo, produzindo uma composição única a cada execução.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "autorretrato estrelado",
+      "id": "autorretrato-estrelado",
+      "name": "autorretrato estrelado",
+      "origin": "native",
+      "lastModified": 1789308851765,
+      "title": "Autorretrato Estrelado",
+      "tags": [
+        "generative",
+        "inspiration",
+        "van gogh",
+        "ai"
+      ],
+      "collection": "artefato da semana/4",
+      "description": "Artefato 4\n\nA ideia era misturar a noite estrelada, que é meu quadro favorito com o próprio autorretrato de Van Gogh, como se ele estivesse pintando ele mesmo e a pintura.\n\nAutor: Diogo dos Santos Machado Vieira\n\nPrompts usados (Não fiquei completamente satisfeito com as primeiras versões):\n\n1- Faça um sketch estático em p5.js. Apresente o resultado sob a forma de um único script em javascript a ser colado num ambiente de desenvolvimento como o editor.p5js.org. Quero fazer algo inspirado na noite estrelada de van gogh, mas como se ele prórpio estivesse la, usando como inspiração a pintura autorretrato também do van gogh.\n\n2- Faça o cipreste maior e vindo da borda de baixo do quadro, estenda a aparencia de grama por todo o terreno, além disso, ajeite o chapéu do van gogh, parece muito deslocado.\n\n3- Ajeite o pincel na mão do van gogh, faça cerdas mais aparentes e aponte ele para o céu.\n\nInspirações: Noite Estrelada (https://pt.wikipedia.org/wiki/A_Noite_Estrelada) e Autorretrato com chápeu de feltro (https://pt.wikipedia.org/wiki/Autorretratos_de_Vincent_van_Gogh) de Van Gogh",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "Artefato 4 Reverse Rainbow in the Dark Angel Mansilla",
+      "id": "artefato-4-reverse-rainbow-in-the-dark-angel-mansilla",
+      "name": "Artefato 4 Reverse Rainbow in the Dark Angel Mansilla",
+      "origin": "native",
+      "lastModified": 1789308739428,
+      "title": "",
+      "tags": [],
+      "collection": "artefato da semana/4",
+      "description": "# Reverse Rainbow in the Dark\n\nAutor: Angel Mansilla  \nDRE: 123691897\n\n## Descrição\n\nMinha ideia aqui foi fazer uma criação inspirada na música \"Rainbow in the Dark\", da banda Dio, eu tentei representar um arco-íris invertido aparecendo no meio de uma paisagem escura, com chuva, floresta, montanhas e um lago bem agitado, e coloquei uma balsa com uma pessoa sozinha pra passar ainda mais essa sensação de isolamento, dai o arco-íris acaba sendo a única coisa realmente colorida daquele lugar. Eu coloquei um arco-íris reverso porque acho esse conceito muito legal, principalmente por ele quebrar a escuridão da cena.\n\nO desenho se adapta ao tamanho da janela e usa `random()` e `noise()` pra mudar as nuvens, a chuva e as ondas cada vez que o sketch roda, então nunca fica exatamente igual, porém o arco-íris invertido e a ideia principal continuam presentes.\n\n## Inspirações\n\n[Rainbow in the Dark — clipe oficial da música](https://www.youtube.com/watch?v=PrBUjXaRSUQ)\n\nA música foi a inspiração principal pelo contraste de existir algo tão colorido quanto um arco-íris no meio da escuridão, então tentei transformar o titulo da musica em uma paisagem de verdade.\n\n[A história por trás da capa de Holy Diver](https://www.revolvermag.com/culture/dios-holy-diver-story-behind-cover-art/)\n\nEssa criação também é inspirada na música \"Holy Diver\", a letra passa a imagem de um mergulhador em um lugar escuro e perigoso, cercado por água e isolamento, então tentei colocar esse clima no mar agitado, nas montanhas escuras e na pessoa sozinha sobre a balsa. A capa de \"Holy Diver\", álbum onde a música foi lançada, também me inspirou a usar muita espuma e deixar a paisagem como foco.\n\n## Como abrir\n\nÉ só abrir o arquivo `index.html` no navegador, pra gerar outra variação basta clicar na imagem, apertar `R` ou recarregar a página.\n\n## Uso de inteligência artificial\n\nUsei o ChatGPT/Codex pra pesquisar as referências, ajudar na criação do código e testar se o sketch funcionava em diferentes tamanhos de janela.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "Art4 Arthur Ramos",
+      "id": "art4-arthur-ramos",
+      "name": "Art4 Arthur Ramos",
+      "origin": "native",
+      "lastModified": 1789308628867,
+      "title": "Círculos em Órbita",
+      "tags": [
+        "p5js",
+        "arte-generativa",
+        "círculos",
+        "repetição",
+        "cores"
+      ],
+      "collection": "artefato da semana/4",
+      "description": "# Círculos em Órbita Espacial\n\n**Círculos em Órbita Espacial** é uma composição generativa feita principalmente com a primitiva `circle()` do p5.js. A cada execução, o programa cria círculos de diferentes tamanhos, posições, cores e transparências. Alguns se sobrepõem, alguns recebem anéis e outros são preenchidos por pequenas bolinhas.\n\nO desenho não utiliza estrada, paisagem ou ponto de fuga. Ele ocupa toda a janela como uma composição abstrata e se adapta ao espaço disponível usando `windowWidth`, `windowHeight`, `width` e `height`. Um clique gera uma nova versão.\n\n**Autor:** Arthur Ramos\n\n## Obras usadas como inspiração\n\n### _Several Circles_ (1926), de Wassily Kandinsky\n\nLink: [Guggenheim — Several Circles](https://www.guggenheim.org/artwork/1992)\n\nA obra de Kandinsky usa círculos coloridos de tamanhos diferentes sobre um fundo escuro. Alguns círculos se sobrepõem e parecem flutuar no espaço. Meu sketch aproveita essa ideia de composição, mas as posições, cores e dimensões são escolhidas aleatoriamente pelo programa.\n\n### _Dots Obsession_, de Yayoi Kusama\n\nLinks: [QAGOMA — Dots Obsession](https://play.qagoma.qld.gov.au/looknowseeforever/works/dots/) e [vídeo da Tate no YouTube](https://www.youtube.com/watch?v=rRZR3nsiIeA)\n\nKusama utiliza a repetição de bolinhas para cobrir objetos e ambientes. No sketch, essa referência aparece nos pequenos pontos espalhados pelo fundo e dentro de alguns círculos maiores. A repetição de uma forma muito simples cria uma imagem mais rica.\n\nOBS: ambas as referencias foram achadas e escolhidas ultilizando IA generativa (chatGPT) para minha ideia das bolinhas\n\n## Como executar\n\nAbra `index.html` em um navegador com acesso à internet ou copie o conteúdo de `sketch.js` para o editor do p5.js.\n\n## Interação\n\n- **Clique do mouse:** gera uma nova composição.\n- **Redimensionar a janela:** adapta o desenho ao novo tamanho disponível.",
+      "hasThumb": true,
+      "files": [
+        "README.md",
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "Artefato 4 gabriela oliveira",
+      "id": "artefato-4-gabriela-oliveira",
+      "name": "Artefato 4 gabriela oliveira",
+      "origin": "native",
+      "lastModified": 1789308540560,
+      "title": "",
+      "tags": [],
+      "collection": "artefato da semana/4",
+      "description": "# Outro Patamar — futebol raiz vs. metodologia importada\n\n## Inspiração\n\n- Reel: https://www.instagram.com/reel/DdIf8XAFVHV/\n  Compilado de \"gafes\" de entrevista do jogador Bruno Henrique, incluindo a\n  frase que virou meme, \"a gente tá em outro patamar\".\n\n## Ligação entre o sketch e a obra\n\nO reel usado como referência reúne momentos em que o jargão de entrevista\npós-jogo soa deslocado diante da simplicidade do que realmente acontece em\ncampo. Esse mesmo contraste aparece hoje na forma como o discurso do futebol\nbrasileiro incorporou vocabulário de \"metodologia europeia\" — dados,\nperiodização, gestão de performance — por cima de uma tradição de futebol\nde rua, improvisado e espontâneo (o \"futebol raiz\").\n\nO sketch traduz esse contraste em uma cena interativa com duas camadas:\n\n- **Nível baixo (mouse à esquerda):** predomina uma \"pelada de rua\"\n  desenhada à mão — bonecos-palito tortos, bola irregular, traços de grama\n  imperfeitos. É o futebol raiz.\n- **Nível alto (mouse à direita):** cresce por cima uma camada de\n  \"metodologia importada\" — grade tática, pontos de rastreamento tipo\n  GPS/heatmap, setas retas e jargões de gestão esportiva (xG, carga\n  aguda:crônica, periodização tática...).\n- A camada raiz nunca desaparece por completo, só enfraquece — sugerindo\n  que o futebol raiz segue por baixo do discurso corporativo, apenas\n  abafado.\n- Clicar no sketch reembaralha a pelada (nova bola, novas posições): a rua\n  se reinventa a cada partida. Já a grade da metodologia é sempre a mesma,\n  rígida e repetitiva — uma crítica visual à padronização importada.\n- Acima de 85% de nível, aparece um carimbo trêmulo com a frase-meme\n  \"A GENTE TÁ EM OUTRO PATAMAR\", ironizando o jargão que acompanha essa\n  \"modernização\" sem necessariamente refletir uma mudança real no jogo.\n\n## Como rodar\n\nAbra `index.html` em um navegador (ou sirva a pasta com um servidor\nestático simples). O **p5.js é carregado via CDN** dentro de `index.html`\n— a biblioteca não está incluída nesta pasta, conforme pedido em aula.\n\n## Interação\n\n- Mover o mouse na horizontal: controla o nível de \"metodologia\n  importada\" (0% a 100%).\n- Clicar no canvas: reembaralha a \"pelada\" (bola e jogadores).",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "README.md",
+        "sketch.js",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "p5 fut",
+      "id": "p5-fut",
+      "name": "p5 fut",
+      "origin": "native",
+      "lastModified": 1789140771664,
+      "title": "",
+      "tags": [],
+      "collection": "artefato da semana/4",
+      "description": "# Arte Geométrica Gerativa: Série Campo e Bolas de Futebol (p5.js)\n\n## 🎨 Obra de Inspiração e Referência\n\n- **Autor Inspirador:** Esteban Peñamil ([@estebanpm__](https://x.com/estebanpm__))\n- **Link da Obra Original:** [https://x.com/estebanpm__/status/2094511037898965199](https://x.com/estebanpm__/status/2094511037898965199)\n\n### 🔗 Ligação entre o Sketch e a Obra Usada:\nA obra original de Esteban Peñamil apresenta uma composição em grade de ilustrações no estilo pôster, combinando texturas de hachuras riscadas (hatching), marcações geométricas de quadras e pilhas verticais ligeiramente inclinadas de bolas com variadas paletas de cores.\n\nEste sketch reinterpreta essa mesma linguagem estética e conceitual, trazendo a temática do futebol de forma fiel:\n1. **Marcações Autênticas de Campo de Futebol:** As marcações foram estritamente limitadas aos dois conjuntos regulamentares de um campo de futebol:\n   - **Círculo Central:** Composto pela linha de meio-campo, círculo central e o ponto central de saída de bola.\n   - **Grande Área:** Composta pela linha de fundo, retângulo da grande área, retângulo da pequena área (área de meta), marca do pênalti e a meia-lua (arco da grande área).\n2. **Bolas de Futebol:** Mantêm o padrão clássico com pentágonos e hexágonos, organizadas em pilhas verticais com sobreposição, inclinação e sombras suaves.\n3. **Textura e Paletas:** Preserva o efeito de hachura artesanal sobre campos em diversas cores (gramado clássico, futsal azul, saibro/terra, grama seca, sintético roxo).\n\n---\n\n## 📐 Conceitos Geométricos Aplicados\n\n1. **Posição (Grade Adaptativa e Centralização):**\n   - Distribuição dos cartões em uma matriz adaptativa calculada via `windowWidth` e `windowHeight`.\n   - Uso de `translate(posX, posY)` para posicionar os cartões e centralizar as formas geométricas.\n\n2. **Dimensões (Escala Proporcional):**\n   - Todas as proporções de linhas do campo, áreas e bolas adaptam-se dinamicamente à menor dimensão da tela (`min(width, height)`).\n\n3. **Inclinação e Direção (Transformações Geométricas):**\n   - Aplicação aleatória de rotações em ângulos retos (`0°`, `90°`, `180°`, `270°`) às marcações de campo de futebol.\n   - Inclinação ortogonal/diagonal suave na pilha de bolas (`rotate(inclinacaoPilha)`).\n   - Uso do par `push()` e `pop()` para isolar cada sistema de coordenadas local.\n\n---\n\n## 🚀 Como Executar\n\n1. Abra o editor online do p5.js em: [editor.p5js.org](https://editor.p5js.org/)\n2. Copie o código presente no arquivo `sketch.js` e cole-o no editor.\n3. Clique no botão **Play** (▶) para visualizar a obra.\n4. Redimensione a janela ou recarregue a página para gerar variações inéditas.\n\n---\n\n## 🛠️ Estrutura do Arquivo ZIP\n\nO arquivo ZIP contém na raiz (sem pastas internas):\n- `sketch.js`: Código-fonte em p5.js atualizado.\n- `index.html`: Página HTML configurada para visualização direta.\n- `README.md`: Documentação e metadados do projeto.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "mapa outer wilds",
+      "id": "mapa-outer-wilds",
+      "name": "mapa outer wilds",
+      "origin": "native",
+      "lastModified": 1789140433643,
+      "title": "Mapa Outer Wilds",
+      "tags": [],
+      "collection": "artefato da semana/4",
+      "description": "# Artefato 4 - Mapa Generativo de Outer Wilds (Visão Isométrica)\n\n**Autor:** Thalisson Braga\n\n## Sobre a Obra e Inspiração\nEste sketch foi inspirado no mapa do sistema solar do jogo **Outer Wilds** (desenvolvido pela Mobius Digital). No jogo, o sistema solar é um ambiente dinâmico, funcionando como um mecanismo de relógio onde os planetas estão em constante movimento orbital. \n\nA ideia deste sketch é replicar essa dinâmica procedural na forma de um mapa estático com perspectiva isométrica. A cada execução do código (`reload`), os planetas (Timber Hearth, Brittle Hollow, Giant's Deep, etc.) e suas luas aparecem em posições completamente diferentes de suas respectivas órbitas, criando um layout único.\n\n**Links de Referência:**\n* [Imagem do Mapa do Jogo no Computador de Bordo](https://user-images.githubusercontent.com/45887963/202887035-f987a9d1-1e2c-4e33-b61e-9da2bd14d595.jpg)\n* [Site Oficial do Jogo](https://www.mobiusdigitalgames.com/outer-wilds.html)\n\n## Regra Generativa Bônus: A Lua Quântica\nRespeitando a *lore* (história) de *Outer Wilds*, implementei a mecânica da Lua Quântica. Utilizando a função `floor(random(5))`, o algoritmo sorteia aleatoriamente em qual das 5 órbitas principais a lua vai estar. Como na obra original, toda vez que não estamos olhando (neste caso, a cada geração do canvas), a lua viaja e se prende aleatoriamente às coordenadas de um planeta diferente.\n\n## Conceitos Geométricos da Aula 3 Aplicados\nPara construir este sistema solar fugindo de coordenadas `X` e `Y` fixas (os \"números mágicos\"), utilizei intensamente as ferramentas matemáticas e geométricas ensinadas na semana:\n\n1. **Visão Isométrica com Transformações Afins (`scale`):** \n   Apliquei `scale(1, 0.4)` antes de desenhar as linhas das órbitas. Isso achata o eixo Y, transformando círculos perfeitos em elipses e criando uma ilusão 3D de perspectiva isométrica.\n\n2. **Coordenadas Polares Adaptadas:** \n   Para posicionar os planetas corretamente sobre as órbitas achatadas (sem deformar o desenho do planeta em si com o `scale`), calculei a posição polar de forma independente usando:\n   * `x = raio * cos(angulo)`\n   * `y = raio * sin(angulo) * 0.4`\n   O ângulo foi definido via `random(TWO_PI)`, garantindo o posicionamento procedural nas órbitas.\n\n3. **Isolamento de Estado com `push()` e `pop()`:** \n   Foram ferramentas cruciais para aninhar os sistemas de coordenadas. Ao desenhar sub-sistemas, um novo `push()` foi aberto após o `translate()` para o centro do planeta. Isso permitiu que a lua Attlerock orbitasse Timber Hearth em seu próprio eixo isométrico, ou que os Gêmeos orbitassem um centro gravitacional comum, sem que as rotações e translações afetassem a malha principal do sistema solar.\n\n4. **Translação Inicial:**\n   Utilizei `translate(width/2, height/2)` para levar a origem `(0,0)` para o centro da tela, facilitando a ancoragem do Sol e o cálculo radial de todas as órbitas.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "Fusão de caracteres 2026 09 10 18 36 24",
+      "id": "fusao-de-caracteres-2026-09-10-18-36-24",
+      "name": "Fusão de caracteres 2026 09 10 18 36 24",
+      "origin": "native",
+      "lastModified": 1789140211331,
+      "title": "Fusão de caracteres",
+      "tags": [
+        "primitives",
+        "ai",
+        "gemini",
+        "generative"
+      ],
+      "collection": "artefato da semana/4",
+      "description": "Um sketch feito pelo ChatGPT que funde caracteres para formar novos.\n\nAutor: Joao Ricardo S. Magalhaes\n\nInspirações:https://www.instagram.com/p/C0MVCwcN8qi/\nA junção dos caracteres formando um caracter maior acabou dando a ideia de fusão.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "artefato4 Natan Azevedo Gomes",
+      "id": "artefato4-natan-azevedo-gomes",
+      "name": "artefato4 Natan Azevedo Gomes",
+      "origin": "native",
+      "lastModified": 1789140096963,
+      "title": "Kirby voando pelos céus",
+      "tags": [
+        "generative",
+        "ai",
+        "gemini",
+        "Kirby"
+      ],
+      "collection": "artefato da semana/4",
+      "description": "Um sketch do personagem Kirby voando pelos céus, em homenagem ao novo jogo anunciado.\n\nAutor: Natan Azevedo Gomes\n\nInspirações: https://www.reddit.com/r/Kirby/comments/13c45yq/kirby_fanart_i_found_art_from_crownedvictory/?show=original\n\nhttps://www.reddit.com/r/Kirby/comments/13c45yq/kirby_fanart_i_found_art_from_crownedvictory/?show=original\n\nPrompt: Crie um sketch estático (sem animação) em p5.js. Apresente o resultado sob a forma de um único script em javascript a ser colado num ambiente de desenvolvimento como o editor.p5js.org. O sketch pode usar as primitivas background, point, line, rect, ellipse, triangle, circle, square, quad, arc ou bezier. É permitido usar comandos de estilização como stroke, fill, strokeWeight, etc. O programa fonte deve ser documentado para ser explicado para uma plateia de iniciantes em programação de computadores. O sketch pode usar coordenadas polares, podendo usar as funções sin e cos, e transformadas afins como translate, rotate, scale e shear (usando push e pop). Pode também usar as funções random, randomGaussian, noise e noiseDetail. O objetivo é desenhar uma arte do personagem Kirby voando pelos céus em sua estrela. A estrela possui suas pontas curvas, e não se esqueça de desenhar as linhas de movimento. Faça um fundo de céus à noite, usando noise para desenhar as estrelas. A perspectiva deve pegar o personagem numa visão de cima. O sketch deve se adequar ao tamanho da janela, usando windowWidth e windowHeight.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "artefato 04 correnteza",
+      "id": "artefato-04-correnteza",
+      "name": "artefato 04 correnteza",
+      "origin": "native",
+      "lastModified": 1789139741510,
+      "title": "",
+      "tags": [],
+      "collection": "artefato da semana/4",
+      "description": "# Correnteza\n\n**Autor:** Victor Hugo Figueiredo Pereira da Silva\n\n**Artefato da semana 04** — um sketch generativo em p5.js inspirado numa obra\nencontrada em redes sociais / páginas web.\n\n![thumbnail](thumbnail.png)\n\n## Obra de inspiração\n\n**Tyler Hobbs — *Fidenza* (2021)**\n\n- Instagram do artista: <https://www.instagram.com/tylerxhobbs/>\n- Texto do artista sobre a obra: <https://www.tylerxhobbs.com/words/fidenza>\n- Texto do artista sobre a técnica usada (campos de fluxo):\n  <https://www.tylerxhobbs.com/words/flow-fields>\n- A coleção completa (999 imagens geradas pelo algoritmo):\n  <https://www.artblocks.io/collection/fidenza-by-tyler-hobbs>\n\nTyler Hobbs é um artista generativo de Austin (EUA) que trabalha com\nalgoritmos, plotters e tinta. *Fidenza* é o trabalho mais conhecido dele: um\núnico algoritmo que gerou 999 imagens diferentes, todas feitas de **faixas\ngrossas e curvas que seguem um campo de fluxo e nunca se sobrepõem**. O que\nchamou minha atenção no Instagram dele foi o equilíbrio entre controle e\nacaso: cada imagem é imprevisível, mas todas são claramente \"da mesma\nfamília\".\n\n## A ligação entre *Correnteza* e *Fidenza*\n\n*Correnteza* não copia o código de Hobbs (ele não é aberto). O sketch foi\nescrito do zero a partir das explicações que o próprio artista publicou nos\ndois textos acima, recriando as mesmas ideias:\n\n| Em *Fidenza* (Tyler Hobbs) | Em *Correnteza* (este sketch) |\n| --- | --- |\n| **Campo de fluxo**: uma grade cobre a tela e cada célula guarda um ângulo, geralmente vindo do ruído de Perlin | `construirCampo()` monta a grade (`Float32Array`) e `anguloDoFluxo()` calcula o ângulo de cada célula com `noise()` |\n| As curvas andam passo a passo seguindo o ângulo da célula em que estão | `caminhar()` dá passinhos de 0,25% do menor lado da tela, para frente e para trás a partir de um ponto sorteado |\n| **Formas sem sobreposição**: antes de avançar, a curva confere se não vai encostar em outra | uma segunda grade, a de ocupação, marca onde já há tinta; `cabeAqui()` testa uma linha atravessando a faixa a cada passo |\n| **Três regras de colisão** (\"No Overlap\", sobreposição parcial, \"Anything Goes\") | `sem sobreposição`, `meio a meio` e `vale-tudo` |\n| **Turbulência** baixa / média / alta / nenhuma, **espiral** e **ângulos agudos** (múltiplos de 0,2·π) | fluxos `suave`, `ondulado`, `turbulento`, `reto`, `espiral` e `quebrado` (este arredonda o ângulo para múltiplos de 0,2·π, como em Fidenza) |\n| **Escalas** Small, Medium, Large, Jumbo, Jumbo XL, Uniform, Micro-Uniform | `pequena`, `média`, `grande`, `jumbo`, `jumbo XL`, `uniforme`, `micro` |\n| **Estilos**: formas sólidas, *Super Blocks* (a faixa vira um mosaico de blocos coloridos), *Outline* e *Soft Shapes* (milhares de linhas paralelas com ruído) | `sólido`, `blocos` (mosaico de `quad`s), `contorno` e `pincel` (fios paralelos meio transparentes, tremidos com `noise()`) |\n| **Paletas probabilísticas**: cada paleta e cada cor dentro dela têm uma chance diferente de aparecer | 7 paletas com peso, e cores com peso dentro de cada uma, sorteadas por `sortearComPeso()` |\n| Formas \"divididas\", que trocam de cor no meio | às vezes a faixa é cortada em 2 ou 3 trechos de cores diferentes |\n| **Margem** em volta da imagem | margem `larga`, `fina` ou `sangrada` (as formas vazam pela borda) |\n\n### O que é diferente (a minha contribuição)\n\n- **As paletas são brasileiras e minhas**: *Feira*, *Ipanema*, *Azulejo*,\n  *Cerrado* e *Carnaval*. Duas são homenagens diretas às paletas de uma cor\n  só de Fidenza: *Creme* (lembra a \"White on Cream\") e *Nanquim* (lembra a\n  \"Black\").\n- **A obra é pintada na frente de quem assiste.** Fidenza aparece pronta; em\n  *Correnteza* dá para ver a pintura crescer forma por forma, em cerca de 6\n  segundos (o computador faria isso em menos de um décimo de segundo, então o\n  sketch distribui o trabalho de propósito ao longo de ~420 quadros). As\n  formas grandes escolhem lugar primeiro e as pequenas vão preenchendo os\n  vãos, como quem enche um pote com pedras, depois pedrinhas, depois areia.\n- **Regra de curvatura**: faixas grossas não fazem curvas mais fechadas do que\n  a própria espessura (senão a faixa \"dobraria\" por cima de si mesma). Por\n  isso, num fluxo turbulento as faixas grossas saem curtas e as finas saem\n  longas e sinuosas.\n- **Grão de papel** passado por cima no final, para a imagem digital parecer\n  impressa.\n- A **legenda** mostra as características sorteadas, como a página de cada\n  Fidenza mostra as \"features\" da imagem.\n\n## A parte da aleatoriedade\n\nCada execução sorteia uma **semente** (mostrada na legenda), e todas as\ncaracterísticas saem dela. A mesma semente sempre gera a mesma obra. A\nsemente passa por uma pequena função de *hash* (`embaralhar()`) antes de\nchegar ao `randomSeed()`, porque o gerador do p5 dá resultados quase iguais\npara sementes vizinhas.\n\n| Característica | Opções (da mais comum para a mais rara, aproximadamente) |\n| --- | --- |\n| Paleta | Feira, Ipanema, Azulejo, Cerrado, Carnaval, Creme, Nanquim |\n| Fluxo | suave, ondulado, espiral, quebrado, turbulento, reto |\n| Escala | jumbo, grande, média, uniforme, pequena, micro, jumbo XL |\n| Estilo | sólido, pincel, blocos, contorno |\n| Colisão | sem sobreposição, meio a meio, vale-tudo |\n| Curvas | médias, longas, curtas |\n| Margem | fina, larga, sangrada |\n\nClique para gerar uma obra nova.\n\n## A parte do tamanho da janela\n\nO canvas é `createCanvas(windowWidth, windowHeight)` e **todas** as medidas\n(passo, espessuras, folga entre formas, margem, resolução das grades) são\nproporcionais ao menor lado da janela. Ao redimensionar, `windowResized()`\nrepinta a **mesma** obra (mesma semente) no novo formato.\n\n## Primitivas e recursos usados\n\n| Recurso | Onde aparece |\n| --- | --- |\n| `beginShape` / `vertex` / `endShape` | as faixas sólidas e de contorno (sobe por um lado da espinha, volta pelo outro) e os fios do estilo pincel |\n| `quad` | os blocos do estilo mosaico |\n| `point` | o grão de papel |\n| `rect` / `text` | a legenda |\n| `noise()` | o campo de fluxo e o tremor dos fios de pincel |\n| `createGraphics()` | a camada onde a pintura acontece (a legenda fica por cima, no canvas principal) |\n| `atan2`, `sin`, `cos`, vetores normais | direção das curvas, espiral e espessura das faixas |\n\n## Controles\n\n| Tecla / ação | Efeito |\n| --- | --- |\n| clique do mouse ou `N` | nova obra (nova semente) |\n| `ESPAÇO` | termina de pintar na hora (pula a animação) |\n| `R` | repinta a obra atual desde o começo |\n| `S` | salva a imagem em PNG |\n| `H` | mostra / esconde a legenda |\n| redimensionar a janela | repinta a mesma obra no novo tamanho |\n\n## Como executar\n\n1. Abra o arquivo `index.html` no navegador. Ele carrega **apenas** a\n   biblioteca p5.js pelo CDN (sem p5.sound e sem cópia local da biblioteca)\n   e o `sketch.js`. **Ou**\n2. cole o conteúdo de `sketch.js` no [editor.p5js.org](https://editor.p5js.org)\n   e rode (▶).\n\n## Prompt utilizado (Claude Code, modelo Opus 5)\n\n> Use redes sociais e páginas web para obter inspiração para o seu próximo\n> artefato. Nos metadados do seu sketch (arquivo README.md) inclua um (ou\n> mais) links para a(s) obra(s) que usou como inspiração. Esclareça a ligação\n> entre o seu sketch e a obra usada. [...] na formatação pedida e conhecida,\n> porém me mande o link de pelo menos 5 obras para eu escolher 3 para você se\n> inspirar.\n\nA IA sugeriu nove obras (Georg Nees, Vera Molnár, Frieder Nake, Bridget\nRiley, Anni Albers, Tyler Hobbs, Kjetil Golid, Manolo Gamboa Naon e Zach\nLieberman). Escolhi Tyler Hobbs com o segundo prompt:\n\n> Use as artes de Tyler Hobbs para se inspirar. Aqui está o Instagram dele\n> para você mencionar: https://www.instagram.com/tylerxhobbs/\n\nDepois disso, o resultado foi ajustado a partir de renderizações de teste com\nvárias sementes, estilos e tamanhos de janela. Por exemplo, foi aí que surgiu\na função `embaralhar()`: as primeiras sementes testadas (1 a 6) saíam todas\ncom a mesma escala.\n\n## Arquivos deste pacote\n\n- `sketch.js` — o sketch p5.js (comentado em português).\n- `index.html` — página para rodar o sketch fora do editor.\n- `thumbnail.png` — uma das imagens geradas pelo sketch.\n- `README.md` — este arquivo.",
+      "hasThumb": true,
+      "files": [
+        "sketch.js",
+        "index.html",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "artefato correntes da noite paulo vitor",
+      "id": "artefato-correntes-da-noite-paulo-vitor",
+      "name": "artefato correntes da noite paulo vitor",
+      "origin": "native",
+      "lastModified": 1789139646773,
+      "title": "",
+      "tags": [],
+      "collection": "artefato da semana/4",
+      "description": "# Entre Prédios: Correntes da Noite\n\n**Autor:** Paulo Vitor Couto\n\n## Descrição\n\nEste sketch generativo apresenta uma cidade noturna atravessada por correntes luminosas. As faixas do céu seguem um campo de fluxo calculado com ruído Perlin: cada pequeno deslocamento consulta a direção do campo e, por isso, os caminhos parecem pertencer ao mesmo vento sem serem idênticos. Um pequeno herói percorre uma dessas correntes sobre a cidade.\n\nO resultado muda a cada execução ou clique. O canvas usa `windowWidth` e `windowHeight`, e todas as quantidades, posições e dimensões são calculadas proporcionalmente ao espaço disponível.\n\n## Obras utilizadas como inspiração\n\n### *The Starry Night* — Vincent van Gogh\n\nLink: [página da obra no Museum of Modern Art (MoMA)](https://www.moma.org/collection/works/79802)\n\nDa pintura, o sketch reinterpreta a predominância dos azuis profundos, os pontos amarelos cercados por halos e a sensação de um céu que se movimenta sobre uma paisagem silenciosa. Não há reprodução da pintura: os redemoinhos são reconstruídos por regras matemáticas e a vila dá lugar a uma cidade contemporânea.\n\n### *Fidenza* — Tyler Hobbs\n\nLink: [texto do artista sobre o projeto Fidenza](https://www.tylerxhobbs.com/words/fidenza)\n\nDe *Fidenza*, a ligação principal é o uso de um **campo de fluxo** para orientar trajetórias orgânicas. No meu sketch, o ângulo de cada segmento é calculado com `noise()`, criando correntes paralelas que variam em curvatura, espessura e cor. A técnica foi adaptada para representar vento e luz em um céu urbano.\n\n## Decisões visuais e técnicas\n\n- Paleta baseada em azuis noturnos, amarelos luminosos e pequenos acentos vermelhos.\n- Correntes formadas por curvas calculadas a partir de um campo de fluxo.\n- Estrelas com círculos concêntricos e brilho translúcido.\n- Prédios gerados com diferentes larguras, alturas, antenas e janelas.\n- Textura de pontos aplicada sobre a cena para lembrar impressão gráfica.\n- Personagem construído com formas simples e orientado pela direção da corrente.\n\n## Interação\n\n- **Clique:** gera uma nova composição.\n- **Tecla S:** salva a imagem atual em PNG.\n- **Tecla H:** mostra ou esconde as instruções.\n- **Redimensionar a janela:** adapta o canvas e gera uma nova composição.\n\n## Conteúdo do ZIP\n\n- `index.html`\n- `style.css`\n- `sketch.js`\n- `README.md`\n- `thumbnail.png`\n\nO arquivo não inclui cópias locais de `p5.js` ou `p5.sound.js`. A única biblioteca necessária é carregada por CDN no `index.html`.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "style.css",
+        "sketch.js",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "Artefact4 yasmine",
+      "id": "artefact4-yasmine",
+      "name": "Artefact4 yasmine",
+      "origin": "native",
+      "lastModified": 1789139555395,
+      "title": "",
+      "tags": [],
+      "collection": "artefato da semana/4",
+      "description": "# Pli — An Interactive Tribute to *Movement in Squares*\n\nAuthor : Yasmine\nCourse : Topics and Special Topics in Digital Systems — Artefacto 4\n\n## Inspiration\n\nThis sketch is inspired by “Movement in Squares” (1961), a painting by\nBritish artist Bridget Riley, a leading figure in the Op Art movement.\n\n- Artwork (Arts Council Collection): https://artscouncilcollection.org.uk/artwork/movement-squares\n\n## Connection between the sketch and the artwork\n\nIn the original painting, Riley constructs a grid of black and\nwhite squares whose height remains constant, but whose width gradually decreases\nas they approach the center of the canvas. This variation\nin width creates the optical illusion that the picture plane is folding or\npinches, as if the flat surface of the painting were wrinkling under the effect\nof an invisible force.\n\nThis sketch directly echoes this geometric principle : in each row,\nthe squares are drawn side by side, and the width of each square depends\non its distance from a fold line, exactly as in the painting. The\ndifference is that, in Riley’s work, the fold is frozen on the canvas. \nHere, the fold becomes a dynamic parameter:\n\n- moving the mouse horizontally **shifts the\n- Moving the mouse horizontally moves the fold in the image\n- Moving the mouse vertically changes the intensity of the pinch\n\n## Technical concepts used \n\n- `map()`: converts the distance to the fold into a width factor\n- `lerp()`: smooths the movement of the fold from one frame to the next, for a fluid motion rather than an abrupt jump toward the mouse\n- `constrain()`: keeps the width factor within a valid range\n\n## Use of AI\n\nThis sketch was developed with the help of Claude. Our discussion\nfocused on : choosing a source of inspiration consistent with the \ngeometric concepts covered in class, designing the interactive mechanism. \n\n## Files\n\n- `index.html` : loads p5.js from a CDN \n- `sketch.js` : commented source code for the sketch\n- `image_squares.png` : preview of the generated rendering\n- `README.md` : this file",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "README.md",
+        "sketch.js",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "ranhuras em azulejos",
+      "id": "ranhuras-em-azulejos",
+      "name": "ranhuras em azulejos",
+      "origin": "native",
+      "lastModified": 1789046747399,
+      "title": "Ranhuras em Azulejos",
+      "tags": [
+        "ai",
+        "generative",
+        "claude"
+      ],
+      "collection": "artefato da semana/4",
+      "description": "Inspiração em Helena Sarin\n\nDesenvolvido com Claude a partir de um conjunto de obras da artista misturado com ideias pessoais de como poderia ficar mais interessante, adicionando diferentes padrões e estampas, novas cores e ajustes mais finos.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "helena giovanna artefato 4 inspirado em yayoi kusama (1)",
+      "id": "helena-giovanna-artefato-4-inspirado-em-yayoi-kusama-1",
+      "name": "helena giovanna artefato 4 inspirado em yayoi kusama (1)",
+      "origin": "native",
+      "lastModified": 1789046576306,
+      "title": "Yayoi Kusama: Retrato em Pontilhismo Digital e Obsessão por Bolinhas",
+      "tags": [
+        "generative",
+        "portrait",
+        "kusama",
+        "dots",
+        "static",
+        "ai",
+        "chatgpt"
+      ],
+      "collection": "artefato da semana/4",
+      "description": "Um sketch artístico estático feito pelo ChatGPT que presta homenagem à artista Yayoi Kusama, reconstruindo sua silhueta icônica através da repetição obsessiva de círculos, cores vibrantes e padrões procedurais de preenchimento.\n\nAutora: Helena Giovanna\n\n***Prompt usado:***\n\"Crie um sketch artístico estático em p5.js, desenvolvido para funcionar no p5front, como uma homenagem à artista Yayoi Kusama e inspirado em sua linguagem visual marcada pela repetição obsessiva de bolinhas (polka dots). A composição deve apresentar um retrato frontal e reconhecível de Yayoi Kusama, construído visualmente apenas por bolinhas/círculos de diferentes tamanhos, cores, densidades e espaçamentos. Não utilize imagens externas para formar o retrato. O rosto deve surgir da organização dos próprios círculos, explorando uma espécie de pontilhismo digital. Use como características principais o cabelo curto com franja, o formato do rosto, olhos, nariz, boca, pescoço e parte dos ombros. A estética deve estabelecer uma ligação clara com as obras de Kusama, utilizando uma paleta com vermelho, preto, branco e amarelo. O fundo também deve ser formado exclusivamente por bolinhas. O canvas deve se adaptar ao tamanho da janela usando windowWidth e windowHeight e o desenho deve ser estático, utilizando noLoop().\"\n\n***Inspiração e Referências***\n\nObra de inspiração: \n1. Yayoi Kusama Inspired Painting (2022). Autor: Dizlarka - Disponível em: hhttps://medias.artmajeur.com/standard/16076926_photo-kusama.jpg\n2. Pumpkin (1994). Autora: Yayoi Kusama - Disponível em: https://claudia.abril.com.br/wp-content/uploads/2026/08/pumpkin-yayoi-kusama.avif\n\n***Ligação entre o sketch e as obras***: Este sketch foi desenvolvido como uma homenagem à artista japonesa Yayoi Kusama, falecida recentemente, cuja trajetória artística ficou mundialmente conhecida pelo uso intenso da repetição e das bolinhas (polka dots). A ideia foi utilizar justamente esse elemento tão característico de sua linguagem visual para construir uma representação da própria artista.\n\nA principal inspiração para o retrato foi a obra Kusama Portrait, que utiliza bolinhas para formar visualmente o rosto de Yayoi Kusama. No meu trabalho, procurei transformar essa mesma ideia em lógica de programação, construindo o retrato apenas com círculos de diferentes tamanhos, posições e cores.\n\nDa obra Pumpkin, de Yayoi Kusama, utilizei como referência principalmente a combinação de amarelo e preto. Essa paleta aparece no fundo do sketch através de um padrão de pontos pretos sobre amarelo. O cabelo vermelho vibrante, uma característica marcante da própria artista, foi utilizado para destacar o rosto e facilitar seu reconhecimento.\n\nA conexão com a linguagem de Kusama também aparece através da repetição. Em vez de desenhar o rosto utilizando linhas e contornos tradicionais, utilizei estruturas de repetição (for) para distribuir círculos pela composição. A concentração, o tamanho e as cores dessas bolinhas são responsáveis por formar as diferentes partes do rosto.\n\nO resultado funciona como uma espécie de mosaico digital feito inteiramente de pontos, no qual cada bolinha contribui para formar a imagem completa. Dessa forma, o sketch busca não apenas representar Yayoi Kusama, mas também homenageá-la utilizando um dos elementos mais reconhecíveis de sua própria obra.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "cosmic spark (4)",
+      "id": "cosmic-spark-4",
+      "name": "cosmic spark (4)",
+      "origin": "native",
+      "lastModified": 1789046534377,
+      "title": "sketch_xadrez",
+      "tags": [],
+      "collection": "artefato da semana/4",
+      "description": "**Nome:** Nicole Cardozo dos Santos\n**DRE:** 1231749884\n\n## Descrição\n\nEste sketch cria um padrão geométrico formado por faixas coloridas que se repetem pela tela. As faixas possuem diferentes larguras e alternam sua posição entre as linhas.\n\nO desenho utiliza quadriláteros (`quad()`) sem contornos, permitindo que as cores fiquem diretamente próximas umas das outras. O contraste entre o preto, cinza e as cores saturadas cria um efeito visual semelhante ao da obra utilizada como inspiração.\n\n## Inspiração\n\nEste trabalho foi inspirado pela seguinte imagem:\n\nhttps://pin.it/6dGcmdllk\n\nA principal inspiração foi o uso de faixas verticais coloridas, a repetição do padrão e a ausência de bordas entre as formas. A disposição, as proporções e as cores foram adaptadas para criar uma composição própria em p5.js.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "Artefato4ArturTaboada",
+      "id": "artefato4arturtaboada",
+      "name": "Artefato4ArturTaboada",
+      "origin": "native",
+      "lastModified": 1789046410814,
+      "title": "",
+      "tags": [],
+      "collection": "artefato da semana/4",
+      "description": "# Roseta de Quadrados em Lâminas Translúcidas\n\nEste sketch constrói uma composição abstrata a partir de uma única primitiva geométrica: o quadrado girado em torno de um de seus vértices. O objetivo foi transformar um desenho estático de papel em um sistema animado, explorando rotação em torno de um ponto comum, escala geométrica entre camadas e sobreposição translúcida como recurso de profundidade.\n\n## Como o sketch funciona\n- Cada quadrado é desenhado com um de seus vértices na origem e girado por `(TWO_PI / quadrados) * i`, de modo que todos compartilham o mesmo ponto central e formam uma roseta em cata-vento.\n- O número de quadrados da roseta é sorteado a cada execução (`floor(random(5, 13))`), então o programa nunca abre com exatamente a mesma composição: rosetas de cinco pás ficam abertas e angulosas, enquanto as de doze fecham quase em um disco contínuo.\n- A tela é preenchida por camadas concêntricas dessa mesma roseta, com o lado crescendo em progressão geométrica (`base * 0.062 * pow(1.32, r)`). O número de camadas não é fixo: a função `medir()` calcula quantos anéis são necessários para que a maior lâmina ultrapasse a diagonal da janela.\n- Todas as medidas derivam de `base = min(windowWidth, windowHeight)`, incluindo espessura de traço e deslocamento das formas, então a composição mantém as mesmas proporções em qualquer formato de tela. `windowResized()` refaz esse cálculo ao redimensionar a janela.\n- Camadas vizinhas giram em sentidos opostos (`r % 2 ? -1 : 1`) e recebem defasagem de fase, o que produz a leitura de espiral: o movimento parece percorrer a imagem do centro para as bordas em vez de girar em bloco.\n- Cada quadrado é preenchido por um degradê construído em 14 faixas, com o cinza definido pelo ângulo da forma em relação a uma direção de luz fixa (`cos(ang - PI * 0.25)`). Somado à baixa opacidade e a uma aresta fina de contorno, isso dá às formas sobrepostas o aspecto de placas de vidro empilhadas.\n- Um termo senoidal (`respiro`) afasta e reaproxima as pás do centro ao longo do tempo, fazendo a roseta abrir e fechar continuamente.\n\n## Inspiração\nO sketch cruza duas referências encontradas no Instagram:\n\n- **Desenho (geometria):** [dulfoart_style — \"Simple Things to Draw When Bored\"](https://www.instagram.com/reel/Dbxv9bURy_y/)\n  O vídeo mostra, à mão livre, a construção de uma roseta formada por sete quadrados iguais girados em torno de um vértice comum. É exatamente essa a regra geométrica reproduzida no código: a forma desenhada no papel foi traduzida em uma fórmula de rotação, o que permitiu parametrizar o número de quadrados em vez de fixá-lo em sete.\n\n- **Animação (renderização e movimento):** [zach.lieberman](https://www.instagram.com/reel/DcBdHy9TOag/)\n  A obra apresenta uma malha densa de lâminas translúcidas em escala de cinza, com arestas visíveis e degradês internos, girando lentamente em espiral. Dela vêm as decisões de acabamento e movimento do sketch: a paleta monocromática sobre fundo escuro, o preenchimento em degradê por faixas com iluminação direcional, a sobreposição com baixa opacidade e a rotação defasada entre camadas.\n\nA ligação entre as duas, portanto, é de estrutura e superfície: a geometria vem do desenho de dulfoart_style, enquanto a maneira de renderizá-la e animá-la vem da obra de Zach Lieberman. O resultado é o desenho de papel repetido em profundidade e posto em movimento.\n\n## Autor\nArtur Taboada Dios Carvalho\n\n## Como visualizar este projeto\n\n**Usando o ambiente online (p5front)**\n1. Acesse o ambiente de desenvolvimento utilizado na disciplina: [https://esperanc.github.io/p5front/](https://esperanc.github.io/p5front/).\n2. Copie todo o conteúdo do arquivo `sketch.js` deste zip e cole na área de edição de código do site.\n3. O resultado será renderizado na tela de visualização após o botão \"Run\" ser clicado. Cada novo clique em \"Run\" sorteia uma roseta diferente.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "thumbnail.png",
+        "README.md"
+      ]
+    },
+    {
+      "folder": "Artefato 4 O&&P",
+      "id": "artefato-4-op",
+      "name": "Artefato 4 O&&P",
+      "origin": "native",
+      "lastModified": 1789046323880,
+      "title": "O&&P",
+      "tags": [],
+      "collection": "artefato da semana/4",
+      "description": "Aluno: Luiz Henrique da Costa Pacheco\nDRE:125056085\n\nO artefato foi criado com inspiração na obra \"Schotter\" do artista generativo Georg Ness (https://collections.vam.ac.uk/item/O221321/schotter-print-nees-georg/), juntamente da desconstrução visual utilizada muito pelo artista Adam Fuhrer, mais especifcamente na obra Cube Break.(https://adamfuhrer.com/p/y346wegg#t=cube)\n\nNesse artefato utilizo a progressão usada na obra de Ness, somada à desconstrução das linhas dos quadrados utilizadas por Adam Fuhrer para criar uma composição que progride da ordem ao caos.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "Artefato 4 Gabriella Murta",
+      "id": "artefato-4-gabriella-murta",
+      "name": "Artefato 4   Gabriella Murta",
+      "origin": "native",
+      "lastModified": 1789046253843,
+      "title": "Artefato 4 - Inspiração",
+      "tags": [
+        "Zach Lieberman",
+        "ia",
+        "generative"
+      ],
+      "collection": "artefato da semana/4",
+      "description": "Autora: Gabriella Murta\n\nA pesquisa de inspiração nos trabalhos do Zach Lieberman me levou a página onde ele descreve seu método de trabalho experimental (https://zachlieberman.medium.com/daily-sketches-2016-28586d8f008e). Analisando as obras me deparei com o trabalho de reflexão de luz e percebi que havia um padrão de rotação das linhas e suas reflexões. Pedi ao Claude para identificar o padrão e comecei a conversar com a IA para propor novos experimentos usando a mesma regra de repetição do artista.\n\n\"Seria possível aplicar essa mesma regra de repetição das formas sem gerar um círculo como resultado? Por exemplo, posso repetir a forma da letra K onde o eixo está no topo à esquerda, mas a cada revolução o eixo muda para o ponto inferior direito do K. E isso se repete até completar todo o espaço do canva.\"\n\nA partir desta indagação comecei a modificar até chegar neste resultado. Onde fizemos várias direções de giro sobrepostas.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "2026 09 01 CarolinaAbdu",
+      "id": "2026-09-01-carolinaabdu",
+      "name": "2026 09 01 CarolinaAbdu",
+      "origin": "native",
+      "lastModified": 1789046085276,
+      "title": "",
+      "tags": [],
+      "collection": "artefato da semana/4",
+      "description": "# Anéis de Vida\n\n## Inspiração Original\n\nA concepção inicial deriva da obra do artista **fingacode**, baseada no estudo do processo estilhaçado e imperfeito de **quebrar ovos**. Na obra de referência, as bordas irregulares e o caos de formas ovais sobrepostas criam imagens interessantes :https://www.instagram.com/fingacode/p/Db0173fjA2Z/\n\n## Reinterpretação: Do Ovo ao Tronco de Árvore\n\nA lógica de fragmentação circular foi adaptada para  as seções transversais de troncos de árvores e seus anéis de crescimento . \n\n## A Escolha Bitonal\n\nDiferente da paleta multicolorida da referência, este trabalho usou variações de apenas duas cores base (azul profundo e ferrugem) no objetivo de tentar reproduzir algo mais próximo da natureza.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "thumbnail.png",
+        "README.md"
+      ]
+    },
+    {
+      "folder": "Artefact 3 Yasmine",
+      "id": "artefact-3-yasmine",
+      "name": "Artefact 3 Yasmine",
+      "origin": "p5editor",
+      "lastModified": 1788215384535,
+      "title": "",
+      "tags": [],
+      "collection": "artefato da semana/3",
+      "description": "",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "p5.js",
+        "p5.sound.min.js",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
     {
       "folder": "objetos_com_irradiacoes",
       "id": "objetos_com_irradiacoes",
@@ -25,27 +789,6 @@
         "style.css",
         "thumbnail.png",
         "README.md"
-      ]
-    },
-    {
-      "folder": "Artefact 3 Yasmine",
-      "id": "artefact-3-yasmine",
-      "name": "Artefact 3 Yasmine",
-      "origin": "p5editor",
-      "lastModified": 1788119655334,
-      "title": "",
-      "tags": [],
-      "collection": "artefato da semana/3",
-      "description": "",
-      "hasThumb": true,
-      "files": [
-        "index.html",
-        "sketch.js",
-        "style.css",
-        "p5.js",
-        "p5.sound.min.js",
-        "README.md",
-        "thumbnail.png"
       ]
     },
     {
@@ -748,23 +1491,6 @@
         "style.css",
         "README.md",
         "thumbnail.png"
-      ]
-    },
-    {
-      "folder": "grid polygons",
-      "id": "grid-polygons",
-      "name": "grid polygons",
-      "origin": "native",
-      "lastModified": 1787954771736,
-      "title": "",
-      "tags": [],
-      "collection": "",
-      "description": "",
-      "hasThumb": false,
-      "files": [
-        "index.html",
-        "sketch.js",
-        "style.css"
       ]
     },
     {
@@ -2696,31 +3422,6 @@
         "patterns.js",
         "README.md",
         "thumbnail.png"
-      ]
-    },
-    {
-      "folder": "hershey font draw",
-      "id": "hershey-font-draw",
-      "name": "hershey font draw",
-      "origin": "native",
-      "lastModified": 1786725941433,
-      "title": "",
-      "tags": [
-        "typography",
-        "p5.brush"
-      ],
-      "collection": "techniques/libraries",
-      "description": "Draws text using one of several Hershey Fonts. \nUses p5.brush \n\n## Usage\nUse the configuration panels",
-      "hasThumb": true,
-      "files": [
-        "index.html",
-        "sketch.js",
-        "style.css",
-        "hersheytext.min.json",
-        "hershey.js",
-        "gui.js",
-        "thumbnail.png",
-        "README.md"
       ]
     },
     {
