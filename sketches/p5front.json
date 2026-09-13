@@ -1,14 +1,32 @@
 {
   "format": "p5front-export",
   "version": 1,
-  "createdAt": "2026-09-13T21:30:11.689Z",
+  "createdAt": "2026-09-13T22:19:04.144Z",
   "projects": [
+    {
+      "folder": "Samuel Vitor Insonia",
+      "id": "samuel-vitor-insonia",
+      "name": "Samuel Vitor  Insonia",
+      "origin": "native",
+      "lastModified": 1789337936316,
+      "title": "",
+      "tags": [],
+      "collection": "artefato da semana/4",
+      "description": "# Insônia\n\n**Autor:** Samuel Vitor  \n**Disciplina:** Programação Criativa  \n**Atividade:** Artefato 4 — Inspirado em ...\n\n## Inspirações\n\n- \"SEU POTENCIAL ESTÁ TE ESPERANDO!\" - (https://www.instagram.com/p/DYfPED8lNoe/?img_index=1)\n- https://www.instagram.com/reels/C4BSINUr8Sm/\n\n## Ligação com o sketch\n\nDar um olhar humano e neurótico pro desenho, desde a primeira vez que vi os posts fiquei obcecado. Primeiro com o tom e a criatividade, mas também com a forma de enxergar as coisas cujo a qual me identifiquei bastante. E mesmo já tendo feito um slider, não tinha feito uma animação automática até então.\n\n## Técnica\n\n- p5.js 2.x, compatível com o p5Front; sem bibliotecas extras e sem arquivos de imagem;\n- composição responsiva com `windowWidth` / `windowHeight` e `windowResized()`;\n- determinística: `randomSeed(4112026)` garante a mesma rua em toda execução;\n- o arquivo thumbnail é um animated png, então dependendo do que você usar pra abrir, ele não vai carregar corretamente, sugiro tentar abrir com o Google Chrome ou um navegador pra conseguir enxergar a animação corretamente.\n- Deepseek V4.1 Flash me ajudou nisso, dessa vez a ajuda veio da china! Ni-hao!",
+      "hasThumb": true,
+      "files": [
+        "sketch.js",
+        "thumbnail.png",
+        "README.md",
+        "index.html"
+      ]
+    },
     {
       "folder": "grid polygons",
       "id": "grid-polygons",
       "name": "grid polygons",
       "origin": "native",
-      "lastModified": 1789335006758,
+      "lastModified": 1789337719226,
       "title": "",
       "tags": [],
       "collection": "",
@@ -42,24 +60,6 @@
         "style.css",
         "README.md",
         "thumbnail.png"
-      ]
-    },
-    {
-      "folder": "Samuel Vitor Insônia",
-      "id": "samuel-vitor-insonia",
-      "name": "Samuel Vitor   Insônia",
-      "origin": "native",
-      "lastModified": 1789310998523,
-      "title": "",
-      "tags": [],
-      "collection": "artefato da semana/4",
-      "description": "# Insônia\n\n**Autor:** Samuel Vitor  \n**Disciplina:** Programação Criativa  \n**Atividade:** Artefato 4 — Inspirado em ...\n\n## Inspirações\n\n- \"SEU POTENCIAL ESTÁ TE ESPERANDO!\" - (https://www.instagram.com/p/DYfPED8lNoe/?img_index=1)\n- https://www.instagram.com/reels/C4BSINUr8Sm/\n\n## Ligação com o sketch\n\nDar um olhar humano e neurótico pro desenho, desde a primeira vez que vi os posts fiquei obcecado. Primeiro com o tom e a criatividade, mas também com a forma de enxergar as coisas cujo a qual me identifiquei bastante. E mesmo já tendo feito um slider, não tinha feito uma animação automática até então.\n\n## Técnica\n\n- p5.js 2.x, compatível com o p5Front; sem bibliotecas extras e sem arquivos de imagem;\n- composição responsiva com `windowWidth` / `windowHeight` e `windowResized()`;\n- determinística: `randomSeed(4112026)` garante a mesma rua em toda execução;\n- o arquivo thumbnail é um animated png, então dependendo do que você usar pra abrir, ele não vai carregar corretamente, sugiro tentar abrir com o Google Chrome ou um navegador pra conseguir enxergar a animação corretamente.\n- Deepseek V4.1 Flash me ajudou nisso, dessa vez a ajuda veio da china! Ni-hao!",
-      "hasThumb": true,
-      "files": [
-        "sketch.js",
-        "thumbnail.png",
-        "README.md",
-        "index.html"
       ]
     },
     {
