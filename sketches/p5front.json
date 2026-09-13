@@ -1,14 +1,38 @@
 {
   "format": "p5front-export",
   "version": 1,
-  "createdAt": "2026-09-13T22:19:04.144Z",
+  "createdAt": "2026-09-13T23:27:03.574Z",
   "projects": [
+    {
+      "folder": "Fusao de caracteres 2026 09 10 18 36 24",
+      "id": "fusao-de-caracteres-2026-09-10-18-36-24",
+      "name": "Fusão de caracteres 2026 09 10 18 36 24",
+      "origin": "native",
+      "lastModified": 1789342017682,
+      "title": "Fusão de caracteres",
+      "tags": [
+        "primitives",
+        "ai",
+        "gemini",
+        "generative"
+      ],
+      "collection": "artefato da semana/4",
+      "description": "Um sketch feito pelo ChatGPT que funde caracteres para formar novos.\n\nAutor: Joao Ricardo S. Magalhaes\n\nInspirações:https://www.instagram.com/p/C0MVCwcN8qi/\nA junção dos caracteres formando um caracter maior acabou dando a ideia de fusão.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
     {
       "folder": "Samuel Vitor Insonia",
       "id": "samuel-vitor-insonia",
       "name": "Samuel Vitor  Insonia",
       "origin": "native",
-      "lastModified": 1789337936316,
+      "lastModified": 1789338741658,
       "title": "",
       "tags": [],
       "collection": "artefato da semana/4",
@@ -485,30 +509,6 @@
       "tags": [],
       "collection": "artefato da semana/4",
       "description": "# Artefato 4 - Mapa Generativo de Outer Wilds (Visão Isométrica)\n\n**Autor:** Thalisson Braga\n\n## Sobre a Obra e Inspiração\nEste sketch foi inspirado no mapa do sistema solar do jogo **Outer Wilds** (desenvolvido pela Mobius Digital). No jogo, o sistema solar é um ambiente dinâmico, funcionando como um mecanismo de relógio onde os planetas estão em constante movimento orbital. \n\nA ideia deste sketch é replicar essa dinâmica procedural na forma de um mapa estático com perspectiva isométrica. A cada execução do código (`reload`), os planetas (Timber Hearth, Brittle Hollow, Giant's Deep, etc.) e suas luas aparecem em posições completamente diferentes de suas respectivas órbitas, criando um layout único.\n\n**Links de Referência:**\n* [Imagem do Mapa do Jogo no Computador de Bordo](https://user-images.githubusercontent.com/45887963/202887035-f987a9d1-1e2c-4e33-b61e-9da2bd14d595.jpg)\n* [Site Oficial do Jogo](https://www.mobiusdigitalgames.com/outer-wilds.html)\n\n## Regra Generativa Bônus: A Lua Quântica\nRespeitando a *lore* (história) de *Outer Wilds*, implementei a mecânica da Lua Quântica. Utilizando a função `floor(random(5))`, o algoritmo sorteia aleatoriamente em qual das 5 órbitas principais a lua vai estar. Como na obra original, toda vez que não estamos olhando (neste caso, a cada geração do canvas), a lua viaja e se prende aleatoriamente às coordenadas de um planeta diferente.\n\n## Conceitos Geométricos da Aula 3 Aplicados\nPara construir este sistema solar fugindo de coordenadas `X` e `Y` fixas (os \"números mágicos\"), utilizei intensamente as ferramentas matemáticas e geométricas ensinadas na semana:\n\n1. **Visão Isométrica com Transformações Afins (`scale`):** \n   Apliquei `scale(1, 0.4)` antes de desenhar as linhas das órbitas. Isso achata o eixo Y, transformando círculos perfeitos em elipses e criando uma ilusão 3D de perspectiva isométrica.\n\n2. **Coordenadas Polares Adaptadas:** \n   Para posicionar os planetas corretamente sobre as órbitas achatadas (sem deformar o desenho do planeta em si com o `scale`), calculei a posição polar de forma independente usando:\n   * `x = raio * cos(angulo)`\n   * `y = raio * sin(angulo) * 0.4`\n   O ângulo foi definido via `random(TWO_PI)`, garantindo o posicionamento procedural nas órbitas.\n\n3. **Isolamento de Estado com `push()` e `pop()`:** \n   Foram ferramentas cruciais para aninhar os sistemas de coordenadas. Ao desenhar sub-sistemas, um novo `push()` foi aberto após o `translate()` para o centro do planeta. Isso permitiu que a lua Attlerock orbitasse Timber Hearth em seu próprio eixo isométrico, ou que os Gêmeos orbitassem um centro gravitacional comum, sem que as rotações e translações afetassem a malha principal do sistema solar.\n\n4. **Translação Inicial:**\n   Utilizei `translate(width/2, height/2)` para levar a origem `(0,0)` para o centro da tela, facilitando a ancoragem do Sol e o cálculo radial de todas as órbitas.",
-      "hasThumb": true,
-      "files": [
-        "index.html",
-        "sketch.js",
-        "style.css",
-        "README.md",
-        "thumbnail.png"
-      ]
-    },
-    {
-      "folder": "Fusão de caracteres 2026 09 10 18 36 24",
-      "id": "fusao-de-caracteres-2026-09-10-18-36-24",
-      "name": "Fusão de caracteres 2026 09 10 18 36 24",
-      "origin": "native",
-      "lastModified": 1789140211331,
-      "title": "Fusão de caracteres",
-      "tags": [
-        "primitives",
-        "ai",
-        "gemini",
-        "generative"
-      ],
-      "collection": "artefato da semana/4",
-      "description": "Um sketch feito pelo ChatGPT que funde caracteres para formar novos.\n\nAutor: Joao Ricardo S. Magalhaes\n\nInspirações:https://www.instagram.com/p/C0MVCwcN8qi/\nA junção dos caracteres formando um caracter maior acabou dando a ideia de fusão.",
       "hasThumb": true,
       "files": [
         "index.html",
