@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Henrique Kezen">
+  <meta name="description" content="Museu das Sombras Desobedientes — três objetos comuns, três sombras com vontade própria. Um sketch interativo de Henrique Kezen.">
+  <meta name="theme-color" content="#f1eee5">
+  <title>Museu das Sombras Desobedientes · Henrique Kezen</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/p5@1.11.13/lib/p5.min.js"></script>
+  <script defer src="sketch.js?v=1"></script>
+</head>
+<body>
+  <main>
+    <header class="heading">
+      <div>
+        <p class="eyebrow">HENRIQUE KEZEN <span>·</span> ARTEFATO 05</p>
+        <h1>Museu das Sombras<br><em>Desobedientes</em></h1>
+      </div>
+      <p class="introduction">Três objetos comuns.<br>Nenhuma sombra confiável.</p>
+    </header>
+    <figure class="artwork">
+      <div id="sketch-container">
+        <p id="loading" role="status">Acendendo a luminária…</p>
+      </div>
+      <figcaption>
+        <span class="live"><i aria-hidden="true"></i><span id="motion-status" role="status">SOB OBSERVAÇÃO</span></span>
+        <span id="scene-hint">Mova a luz. Depois, fique imóvel por um instante.</span>
+      </figcaption>
+    </figure>
+    <div class="toolbar" aria-label="Controles do museu">
+      <p class="hint">O segredo aparece quando você para de procurar.</p>
+      <div class="buttons">
+        <button id="pause" type="button" aria-pressed="false" title="Pausar ou continuar (Espaço)">Pausar <kbd>␣</kbd></button>
+        <button id="restart" type="button" title="Recomeçar a cena (R)">Recomeçar <kbd>R</kbd></button>
+        <button id="save" class="save" type="button" title="Salvar a imagem em PNG (S)">Guardar imagem <span aria-hidden="true">↗</span></button>
+      </div>
+    </div>
+    <footer>
+      <p>Uma pequena exposição sobre o que acontece quando ninguém está olhando.</p>
+      <span>Luz, papel &amp; pequenas desobediências.</span>
+    </footer>
+  </main>
+  <noscript>Ative o JavaScript para visitar o museu.</noscript>
+</body>
+</html>

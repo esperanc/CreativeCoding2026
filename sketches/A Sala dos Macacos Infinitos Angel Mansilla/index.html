@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#151511">
+  <title>A Sala dos Macacos Infinitos</title>
+  <link rel="icon" href="data:,">
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; overflow: hidden; background: #11120f; }
+    canvas { display: block; touch-action: none; }
+    h1 { position: fixed; z-index: 1; top: 3.5vh; left: 3vw; margin: 0; max-width: 80vw; color: #e7d4a8; font: normal clamp(23px, 3vw, 43px)/1.08 Georgia, serif; letter-spacing: -.025em; pointer-events: none; }
+    footer { position: fixed; z-index: 1; bottom: 3vh; left: 0; width: 100%; text-align: center; color: #e7d4a8; font: 14px Georgia, serif; pointer-events: none; opacity: 0; }
+    .dicas { position: fixed; z-index: 2; top: 19vh; left: 50%; transform: translateX(-50%); width: max-content; max-width: 90vw; display: flex; align-items: center; padding: 20px 27px; border: 1px solid #cbb77f38; border-radius: 3px; background: #101a16e6; box-shadow: 0 12px 35px #00000035; color: #e7d4a8; font: 17px/1.4 Georgia, serif; pointer-events: none; opacity: 0; visibility: hidden; }
+    .dica { display: flex; align-items: center; gap: 12px; white-space: nowrap; }
+    .dica + .dica { margin-left: 25px; padding-left: 25px; border-left: 1px solid #cbb77f38; }
+    .dica svg { width: 24px; height: 30px; flex-shrink: 0; fill: none; stroke: currentColor; stroke-width: 1.3; stroke-linecap: round; stroke-linejoin: round; opacity: .8; }
+    body.pronto .dicas { animation: apresentarDicas 8s ease-in-out both; }
+    body.pronto footer { animation: lembrarFolhas 8s ease-in-out both; }
+    body.lendo h1, body.lendo footer, body.lendo .dicas { visibility: hidden !important; }
+    @keyframes apresentarDicas { 0% { opacity: 0; visibility: visible; } 12%, 78% { opacity: 1; visibility: visible; } 100% { opacity: 0; visibility: hidden; } }
+    @keyframes lembrarFolhas { 0%, 90% { opacity: 0; } 100% { opacity: 1; } }
+    @keyframes dicasSemTransicao { 0%, 99% { opacity: 1; visibility: visible; } 100% { opacity: 0; visibility: hidden; } }
+    @media (prefers-reduced-motion: reduce) { body.pronto .dicas { animation-name: dicasSemTransicao; } }
+    @media (max-width: 600px) {
+      h1 { top: 25px; left: 20px; font-size: 25px; } footer { font-size: 13px; }
+      .dicas { top: 17vh; flex-direction: column; align-items: flex-start; padding: 16px 23px; font-size: 16px; }
+      .dica + .dica { margin: 12px 0 0; padding: 12px 0 0; border-left: 0; border-top: 1px solid #cbb77f38; }
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.11.10/lib/p5.min.js"></script>
+</head>
+<body>
+  <h1>A Sala dos<br>Macacos Infinitos</h1>
+  <main id="scene"></main>
+  <aside class="dicas" role="note" aria-label="Como explorar a sala">
+    <div class="dica">
+      <svg viewBox="0 0 24 30" aria-hidden="true"><path d="M5 3h11l4 4v20H5z M16 3v5h4 M9 13h7 M9 17h7 M9 21h5"/></svg>
+      <span>Toque nas folhas</span>
+    </div>
+    <div class="dica">
+      <svg viewBox="0 0 24 30" aria-hidden="true"><rect x="5" y="2" width="14" height="26" rx="7"/><rect x="10" y="7" width="4" height="7" rx="2"/><path d="M12 2v3 M12 16v3"/></svg>
+      <span>Gire o scroll do mouse</span>
+    </div>
+  </aside>
+  <footer>Toque nas folhas</footer>
+  <script src="sketch.js"></script>
+</body>
+</html>

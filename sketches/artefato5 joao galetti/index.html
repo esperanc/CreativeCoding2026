@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ebru — um banho de tinta que se penteia sozinho</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    background: #181614;
+    color: #e3d9c7;
+  }
+  #sketch-holder { width: 100vw; height: 100vh; }
+  #sketch-holder canvas { display: block; }
+
+  .painel {
+    position: fixed;
+    left: 0; right: 0; bottom: 0;
+    padding: 10px 16px 12px;
+    background: linear-gradient(to top, rgba(24,22,20,0.92), rgba(24,22,20,0));
+    display: flex;
+    gap: 18px;
+    align-items: baseline;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 0.8rem;
+    color: #8c8272;
+    pointer-events: none;
+  }
+  .painel b { color: #ddd2bd; font-weight: normal; }
+  .painel a { color: #c08a5a; pointer-events: auto; }
+
+  hr { border: none; border-top: 1px solid #2e2a24; margin: 0; }
+
+  .doc {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 56px 22px 90px;
+    line-height: 1.66;
+  }
+  .doc h1 { font-size: 1.5rem; font-weight: normal; margin: 0 0 6px; }
+  .doc h2 { font-size: 1.1rem; margin: 40px 0 10px; font-weight: normal;
+            letter-spacing: 0.05em; color: #d8cdb8; }
+  .doc p, .doc li { color: #ab9f8c; margin: 0 0 14px; }
+  .doc ul { padding-left: 20px; }
+  .doc .assin { color: #6b6354; margin-top: 40px; font-size: 0.9rem; }
+  .doc em { color: #c9bda7; }
+
+  .formula {
+    background: #100e0c;
+    border-left: 2px solid #4a4136;
+    padding: 14px 18px;
+    font-family: "SFMono-Regular", Menlo, Consolas, monospace;
+    font-size: 0.76rem;
+    line-height: 1.85;
+    color: #bfb39c;
+    white-space: pre;
+    overflow-x: auto;
+  }
+
+  pre {
+    overflow: auto;
+    background: #100e0c;
+    border: 1px solid #2b261f;
+    border-radius: 3px;
+    padding: 18px;
+    font-size: 0.72rem;
+    line-height: 1.5;
+    color: #c3b79f;
+    max-height: 70vh;
+  }
+  code { font-family: "SFMono-Regular", Menlo, Consolas, monospace; }
+  summary { cursor: pointer; padding: 8px 0; letter-spacing: 0.05em; color: #d8cdb8; }
+</style>
+</head>
+<body>
+
+  <div id="sketch-holder"></div>
+
+  <div class="painel">
+    <span><b>clique</b> nova folha</span>
+    <span><b>arraste</b> passa o estilete</span>
+    <span><b>espaço</b> termina agora</span>
+    <span><b>s</b> salva em PNG</span>
+    <span><a href="#sobre">sobre este sketch &darr;</a></span>
+  </div>
+
+  <hr>
+
+  <div class="doc" id="sobre">
+    <h1>Ebru — um banho de tinta que se penteia sozinho</h1>
+    <p><em>João Galetti · Programação Criativa · Artefato 5</em></p>
+
+    <p>
+      Ebru é a marmorização turca: pinga-se tinta na superfície de uma água
+      engrossada com goma, trabalha-se o desenho com uma agulha e um pente, e
+      encosta-se o papel para tirar a folha. O que me interessou é que o artesão
+      <em>nunca desenha nada</em> — ele só desloca o que já está lá. Não existe
+      traço nem pincelada: existe uma mancha redonda e existem empurrões.
+    </p>
+    <p>
+      Cada gesto do artesão é aqui um mapa do plano, aplicado ao mesmo tempo a
+      todos os pontos de todas as gotas que já estão na bandeja. Nada neste
+      sketch é traçado: <em>toda curva que você vê é um círculo que foi
+      empurrado</em>.
+    </p>
+
+    <h2>Os quatro gestos</h2>
+    <div class="formula">gota(C, r)     P' = C + (P&minus;C)&middot;&radic;(1 + r&sup2;/|P&minus;C|&sup2;)
+estilete       P' = P + M&middot;u&middot;&alpha;^(d/&lambda;)            d = distância à reta do gesto
+arrasto        estilete pontual gaussiano, avançando passo a passo
+redemoinho     rotação em torno de C decaindo com exp(&minus;r&sup2;/2&sigma;&sup2;)</div>
+    <p>
+      A primeira é a que importa: é a solução exata de "abrir espaço para um
+      disco de raio <em>r</em> sem comprimir nada" — o ponto que estava a
+      distância <em>u</em> do centro vai para &radic;(u&sup2;+r&sup2;). O mapa
+      preserva área, e por isso a tinta antiga não some quando cai uma gota
+      nova: ela afina e vira um anel. A folha inteira é um arquivo
+      estratigráfico, com a ordem dos acontecimentos legível nas espessuras.
+    </p>
+
+    <h2>A gramática</h2>
+    <p>
+      O sketch não sorteia um desenho: sorteia uma receita, na ordem em que um
+      artesão trabalharia — <em>battal</em> (o chão de gotas, sem o qual não há
+      ebru), <em>gel-git</em> ("vai e vem"), <em>şal</em> ("xale"),
+      <em>taraklı</em> (o pente fino), <em>bülbül yuvası</em> ("ninho de
+      rouxinol") e <em>hatip</em> (a flor, pingada por cima do desenho pronto).
+      Em cerca de uma folha a cada oito a bandeja é japonesa em vez de turca, e
+      o que se faz é um <em>suminagashi</em>.
+    </p>
+    <p>
+      A descrição completa — incluindo o que deu trabalho e a lista de temas dos
+      artefatos 1 a 4 que este aqui evita de propósito — está no
+      <code>README.md</code>.
+    </p>
+
+    <h2>Código</h2>
+    <details open>
+      <summary>sketch.js</summary>
+      <pre><code id="fonte">carregando…</code></pre>
+    </details>
+
+    <p class="assin">João Galetti · Programação Criativa · Artefato 5</p>
+  </div>
+
+  <script src="sketch.js"></script>
+
+  <!-- Cópia do código para a página mostrar a fonte mesmo aberta do disco,
+       onde fetch() de arquivo local é bloqueado pelo navegador. -->
+  <script type="text/plain" id="fonte-embutida">// =============================================================================
+//  EBRU — um banho de tinta que se penteia sozinho
+//  João Galetti · Programação Criativa · Artefato 5
+//
+//  Neste sketch nada é traçado. Toda forma visível é um círculo — uma gota de
+//  tinta caída sobre água — que foi empurrado por outras gotas e arrastado por
+//  estiletes e pentes. É a técnica da ebru, a marmorização turca: o artesão não
+//  desenha, ele desloca. Cada gesto do artesão é aqui um mapa do plano aplicado
+//  a TODOS os pontos de TODAS as gotas que já estão no banho.
+//
+//    gota(C,r)   P' = C + (P−C)·√(1 + r²/|P−C|²)
+//                deslocamento exato de tinta incompressível por um disco.
+//                É a fórmula-chave: o que estava perto do centro não some,
+//                vira um anel fino. Daí a malha de células de borda nítida.
+//
+//    estilete    P' = P + M·u·α^(d/λ)        d = distância à reta do gesto
+//                campo de arrasto viscoso de uma ponta puxada pelo banho.
+//
+//    pente       n estiletes paralelos somados — a arcada aninhada clássica.
+//
+//    arrasto     estilete pontual gaussiano, avançado passo a passo ao longo
+//                de um caminho: é como se fazem as pétalas e os ninhos.
+//
+//    redemoinho  rotação em torno de C decaindo com exp(−r²/2σ²).
+//
+//  O sketch executa uma receita — a gramática tradicional da ebru: battal
+//  (zemin), gel-git, şal, taraklı, bülbül yuvası, hatip — uma operação de cada
+//  vez, mostrando o gesto que a produziu. Às vezes o banho é japonês em vez de
+//  turco e o que se faz é um suminagashi.
+//
+//    clique ............ nova folha
+//    arraste ........... passa o estilete à mão sobre a folha pronta
+//    barra de espaço ... termina a folha imediatamente
+//    s ................. salva a folha em PNG
+// =============================================================================
+
+'use strict';
+
+// ------------------------------------------------------------------ o banho
+const BW = 1400;            // largura do banho, em pixels internos
+const BH = 1000;            // altura do banho
+const ARESTA = 2.2;         // comprimento máximo de aresta de polígono (px)
+const ORCAMENTO = 195000;   // teto de vértices: acima disso, refina-se menos
+const RAMPA = 0.8;          // quanto a gota do fim do zemin é menor que a do começo
+const GESTO_VIDA = 26;      // duração do rastro do gesto, em quadros
+
+// paletas de pigmento — nomes turcos das receitas de cor tradicionais
+const PALETAS = [
+  { nome: 'lâcivert',  gloss: 'índigo e açafrão',
+    papel: [238, 230, 211],
+    cores: [[26, 52, 92, 1.0], [212, 150, 38, 0.9], [164, 48, 38, 0.8],
+            [58, 82, 74, 0.7], [244, 239, 226, 0.35]] },
+  { nome: 'kök boya',  gloss: 'garança e terra',
+    papel: [239, 227, 200],
+    cores: [[142, 47, 34, 1.0], [201, 117, 47, 0.9], [109, 107, 51, 0.8],
+            [46, 42, 36, 0.7], [240, 230, 208, 0.35]] },
+  { nome: 'çini',      gloss: 'azulejo de İznik',
+    papel: [244, 239, 226],
+    cores: [[26, 122, 122, 1.0], [39, 64, 139, 0.9], [184, 58, 43, 0.8],
+            [122, 154, 90, 0.6], [246, 242, 232, 0.35]] },
+  { nome: 'hazan',     gloss: 'outono',
+    papel: [236, 224, 198],
+    cores: [[176, 83, 31, 1.0], [215, 154, 43, 0.9], [122, 106, 46, 0.8],
+            [74, 53, 36, 0.7], [238, 228, 204, 0.3]] },
+  { nome: 'gece',      gloss: 'noite',
+    papel: [232, 226, 210],
+    cores: [[19, 22, 28, 1.0], [45, 58, 82, 0.9], [110, 123, 139, 0.7],
+            [185, 168, 135, 0.6], [236, 231, 218, 0.4]] },
+  { nome: 'gül',       gloss: 'rosa',
+    papel: [242, 234, 222],
+    cores: [[184, 68, 106, 1.0], [224, 163, 184, 0.7], [75, 59, 98, 0.85],
+            [125, 154, 139, 0.6], [246, 240, 231, 0.35]] }
+];
+
+// ------------------------------------------------------------------- estado
+let gotas = [];             // [{p:[x,y,x,y,...], c:[r,g,b]}] em ordem de queda
+let totalPts = 0;
+let limiteAresta = ARESTA;
+
+let banho;                  // p5.Graphics BW×BH — a folha pronta
+let textura;                // p5.Graphics BW×BH — grão do papel (multiplicado)
+let paleta, fundo;
+
+let fila = [];              // operações pendentes
+let fase = 'trabalhando';
+let espera = 0;
+let gestoAtivo = null;
+let etapaAtual = '';
+let precisaPintar = true;
+
+let semente = 0;
+let etapas = [];            // rótulos das etapas realizadas
+let totalFila = 1;          // tamanho da receita, para a barra de progresso
+let nomeFolha = null;       // {tr, pt}
+let retocada = false;
+
+let arrastoInicio = null;   // interação manual
+
+// ============================================================================
+//                                    p5
+// ============================================================================
+
+function setup() {
+  const c = createCanvas(windowWidth, windowHeight);
+  const berco = document.getElementById('sketch-holder');
+  if (berco) c.parent(berco);
+  pixelDensity(1);
+  banho = createGraphics(BW, BH);
+  banho.pixelDensity(1);
+  textura = criarTextura();
+  novaFolha(floor(Math.random() * 99999));
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}
+
+function draw() {
+  if (fase === 'trabalhando') {
+    if (espera > 0) {
+      espera--;
+    } else if (fila.length) {
+      const item = fila.shift();
+      item.acao();
+      refinarTodas();
+      gestoAtivo = item.gesto ? Object.assign({ vida: GESTO_VIDA }, item.gesto) : null;
+      espera = item.pausa;
+      etapaAtual = item.etapa;
+      precisaPintar = true;
+    } else {
+      fase = 'pronta';
+      etapaAtual = '';
+      gestoAtivo = null;
+    }
+  }
+
+  if (precisaPintar) { pintar(); precisaPintar = false; }
+  tela();
+  if (gestoAtivo && --gestoAtivo.vida <= 0) gestoAtivo = null;
+}
+
+function mousePressed() {
+  arrastoInicio = paraBanho(mouseX, mouseY);
+}
+
+function mouseReleased() {
+  if (!arrastoInicio) return;
+  const fim = paraBanho(mouseX, mouseY);
+  const d = dist(arrastoInicio.x, arrastoInicio.y, fim.x, fim.y);
+  if (fase === 'pronta' && d > 18) {
+    // o estilete do espectador: um arrasto de verdade sobre o banho parado
+    arrasto(arrastoInicio.x, arrastoInicio.y, fim.x, fim.y, BH * 0.055);
+    refinarTodas();
+    gestoAtivo = { vida: GESTO_VIDA, t: 'traco', x1: arrastoInicio.x, y1: arrastoInicio.y, x2: fim.x, y2: fim.y };
+    retocada = true;
+    precisaPintar = true;
+  } else if (d <= 18) {
+    novaFolha(floor(Math.random() * 99999));
+  }
+  arrastoInicio = null;
+}
+
+function keyPressed() {
+  if (key === 's' || key === 'S') {
+    save(banho, 'ebru-' + semente + '.png');
+  } else if (key === ' ') {
+    while (fila.length) { fila.shift().acao(); }
+    refinarTodas();
+    fase = 'pronta';
+    gestoAtivo = null;
+    etapaAtual = '';
+    precisaPintar = true;
+  }
+  return false;
+}
+
+// ============================================================================
+//                         OPERAÇÕES DO BANHO DE TINTA
+//   Toda operação é um mapa do plano aplicado a cada vértice de cada gota.
+// ============================================================================
+
+// --- a gota: deslocamento exato de tinta incompressível por um disco --------
+function gota(cx, cy, r, cor) {
+  const r2 = r * r;
+  // Este mapa preserva área: o que estava a distância u do centro vai para
+  // √(u²+r²). Logo a tinta antiga não encolhe — ela afina e vira anel.
+  for (let g = 0; g < gotas.length; g++) {
+    const p = gotas[g].p;
+    for (let i = 0; i < p.length; i += 2) {
+      const dx = p[i] - cx, dy = p[i + 1] - cy;
+      let m2 = dx * dx + dy * dy;
+      if (m2 < 1e-6) m2 = 1e-6;
+      const f = Math.sqrt(1 + r2 / m2);
+      p[i] = cx + dx * f;
+      p[i + 1] = cy + dy * f;
+    }
+  }
+
+  // a nova gota entra por cima, com a borda levemente irregular
+  const n = max(30, round(TWO_PI * r / 2.6));
+  const p = new Array(n * 2);
+  const sx = random(900), sy = random(900);
+  for (let i = 0; i < n; i++) {
+    const a = TWO_PI * i / n;
+    const rr = r * (0.955 + 0.09 * noise(sx + 0.8 * Math.cos(a), sy + 0.8 * Math.sin(a)));
+    p[2 * i] = cx + rr * Math.cos(a);
+    p[2 * i + 1] = cy + rr * Math.sin(a);
+  }
+  gotas.push({ p: p, c: cor });
+}
+
+// --- o estilete: arrasto ao longo de uma reta infinita ----------------------
+//  B = ponto da reta, M = direção do gesto (unitária), u = distância arrastada,
+//  alfa = nitidez (0 corta, 1 espalha), lambda = alcance lateral.
+function estilete(bx, by, mx, my, u, alfa, lambda) {
+  const nx = -my, ny = mx;
+  const k = Math.log(alfa) / lambda;
+  for (let g = 0; g < gotas.length; g++) {
+    const p = gotas[g].p;
+    for (let i = 0; i < p.length; i += 2) {
+      const d = Math.abs((p[i] - bx) * nx + (p[i + 1] - by) * ny);
+      const f = u * Math.exp(k * d);
+      p[i] += mx * f;
+      p[i + 1] += my * f;
+    }
+  }
+}
+
+// --- o estilete ondulado: a reta do gesto vira uma senoide (gel-git em şal) --
+function estileteOnda(bx, by, mx, my, u, alfa, lambda, amp, freq, fase0) {
+  const nx = -my, ny = mx;
+  const k = Math.log(alfa) / lambda;
+  for (let g = 0; g < gotas.length; g++) {
+    const p = gotas[g].p;
+    for (let i = 0; i < p.length; i += 2) {
+      const ex = p[i] - bx, ey = p[i + 1] - by;
+      const ao = ex * mx + ey * my;              // ao longo do gesto
+      const at = ex * nx + ey * ny;              // perpendicular ao gesto
+      const d = Math.abs(at - amp * Math.sin(freq * ao + fase0));
+      const f = u * Math.exp(k * d);
+      p[i] += mx * f;
+      p[i + 1] += my * f;
+    }
+  }
+}
+
+// --- o pente: n estiletes paralelos, aplicados de uma vez -------------------
+//  Só os dentes vizinhos importam (o campo decai rápido), então soma-se apenas
+//  uma janela de 4 dentes para cada lado — 9 exponenciais em vez de n.
+function pente(bx, by, mx, my, u, alfa, lambda, n, esp) {
+  const nx = -my, ny = mx;
+  const k = Math.log(alfa) / lambda;
+  const meio = (n - 1) / 2;
+  for (let g = 0; g < gotas.length; g++) {
+    const p = gotas[g].p;
+    for (let i = 0; i < p.length; i += 2) {
+      const s = (p[i] - bx) * nx + (p[i + 1] - by) * ny;   // coord. lateral
+      const c = Math.round(s / esp + meio);
+      let f = 0;
+      const lo = Math.max(0, c - 4), hi = Math.min(n - 1, c + 4);
+      for (let t = lo; t <= hi; t++) {
+        f += Math.exp(k * Math.abs(s - (t - meio) * esp));
+      }
+      p[i] += mx * f * u;
+      p[i + 1] += my * f * u;
+    }
+  }
+}
+
+// --- o arrasto: a ponta caminha de A a B puxando o banho consigo ------------
+function arrasto(x0, y0, x1, y1, sigma) {
+  const passos = max(4, min(24, round(dist(x0, y0, x1, y1) / (sigma * 0.5))));
+  const dx = (x1 - x0) / passos, dy = (y1 - y0) / passos;
+  const dois = 2 * sigma * sigma;
+  // o gesto é local: fora desta caixa o peso gaussiano é desprezível, e pular
+  // esses pontos de saída é o que mantém a coisa em tempo real
+  const m = sigma * 3.5;
+  const cx0 = min(x0, x1) - m, cx1 = max(x0, x1) + m;
+  const cy0 = min(y0, y1) - m, cy1 = max(y0, y1) + m;
+  for (let g = 0; g < gotas.length; g++) {
+    const p = gotas[g].p;
+    for (let i = 0; i < p.length; i += 2) {
+      let x = p[i], y = p[i + 1];
+      if (x < cx0 || x > cx1 || y < cy0 || y > cy1) continue;
+      for (let s = 0; s < passos; s++) {
+        const ex = x - (x0 + dx * s), ey = y - (y0 + dy * s);
+        const w = Math.exp(-(ex * ex + ey * ey) / dois);
+        if (w < 0.004) continue;
+        x += dx * w; y += dy * w;
+      }
+      p[i] = x; p[i + 1] = y;
+    }
+  }
+}
+
+// --- o redemoinho: o ninho do rouxinol --------------------------------------
+function redemoinho(cx, cy, giro, sigma) {
+  const dois = 2 * sigma * sigma;
+  const m = sigma * 3.5;
+  for (let g = 0; g < gotas.length; g++) {
+    const p = gotas[g].p;
+    for (let i = 0; i < p.length; i += 2) {
+      const ex = p[i] - cx, ey = p[i + 1] - cy;
+      if (ex < -m || ex > m || ey < -m || ey > m) continue;
+      const a = giro * Math.exp(-(ex * ex + ey * ey) / dois);
+      if (Math.abs(a) < 0.0015) continue;
+      const co = Math.cos(a), si = Math.sin(a);
+      p[i] = cx + ex * co - ey * si;
+      p[i + 1] = cy + ex * si + ey * co;
+    }
+  }
+}
+
+// ============================================================================
+//   REFINO: a tinta estica e comprime; a malha tem de acompanhar, senão as
+//   bordas viram polígonos. Insere vértice onde esticou, dizima onde juntou,
+//   descarta a tinta que passou da borda da bandeja.
+// ============================================================================
+
+function refinarTodas() {
+  const vivos = [];
+  totalPts = 0;
+  for (let g = 0; g < gotas.length; g++) {
+    const d = gotas[g];
+    if (foraDaBandeja(d.p)) continue;
+    refinar(d);
+    totalPts += d.p.length >> 1;
+    vivos.push(d);
+  }
+  gotas = vivos;
+  // orçamento: se a malha explodiu, afrouxa o refino das próximas operações
+  limiteAresta = totalPts > ORCAMENTO ? ARESTA * (totalPts / ORCAMENTO) : ARESTA;
+}
+
+function refinar(d) {
+  const p = d.p, n = p.length >> 1;
+  if (n < 3) return;
+  const out = [];
+  let lx = p[0], ly = p[1];
+  out.push(lx, ly);
+  for (let i = 1; i <= n; i++) {
+    const j = i % n;
+    const x = p[2 * j], y = p[2 * j + 1];
+    // longe da bandeja a precisão não importa: dizima com folga
+    const longe = (x < -BW || x > 2 * BW || y < -BH || y > 2 * BH);
+    const lim = longe ? limiteAresta * 14 : limiteAresta;
+    const L = Math.hypot(x - lx, y - ly);
+    if (L < lim * 0.42 && i < n) continue;
+    if (L > lim) {
+      const k = Math.min(Math.ceil(L / lim), 40);
+      for (let s = 1; s < k; s++) {
+        out.push(lx + (x - lx) * s / k, ly + (y - ly) * s / k);
+      }
+    }
+    if (i < n) out.push(x, y);
+    lx = x; ly = y;
+  }
+  if (out.length >= 8) d.p = out;
+}
+
+// verdadeiro só quando a gota inteira saiu da bandeja — uma gota que virou um
+// anel gigante ENVOLVE a bandeja e continua valendo como camada de fundo.
+function foraDaBandeja(p) {
+  let x0 = Infinity, y0 = Infinity, x1 = -Infinity, y1 = -Infinity;
+  for (let i = 0; i < p.length; i += 2) {
+    if (p[i] < x0) x0 = p[i];
+    if (p[i] > x1) x1 = p[i];
+    if (p[i + 1] < y0) y0 = p[i + 1];
+    if (p[i + 1] > y1) y1 = p[i + 1];
+  }
+  return (x1 < 0 || x0 > BW || y1 < 0 || y0 > BH);
+}
+
+// ============================================================================
+//                        A RECEITA — a gramática da ebru
+// ============================================================================
+
+// O gerador do p5 é uma congruência linear: sementes vizinhas devolvem
+// primeiros sorteios quase iguais — 101 e 102 escolheriam a mesma paleta.
+// Um hash inteiro antes de semear resolve.
+function espalhar(v) {
+  let h = v | 0;
+  h = Math.imul(h ^ (h >>> 16), 2246822507);
+  h = Math.imul(h ^ (h >>> 13), 3266489909);
+  return (h ^ (h >>> 16)) >>> 0;
+}
+
+function novaFolha(s) {
+  semente = s;
+  randomSeed(espalhar(s));
+  noiseSeed(espalhar(s ^ 0x9e3779b9));
+  gotas = [];
+  fila = [];
+  etapas = [];
+  totalPts = 0;
+  limiteAresta = ARESTA;
+  gestoAtivo = null;
+  retocada = false;
+  nomeFolha = null;
+  fase = 'trabalhando';
+  espera = 0;
+  precisaPintar = true;
+
+  paleta = random(PALETAS);
+  fundo = paleta.papel;
+
+  if (random() < 0.13) {
+    receitaSuminagashi();
+  } else {
+    receitaEbru();
+  }
+  totalFila = max(1, fila.length);
+  nomeFolha = batizar();
+}
+
+function enfileirar(etapa, pausa, gesto, acao) {
+  fila.push({ etapa: etapa, pausa: pausa, gesto: gesto, acao: acao });
+}
+
+// ---------------------------------------------------------------- ebru turca
+function receitaEbru() {
+  zemin();
+
+  const temGelGit = random() < 0.86;
+  let dir = random() < 0.5 ? 0 : HALF_PI;   // direção do último gesto
+
+  if (temGelGit) {
+    gelGit(dir, random() < 0.30);
+    etapas.push('gel-git');
+    if (random() < 0.62) {
+      dir += HALF_PI;
+      gelGit(dir, random() < 0.30);
+      etapas.push('şal');
+    }
+  }
+
+  if (random() < (temGelGit ? 0.55 : 0.95)) {
+    taraklı(dir + HALF_PI);
+    etapas.push('taraklı');
+  }
+
+  if (random() < 0.42) { ninhos(); etapas.push('bülbül yuvası'); }
+  if (random() < 0.40) { flores(); etapas.push('hatip'); }
+
+  if (etapas.length === 1) { taraklı(random() < 0.5 ? 0 : HALF_PI); etapas.push('taraklı'); }
+}
+
+// zemin / battal: o chão de gotas. Sem ele não há ebru — todo o resto é
+// deformação deste tapete. As posições são escolhidas por melhor-de-6 para
+// cobrir o banho com regularidade, que é o que a mão treinada faz.
+function zemin() {
+  // o saco de tinta: cada pigmento entra tantas vezes quanto pesa, e sai
+  // embaralhado — é assim que a mão alterna as cores sem cair num padrão
+  const saco = [];
+  for (const c of paleta.cores) {
+    const n = max(1, round(c[3] * 6));
+    for (let i = 0; i < n; i++) saco.push(c);
+  }
+  let baralho = shuffle(saco.slice());
+  let pos = 0;
+
+  // o fundo é a água limpa da bandeja: depois de algumas centenas de gotas
+  // sobra menos de 2% dela à vista, mas é ela que aparece nas frestas
+  fundo = paleta.papel;
+
+  const total = floor(random(450, 620));
+  const rBase = BH * random(0.062, 0.080);   // a primeira leva é graúda
+  const postos = [];
+  let lote = [];
+
+  for (let i = 0; i < total; i++) {
+    // melhor-de-6: a gota cai no ponto mais vazio que a mão encontrou
+    let mx = 0, my = 0, melhor = -1;
+    for (let t = 0; t < 6; t++) {
+      const x = random(-BW * 0.05, BW * 1.05);
+      const y = random(-BH * 0.05, BH * 1.05);
+      let dmin = Infinity;
+      for (let k = max(0, postos.length - 40); k < postos.length; k++) {
+        const dd = (postos[k][0] - x) ** 2 + (postos[k][1] - y) ** 2;
+        if (dd < dmin) dmin = dd;
+      }
+      if (dmin > melhor) { melhor = dmin; mx = x; my = y; }
+    }
+    postos.push([mx, my]);
+
+    if (pos >= baralho.length) { baralho = shuffle(saco.slice()); pos = 0; }
+    const cor = baralho[pos++];
+
+    // a leva vai afinando: gotas graúdas fecham a bandeja depressa, as miúdas
+    // depois pintam as células pequenas por cima — é a ordem da bancada, e é
+    // também o que fecha o chão rápido (cada gota cobre uma fração ~πr²/área
+    // do que ainda está descoberto)
+    const r = rBase * lerp(1, RAMPA, Math.pow(i / total, 0.75)) * random(0.80, 1.20);
+    lote.push([mx, my, r, cor]);
+
+    const tamLote = i < 40 ? 3 : (i < 140 ? 7 : 14);
+    if (lote.length >= tamLote || i === total - 1) {
+      const meu = lote;
+      enfileirar('zemin', 0,
+        { t: 'gotas', lista: meu.map(q => [q[0], q[1], q[2]]) },
+        () => { for (const q of meu) gota(q[0], q[1], q[2], q[3]); });
+      lote = [];
+    }
+  }
+  etapas.push('battal');
+}
+
+// gel-git: "vai e vem". Estiletes paralelos, alternando o sentido do arrasto.
+// O ângulo nunca é exatamente 0º ou 90º, o espaçamento nunca é exato e a força
+// de cada passada varia: é uma mão, não um plotter.
+function gelGit(base, ondulado) {
+  const ang = base + radians(random(-5, 5));
+  const mx = Math.cos(ang), my = Math.sin(ang);
+  const nx = -my, ny = mx;                        // eixo em que os traços se espalham
+  const extensao = BW * Math.abs(nx) + BH * Math.abs(ny);
+  const n = floor(random(7, 15));
+  const esp = extensao / n;
+  const u0 = esp * random(0.55, 1.05);
+  const alfa = random(0.22, 0.42);
+  const lambda = esp * random(0.40, 0.62);
+  const amp = ondulado ? esp * random(0.25, 0.55) : 0;
+  const freq = TWO_PI / (extensao / random(1.2, 2.6));
+  const f0 = random(TWO_PI);
+  const cx = BW / 2, cy = BH / 2;
+  const L = (BW + BH);
+
+  for (let i = 0; i < n; i++) {
+    const sentido = i % 2 === 0 ? 1 : -1;
+    const off = esp * (i - (n - 1) / 2) * random(0.94, 1.06);
+    const bx = cx + nx * off, by = cy + ny * off;
+    const u = u0 * random(0.85, 1.15) * sentido;
+    const gesto = { t: 'traco', x1: bx - mx * L * sentido, y1: by - my * L * sentido,
+                    x2: bx + mx * L * sentido, y2: by + my * L * sentido };
+    enfileirar(ondulado ? 'şal' : 'gel-git', 7, gesto, () => {
+      if (amp > 0) estileteOnda(bx, by, mx, my, u, alfa, lambda, amp, freq, f0);
+      else estilete(bx, by, mx, my, u, alfa, lambda);
+    });
+  }
+}
+
+// taraklı: o pente fino, passado de uma vez só, perpendicular ao último gesto.
+function taraklı(base) {
+  const ang = base + radians(random(-4, 4));
+  const mx = Math.cos(ang), my = Math.sin(ang);
+  const nx = -my, ny = mx;
+  const extensao = BW * Math.abs(nx) + BH * Math.abs(ny);
+  const n = floor(random(26, 56));
+  const esp = extensao / n;
+  const u = esp * random(0.40, 0.85) * (random() < 0.5 ? 1 : -1);
+  const alfa = random(0.26, 0.44);
+  const lambda = esp * random(0.45, 0.70);
+  const cx = BW / 2, cy = BH / 2;
+  const L = (BW + BH);
+
+  const linhas = [];
+  for (let i = 0; i < n; i++) {
+    const off = esp * (i - (n - 1) / 2);
+    const bx = cx + nx * off, by = cy + ny * off;
+    linhas.push([bx - mx * L, by - my * L, bx + mx * L, by + my * L]);
+  }
+  enfileirar('taraklı', 22, { t: 'pente', linhas: linhas }, () => {
+    pente(cx, cy, mx, my, u, alfa, lambda, n, esp);
+  });
+}
+
+// bülbül yuvası: ninho de rouxinol — a ponta gira em espiral sobre o banho.
+function ninhos() {
+  const n = floor(random(2, 8));
+  for (let i = 0; i < n; i++) {
+    const cx = random(BW * 0.14, BW * 0.86);
+    const cy = random(BH * 0.14, BH * 0.86);
+    const sigma = BH * random(0.07, 0.155);
+    const giro = random(1.1, 2.6) * (random() < 0.5 ? 1 : -1);
+    enfileirar('bülbül yuvası', 9, { t: 'espiral', x: cx, y: cy, r: sigma * 1.6, giro: giro },
+      () => redemoinho(cx, cy, giro, sigma));
+  }
+}
+
+// hatip: a flor. Gotas concêntricas no mesmo ponto formam os anéis; depois a
+// ponta é puxada do centro para fora, alternando, e os anéis viram pétalas.
+function flores() {
+  const n = floor(random(2, 5));
+  for (let f = 0; f < n; f++) {
+    const cx = random(BW * 0.12, BW * 0.88);
+    const cy = random(BH * 0.12, BH * 0.88);
+    const aneis = floor(random(6, 10));
+    const r0 = BH * random(0.030, 0.044);
+    const raio = r0 * Math.sqrt(aneis);          // até onde o anel externo vai
+    const emb = shuffle(paleta.cores.slice());
+
+    // gotas do MESMO tamanho no MESMO ponto: cada uma empurra a anterior para
+    // fora e a transforma num anel fino. É a construção real do hatip.
+    const rodada = [];
+    for (let i = 0; i < aneis; i++) {
+      rodada.push([emb[i % emb.length], r0 * random(0.94, 1.06)]);
+    }
+    enfileirar('hatip', 6, { t: 'gotas', lista: [[cx, cy, raio]] }, () => {
+      for (const a of rodada) gota(cx, cy, a[1], a[0]);
+    });
+
+    // a ponta é puxada do centro para fora e de fora para o centro, alternando:
+    // os anéis abrem em pétalas. O sigma estreito é o que dá a ponta.
+    const petalas = 2 * floor(random(2, 5));
+    const giro0 = random(TWO_PI);
+    const alcance = raio * random(0.80, 1.10);
+    for (let i = 0; i < petalas; i++) {
+      const a = giro0 + TWO_PI * i / petalas;
+      const dentro = i % 2 === 1;
+      const bx = cx + Math.cos(a) * alcance, by = cy + Math.sin(a) * alcance;
+      const x0 = dentro ? bx : cx, y0 = dentro ? by : cy;
+      const x1 = dentro ? cx : bx, y1 = dentro ? cy : by;
+      enfileirar('hatip', 3, { t: 'traco', x1: x0, y1: y0, x2: x1, y2: y1 },
+        () => arrasto(x0, y0, x1, y1, r0 * 0.34));
+    }
+  }
+}
+
+// ------------------------------------------------------- suminagashi japonês
+//  O outro banho: nada de pente. Gotas alternadas de tinta e de água com
+//  tensoativo, no mesmo lugar, empurram-se em anéis concêntricos finíssimos.
+//  Depois basta o sopro — aqui, um arrasto largo e fraco.
+function receitaSuminagashi() {
+  const tinta = random() < 0.5 ? [22, 22, 24] : [28, 40, 62];
+  const claro = [242, 237, 224];
+  paleta = { nome: 'sumi', gloss: 'tinta e água', papel: [240, 234, 220], cores: [tinta, claro] };
+  fundo = paleta.papel;
+  const nucleos = floor(random(2, 5));
+
+  for (let k = 0; k < nucleos; k++) {
+    let cx = BW * (k + random(0.2, 0.8)) / nucleos;
+    let cy = BH * random(0.22, 0.78);
+    const aneis = 2 * floor(random(11, 20));
+    // gotas do mesmo tamanho no mesmo ponto: o anel n fica em r0·√n. Para o
+    // anel externo chegar perto da borda, r0 = raio desejado / √n.
+    const r0 = (BH * random(0.40, 0.58)) / Math.sqrt(aneis * 0.62);
+    const deriva = r0 * random(0.04, 0.12);
+    const rumo = random(TWO_PI);
+    for (let i = 0; i < aneis; i++) {
+      cx += Math.cos(rumo + i * 0.05) * deriva;
+      cy += Math.sin(rumo + i * 0.05) * deriva;
+      // a gota de água é maior que a de tinta: por isso o traço de tinta fica
+      // fino e o vão entre traços fica largo, como no papel japonês
+      const escuro = i % 2 === 0;
+      const r = r0 * (escuro ? 0.52 : 1.0) * random(0.93, 1.07);
+      const cor = escuro ? tinta : claro;
+      const x = cx, y = cy;
+      enfileirar('suminagashi', i < 10 ? 2 : 1, { t: 'gotas', lista: [[x, y, r]] },
+        () => gota(x, y, r, cor));
+    }
+  }
+
+  // o sopro: não arrasta, ondula. Um campo largo e fraco que deixa os anéis
+  // com aquele contorno de veio de madeira.
+  const sopros = floor(random(2, 5));
+  for (let i = 0; i < sopros; i++) {
+    const a = random(TWO_PI);
+    const mx = Math.cos(a), my = Math.sin(a);
+    const cx = BW / 2 + random(-BW * 0.25, BW * 0.25);
+    const cy = BH / 2 + random(-BH * 0.25, BH * 0.25);
+    const u = BH * random(0.10, 0.24);
+    const lambda = BH * random(0.10, 0.30);
+    const amp = BH * random(0.08, 0.26);
+    const freq = TWO_PI / (BH * random(0.5, 1.3));
+    const f0 = random(TWO_PI);
+    enfileirar('sopro', 16,
+      { t: 'traco', x1: cx - mx * BH, y1: cy - my * BH, x2: cx + mx * BH, y2: cy + my * BH },
+      () => estileteOnda(cx, cy, mx, my, u, 0.45, lambda, amp, freq, f0));
+  }
+  etapas.push('suminagashi');
+}
+
+// dá nome à folha a partir da última etapa importante realizada
+function batizar() {
+  const dic = {
+    'battal': ['battal', 'pedra'],
+    'gel-git': ['gel-git', 'vai e vem'],
+    'şal': ['şal', 'xale'],
+    'taraklı': ['taraklı', 'penteado'],
+    'bülbül yuvası': ['bülbül yuvası', 'ninho de rouxinol'],
+    'hatip': ['hatip', 'flor do pregador'],
+    'suminagashi': ['墨流し suminagashi', 'tinta que corre']
+  };
+  const ordem = ['hatip', 'bülbül yuvası', 'taraklı', 'şal', 'gel-git', 'suminagashi', 'battal'];
+  for (const chave of ordem) {
+    if (etapas.indexOf(chave) >= 0) return { tr: dic[chave][0], pt: dic[chave][1] };
+  }
+  return { tr: 'battal', pt: 'pedra' };
+}
+
+// ============================================================================
+//                                 PINTURA
+// ============================================================================
+
+function pintar() {
+  banho.push();
+  banho.background(fundo[0], fundo[1], fundo[2]);
+  banho.noStroke();
+  for (let g = 0; g < gotas.length; g++) {
+    const d = gotas[g], p = d.p;
+    banho.fill(d.c[0], d.c[1], d.c[2]);
+    banho.beginShape();
+    for (let i = 0; i < p.length; i += 2) banho.vertex(p[i], p[i + 1]);
+    banho.endShape(CLOSE);
+  }
+  banho.pop();
+
+  banho.push();
+  banho.blendMode(MULTIPLY);
+  banho.image(textura, 0, 0);
+  banho.pop();
+}
+
+// grão do papel: fibra fina por hash + manchado de baixa frequência por ruído
+function criarTextura() {
+  const t = createGraphics(BW, BH);
+  t.pixelDensity(1);
+  t.loadPixels();
+  const px = t.pixels;
+  const bloco = 8, cols = Math.ceil(BW / bloco) + 1, rows = Math.ceil(BH / bloco) + 1;
+  const grosso = new Float32Array(cols * rows);
+  for (let j = 0; j < rows; j++) {
+    for (let i = 0; i < cols; i++) {
+      grosso[j * cols + i] = noise(i * 0.10, j * 0.10) * 2 - 1;
+    }
+  }
+  for (let y = 0; y < BH; y++) {
+    const fy = y / bloco, j0 = Math.floor(fy), ty = fy - j0;
+    for (let x = 0; x < BW; x++) {
+      const fx = x / bloco, i0 = Math.floor(fx), tx = fx - i0;
+      const a = grosso[j0 * cols + i0], b = grosso[j0 * cols + i0 + 1];
+      const c = grosso[(j0 + 1) * cols + i0], d = grosso[(j0 + 1) * cols + i0 + 1];
+      const m = (a * (1 - tx) + b * tx) * (1 - ty) + (c * (1 - tx) + d * tx) * ty;
+
+      let h = (x * 374761393 + y * 668265263) | 0;
+      h = (h ^ (h >> 13)) * 1274126177 | 0;
+      const fibra = ((h >> 8) & 255) / 255 - 0.5;
+
+      // leve escurecimento junto às bordas da folha
+      const bx = Math.min(x, BW - 1 - x) / (BW * 0.06);
+      const by = Math.min(y, BH - 1 - y) / (BH * 0.06);
+      const borda = 1 - 0.12 * (1 - Math.min(1, Math.min(bx, by)));
+
+      const v = (1 + m * 0.055 + fibra * 0.045) * borda;
+      const k = Math.max(0, Math.min(255, Math.round(255 * v)));
+      const o = 4 * (y * BW + x);
+      px[o] = k; px[o + 1] = k; px[o + 2] = k; px[o + 3] = 255;
+    }
+  }
+  t.updatePixels();
+  return t;
+}
+
+// --------------------------------------------------------- a tela do ateliê
+function escala() {
+  const mLat = min(64, width * 0.05);
+  const mTopo = min(52, height * 0.06);
+  const mBase = min(96, height * 0.12);
+  return min((width - 2 * mLat) / BW, (height - mTopo - mBase) / BH);
+}
+
+function origem() {
+  const e = escala();
+  const mTopo = min(52, height * 0.06);
+  const mBase = min(96, height * 0.12);
+  return {
+    x: (width - BW * e) / 2,
+    y: mTopo + (height - mTopo - mBase - BH * e) / 2,
+    e: e
+  };
+}
+
+function paraBanho(sx, sy) {
+  const o = origem();
+  return { x: (sx - o.x) / o.e, y: (sy - o.y) / o.e };
+}
+
+function tela() {
+  background(24, 22, 20);
+  // luz difusa sobre a mesa
+  noStroke();
+  for (let i = 6; i >= 1; i--) {
+    fill(38, 35, 31, 12);
+    ellipse(width / 2, height * 0.45, width * (0.5 + i * 0.16), height * (0.6 + i * 0.16));
+  }
+
+  const o = origem();
+  drawingContext.save();
+  drawingContext.shadowColor = 'rgba(0,0,0,0.55)';
+  drawingContext.shadowBlur = 38 * (o.e < 1 ? 1 : o.e);
+  drawingContext.shadowOffsetY = 14;
+  image(banho, o.x, o.y, BW * o.e, BH * o.e);
+  drawingContext.restore();
+
+  desenharGesto(o);
+  legenda(o);
+}
+
+function desenharGesto(o) {
+  if (!gestoAtivo) return;
+  const g = gestoAtivo;
+  const a = (g.vida / GESTO_VIDA);
+  push();
+  // o gesto só existe dentro da bandeja: os traços passam longe das bordas e
+  // sem esta tesoura eles riscariam a mesa
+  drawingContext.save();
+  drawingContext.beginPath();
+  drawingContext.rect(o.x, o.y, BW * o.e, BH * o.e);
+  drawingContext.clip();
+  translate(o.x, o.y);
+  scale(o.e);
+  noFill();
+  stroke(255, 250, 238, 200 * a * a);
+  strokeWeight(1.6 / o.e);
+  if (g.t === 'traco') {
+    line(g.x1, g.y1, g.x2, g.y2);
+  } else if (g.t === 'pente') {
+    strokeWeight(1.0 / o.e);
+    stroke(255, 250, 238, 150 * a * a);
+    for (const l of g.linhas) line(l[0], l[1], l[2], l[3]);
+  } else if (g.t === 'gotas') {
+    for (const q of g.lista) {
+      const r = q[2] * (1 + 1.6 * (1 - a));
+      stroke(255, 250, 238, 190 * a * a);
+      ellipse(q[0], q[1], r * 2);
+    }
+  } else if (g.t === 'espiral') {
+    strokeWeight(1.3 / o.e);
+    beginShape();
+    for (let i = 0; i <= 90; i++) {
+      const t = i / 90;
+      const ang = g.giro * 2.4 * t;
+      const rr = g.r * t;
+      vertex(g.x + Math.cos(ang) * rr, g.y + Math.sin(ang) * rr);
+    }
+    endShape();
+  }
+  drawingContext.restore();
+  pop();
+}
+
+function legenda(o) {
+  const base = o.y + BH * o.e;
+  textFont('Georgia, "Times New Roman", serif');
+  noStroke();
+
+  if (fase === 'trabalhando') {
+    const feito = 1 - fila.length / max(1, totalFila);
+    fill(150, 140, 124);
+    textAlign(LEFT, TOP);
+    textSize(13);
+    text(etapaAtual, o.x, base + 20);
+    // fio de progresso
+    stroke(60, 55, 48);
+    strokeWeight(1);
+    line(o.x, base + 44, o.x + BW * o.e, base + 44);
+    stroke(150, 140, 124);
+    line(o.x, base + 44, o.x + BW * o.e * feito, base + 44);
+    noStroke();
+  } else {
+    fill(226, 217, 199);
+    textAlign(LEFT, TOP);
+    textSize(16);
+    text(nomeFolha.tr, o.x, base + 18);
+    fill(140, 130, 116);
+    textSize(12.5);
+    text(nomeFolha.pt + (retocada ? ' · retocada à mão' : ''), o.x, base + 42);
+
+    textAlign(RIGHT, TOP);
+    fill(140, 130, 116);
+    textSize(12.5);
+    text(paleta.nome + ' · ' + paleta.gloss, o.x + BW * o.e, base + 18);
+    fill(96, 89, 79);
+    text('nº ' + nf(semente, 5) + '   ·   clique: nova folha   ·   arraste: estilete   ·   s: salvar',
+      o.x + BW * o.e, base + 42);
+  }
+}
+</script>
+  <script>
+    (function () {
+      const alvo = document.getElementById('fonte');
+      fetch('sketch.js')
+        .then(function (r) { if (!r.ok) throw 0; return r.text(); })
+        .then(function (t) { alvo.textContent = t; })
+        .catch(function () {
+          alvo.textContent = document.getElementById('fonte-embutida').textContent.trim();
+        });
+    })();
+  </script>
+</body>
+</html>

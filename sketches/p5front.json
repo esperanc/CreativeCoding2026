@@ -1,14 +1,684 @@
 {
   "format": "p5front-export",
   "version": 1,
-  "createdAt": "2026-09-13T23:27:03.574Z",
+  "createdAt": "2026-09-20T20:20:22.277Z",
   "projects": [
+    {
+      "folder": "MariaEduardaAraujo Artefato 5",
+      "id": "mariaeduardaaraujo-artefato-5",
+      "name": "MariaEduardaAraujo Artefato 5",
+      "origin": "native",
+      "lastModified": 1789935620353,
+      "title": "",
+      "tags": [],
+      "collection": "artefato da semana/5",
+      "description": "# Artefato 5: O Trio de Ouro e a Lógica Anti-Colisão\n\n**Autora:** Maria Eduarda Araújo  \n**DRE:** 119054059\n\n## Sobre o Projeto\nEste quinto artefato é uma cena complexa em p5.js, concebida para criar uma atmosfera mágica do universo *Harry Potter*. O projeto conta com o Trio de Ouro, o Chapéu Seletor, castiçais na parede de tijolos e uma janela colossal que exibe um céu diurno onde *mini-bruxos* voam em vassouras com movimento *parallax*. O cenário é construído sem o uso das funções complexas de curva vetorial, empregando vértices retos para driblar limitações estruturais da plataforma.\n\nNesse trabalho tentei fazer a tal \"Inspiração Negativa\": garantir que o cenário não se assemelhasse aos outros artefatos da galeria, possuindo um layout imprevisível e mutável a cada execução.\n\n## Estratégia de \"Loteamento com Embaralhamento\"\nPara garantir que fosse algo que não fiz antes desenvolvi um sistema inteligente de distribuição espacial. \nO algoritmo implementa um **Loteamento Geométrico Rigoroso**:\n* **Lotes do Chão:** O eixo X inferior foi dividido em zonas seguras (ex: Esquerda, Meio-Esquerda, Meio-Direita, Extrema Direita)[cite: 10]. A cada execução (no `setup()`), a função `shuffle()` embaralha quem irá ocupar qual vaga. Deste modo, o Vaso de Planta, a Vassoura Mágica, o Trio de Ouro e o Chapéu Seletor trocam de posição dinamicamente a cada *refresh*, mas as suas caixas delimitadoras nunca se intercetam.\n* **Lotes da Parede:** O mesmo princípio é aplicado à parede[cite: 10]. A gigantesca janela e o voo do parapeito disputam terrenos pré-definidos à esquerda e à direita do ecrã, garantindo que o teto se mantenha estruturado[cite: 10].\n\n## Efeitos Visuais e Animação\nMesmo com as coordenadas base a serem definidas aleatoriamente no arranque (`setup`)[cite: 11], todos os elementos permanecem perfeitamente vivos durante o ciclo de atualização da tela (`draw()`). Utilizando a função trigonométrica `sin()` atrelada ao `frameCount`, o cenário está em contínuo movimento: a poeira solar flutua, a coruja respira no parapeito da janela, o Chapéu Seletor mexe a boca e as chamas dos castiçais tremeluzem na parede de pedra, criando uma cena vibrante e imersiva.",
+      "hasThumb": true,
+      "files": [
+        "thumbnail.png",
+        "README.md",
+        "index.html",
+        "sketch.js",
+        "style.css"
+      ]
+    },
+    {
+      "folder": "crievocemesmo(1)",
+      "id": "crievocemesmo1",
+      "name": "crievocemesmo(1)",
+      "origin": "native",
+      "lastModified": 1789934530109,
+      "title": "crievocemesmo",
+      "tags": [
+        "draw",
+        "ia",
+        "RGD",
+        "rainbow"
+      ],
+      "collection": "artefato da semana/5",
+      "description": "Um quadro de desenho interativo feito com auxilio do ChatGPT\n\nDiferencial: Não vi nenhum com uma interatividade focada no mouse e achei um diferencial\n\nAutor: Ysabelle Estevão de Oliveira",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "Artefact5 Yasmine",
+      "id": "artefact5-yasmine",
+      "name": "Artefact5 Yasmine",
+      "origin": "native",
+      "lastModified": 1789934420217,
+      "title": "Violin Strings",
+      "tags": [
+        "p5js",
+        "generative",
+        "interactive",
+        "noise",
+        "music",
+        "violin",
+        "physics"
+      ],
+      "collection": "artefato da semana/5",
+      "description": "# Violin Strings\n\nA visualisation of how the strings of a violin vibrate when they are bowed.\n\nI play the violin, so I wanted to explore something I know from playing the\ninstrument: a string does not simply move as one smooth wave. Its vibration\nis made up of several harmonics, or overtones, which combine to create the\nsound we hear.\n\nThe four horizontal lines represent the four violin strings (G, D, A and E).\nEach string is animated as a combination of several harmonics. Moving the\nmouse left and right changes the simulated position of the bow along the\nstrings, which changes which harmonics are excited. Moving the mouse up and\ndown changes the energy of the vibration.\n\nThe small irregularities in the movement are created with Perlin noise.\nRather than adding completely random movement, the noise produces a more\ncoherent and organic variation inspired by the tiny irregularities produced\nby the bow hair gripping and releasing the string.\n\n## Why this idea\n\nI have played the violin for more than 10 years and I wanted to\nbuild from something I actually understand.\nA bowed string is genuinely governed by position: the excitation of harmonic \n*k* at bow position *u* follows `abs(sin(k * PI * u))`, which is exactly \nzero at that harmonic's nodes. Bow exactly at the midpoint and every even \nharmonic vanishes; that's real acoustics, the same principle behind *sul ponticello* \n(bowing near the bridge for a bright, harmonic-rich tone) versus bowing over \nthe fingerboard (a warmer, fundamental-heavy tone).\n\n## How it works\n\n- Position -> harmonic content : the bow's horizontal position\nis mapped to a value `bowU` between 0 and 1 along each string; each\nharmonic's amplitude is scaled by `abs(sin(k * PI * bowU))`, the physical\nnode/antinode rule.\n- Noise -> organic imperfection : instead of a perfectly clean\nsine wave, each harmonic on each string reads its own slice of Perlin\nnoise (`noise(k, stringIndex, time)`) to drift its amplitude and phase\nslightly over time -- coherent, breathing irregularity rather than\n`random()` static.\n- Smoothing: `lerp()` eases the bow's tracked position and energy toward\nthe mouse instead of snapping instantly, so the interaction feels weighted\nrather than jumpy.\n- Layout: string positions and margins are computed as proportions of\n`windowWidth`/`windowHeight`, so the composition adapts to any window size.\n- Drawing uses `beginShape()`/`vertex()` for each string's curve, with\n`push()`/`pop()` kept implicit through function-local state, and\n`stroke()`/`fill()` for the warm, instrument-wood colour palette.\n\n## Interaction\n\n- Move the mouse left/right : changes where the bow touches the strings, which changes which harmonics dominate.\n- Move the mouse up/down : changes bow energy (pressure), from a faint touch to a fully driven string.\n\n## AI usage\n\nThis sketch was built with the help of Claude. I had the idea of the concept\nto represent my own instrument. Claude proposed the harmonic excitation by\nbow position model.\n\nAuthor: Yasmine",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "README.md",
+        "sketch.js",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "Micelio",
+      "id": "micelio",
+      "name": "Micelio",
+      "origin": "native",
+      "lastModified": 1789934298885,
+      "title": "",
+      "tags": [],
+      "collection": "artefato da semana/5",
+      "description": "# Micélio\n\n**Autor:** Victor Hugo Figueiredo Pereira da Silva\n\n**Artefato da semana 05** — tema da aula 5: *Agentes*.\n\n![thumbnail](thumbnail.png)\n\n## Ideia do trabalho\n\nUma colônia de fungos crescendo dentro de um bloco de substrato, **filmada por\numa lente macro**. Os fios da colônia (as hifas) são agentes: cada ponta é um\nbichinho que anda, entorta, se ramifica e morre quando esbarra no rastro de\nalguém. O que a gente vê na tela é só o rastro que eles deixaram.\n\nMas o assunto do sketch não é o desenho — é a **óptica**. A pergunta que eu quis\nresponder foi: *dá para fazer uma imagem parecer funda sem usar ponto de fuga?*\n\nOlhando os artefatos das semanas 1 a 4 da turma, quase toda impressão de\nprofundidade que apareceu veio do mesmo lugar: **linhas convergindo para um\nponto de fuga** — estradas, túneis, ruas entre prédios, espirais e mandalas\npuxando para o centro. É um recurso de desenho. Aqui eu quis o outro caminho, o\nde **fotografia**: a cena tem coordenadas 3D de verdade e uma câmera virtual\nolhando para elas, e a profundidade sai dos cinco sinais que um fotógrafo usa\npara dizer \"isto está perto e aquilo está longe\".\n\n## Os cinco sinais de profundidade (a parte técnica do trabalho)\n\nNada na imagem é achatado de propósito: cada hifa tem `x`, `y` **e `z`**, e o\nque chega à tela passa por uma câmera.\n\n**1. Perspectiva.** A câmera fica a uma distância `distCamera` do centro do\nbloco. Um ponto a uma distância `d` da lente é desenhado com escala\n`s = f / d`: o que está no fundo encolhe, o que está na frente cresce. A\nespessura do fio também é multiplicada por `s` — não adianta encolher a posição\ne manter o traço grosso.\n\n**2. Oclusão.** Todos os pedaços de filamento, esporângios e esporos soltos são\n**ordenados pela distância** e desenhados do mais longe para o mais perto\n(algoritmo do pintor). Quem está na frente tapa quem está atrás. Esse é o sinal\nque mais convence o olho de que existe uma coisa na frente da outra.\n\n**3. Perspectiva aérea.** O que está longe tende à cor do \"ar\" entre a lente e\no objeto (`corNevoa`): perde contraste e muda de temperatura. Nas paletas\nescuras o fundo esfria e some no preto; na paleta clara, ao contrário, o que\nestá longe **clareia** até desaparecer no papel. A regra física é a mesma, só\nmuda a cor do ar.\n\n**4. Desfoque — o recurso principal.** Só **um plano de distância** fica nítido;\no resto borra. O quanto borra vem da fórmula da lente fina, o *círculo de\nconfusão*:\n\n```\nc = A · f · | 1/dFoco − 1/d |\n```\n\nonde `A` é o diâmetro do diafragma, `f` a distância focal, `dFoco` a distância\ndo plano nítido e `d` a distância do objeto. Um ponto a uma distância `d ≠ dFoco`\nnão vira um ponto na imagem: vira um **disco** de diâmetro `c`. Repare no termo\n`1/d` — é por isso que o que está na frente do foco borra muito mais depressa do\nque o que está atrás dele, exatamente como numa foto de verdade.\n\nDuas consequências que eu tive que programar à mão:\n\n- **conservação de tinta.** Borrar espalha a *mesma* tinta numa área maior, então\n  o traço desfocado tem de ficar proporcionalmente mais fraco: um fio ganha\n  `alfa ∝ nítido / (nítido + c)`, e um ponto de luz, que é um disco e não uma\n  linha, ganha `alfa ∝ (nítido / raio)²`. Sem isso o desfoque vira só \"linha\n  mais grossa\", e não desfoque.\n- **bokeh.** Um ponto de luz bem fora de foco não vira um borrão degradê, vira um\n  **disco com a borda mais clara que o miolo** — é o formato do diafragma\n  aparecendo. Os esporângios (as cabecinhas no fim das hifas) e os esporos\n  soltos são desenhados assim.\n\n**5. Paralaxe.** A câmera deriva de um lado para o outro, devagar. O que está\nperto atravessa a tela mais rápido do que o que está longe. É o único sinal que\nprecisa de movimento — e é o que mata qualquer dúvida de que a cena é um volume.\n\n### O mouse é o anel de foco\n\nMexer o mouse **de cima para baixo** puxa o plano de foco do fundo até a frente\nda colônia, como girar o anel de foco de uma lente. Essa é a interação que prova\nque a cena tem volume: é a mesma colônia, mas coisas diferentes ficam nítidas em\nmomentos diferentes. Com o mouse parado a lente \"respira\" sozinha, indo e\nvoltando. **Mexer o mouse na horizontal** empurra a paralaxe para o lado.\n\n## A parte de agentes (o requisito da semana)\n\nA estrutura toda é o rastro de agentes, na sequência que foi vista na aula 5:\n\n| Na aula 5 | Neste sketch |\n| --- | --- |\n| agente ingênuo: anda e deposita rastro | `Ponta.avancar()` dá um passo e empurra um ponto no filamento |\n| a direção vem do ruído | dois valores de `noise()` viram desvios nos dois eixos **perpendiculares à direção atual** (base ortonormal montada com produto vetorial), e não nos eixos do mundo |\n| agente esperto: **lê o próprio rastro** antes de andar | uma grade de ocupação, agora em **3D** (`Uint8Array` de 52³ células): a ponta consulta a célula de destino antes de pisar nela |\n| o que fazer quando não dá para andar | tenta até 5 direções alternativas, cada uma com desvio maior; se todas estiverem ocupadas, **morre ali** |\n| agregação / empacotamento | a célula da grade é o **espaço mínimo entre dois fios**: é isso que abre os vãos escuros por onde se enxergam as camadas de trás |\n| um agente vira dois | ramificação com probabilidade proporcional à espessura, até 9 gerações |\n| tudo em `class` | `class Ponta`, com `this.x/y/z`, `this.dx/dy/dz`, `this.esp`, `this.geracao` |\n\nTrês detalhes que só apareceram depois de rodar e olhar:\n\n- **o passo não é o tamanho da célula.** No começo eu tinha amarrado os dois, e\n  isso quebrava dos dois lados: grade fina fazia os fios se encostarem e a\n  colônia virava um feltro sólido; grade grossa fazia o passo ficar longo e as\n  hifas morriam na borda antes de conseguir ramificar. Hoje a **célula** mede o\n  espaço entre hifas diferentes (grossa) e o **passo** mede o quanto a curva é\n  lisa (curto). O que impede a hifa de tropeçar no próprio rastro é uma listinha\n  das últimas 6 células que **ela mesma** marcou.\n- **a colônia cresce em camadas.** O componente `z` da direção é amassado, então\n  cada hifa fica quase dentro da sua própria fatia de profundidade — como o\n  micélio real, que se espalha sobre interfaces e não como uma bola homogênea.\n  Isso serve à imagem duas vezes: dá a leitura de vários planos, um atrás do\n  outro, e deixa o desfoque de cada filamento ser honestamente constante do\n  começo ao fim dele.\n- **cada inóculo tem alcance limitado.** Sem isso todas as fatias preenchiam o\n  quadro inteiro e, somadas, viravam uma bola de algodão uniforme. Com alcance\n  limitado cada fatia ocupa só um pedaço, e sobra vão escuro. **Sem vão não há\n  profundidade** — não adianta ter camadas se não dá para ver entre elas.\n\n## O que a semente sorteia\n\nComo numa coleção de arte generativa, uma única semente decide a obra inteira:\n\n- a **paleta**, entre três — `placa de Petri` (papel claro, hifa de tinta sépia,\n  esporo terracota), `bioluminescência` (fundo azul-petróleo, hifa verde-água,\n  esporo lilás e ciano) e `ferrugem` (fundo marrom, hifa cobre e palha, névoa\n  verde-oliva);\n- quantos inóculos, em que fatias de profundidade e com que alcance cada um\n  cresce;\n- o tom de cada mancha, a espessura das hifas primárias e onde nascem os\n  esporângios;\n- a nuvem de esporos soltos, inclusive os que ficam **mais perto da lente do que\n  o próprio bloco** — são eles que viram os discos enormes e quase transparentes\n  na frente de tudo, o cartão de visitas de uma foto macro.\n\nUm detalhe chato que precisou de conserto: o gerador do p5 é um LCG simples e o\n**primeiro** valor devolvido depois de `randomSeed()` fica correlacionado com a\nsemente. Como o primeiro sorteio do sketch era justamente a paleta, todas as\nsementes que eu testei caíam na mesma cor. A função `embaralhar()` queima 12\nrodadas antes de começar. (Foi exatamente o mesmo problema do artefato 04.)\n\n## Tamanho e responsividade\n\nO canvas ocupa a janela inteira e todas as medidas do mundo são proporcionais ao\nmenor lado dela. Redimensionar a janela **não** recomeça o crescimento: a colônia\nvive em coordenadas do mundo, então mudar a janela só muda o enquadramento da\ncâmera. A câmera também se reenquadra sozinha no centro de massa da colônia\nenquanto ela cresce — sem isso, metade das sementes nascia encostada na borda.\n\n## Controles\n\n| tecla / gesto | o que faz |\n| --- | --- |\n| mouse ↕ | plano de foco (o anel de foco da lente) |\n| mouse ↔ | paralaxe lateral da câmera |\n| clique ou `N` | nova colônia (nova semente, nova paleta) |\n| `ESPAÇO` | termina de crescer na hora |\n| `A` | abre / fecha o diafragma (mais ou menos desfoque) |\n| `P` | pausa / retoma a deriva da câmera |\n| `H` | mostra / esconde a legenda |\n| `S` | salva a imagem em PNG |\n\n## Como executar\n\n1. Abra o arquivo `index.html` no navegador. Ele carrega **apenas** a biblioteca\n   p5.js pelo CDN (sem p5.sound e sem cópia local) e o `sketch.js`. **Ou**\n2. cole o conteúdo de `sketch.js` no [editor.p5js.org](https://editor.p5js.org)\n   e rode (▶).\n\n## Prompt utilizado (Claude Code, modelo Opus 5)\n\nDesta vez eu não escrevi um pedido curto: escrevi o plano da imagem inteiro\nantes de pedir o código, porque o enunciado avisa que repetir tema de semana\nanterior custa ponto e eu queria fechar o assunto antes de começar.\n\n> Antes de escrever qualquer linha, entre no\n> <https://esperanc.github.io/CreativeCoding2026/sketches/> e leia **tudo** que\n> já foi postado nas pastas \"Artefato da Semana\" 1 a 4 — título, descrição e\n> imagem de cada um. Eu preciso de \"inspiração negativa\": quero fazer algo que\n> não se pareça com nada que já está lá. Repare especialmente em como esse\n> pessoal criou profundidade, porque é disso que eu quero tratar.\n>\n> Minha ideia é a seguinte. Quero uma **colônia de fungos crescendo dentro de um\n> bloco de substrato, vista por uma lente macro**. Os fios da colônia são os\n> agentes da aula 5: cada ponta de hifa anda, entorta seguindo ruído, se\n> ramifica, lê o próprio rastro numa grade de ocupação e morre quando não tem\n> mais para onde ir. O desenho é só o rastro deles.\n>\n> Mas o ponto do trabalho não é o fungo, é a **óptica**. Eu quero uma imagem que\n> dê impressão de profundidade **sem ponto de fuga** — nada de estrada, túnel,\n> rua entre prédios ou espiral puxando para o centro, que é o que todo mundo já\n> fez. Quero que a profundidade venha de imitar uma câmera de verdade:\n>\n> 1. a cena tem coordenadas 3D e uma câmera projeta com escala `f / distância`,\n>    inclusive a espessura do traço;\n> 2. tudo é ordenado por distância e desenhado do fundo para a frente, para o que\n>    está na frente tapar o que está atrás;\n> 3. o que está longe perde contraste e tende à cor do ar;\n> 4. **só um plano de distância fica nítido** — o resto borra pela fórmula do\n>    círculo de confusão da lente fina, `c = A·f·|1/dFoco − 1/d|`. E borrar tem\n>    que deixar o traço mais fraco na mesma proporção em que o alarga, senão não\n>    parece desfoque, parece linha grossa. Os pontos de luz bem fora de foco têm\n>    que virar discos de bokeh, com a borda mais clara que o miolo;\n> 5. a câmera deriva devagar de lado, para dar paralaxe.\n>\n> E quero uma interação que prove que a cena é um volume: **o mouse na vertical é\n> o anel de foco**. Arrastar de cima para baixo puxa o plano nítido do fundo até\n> a frente da colônia, e coisas diferentes ficam nítidas em momentos diferentes.\n> Com o mouse parado, a lente respira sozinha.\n>\n> Canvas do tamanho da janela, tudo proporcional ao menor lado, uma única semente\n> decidindo a obra inteira, e código em português comentado de um jeito que\n> qualquer pessoa da turma entenda. Escreva, rode, **olhe o resultado** e ajuste\n> até a imagem realmente ter fundo — não me entregue o primeiro que compilar.\n\nDepois disso o ajuste foi todo por renderização de teste, olhando e voltando ao\ncódigo. As correções que mais mudaram o resultado estão contadas ao longo deste\nREADME: a junta entre pedaços de filamento que virava um colar de contas, o\npasso amarrado ao tamanho da célula, a colônia que virava bola de algodão, o\nenquadramento que nascia torto e a paleta que sempre saía igual. Num segundo\nmomento pedi ainda:\n\n> Quero mudança de cor, e quero que a paleta seja sorteada entre as gerações dos\n> sketches — cada colônia nova nasce com uma cor diferente.\n\n## Arquivos deste pacote\n\n- `sketch.js` — o sketch p5.js (comentado em português).\n- `index.html` — página para rodar o sketch fora do editor.\n- `thumbnail.png` — uma das imagens geradas pelo sketch (paleta *placa de Petri*).\n- `README.md` — este arquivo.",
+      "hasThumb": true,
+      "files": [
+        "thumbnail.png",
+        "index.html",
+        "README.md",
+        "sketch.js"
+      ]
+    },
+    {
+      "folder": "cena minecraft sem quad",
+      "id": "cena-minecraft-sem-quad",
+      "name": "cena minecraft sem quad",
+      "origin": "native",
+      "lastModified": 1789934144851,
+      "title": "cena minecraft sem quad",
+      "tags": [
+        "minecraft"
+      ],
+      "collection": "artefato da semana/5",
+      "description": "Autor: Thomas Cardoso de Miranda\n\ncomo a proposta era ser diferente e ninguém fez de minecraft ainda, escolhi fazer, mas para ser mais diferente ainda, como minecraft é um jogo só de quadrados, usei tudo menos quad para fazer",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "thumbnail.png",
+        "README.md"
+      ]
+    },
+    {
+      "folder": "ultrakill",
+      "id": "ultrakill",
+      "name": "ultrakill",
+      "origin": "native",
+      "lastModified": 1789933996449,
+      "title": "ULTRAKILL",
+      "tags": [],
+      "collection": "artefato da semana/5",
+      "description": "# Artefato 5 - +RICOSHOT (ULTRAKILL HUD Generativo)\n\n**Autor:** Thalisson Braga \n\n## Sobre a Obra e Inspiração\nEste sketch foi profundamente inspirado no FPS frenético e visceral **ULTRAKILL** (desenvolvido por Arsi \"Hakita\" Patala). A estética do projeto simula o ambiente do *Cyber Grind* (uma arena de simulação virtual do jogo, conhecida por seu visual retro low-poly e malhas geométricas).\n\nA cena retrata de forma procedural a mecânica mais icônica do jogo: o V1 (protagonista) atirando moedas para o ar (revólver *Marksman*) e disparando um laser que ricocheteia perfeitamente entre todas elas até explodir o inimigo. A cada execução do sketch, uma nova cena é gerada: a posição do inimigo muda, a quantidade de moedas lançadas varia e o polígono de sangue gerado no impacto assume uma nova forma afiada.\n\n**Links de Referência:**\n* [Página Oficial do Jogo](https://store.steampowered.com/app/1229490/ULTRAKILL/)\n\nPara construir a animação procedural, a física de partículas e a estética do projeto sem o uso de imagens externas, utilizei a matemática ensinada ao longo da semana:\n\n1. **Vetores (`p5.Vector`):** \n   A lógica de trajetória depende inteiramente de vetores. A origem e o inimigo são objetos `p5.Vector`. As posições das moedas arremessadas foram calculadas usando **`p5.Vector.lerp()`** para que fiquem distribuídas no caminho entre o V1 e o alvo. Também utilizei funções como `.add()`, `.mult()` e `.dist()` para simular gravidade e velocidade nas faíscas e gotas de sangue do impacto.\n\n2. **Coordenadas Polares (Explosões e Gotas):** \n   As formas espirrando no momento do acerto (`onHit()`) usam coordenadas polares convertidas para cartesianas. A função `makeBlood()` fatia um círculo usando `TWO_PI / n` e gera vértices aleatórios com `x = cos(a) * r` e `y = sin(a) * r`. O mesmo princípio foi usado para ejetar as partículas em direções (ângulos) radiais aleatórias.\n\n3. **Transformações Afins e Sistemas de Coordenadas:** \n   * **Grid Isométrico:** O fundo do *Cyber Grind* foi criado empilhando transformações: `translate()` para posicionar o piso, `rotate(PI / 4)` para girar a malha em losango e `scale(1, 0.42)` para achatar o eixo Y, gerando uma falsa perspectiva 3D (isométrica).\n   * **Isolamento de Estado:** O uso de `push()` e `pop()` foi estritamente necessário em todos os desenhos (moedas, HUD, inimigo) para garantir que a translação da \"câmera\" (incluindo o efeito de *screen shake*) e as rotações individuais não corrompessem a malha principal.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "artefato 5 (1)",
+      "id": "artefato-5-1",
+      "name": "artefato 5 (1)",
+      "origin": "native",
+      "lastModified": 1789933826138,
+      "title": "Artefato 5",
+      "tags": [
+        "static",
+        "jellyfish",
+        "localstorage"
+      ],
+      "collection": "artefato da semana/5",
+      "description": "Aluna: Taísa Evangelista de Oliveira Martello\nA água-viva fica PARADA enquanto o sketch está aberto.\nCada vez que a página é ATUALIZADA, ela dá um novo \"passo\" e aparece em uma nova posição.\nA posição é guardada no localStorage para que o próximo carregamento continue de onde o anterior parou.\n\nLink do prompt no ChatGPT: https://chatgpt.com/share/6aadfa17-cfec-83e9-b300-3b7fee0821eb",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "Artefato 5 Samuel Vitor",
+      "id": "artefato-5-samuel-vitor",
+      "name": "Artefato 5   Samuel Vitor",
+      "origin": "native",
+      "lastModified": 1789933693347,
+      "title": "",
+      "tags": [],
+      "collection": "artefato da semana/5",
+      "description": "# Introspecção\n\n**Artefato 5 — \"Agentes\"** · Programação Criativa (Mestrado UFRJ) · Samuel Vitor\n\nUm programa que se lê — e não sobrevive à própria leitura. Em três atos, sem repetição: os agentes percorrem o código-fonte do próprio sketch, o caractere sob cada agente torce o seu caminho, e por onde passam fica tinta e luz.\n\n## Os três atos\n\nLeitura, Mutação, Entropia.\n\nNo fim, silêncio.\n\n## Técnica\n\n- p5.js 2.x, sem bibliotecas extras, sem imagens e sem sons.\n- Determinístico (randomSeed) e responsivo (windowResized); o ritmo compensa a taxa de quadros (deltaTime).\n\n## Referências da semana (aula 5 — Agentes)\n\nAgentes como objetos (classes e especializações), tabela de direções, o \"respiro\" na borda ao atravessar, além de ler o próprio rastro e também o desenho como consequência do passeio.",
+      "hasThumb": true,
+      "files": [
+        "thumbnail.png",
+        "README.md",
+        "sketch.js",
+        "index.html"
+      ]
+    },
+    {
+      "folder": "helena giovanna artefato 5",
+      "id": "helena-giovanna-artefato-5",
+      "name": "helena giovanna artefato 5",
+      "origin": "native",
+      "lastModified": 1789933429136,
+      "title": "iPhone 18 Concept",
+      "tags": [
+        "generative",
+        "iphone",
+        "ai",
+        "generative"
+      ],
+      "collection": "artefato da semana/5",
+      "description": "Um sketch artístico feito pelo ChatGPT inspirado no recente lançamento do novo modelo de smartphones da Apple: o iPhone 18 Pro\n\nAutora: Helena Giovanna\n\n***Prompt usado:***\n\"Quero fazer um projeto em p5.js para uma atividade de Creative Coding. A ideia é representar um conceito de iPhone 18, mas sem precisar ser uma réplica realista de um celular existente.\n\nQuero que o desenho seja feito todo em código, usando apenas p5.js, sem imagens externas, bibliotecas ou HTML/CSS. O celular deve ficar centralizado na tela e ter uma aparência moderna e minimalista, com corpo metálico, tela escura, bordas arredondadas, câmera frontal e alguns botões laterais.\n\nGostaria que o fundo também tenha uma aparência tecnológica, mas simples, com partículas, linhas discretas e uma iluminação suave atrás do celular.\n\nNa tela do celular, quero mostrar um relógio, uma data e alguns ícones de aplicativos. A tela pode ter um efeito de brilho ou gradiente para dar uma sensação mais futurista.\n\nTambém quero que exista alguma interação: quando o mouse passar ou se aproximar do celular, ele deve reagir visualmente, por exemplo mudando um pouco a iluminação ou a perspectiva. Ao clicar no celular, ele deve ligar e desligar a tela. Também pode haver uma tecla, como R, para reiniciar o projeto.\n\nO código deve ser organizado em funções, como setup(), draw(), funções para desenhar o celular, tela, câmera, botões, fundo e partículas. Quero que tenha comentários explicando as principais partes, porque o código será usado em um trabalho de graduação e precisa ser fácil de entender.\"",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "patinando no gelo",
+      "id": "patinando-no-gelo",
+      "name": "patinando no gelo",
+      "origin": "native",
+      "lastModified": 1789933259274,
+      "title": "",
+      "tags": [
+        "ai",
+        "generative",
+        "claude",
+        "movement"
+      ],
+      "collection": "artefato da semana/5",
+      "description": "Autora: Rafaella Lenzi Romano\n\n# Patinando no Gelo\n\nUm casal patina numa noite de Natal, entre luzinhas piscando e neve fina. O sketch tenta imitar os movimentos básicos da patinação: a remada, o deslizar e o giro.\n\nInspirado em um fim de ano muito especial, quando fui patinar no gelo com meu namorado 💌\n\n# Processo\n\nComecei os prompts com uma ideia, mas sem saber exatamente o que queria. A primeira versão era um casal dançando na chuva. Fui iterando conforme o código era gerado, com base nas minhas memórias e no que deixava a cena mais interessante, até chegar na pista de patinação.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "thumbnail.png",
+        "README.md"
+      ]
+    },
+    {
+      "folder": "artefato5",
+      "id": "artefato5",
+      "name": "artefato5",
+      "origin": "native",
+      "lastModified": 1789933164581,
+      "title": "O Observador do Vazio",
+      "tags": [
+        "p5js",
+        "dnd",
+        "beholder",
+        "animação"
+      ],
+      "collection": "artefato da semana/5",
+      "description": "Um Beholder inspirado em Dungeons & Dragons, representado em um ambiente dimensional abstrato e animado. A composição utiliza formas, curvas, cores e movimento para construir o corpo da criatura, seus diferentes olhos e pedúnculos, além de um vazio aberrante ao fundo com névoa, fragmentos flutuantes, partículas e fendas dimensionais. Os olhos possuem cores diferentes e podem disparar raios de forma aleatória, adicionando movimento e variação à composição.\n\nAutor: Pedro Elias\n\nPrompt usado: Crie em p5.js uma composição animada inspirada em um Beholder de Dungeons & Dragons. Faça a criatura flutuando em um vazio aberrante, com um grande olho central e vários pedúnculos terminando em olhos de cores diferentes. Adicione movimento independente aos pedúnculos e faça com que todos os olhos possam disparar raios coloridos em momentos e direções aleatórias. Crie também um plano de fundo abstrato e dimensional, utilizando névoa, partículas, fragmentos flutuantes, rachaduras e uma fenda irregular atrás da criatura, mantendo o Beholder como elemento principal da composição.",
+      "hasThumb": true,
+      "files": [
+        "sketch.js",
+        "style.css",
+        "thumbnail.png",
+        "index.html",
+        "README.md"
+      ]
+    },
+    {
+      "folder": "ilusao optica estrelas",
+      "id": "ilusao-optica-estrelas",
+      "name": "ilusão optica estrelas",
+      "origin": "native",
+      "lastModified": 1789933078200,
+      "title": "ilusão optica estrelas",
+      "tags": [],
+      "collection": "artefato da semana/5",
+      "description": "quando executar vai ser diferente da thumbnail, pra ficar igual precisa descomentar of ifs na função draw.\n\ndeixei eles comentados porque no inicio do loop causa um flash branco que causou dor de cabeça, e não consegui resolver, quero aprender um meio disso não aocntecer.\n\nautor: Paulo Barbosa",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "thumbnail.png",
+        "README.md"
+      ]
+    },
+    {
+      "folder": "Patrick Mucio (1)",
+      "id": "patrick-mucio-1",
+      "name": "Patrick Mucio (1)",
+      "origin": "native",
+      "lastModified": 1789932916939,
+      "title": "Órbita Viva",
+      "tags": [],
+      "collection": "artefato da semana/5",
+      "description": "# Artefato da Semana \n\n**Nome:** Patrick Mucio \n\n# Órbita Viva\n\nA proposta do projeto é criar um universo visual formado por partículas, rastros, forças de atração e repulsão. A composição nunca fica exatamente igual: o movimento das partículas e a interação do usuário alteram a imagem continuamente.\n\n\n## Interações\n\n- **Mover o mouse:** interfere no campo gravitacional.\n- **Clique:** cria um núcleo de atração.\n- **Shift + clique:** cria um núcleo de repulsão.\n- **1:** modo Órbita.\n- **2:** modo Tempestade.\n- **3:** modo Vórtice.\n- **Espaço:** cria uma explosão.\n- **C:** limpa/reinicia a composição.\n- **P:** pausa ou continua.\n- **H:** mostra ou oculta as instruções.\n- **S:** salva uma imagem da composição.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "README.md",
+        "sketch.js",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "cosmic spark",
+      "id": "cosmic-spark",
+      "name": "cosmic spark",
+      "origin": "native",
+      "lastModified": 1789932777810,
+      "title": "Bar",
+      "tags": [],
+      "collection": "artefato da semana/5",
+      "description": "Nome: Nicole Cardozo dos Santos\nDRE: 123174984\n\nBalcão de drinks com luz baixa",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "artefato5 natan azevedo gomes",
+      "id": "artefato5-natan-azevedo-gomes",
+      "name": "artefato5 natan azevedo gomes",
+      "origin": "native",
+      "lastModified": 1789917375530,
+      "title": "Samus enfrentando Metroid",
+      "tags": [
+        "generative",
+        "ai",
+        "gemini",
+        "metroid",
+        "samus"
+      ],
+      "collection": "",
+      "description": "Um sketch da personagem Samus lutando contra um Metroid.\n\nAutor: Natan Azevedo Gomes\n\nPrompt: Crie um sketch estático (sem animação) em p5.js. Apresente o resultado sob a forma de um único script em javascript a ser colado num ambiente de desenvolvimento como o editor.p5js.org. O sketch pode usar as primitivas background, point, line, rect, ellipse, triangle, circle, square, quad, arc ou bezier. É permitido usar comandos de estilização como stroke, fill, strokeWeight, etc. O programa fonte deve ser documentado para ser explicado para uma plateia de iniciantes em programação de computadores. O sketch pode usar coordenadas polares, podendo usar as funções sin e cos, e transformadas afins como translate, rotate, scale e shear (usando push e pop). Pode também usar as funções random, randomGaussian, noise e noiseDetail. Pode também usar agentes. O objetivo é desenhar uma arte bonita da personagem Samus Aran enfrentando um Metroid em uma área cavernosa, com fundo, chão e teto. Inclua estalagmites e outros elementos cavernosos.  Certifique-se que os projéteis de gelo estão saindo do canhão da personagem. O sketch deve se adequar ao tamanho da janela, usando windowWidth e windowHeight.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "thumbnail.png",
+        "README.md"
+      ]
+    },
+    {
+      "folder": "mofo",
+      "id": "mofo",
+      "name": "mofo",
+      "origin": "native",
+      "lastModified": 1789917284796,
+      "title": "",
+      "tags": [],
+      "collection": "artefato da semana/5",
+      "description": "# Mofo\n\n**Autor:** Murilo Jorge de Figueiredo\n\n![thumbnail](thumbnail.png)\n\n## O que é\n\nUma colônia de mofo crescendo numa placa de Petri — só que **o tempo é o eixo\nvertical**. A simulação é bidimensional e nada nela é apagado: o instante 0 fica\nno chão, o instante seguinte é desenhado um degrau acima, e assim por diante. O\nque se constrói é o **diagrama de espaço-tempo** da colônia.\n\nPor isso as colunas caneladas da imagem não são colunas: são manchas que ficaram\nparadas no mesmo lugar por muito tempo. As abas que se abrem para os lados são a\ncolônia avançando sobre o meio. E o labirinto no topo é simplesmente o estado\natual da placa.\n\n## A regra: reação-difusão de Gray-Scott\n\nDuas substâncias ocupam a placa. **U** é o alimento, **V** é o mofo. Onde há\nmofo junto de alimento, mais mofo é produzido — e a reação consome duas unidades\nde V para cada uma que nasce:\n\n```\nU + 2V  →  3V\n```\n\nAlém de reagir, as duas se **espalham**, mas em velocidades diferentes: o\nalimento difunde duas vezes mais rápido que o mofo. Esse desequilíbrio — e só\nele — é o que impede a mistura de virar uma papa uniforme e faz surgirem bordas,\ndedos e labirintos. Alan Turing mostrou em 1952 que padrões podem nascer\nexatamente assim, de difusão desigual, sem nenhum molde prévio.\n\n```\n∂U/∂t = Du·∇²U − U·V² + F·(1 − U)        F repõe alimento\n∂V/∂t = Dv·∇²V + U·V² − (F + k)·V        k remove mofo\n```\n\nCom F = 0,0545 e k = 0,062 o sistema fica no regime de **crescimento coral**: a\ncolônia se expande pela borda e vai se dividindo em dedos, sem nunca fechar.\nTestei outros sete regimes; o de labirinto (F = 0,029) satura e vira um bloco\nmaciço, e o de vermes (F = 0,078) morre em poucos passos.\n\nComo o estado é **contínuo** — V é um número real, não vivo/morto — as bordas\nsão lisas e o empilhamento sai com superfície contínua. Um autômato de\nvizinhança pequena daria uma torre de cascalho.\n\n## Três detalhes que a implementação obriga\n\n**Buffer duplo.** Atualizar as concentrações no próprio lugar seria errado: uma\ncélula já atualizada contaminaria o cálculo da vizinha seguinte, e o resultado\npassaria a depender da ordem da varredura. Calcula-se tudo num segundo par de\narrays e troca-se no fim.\n\n**Tabelas de vizinhança.** O laço roda 150 × 150 × 26 vezes por quadro. Guardar\nde antemão quem é o vizinho anterior e o seguinte de cada linha e coluna, já\ndando a volta no toro, tira todas as divisões de dentro do laço. Medido no Node,\na química de uma camada leva cerca de 9,5 ms.\n\n**Ordem do pintor.** A projeção é isométrica, feita à mão em 2D, sem WEBGL — e\nem 2D não há teste de profundidade. A oclusão depende inteiramente da ordem de\ndesenho: uma camada por quadro, de baixo para cima, e dentro de cada camada\nvarrendo as diagonais i+j, que é a direção em que a profundidade cresce numa\nisométrica.\n\n## Sobre repetição de tema\n\nAntes de escolher, baixei o índice da galeria da turma (`sketches/p5front.json`\ndo repositório da disciplina) e varri os 131 artefatos das semanas 1 a 4.\n\n- **Autômato celular:** existe um — um Jogo da Vida de Conway 2D, colorido e\n  piscante, na semana 2. Por isso não fiz Jogo da Vida.\n- **Reação-difusão, Gray-Scott, padrões de Turing:** nenhum.\n- **Physarum / mofo com agentes, DLA, formiga de Langton, Lenia:** nenhum.\n- **3D:** só um tornado em WEBGL na semana 3. Nenhuma projeção isométrica.\n\nCheguei a considerar *Physarum*, a simulação clássica de mofo com agentes que\ndeixam rastro de feromônio. Descartei por um motivo que vale registrar: ela é\nagentes-que-deixam-rastro, exatamente a família do meu artefato anterior (boids\npintando). Reação-difusão não tem agente nenhum — é uma equação sobre uma grade\n— e por isso é uma ideia realmente nova, e não a mesma ideia repintada.\n\nOs temas mais saturados da turma — cidades noturnas, espirais, túneis, mandalas\ne campos de fluxo — ficaram de fora de propósito.\n\n## Como rodar\n\nAbra o `index.html` no navegador, ou cole o `sketch.js` em\n<https://editor.p5js.org> e dê Play. A torre cresce uma camada por quadro e para\nsozinha na camada 145.\n\n| Tecla | Ação |\n|---|---|\n| **R** ou clique | nova placa, nova contaminação |\n| **espaço** | congela / retoma o crescimento |\n| **S** | salva um PNG |\n\nO canvas usa `windowWidth`/`windowHeight` e todas as medidas são proporcionais\nao menor lado da janela.\n\n## Parâmetros\n\nNo topo do `sketch.js`. O mais interessante é o `LIMIAR`, que decide a partir de\nqual concentração consideramos que há mofo ali: em 0,2 a colônia vira um sólido\nmaciço; em 0,4 sobram só as cristas, e a torre vira uma renda de dedos finos.\nDepois dele, `F` e `K` mudam o regime inteiro da química, e\n`PASSOS_POR_CAMADA` controla quanto tempo passa entre um andar e o seguinte —\npoucos passos dão uma torre lisa e lenta, muitos dão saltos bruscos entre\ncamadas.",
+      "hasThumb": true,
+      "files": [
+        "sketch.js",
+        "index.html",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "Artefato 5 Manoel V C Carvalho",
+      "id": "artefato-5-manoel-v-c-carvalho",
+      "name": "Artefato 5   Manoel V C Carvalho",
+      "origin": "native",
+      "lastModified": 1789917204144,
+      "title": "OVO",
+      "tags": [
+        "yellow",
+        "egg",
+        "ellipse"
+      ],
+      "collection": "artefato da semana/5",
+      "description": "Sketch feito utilizando o comando ellipse.\n\nAutor: Manoel V C Carvalho",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "thumbnail.png",
+        "README.md"
+      ]
+    },
+    {
+      "folder": "gotinhas 3",
+      "id": "gotinhas-3",
+      "name": "gotinhas 3",
+      "origin": "native",
+      "lastModified": 1789915567013,
+      "title": "Gotas",
+      "tags": [],
+      "collection": "artefato da semana/5",
+      "description": "",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "artefato #05 Leo Nunes",
+      "id": "artefato-05-leo-nunes",
+      "name": "artefato #05   Leo Nunes",
+      "origin": "native",
+      "lastModified": 1789915219900,
+      "title": "Jogo da Vida de Conway Em um Cubo",
+      "tags": [
+        "NoAI",
+        "3D",
+        "Animation",
+        "Interactive",
+        "Incomplete"
+      ],
+      "collection": "artefato da semana/5",
+      "description": "Acho que o que fiz já cumpre os requisitos, poderia adicionar mais features, mas paro por aqui. Foi pedido algo que \"ainda não foi feito\" e acredito que ninguém fez um sketch usando box() ou outra geometria 3D, pois então faço algo que já implementei no 2D e agora faço o mesmo sobre a camada externa de um cubo.\n\nO \"[Jogo da Vida de Conway](https://pt.wikipedia.org/wiki/Jogo_da_vida)\" é um conjunto de regras que atua sobre células que podem assumir 2 estados(vivo ou morto) e o próximo estado de uma célula depende do estado das células vizinhas e da própria célula:\n* 3 vizinhos vivos = vive/nasce\n* 2 vizinhos vivos = mantém o estado\n* demais configurações = morre/não nasce\n\nBROWSER: Apenas consegui rodar no FireFox.\n\nBARRA DE ESPAÇO: Pausa ou despausa o \"jogo\".\n\n\nAutor: Leonardo Nunes Guimarães Costa",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "README.md",
+        "sketch.js",
+        "style.css",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "zeppelin",
+      "id": "zeppelin",
+      "name": "zeppelin",
+      "origin": "native",
+      "lastModified": 1789914922794,
+      "title": "",
+      "tags": [],
+      "collection": "artefato da semana/5",
+      "description": "# Zepelim Psicodélico — releitura da capa de *Led Zeppelin* (1969)\n\nUma releitura em chave **psicodélica/onírica** da capa clássica do primeiro álbum do Led Zeppelin (a foto do desastre do Hindenburg). A composição original é preservada e reconhecível — dirigível inclinado, fumaça no topo-direita, torre de amarração, título laranja, selo circular — mas tudo é reconstruído por regras geométricas e depois **distorcido**: o preto vira prisma, a fumaça vira grão arco-íris, e um campo de deformação faz a cena inteira ondular. Nada é aleatório de verdade — um gerador com semente fixa mantém o quadro idêntico e reprodutível.\n\n## Autor\n\nJúlia Vilela \n\n## Inspiração\n\n- Capa de *Led Zeppelin* (Atlantic Records, 1969); arte baseada na fotografia do desastre do Hindenburg (1937), de Sam Shere.\n\n## Ligação com a obra e especificação geométrica\n\nO sketch parte da mesma geometria da capa e aplica sobre ela uma camada de distorção visual:\n\n- **Domain warp (a cena ondulando)** — toda coordenada passa por `warp(x,y)`, que soma senos de frequências diferentes em x e y. É o que faz o dirigível, a torre e o solo derreterem organicamente.\n- **Dirigível prismático** — a elipse (445 × 84, girada 0,28 rad) é amostrada como um contorno, deformada e desenhada com um **aro em arco-íris** (matiz ao longo do perímetro), um corpo escuro translúcido, uma crista iluminada e **rastros** (o contorno repetido, deslocado e com matiz trocado, imitando o eco visual).\n- **Fumaça arco-íris** — o mesmo campo de *metaballs* da releitura sóbria, agora pintado em pontilhado colorido e aditivo (`blendMode(ADD)`), com a cor variando pela posição.\n- **Aura-mandala** — halos concêntricos e uma coroa de 200 raios em pétala irradiam de trás do dirigível, como um sol.\n- **Aberração cromática** — o título \"LED ZEPPELIN\" é desenhado três vezes, deslocado e em matizes vermelho/verde/azul, produzindo a franja colorida.\n- **Torre e solo neon** — desenhados como linhas aditivas com matiz variável sobre o fundo escuro.\n- **Selo circular** — desenho **autoral** (dois cometas num anel arco-íris), não a marca da gravadora.\n\nEm resumo: a mesma lógica dos outros sketches (regra geométrica exata + determinismo), aplicada para **reencenar uma imagem icônica sob uma percepção distorcida**.\n\n## Arquivos\n\n- `sketch.js` — o programa (documentado).\n- `index.html` — importa o p5.js de um CDN; **não** carrega `p5.sound`.\n- `style.css` — centraliza o canvas.\n- `thumbnail.png` — prévia do resultado.",
+      "hasThumb": true,
+      "files": [
+        "sketch.js",
+        "style.css",
+        "thumbnail.png",
+        "README.md",
+        "index.html"
+      ]
+    },
+    {
+      "folder": "objetos geometricos e irradiacoes",
+      "id": "objetos-geometricos-e-irradiacoes",
+      "name": "objetos geometricos e irradiacoes",
+      "origin": "native",
+      "lastModified": 1789914822788,
+      "title": "",
+      "tags": [
+        "generative",
+        "gemini",
+        "3D"
+      ],
+      "collection": "artefato da semana/5",
+      "description": "Um sketch feito pelo ChatGPT que discos concêntricos e um cubo giram em torno de um mesmo ponto.\n\nAutor: Joao Ricardo S. Magalhaes",
+      "hasThumb": true,
+      "files": [
+        "sketch.js",
+        "index.html",
+        "thumbnail.png",
+        "README.md"
+      ]
+    },
+    {
+      "folder": "escrita cuneiforme",
+      "id": "escrita-cuneiforme",
+      "name": "escrita cuneiforme",
+      "origin": "native",
+      "lastModified": 1789907780231,
+      "title": "Escrita Cuneiforme",
+      "tags": [
+        "escrita"
+      ],
+      "collection": "artefato da semana/5",
+      "description": "Caderno com linhas e escrita cuneiforme aleatória com exceção de uma palavra secreta.\n\nAutor: João Pedro Moretti",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "artefato5 joao galetti",
+      "id": "artefato5-joao-galetti",
+      "name": "artefato5 joao galetti",
+      "origin": "native",
+      "lastModified": 1789907523386,
+      "title": "",
+      "tags": [],
+      "collection": "artefato da semana/5",
+      "description": "# Ebru — um banho de tinta que se penteia sozinho\n\n**Autor:** João Galetti\n**Artefato da semana 5** — \"inspiração negativa\": fazer algo diferente de tudo\nque apareceu nos artefatos 1 a 4.\n\n![thumbnail](thumbnail.png)\n\nCada execução prepara uma bandeja de água, deixa cair algumas centenas de gotas\nde tinta e trabalha o banho com estilete e pente até virar uma folha de papel\nmarmorizado. Você assiste ao processo: as gotas caem uma a uma, os traços\naparecem e apagam, o desenho se forma. No fim a folha é batizada com o nome\nturco do padrão que saiu.\n\n- **clique** — começa uma folha nova\n- **arraste sobre a folha pronta** — passa o estilete com a própria mão\n- **barra de espaço** — termina a folha na hora\n- **s** — salva a folha em PNG\n\n---\n\n## A ideia\n\nEbru é a marmorização turca: pinga-se tinta na superfície de uma água engrossada\ncom goma, trabalha-se o desenho com uma agulha e um pente, e encosta-se o papel\npara tirar a folha. O que me interessou é que **o artesão nunca desenha nada**.\nEle só desloca o que já está lá. Não existe traço, não existe pincelada: existe\numa mancha redonda e existem empurrões.\n\nIsso vira um sistema generativo quase direto. Cada gesto do artesão é um **mapa\ndo plano**, aplicado ao mesmo tempo a todos os pontos de todas as gotas que já\nestão na bandeja. Nada neste sketch é desenhado a mão: **toda curva que você vê\né um círculo que foi empurrado**.\n\n## Os quatro gestos\n\n```\ngota(C, r)     P' = C + (P−C)·√(1 + r²/|P−C|²)\nestilete       P' = P + M·u·α^(d/λ)            d = distância à reta do gesto\narrasto        estilete pontual gaussiano, avançando passo a passo\nredemoinho     rotação em torno de C decaindo com exp(−r²/2σ²)\n```\n\nA primeira é a que importa. É a solução exata de \"abrir espaço para um disco de\nraio *r* sem comprimir nada\": o ponto que estava a distância *u* do centro vai\npara √(u²+r²). O mapa **preserva área** — e é por isso que a tinta antiga não\nsome quando cai uma gota nova: ela afina e vira um anel. A folha inteira é um\narquivo estratigráfico, com a ordem dos acontecimentos legível nas espessuras.\nA flor (*hatip*) é construída explorando isso: seis a dez gotas **do mesmo\ntamanho no mesmo ponto**, cada uma empurrando a anterior para fora, produzem os\nanéis concêntricos; depois a ponta é puxada do centro para fora e de fora para\no centro, alternando, e os anéis abrem em pétalas.\n\nO `α` do estilete é o parâmetro que separa o carinho do estrago. Perto de 1 o\ncampo arrasta a bandeja inteira e homogeneíza tudo; perto de 0 ele corta. A\nfaixa que produz aquelas arcadas aninhadas do pente é estreita e só apareceu\ndepois de muita tentativa.\n\n## A gramática dos padrões\n\nO sketch não sorteia \"um desenho\". Ele sorteia uma **receita**, na ordem em que\num artesão trabalharia:\n\n| etapa | o que é |\n|---|---|\n| **battal** (*zemin*) | o chão de gotas. Sem ele não há ebru: todo o resto é deformação deste tapete |\n| **gel-git** | \"vai e vem\" — estiletes paralelos, alternando o sentido |\n| **şal** | \"xale\" — um gel-git cruzado com o anterior |\n| **taraklı** | o pente fino, dezenas de dentes de uma vez só |\n| **bülbül yuvası** | \"ninho de rouxinol\" — a ponta girando em espiral |\n| **hatip** | a flor do pregador, pingada por cima do desenho já pronto |\n\nEm cerca de uma folha a cada oito a bandeja é japonesa em vez de turca e o que\nse faz é um **suminagashi**: gotas alternadas de tinta e de água com tensoativo\nno mesmo ponto, formando dezenas de anéis concêntricos, depois ondulados por\num sopro. A gota de água é maior que a de tinta — é isso que deixa o traço de\ntinta fino e o vão largo, como no papel japonês.\n\n## O que deu trabalho\n\nO bonito da marmorização está na **nitidez das bordas**, e manter isso custa:\n\n- **Refino adaptativo.** Cada operação estica umas partes do contorno e comprime\n  outras. Depois de cada gesto, todo polígono é percorrido inserindo vértice\n  onde a aresta passou de ~2 px e descartando vértice onde os pontos se\n  amontoaram. Sem isso, as bordas viram polígonos em duas ou três passadas.\n- **Orçamento de pontos.** Uma folha chega a 200 mil vértices. Quando passa do\n  teto, o refino afrouxa sozinho em vez de a animação travar.\n- **A bandeja tem fundo.** No plano infinito do computador a tinta foge e o chão\n  nunca fecha. Medindo a fração de água descoberta ao longo da receita, dá para\n  mostrar que o que fecha a bandeja é o **volume** de tinta, não o número de\n  gotas: por isso a primeira leva é graúda e a leva vai afinando — que é também\n  a ordem da bancada real. Sobra menos de 2% de água à vista.\n- **Rejeição por caixa.** Arrasto e redemoinho são gestos locais; testar a caixa\n  envolvente antes de calcular a gaussiana derruba o custo de um gesto de\n  ~200 mil pontos para alguns milhares, e é o que segura o tempo real.\n- **Vizinhança truncada no pente.** Um pente de 50 dentes seriam 50 exponenciais\n  por vértice. Como o campo decai rápido, só os 4 dentes de cada lado importam.\n- **Semente embaralhada.** O gerador do p5 é uma congruência linear: as sementes\n  101 e 102 devolvem primeiros sorteios quase iguais e escolhiam sempre a mesma\n  paleta. Um hash inteiro antes de semear resolve.\n\n## Sobre a \"inspiração negativa\"\n\nPassei a lista dos artefatos 1 a 4 da turma inteira antes de começar, para saber\no que **não** fazer. Os temas que mais se repetiram foram:\n\ncidades e skylines · paisagens com pôr do sol, estrada e montanha · mandalas,\nespirais e composições radiais · grades e quadrados à la Mondrian / Vera Molnár\n/ Schotter · campos de fluxo no estilo Fidenza · espaço, estrelas e planetas ·\ntúneis em perspectiva · flores e jardins · vitrais e mosaicos · fan art de\npersonagens · homenagens a artistas generativos conhecidos · tipografia\ndistorcida.\n\nEste sketch não é nenhuma dessas coisas. Não tem grade, não tem campo de fluxo,\nnão tem partícula, não tem cena, não tem centro radial e não homenageia nenhum\nartista generativo. O tema é um **ofício** — uma técnica de papel do século XV —\ne o algoritmo é a física dela, não uma imitação do resultado dela. E é o único\ncaminho que eu conheço em que a imagem inteira é uma só deformação contínua de\num punhado de círculos.\n\nTambém é diferente do meu próprio artefato 4 (uma carta náutica de uma ilha\nfictícia): lá o processo era erosão sobre uma grade de alturas e o resultado era\num documento; aqui não existe grade nenhuma — tudo é contorno vetorial — e o\nresultado é um objeto, uma folha.\n\n## Arquivos\n\n- `sketch.js` — o sketch em p5.js.\n- `index.html` — roda o sketch e mostra o código.\n- `thumbnail.png` — uma das folhas.\n\nFeito com p5.js, sem nenhuma biblioteca além dela.\n\n---\n\n**João Galetti** · Programação Criativa · Artefato 5",
+      "hasThumb": true,
+      "files": [
+        "README.md",
+        "index.html",
+        "sketch.js",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "Museu das Sombras Desobedientes Henrique Kezen",
+      "id": "museu-das-sombras-desobedientes-henrique-kezen",
+      "name": "Museu das Sombras Desobedientes Henrique Kezen",
+      "origin": "native",
+      "lastModified": 1789906979153,
+      "title": "",
+      "tags": [],
+      "collection": "artefato da semana/5",
+      "description": "# Museu das Sombras Desobedientes\n\n> Quando a luz se distrai, as sombras deixam de obedecer.\n\n**Autor:** Henrique Kezen  \n**Linguagem:** JavaScript, com p5.js  \n**Categoria:** arte interativa — Artefato 5: E agora, algo completamente diferente  \n**Desenvolvimento:** Henrique Kezen, com assistência de IA na elaboração do código e da documentação.\n\n![Imagem representativa do sketch](thumbnail.png)\n\n## Descrição\n\nUma pequena exposição de objetos cotidianos: uma xícara, uma chave e um vaso sobre uma mesa. A luminária acompanha o mouse, iluminando a superfície de papel com uma luz amarela. Os objetos permanecem imóveis, mas suas sombras possuem personalidades próprias.\n\nA sombra da xícara demora a acompanhar a luz. A da chave tenta escapar. A do vaso procura a companhia da sombra vizinha. Depois de alguns segundos sem mover o mouse, elas se soltam: saltitam, dançam e se aproximam. Ao perceberem um novo movimento, retornam às suas posições como se nada tivesse acontecido.\n\nO desenho usa uma paleta contida, textura de papel, contornos delicados e sombras com bordas suaves. A interação alterna observação e distração: para descobrir a cena, o visitante precisa parar de interferir nela.\n\n## Inspiração negativa e relação com os artefatos anteriores\n\nO ponto de partida foi a consulta à [galeria de Creative Coding 2026, nas coleções Artefato da Semana 1 a 4](https://esperanc.github.io/CreativeCoding2026/sketches/), conforme a proposta do Artefato 5.\n\nOs títulos, descrições e miniaturas consultados mostraram temas como paisagens, espaço, futebol, personagens, mosaicos e campos de fluxo. O trabalho anterior do autor, **O Mar entre as Dobras**, também explorava uma paisagem e um movimento contínuo de ondas.\n\nNeste sketch, a diferença está no tema e na dinâmica: uma natureza-morta cotidiana se transforma em uma pequena narrativa de comportamento. As sombras deixam de ser apenas consequências da iluminação e passam a agir como personagens. A pausa do visitante participa da obra, revelando uma ação que o próprio movimento interrompe. A galeria funciona como referência de contraste; não foram reutilizados códigos, imagens ou composições dos trabalhos consultados.\n\n## Prompt de criação\n\nCrie o artefato sobre o tema Museu das Sombras desobedientes, que terá um mesa com objetos normais, ao mover a luminária com o mouse, a magica acontece, as sobras se mostram loucas e possuem vontade propria uma demora para acompanhar, outra tenta fugir e outra se aproxima da sombra vizinha.\n**Visual:** fundo de papel claro, luz amarela e sombras escuras com bordas suaves. Poucos elementos, com movimentos expressivos.\n**O detalhe especial:** ao deixar o mouse parado, as sombras começam a brincar; quando você volta a mexer, fingem que nada aconteceu.\n\n## Como executar\n\n1. Extraia o arquivo ZIP para uma pasta.\n2. Abra `index.html` em um navegador atualizado.\n3. Mantenha a conexão com a internet para carregar p5.js pelo CDN.\n\n## Interação\n\n| Controle | Ação |\n| --- | --- |\n| Mover o mouse sobre a obra | Mover a luminária e fazer as sombras tentarem se comportar. |\n| Deixar o mouse parado por aproximadamente 3 segundos | Dar às sombras a oportunidade de brincar. |\n| Tocar e arrastar na tela | Controlar a luminária em dispositivos com toque. |\n| Setas, com a obra em foco | Mover a luminária pelo teclado. |\n| Botão **Pausar** ou **Espaço** | Pausar ou retomar a animação. |\n| Botão **Recomeçar** ou **R** | Restaurar a luz e as sombras ao início. |\n| Botão **Guardar imagem** ou **S** | Salvar o quadro atual em PNG. |\n\n## Construção\n\nTodos os objetos, a luminária, a mesa, a textura e as sombras são desenhados por código. A direção da luz determina a projeção inicial das sombras. Interpolação suave, deformações e movimentos periódicos dão personalidade a cada uma. Um temporizador detecta a ausência de movimento e faz a transição entre obediência e brincadeira. A animação considera o tempo entre os quadros para manter um ritmo semelhante em diferentes telas.\n\n## Arquivos da entrega\n\n- `index.html`: página de entrada e importação de p5.js pelo CDN.\n- `style.css`: apresentação e adaptação da página à tela.\n- `sketch.js`: desenho, animação e controles.\n- `README.md`: descrição, autoria, referência e prompt de criação.\n- `thumbnail.png`: imagem representativa gerada a partir do sketch.\n\nO pacote não contém cópias locais de p5.js nem de p5.sound. O sketch não utiliza áudio, não importa p5.sound e não depende de imagens ou fontes externas.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "style.css",
+        "sketch.js",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "Trab5 ProgCriativa HAlmico",
+      "id": "trab5-progcriativa-halmico",
+      "name": "Trab5 ProgCriativa HAlmico",
+      "origin": "native",
+      "lastModified": 1789906707315,
+      "title": "Trab5-ProgCriativa-HAlmico",
+      "tags": [],
+      "collection": "artefato da semana/5",
+      "description": "title: Terra Rachada tags: [p5js, generative, claude, worley, ruido-celular]\nUm solo ressecado e rachado, visto de cima, com um único broto verde nascendo bem no meio de uma das fendas. Toda a superfície — as placas de barro e as rachaduras entre elas — é construída com ruído de Worley (ruído celular): em vez de somar ondas suaves como o ruído de Perlin, o Worley espalha pontos pelo plano e, para cada posição, mede a distância até o ponto mais próximo. O resultado tem células e nervuras — o padrão característico de solo rachado, pele ou pedra lascada.\nO canvas é quadrado e se adapta ao tamanho da janela disponível; não há semente fixa de aleatoriedade, então cada execução sorteia um novo arranjo de placas e um novo lugar para o broto nascer.\nTécnicas usadas:\ndistribuição dos pontos-semente por \"melhor candidato\": cada novo ponto é escolhido entre vários candidatos, ficando com o mais distante dos pontos já colocados — dá placas de tamanho parecido, sem alinhar numa grade, em vez do resultado desigual de um sorteio livre;\nruído de Worley: para cada posição, calcula-se a distância ao ponto-semente mais próximo (F1) e ao segundo mais próximo (F2). A diferença F2 − F1 pequena marca a fronteira entre placas — é ali que a rachadura aparece. Cada placa recebe também uma leve variação de tom (sorteada uma vez por placa) e um sombreado radial a partir do próprio centro;\nbusca local para plantar o broto exatamente sobre uma fenda de verdade, em vez de uma posição solta;\nhaste construída por segmentos curtos cujo ângulo se desvia aos poucos do anterior (em vez de sortear o ângulo do zero a cada passo), para parecer uma haste crescendo e não um raio quebrado; folhas desenhadas com beginShape()/vertex() e quadraticVertex() para a curvatura;\nvinheta por círculos concêntricos de alfa decrescente — um brilho quente num canto, sugerindo sol a pino, e uma sombra fria no canto oposto.\nAutor: Henrique Almico Dias da Silva",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "Artefato 5 Gabriella Murta",
+      "id": "artefato-5-gabriella-murta",
+      "name": "Artefato 5   Gabriella Murta",
+      "origin": "native",
+      "lastModified": 1789906323149,
+      "title": "Artefato 5 - novidade",
+      "tags": [
+        "novidade",
+        "plantas"
+      ],
+      "collection": "artefato da semana/5",
+      "description": "Autor: Gabriella Pinheiro\n\nUtilizei o Claude para criar o código. \nBoa noite, faça mais um sketch, agora com animação, ainda para p5.js. Apresente o resultado sob forma de um único em javascript a ser colado num ambiente de desenvolvimento como o editor.p5js.org. Inspirado nessa imagem, faça as folhas com formas geométricas. Elas devem se mover conforme o movimento do mouse, como se a pessoa pudesse mexer nas plantas. O tamanho das linhas deve variar randomicamente, e mudar como arte generativa.\n\nFiz mudanças nos tamanhos e quantidades para preencher mais o desenho. \n\nDepois de revisar os trabalhos anteriores percebi que uma forma de criar algo novo é se inspirar em na natureza. Ao invés de descrever apenas o que eu queria, também enviei uma imagem de referência. Deu super certo!",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "o vislumbre do fim",
+      "id": "o-vislumbre-do-fim",
+      "name": "o vislumbre do fim",
+      "origin": "native",
+      "lastModified": 1789906084018,
+      "title": "O vislumbre do fim",
+      "tags": [
+        "generative",
+        "ai",
+        "dark",
+        "horror",
+        "cosmic",
+        "cthulhu"
+      ],
+      "collection": "artefato da semana/5",
+      "description": "Autor: Diogo dos Santos Machado Vieira\n\nArte da criatura cósmica Cthulhu criada por H. P. Lovecraft.\n\nPrompts usados:\n1) Quero fazer um sketch estático em p5.js. Apresente o resultado sob a forma de um único script em javascript a ser colado num ambiente de desenvolvimento como o editor.p5js.org. Faça nesse sketch uma arte da criatura cósmica Cthulhu dos contos de H. P. Lovecraft. Penso nela com ele centralizado no mar em meio a um céu escuro de tempestade, com pouca luz, mas com o olhar brilhante vidrado no espectador.\n\n2) Parece muito ludico ainda, as asas estão pouco detalhadas, assim como os tentaculos e o mar, dê um ar mais épico e assustador.\n\n3) O mar melhorou bastante e a atmosfera também, mas as asas ainda parecem uma forma sólida, faça algo como asas de dragão com rasgos irregulares. Para os tentáculos, diminua a quantidade e aumente a qualidade de cada um, 6 a 8 tentaculos já são suficientes, coloque mais detalhes em cada um deles e melhore as posições para que eles não fiquem sobrepostos.\n\n4) Os tentaculos melhoraram muito, não precisa mais mexer nisso, mas a atmosfera e o mar ficaram simples de novo, tem como voltar só essas partes à versão que elogiei? E as asas continuam ludicas, faça algo como asas esqueleticas sem a parte de dentro, com triangulos alongados como as \"hastes\".\n\n5) Agora faça o enchimento das asas (entre uma haste e outra) com triangulos de um tom ligeiramente mais claro que as hastes.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "Sonata Generativa",
+      "id": "sonata-generativa",
+      "name": "Sonata Generativa",
+      "origin": "native",
+      "lastModified": 1789905905285,
+      "title": "",
+      "tags": [],
+      "collection": "artefato da semana/5",
+      "description": "# Arte Geométrica Gerativa: Série Partitura Musical (p5.js)\n\n## 🎼 Conceito e Proposta Visual\n\nEsta obra gerativa transforma a notação musical tradicional em uma peça de arte abstrata dinâmica. A cada carregamento da página ou redimensionamento da janela, o algoritmo atua como um \"compositor visual\", gerando uma partitura inédita composta por pentagramas, claves, fórmulas de compasso, figuras rítmicas, acidentes, feixes e ligaduras expressivas.\n\n---\n\n## 📐 Conceitos Geométricos e Algorítmicos Aplicados\n\n1. **Posição (Estrutura de Grade e Manuscrito):**\n   - Distribuição espacial adaptativa em sistemas horizontais de pentagramas.\n   - Cálculo proporcional de coordenadas Y para notas alinhadas às linhas e espaços da pauta.\n\n2. **Dimensões (Escala Dinâmica):**\n   - Proporcionalidade total baseada nas dimensões da janela (`windowWidth` e `windowHeight`).\n   - Abertura dos compassos e espacamento entre linhas (`espacoLinha`) ajustados automaticamente para perfeita legibilidade visual.\n\n3. **Inclinação e Direção (Transformações Vetoriais):**\n   - Inclinação angular das cabeças ovais das notas (`rotate(-0.35)`).\n   - Orientação vertical dinâmica de hastes (para cima ou para baixo conforme a posição da nota na pauta).\n   - Curvas Bézier expressivas para ligaduras de expressão e bandeirolas de colcheias.\n\n4. **Variabilidade (Geração Procedural):**\n   - **Métricas:** Sorteio de fórmulas de compasso ($4/4$, $3/4$, $6/8$, $2/4$).\n   - **Ritmo e Melodia:** Combinações aleatórias de durações rítmicas (semínimas, colcheias, mínimas) e alturas melódicas.\n   - **Estética de Manuscrito:** Textura orgânica de papel vintage, pequenas oscilações \"feitas à mão\" nas linhas e paletas de cor inspiradas em partituras antigas e modernas.\n\n---\n\n## 🚀 Como Executar\n\n1. Abra o editor online do p5.js em: [editor.p5js.org](https://editor.p5js.org/)\n2. Copie o código do arquivo `sketch.js` e cole no editor.\n3. Clique em **Play** (▶) para ver a partitura gerada.\n4. Recarregue a página ou redimensione a janela para criar uma nova partitura musical instantaneamente!\n\n---\n\n## 🛠️ Estrutura do Arquivo ZIP\n\nO arquivo ZIP contém na raiz (sem subpastas):\n- `sketch.js`: Código-fonte completo em p5.js.\n- `index.html`: Página HTML pronta para execução no navegador.\n- `README.md`: Documentação técnica e conceitos do projeto.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "thumbnail.png",
+        "README.md"
+      ]
+    },
+    {
+      "folder": "2026 09 14 Carolina Abdu",
+      "id": "2026-09-14-carolina-abdu",
+      "name": "2026 09 14 Carolina Abdu",
+      "origin": "native",
+      "lastModified": 1789905668290,
+      "title": "",
+      "tags": [],
+      "collection": "artefato da semana/5",
+      "description": "A obra se inspira na estrutura modular da azulejaria modernista com o movimento e a expressividade das pinceladas de Van Gogh. A composição é formada por módulos quadrados organizados em uma grade, enquanto as pinceladas, geradas a partir de um campo de fluxo, criam um movimento contínuo e orgânico entre as diferentes partes da imagem. A IA foi utilizada como ferramenta de apoio no desenvolvimento do código em p5.js, auxiliando na exploração de diferentes formas de representar os módulos, nas regras de geração das pinceladas e na implementação do campo de fluxo e da aleatoriedade controlada. A partir dessas sugestões, o código foi adaptado e refinado para alcançar o resultado visual desejado.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "thumbnail.png",
+        "README.md"
+      ]
+    },
+    {
+      "folder": "artefato 5",
+      "id": "artefato-5",
+      "name": "artefato 5",
+      "origin": "native",
+      "lastModified": 1789905492472,
+      "title": "Partitura para um Instrumento Impossível",
+      "tags": [
+        "p5js",
+        "arte-generativa",
+        "partitura-grafica",
+        "musica",
+        "notacao"
+      ],
+      "collection": "artefato da semana/5",
+      "description": "# Partitura para um Instrumento Impossível\n\n**Autor:** Arthur Ramos\n\nEste sketch cria uma partitura gráfica para um instrumento que não existe. Em vez de notas musicais tradicionais, a folha usa blocos, linhas, curvas, pausas, sinais de intensidade e outros símbolos inventados. Cada execução organiza esses elementos de uma maneira diferente, como se o programa compusesse uma nova peça visual.\n\nO trabalho é estático, mas generativo. Ele não produz sempre a mesma imagem: a quantidade, a posição, o tamanho e a cor dos sinais são definidos aleatoriamente. Um clique gera outra partitura. O desenho também é responsivo e usa `windowWidth` e `windowHeight`, adaptando a folha ao espaço disponível.\n\n## Como executar\n\nAbra `index.html` em um navegador com acesso à internet ou copie o conteúdo de `sketch.js` para o editor do p5.js.\n\n## Interação\n\n- **Clique do mouse:** gera uma nova partitura.\n- **Tecla R:** gera uma nova partitura.\n- **Tecla S:** salva a imagem atual em PNG.\n- **Redimensionar a janela:** adapta e recompõe o desenho.",
+      "hasThumb": true,
+      "files": [
+        "thumbnail.png",
+        "index.html",
+        "README.md",
+        "sketch.js",
+        "style.css"
+      ]
+    },
+    {
+      "folder": "A Sala dos Macacos Infinitos Angel Mansilla",
+      "id": "a-sala-dos-macacos-infinitos-angel-mansilla",
+      "name": "A Sala dos Macacos Infinitos Angel Mansilla",
+      "origin": "native",
+      "lastModified": 1789905154038,
+      "title": "",
+      "tags": [],
+      "collection": "artefato da semana/5",
+      "description": "# A Sala dos Macacos Infinitos\n\nAutor: Angel Mansilla  \nDRE: 123691897\n\nA ideia veio do [Teorema do Macaco Infinito](https://pt.wikipedia.org/wiki/Teorema_do_macaco_infinito), macacos apertando teclas ao acaso poderiam, com tempo infinito, escrever qualquer texto finito, e a sala usa fileiras que diminuem até sumir para passar essa sensação de infinito.\n\nCada macaco escreve uma sequência diferente, cada um no seu ritmo, e, conforme as 22 linhas são preenchidas, a folha sobe pela máquina, levando cerca de 30 segundos até ficar pronta, só então ela vai para a pilha. Cada mesa guarda até 50 páginas, depois disso, as mais antigas dão lugar às novas. Toque na folha da máquina para acompanhar o texto ou no topo da pilha para ler a última página pronta, se tocar fora ou apertar ESC, a folha fecha, e R gera uma nova sala.\n\nA roda do mouse leva a câmera para a frente ou para trás pelo corredor, e as fileiras que saem de vista dão lugar a novas fileiras no fundo, então a sala continua.\n\nEstá tudo desenhado por código em p5.js, usando formas, curvas, laços, transformações, `random()` e `noise()`, pensando em cada macaco como um agente. O `createGraphics()` guarda os desenhos para não refazer todos os detalhes a cada quadro, e usei o Codex como apoio no desenvolvimento e nos testes.\n\nÉ só abrir `index.html` com internet para carregar o p5.js, a sala é uma simulação infinita, então tente encontrar algum dos grandes textos escritos, talvez você precise de um tempo infinito.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "enxame noturno",
+      "id": "enxame-noturno",
+      "name": "enxame noturno",
+      "origin": "native",
+      "lastModified": 1789410311408,
+      "title": "",
+      "tags": [],
+      "collection": "artefato da semana/4",
+      "description": "# Enxame Noturno\n\n**Autor:** Murilo Jorge de Figueiredo\n\n![thumbnail](thumbnail.png)\n\n## O que é\n\nUma simulação de **boids** em que cada agente arrasta uma pincelada atrás de si.\nA tela nunca é apagada, então o quadro é o rastro acumulado do bando: o que se\nvê a qualquer momento é o histórico completo de para onde cada boid foi.\n\nO bando se organiza sozinho pelas três regras de Reynolds (separação,\nalinhamento, coesão), orbita em torno de algumas \"estrelas\" e foge de um\npredador que persegue sempre o boid mais próximo. Ninguém desenha as espirais —\nelas são o efeito colateral dessa perseguição.\n\n## Inspirações\n\n**Boids — Craig Reynolds (1986)**\n<https://www.red3d.com/cwr/boids/>\n\nO algoritmo original. Três regras locais, nenhuma coordenação central, e o\ncomportamento de bando emerge. Aqui as três estão implementadas na função\n`calcularForcas()`, com dois acréscimos meus: um **vórtice** em torno da estrela\nmais próxima e o **medo** do predador.\n\n**\"A Noite Estrelada\" — Vincent van Gogh (1889), MoMA**\n<https://www.moma.org/collection/works/79802>\n\nA ligação é o *método*, não o motivo. O céu de Van Gogh não é pintado com\nmanchas de cor: é feito de pinceladas curtas, direcionais, que se enrolam em\nespirais e cuja direção é o próprio assunto do quadro. No sketch, quem dá a\ndireção de cada pincelada é a **velocidade do boid** naquele instante — ou seja,\no campo de movimento vira o campo de pinceladas, que é o que Van Gogh faz à mão.\nDaí vêm também três escolhas concretas:\n\n- A pincelada **afila**: nasce fina, engorda no meio, termina fina, como um\n  pincel que encosta, pressiona e levanta.\n- Cada traço é feito de **três cerdas paralelas** de cor ligeiramente diferente,\n  mais um fio claro na borda imitando o relevo do impasto.\n- A **paleta** é a do quadro: azuis profundos e amarelos quentes. A tinta\n  \"acende\" para o amarelo conforme o boid se aproxima de uma estrela.\n\n**O conectoma da mosca — Google Research / HHMI Janelia (setembro de 2026)**\n<https://gizmodo.com/google-mapped-a-fruit-flys-brain-now-its-playing-doom-and-super-mario-64-2000808616>\n<https://flywire.ai/>\n\nO mapa completo do sistema nervoso da mosca — 166 mil neurônios e 125 milhões de\nsinapses — saiu em 3 de setembro de 2026 e virou febre nas redes, com gente\nrodando o cérebro simulado dentro do Minecraft, do Doom e do Beat Saber. O que\nme interessou não foram as demos, mas as **imagens** do conectoma: milhares de\nfibras finas, coloridas por classe de neurônio, que individualmente são\ntrajetórias legíveis e em conjunto viram textura pura. É exatamente o que\nacontece aqui: uma pincelada isolada é só o passo de um boid; cento e trinta\nboids durante alguns minutos viram um céu. Como lá, cada agente carrega a cor da\nsua \"classe\" — cada boid nasce com um azul da paleta e o mantém a vida toda, o\nque faz aparecerem fios de tonalidade coerente dentro do emaranhado.\n\n## Como funciona\n\n**As três regras.** Cada boid olha os vizinhos dentro de um raio de percepção e\nsoma três forças: vai na direção do centro de massa deles (coesão), adota a\nvelocidade média deles (alinhamento) e é empurrado para longe dos que estão\napertando (separação). Na separação, o empurrão é dividido pela distância ao\nquadrado — por isso ele é quase nulo de longe e violento de perto.\n\n**O vórtice.** Perto de uma estrela, o boid recebe um empurrão **tangente**\n(basta girar o vetor radial em 90°) somado a uma atração fraca. Só a tangente\nfaria o boid escapar em linha reta; só a atração o faria cair no centro. Juntas,\ndão órbita — e a órbita é o que desenha a espiral.\n\n**A perseguição.** O predador vai sempre atrás do boid mais próximo, e o bando\nfoge dele. Como nenhum dos dois resolve a situação, o quadro nunca estabiliza: é\nessa disputa que impede as espirais de virarem anéis perfeitos e repetitivos.\n\n**A pincelada intermitente.** Se cada boid pintasse todo quadro, o rastro seria\numa fita contínua — foi o que aconteceu na primeira versão, e parecia fio de lã,\nnão tinta. Cada boid pinta em ciclos, com um trecho pintando e um trecho no ar,\ne é isso que quebra o rastro em pinceladas soltas.\n\n**As estrelas.** Também são pintadas com o mesmo pincel, em dabs curtos e\ntangentes. Na primeira tentativa eram círculos preenchidos, e o disco liso\ndestoava de toda a textura em volta.\n\n## Como rodar\n\nAbra o `index.html` no navegador, ou cole o `sketch.js` em\n<https://editor.p5js.org> e dê Play. Deixe rodando: o quadro leva alguns minutos\npara ficar denso.\n\n| Tecla | Ação |\n|---|---|\n| **R** | limpa a tela e começa um quadro novo |\n| **espaço** | congela / retoma a simulação |\n| **S** | salva um PNG |\n| clique | arrasta a estrela mais próxima para o ponteiro |\n\nO canvas usa `windowWidth`/`windowHeight` e todas as medidas são proporcionais\nao menor lado da janela, então a simulação se comporta igual em qualquer tela.\n\n## Parâmetros\n\nNo topo do `sketch.js`: `N_BOIDS`, `N_ESTRELAS`, `R_ESTRELA` (alcance do\nvórtice), `R_PERCEPCAO` e `R_SEPARACAO`. Zerar o alcance da estrela deixa o\nbando livre e o quadro vira um emaranhado sem espirais — bom para ver quanto do\nresultado vem só das regras de Reynolds.",
+      "hasThumb": true,
+      "files": [
+        "sketch.js",
+        "index.html",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
     {
       "folder": "Fusao de caracteres 2026 09 10 18 36 24",
       "id": "fusao-de-caracteres-2026-09-10-18-36-24",
       "name": "Fusão de caracteres 2026 09 10 18 36 24",
       "origin": "native",
-      "lastModified": 1789342017682,
+      "lastModified": 1789410247910,
       "title": "Fusão de caracteres",
       "tags": [
         "primitives",
