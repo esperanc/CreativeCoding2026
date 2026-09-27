@@ -27,7 +27,9 @@ for f in "${targets[@]}"; do
 <style>html,body{margin:0;padding:0;background:#fff}canvas{display:block}</style>
 </head><body><main></main><script src="sketch.js"></script></body></html>
 EOF
-  "$CHROME" --headless --disable-gpu --hide-scrollbars \
+  # --enable-unsafe-swiftshader: WebGL por software, para os sketches WEBGL.
+  # Sem ele um createCanvas(w, h, WEBGL) sai em branco. Nao afeta o 2D.
+  "$CHROME" --headless --disable-gpu --enable-unsafe-swiftshader --hide-scrollbars \
     --force-device-scale-factor=2 --virtual-time-budget=6000 \
     --screenshot="$OUT/$name.png" --window-size=$W,$H \
     "file://$d/index.html" >/dev/null 2>&1

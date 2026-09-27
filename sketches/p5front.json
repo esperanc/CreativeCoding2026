@@ -1,14 +1,780 @@
 {
   "format": "p5front-export",
   "version": 1,
-  "createdAt": "2026-09-20T20:20:22.277Z",
+  "createdAt": "2026-09-27T20:00:40.523Z",
   "projects": [
+    {
+      "folder": "Artefato 6 Samuel Araujo",
+      "id": "artefato-6-samuel-araujo",
+      "name": "Artefato 6   Samuel Araujo",
+      "origin": "native",
+      "lastModified": 1790539237345,
+      "title": "",
+      "tags": [],
+      "collection": "artefato da semana/6",
+      "description": "# Emergência\n\n**Artefato 6 — \"Emergência\"** · Programação Criativa (Mestrado UFRJ) · Samuel Vitor\n\n\n\nNa estrada, recebe uma ligação desesperadora. Você dirige de volta para casa a toda velocidade. O tempo é seu maior inimigo.\n\n## Controles\n\n- **Espaço** — acelerador (segure)\n- **↑ / ↓** — trocar de marcha\n- **Arrastar o mouse** — girar o motor livremente\n\n\n## Referências da semana (aula 6 — Emergência)\n\nCinemática e animação! EngineSimulator tem um projeto open-source que eu fiz fork pra tentar deixar 3D. Javascript é muito ruim pra performance, nada de vrumvrum.",
+      "hasThumb": true,
+      "files": [
+        "sketch.js",
+        "thumbnail.png",
+        "README.md",
+        "index.html"
+      ]
+    },
+    {
+      "folder": "cinetica",
+      "id": "cinetica",
+      "name": "cinetica",
+      "origin": "shared",
+      "lastModified": 1790537738200,
+      "title": "",
+      "tags": [],
+      "collection": "",
+      "description": "",
+      "hasThumb": false,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css"
+      ]
+    },
+    {
+      "folder": "showcase 1",
+      "id": "showcase-1",
+      "name": "showcase 1",
+      "origin": "shared",
+      "lastModified": 1790536553550,
+      "title": "",
+      "tags": [],
+      "collection": "",
+      "description": "",
+      "hasThumb": false,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css"
+      ]
+    },
+    {
+      "folder": "flocking",
+      "id": "flocking",
+      "name": "flocking",
+      "origin": "native",
+      "lastModified": 1790536277139,
+      "title": "",
+      "tags": [],
+      "collection": "artefato da semana/6",
+      "description": "# Emergência em Programação Criativa: Algoritmo de Flocking (Boids)\n\nProjeto desenvolvido para explorar o conceito de **emergência** em programação criativa e artes computacionais utilizando a biblioteca **p5.js**.\n\n## 📌 O Conceito de Emergência\n\nO fenômeno da **emergência** ocorre quando comportamentos, padrões ou estruturas globais complexas surgem a partir de regras locais simples executadas por elementos individuais, sem a existência de um controle centralizado ou um \"orquestrador\".\n\nNeste projeto, não existe uma instrução explícita no código dizendo como o \"bando\" deve se comportar como um todo. O movimento orgânico coletivo surge naturalmente da interação contínua entre as partículas individuais.\n\n## 🛠️ Como Funciona o Sistema\n\nO projeto é baseado no algoritmo *Boids*, criado por Craig Reynolds em 1986. Cada partícula observa apenas os vizinhos dentro de um raio de percepção limitado e ajusta seu movimento com base em três regras fundamentais:\n\n1. **Separação:** Mantém uma distância mínima para evitar colisão com os vizinhos mais próximos.\n2. **Alinhamento:** Iguala sua direção e velocidade à direção média dos seus vizinhos.\n3. **Coesão:** Move-se em direção ao centro de massa (posição média) dos seus vizinhos.\n\nAlém das regras clássicas, foi adicionado um comportamento de **esquiva em relação ao cursor do mouse**, onde a interação do usuário atua como um obstáculo ou predador, forçando o bando a se dispersar e reorganizar espontaneamente.\n\n## 🚀 Tecnologias Utilizadas\n\n* [p5.js](https://p5js.org/) — Biblioteca JavaScript para programação criativa\n* JavaScript (ES6+)\n* HTML5 / Canvas\n\n## 💻 Como Executar\n\n1. Acesse o [p5.js Web Editor](https://esperanc.github.io/p5front/).\n2. Copie o código do arquivo `sketch.js` deste repositório e cole no editor.\n3. Clique no botão **Run** (▶) para visualizar a simulação.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "delirio",
+      "id": "delirio",
+      "name": "delirio",
+      "origin": "native",
+      "lastModified": 1790528769342,
+      "title": "",
+      "tags": [],
+      "collection": "artefato da semana/6",
+      "description": "# Delírio\n\n**Autor:** Murilo Jorge de Figueiredo\n\n![thumbnail](thumbnail.png)\n\n## O que é\n\nUma rede de agentes que cresce, adoece e se corta. Os nós são agentes, as\narestas são as conversas entre eles, e a doença é uma **alucinação** que passa\nde um agente para outro. A rede se arranja sozinha na tela: cada ligação é uma\nmola, os nós se repelem e uma gravidade fraca puxa tudo para o centro.\n\nQuando a rede fica grande, um agente perto do meio começa a alucinar. O delírio\nse espalha enquanto a rede ainda não percebeu nada. Quando percebe, quem nunca\ndelirou corta os vizinhos doentes, quase todos ao mesmo tempo. A rede se parte\nem continentes, um saudável e ilhas onde o delírio circula, e as ilhas são\nempurradas para longe. Com o tempo, os poucos curados que ficam lúcidos\nemigram e as ilhas se esvaziam devagar.\n\n## As regras\n\nCada agente só conhece os próprios vizinhos e a sua população:\n\n1. **Crescer.** De tempos em tempos nasce um agente, que se liga a outro e a um\n   vizinho desse outro.\n2. **Contagiar.** Um agente alucinando tem uma pequena chance, a cada instante,\n   de passar a alucinação para cada vizinho saudável.\n3. **Perceber e cortar.** Um agente saudável pode perceber que o vizinho está\n   alucinando e cortar a ligação, religando-se a outro saudável. A chance de\n   perceber depende de um **alarme**: a fração de doentes que ele percebe, com\n   atraso, dentro da própria população.\n4. **O eco.** Quem já delirou não estranha o delírio alheio: não percebe, não\n   corta.\n5. **Curar.** Quem alucina se cura depois de um tempo. Uma parte dos curados\n   fica imune por um período e, enquanto imune, fica **lúcida**: reconhece o\n   delírio e, se estiver numa ilha, rompe todos os laços com ela e se liga à\n   população saudável. Quando a imunidade passa, ela processou o episódio e\n   volta a ser um agente comum.\n6. **Não ficar só.** Quem perdeu todas as ligações e não está doente procura,\n   aos poucos, alguém na população saudável.\n\n## O que emerge\n\nEmergência é quando o sistema inteiro faz algo que nenhuma das regras diz para\nfazer. Nenhuma linha do código fala em \"separar\", \"ilha\" ou \"onda\":\n\n- **O corte coletivo.** Não há ordem central para cortar. Mas como vizinhos\n  percebem mais ou menos a mesma coisa, o alarme sobe junto em todos, e a rede\n  se rasga de uma vez.\n- **Os continentes.** Os cortes locais partem a rede em populações. Pela regra\n  do eco, a ilha vira uma bolha de agentes que compartilham o mesmo delírio, e\n  ninguém lá dentro corta ninguém.\n- **As pontes.** Esta eu não previ. Os poucos lúcidos da ilha, ao fugir, às\n  vezes deixam laços para trás e viram pontes. Enquanto a população saudável\n  está alerta, ela corta as pontes logo. Depois da separação, porém, ela não vê\n  mais doentes à sua volta, o alarme se apaga e ela relaxa. Aí uma ponte fica\n  de pé, o delírio atravessa e vem uma segunda onda. É uma fadiga de vigilância\n  que ninguém programou.\n- **O esvaziamento lento.** Um curado lúcido de cada vez, as ilhas perdem\n  gente para o continente saudável.\n\n## Três decisões que fizeram a emergência aparecer\n\n- **A regra do eco.** Sem ela, quem se cura dentro da ilha corta tudo e foge,\n  e a ilha nunca se forma: a rede termina em uns 140 fragmentos soltos (numa\n  versão anterior, sem as outras regras, passava de 500).\n- **O alarme por população.** Na primeira versão o alarme era global, e a\n  população saudável continuava em alerta máximo mesmo sem nenhum doente,\n  porque a ilha mantinha a média alta. Com o alarme medido dentro de cada\n  população, a saudável relaxa, e é isso que permite as ondas voltarem.\n- **Romper antes de emigrar.** Quando os curados se religavam à população\n  saudável sem romper com a ilha, cada curado virava uma ponte e a ilha nunca\n  se formava.\n\nUma ressalva honesta: o alarme não é estritamente local. Ele é como um\nnoticiário da própria comunidade, que cada agente acompanha com atraso. As\ndemais regras só olham para os vizinhos.\n\n## Como rodar\n\nAbra o `index.html` no navegador, ou cole o `sketch.js` em\n<https://editor.p5js.org>. A rede cresce sozinha e o primeiro surto começa\nquando ela passa de 900 agentes; a separação acontece por volta de um minuto\ndepois de abrir.\n\n| Tecla | Ação |\n|---|---|\n| **clique** | faz o agente mais próximo começar a alucinar |\n| **↑ / ↓** | sobe / desce o limiar do alarme |\n| **I** | liga / desliga a imunidade (ligada por padrão) |\n| **R** | reinicia |\n| **S** | salva um PNG |\n| **espaço** | pausa |\n\nO canvas usa `windowWidth`/`windowHeight`, e a câmera se afasta sozinha para\nmanter a rede inteira na tela. Cada execução é diferente.\n\n## Parâmetros\n\nNo topo do `sketch.js`. Os que mais mudam a história:\n\n- `CHANCE_IMUNE` — fração dos curados que fica lúcida. Com 1, as ilhas se\n  esvaziam em uns 20 segundos; com 0,1 (o padrão), levam mais de um minuto.\n- `LIMIAR` e `ATRASO` — quando e com que demora o alarme dispara. Limiar baixo\n  dispara o corte mais cedo, e o surto tende a ser menor. Acima do padrão a\n  diferença some no meio da variação entre execuções.\n- `ECO` — desligar mostra por que ele é necessário: nenhuma ilha se forma.",
+      "hasThumb": true,
+      "files": [
+        "sketch.js",
+        "index.html",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "bolor",
+      "id": "bolor",
+      "name": "bolor",
+      "origin": "native",
+      "lastModified": 1790528667969,
+      "title": "",
+      "tags": [
+        "green",
+        "ia",
+        "emergencia"
+      ],
+      "collection": "artefato da semana/6",
+      "description": "Um quadro onde cada agente caminha para frente e deixa um rastro químico (um pixel que brilha e evapora com o tempo). A cada passo, o agente aciona três \"sensores\" à sua frente (esquerda, centro e direita) para ler os rastros no chão. Ele sempre vira para a direção onde o brilho do rastro é mais forte.\nEsse comportamento cria a emergência, feito com auxílio do ChatGPT.\n\nAutor: Ysabelle Estevão de Oliveira",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "Artefact6 Yasmine",
+      "id": "artefact6-yasmine",
+      "name": "Artefact6 Yasmine",
+      "origin": "native",
+      "lastModified": 1790528329611,
+      "title": "Ribbon of Light",
+      "tags": [],
+      "collection": "artefato da semana/6",
+      "description": "# Ribbon of Light\n\nA rhythmic-gymnastics ribbon that draws its own loops and spirals. \nMove the mouse to lead the ribbon and watch the flowing curves appear.\nEvery so often, golden sparkles break off the ribbon where it's\nmoving fastest.\n\n## Why this idea, and where the emergence is\n\nWhen I was a child, I did gymnastics, and ribbon routines were always my favorite. \nI love the way a simple knot in the gymnast’s hand transforms into a flowing shape behind her. \nThe ribbon is a chain of 55 knots, and the only rule is that each knot moves a little closer \nto the knot before it with each frame. The sparks form a second layer of emergence: each is a\ntiny agent in its own right, with a position, velocity, and lifetime, that only appears when \nthe head of the ribbon moves quickly. No spark is aware of the other sparks, but together they\nform a trail of dust.\n\n## How it works\n\n- The chain: `ribbon[i]` moves toward `ribbon[i-1]` with `lerp()` every\nframe; nothing about the resulting shape is decided in advance.\n- The trail: instead of clearing the background each frame, \nlow-alpha rectangle is drawn over it, so old ribbon positions fade\ninstead of vanishing, the same \"don't call `background()` inside\n`draw()`\" trick from the lecture.\n- The sparkles: a small particle system, position, velocity, gravity,\nfading life, spawned near the ribbon's head only when it's moving\nfast enough, each one independent of the others.\n- Idle motion: before the mouse moves, the head follows a slow Lissajous\npath so the piece is never static.\n\n## Interaction\n\nMove the mouse to lead the ribbon.\n\n## AI usage\n\nBuilt with the help of Claude. I had the idea of the ribbon since I used to do \ngymnastics and Claude proposed the follow-the-previous-point chain for the ribbon \nand the small particle system for the sparkles, and helped me write the code. \nand trail fade.\n\nAuthor: Yasmine",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "README.md",
+        "sketch.js",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "artefato 06 cuspides itacoatiara",
+      "id": "artefato-06-cuspides-itacoatiara",
+      "name": "artefato 06 cuspides itacoatiara",
+      "origin": "native",
+      "lastModified": 1790528188651,
+      "title": "",
+      "tags": [],
+      "collection": "artefato da semana/6",
+      "description": "# Cúspides de Itacoatiara\n\n**Autor:** Victor Hugo Figueiredo Pereira da Silva\n\n**Artefato da semana 06** — tema: *Emergência* (a partir da aula 5, *Agentes*).\n\n![thumbnail](thumbnail.png)\n\n## Ideia do trabalho\n\nA praia de Itacoatiara, na Região Oceânica de Niterói, vista de cima, como numa\nfoto de drone: o mar verde-azulado, o costão de granito com seus matacões, a\nfaixa de areia molhada onde a onda sobe e desce, a areia seca onde as\nmarias-farinha cavam as tocas e, no pé da imagem, a restinga com a salsa-da-praia\nrastejando em direção ao mar.\n\nItacoatiara é uma praia de tombo: íngreme, de areia grossa e mar forte. Em\npraias assim aparece um desenho curioso na beira d'água: a linha da praia deixa\nde ser reta e se enruga numa fileira de **meias-luas quase do mesmo tamanho**,\ncom \"chifres\" de areia apontando para o mar e baías cavadas entre eles. São as\n**cúspides de praia**. Ninguém as desenha: elas surgem da conversa entre a água\ne a areia, onda após onda. Esse é o assunto do trabalho.\n\nO sketch começa com uma praia **perfeitamente lisa**. Depois de umas mil ondas\nas cúspides aparecem sozinhas, e o próprio programa conta quantas surgiram e\n**mede** o espaçamento entre elas. Ele precisa medir porque não sabe a resposta:\nesse número não está escrito em lugar nenhum do código.\n\n## Emergência (a parte técnica do trabalho)\n\nEmergência é quando um padrão global surge da interação de regras locais\nsimples, sem que o programador tenha desenhado ou previsto esse padrão. O teste\nmais simples é: **procure no código a coisa que aparece na tela**. Não existe\nnenhuma função que desenhe meia-lua, nenhuma variável chamada \"espaçamento das\ncúspides\", nenhuma posição de toca escolhida por mim e nenhuma \"onda de susto\".\nExistem só três tipos de agente, cada um com regras que olham apenas para a\nvizinhança:\n\n| agente | estado | regra (só local) | rastro | o que emerge |\n| --- | --- | --- | --- | --- |\n| **parcela de água** (480 por onda) | posição, velocidade, areia carregada | sente a inclinação do chão, freia com o atrito, copia um pouco a velocidade das vizinhas, arranca areia quando corre e larga quando freia | o próprio relevo da praia | as **cúspides**, com espaçamento regular |\n| **bolha de espuma** | posição, idade | nasce onde uma parcela para de subir e vai sumindo | pontinhos brancos, marcas de espraiamento, linha de algas | os **arcos de espuma** que contornam chifres e baías |\n| **maria-farinha** | posição, toca, medo | passeia perto da toca; se a toca de outra estiver perto demais, muda-se e cava outra; foge de gente e de vizinha que corre | pegadas e montinhos de areia | **tocas espaçadas** por igual e uma **onda de susto** que atravessa a praia |\n\nÉ a mesma tabela \"estado + regra + rastro\" do fim dos slides da aula 5. A\ndiferença é que aqui o rastro de um agente vira o chão por onde os próximos vão\nandar.\n\nMas \"não está no código\" é um teste fraco: um padrão pode não estar escrito e\nmesmo assim estar escondido num parâmetro. Por isso fiz uma **auditoria com\nexperimentos** (mais abaixo), desligando uma regra de cada vez.\n\n### 1. As cúspides: um laço de realimentação\n\nCada onda é um punhado de 480 parcelas soltas juntas na linha da arrebentação,\nsubindo a rampa. A regra da areia é uma frase só: **água rápida aguenta carregar\nmais areia do que água lenta**.\n\n```js\nconst vel = Math.hypot(o.vx[i], o.vy[i]);\nconst troca = TROCA * (K_AREIA * vel - o.areia[i]) * DT;\nespalhar(o.px[i], o.py[i], -troca); // tira areia do chão (ou devolve, se troca < 0)\no.areia[i] += troca;\n```\n\nSe a parcela carrega menos do que aguenta, arranca areia do chão (erosão); se\ncarrega mais, larga (deposição). A partir daí acontece um laço que eu não\nprogramei:\n\n1. uma imperfeição na areia desvia um pouquinho a água;\n2. a água desviada se junta nas partes baixas, onde volta mais rápido e **cava\n   mais**; nas partes altas ela se espalha, freia e **deposita**;\n3. o baixo fica mais baixo e o alto fica mais alto, e o desvio da próxima onda\n   é maior.\n\nIsso é **realimentação positiva**: sozinha, ela faria a praia desmoronar. Quem\nsegura o crescimento (**realimentação negativa**) é a areia escorregando um pouco\ndepois de cada onda (`assentarAreia()`). Do equilíbrio entre as duas sai um\ntamanho preferido, e é ele que a praia escolhe.\n\n**O espaçamento acompanha a força do mar.** Mudando só a força do mar (setas\n↑↓), a água sobe mais ou menos, e o espaçamento muda junto:\n\n| força do mar | a água sobe (medido) | espaçamento medido | espaçamento ÷ subida |\n| --- | --- | --- | --- |\n| 34 | 21 m | 23 m | 1,1 |\n| 42 | 25 m | 23 m | 0,9 |\n| 50 | 29 m | 27 m | 0,9 |\n| 58 | 32 m | 30 m | 0,9 |\n\n*(média de 4 sementes cada, numa praia de 360 m e com 3 000 ondas)*\n\nO espaçamento fica em torno de **0,9 vez o alcance da água**. É o que se observa\nem praias de verdade, onde o espaçamento das cúspides acompanha até onde a água\nsobe. Em nenhum lugar do código eu escrevi essa relação: nem a subida real (o\natrito e o próprio relevo decidem) nem o espaçamento.\n\n**Como o programa mede.** Ele pega as linhas do meio do espraiamento e decompõe\no relevo ao longo da praia em ondas de vários comprimentos (uma transformada de\nFourier, em `medirCuspides()`). Se um comprimento domina, é o espaçamento que a\npraia escolheu. Com a tecla **V** aparece o **espectro**: no começo ele é\nachatado (ruído), e aos poucos um pico isolado se levanta.\n\nUm cuidado: como a praia emenda nas bordas e tem 240 m, só cabem números\ninteiros de cúspides. Por isso o espaçamento mostrado pula entre 240/11 ≈ 22,\n240/10 = 24, 240/9 ≈ 27 e 240/8 = 30 m.\n\n### 2. A espuma, as marcas de espraiamento e a linha de algas\n\nCada parcela, no instante em que para de subir, deixa uma bolha de espuma e um\npouco de \"detrito\". Quando a onda visível acaba, o ponto mais alto que a água\natingiu em cada coluna vira uma **marca de espraiamento**: a linha fina de\nespuma e grãos que fica na areia. Uma onda nova que sobe mais apaga as marcas\nantigas por onde passa. Como a água é desviada pelos chifres, essas linhas saem\nem **arcos que desenham as cúspides**. A frente da onda que sobe também é traçada\nassim, ligando a parcela mais adiantada de cada coluna. A linha de algas escuras\né a soma de milhares de pontos de parada. Nenhum desses contornos é desenhado.\n\n### 3. As marias-farinha\n\nAs marias-farinha começam **todas amontoadas** num pedaço da praia. Cada uma só\nconhece a toca mais próxima: se ela estiver a menos de 16 m, a caranguejo se\nmuda para o lado oposto e cava outra. Ninguém calcula \"onde deveria ficar cada\ntoca\", mas depois de um minuto elas estão espalhadas pela praia inteira, com\ndistâncias parecidas entre si (a tecla **V** mostra o território de cada uma).\n\nO mouse é uma pessoa caminhando pela areia, deixando pegadas. A marias-farinha\nque vê a pessoa (a até 13 m) corre para a toca, **congela na boca da toca por um\ninstante** e mergulha. As que veem uma vizinha correndo ou congelada (a até\n24 m) também se assustam, mas com atraso (12% de chance por quadro). Por causa\ndesse atraso **o susto viaja pela praia como uma onda**, bem mais longe do que o\nalcance da visão de qualquer uma delas.\n\n### O que é emergente e o que é cenário\n\n- **Emergente:** o relevo da praia (cúspides), a espuma no topo do espraiamento,\n  as marcas de espraiamento, a frente da onda, a linha de algas, a umidade da\n  areia (as baías, mais baixas, ficam molhadas por mais tempo), o espaçamento\n  das tocas e a onda de susto.\n- **Cenário (desenhado, não emergente):** as cristas no mar (elas só marcam a\n  hora em que a próxima onda visível nasce), a ondulação e o brilho do sol na\n  água, o costão, os matacões, a restinga com a salsa-da-praia.\n- **Recursos de exibição:** a onda que se vê é uma onda de verdade do modelo em\n  câmera lenta, e entre uma e outra o modelo roda umas setenta ondas escondidas\n  (um timelapse), senão as cúspides levariam meia hora para aparecer; **ESPAÇO**\n  acelera ainda mais. O relevo é pintado com **exagero vertical** (como num mapa\n  topográfico), porque as cúspides do modelo têm dezenas de centímetros de\n  altura e sem exagero a luz quase não as mostraria.\n\n## Auditoria de emergência\n\nPara não depender só do \"não está no código\", rodei o próprio `sketch.js` fora\ndo navegador (Node.js, com um p5 simulado) e fiz **experimentos de ablação**:\ndesligar uma regra de cada vez e ver se o padrão some. Cada linha abaixo é a\nmédia de 3 sementes, com 2 500 ondas. \"Crescimento\" é quantas vezes o relevo\ncresceu desde a areia inicial; \"regularidade\" é a fração do relevo que está no\npico do espectro (0 = ruído, 1 = senoide perfeita).\n\n| experimento | espaçamento | crescimento | regularidade | conclusão |\n| --- | --- | --- | --- | --- |\n| modelo normal | 27–30 m | ×6 | 0,55 | cúspides regulares |\n| **sem realimentação** (a água não sente o relevo que ela mesma cava) | — | ×1 | — | **nada surge**: o padrão nasce do laço |\n| **sem a areia escorregar** (`DIFUSAO = 0`) | — | ×2 000 | 0,06 | a praia desmorona em valas: a realimentação negativa é essencial |\n| realimentação forte demais (`K_AREIA = 0.03`) | 240 m | ×38 | — | a praia vira uma única vala gigante |\n| sem mistura entre parcelas (`MISTURA = 0`) | 27 m | ×4 | 0,55 | as cúspides surgem igual, só mais baixas: a mistura **não** é essencial |\n| vizinhança da mistura de 2 ou de 4 células | 22–30 m | ×5–7 | 0,5–0,6 | o espaçamento não vem do tamanho da grade |\n| praia de 300 m em vez de 240 m | 25–27 m | ×4 | 0,4 | o espaçamento não vem do tamanho da praia (numa de 180 m, 2 de 3 sementes deram 26–30 m e uma travou num modo longo de 90 m) |\n| **areia 100% lisa** no início | 24–27 m | — | 0,46 | surge mesmo assim: basta o acaso de onde cada parcela nasce |\n| **padrão de 60 m imposto** na areia inicial | 22–30 m | — | 0,46 | **a praia desobedece** e escolhe o próprio espaçamento |\n| **padrão de 12 m imposto** na areia inicial | 24–30 m | — | 0,57 | idem |\n\nOs dois últimos são os mais fortes. Mesmo quando eu tento impor um espaçamento,\na praia o esquece e volta para ~27 m. O espaçamento é uma propriedade do\n**sistema** (regras + força do mar), não da condição inicial nem de qualquer\nnúmero que eu tenha escolhido.\n\nPara as marias-farinha medi o **índice de Clark-Evans** (distância média até a\ntoca vizinha, dividida pelo que se esperaria se as tocas estivessem espalhadas\nao acaso: R < 1 = amontoadas, R = 1 = acaso, R > 1 = regulares) e o alcance do\nsusto, com a pessoa parada perto de uma só marias-farinha:\n\n| momento | R (Clark-Evans) | quantas fogem | até onde o susto chega |\n| --- | --- | --- | --- |\n| início (amontoadas) | 0,27 | 100% | ~40 m |\n| depois de 90 s (espalhadas) | 1,5 | ~90% | ~80 m |\n\nA pessoa enxerga 13 m e assusta **uma** caranguejo; o susto chega a 80 m. Esse\nalcance não está em lugar nenhum: é uma reação em cadeia.\n\n**O que a auditoria corrigiu.** Ela encontrou três problemas, todos consertados\nnesta versão:\n\n1. **A onda de susto morria.** Com o raio de contágio antigo (9 m), depois que\n   as marias-farinha se espalhavam (tocas a ~13 m umas das outras) só 3% delas\n   fugiam: a cadeia se quebrava no primeiro elo. Com 18 m, ~50% fugiam; com 24 m,\n   ~90%. É um **limiar de percolação**: abaixo de uma certa densidade de\n   vizinhas visíveis o susto não se propaga, acima dele varre a praia. Nenhuma\n   regra fala disso. Também acrescentei o \"congelar na boca da toca\", que as\n   marias-farinha fazem de verdade: sem ele a caranguejo assustada sumia antes de\n   alguém vê-la.\n2. **O README antigo dizia que a mistura entre parcelas segurava o crescimento.**\n   O experimento mostrou que não: sem mistura as cúspides surgem igual. Quem\n   segura é só a areia escorregando.\n3. **O sombreamento estava invertido desde a primeira versão:** morros\n   apareciam como buracos, e os chifres das cúspides pareciam baías. Não mudava\n   a simulação, mas mentia sobre ela.\n\n**Honestidade sobre os limites.**\n\n- As tocas das marias-farinha são o exemplo **fraco** de emergência: a\n  *regularidade* emerge (ninguém escolhe as posições), mas a *distância* entre\n  elas (~13–16 m) é herdada do raio da regra (`RAIO_TOCA = 16`). Já nas\n  cúspides nem a regularidade nem a distância estão em parâmetro nenhum: é o\n  exemplo forte.\n- O perfil médio da praia é mantido fixo (depois de cada onda cada linha volta à\n  altura média da rampa original). É uma regra imposta, para a praia não\n  \"derreter\" para o mar. Os experimentos acima mostram que ela não escolhe o\n  espaçamento, mas é uma simplificação.\n- As cúspides quase sempre nascem **tortas**, inclinadas para um lado. Nada no\n  código prefere um lado: a simetria se quebra sozinha e cada semente escolhe o\n  seu. Nas praias de verdade elas costumam ser mais simétricas; o modelo é uma\n  caricatura.\n\n## O que a semente sorteia\n\n- a **hora do dia**, entre três paletas: `amanhecer` (areia molhada refletindo\n  o céu rosado), `meio-dia` (mar turquesa, luz alta) e `fim de tarde` (dourado,\n  luz vindo do outro lado);\n- a **força do mar**, que decide até onde a água sobe e, por consequência, o\n  espaçamento das cúspides;\n- as imperfeições iniciais da areia;\n- quantas marias-farinha há e onde começa o amontoado;\n- o desenho do costão, dos matacões e da restinga.\n\nUm detalhe chato: o gerador do p5 é um LCG simples, e sementes vizinhas (1, 2,\n3...) davam sequências tão parecidas que quase todas caíam na mesma paleta. A\nfunção `semear()` passa a semente por um misturador de bits antes de usá-la.\n\n## Controles\n\n| tecla / gesto | o que faz |\n| --- | --- |\n| mover o mouse | uma pessoa caminha pela praia (as marias-farinha fogem) |\n| arrastar o mouse | risca a areia com um graveto, para ver a praia se reorganizar |\n| `↑` / `↓` | mar mais forte / mais fraco (o espaçamento das cúspides muda sozinho) |\n| `ESPAÇO` | liga / desliga o timelapse acelerado |\n| `V` | mostra o mecanismo: velocidade das parcelas, territórios, raios de susto, a faixa de medição e o **espectro da areia** |\n| `N` | nova praia (nova semente) |\n| `H` | mostra / esconde a legenda |\n| `S` | salva a imagem em PNG |\n\nPela URL também dá para escolher a semente e já começar com a praia formada,\npor exemplo `index.html?semente=2&ondas=2500` (foi assim que tirei a thumbnail).\n\n## Como executar\n\n1. Abra o arquivo `index.html` no navegador. Ele carrega **apenas** a biblioteca\n   p5.js pelo CDN (sem p5.sound e sem cópia local) e o `sketch.js`. **Ou**\n2. cole o conteúdo de `sketch.js` no [editor.p5js.org](https://editor.p5js.org)\n   e rode (▶).\n\nO canvas ocupa a janela inteira. Numa tela deitada a praia inteira (240 m) cabe\nna largura; numa tela em pé o sketch dá um zoom e mostra um pedaço, e como a\npraia emenda nas bordas, tanto faz qual.\n\n## Plano de desenvolvimento (no lugar do prompt)\n\nDesta vez, no lugar do prompt, coloco o plano que foi montado antes de escrever\no código e seguido durante o desenvolvimento (com Claude Code).\n\n**1. Entender o pedido.** Reler os slides da aula 5 (*Agentes*), principalmente\no slide \"Emergência por deposição\" (*você escreve o processo; o resultado é uma\nconsequência que muitas vezes você não consegue prever de cabeça, só rodando*)\ne a tabela final \"estado + regra + rastro\". O projeto não precisa usar agentes,\nmas precisa ter um padrão que ninguém desenhou.\n\n**2. Fazer o levantamento da galeria.** Ler título e descrição de todos os\nartefatos já postados pela turma, para não repetir tema. Na semana 4 já existe\num bando de boids (*Enxame Noturno*) e um mar-tecido (*O Mar entre as Dobras*);\nna semana 5, mofo e o meu próprio micélio. Conclusão: nada de boids, nada de\nfungo e nada de \"mar bonito\" sem mecanismo.\n\n**3. Escolher um fenômeno emergente real da praia de Itacoatiara.** A pergunta\nfoi: o que acontece em Itacoatiara que ninguém desenha? Três respostas, que\nviraram as três camadas do trabalho:\n- as **cúspides de praia**, típicas de praias íngremes e de mar forte (o\n  principal);\n- a **espuma** que o espraiamento deixa na areia;\n- as **marias-farinha**, com suas tocas espaçadas e a fuga em cadeia quando\n  alguém passa.\n\n**4. Provar que a emergência acontece antes de desenhar qualquer coisa.**\nPrototipar o modelo das cúspides em Python (NumPy), sem nenhuma preocupação\nvisual, olhando só o mapa de desvios da areia. Critérios de aceitação: (a)\npartindo de uma praia lisa, surge uma fileira regular de chifres e baías;\n(b) o espaçamento muda quando só a força do mar muda. Resultado: os dois\nprimeiros modelos (erosão crescendo com o quadrado da velocidade) fizeram poços\nredondos, não cúspides; o terceiro (erosão proporcional à velocidade, areia\nespalhada entre as quatro células vizinhas) passou nos dois critérios.\n\n**5. Portar para p5.js e montar a cena**, de baixo para cima:\n- a areia é uma grade de 240 × 100 células (1 célula ≈ 1 m), pintada numa\n  imagem com 2 × 2 pixels por célula, com sombreamento pela inclinação do\n  relevo, areia molhada mais escura espelhando o céu, marolinhas de vento na\n  areia seca e a linha de algas;\n- o mar tem profundidade, manchas de fundo, ondulação chegando, água turva perto\n  da areia, espuma rendada na arrebentação, cristas que quebram e brilho do sol;\n- a onda visível é desenhada com a linha de espuma da frente, bolhas e uma\n  película d'água por trás; ao terminar ela deixa a sua marca de espraiamento;\n- o costão de granito e os matacões são desenhados uma vez só, com relevo\n  arredondado, líquen, fendas e a faixa molhada e brilhante junto da água;\n- a restinga na base, com a salsa-da-praia e suas flores roxas;\n- as marias-farinha com a camuflagem cor de areia, pegadas e tocas;\n- o mouse como uma pessoa que deixa pegadas, apagadas quando a água passa;\n- uma vinheta com a luz quente vindo do lado do sol.\n\n**6. Tornar a emergência visível e verificável:** um contador de ondas, a\nmedição automática do espaçamento, a tecla V para mostrar o mecanismo e o\nespectro por baixo da imagem (como os slides sugerem), e as setas para o\nespectador mudar a força do mar e ver o espaçamento mudar.\n\n**7. Testar olhando o resultado**, não só vendo se compila: rodar em várias\nsementes e tamanhos de tela (inclusive celular em pé), capturar telas, ajustar e\nrepetir. As correções que mais mudaram a imagem: o espraiamento real (medido) era\nbem menor que o nominal; a película d'água virava bolhas e precisou ser\nborrada; a onda visível durava menos de um segundo e passou para câmera lenta;\nas paletas só saíam iguais até a semente passar pelo misturador; e o\nsombreamento estava invertido.\n\n**8. Auditar a emergência** com experimentos de ablação (seção acima): desligar\ncada regra, trocar o tamanho da praia e da vizinhança, impor padrões falsos na\nareia inicial e medir o espaçamento e a regularidade. Corrigir o que a\nauditoria mostrou que não se sustentava.\n\n**9. Entregar** no formato de sempre (`sketch.js`, `index.html`, `thumbnail.png`,\n`README.md`) e **com o zip sem pasta dentro**: os quatro arquivos direto na raiz\ndo zip.\n\n## Arquivos deste pacote\n\n- `sketch.js` — o sketch p5.js (comentado em português).\n- `index.html` — página para rodar o sketch fora do editor.\n- `thumbnail.png` — uma das imagens geradas pelo sketch (paleta *amanhecer*,\n  semente 2, com a onda subindo e contornando as cúspides).\n- `README.md` — este arquivo.",
+      "hasThumb": true,
+      "files": [
+        "sketch.js",
+        "index.html",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "skyven",
+      "id": "skyven",
+      "name": "skyven",
+      "origin": "native",
+      "lastModified": 1790528113338,
+      "title": "Skyven",
+      "tags": [
+        "roblox",
+        "emergency",
+        "birds"
+      ],
+      "collection": "artefato da semana/6",
+      "description": "Autor: Thomas Cardoso de Miranda\n\nA emergência está representada no comportamento dos pássaros.\n\né baseado no meu jogo favorito no roblox.\n\nos pássaros menores fogem dos predadores.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "progressao de fungo",
+      "id": "progressao-de-fungo",
+      "name": "progressao de fungo",
+      "origin": "native",
+      "lastModified": 1790528000028,
+      "title": "Progressão de fungo",
+      "tags": [
+        "ai",
+        "generative",
+        "claude"
+      ],
+      "collection": "artefato da semana/6",
+      "description": "Autora: Rafaella Lenzi Romano\n\n# Progressão de fungo\n\nUma estrutura que cresce a partir de um ponto central e se ramifica como um micélio, sem que nenhum ramo tenha sido desenhado no código.\n\n\n## Como funciona\n\nO sketch usa agregação limitada por difusão (DLA). Um agente nasce perto da estrutura e anda aleatoriamente em uma das oito direções. Quando encosta em uma célula ocupada, ele pode grudar ali e passa a fazer parte do fungo. Então nasce outro agente, e o processo se repete.\n\n- **Estado:** a posição do agente e uma grade que marca as células ocupadas\n- **Regra:** andar ao acaso; ao encostar na estrutura, grudar com certa probabilidade\n- **Rastro:** só a célula onde o agente grudou\n\n## Onde está a emergência\n\nA regra não fala em ramos. Eles aparecem porque as pontas que já se projetaram para fora têm mais chance de capturar os agentes do que os vãos entre elas. Pontas crescem mais, viram ramos e geram novas pontas. A forma final só pode ser conhecida rodando.\n\n## Parâmetros\n\n- `PROB_GRUDAR`: com 1, os ramos ficam finos e espetados; valores menores deixam o fungo mais denso e compacto\n- `CEL`: tamanho de cada célula em pixels\n- `PASSOS_POR_FRAME`: velocidade de crescimento\n\nA cor vai do vermelho (centro, células mais antigas) ao azul (bordas, mais recentes).",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "difracao",
+      "id": "difracao",
+      "name": "difracao",
+      "origin": "native",
+      "lastModified": 1790527927457,
+      "title": "Difração",
+      "tags": [
+        "generative"
+      ],
+      "collection": "artefato da semana/6",
+      "description": "Nome: Pedro Paulo de Oliveira Rocha",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "artefato6",
+      "id": "artefato6",
+      "name": "artefato6",
+      "origin": "native",
+      "lastModified": 1790527776532,
+      "title": "Ecossistema Autônomo Slither.io",
+      "tags": [
+        "emergencia",
+        "agentes",
+        "p5js",
+        "slitherio"
+      ],
+      "collection": "artefato da semana/6",
+      "description": "Uma simulação baseada em Slither.io para explorar o conceito de emergência por meio da interação entre agentes autônomos. Cada cobra segue regras locais simples para procurar alimento, avaliar caminhos, evitar outras cobras e crescer. Ao colidir com o corpo de outra cobra, ela morre e se transforma em alimento, alterando o ambiente para os demais agentes.\n\nA combinação dessas regras gera comportamentos que não foram programados diretamente, como competição por recursos, aglomerações, diferenças de crescimento, mortes em cadeia e oscilações na população. Pequenas diferenças entre os agentes também influenciam suas decisões, fazendo com que algumas cobras assumam mais riscos enquanto outras priorizam caminhos mais seguros.\n\nControles:\n- Clique do mouse: cria uma concentração de alimento na posição escolhida.\n- Tecla F: adiciona novas partículas de alimento ao ambiente.\n- Tecla S: adiciona uma nova cobra à simulação.\n- Tecla R: reinicia completamente o ecossistema.\n\nOs controles permitem interferir nas condições do ambiente sem determinar diretamente o comportamento dos agentes. Por exemplo, criar uma concentração de alimento pode atrair várias cobras para uma mesma região, aumentando a competição e a possibilidade de colisões e mortes em cadeia.\n\nAutor: Pedro Elias\n\nPrompt usado: Crie em p5.js uma simulação inspirada em Slither.io para explorar o conceito de emergência apresentado na aula. Faça múltiplas cobras controladas por agentes autônomos que se movimentam pelo ambiente em busca de pequenas partículas de alimento geradas naturalmente. As cobras devem crescer ao comer, avaliar diferentes direções para buscar alimento e evitar colisões com outras cobras. Quando uma cobra atingir o corpo de outra, ela deve morrer e seu corpo deve se dissolver em novas partículas de alimento, que poderão atrair as cobras restantes. Faça com que novas cobras possam surgir gradualmente e que pequenas diferenças de comportamento entre os agentes produzam competição, aglomerações e outros padrões emergentes sem determinar diretamente o resultado da simulação. Inclua também controles para adicionar alimento, adicionar novas cobras, reiniciar a simulação e criar concentrações de alimento com o mouse.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "README.md",
+        "sketch.js",
+        "style.css",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "artefato cultura emergente paulo vitor",
+      "id": "artefato-cultura-emergente-paulo-vitor",
+      "name": "artefato cultura emergente paulo vitor",
+      "origin": "native",
+      "lastModified": 1790527718722,
+      "title": "",
+      "tags": [],
+      "collection": "artefato da semana/6",
+      "description": "# Cultura Emergente: Cartografia de um Micélio Sintético\n\n**Autor:** Paulo Vitor Couto\n\n## Conceito\n\nEste sketch simula uma colônia de agentes microscópicos dentro de uma placa de cultura. O programa não contém o desenho final da rede. Cada agente conhece apenas sua vizinhança e repete regras simples; os caminhos, bifurcações, regiões densas e conexões entre nutrientes aparecem durante a execução.\n\nO resultado é um exemplo de **emergência**: uma organização visível em escala global nasce da interação de decisões locais.\n\n## Regras locais dos agentes\n\n1. Cada agente mede o sinal à frente, à esquerda e à direita.\n2. Ele gira para o sensor com mais feromônio ou alimento próximo.\n3. Ao andar, deposita um rastro químico.\n4. O rastro se espalha lentamente e perde intensidade.\n5. Regiões muito saturadas provocam um pequeno desvio, evitando um único caminho dominante.\n6. Ao encontrar alimento, o agente recupera energia e pode gerar uma ramificação.\n7. Agentes que saem da placa ou perdem energia deixam de atuar.\n\nNenhuma dessas regras manda os agentes formarem veias, árvores ou pontes. Essas estruturas são efeitos coletivos do sistema.\n\n## Referência conceitual\n\n[Boids, de Craig Reynolds](https://www.red3d.com/cwr/boids/)\n\nO projeto de Reynolds demonstra como comportamentos coordenados podem surgir quando agentes respondem apenas a informações locais. O meu sketch usa outra metáfora visual e regras próprias, voltadas para rastros químicos e nutrientes, mas parte do mesmo princípio: combinar percepções limitadas para produzir uma dinâmica coletiva complexa.\n\n## Interação\n\n- **Clique dentro da placa:** adiciona um nutriente.\n- **P:** pausa ou continua a simulação.\n- **R:** reinicia com outra semente.\n- **S:** salva a imagem atual em PNG.\n- **Redimensionar a janela:** reconstrói a simulação para o novo espaço.\n\n## Estrutura do ZIP\n\nO ZIP contém `index.html`, `style.css`, `sketch.js`, `README.md` e `thumbnail.png`, todos na raiz. A biblioteca p5.js é carregada por CDN; não há arquivos locais de p5.js ou p5.sound.js.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "style.css",
+        "sketch.js",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "Artefato da semana 6 Emergencia",
+      "id": "artefato-da-semana-6-emergencia",
+      "name": "Artefato da semana 6   Emergência",
+      "origin": "native",
+      "lastModified": 1790527626682,
+      "title": "",
+      "tags": [],
+      "collection": "artefato da semana/6",
+      "description": "# Artefato da Semana 6 — Emergência\n\n**Nome:** Patrick Mucio \n\n## Cardume Emergente\n\nCada peixe funciona de maneira independente e segue apenas três regras simples:\n\n1. **Separação:** evita ficar muito próximo dos outros peixes.\n2. **Alinhamento:** tenta nadar na mesma direção dos peixes próximos.\n3. **Coesão:** tenta permanecer próximo do grupo.\n\nNão existe uma regra dizendo diretamente aos peixes para formarem um cardume. A organização coletiva surge naturalmente da interação entre essas regras simples.\n\n## Interação\n\n- Mova o mouse pela tela para afastar os peixes próximos.\n- Clique em qualquer ponto para adicionar cinco novos peixes.\n- Depois de serem dispersados, os peixes começam a se reorganizar novamente.\n\n## Como executar\n\nAbra o arquivo `index.html` em um navegador com acesso à internet. O projeto utiliza a biblioteca p5.js por CDN.",
+      "hasThumb": true,
+      "files": [
+        "sketch.js",
+        "thumbnail.png",
+        "index.html",
+        "README.md"
+      ]
+    },
+    {
+      "folder": "cosmic spark (5)",
+      "id": "cosmic-spark-5",
+      "name": "cosmic spark (5)",
+      "origin": "native",
+      "lastModified": 1790527523297,
+      "title": "sketch_fogo",
+      "tags": [],
+      "collection": "artefato da semana/6",
+      "description": "**Nome:** Nicole Cardozo dos Santos\n**DRE:** 1231749884\n\n## Descrição\nEste sketch explora o conceito de emergência por meio de uma simulação de fogo. O fogo é formado por pequenas células que seguem regras simples de propagação, intensidade e desaparecimento. A interação entre essas células gera espontaneamente diferentes formas de chama, enquanto partículas de fumaça e faíscas são influenciadas pelo vento.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "formiguinhas",
+      "id": "formiguinhas",
+      "name": "formiguinhas",
+      "origin": "native",
+      "lastModified": 1790527452399,
+      "title": "Formiguinhas",
+      "tags": [],
+      "collection": "artefato da semana/6",
+      "description": "# Autor: \nNick Correa\n# IA utilizada: \nGemini\n# Prompt inicial:\n Escreva um algoritmo para p5 front que funciona da seguinte maneira:\n\nGere um ponto verde em uma posição aleatória do canvas\nFormigas (representadas por pontos pretos pequenos) devem percorrer o canvas usando a técnica de dumb agents\nA ideia é que as formigas soltem ferômonios imitando a biologia, os ferômonios devem ser representados por circulos rosa com alfa em 50%\nAs formigas que sentirem feromônios deverão começar a seguir sua direção e tentar encontrar a folha (ponto verde) também\nAo alcancar a comida, a formiga fica com a cor verde e caminha para fora do canvas (indicando a volta para o formigueiro)\nIsso deve ser feito em forma de animação até que todas as formigas tenham encontrado a comida e saído do canvas, deixando apenas seu rastro e os ferômonios no canvas final \n\n# Ideia e relação com a disciplina\nA ideia desse projeto foi recriar o básico do funcionamento de formigas em relação à busca de alimentos. Utilizando conceitos de dumb agents e emergência da arte como visto na aula anterior.\nA IA adicionou sliders que ajudam a visualizar diferentes possibilidades de simulação do artefato.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "thumbnail.png",
+        "README.md"
+      ]
+    },
+    {
+      "folder": "artefato6 natan azevedo gomes",
+      "id": "artefato6-natan-azevedo-gomes",
+      "name": "artefato6 natan azevedo gomes",
+      "origin": "native",
+      "lastModified": 1790527312855,
+      "title": "Homens derrubam painel de vidro",
+      "tags": [
+        "generative",
+        "ai",
+        "gemini",
+        "construction",
+        "glass",
+        "agent",
+        "fracture",
+        "emergence"
+      ],
+      "collection": "artefato da semana/6",
+      "description": "Tive bastante dificuldade em pensar em algo, perguntei para o Gemini sobre alguns algoritmos que usem o conceito de emergência e ele mencionou um sobre fractais. Tive, então, a ideia de fazer algo inspirado por aquelas cenas muito comuns em alguns filmes de dois homens carregando um painel de vidro que eles derrubam e quebram.\n\nA animação consiste em dois homens em um canteiro de obras carregando um painel de vidro. Um deles derruba sua ponta, fazendo o outro soltar logo em seguida. O vidro cai no chão e estilhaça.\n\nA cidade no background, o guindaste e os homens são desenhados com as primitivas simples de formas. Os detalhes no chão usam random() para serem mais naturais. A quebra do painel é feita usando agentes que atuam como as \"pontas\" das rachaduras. Quando o vidro bate no chão, esses agentes nascem no ponto de impacto e se propagam pela superfície seguindo regras locais. Eles avançam criando traços, ocasionalmente se bifurcam em ângulos secos para gerar novas ramificações, e param de crescer imediatamente se esbarrarem em uma linha que já existe. O padrão de rachaduras surge e de forma natural da interação entre essas diversas colisões locais, fazendo com que o vidro se quebre de um jeito único e imprevisível a cada execução.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "MariaEduardaAraujo Artefato 6",
+      "id": "mariaeduardaaraujo-artefato-6",
+      "name": "MariaEduardaAraujo Artefato 6",
+      "origin": "native",
+      "lastModified": 1790527144051,
+      "title": "",
+      "tags": [],
+      "collection": "artefato da semana/6",
+      "description": "# Artefato da Semana 6: Emergência\n\n**Autora:** Maria Eduarda Araújo\n**DRE:** 119054059\n\n## Sobre o Projeto\nPara a sexta semana de programação criativa, o tema foi a exploração da **Emergência** — o fenômeno em que sistemas complexos e visualmente ricos surgem a partir de regras simples aplicadas a vários elementos de forma indireta. Embora o professor tenha indicado que não era estritamente necessário usar agentes autônomos, optei por criar um sistema de partículas para demonstrar o conceitoo (Bônus achei que ficou muito legal).\n\nO resultado é um sketch que simula um ambiente mágico utilizando 1.500 pequenas partículas que se movem de forma autônoma pelo ecrã.\n\nUsei:\n*   **Emergência pelo Perlin Noise:** O comportamento fluido, semelhante a chamas de fogo, vento e correntes mágicas de poeira não foi desenhado manualmente. Utilizei a função matemática `noise()` para gerar um \"campo de fluxo\" (flow field) invisível.\n*   **Comportamento Indireto:** As partículas não sabem para onde estão a ir ou que padrão devem formar. Elas apenas leem o valor do Ruído de Perlin (`noise()`) no ponto exato (x, y) em que estão naquele momento e traduzem esse valor num ângulo de força (vento). O padrão final complexo que se vê no ecrã — com redemoinhos e correntes — *emerge* do comportamento coletivo e de regras simples de atrito e limites de velocidade.\n\n## Processo de Criação\nUtilizei a inteligência artificial (Gemini) para auxiliar na implementação da estrutura do fluxo de partículas e na correta aplicação do algoritmo de Perlin Noise.\n\nA IA ajudo a estruturar o loop que calcula o ângulo de força com `cos(angulo)` e `sin(angulo)` e a programar um leve atrito (`p.vx *= 0.95`), algo essencial para evitar que o sistema ficasse demasiado caótico.\n\nA lógica visual foi dividida em dois tipos de comportamento:\n1.  **Fogo:** Representa 20% das partículas, que recebem uma força de elevação extra para subir lentamente, dissipando as suas cores (tons de laranja/amarelo) com base no seu tempo de vida (idade).\n2.  **Poeira:** Representa 80% das partículas, que reagem mais organicamente ao vento invisível do Perlin Noise, com cores mapeadas pela sua posição na tela e uma opacidade cintilante gerada pela função `sin()`.\n\nO efeito de \"rastro\" contínuo (ghosting) foi alcançado desenhando um retângulo translúcido (`fill(10, 5, 15, 30)`) a cobrir todo o `canvas` em cada *frame*, no lugar da tradicional chamada `background()`.\n\n## O Meu Prompt Utilizado\n\n> \"Crie um sketch animado em p5.js focado no conceito de Emergência, o resultado deve mostrar um comportamento complexo e orgânico que surge de regras simples, sem ter sido explicitamente desenhado. O código deve seguir estritamente estas regras:\n> \n> 1. O Desenho: Crie um sistema com milhares de partículas (pelo menos 1500) divididas visualmente em dois tipos: 'Fogo' e 'Poeira'.\n> 2. O Layout e Movimento: Não programe caminhos exatos para as partículas. Utilize o Perlin Noise (`noise()`) para gerar um 'Flow Field' (campo de fluxo) contínuo e invisível no fundo. As partículas devem reagir apenas ao 'vento' local da sua posição.\n> 3. Variação Matemática: Aplique matemática para traduzir o ruído num ângulo (`TWO_PI`), use trigonometria (`cos` e `sin`) para gerar vetores de velocidade e aplique regras físicas básicas como atrito e limites de velocidade (`constrain`).\n> 4. Tema visual: Um ambiente mágico e escuro. As partículas de Fogo devem ter tons quentes (vermelhos, amarelos) que sobem e morrem depressa. As partículas de Poeira devem durar mais, cintilar usando a função `sin()` atrelada à sua idade, e variar de cor (tons escuros de cinzas ao roxo) consoante a sua posição. Para os rastros, desenhe retângulos translúcidos ao invés de usar o `background()` puro.\n> \n> Apresente o código totalmente comentado e documentado para explicar a lógica por trás do Perlin Noise e como a emergência se processa aqui, voltado para iniciantes em programação.\"",
+      "hasThumb": true,
+      "files": [
+        "thumbnail.png",
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md"
+      ]
+    },
+    {
+      "folder": "Artefato 6 Manoel V C Carvalho",
+      "id": "artefato-6-manoel-v-c-carvalho",
+      "name": "Artefato 6   Manoel V C Carvalho",
+      "origin": "native",
+      "lastModified": 1790527011722,
+      "title": "Cartografia",
+      "tags": [
+        "lines"
+      ],
+      "collection": "artefato da semana/6",
+      "description": "Sketch feito usando o conceito de Emergência por deposição (Cada agente \"deposita\" marcas no canvas, as marcas se somam gerando padrões visuais), utilizando o comando line.\n\nAutor: Manoel V C Carvalho",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "picos",
+      "id": "picos",
+      "name": "picos",
+      "origin": "native",
+      "lastModified": 1790526899462,
+      "title": "Picos",
+      "tags": [],
+      "collection": "artefato da semana/5",
+      "description": "Autor: Luiz Henrique da Costa Pacheco\nDRE: 125056085\n\nSketch desenvolvido com auxílio de Inteligência Artificial para a geração do código com pequenas modificações pelo autor para que a lógica final ficasse de acordo com a visão do projeto.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "artefato #06 Leo Nunes",
+      "id": "artefato-06-leo-nunes",
+      "name": "artefato #06   Leo Nunes",
+      "origin": "native",
+      "lastModified": 1790526778172,
+      "title": "Boids'n Bikes",
+      "tags": [
+        "TopView",
+        "Boids",
+        "Bikes"
+      ],
+      "collection": "artefato da semana/6",
+      "description": "Gostaria de ter feito outro trabalho, minha intenção inicial era fazer toda sorte de ciclistas e um único sob controle do \"Jogador\", mas devido à falta de tempo optei por usar um código proto da Patt Vira (código original em anexo) e utillizar o ChatGPT gratuito para fazer a função de desenhar ciclistas e separá-los em categorias(Uma Família - Muito Coesa e devagar, Speedeiros - Rapidos e Ciclistas Urbanos nem tão coesos e nem tão rápidos)\n\nVou deixar a ideia original para um projeto futuro.\n\n\nAutor: Leonardo Nunes Guimarães Costa",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "README.md",
+        "sketch.js",
+        "sketch original.js",
+        "style.css",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "artefato6 joao galetti",
+      "id": "artefato6-joao-galetti",
+      "name": "artefato6 joao galetti",
+      "origin": "native",
+      "lastModified": 1790526592937,
+      "title": "",
+      "tags": [],
+      "collection": "artefato da semana/6",
+      "description": "# Micélio\n\nSketch em p5.js feito para o artefato 6 da disciplina, sobre **emergência em agentes**.\n\n## A ideia\n\nCada linha do desenho é o rastro de um agente independente — uma \"ponta de hifa\"\nde um micélio. Nenhum agente conhece a rede inteira, nem sabe que forma final vai\nresultar do seu trabalho. Cada um só reage ao que consegue sentir perto de si:\n\n- **Estado**: posição, direção, um \"vigor\" (energia que se esgota aos poucos) e a\n  espessura do fio que está deixando para trás.\n- **Regra**: ande para frente, curvando-se sutilmente; se houver um nutriente\n  próximo, incline-se em direção a ele; se a região logo à frente já estiver densa\n  demais de outros fios, vire para o lado mais livre; de vez em quando, com uma\n  pequena probabilidade, divida-se em dois agentes.\n- **Rastro**: o próprio traço colorido, acumulado num buffer que nunca é apagado —\n  é a \"memória\" que os outros agentes leem para decidir por onde não crescer.\n\nA rede ramificada que liga as origens (os pontos de onde tudo começa a crescer)\naos nutrientes espalhados pela tela não foi desenhada por ninguém: ela é a\nconsequência de repetir essa regra local, individualmente e sem coordenação\ncentral, milhares de vezes. É esse o sentido de emergência explorado aqui — o\ncomportamento coletivo surge do processo, não de um plano.\n\nDepois que a rede termina de crescer, pulsos de luz nascem periodicamente nas\norigens e viajam por toda a estrutura já formada, como um lembrete de que a rede\ncontinua \"viva\" mesmo parada.\n\nCada vez que a página é aberta (ou quando se clica no desenho / aperta espaço), uma\nnova semente aleatória é sorteada e uma rede totalmente diferente cresce diante dos\nseus olhos — o processo é sempre o mesmo, o resultado nunca é.\n\n## Como rodar\n\nAbra `index.html` num navegador (idealmente servido por um servidor local, já que\na página busca o próprio `sketch.js` via `fetch` para exibir o código-fonte abaixo\ndo desenho). Todo o sketch usa apenas p5.js, carregado via CDN.\n\n## Autoria\n\nJoão Galetti",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "MapStar",
+      "id": "mapstar",
+      "name": "MapStar",
+      "origin": "native",
+      "lastModified": 1790461704884,
+      "title": "",
+      "tags": [],
+      "collection": "artefato da semana/6",
+      "description": "# MapStar\n> Autora: Laura Daflon\n> DRE: 120053993\n\n## Sobre\nProjeto de arte generativa desenvolvido em p5.js. Um mapa se forma progressivamente a partir de caminhadas aleatórias, criando agrupamentos de terra sobre um oceano com gradiente radial. A cada execução, surge uma paisagem diferente, cujo formato não é conhecido antecipadamente.\nFuncionamento\n1. A tela é dividida em nove regiões, cada uma com um cluster de origem.\n2. Cada cluster desenha pequenos círculos por meio de movimentos aleatórios. Tons de verde e marrom com transparência criam as texturas do terreno.\n3. As posições desenhadas são armazenadas em landPoints.\n4. Quando a construção termina, dois pontos distintos de terra são sorteados e recebem marcadores vermelhos.\n5. A busca A* explora o terreno progressivamente, deixando pequenos pontos claros nas posições visitadas.\n6. Se houver uma conexão, o caminho encontrado é destacado em escuro. Caso contrário, a busca termina sem traçar uma rota.\nO raio dos clusters e a quantidade de tentativas de movimento são proporcionais ao tamanho do canvas. As regiões de crescimento podem se sobrepor, mas isso não garante que todas as ilhas estejam conectadas.\n\n## Algoritmo A*\nO A* combina o custo percorrido desde a origem com uma estimativa da distância restante até o destino. Neste projeto, os nós são posições de landPoints, e dois nós são conectados quando seus círculos de terreno se tocam ou se sobrepõem.\nA distância euclidiana é usada tanto para calcular o custo dos deslocamentos quanto para estimar a distância até o destino. O resultado, quando existe, é o menor caminho no grafo construído a partir desses pontos.\nOs pontos claros representam a exploração do algoritmo e podem formar ramificações; o caminho final é exibido separadamente em escuro.\n\n## Tecnologias\n- JavaScript\n- p5.js\n- Canvas 2D para o gradiente radial\n- Algoritmo A* com fila de prioridade",
+      "hasThumb": false,
+      "files": [
+        "README.md",
+        "cluster.js",
+        "astar.js",
+        "style.css",
+        "sketch.js",
+        "index.html"
+      ]
+    },
+    {
+      "folder": "simulacaoBoids",
+      "id": "simulacaoboids",
+      "name": "simulacaoBoids",
+      "origin": "native",
+      "lastModified": 1790461505415,
+      "title": "Yayoi Kusama: Retrato em Pontilhismo Digital e Obsessão por Bolinhas",
+      "tags": [
+        "generative",
+        "portrait",
+        "kusama",
+        "dots",
+        "static",
+        "ai",
+        "chatgpt"
+      ],
+      "collection": "artefato da semana/6",
+      "description": "Um sketch artístico estático feito pelo ChatGPT que presta homenagem à artista Yayoi Kusama, reconstruindo sua silhueta icônica através da repetição obsessiva de círculos, cores vibrantes e padrões procedurais de preenchimento.\n\nAutora: Helena Giovanna\n\n***Prompt usado:***\n\"Crie um sketch artístico estático em p5.js, desenvolvido para funcionar no p5front, como uma homenagem à artista Yayoi Kusama e inspirado em sua linguagem visual marcada pela repetição obsessiva de bolinhas (polka dots). A composição deve apresentar um retrato frontal e reconhecível de Yayoi Kusama, construído visualmente apenas por bolinhas/círculos de diferentes tamanhos, cores, densidades e espaçamentos. Não utilize imagens externas para formar o retrato. O rosto deve surgir da organização dos próprios círculos, explorando uma espécie de pontilhismo digital. Use como características principais o cabelo curto com franja, o formato do rosto, olhos, nariz, boca, pescoço e parte dos ombros. A estética deve estabelecer uma ligação clara com as obras de Kusama, utilizando uma paleta com vermelho, preto, branco e amarelo. O fundo também deve ser formado exclusivamente por bolinhas. O canvas deve se adaptar ao tamanho da janela usando windowWidth e windowHeight e o desenho deve ser estático, utilizando noLoop().\"\n\n***Inspiração e Referências***\n\nObra de inspiração: \n1. Yayoi Kusama Inspired Painting (2022). Autor: Dizlarka - Disponível em: hhttps://medias.artmajeur.com/standard/16076926_photo-kusama.jpg\n2. Pumpkin (1994). Autora: Yayoi Kusama - Disponível em: https://claudia.abril.com.br/wp-content/uploads/2026/08/pumpkin-yayoi-kusama.avif\n\n***Ligação entre o sketch e as obras***: Este sketch foi desenvolvido como uma homenagem à artista japonesa Yayoi Kusama, falecida recentemente, cuja trajetória artística ficou mundialmente conhecida pelo uso intenso da repetição e das bolinhas (polka dots). A ideia foi utilizar justamente esse elemento tão característico de sua linguagem visual para construir uma representação da própria artista.\n\nA principal inspiração para o retrato foi a obra Kusama Portrait, que utiliza bolinhas para formar visualmente o rosto de Yayoi Kusama. No meu trabalho, procurei transformar essa mesma ideia em lógica de programação, construindo o retrato apenas com círculos de diferentes tamanhos, posições e cores.\n\nDa obra Pumpkin, de Yayoi Kusama, utilizei como referência principalmente a combinação de amarelo e preto. Essa paleta aparece no fundo do sketch através de um padrão de pontos pretos sobre amarelo. O cabelo vermelho vibrante, uma característica marcante da própria artista, foi utilizado para destacar o rosto e facilitar seu reconhecimento.\n\nA conexão com a linguagem de Kusama também aparece através da repetição. Em vez de desenhar o rosto utilizando linhas e contornos tradicionais, utilizei estruturas de repetição (for) para distribuir círculos pela composição. A concentração, o tamanho e as cores dessas bolinhas são responsáveis por formar as diferentes partes do rosto.\n\nO resultado funciona como uma espécie de mosaico digital feito inteiramente de pontos, no qual cada bolinha contribui para formar a imagem completa. Dessa forma, o sketch busca não apenas representar Yayoi Kusama, mas também homenageá-la utilizando um dos elementos mais reconhecíveis de sua própria obra.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "arvore fria aleatoria",
+      "id": "arvore-fria-aleatoria",
+      "name": "arvore fria aleatoria",
+      "origin": "native",
+      "lastModified": 1790461302310,
+      "title": "",
+      "tags": [
+        "generative",
+        "chatGPT",
+        "3D"
+      ],
+      "collection": "artefato da semana/6",
+      "description": "Um sketch feito pelo ChatGPT que um ramo de uma cor se ramifica até um certo limite mudando de cor dependendo do nível do ramo.\n\nPrimeiros prompts feitos: \"me dê ideias de agentes para programação criativa em p5\", \"gostei da ideia 12\", \"gostaria de fazer algo parecido com a primeira imagem\"\n\nAutor: Joao Ricardo S. Magalhaes",
+      "hasThumb": true,
+      "files": [
+        "sketch.js",
+        "index.html",
+        "thumbnail.png",
+        "README.md"
+      ]
+    },
+    {
+      "folder": "bandeira mutante",
+      "id": "bandeira-mutante",
+      "name": "bandeira mutante",
+      "origin": "native",
+      "lastModified": 1790461202291,
+      "title": "Bandeira Mutante",
+      "tags": [
+        "bandeira",
+        "flu"
+      ],
+      "collection": "artefato da semana/6",
+      "description": "Bandeira com as cores do fluminense com faixas que mudam de cor quando o preenchimento das linhas aleatórias chega a 95% em cada faixa.\n\nAutor: João Pedro Moretti",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "Caminhantes sonoros",
+      "id": "caminhantes-sonoros",
+      "name": "Caminhantes sonoros",
+      "origin": "native",
+      "lastModified": 1790461079000,
+      "title": "Ncruzas sonoras",
+      "tags": [
+        "emergencia",
+        "agentes",
+        "generativo",
+        "som",
+        "handpan",
+        "p5js"
+      ],
+      "collection": "artefato da semana/6",
+      "description": "Caminhantes de duas populações percorrem uma rede radial de cruzamentos seguindo apenas regras locais: preferem trechos com rastro da própria população, evitam o rastro da outra, tendem a seguir reto e não voltam por onde acabaram de passar. O rastro evapora devagar.\nCada passagem risca um giz quase invisível numa camada que nunca se apaga. Nenhuma linha do código desenha a figura: ela emerge da soma das escolhas. A cor do giz muda com o tempo (vermelho → ocre → branco), registrando a ordem em que as trilhas surgiram.\nO som também emerge. A tela funciona como o tampo de um handpan em Ré Kurd: o ângulo em volta do centro define a nota e o centro é o ding. A densidade da música acompanha, devagar, a proporção de movimento em trilhas já formadas, e os caminhantes andam em impulsos no ritmo das batidas.\nUso\nToque ou clique na tela uma vez para liberar o som (os navegadores bloqueiam áudio automático).\nDeixe rodar por 3 a 4 minutos para ver a figura completa se formar.\nNo iPhone, desative o modo silencioso.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "bolor limoso",
+      "id": "bolor-limoso",
+      "name": "bolor limoso",
+      "origin": "native",
+      "lastModified": 1790460836437,
+      "title": "bolor limoso",
+      "tags": [],
+      "collection": "artefato da semana/6",
+      "description": "# Bolor Limoso — *Physarum polycephalum*\n\n**Artefato da Semana: Emergência**\nProgramação Criativa · p5.js\nAutora: Dala Kezen\n\n---\n\n## Sobre o projeto\n\nEste sketch simula o bolor limoso *Physarum polycephalum*, um organismo unicelular sem cérebro nem sistema nervoso. Mesmo assim, ele constrói redes de transporte eficientes entre fontes de alimento. Em 2010, pesquisadores japoneses colocaram o bolor sobre um mapa da região de Tóquio, com flocos de aveia no lugar das cidades. A rede que ele formou ficou muito parecida com a malha ferroviária real da região (Tero et al., 2010).\n\nA simulação usa alguns milhares de agentes. Cada um é uma \"partícula\" do plasmódio e segue apenas regras locais. A rede que aparece na tela não está desenhada em nenhuma parte do código: ela **emerge**.\n\n## Por que isto é emergência\n\nEmergência é quando um comportamento global complexo surge da interação de muitas partes simples, sem ter sido programado explicitamente. Neste código, nenhuma linha diz \"forme uma rede\", \"ligue os alimentos\" ou \"abandone as rotas inúteis\". Cada agente só enxerga alguns pixels à sua frente e não sabe que existe uma rede. Os tubos, as ramificações, os circuitos fechados e a reorganização da rede quando um alimento acaba surgem todos da soma dessas decisões locais.\n\n## Regras locais\n\nCada agente segue quatro regras:\n\n1. **Farejar:** lê a concentração do rastro químico em três pontos à sua frente (esquerda, centro e direita).\n2. **Virar:** gira em direção ao ponto de maior concentração.\n3. **Andar e depositar:** avança um passo, se a célula da frente estiver livre (cabe um agente por célula), e deposita rastro onde pisou.\n4. **Crescer:** de vez em quando, um agente \"brota\" outro ao seu lado. O plasmódio parte de uma gota pequena e cresce pela própria rede.\n\nO ambiente segue duas regras:\n\n5. **Difusão e evaporação:** o rastro se espalha para as células vizinhas e evapora um pouco a cada quadro.\n6. **Alimento e sal:** o alimento libera atrativo e torna mais valioso o rastro que estiver perto dele. O sal repele os agentes. Onde não há rastro, o alimento não age, e o agente continua explorando em linha reta.\n\n## O que emerge\n\n- Tubos de transporte que se engrossam onde há mais tráfego e desaparecem onde não há.\n- Redes que ligam as fontes de alimento, com circuitos redundantes, como no organismo real.\n- Reorganização espontânea: quando um alimento se esgota, os tubos que levavam até ele se desfazem e a rede se redistribui.\n- Morfologias diferentes (rede, malha larga, malha fina) mudando só os números das regras locais (teclas 1, 2 e 3).\n\n## Interação\n\n| Comando | Ação |\n|---|---|\n| Clique | Coloca alimento (floco de aveia); a rede cresce até ele |\n| SHIFT + arrastar | Espalha sal (repelente); a rede contorna a barreira |\n| 1 / 2 / 3 | Troca as regras locais (rede de transporte, malha larga, malha fina) |\n| T | Modo Tóquio: cidades da região de Kanto como alimento, com o mar como sal |\n| R | Reinicia a partir de uma gota no centro |\n| D | Reinicia com os agentes espalhados ao acaso |\n| A | Liga ou desliga o consumo do alimento |\n| C | Remove todo o alimento e o sal |\n| Espaço | Pausa |\n| S | Salva a tela em PNG |\n| H | Mostra ou oculta a ajuda |\n\n**Sugestão de demonstração:** pressione **D** e observe a malha caótica se organizar em rede. Depois clique em três ou quatro pontos distantes e observe a rede migrar até eles. Para a referência histórica, pressione **T**.\n\n## Como executar\n\n- **Editor do p5.js (editor.p5js.org):** crie um sketch novo e substitua o conteúdo de `index.html`, `sketch.js` e `style.css` pelos arquivos deste zip.\n- **Localmente:** abra `index.html` em um navegador com acesso à internet.\n\nA biblioteca p5.js **não** está incluída no zip. Ela é carregada por CDN (`p5@1.11.1` via jsDelivr) no `index.html`, conforme a orientação da disciplina.\n\n## Arquivos\n\n- `index.html`: página que carrega o p5.js por CDN e o sketch\n- `sketch.js`: toda a simulação, comentada em português\n- `style.css`: estilo da página (tela cheia, fundo escuro)\n- `README.md`: este documento\n\n## Notas técnicas\n\n- A simulação roda numa grade de até cerca de 300 mil células, ampliada para a tela, o que mantém a animação em torno de 60 quadros por segundo.\n- O modelo de agentes segue Jones (2010), incluindo a regra de ocupação (um agente por célula), que cria a pressão responsável pelo crescimento do plasmódio.\n- No modo Tóquio, as posições das cidades e o litoral são **aproximados e esquemáticos**, inspirados no experimento de Tero et al. (2010). Não são um mapa fiel.\n\n## Referências\n\n- JONES, J. Characteristics of pattern formation and evolution in approximations of *Physarum* transport networks. *Artificial Life*, v. 16, n. 2, p. 127–153, 2010.\n- TERO, A. et al. Rules for biologically inspired adaptive network design. *Science*, v. 327, n. 5964, p. 439–442, 2010.\n- NAKAGAKI, T.; YAMADA, H.; TÓTH, Á. Maze-solving by an amoeboid organism. *Nature*, v. 407, p. 470, 2000.\n\n---\n\n## Prompt utilizado\n\nEste projeto foi desenvolvido com auxílio do Claude (Anthropic), a partir do seguinte prompt:\n\n> Realize o artefato da semana, incluindo um ReadMe que inclua esse prompt. O tema será bolor limoso.Regras locais: milhares de agentes depositam um rastro químico, farejam à frente e viram em direção à maior concentração. O rastro difunde e evapora.\n> O que emerge: redes de transporte orgânicas e eficientes que se reorganizam sozinhas. É o caso clássico de \"rede ferroviária de Tóquio feita por bolor\". Visualmente, é a mais impactante das seis.\n> Interação: cliques depositam \"alimento\", e a rede se reconecta até ele.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "Trab6 ProgCriativa HAlmico",
+      "id": "trab6-progcriativa-halmico",
+      "name": "Trab6 ProgCriativa HAlmico",
+      "origin": "native",
+      "lastModified": 1790460522327,
+      "title": "Trab6-ProgCriativa-HAlmico",
+      "tags": [],
+      "collection": "artefato da semana/6",
+      "description": "title: Polycephalum tags: [p5js, generative, claude, agentes, emergencia, physarum, estigmergia]\nUma placa de Petri com gel de ágar e alguns flocos de aveia. Sobre ela, 16 mil agentes — cada um, uma \"gotinha\" do bolor limoso Physarum polycephalum. No início eles estão espalhados ao acaso e formam só uma espuma sem direção; em poucos segundos essa espuma se reorganiza sozinha numa rede de transporte que liga todos os flocos de aveia, com veias principais grossas e ramos finos que vão sendo abandonados. A simulação congela no resultado final. Um clique reinicia com uma nova placa.\nOnde está a emergência. Nenhuma linha do código descreve uma rede, um caminho ou uma ligação entre flocos. O programa só diz o que UM agente faz, olhando apenas para três pontos à sua frente:\nfarejar a quantidade de rastro à frente, à esquerda e à direita;\ngirar um pouco na direção que tem mais rastro;\ndar um passo (ou, se bateria no vidro, ficar e sortear outra direção);\ndeixar um pouco de rastro onde está.\nA tela é a memória coletiva: nenhum agente lembra de nada, mas todos leem o que os outros deixaram (estigmergia, o mesmo mecanismo das trilhas de feromônio das formigas). A rede aparece do equilíbrio entre duas forças: caminhos com mais rastro atraem mais agentes, que depositam mais rastro (realimentação positiva), enquanto a evaporação apaga tudo o que deixa de ser usado (realimentação negativa). A aveia é só uma fonte constante de rastro, e as trilhas que ligam fontes são as que continuam sendo reforçadas. A forma final muda a cada execução e não dá para prevê-la olhando o código — só rodando.\nO canvas é quadrado e se adapta ao tamanho da janela. A simulação roda numa grade de resolução fixa (300×300), então redimensionar a janela só muda a escala do desenho, não o comportamento. Não há semente fixa de aleatoriedade.\nTécnicas usadas:\nmodelo de agentes com sensores de Jeff Jones: estado mínimo (posição e ângulo), regra local de farejar–girar–andar–depositar;\ngrade de rastro com difusão parcial (mistura de cada célula com a média 3×3 das vizinhas, feita em duas passadas separáveis) e evaporação a cada passo;\nagentes guardados em arrays tipados (Float32Array), já que são milhares e cada um guarda só três números; direções dos sensores laterais obtidas por identidades trigonométricas, com duas chamadas de cos/sin por agente em vez de seis;\ncor em duas camadas: o rastro espalhado tinge o gel de amarelo (o halo); a densidade de agentes por célula, suavizada no tempo por uma média móvel, desenha a veia nítida. Os dois valores passam por 1 − e^(−v/k), que comprime valores altos sem saturar;\ndesenho da grade inteira por pixels de uma p5.Image (loadPixels/updatePixels), ampliada com image();\ntextura do ágar com noise() calculado uma única vez;\nflocos de aveia distribuídos por \"melhor candidato\", para não caírem amontoados.\nReferências sobre o algoritmo:\nJeff Jones, Characteristics of pattern formation and evolution in approximations of Physarum transport networks, Artificial Life, 2010 — http://eprints.uwe.ac.uk/15260/1/artl.2010.16.2.pdf\nSage Jenson, Physarum — https://sagejenson.com/physarum\nAutor: Henrique Almico Dias da Silva",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "helena giovanna artefato 6 emergencia (1)",
+      "id": "helena-giovanna-artefato-6-emergencia-1",
+      "name": "helena giovanna artefato 6 emergencia (1)",
+      "origin": "native",
+      "lastModified": 1790460259798,
+      "title": "Helena Giovanna Artefato 6 - Emergência",
+      "tags": [
+        "p5js",
+        "creative-coding",
+        "emergent-behavior",
+        "boids",
+        "simulation",
+        "swarm-intelligence",
+        "interactive"
+      ],
+      "collection": "artefato da semana/6",
+      "description": "Uma simulação interativa de inteligência de enxame desenvolvida em p5.js, utilizando o clássico algoritmo de Boids de Craig Reynolds.  Feito pelo Google Gemini.\n\nO projeto demonstra como comportamentos de grupo orgânicos e complexos (semelhantes a cardumes de peixes ou bandos de aves) podem emergir do alinhamento de três regras locais simples:\n\n- Separação: Evita aglomeração e colisão com vizinhos próximos.\n- Alinhamento: Harmoniza a direção e velocidade com o grupo local.\n- Coesão: Mantém o grupo unido ao atrair o agente para a posição média dos vizinhos.\n\nInteratividade\n- Clique / Arraste (Mouse): Cria um ponto de atração para o enxame.\n- Teclado (Qualquer tecla): Alterna o ponteiro para o modo Repulsão/Predador, dispersando o grupo.\n\nPrompt Utilizado: \"Crie um projeto de programação criativa que explore o conceito de emergência, onde comportamentos complexos surgem a partir de regras simples, sem serem programados diretamente. O projeto pode usar agentes, partículas ou outros elementos que interajam entre si, gerando padrões ou comportamentos inesperados. Use p5.js e inclua alguma forma de interação com o usuário.\"",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "Artefato 6 Gabriella Murta",
+      "id": "artefato-6-gabriella-murta",
+      "name": "Artefato 6   Gabriella Murta",
+      "origin": "native",
+      "lastModified": 1790459944306,
+      "title": "Artefato 6 - Emergência",
+      "tags": [
+        "emergence",
+        "ia",
+        "generative"
+      ],
+      "collection": "artefato da semana/6",
+      "description": "Autora: Gabriella Pinheiro\n\nCódigo criado com IA do Claude, a partir de uma conversa anterior sobre os códigos das aulas. \n\nHoje preciso de um código mais complexo, que seja emergente, ou seja, que o fenômeno não tenha sido explicitamente desenhados ou previstos pelo programador. A ideia é ter uma tela preta com linhas horizontais brancas de diferentes espessuras, variando entre 2pt a 5pt. O espaço entrelinhas de 5pt a 8pt. As linhas estão paralelas, até que o movimento é iniciado com o toque do mouse em qualquer parte da tela, que gera um relevo com a extrusão da linha. A partir desse ponto começa a surgir uma sequencia de relevos sequenciais, como um rastro, pois o relevo anterior não some. A direção da extrusão é aleatória, no entanto, toda vez  que esbarrar em uma margem da tela ela deve refletir de volta também com ângulo aleatório. Se o rastro de extrusão bater em outro, ele dobra de tamanho de altura e continua seguindo em frente. O movimento se encerra quando o mouse for clicado outra vez, ou quando atingir 75% de espaço na tela. Aqui está uma imagem de referência estética.\n\nForam feitas mudanças na velocidade do rastro. \nApesar de ter pedido linhas e ele ter feito pontos, eu gostei do resultado. \n\nA princípio ele não queria mostrar o código que gerava a aleatoriedade no rastro, mas eu pedi para explicar isso depois.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "sketch emergencia flocking",
+      "id": "sketch-emergencia-flocking",
+      "name": "sketch emergencia flocking",
+      "origin": "native",
+      "lastModified": 1790459805959,
+      "title": "",
+      "tags": [],
+      "collection": "artefato da semana/6",
+      "description": "# Flocking — Emergência em Programação Criativa\n\n**Autora:** Gabi\n\n## Descrição\n\nEste sketch é uma simulação de *flocking* (cardume), inspirada no clássico\nmodelo de **Craig Reynolds (1987)**, criado para explorar o conceito de\n**emergência** discutido na aula sobre agentes da disciplina EEL670 —\nLinguagens de Programação.\n\nCada agente (boid) do sketch segue apenas **três regras locais**, baseadas\nunicamente na posição e velocidade de seus vizinhos mais próximos:\n\n1. **Separação** — afasta-se de vizinhos muito próximos, evitando colisões.\n2. **Alinhamento** — ajusta sua velocidade para acompanhar a direção média\n   dos vizinhos.\n3. **Coesão** — move-se em direção ao centro de massa dos vizinhos.\n\nNenhum boid tem conhecimento do cardume como um todo, nem existe qualquer\nregra global do tipo \"forme um V\" ou \"siga o líder\". O comportamento\ncoletivo de cardume — grupos que se formam, se dividem, contornam\nobstáculos imaginários e se reorganizam continuamente — **emerge** apenas\nda interação repetida dessas regras simples e locais entre centenas de\nagentes independentes. É exatamente esse tipo de padrão não previsto\nexplicitamente pela programadora, mas resultante da dinâmica do sistema,\nque caracteriza a emergência em programação criativa.\n\n## Interação\n\n- Clique em qualquer lugar da tela para adicionar novos boids ao cardume\n  naquele ponto, perturbando o sistema e observando como ele se\n  reorganiza.\n\n## Tecnologia\n\nFeito com [p5.js](https://p5js.org/) (carregado via CDN em `index.html`).\nArquivos do sketch: `index.html` e `sketch.js`.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "o ultimo folego",
+      "id": "o-ultimo-folego",
+      "name": "o ultimo folego",
+      "origin": "native",
+      "lastModified": 1790459734115,
+      "title": "",
+      "tags": [],
+      "collection": "artefato da semana/6",
+      "description": "# Último Fôlego — Emergência\n\nUm sketch em **p5.js** sobre uma batalha entre sobrevivência e ameaça, construído a partir do conceito de **emergência**.\n\nA proposta brinca com a palavra “emergência” em dois sentidos: como uma situação crítica dentro da narrativa visual e como um fenômeno de **emergência em creative coding**, no qual comportamentos complexos surgem da interação de regras simples.\n\n---\n\n## 1. Conceito\n\nO sketch representa um personagem tentando resistir ao ataque de uma entidade ameaçadora.\n\nÀ primeira vista, a cena pode ser interpretada como uma batalha: existe um sobrevivente, um inimigo, energia sendo projetada entre os dois e um ambiente em estado de instabilidade.\n\nPorém, a imagem não é construída apenas colocando manualmente cada elemento em uma posição específica.\n\nGrande parte da atmosfera da cena surge a partir de **agentes autônomos** que possuem regras simples de comportamento e reagem ao ambiente.\n\nÉ justamente aí que acontece a brincadeira conceitual do projeto:\n\n> **A emergência da batalha é representada por uma emergência computacional.**\n\n---\n\n## 2. A emergência dentro da narrativa\n\nNa história do sketch, existe uma situação de emergência.\n\nO personagem está sob pressão constante e precisa resistir ao ataque da criatura. Conforme sua resistência diminui, o ambiente se torna mais instável, a ameaça ganha importância visual e a composição passa a transmitir uma sensação de caos.\n\nA emergência, nesse caso, significa uma situação que exige uma resposta imediata.\n\nO jogador participa dessa situação através do mouse:\n\n* segurar o mouse representa **resistir ao ataque**;\n* soltar o mouse representa **perder resistência**;\n* a resistência influencia o estado do personagem;\n* a proximidade e o comportamento da ameaça interferem na movimentação dos elementos da cena.\n\nAssim, a imagem não representa apenas uma batalha congelada. Ela representa um sistema em constante tensão.\n\n---\n\n## 3. Emergência em Creative Coding\n\nNo creative coding, **emergência** pode ser entendida como o aparecimento de comportamentos ou padrões complexos a partir da interação de elementos relativamente simples.\n\nEm vez de determinar manualmente:\n\n> “este elemento deve estar exatamente aqui e se mover exatamente desta maneira”,\n\no sketch define regras locais para os agentes.\n\nCada agente possui, por exemplo:\n\n* posição;\n* velocidade;\n* aceleração;\n* forças que podem influenciar seu movimento;\n* percepção de outros agentes;\n* reação à ameaça;\n* atração ou aproximação do sobrevivente.\n\nAs regras são relativamente simples individualmente.\n\nPorém, quando muitos agentes interagem simultaneamente, o resultado coletivo pode produzir padrões que não foram desenhados diretamente pelo código.\n\nÉ essa característica que torna o comportamento **emergente**.\n\n---\n\n## 4. Como os agentes funcionam\n\nOs agentes do sketch seguem diferentes regras de comportamento.\n\n### Separação\n\nOs agentes tentam evitar ficar excessivamente próximos uns dos outros.\n\nIsso impede que todo o sistema se transforme em um único ponto e contribui para a distribuição das partículas pelo espaço.\n\n### Alinhamento\n\nOs agentes observam a movimentação dos vizinhos e tendem a ajustar suas velocidades.\n\nIsso cria uma sensação de fluxo coletivo.\n\n### Coesão\n\nOs agentes também são influenciados pela posição dos outros agentes, criando uma tendência de permanecerem relacionados ao grupo.\n\n### Reação à ameaça\n\nA criatura funciona como uma força externa sobre o sistema.\n\nOs agentes podem se afastar ou alterar seu comportamento quando estão próximos da ameaça.\n\n### Atração pelo sobrevivente\n\nAlguns agentes também são influenciados pelo personagem central, criando concentração e circulação ao seu redor.\n\n---\n\n## 5. Do comportamento individual ao comportamento coletivo\n\nO ponto mais importante do sketch está nessa passagem:\n\n**regras simples → interação → comportamento coletivo → padrão visual**\n\nUm agente individual não possui conhecimento da imagem inteira.\n\nEle não sabe que precisa “desenhar uma batalha”.\n\nEle apenas responde às condições ao seu redor.\n\nQuando centenas de agentes fazem isso simultaneamente, entretanto, aparecem:\n\n* fluxos;\n* concentrações;\n* dispersões;\n* regiões de maior atividade;\n* movimentos circulares;\n* alterações na densidade visual;\n* sensação de caos e organização ao mesmo tempo.\n\nEsses padrões são propriedades do **sistema**, e não de um agente específico.\n\n---\n\n## 6. A brincadeira entre os dois significados de emergência\n\nO principal conceito do projeto está na sobreposição dos dois significados.\n\n### Emergência narrativa\n\nO personagem está enfrentando uma **situação de emergência**.\n\nExiste perigo, pressão e necessidade de resistência.\n\n### Emergência computacional\n\nA imagem é parcialmente produzida por um **sistema emergente**.\n\nO resultado visual não é totalmente especificado antecipadamente. Ele aparece a partir da interação entre os agentes e as regras do sistema.\n\nDessa maneira, a própria forma de construção da obra conversa com aquilo que ela representa.\n\nA batalha é emergente porque suas condições estão sempre mudando.\n\nE a imagem também é emergente porque seus padrões visuais surgem da interação entre elementos simples.\n\n---\n\n## 7. O papel do acaso\n\nO sketch também utiliza variações e comportamentos que impedem que todos os agentes produzam exatamente o mesmo movimento.\n\nIsso é importante porque emergência não significa simplesmente gerar uma imagem aleatória.\n\nO objetivo é combinar:\n\n**regras + interação + variação**\n\nO acaso introduz pequenas diferenças entre os agentes, enquanto as regras estabelecem limites para seus comportamentos.\n\nO resultado fica entre a ordem e o caos.\n\nSe todos os elementos fossem completamente previsíveis, a imagem seria apenas uma sequência determinada de instruções.\n\nSe tudo fosse completamente aleatório, seria difícil identificar um comportamento coletivo.\n\nO sistema procura justamente esse meio-termo.\n\n---\n\n## 8. O usuário como parte do sistema\n\nA interação do usuário também participa da emergência.\n\nAo pressionar e segurar o mouse, o jogador interfere na resistência do personagem e, consequentemente, nas condições do sistema.\n\nIsso significa que o usuário não está apenas observando a cena.\n\nEle altera uma das variáveis que influenciam seu comportamento.\n\nA experiência passa então por três níveis:\n\n**usuário → sistema → imagem**\n\nO usuário modifica o estado do sistema, o sistema recalcula os comportamentos dos agentes e esses comportamentos modificam a imagem.\n\n---\n\n## 9. Processo criativo\n\nO processo começou com a ideia visual de uma batalha em situação crítica: um personagem tentando sobreviver enquanto uma entidade o ameaça.\n\nA partir dessa ideia, elementos tradicionais de uma cena de batalha foram transformados em componentes de um sistema generativo.\n\nEm vez de utilizar partículas apenas como decoração, elas passaram a possuir regras próprias.\n\nO objetivo foi fazer com que o ambiente parecesse estar **reagindo à batalha**, e não simplesmente representar uma imagem estática de uma batalha.\n\nA ameaça passou a funcionar como uma influência sobre os agentes, enquanto o sobrevivente funciona como outro centro de influência.\n\nAssim, a composição final surge da disputa entre diferentes forças.\n\n---\n\n## 10. Entre ordem e caos\n\nUma das características visuais buscadas no sketch é a tensão entre **ordem e caos**.\n\nOs agentes possuem regras que organizam seus movimentos, mas essas regras acontecem simultaneamente em muitos indivíduos.\n\nPequenas mudanças podem alterar a configuração coletiva.\n\nIsso produz uma estética adequada ao conceito da obra:\n\n* a batalha possui uma estrutura;\n* os personagens possuem posições definidas;\n* existem forças e relações claras;\n* mas o ambiente permanece instável.\n\nA organização existe, mas nunca é completamente rígida.\n\n---\n\n## 11. Por que usar agentes?\n\nO uso de agentes torna o conceito de emergência parte do próprio processo de criação.\n\nSe cada partícula tivesse sua posição e trajetória determinadas manualmente, a emergência estaria apenas sendo representada visualmente.\n\nCom os agentes, ela também está presente **na maneira como a imagem é produzida**.\n\nPortanto, o código não apenas fala sobre emergência.\n\nEle utiliza emergência como uma estratégia de criação.\n\n---\n\n## 12. Conclusão\n\n**Último Fôlego — Emergência** utiliza uma situação de batalha como metáfora para explorar sistemas emergentes em creative coding.\n\nA emergência aparece simultaneamente como:\n\n> **uma situação de perigo dentro da narrativa**\n\ne\n\n> **um comportamento coletivo que surge da interação entre agentes computacionais.**\n\nA intenção é que exista uma relação entre **o que a imagem representa** e **como ela é construída**.\n\nO sobrevivente tenta resistir a uma emergência.\n\nOs agentes, por sua vez, produzem padrões emergentes.\n\nAssim, a batalha não é apenas o tema do sketch: ela também serve como modelo para pensar a própria criação generativa.\n\n**Uma batalha produzida por emergência para representar uma situação de emergência.**",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "2026 09 25 CarolinaAbdu",
+      "id": "2026-09-25-carolinaabdu",
+      "name": "2026 09 25 CarolinaAbdu",
+      "origin": "native",
+      "lastModified": 1790459539161,
+      "title": "",
+      "tags": [],
+      "collection": "artefato da semana/6",
+      "description": "A obra parte da ideia de agentes como entidades simples que, a cada passo, atualizam seu estado segundo uma regra e deixam um rastro na tela. Sete caminhantes percorrem o papel em linha reta até encontrarem a moldura ou o rastro de outro agente; nesse momento, registram a reta percorrida, com espessura e cor proporcionais ao espaço livre que conseguiram atravessar, e sorteiam uma nova direção. Ao fundo, contornos fechados — um agente por vértice — vagam lentamente e deixam sombras suaves, enquanto, nos pontos de cruzamento, crescem pequenos nós por agregação, nos quais cada círculo encosta no mais próximo e a linha fina que os liga revela a relação de parentesco entre eles. A IA foi utilizada como ferramenta de apoio no desenvolvimento do código em p5.js, auxiliando na organização dos agentes em classes, na implementação da leitura do próprio rastro e na combinação das diferentes camadas da composição. A partir dessas sugestões, o código foi adaptado e refinado para alcançar o resultado visual desejado.\n\n**Prompt sugestivo:**\n\n> Crie um sketch em p5.js (versão 2), em um canvas de 900×900, usando os conceitos da aula de Agentes: estado, regra e rastro. A composição deve ter três camadas sobre um fundo cor de papel com uma moldura fina. Ao fundo, alguns contornos fechados com um agente por vértice: cada vértice treme ao acaso enquanto o centro da forma persegue alvos sorteados, desenhados com splineVertex e traço bem transparente. Por cima, cerca de sete agentes \"inteligentes\", organizados em uma classe, que andam em linha reta e, ao tocar a moldura ou cruzar um rastro (o próprio ou o de outro agente), desenham a reta percorrida e sorteiam uma nova direção. A espessura e a cor de cada reta devem variar com o comprimento, indo de um tom frio a um tom quente com lerpColor. Por fim, em alguns pontos de cruzamento bem espalhados, faça crescer aglomerados de círculos por agregação: cada círculo novo encosta no mais próximo, e uma linha fina liga cada círculo a quem o gerou. Use uma seed sorteada a cada execução e anime o processo. A tecla espaço deve gerar uma nova composição, Enter deve refazer a atual, P deve pausar e S deve salvar a imagem.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "Artefato6ArturTaboada",
+      "id": "artefato6arturtaboada",
+      "name": "Artefato6ArturTaboada",
+      "origin": "native",
+      "lastModified": 1790459446084,
+      "title": "",
+      "tags": [],
+      "collection": "artefato da semana/6",
+      "description": "# Tecido\n\nEste sketch é um estudo de **emergência**. Nenhuma linha do programa descreve a forma que aparece na tela. O que existe são fios fechados de nós e um punhado de regras locais — cada nó só enxerga os dois vizinhos do próprio fio e quem estiver a poucos pixels dele. Todo o resto (lóbulos, dobras, paredes de contato, a parada do crescimento) é consequência, não desenho.\n\n## As regras\nCada nó, a cada quadro, obedece a quatro regras. Nenhuma delas menciona lóbulo, dobra, parede ou contorno.\n\n1. **Coesão** — fique a uma distância de repouso fixa dos seus dois vizinhos de fio.\n2. **Repulsão** — afaste-se de qualquer nó que entre no seu raio pessoal, inclusive de um nó de outro fio. É a única regra que atravessa a fronteira entre os tecidos.\n3. **Suavização** — caminhe na direção do ponto médio dos dois vizinhos. É o que impede o fio de formar quinas.\n4. **Crescimento** — sorteie uma aresta; se o ponto médio dela ainda tiver vizinhança folgada, insira um nó novo ali.\n\n## O que emerge\n- **As dobras.** A regra 4 faz o fio ganhar comprimento mais depressa do que o espaço disponível cresce. Um fio fechado mais longo do que a área comporta não tem para onde ir a não ser se enrolar: é a regra 2 que resolve o excesso, empurrando as partes que se encostam. O resultado são circunvoluções que lembram coral cerebriforme ou córtex — sem que exista nada no código sobre curvatura, ramificação ou espessura de lóbulo.\n- **O ritmo desigual.** Como a folga varia de ponto para ponto, partes do mesmo fio disparam enquanto outras travam. É dessa diferença de ritmo que vem o nome *crescimento diferencial*, e é ela que produz um contorno irregular a partir de uma semente perfeitamente circular.\n- **As paredes de contato.** Quando dois tecidos se encostam, cada um empurra o outro pela regra 2 até as duas bordas ficarem paralelas. Aparece entre eles uma parede quase reta, como em tecido biológico ou espuma — e não há uma única linha de código sobre fronteiras, colisão entre tecidos ou divisão do plano.\n- **A morte por sufocamento.** O crescimento não para por um contador de quadros nem por um número máximo de nós: para quando cada ponto candidato já tem vizinhos demais em volta. O tecido preenche o espaço disponível e simplesmente cessa. Quando o último tecido para, a imagem se fixa.\n- **A assimetria final.** O tecido que teve espaço livre pela frente termina com lóbulos largos e lisos; o que nasceu apertado entre outros dois termina denso e enrugado. As sementes são idênticas; o que as diferencia é a vizinhança que encontraram.\n\n## Detalhes de implementação\n- A regra 2 seria O(n²) se cada nó perguntasse a distância a todos os outros. O sketch mantém uma **grade espacial** com célula do tamanho do raio de repulsão, e cada nó só conversa com as nove células ao redor. Isso é o que torna a regra de fato local, e permite manter alguns milhares de nós em tempo real.\n- O deslocamento de cada nó é limitado a uma fração do passo, para que o fio nunca dê um salto e se atravesse.\n- O tecido cresce dentro de uma **lâmina fechada**: as bordas empurram de volta, e é por isso que o contorno se achata contra a moldura, do mesmo modo que se achata contra um tecido vizinho.\n- A paleta é escolhida na constante `PALETA`, no alto do arquivo: `0` para a lâmina clara, `1` para o negativo.\n- Uma camada de memória registra o contorno de tempos em tempos, mas só enquanto o tecido ainda está crescendo. O que fica são **anéis de crescimento**: o registro de por onde a borda já passou. Tecido parado não deixa mais rastro, então a imagem final não satura.\n- Todas as medidas derivam de `min(windowWidth, windowHeight)` — passo, raio de repulsão, margem, espessura de traço —, e `windowResized()` recalcula tudo, de modo que a composição mantém as proporções em qualquer formato de tela.\n\n## Autor\nArtur Taboada Dios Carvalho\n\n## Como visualizar este projeto\n\n**Usando o ambiente online (p5front)**\n1. Acesse o ambiente de desenvolvimento utilizado na disciplina: [https://esperanc.github.io/p5front/](https://esperanc.github.io/p5front/).\n2. Copie todo o conteúdo do arquivo `sketch.js` deste zip e cole na área de edição de código do site.\n3. O resultado será renderizado na tela de visualização após o botão \"Run\" ser clicado. O tecido leva alguns segundos para se formar; cada execução parte de sementes diferentes.\n\nNenhuma biblioteca externa é necessária.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "thumbnail.png",
+        "README.md"
+      ]
+    },
+    {
+      "folder": "artefato 6",
+      "id": "artefato-6",
+      "name": "artefato 6",
+      "origin": "native",
+      "lastModified": 1790459294683,
+      "title": "O Arquivo que se Organiza Sozinho",
+      "tags": [
+        "p5.js",
+        "arte generativa",
+        "emergência",
+        "agentes",
+        "auto-organização"
+      ],
+      "collection": "artefato da semana/6",
+      "description": "# O Arquivo que se Organiza Sozinho\n\n**Autor:** Arthur Ramos  \n**Artefato da Semana 6 — Emergência**\n\n## Descrição\n\nEste sketch representa um arquivo inicialmente desorganizado. Pequenos documentos coloridos ficam espalhados pelo espaço e agentes autônomos circulam entre eles. Sem mapa, chefe ou posição final predefinida, os agentes recolhem documentos isolados e os soltam perto de outros da mesma categoria. Aos poucos, surgem ilhas de cor que não foram desenhadas diretamente no código.\n\n## Onde está a emergência?\n\nCada agente conhece apenas o que está perto dele. As regras locais são:\n\n1. caminhar com pequenas mudanças aleatórias de direção;\n2. quando estiver vazio, recolher um documento isolado que encontrar;\n3. quando estiver carregando, procurar documentos da mesma cor na vizinhança;\n4. soltar a carga ao lado de um documento semelhante, se houver espaço;\n5. atravessar uma borda e reaparecer na borda oposta.\n\nNenhuma regra manda criar círculos, pilhas ou regiões específicas. Mesmo assim, o acúmulo dessas decisões individuais produz agrupamentos globais. A forma, a quantidade e a posição das ilhas mudam a cada execução.\n\n## Interação\n\n- **Clique ou toque:** espalha novos documentos perto do cursor.\n- **Espaço:** pausa ou continua o sistema.\n- **A:** mostra ou esconde os agentes e seus rastros.\n- **R:** reinicia com outra distribuição aleatória.\n- **S:** salva a imagem atual em PNG.\n\n## Adaptação à tela\n\nO canvas é criado com `windowWidth` e `windowHeight`. Quantidade de agentes, quantidade de documentos, dimensões e raios de percepção são calculados a partir da área disponível. Ao redimensionar a janela, uma nova simulação adequada ao novo espaço é iniciada.\n\n## Arquivos\n\n- `index.html` — página que carrega o p5.js e o sketch;\n- `style.css` — remove margens e ocupa toda a janela;\n- `sketch.js` — regras, simulação e desenho;\n- `thumbnail.png` — imagem representativa do processo.\n\n\n## Prompt usado\n\n\"Crie um sketch generativo e responsivo em p5.js sobre o conceito de emergência. A ideia é representar um arquivo que se organiza sozinho: vários documentos coloridos começam espalhados pela tela, enquanto pequenos agentes se movimentam livremente. Cada agente deve recolher documentos isolados e soltá-los perto de outros da mesma cor. Nenhum agente conhece a organização completa, mas essas regras locais devem fazer surgir grupos de documentos ao longo do tempo. O canvas deve usar windowWidth e windowHeight e gerar uma composição diferente a cada execução. Comente o código para facilitar a compreensão.\"",
+      "hasThumb": true,
+      "files": [
+        "thumbnail.png",
+        "index.html",
+        "README.md",
+        "sketch.js",
+        "style.css"
+      ]
+    },
+    {
+      "folder": "Artefato 6 Olho d Agua Angel Mansilla",
+      "id": "artefato-6-olho-d-agua-angel-mansilla",
+      "name": "Artefato 6 Olho d Agua Angel Mansilla",
+      "origin": "p5editor",
+      "lastModified": 1790459159733,
+      "title": "",
+      "tags": [],
+      "collection": "artefato da semana/6",
+      "description": "# Olho d’água\n\nAutor: Angel Mansilla  \nDRE: 123691897\n\nA ideia foi fazer um pântano que esconde um olho, o nome brinca com [olho-d’água](https://pt.wikipedia.org/wiki/Nascente), que é como se chama uma nascente, e aqui a nascente fica no fundo da pupila, então no começo parece só um brejo parado, coberto de lentilha-d’água e [vitórias-régias](https://pt.wikipedia.org/wiki/Vit%C3%B3ria-r%C3%A9gia).\n\nCada toque na água faz uma onda que afasta as plantas, e pelas clareiras vai aparecendo o fundo até dar para reconhecer a íris e a pupila, aí o olho acorda, pisca, e a corrente da nascente leva as vitórias-régias para as margens, onde elas viram os cílios, sem nenhuma folha ter um lugar marcado, os cílios surgem do encontro entre a corrente, a margem e as folhas vizinhas.\n\nToda a água da cena são 4.000 parcelas, nenhuma surge nem some, elas só mudam de estado ao longo do dia, virando gelo, vapor, nuvem, chuva e neve, e cada parcela e cada planta é um agente com regras locais, como na aula de agentes, o botão Agentes mostra esse nível de baixo.\n\nEm volta coloquei uma estrada com carros e pessoas, um avião que passa entre as nuvens e uma placa, e quando o olho está acordado ele fixa os veículos, junta luz na pupila e dispara um raio que os pulveriza, enquanto quem está na estrada sai correndo desesperado.\n\nToque na água para abrir clareiras, gire a roda do tempo ou arraste o sol e a lua para mudar a hora, espaço pausa, as setas mudam a hora aos poucos, V mostra os agentes e R recomeça o pântano, é só abrir `index.html`, o p5.js está junto na pasta, então não precisa de internet.\n\nEstá tudo feito por código em p5.js, usando agentes, `random()`, `noise()`, campos de fluxo e ruído de Worley, e o lago e as nuvens são pintados com WebGL2 para ficar na resolução da tela.\n\n## Participação da IA\n\nEu escrevi a ideia e pedi ao **Claude Code** que a implementasse, depois fui pedindo cada acréscimo e ajuste olhando o resultado, a interface, as nuvens, a chuva, o sol e a lua, a estrada, o avião, a placa, o raio e a fuga das pessoas, as ideias e as escolhas foram minhas, o Claude Code escreveu o código, testou no navegador e ajudou com este texto, e o Codex ajudou a corrigir o caminhar das pessoas e o visual delas e dos carros.\n\n## Prompt principal\n\n> Transforme o lago existente em um pântano que esconde um olho. O visitante descobre esse olho ao clicar na água e afastar a vegetação. As vitórias-régias, inicialmente espalhadas, se reorganizam nas margens e passam a formar os cílios.\n\nEsse foi o começo do pedido, que seguia com os detalhes de cada etapa, o pântano do início, os cliques abrindo clareiras, as vitórias-régias virando cílios com regras locais e a pupila que segue o toque e pisca quando o olho é descoberto.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "README.md",
+        "thumbnail.png",
+        "p5.min.js",
+        "p5-LICENSE.txt"
+      ]
+    },
     {
       "folder": "MariaEduardaAraujo Artefato 5",
       "id": "mariaeduardaaraujo-artefato-5",
       "name": "MariaEduardaAraujo Artefato 5",
       "origin": "native",
-      "lastModified": 1789935620353,
+      "lastModified": 1790089193373,
       "title": "",
       "tags": [],
       "collection": "artefato da semana/5",
@@ -297,31 +1063,6 @@
         "style.css",
         "README.md",
         "thumbnail.png"
-      ]
-    },
-    {
-      "folder": "artefato5 natan azevedo gomes",
-      "id": "artefato5-natan-azevedo-gomes",
-      "name": "artefato5 natan azevedo gomes",
-      "origin": "native",
-      "lastModified": 1789917375530,
-      "title": "Samus enfrentando Metroid",
-      "tags": [
-        "generative",
-        "ai",
-        "gemini",
-        "metroid",
-        "samus"
-      ],
-      "collection": "",
-      "description": "Um sketch da personagem Samus lutando contra um Metroid.\n\nAutor: Natan Azevedo Gomes\n\nPrompt: Crie um sketch estático (sem animação) em p5.js. Apresente o resultado sob a forma de um único script em javascript a ser colado num ambiente de desenvolvimento como o editor.p5js.org. O sketch pode usar as primitivas background, point, line, rect, ellipse, triangle, circle, square, quad, arc ou bezier. É permitido usar comandos de estilização como stroke, fill, strokeWeight, etc. O programa fonte deve ser documentado para ser explicado para uma plateia de iniciantes em programação de computadores. O sketch pode usar coordenadas polares, podendo usar as funções sin e cos, e transformadas afins como translate, rotate, scale e shear (usando push e pop). Pode também usar as funções random, randomGaussian, noise e noiseDetail. Pode também usar agentes. O objetivo é desenhar uma arte bonita da personagem Samus Aran enfrentando um Metroid em uma área cavernosa, com fundo, chão e teto. Inclua estalagmites e outros elementos cavernosos.  Certifique-se que os projéteis de gelo estão saindo do canhão da personagem. O sketch deve se adequar ao tamanho da janela, usando windowWidth e windowHeight.",
-      "hasThumb": true,
-      "files": [
-        "index.html",
-        "sketch.js",
-        "style.css",
-        "thumbnail.png",
-        "README.md"
       ]
     },
     {

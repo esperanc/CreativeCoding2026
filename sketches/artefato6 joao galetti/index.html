@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Micélio — Artefato 6</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+<style>
+  :root {
+    --bg: #0b0e14;
+    --panel: #12161f;
+    --text: #d8dee9;
+    --muted: #8b93a5;
+    --accent: #e2b13c;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px 16px 64px;
+  }
+  header { text-align: center; max-width: 720px; margin-bottom: 22px; }
+  h1 { font-size: 1.8rem; margin-bottom: 6px; letter-spacing: 0.3px; }
+  header p { color: var(--muted); line-height: 1.5; font-size: 0.95rem; }
+  #canvas-holder {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.45);
+    line-height: 0;
+  }
+  #canvas-holder canvas { display: block; cursor: pointer; }
+  section.code {
+    width: 100%;
+    max-width: 960px;
+    margin-top: 48px;
+  }
+  section.code h2 {
+    font-size: 1.1rem;
+    color: var(--muted);
+    font-weight: 600;
+    border-bottom: 1px solid #232838;
+    padding-bottom: 10px;
+    margin-bottom: 0;
+  }
+  pre {
+    margin: 0;
+    border-radius: 0 0 10px 10px;
+    max-height: 640px;
+    overflow: auto;
+  }
+  pre code.hljs {
+    padding: 20px !important;
+    font-size: 0.82rem;
+    line-height: 1.55;
+    border-radius: 0 0 10px 10px;
+  }
+  footer {
+    margin-top: 40px;
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Micélio</h1>
+  <p>
+    Uma rede de agentes que crescem como pontas de hifa: cada uma segue seu próprio
+    vigor, sente nutrientes por perto e evita crescer sobre a parte da rede que já é
+    densa demais. Nenhum agente conhece a estrutura inteira — a forma ramificada
+    que conecta as origens aos nutrientes emerge só de repetir a mesma regra local
+    milhares de vezes. Clique no desenho (ou pressione espaço) para gerar outra rede.
+  </p>
+</header>
+
+<div id="canvas-holder"></div>
+
+<section class="code">
+  <h2>sketch.js</h2>
+  <pre><code class="language-javascript" id="code-block"></code></pre>
+</section>
+
+<footer>João Galetti — Programação Criativa</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/javascript.min.js"></script>
+<script src="sketch.js"></script>
+<script>
+  fetch('sketch.js')
+    .then(r => r.text())
+    .then(txt => {
+      const el = document.getElementById('code-block');
+      el.textContent = txt;
+      hljs.highlightElement(el);
+    })
+    .catch(() => {});
+</script>
+
+</body>
+</html>
