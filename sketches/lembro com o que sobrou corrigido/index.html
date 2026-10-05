@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#efece4">
+  <title>Lembro com o que sobrou — arte tipográfica</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/p5@2.2.3/lib/p5.min.js"></script>
+  <script defer src="sketch.js"></script>
+</head>
+<body>
+  <main>
+    <header>
+      <div class="eyebrow"><span>ESTUDO DE UMA AUSÊNCIA</span><span>TIPOGRAFIA / 07</span></div>
+      <div class="intro"><h1>Lembro com<br>o que <em>sobrou.</em></h1><p>Uma lembrança ocupa<br>o lugar de outra.<br><span>Escolha o que você não quer perder.</span></p></div>
+    </header>
+    <section class="interaction" aria-label="Controles">
+      <div><span class="step">01</span> Selecione uma lembrança. <span class="step">02</span> Segure para reconstruí-la.</div>
+      <button id="recover" aria-label="Reconstruir lembrança selecionada">Segure para lembrar <span aria-hidden="true">↗</span></button>
+    </section>
+    <section id="stage" aria-label="Quatro lembranças tipográficas interativas">
+      <div id="canvas-host"></div>
+      <div id="memories"></div>
+      <p id="loading">As lembranças estão chegando…</p>
+    </section>
+    <section class="aftermath" aria-label="Consequências">
+      <p id="event" role="status" aria-live="polite">Para devolver um rosto, de onde você tiraria as letras?</p>
+      <div class="counters"><span><b id="pool">0</b> letras, sempre</span><span><b id="scar-count">0</b> com vestígios</span></div>
+    </section>
+    <footer>
+      <p>Arraste uma letra entre lembranças. Duplo clique devolve à origem.<br><span>Teclado: 1–4 escolhem · segure espaço para lembrar · Esc solta.</span></p>
+      <div class="footer-actions"><button id="pause" aria-pressed="false">Pausar movimento</button><button id="reset">Começar outra memória</button></div>
+    </footer>
+    <details><summary>Sobre o que permanece</summary><p>Há um único conjunto de letras. Reconstruir uma lembrança abre vazios em outras. As letras da voz gaguejam; as do toque resistem; as do calor flutuam; as do rosto guardam sua posição. Cada passagem acrescenta um vestígio. Devolver não desfaz.</p><p>As frases abaixo das imagens são transcrições do que restou. Ecos e sombras são rastros das mesmas letras, não novos recursos. Esta é uma metáfora artística, não uma simulação neurológica.</p></details>
+  </main>
+</body>
+</html>

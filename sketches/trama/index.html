@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Trama</title>
+    <script src="https://cdn.jsdelivr.net/npm/p5@2.3.4/lib/p5.min.js"></script>
+    <style>
+      html, body { margin: 0; padding: 0; overflow: hidden; background: #0E0E12; }
+      canvas { display: block; }
+
+      /* a barra do topo: o campo onde se digita a palavra e os controles */
+      #barra {
+        position: fixed; top: 14px; left: 50%; transform: translateX(-50%);
+        display: flex; flex-direction: column; align-items: center; gap: 6px;
+        z-index: 2; max-width: 96vw;
+      }
+      #barra .linha { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; justify-content: center; }
+      #barra input {
+        font-family: Tecido, 'Arial Black', sans-serif;
+        font-size: 30px; letter-spacing: 0.06em; text-transform: uppercase;
+        color: #E4572E; caret-color: #E4572E;
+        background: rgba(255, 255, 255, 0.04);
+        border: 0; border-bottom: 2px solid #E4572E; border-radius: 6px 6px 0 0;
+        padding: 6px 12px; width: min(22ch, 70vw); outline: none; text-align: center;
+      }
+      #barra input::placeholder { color: #6f6a64; text-transform: none; letter-spacing: 0; }
+      #barra input:focus { background: rgba(228, 87, 46, 0.08); }
+      #barra .controles { display: flex; align-items: center; gap: 6px; }
+      #barra button {
+        font: 600 13px/1 system-ui, sans-serif; color: #EDE6D6; cursor: pointer;
+        background: rgba(255, 255, 255, 0.06); border: 1px solid #3a3a44; border-radius: 6px;
+        padding: 7px 10px; min-width: 32px;
+      }
+      #barra button:hover { border-color: #E4572E; }
+      #barra .valor { font: 13px system-ui, sans-serif; color: #b8b2a8; min-width: 9ch; text-align: center; }
+      #barra .dica { font: 12px system-ui, sans-serif; color: #7d7870; }
+    </style>
+  </head>
+  <body>
+    <script src="sketch.js"></script>
+  </body>
+</html>

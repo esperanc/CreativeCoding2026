@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ele — Angel Mansilla</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
+  <style>
+    html, body { margin: 0; height: 100%; background: #080706; overflow: hidden; }
+    canvas { display: block; }
+    #ajuda {
+      position: fixed; left: 50%; bottom: 18px; transform: translateX(-50%);
+      font: 15px "Courier Prime", monospace; color: #e6dfd0;
+      background: rgba(8, 7, 6, 0.9); padding: 7px 14px; border: 1px solid #4a443b;
+      pointer-events: none; transition: opacity 0.6s; max-width: 94vw; text-align: center;
+    }
+    #objetivo, #aviso {
+      position: fixed; left: 50%; transform: translateX(-50%);
+      font-family: "Courier Prime", monospace; pointer-events: none;
+      background: rgba(8, 7, 6, 0.88); white-space: nowrap;
+    }
+    #objetivo { top: 14px; font-size: 16px; color: #f0ece4; padding: 6px 16px; border: 1px solid #4a443b; max-width: 94vw; }
+    #aviso { top: 62%; font-size: 20px; color: #fff; padding: 8px 18px; max-width: 80vw; white-space: normal; text-align: center; }
+    #objetivo:empty, #aviso:empty { display: none; }
+  </style>
+</head>
+<body>
+  <div id="objetivo"></div>
+  <div id="aviso"></div>
+  <div id="ajuda">W A S D: andar · arrastar o mouse: olhar · espaço: jogar pedra · E: ler, pegar, abrir · P pausa · R recomeça · H esconde</div>
+  <script src="https://cdn.jsdelivr.net/npm/p5@2.3.4/lib/p5.min.js"></script>
+  <script src="sketch.js"></script>
+</body>
+</html>

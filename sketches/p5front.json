@@ -1,14 +1,832 @@
 {
   "format": "p5front-export",
   "version": 1,
-  "createdAt": "2026-09-27T20:00:40.523Z",
+  "createdAt": "2026-10-04T15:51:59.651Z",
   "projects": [
+    {
+      "folder": "escrita nomai",
+      "id": "escrita-nomai",
+      "name": "escrita nomai",
+      "origin": "native",
+      "lastModified": 1791129115236,
+      "title": "Escrita Nomai Procedural",
+      "tags": [
+        "AI",
+        "Gemini",
+        "typography",
+        "generative",
+        "outer-wilds",
+        "math"
+      ],
+      "collection": "artefato da semana/7",
+      "description": "# Artefato 7 - Tipografia (Escrita Nomai)\n\n**Aluno:** Thalisson Braga\n\n## Sobre o Projeto\nPara este artefato de Tipografia, decidi fugir das abordagens tradicionais e clichês abordadas em aula (como o uso de `textToPoints` para gerar partículas a partir do contorno de fontes). Em vez disso, criei um sistema de **Tipografia Procedural Animada**.\n\nA inspiração visual é a escrita da raça alienígena \"Nomai\", do aclamado jogo *Outer Wilds*. No universo do jogo, os textos são lidos do centro para as bordas e se ramificam a partir de nós centrais, formando espirais e redes complexas. O algoritmo desenvolvido gera essas estruturas de forma orgânica, \"escrevendo\" os textos ao longo de curvas matemáticas à medida que a variável de tempo avança. \n\nCada clique na tela gera uma nova formação tipográfica única, alterando o sentido da rotação, os ângulos, os trechos de texto e as taxas de ramificação.\n\n## Matemática e Geometria Aplicadas\nA base da tipografia não utiliza geometrias prontas de fontes, mas sim o posicionamento e rotação matemática de cada caractere:\n\n1. **Espirais com Decaimento:** A estrutura base calcula o caminho de uma espiral onde o raio cresce, mas a taxa de abertura sofre um leve decaimento (simulando formas mais orgânicas e menos mecânicas).\n2. **Cálculo ao longo do Arco:** Para garantir que as letras não se sobreponham na curva, o algoritmo acumula a distância percorrida e utiliza a largura exata de cada caractere (via `textWidth()`) para saber o ponto exato da curva onde a próxima letra deve nascer.\n3. **Rotação pela Tangente:** A rotação individual de cada letra acompanha perfeitamente a inclinação da curva naquele ponto específico.\n4. **Camadas de Renderização:** O sketch utiliza `createGraphics()` para renderizar um fundo texturizado e otimizar o processo, separando a malha de fundo estática da animação da escrita.\n\n## Conformidade com as Regras da Semana\n* **Uso de IA:** A concepção do código matemático e a estruturação do script foram feitas com o auxílio da IA Gemini (declarado nas tags do cabeçalho).\n* **Versão do p5.js:** O arquivo `index.html` importa estritamente o `p5.js` versão 2 a partir do CDN oficial (`https://cdn.jsdelivr.net/npm/p5@2.0.0/lib/p5.js`).\n* **Fontes Nativas:** Para evitar problemas de CORS, links quebrados em CDNs ou inclusão de arquivos proibidos no ZIP, o sketch utiliza apenas a fonte nativa do sistema do usuário (`Georgia`), respeitando integralmente a regra 3.\n* O pacote `.zip` entregue é limpo, contendo apenas o código fonte (`index.html`, `sketch.js`, `style.css`) e este `README.md`.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "mikumusica",
+      "id": "mikumusica",
+      "name": "mikumusica",
+      "origin": "native",
+      "lastModified": 1791076971855,
+      "title": "MikuMusica",
+      "tags": [
+        "AI",
+        "ChatGPT",
+        "Miku",
+        "Hatsune",
+        "Musica",
+        "Tipografia"
+      ],
+      "collection": "artefato da semana/7",
+      "description": "Um quadro feito utilizando tipografia e movimento, minha inspiração foi a cantora digital \"Hatsune Miku\". O quadro tem por objetivo imitar ondas sonoras, foram utilizadas as cores turquesa e rosa magenta em homenagem a cantora.\n\nAutor: Ysabelle Estevão de Oliveira",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "Artefact7 Yasmine",
+      "id": "artefact7-yasmine",
+      "name": "Artefact7 Yasmine",
+      "origin": "native",
+      "lastModified": 1791063339973,
+      "title": "Characters of Meaning",
+      "tags": [
+        "AI",
+        "Claude",
+        "typography",
+        "chinese",
+        "etymology"
+      ],
+      "collection": "artefato da semana/7",
+      "description": "# Characters of Meaning\n\nChinese characters are not arbitrary shapes like Latin letters: many of \nthem are literally combinations of other, simpler characters, which \ntogether convey the word’s meaning. This animation shows this construction \nprocess in action: the elements come together and merge to form the final \ncharacter, while the pronunciation (Pinyin) and the English meaning gradually \nappear below. Click anywhere on the screen to move to the next character.\n\n## Why this idea\n\nI studied Chinese for three years in high school, and that was the first \nidea that came to mind for this week’s artifact theme. Unlike Chinese \ncharacters, alphabetic writing doesn’t allow you to directly understand \nthe meaning of a word without knowing it beforehand, which isn’t the case \nwith Chinese: 明 (bright) is literally composed of 日 (sun) next to 月 (moon), \nand the character 休 (rest) literally depicts a person, 人, leaning against a \ntree,木. Typography generally involves treating the shapes of letters as \ngeometric forms; this work retains that geometry but highlights the meaning \nhidden behind it.\n\n## What's in the sequence\n\n- 木 → 林 → 森 : tree → grove (two trees) → forest (three trees)\n- 日 + 月 → 明 : sun + moon → bright\n- 人 + 木 → 休 : person + tree → rest\n- 女 + 子 → 好 : woman + child → good\n- 日 + 本 → 日本 : \"origin of the sun\" → Japan\n- 中 + 国 → 中国 : \"the middle kingdom\" → China\n\n## How it works\n\n- Each character's real components are drawn with `text()`, each starting\nat a random point off-screen, and eased toward their positions with\n`lerp()` nothing about the final layout is drawn directly.\n- Each component carries its own pinyin + meaning caption directly\nunderneath it, which travels with it as it flies in (captions alternate\nonto two rows so close characters never collide).\n- Once the parts arrive, they cross-fade into the actual fused character\n(for the single-character examples), with its own caption below\nwhich is what makes the construction feel earned rather than\nillustrated. For the two-character words (日本, 中国), the parts stay\nas themselves and a final combined caption fades in below both.\n- Pinyin and meaning fade in afterwards, then everything fades out and\nthe next character begins, a small state machine driven by\n`frameCount`, with a click able to skip ahead at any time.\n- The font (Noto Serif SC, for the Chinese glyphs, and Noto Sans for the\ncaptions) is loaded from Google Fonts by `index.html` and confirmed\nready with the browser's font-loading API before drawing starts, so no\nfont file is bundled in this zip.\n\n## AI usage\n\nBuilt with the help of the AI Claude. I gave my own idea, animating\nreal Chinese character etymology and I gave examples of the chinese\nwords I knew : Japan, China, forest and good. Claude picked the others,\nI gave him a first version of the code that he corrected and sent me\nback and I chose the timings, the colours and how the characters appear\non the screen. \n\nAuthor: Yasmine",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "README.md",
+        "sketch.js",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "artefato 07 esfera tipografica",
+      "id": "artefato-07-esfera-tipografica",
+      "name": "artefato 07 esfera tipografica",
+      "origin": "native",
+      "lastModified": 1791063257749,
+      "title": "Esfera Tipográfica RGB",
+      "tags": [
+        "AI",
+        "Claude",
+        "typography",
+        "halftone",
+        "rgb",
+        "tribute",
+        "Adam Fuhrer"
+      ],
+      "collection": "artefato da semana/7",
+      "description": "# Esfera Tipográfica RGB\n\n**Autor:** Victor Hugo Figueiredo Pereira da Silva\n\n**Artefato da semana 07** — tema: *Tipografia* (imagem feita com texto).\n\nFeito com o auxílio de IA (**AI**, **Claude**).\n\n![thumbnail](thumbnail.png)\n\n## Homenagem\n\nConheci o trabalho do artista **Adam Fuhrer** (<https://adamfuhrer.com>) e uma das obras que mais me chamaram a atenção foi a série de esferas em meio-tom RGB (*rgb halftone sphere*, 2026). Reproduzi-la a meu modo, usando só letras, é a minha maneira de homenagear o autor. A ideia e o visual são dele; a escolha de trocar os pontos por tipografia é minha leitura para o tema da semana.\n\n## Ideia do trabalho\n\nNa obra original, uma esfera é desenhada por pontos de meio-tom (*halftone*) em três canais de cor, vermelho, verde e azul, somados como luz. Aqui cada ponto é uma **letra**:\n\n- o canal vermelho é feito só de **R**;\n- o verde, só de **G**;\n- o azul, só de **B**.\n\nO **tamanho da letra** é a \"quantidade de tinta\": onde o canal recebe muita luz a letra é grande, onde recebe pouca ela encolhe até sumir. Onde as três letras se sobrepõem, as cores se somam e a esfera clareia até o branco.\n\n## Parte técnica\n\n- Cada canal tem sua própria grade de letras, **girada num ângulo diferente** (15°, 75° e 45°), como nas telas de impressão de uma gráfica. Isso gera o padrão de moiré.\n- Cada canal é iluminado por uma luz que gira num ritmo próprio. Por isso as cores se separam nas bordas do brilho.\n- **Aleatoriedade:** a cada carregamento (e a cada clique) o sketch sorteia uma semente com os ângulos das grades, as velocidades das luzes, quanto a superfície é amassada (ruído de Perlin), quanto cada letra treme de posição, quanto varia de tamanho, quantas somem e quantas viram letras intrusas. O acaso de cada letra vem de um hash estável, então não pisca entre quadros.\n- A esfera é calculada com a normal de cada ponto (luz difusa mais um brilho especular suave).\n- As cores são somadas com `globalCompositeOperation = \"lighter\"`, que imita luz.\n- A fonte (Space Mono Bold) é carregada de um CDN com `loadFont` do p5.js 2. Nenhum arquivo de fonte nem a biblioteca p5.js estão no zip.\n\n## Controles\n\n| ação | efeito |\n| --- | --- |\n| mover o mouse | puxa as três luzes para a posição do mouse |\n| clique ou espaço | sorteia tudo de novo (letras, ângulos, luzes, amassado, falhas) |\n| `s` | salva um PNG |\n\n## Como executar\n\nAbra o `index.html` num navegador com internet (o p5.js e a fonte vêm de CDN), ou cole `sketch.js` no editor do p5js.org (versão 2).\n\n## Plano de desenvolvimento\n\n1. **Escolher a obra.** Entre as obras do Adam Fuhrer, ficar com a esfera em meio-tom RGB, que se presta bem a virar texto: o \"ponto\" do meio-tom vira uma letra.\n2. **Modelar a esfera.** Para cada ponto dentro do círculo, calcular a normal `(x, y, √(1−x²−y²))` e a luz recebida.\n3. **Três telas de meio-tom.** Criar uma grade de pontos por canal, cada uma girada num ângulo diferente.\n4. **Trocar pontos por letras.** Desenhar R, G e B com o tamanho proporcional à raiz da luz recebida, centralizadas na grade.\n5. **Mistura aditiva.** Usar o modo de composição `lighter` sobre fundo preto, para as cores somarem como luz.\n6. **Animar.** Uma luz por canal, girando em fases diferentes, e a grade girando devagar para o moiré mudar.\n7. **Interação e ajuste fino.** Mouse como luz, clique para sortear tudo de novo (aleatoriedade por letra com hash estável), ajuste do tamanho das letras para continuarem legíveis.\n8. **Regras de entrega.** p5.js 2 via CDN, fonte via CDN, README com as palavras-chave e a coleção.\n\n## Arquivos\n\n- `index.html`: página que carrega o p5.js 2 do CDN.\n- `sketch.js`: o código do sketch.\n- `thumbnail.png`: captura do resultado.\n- `README.md`: este arquivo.",
+      "hasThumb": true,
+      "files": [
+        "sketch.js",
+        "index.html",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "thomas musical",
+      "id": "thomas-musical",
+      "name": "thomas musical",
+      "origin": "native",
+      "lastModified": 1791063169639,
+      "title": "Thomas musical",
+      "tags": [
+        "generative",
+        "AI",
+        "Claude",
+        "music"
+      ],
+      "collection": "artefato da semana/7",
+      "description": "Dessa vez eu quis brincar com meu nome. Escrevi Thomas só com notas musicais. A ideia é que o nome pareça uma partitura, como se desse para tocar ele.\n\nO truque para montar o nome é mais simples do que parece. O sketch escreve \"Thomas\" escondido, fora da tela, e depois vai \"carimbando\" uma nota em cada pedacinho que cai dentro das letras. Cada nota tem uma figura, um tamanho e uma inclinação diferentes, e todas balançam de leve o tempo todo. Por isso o nome parece estar vivo, e não impresso.\n\nA parte de que eu mais gosto é a interação. Quando você passa o mouse por cima do nome, as notas perto do cursor crescem, ficam vermelhas e se endireitam. Quando o mouse vai embora, elas voltam devagarinho ao normal.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "Riso",
+      "id": "riso",
+      "name": "Riso",
+      "origin": "native",
+      "lastModified": 1791062715417,
+      "title": "Riso",
+      "tags": [
+        "NoAI",
+        "typography"
+      ],
+      "collection": "artefato da semana/7",
+      "description": "# Riso\n\n**Artefato 7 — \"Tipografia\"** · Programação Criativa\n\n\n## Referências da semana (aula 7 — Tipografia)\n\nO tipo como massa, não como frase: fluxo vira forma e reflexo, materia.",
+      "hasThumb": true,
+      "files": [
+        "sketch.js",
+        "thumbnail.png",
+        "README.md",
+        "index.html"
+      ]
+    },
+    {
+      "folder": "amsterdam",
+      "id": "amsterdam",
+      "name": "amsterdam",
+      "origin": "native",
+      "lastModified": 1791062691550,
+      "title": "Amsterdam",
+      "tags": [
+        "AI",
+        "Claude",
+        "amsterdam",
+        "typography"
+      ],
+      "collection": "artefato da semana/7",
+      "description": "Autora: Rafaella Lenzi Romano\n\n## Amsterdam\n\nO sketch, feito com o auxílio do Claude AI, é inspirado no anel de canais (Singel, Herengracht, Keizersgracht e Prinsengracht) de Amsterdam usando apenas os nomes de cada um, que correm ao longo do arco como água.\n\n## Como funciona\n\n- Cada letra é posicionada pela distância percorrida ao longo do arco, convertida em ângulo (s / r) e depois em coordenadas polares, girada na direção da tangente.\n- Cada canal tem três faixas de texto. Como num canal real, a água no centro corre mais rápido que nas margens: a velocidade segue um perfil parabólico, que também controla o tamanho e a cor das letras.\n- Um campo de ruído adianta e atrasa trechos do texto, criando redemoinhos sem embaralhar a ordem das letras.\n- Barcos passam a favor ou contra a corrente e abrem o texto ao redor do casco, deixando uma esteira que se espalha para trás.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "refinamento de macrodados",
+      "id": "refinamento-de-macrodados",
+      "name": "refinamento de macrodados",
+      "origin": "native",
+      "lastModified": 1791062497846,
+      "title": "Refinamento de Macrodados",
+      "tags": [
+        "IA",
+        "Gemini"
+      ],
+      "collection": "artefato semana 7",
+      "description": "Nome: Pedro Paulo de Oliveira Rocha\n\nInspirado na série Severance - uma das melhores, recomendo muito -",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "artefato tipografia prova paulo vitor",
+      "id": "artefato-tipografia-prova-paulo-vitor",
+      "name": "artefato tipografia prova paulo vitor",
+      "origin": "native",
+      "lastModified": 1791062457117,
+      "title": "Prova de que Estive Aqui",
+      "tags": [
+        "AI",
+        "ChatGPT",
+        "typography",
+        "fingerprint",
+        "redaction",
+        "interactive"
+      ],
+      "collection": "artefato da semana/7",
+      "description": "# Prova de que Estive Aqui\n\n**Autor:** Paulo Vitor Couto  \n**Auxílio de AI:** ChatGPT\n\n## Conceito\n\nO sketch apresenta um dossiê fictício que tenta apagar a identidade de uma pessoa. A impressão digital à direita é construída exclusivamente com pequenas frases posicionadas sobre curvas concêntricas. À esquerda, trechos do depoimento foram cobertos por blocos tipográficos feitos com o caractere `█`.\n\nO cursor funciona como uma luz forense. Ao se aproximar da impressão, as letras ficam maiores e vermelhas, tornando as frases legíveis. Ao passar pelos trechos censurados, a luz troca os blocos pelo conteúdo escondido. A imagem discute a tensão entre apagar um registro e deixar rastros: quanto mais o documento tenta esconder alguém, mais a tipografia reconstrói sua presença.\n\n## Por que a base é tipográfica\n\n- As cristas da impressão digital são sequências de caracteres, não linhas ou imagens.\n- As tarjas de censura são formadas por glifos `█`, não retângulos.\n- A moldura, as divisões, o código de barras, as marcas da lupa e todos os elementos informativos são compostos com texto.\n- Não são usados `textToPoints`, `textToContours`, imagens externas ou arquivos de fonte.\n\nAs únicas formas geométricas preenchidas são o fundo da mesa e o papel, que funcionam como suporte. A imagem e sua narrativa são produzidas por texto.\n\n## Interação\n\n- **Mover o mouse:** investiga a impressão digital e revela trechos censurados.\n- **Clique ou tecla R:** gera outro dossiê, com frases, falhas e número de processo diferentes.\n- **Tecla S:** salva a composição atual em PNG.\n\n## Requisitos técnicos\n\nO canvas usa `windowWidth` e `windowHeight` e se adapta ao espaço disponível. O `index.html` carrega **p5.js 2.3.2** por CDN. O ZIP não contém a biblioteca p5.js, p5.sound.js ou arquivos de fonte.\n\n## Arquivos\n\n`index.html`, `style.css`, `sketch.js`, `README.md` e `thumbnail.png`, todos diretamente na raiz do ZIP.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "style.css",
+        "sketch.js",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "teclas coloridas",
+      "id": "teclas-coloridas",
+      "name": "teclas coloridas",
+      "origin": "native",
+      "lastModified": 1791062415574,
+      "title": "simbolos coloridos",
+      "tags": [
+        "NoAI"
+      ],
+      "collection": "artefato da semana/7",
+      "description": "a tecla que apertar vai ser escrita na tela\n\n---\ntitle: simbolos coloridos \ntags: [NoAI, random, typography]\ncollection: artefato da semana/7\n---",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "Patrick Mucio (2)",
+      "id": "patrick-mucio-2",
+      "name": "Patrick Mucio (2)",
+      "origin": "native",
+      "lastModified": 1791062186628,
+      "title": "Tempestade Tipográfica",
+      "tags": [
+        "AI",
+        "ChatGPT",
+        "typography",
+        "generative-art",
+        "p5js"
+      ],
+      "collection": "artefato da semana/7",
+      "description": "# Tempestade Tipográfica\n\nArtefato desenvolvido para a Semana 7, cujo tema é Tipografia.\n\nA proposta é representar uma tempestade utilizando a própria tipografia\ncomo elemento visual principal.\n\nPalavras como \"CAOS\", \"ORDEM\", \"TEMPO\", \"VOZ\", \"FORMA\" e \"IDEIA\"\nse comportam como gotas de chuva e são movimentadas pelo vento.\n\nA nuvem também é construída utilizando palavras, enquanto correntes de\nvento e relâmpagos são representados através de caracteres tipográficos.\n\n## Interações\n\n- Movimento horizontal do mouse: altera a direção e intensidade do vento.\n- Aproximar o mouse das palavras: provoca uma corrente de ar que as afasta.\n- Clique do mouse: cria um relâmpago tipográfico e espalha as palavras.\n- Barra de espaço: reorganiza as palavras e gera uma nova tempestade.\n\n\n## Uso de Inteligência Artificial\n\nO desenvolvimento deste artefato contou com auxílio de inteligência\nartificial ChatGPT para geração e adaptação do código.\n\nNenhum arquivo de fonte externo é utilizado pelo projeto.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "README.md",
+        "sketch.js",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "cosmic spark (6)",
+      "id": "cosmic-spark-6",
+      "name": "cosmic spark (6)",
+      "origin": "native",
+      "lastModified": 1791062171129,
+      "title": "sketch_fluminense_bandeira",
+      "tags": [
+        "AI",
+        "ChatGPT",
+        "typography",
+        "Fluminense"
+      ],
+      "collection": "artefato da semana/7",
+      "description": "**Nome:** Nicole Cardozo dos Santos\n**DRE:** 1231749884\n\n## Descrição\nEste sketch utiliza as palavras do hino do Fluminense para construir visualmente uma bandeira nas cores grená, branco e verde.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "fonteinterativa",
+      "id": "fonteinterativa",
+      "name": "fonteinterativa",
+      "origin": "native",
+      "lastModified": 1791057246679,
+      "title": "FonteInterativa",
+      "tags": [
+        "AI",
+        "Gemini",
+        "font",
+        "interactive"
+      ],
+      "collection": "artefato da semana/7",
+      "description": "## Autor: Nick Correa\nEsse artefato apresenta uma simulação física de palavras de forma interativa. \nPara interagir, movimente o cursor sobre a palavra.\n\nA fonte foi escolhida em homenagem ao mês de outubro.\n\nOBS: Para palavras grandes (+5 caracteres) há problemas de performance devido à simulação física.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "artefato7 natan azevedo gomes",
+      "id": "artefato7-natan-azevedo-gomes",
+      "name": "artefato7 natan azevedo gomes",
+      "origin": "native",
+      "lastModified": 1791057089026,
+      "title": "Sopa de letrinhas",
+      "tags": [
+        "generative",
+        "AI",
+        "Claude",
+        "soup",
+        "pasta"
+      ],
+      "collection": "artefato da semana/7",
+      "description": "Essa foi uma das primeiras ideias que eu tive em relação a imagens usando texto. O sketch anima uma sopa de letrinhas vista de cima, em que as letras flutuam com física simulada (posição, velocidade, ângulo e velocidade angular), seguem a correnteza do caldo e afundam e emergem, ficando menores e mais apagadas quando estão no fundo.\n\nA principal ideia em relação à tipografia é que, periodicamente, as letras se organizam sozinhas para formar palavras do vocabulário da programação criativa (JAVASCRIPT, PIXEL, ALGORITMO…), em pontos e ângulos variados, várias ao mesmo tempo. Para cada letra de uma palavra, é feita uma busca linear pela letra correspondente mais próxima entre as que estão soltas. Se aquela letra não estiver boiando na sopa, a letra solta mais próxima \"afunda\", troca de caractere e volta à superfície já como a letra que faltava.\n\nPara reforçar a ideia de imagem feita com texto, os outros elementos da cena também são feitos de caracteres: a toalha xadrez é tecida com |, = e #, a salsinha são vírgulas e apóstrofos, o azeite são letras \"o\", as ondulações são anéis de ~ e a colher é feita de = e ●. A borda do prato é escrita com trechos do próprio código do sketch.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "trama",
+      "id": "trama",
+      "name": "trama",
+      "origin": "native",
+      "lastModified": 1791056990696,
+      "title": "Trama",
+      "tags": [
+        "AI",
+        "Claude",
+        "typography",
+        "packing"
+      ],
+      "collection": "artefato da semana/7",
+      "description": "# Trama\n\n**Autor:** Murilo Jorge de Figueiredo\n\n![thumbnail](thumbnail.png)\n\n## O que é\n\nDigite uma palavra no campo do topo. Em volta dela cresce, animado, um mosaico\nfeito das suas próprias letras, cada uma travada nas vizinhas como peça de\nquebra-cabeça. Cada tecla digitada recomeça o mosaico com a palavra nova.\n\n## Como as letras se encaixam\n\nA \"hitbox\" de cada letra é a **própria forma dela**, em proporção natural. O\nplano é uma grade fina (3 × 3 pixels por célula) onde cada letra colocada marca\na sua tinta. Uma letra nova, com giro e tamanho sorteados, procura posição junto\nàs que já estão lá, com duas regras:\n\n- **não pode encostar tinta em tinta:** há uma folga de 1 célula entre as formas,\n  para as peças continuarem legíveis como peças;\n- **precisa abraçar as vizinhas:** mede-se que fração do contorno dela fica\n  colada, a até 2 células, na tinta de outra letra. Um V no vão de um M, a quina\n  de um L na quina de outro, um A de ponta-cabeça entre duas pernas de A — esses\n  encaixes colam muito contorno. Só entra quem passa do **encaixe mínimo**.\n\nAs letras grandes são tentadas primeiro, e o tamanho vai diminuindo. Onde nada\nencaixa, fica buraco.\n\n## A borda que se dissolve\n\nNão há uma parede onde o mosaico para. O tamanho máximo permitido cai com a\ndistância ao centro: até cerca de um terço do raio, qualquer tamanho; daí até a\nborda, o teto cai numa curva — devagar no começo, despencando perto da borda —\naté letras de uns 5 pixels, quase grãos. As menores também desbotam em direção\nao fundo. O mosaico termina numa poeira de letras cada vez menores e mais\napagadas, que continuam encaixadas até o fim — como um fractal que se desfaz.\n\n## A palavra que aparece sozinha\n\nÀs vezes, ao se encaixarem, as letras escrevem a própria palavra: mesmo tamanho,\nmesmo giro, em sequência na direção de leitura daquele giro e alinhadas como numa\nlinha de texto. Quando isso acontece, elas acendem em dourado, e a barra do topo\navisa quantas vezes a palavra se formou. Nada força isso a acontecer; é raro, e\né o acaso do encaixe — no thumbnail, um LUA dourado na vertical, lido de baixo\npara cima, embaixo e à esquerda da palavra.\n\n## Como o mosaico cresce\n\nNão há uma grade de casas a preencher: é um **empacotamento por acreção**. O\nmosaico cresce da palavra para fora, sempre pela borda mais próxima do centro,\ncomo um cristal.\n\nPara ser rápido o bastante para animar, a busca só testa as posições em que o\ncontorno da letra nova passa exatamente por uma célula de tinta vizinha — toda\nposição testada já encosta em algo —, e o teste de colisão percorre a letra em\nordem embaralhada, para achar uma colisão logo nas primeiras células. Com isso o\nmosaico fica pronto cerca de 3,7 vezes mais rápido do que varrendo todas as\nposições em volta, sem perder qualidade.\n\nO encaixe mínimo muda o caráter do mosaico. Com 0,27 (o padrão), só encaixes\njustos passam: o mosaico não chega a preencher a elipse e cresce em formas\nirregulares, uma silhueta própria para cada palavra — às vezes uma ilha\nrecortada com poucas centenas de letras, às vezes uma nuvem com milhares. Descendo\npara uns 0,20, quase todo encaixe passa e ele preenche a elipse inteira.\n\n## Como usar\n\nAbra o `index.html` no navegador. O sketch começa com uma palavra sorteada, já\nselecionada no campo: é só digitar para trocar.\n\n| Controle | Ação |\n|---|---|\n| **campo do topo** | a palavra; cada tecla recomeça o mosaico (só letras) |\n| **− / +** ou **↓ / ↑** | diminui / aumenta o encaixe mínimo e recomeça |\n| **↻** ou **Enter** | tece a mesma palavra de novo |\n| **salvar** | salva a imagem |\n| **Esc** | limpa a palavra |\n\nO p5.js (versão 2.3.4) e a fonte Archivo Black são carregados de CDN (jsDelivr);\nnenhum dos dois está no zip. O canvas usa `windowWidth`/`windowHeight`, e o\ntamanho das letras se ajusta ao comprimento da palavra.",
+      "hasThumb": true,
+      "files": [
+        "sketch.js",
+        "index.html",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "MariaEduardaAraujo Artefato 7",
+      "id": "mariaeduardaaraujo-artefato-7",
+      "name": "MariaEduardaAraujo Artefato 7",
+      "origin": "native",
+      "lastModified": 1791056827751,
+      "title": "Oceano Topográfico Tipográfico",
+      "tags": [
+        "Typography",
+        "perlin noise",
+        "generative text",
+        "AI",
+        "Gemini"
+      ],
+      "collection": "artefato da semana/7",
+      "description": "# Artefato 7: Tipografia\n\n**Autora:** Maria Eduarda Araújo  \n**DRE:** 119054059  \n\n## Sobre o Projeto\nPara o artefato com o tema \"Tipografia\", o meu objetivo foi fugir aos clichés de desenhar contornos de palavras estáticas ou utilizar a biblioteca de som. Então a ideia foi fazer é um \"Oceano Topográfico Tipográfico\", onde o texto não funciona apenas para ser lido, mas atua como a própria matéria-prima (os píxeis) da imagem gerada.\n\nO sketch utiliza uma *string* de caracteres organizada por peso visual e densidade (do espaço vazio aos símbolos como `%` e `@`). Através de laços de repetição que formam uma grelha no ecrã, cada célula avalia a sua posição utilizando uma combinação de funções trigonométricas (`sin`) e Ruído de Perlin (`noise`). \n\nDependendo da \"elevação\" matemática dessa coordenada, o algoritmo seleciona o caractere apropriado para ser desenhado, alterando dinamicamente o seu tamanho e a sua coloração (num gradiente de azuis profundos a cianos brilhantes). O resultado é a emergência de um mar tridimensional feito puramente de tipografia padrão do sistema (`monospace`).\n\n## Regras Técnicas Cumpridas\n* **p5.js v2 via CDN:** A biblioteca é carregada exclusivamente pelo CDN no `index.html`. Nenhum ficheiro da biblioteca p5.js ou p5.sound.js está incluído no arquivo zip.\n* **Preâmbulo:** O ficheiro README conta com o cabeçalho descritivo YAML solicitando identificação de uso de IA (Gemini) e a respetiva coleção (\"artefato da semana/7\").\n* **Sem Fontes Externas:** A fim de evitar bloqueios de CDN, foi utilizada uma abordagem nativa, recorrendo apenas à fonte `monospace` incorporada pelo browser, anulando a necessidade de importar ficheiros `.ttf` ou `.otf`.\n\n## Processo de Criação\nUtilizei a inteligência artificial (Gemini) para ajudar a estruturar a lógica matemática complexa da grelha textual. Solicitei especificamente que a resposta aliasse o conhecimento de Artefatos anteriores (como o *Flow Field* do Artefato 6 e a distribuição por grade do Artefacto 3) com o novo requisito da tipografia, resultando num código otimizado, inteiramente responsivo e visualmente hipnótico.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "Thumbnail.png",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "Artefato 7 Manoel V C Carvalho",
+      "id": "artefato-7-manoel-v-c-carvalho",
+      "name": "Artefato 7   Manoel V C Carvalho",
+      "origin": "native",
+      "lastModified": 1791056656758,
+      "title": "Name",
+      "tags": [
+        "Letras",
+        "AI",
+        "ChatGPT"
+      ],
+      "collection": "artefato da semana/7",
+      "description": "Artefato feito criando o nome 'Manoel' e utilizando o ChatGPT para desenvolver o efeito animado como de uma máquina de escrever.\n\nAutor: Manoel V C Carvalho",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "artefato #07 Leo Nunes",
+      "id": "artefato-07-leo-nunes",
+      "name": "artefato #07   Leo Nunes",
+      "origin": "native",
+      "lastModified": 1791056598525,
+      "title": "Tipoque?",
+      "tags": [
+        "chatGPT",
+        "physics",
+        "typography",
+        "AI"
+      ],
+      "collection": "artefato da semana/7",
+      "description": "Juro que tentei escrever algo a respeito, mas as ideias e as letras continuam pulando e caindo por aí...\n\nEscrevi um código sozinho cheio de erros e entreguei pro chatGPT consertar, e não é que o danado sabe refatorar até bem, o LLM também me ajudou a tornar o código funcional em mobile.\n\nEspero que não tenhar warnings e erros dessa vez.\n\nCONTROLES: digite qualquer coisa (pressione a tela do celular até aparecer o teclado)\n\nAutor: Leonardo Nunes Guimarães Costa",
+      "hasThumb": true,
+      "files": [
+        "thumbnail.png",
+        "style.css",
+        "sketch.js",
+        "README.md",
+        "index.html"
+      ]
+    },
+    {
+      "folder": "pe de fruta",
+      "id": "pe-de-fruta",
+      "name": "pe de fruta",
+      "origin": "native",
+      "lastModified": 1791056363329,
+      "title": "Pé de Fruta",
+      "tags": [
+        "typography",
+        "fruits",
+        "fall",
+        "AI"
+      ],
+      "collection": "artefato da semana/7",
+      "description": "# pé de fruta\n\n> Nome: Laura Daflon dos Santoa Santana Meira\n>\n> DRE: 120053993\n\nUm experimento tipográfico.\n\nNomes de frutas aparecem na tela, uma de cada vez, e então se desfazem: cada letra cai sob gravidade, quica no chão, gira até perder a inércia e pousa. Ao mesmo tempo a cor da palavra amadurece. Porque a letra cai como a fruta cai do pé.\n\nAs letras pousadas não somem. Cada palavra que termina de cair é fixada numa camada acumulada, e a próxima fruta cai por cima do que sobrou das anteriores. O chão vai enchendo de frutas mortas.   \n  \nTodo nome de fruta tem o formato semelhante da fruta. Como *pera* decresce e cresce no formato da pera de verdade, a banana tem a concavidade de uma banana.\n\n## Estrutura\n\n- `sketch.js` : o loop principal e a máquina de estados (`showing` → `falling` →\n`memory`), além da camada que acumula as letras pousadas.\n- `fruits.js` : palavra, cores e qual função desenha cada fruta.\n- `fall.js` : gravidade, colisão com o chão, restituição, atrito e atrito angular.\n- `apple.js`, `banana.js`, `avocado.js`, `pear.js`, `orange.js`, `guava.js`: o desenho de cada fruta e das suas letras.\n- `createFruit.js` — gera a textura de texto usada pelas frutas.",
+      "hasThumb": true,
+      "files": [
+        "thumbnail.png",
+        "apple.js",
+        "avocado.js",
+        "banana.js",
+        "createFruit.js",
+        "fall.js",
+        "fruits.js",
+        "guava.js",
+        "index.html",
+        "orange.js",
+        "pear.js",
+        "README.md",
+        "sketch.js",
+        "style.css"
+      ]
+    },
+    {
+      "folder": "antonimos",
+      "id": "antonimos",
+      "name": "antonimos",
+      "origin": "native",
+      "lastModified": 1791056223019,
+      "title": "Antônimos",
+      "tags": [
+        "AI",
+        "Claude",
+        "typography",
+        "shadow",
+        "antonyms",
+        "surface"
+      ],
+      "collection": "artefato da semana/7",
+      "description": "Sketch feito com auxílio de AI (Claude). Uma palavra fica de pé e o sol percorre um dia inteiro, das 06h às 18h. A sombra projetada é feita de texto: o antônimo da palavra (LUZ projeta \"sombra\", CHEIO projeta \"vazio\", e assim por diante). De manhã e à tarde a sombra se estica; ao meio-dia ela encolhe e se inverte sob a palavra.\n\nA forma da palavra vem de `textToContours`. A sombra de uma figura plana é uma transformação afim dela mesma, então os contornos são projetados na superfície escolhida e usados como máscara (`clip`) para preencher a região com linhas de texto.\n\n## Superfícies\n\nA tecla `G` alterna entre três superfícies onde a sombra pode cair:\n\n* **Chão:** plano horizontal sob as letras.\n* **Rampa:** chão inclinado que sobe para o fundo, o que curva e alonga a sombra.\n* **Parede:** o observador passa a olhar para o sol e a sombra cai numa parede atrás das letras. Ela só aparece acima do pé da parede, por isso some quando o sol está alto.\n\n## Interação\n\n* Arraste horizontalmente para controlar a hora do dia.\n* Toque ou clique (sem arrastar), ou use a seta direita, para o próximo par de antônimos. A seta esquerda volta ao anterior.\n* `G` alterna entre as superfícies (chão, rampa, parede).\n* Espaço pausa e retoma o dia.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "README.md",
+        "sketch.js",
+        "style.css",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "tipografia ffxiv",
+      "id": "tipografia-ffxiv",
+      "name": "tipografia ffxiv",
+      "origin": "native",
+      "lastModified": 1791056048026,
+      "title": "Tipografia FFXIV",
+      "tags": [
+        "generative",
+        "ChatGPT",
+        "topography",
+        "AI"
+      ],
+      "collection": "artefato da semana/7",
+      "description": "Um sketch feito pelo ChatGPT que é criado a sigla do jogo Final Fantasy XIV com as palavras de uma famosa frase conhecida pela comunidade.\n\nPrimeiro prompt feito: \"Gostaria de fazer um código em p5 de uma tipografia que fica escrito FFXIV e as letras são formadas escrito isso com a fonte do jogo Final Fantasy FFXIV: Have you heard of the critically acclaimed MMORPG FFXIV? With an expanded free trial which you can play through the entirety of A Realm Reborn, Heavensward, Stormblood, and the award-winning Shadowbringers expansion up to level 80 for free with no restrictions on playtime?\"\n\nAutor: Joao Ricardo S. Magalhaes",
+      "hasThumb": true,
+      "files": [
+        "sketch.js",
+        "index.html",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "NoAI!",
+      "id": "noai",
+      "name": "NoAI!",
+      "origin": "native",
+      "lastModified": 1791055927454,
+      "title": "No AI typo",
+      "tags": [
+        "NoAI",
+        "p5js",
+        "generative-art",
+        "typography",
+        "animation",
+        "rotation",
+        "code-art",
+        "experimental"
+      ],
+      "collection": "artefato da semana/7",
+      "description": "Um rascunho de tipografia girante criado com p5.js.\nAs letras são individualmente distribuídas através de transformações angulares e rodam continuamente em volta do centro do canvas. O trabalho explora a relação entre texto, movimento, repetição e estruturas matemáticas.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "lembro com o que sobrou corrigido",
+      "id": "lembro-com-o-que-sobrou-corrigido",
+      "name": "lembro com o que sobrou corrigido",
+      "origin": "native",
+      "lastModified": 1791055744074,
+      "title": "Lembro com o que sobrou",
+      "tags": [
+        "AI",
+        "ChatGPT",
+        "typography",
+        "memoria",
+        "percepcao",
+        "p5js"
+      ],
+      "collection": "artefato da semana/7",
+      "description": "# Lembro com o que sobrou\n\nUm sketch interativo de arte tipográfica sobre a memória como reconstrução: **para lembrar de uma coisa, outras precisam mudar**.\n\n## Abrir\n\nExtraia o ZIP e abra `index.html` em um navegador atualizado, com acesso à internet. Não é necessário instalar dependências ou compilar. A conexão é necessária para carregar p5.js pelo CDN.\n\nArquivos da entrega:\n\n- `index.html`: página e carregamento de p5.js **2.2.3**, por CDN.\n- `sketch.js`: composição tipográfica, animação e interação.\n- `style.css`: apresentação e adaptação a telas pequenas.\n- `README.md`: concepção, instruções e regras técnicas.\n\nNo editor p5.js, use os três arquivos de código juntos e preserve o carregamento da versão 2 em `index.html`. O sketch usa elementos dessa página, portanto copiar apenas `sketch.js` para um projeto vazio não é suficiente.\n\n## Experimentar\n\n1. Escolha **o rosto**, **a voz**, **o calor** ou **o toque**, clicando no título. As teclas **1–4** também selecionam.\n2. Mantenha **Segure para lembrar** pressionado. A lembrança escolhida busca letras reais nas outras e tenta preencher suas lacunas. Solte para interromper. Também é possível segurar **espaço** fora dos outros controles, ou quando o botão de reconstrução está em foco.\n3. **Arraste uma letra** até outra lembrança: ela ocupa o lugar vazio mais próximo. Se o caractere for diferente do esperado, ele altera a transcrição. Soltar fora das lembranças cancela a transferência.\n4. **Duplo clique** em uma letra a devolve à posição de origem, se ela estiver livre. O movimento adquirido permanece. Se a posição estiver ocupada, a interface informa que é preciso abri-la primeiro.\n5. Observe as frases sob cada imagem e a mensagem de consequência na parte inferior.\n\n**Esc** cancela o arrasto e interrompe a reconstrução. **Pausar movimento** suspende os ritmos, mantendo a interação disponível. A preferência do sistema por movimento reduzido inicia o sketch pausado. **Começar outra memória** reinicia toda a experiência, incluindo o histórico das letras. Atualizar a página também reinicia: o histórico existe apenas durante a sessão.\n\nEm celular, toque e segure para reconstruir; o arrasto usa eventos de ponteiro. Os controles podem ser acessados por Tab. O teclado permite reconstruir as quatro lembranças sem usar o arrasto.\n\n## O limite é real\n\nAs quatro frases exigem **211 posições**, mas existem apenas **169 caracteres disponíveis**, contando a pontuação. Assim, não é possível completar todas ao mesmo tempo. Algumas letras já começam deslocadas, na periferia de outra lembrança; as demais ocupam posições das frases. O contador permanece constante.\n\nCada letra é um objeto único com identidade, origem, posição atual e histórico sensorial. Uma transferência esvazia uma posição e ocupa outra com o mesmo objeto. O botão procura primeiro caracteres compatíveis vindos de outra lembrança. Na ausência deles, tenta aproveitar uma letra periférica local compatível e, por último, usa outro caractere disponível: reconstruir também pode produzir uma frase diferente.\n\nOs pontos claros marcam lugares vazios. As transcrições e os ecos são representações dos mesmos recursos, não letras adicionais que possam ser transferidas. Os lugares periféricos acolhem deslocamentos, mas também não geram letras.\n\n## Como os sentidos se misturam\n\n| Origem | Comportamento que a letra transporta |\n| --- | --- |\n| Rosto / visual | Mantém um desvio ligado à posição que ocupava no contorno original. |\n| Voz / sonora | Pulsa, interrompe o ritmo, varia a opacidade e produz um eco deslocado. |\n| Calor / térmica | Oscila em convecção lenta e interfere na cor. |\n| Toque / tátil | Resiste ao deslocamento e se comprime durante o movimento. |\n\nUma letra sonora levada ao rosto faz parte desse rosto gaguejar. Uma letra que passa pelo calor leva a convecção para a voz. Uma letra tátil demora a acompanhar o arrasto. Os efeitos se acumulam em pesos sensoriais, mantendo a origem; cada passagem entre lembranças acrescenta um vestígio e um pequeno deslocamento de impressão.\n\nQuando uma lembrança perde letras, as restantes se aproximam, reorganizando a figura com menos recursos. O contorno é calculado por caminhos e relações matemáticas; não há imagens ocultas, máscaras de fotografias ou consultas à geometria de fontes.\n\nNão existe um estado de vitória: preencher a frase não apaga a trajetória dos caracteres. A redistribuição de funções é uma **metáfora artística**, não uma reprodução científica de processos neurológicos. A dimensão sonora é representada visualmente; o sketch não reproduz áudio.\n\n## Prompt de concepção\n\nCrie um sketch interativo de arte tipográfica com o tema **“Lembro com o que sobrou”**, explorando a memória como uma reconstrução que transforma aquilo que tenta preservar.\n\nA composição deve apresentar fragmentos de lembranças associados a diferentes percepções: o rosto de alguém, uma voz, uma temperatura, uma textura. Todas as lembranças compartilham uma quantidade limitada de letras. Para reconstruir uma delas, o participante precisa retirar caracteres de outras, deixando lacunas e produzindo novos sentidos nas frases que permanecem.\n\nCada letra deve carregar vestígios sensoriais de sua origem. Caracteres provenientes de uma lembrança sonora pulsam, ecoam ou fazem pausas; os de uma lembrança tátil se comprimem, aderem ou resistem ao movimento; os de uma lembrança visual preservam relações de posição e contorno. Ao serem transferidos, esses caracteres levam seus comportamentos para o novo contexto.\n\nA interferência deve produzir combinações inesperadas: **um rosto que gagueja, uma voz que passa a ser lembrada como temperatura, uma distância que adquire ritmo**. Essa mistura precisa aparecer no comportamento e na organização das letras, além do significado das frases.\n\nÀ medida que uma lembrança perde caracteres, ela deve tentar se reorganizar usando os recursos que restaram. A proposta usa a redistribuição de funções como metáfora artística: aquilo que perde uma forma de expressão encontra outra maneira de continuar presente.\n\nAs transformações deixam marcas. Devolver uma letra ao lugar de origem não elimina completamente os comportamentos adquiridos durante seu percurso. Assim, mesmo que o participante recomponha uma frase, a lembrança já terá mudado.\n\nA imagem deve ser construída pela própria tipografia: palavras, vazios, sobreposições, ritmos e movimentos. A interação começa com o desejo de recuperar algo e revela progressivamente seu custo: **para lembrar de uma coisa, outras precisam mudar**.\n\n## Regras técnicas e créditos\n\n- p5.js **2.2.3** carregado exclusivamente de `https://cdn.jsdelivr.net/npm/p5@2.2.3/lib/p5.min.js`.\n- O ZIP **não contém a biblioteca p5.js**, fontes, imagens ou dependências instaladas.\n- Usa fontes do sistema, com alternativas locais, sem importar arquivos de fonte.\n- Não utiliza `textToPoints`, `textToContours` ou outros métodos de consulta de geometria de fonte.\n- A imagem do canvas é construída com caracteres, vazios, ecos e sobreposições. As bordas da interface apenas organizam os controles.\n- Preâmbulo YAML com as tags **AI** e **ChatGPT** e a coleção **artefato da semana/7**.\n- Concepção fornecida pelo participante; implementação realizada com auxílio de **ChatGPT**.\n- Referências técnicas: [p5.js — createCanvas](https://p5js.org/reference/p5/createCanvas/), [text](https://p5js.org/reference/p5/text/), [textFont](https://p5js.org/reference/p5/textFont/).",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "helena giovanna artefato 7 tipografia (1)",
+      "id": "helena-giovanna-artefato-7-tipografia-1",
+      "name": "helena giovanna artefato 7 tipografia (1)",
+      "origin": "native",
+      "lastModified": 1791055611133,
+      "title": "Manual de Instruções para uma Nuvem",
+      "tags": [
+        "AI",
+        "ChatGPT",
+        "typography",
+        "interactive",
+        "generative-art"
+      ],
+      "collection": "artefato da semana/7",
+      "description": "Este projeto explora a tipografia como elemento principal da imagem, criando uma representação do ciclo de formação de uma nuvem usando apenas palavras.\n\nPalavras como \"evapore\", \"suba\", \"flutue\", \"junte\", \"espere\" e \"esfrie\" possuem comportamentos relacionados aos seus próprios significados.\n\n\"suba\" sobe, \"flutue\" flutua, \"junte\" se aproxima das outras palavras, \"espere\" permanece parada por um período e \"caia\" cai como chuva.\n\nA proposta é fazer com que as palavras deixem de funcionar apenas como texto e passem a fazer parte da própria composição visual.\n---\nInteração:\n\n- O movimento do mouse interfere nas palavras como se estivesse produzindo vento.\n\n- Ao clicar na tela, novas palavras \"evapore\" surgem próximas ao chão e começam a subir.\n---\nO projeto foi desenvolvido com auxílio do ChatGPT na elaboração da ideia e na implementação do código.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "Artefato 7 Gabriella Murta",
+      "id": "artefato-7-gabriella-murta",
+      "name": "Artefato 7  Gabriella Murta",
+      "origin": "native",
+      "lastModified": 1791055499664,
+      "title": "Artefato 7 - Texto",
+      "tags": [
+        "text",
+        "ia",
+        "generative",
+        "AI"
+      ],
+      "collection": "artefato da semana/7",
+      "description": "Autora: Gabriella Pinheiro\n\nO prompt não foi simples, iniciei uma conversa sobre a proposta da atividade. Fizemos um brainstorm e começamos pela ideia de rio. Depois fiz os comandos e dei o texto, além da características de cor, fonte, fundo etc. \n\nRolando o mouse para cima e para baixa muda o tamanho da fonte e, consequentemente o espaçamento, pois o tamanho da coluna não muda.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "typography of the obra dinn",
+      "id": "typography-of-the-obra-dinn",
+      "name": "typography of the obra dinn",
+      "origin": "native",
+      "lastModified": 1791055333695,
+      "title": "Typography of the Obra Dinn",
+      "tags": [
+        "generative",
+        "tipografia",
+        "AI",
+        "Claude",
+        "Obra Dinn"
+      ],
+      "collection": "artefato da semana/7",
+      "description": "Um sketch em que uma cena inteira é construída apenas com palavras. A estética vem de *Return of the Obra Dinn*: duas cores, contraste forte, luz que revela o espaço e sombras feitas de pontilhado.\n\n## Como interagir\n\n- **Mova o mouse:** a câmera se desloca um pouco (paralaxe) e uma lanterna ilumina a região sob o cursor.\n- **Clique:** inverte a paleta, entre escuro com letras claras e claro com letras escuras.\n\n## Processo criativo\n\n### 1. A ideia\n\nO ponto de partida foi a tipografia como matéria de construção. Em vez de desenhar uma sala e depois pôr texto em cima, a ideia era que o texto fosse a sala. Cada objeto é feito da palavra que o nomeia, então o que se lê e o que se vê são a mesma coisa.\n\nO *Obra Dinn* serviu de referência por três razões:\n\n- A paleta é de 1 bit. Cada ponto está ligado ou desligado, o que combina bem com letras, que também são formas de contraste puro.\n- As superfícies são sugeridas por linhas e por pontilhado, e não por sombreamento suave. As palavras podem fazer o papel dessas linhas.\n- A luz decide o que se vê. Uma cena escura que só aparece aos poucos dá o clima de investigação e memento mori do jogo.\n\n### 2. Primeira versão: 2D\n\nComecei com uma sala desenhada em duas dimensões. As palavras eram posicionadas ao longo de linhas e preenchiam quadriláteros para sugerir os objetos. O resultado ficou abstrato demais. As palavras se sobrepunham, a perspectiva era só aproximada e os objetos viravam manchas de texto.\n\n### 3. Segunda versão: objetos mais claros\n\nReduzi o ruído. Cada objeto passou a ter uma palavra e uma família de fontes próprias, o fundo ficou discreto e os móveis ganharam silhuetas reconhecíveis. A luz ficou mais suave e o dither passou a atuar sobretudo no fundo. Ainda assim, a perspectiva continuava forçada, desenhada à mão.\n\n### 4. Versão atual: perspectiva real\n\nA foto de referência do jogo, o convés do navio, mostrou o que faltava. O que dá a sensação de espaço ali é a perspectiva com um ponto de fuga: tábuas que convergem, cordas que fogem, elementos que diminuem com a distância. Por isso mudei a abordagem. Em vez de posicionar palavras em 2D, passei a construí-las no espaço 3D e deixar uma câmera projetá-las.\n\n## Como funciona\n\n**Palavras no espaço.** Cada palavra tem uma posição 3D em metros, uma direção de leitura, um vetor de \"cima\" (para onde apontam as hastes das letras) e uma altura. O chão, por exemplo, é uma superfície com fileiras de \"tábua\" e \"convés\" empilhadas a intervalos constantes. A perspectiva vem de graça: as fileiras convergem para o fundo e as letras encolhem com a distância.\n\n**Projeção.** A cada frame, cada palavra é projetada com uma câmera de pinhole simples (`x' = f·x / z`). Para que o texto acompanhe o plano onde está, calculo como a direção de leitura e a direção \"para cima\" aparecem na tela e aplico isso como uma matriz de transformação (`applyMatrix`). É isso que deforma as letras e as faz parecer coladas nas superfícies.\n\n**Oclusão.** Superfícies são desenhadas de trás para frente (algoritmo do pintor). Antes das palavras de cada face, o polígono dela é preenchido com a cor do fundo, o que esconde o que está atrás.\n\n**Luz e dither.** Cada palavra tem um limiar aleatório fixo. Se o brilho no ponto em que ela está passar do limiar, ela aparece, e senão some. Isso é um dither estocástico feito com palavras no lugar de pixels. O brilho depende de:\n- a distância ao cursor (a lanterna);\n- fontes de luz no espaço 3D: a lanterna e a lua;\n- um leve desvanecimento com a distância, para dar profundidade.\n\n**Níveis de visibilidade.** Objetos (`obj`) ficam quase sempre visíveis. Estruturas (`struct`) como cantos, vigas e rodapés também. O fundo (`bg`) fica esparso e só aparece sob a luz. A lua (`moon`) está sempre acesa.\n\n**A lua.** A lua é feita de anéis concêntricos da palavra \"lua\". O céu em volta é pontilhado, mais denso perto da lua, como o céu da imagem de referência.\n\n**Paleta.** Verde-escuro quase preto e branco-esverdeado, no tom das imagens do jogo (`#1e2218` e `#e3f5ee`).\n\n## Para modificar\n\nTudo está na função `build()` do `sketch.js`, com algumas ferramentas:\n\n- `surf(palavra, origem, vetorA, vetorB, altura, cima, fontes, nível, opções)` preenche uma superfície com fileiras de palavras.\n- `rail(...)` faz uma faixa fina, como moldura, perna ou aresta.\n- `circ(...)` coloca palavras em anel ou arco.\n- `boxy(...)` monta uma caixa com as faces visíveis.\n- `LIGHTS` define as fontes de luz (posição, alcance, força, se oscila).\n- `FONTS`, ou melhor `SER`, `MONO`, `SANS`, `IMP` e `SCR`, definem as famílias tipográficas usadas.\n\n## Referências\n\n- *Return of the Obra Dinn*, de Lucas Pope: paleta de 1 bit, dither e linhas.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "artefato tipografia",
+      "id": "artefato-tipografia",
+      "name": "artefato tipografia",
+      "origin": "native",
+      "lastModified": 1791055227425,
+      "title": "Fluidez Reológica e Densidometria Tipográfica",
+      "tags": [
+        "AI",
+        "Gemini",
+        "typography",
+        "p5js",
+        "generative-art",
+        "vector-field"
+      ],
+      "collection": "artefato da semana/7",
+      "description": "# Fluidez Reológica e Densidometria Tipográfica\n\nEste artefato explora a **tipografia como matéria fluida e volumétrica**, afastando-se das abordagens tradicionais (como chuva de texto estilo Matrix, filtros ASCII simples ou partículas isoladas que formam contornos).\n\n## 💡 Conceito\nO projeto constrói um **chiaroscuro volumétrico e uma paisagem fluida composta exclusivamente por texto**. O espaço gráfico é gerado através de dois sistemas tipográficos interdependentes:\n\n1. **Campo Densidométrico de Micro-Texto:** Uma grelha tipográfica contínua onde a luz, a sombra e a sensação de profundidade tridimensional são sintetizadas apenas pela variação do peso visual, rotação, espaçamento e opacidade dos caracteres.\n2. **Cintas Semânticas Reológicas:** Frases dinâmicas que se comportam como um fluido não-newtoniano. À medida que navegam pelo campo de vetores, as letras esticam, comprimem e rodam individualmente, criando uma ilusão de deformação orgânica e volume.\n\n## 🕹️ Interatividade\n* **Mover o Rato:** Funciona como uma lente de distorção viscosa e vórtice de força no campo tipográfico.\n* **Clique do Rato:** Dispara uma onda de choque que reorganiza temporariamente a densidade do texto no ponto de impacto.\n* **Teclado (Digitação):** Digite qualquer letra para injetar novos caracteres na matriz tipográfica em tempo real.\n* **Teclas `1`, `2`, `3`:** Alternam entre diferentes paletas de iluminação tipográfica (*Cyber Monochromic*, *Pergaminho Ocre* e *Cyan Neon*).\n\n## 🛠️ Especificações Técnicas\n* **p5.js v2 via CDN:** Biblioteca carregada externamente via jsDelivr (`p5@2.0.0`).\n* **Fonte Tipográfica via CDN:** Fonte *Roboto Mono* carregada via Google Fonts CDN (sem ficheiros de fonte incluídos no arquivo local/zip).",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "escrito no espelho",
+      "id": "escrito-no-espelho",
+      "name": "escrito no espelho",
+      "origin": "native",
+      "lastModified": 1791055093896,
+      "title": "Escrito no espelho",
+      "tags": [
+        "AI",
+        "Claude",
+        "typography",
+        "mirror",
+        "fog",
+        "handwriting"
+      ],
+      "collection": "artefato da semana/7",
+      "description": "A inspiração veio de quando eu era criança e adorava escrever no espelho do banheiro com o dedo, depois do banho, quando o vidro estava todo embaçado. A obra recria esse gesto: a \"fonte\" não é um arquivo de tipografia, mas um alfabeto desenhado traço a traço por pontos (com suporte a acentos do português), que um dedo invisível escreve na névoa com leve tremor, inclinação e variação de tamanho em cada letra. Onde o dedo passa, o embaçado se abre e revela o reflexo nítido de um banheiro iluminado; com o tempo a névoa volta a se fechar pelas bordas, as letras somem e, aqui e ali, escorrem gotas que deixam fios finos de vidro limpo. Dá para digitar qualquer texto (Backspace apaga a última letra, Esc limpa o espelho, `*` desenha um coração e `@` um rostinho) ou arrastar o mouse para escrever à mão livre. Como a tipografia é desenhada pelo próprio código, não há arquivos de fonte no projeto. A IA (Claude) foi utilizada como ferramenta de apoio no desenvolvimento do código em p5.js, auxiliando na modelagem do alfabeto por traços suavizados, na composição das camadas de névoa, borda úmida e reflexo e na animação das gotas. A partir dessas sugestões, o código foi adaptado e refinado para alcançar o resultado visual desejado.\n\n**Prompt sugestivo:**\n\n> Crie um sketch em p5.js (versão 2), em um canvas de 900×900, sobre o tema Tipografia, em que o texto é escrito com o dedo num espelho embaçado de banheiro. Não use arquivos de fonte nem textToPoints: defina um alfabeto próprio por traços (a–z, números, pontuação e acentos do português) suavizados com curvas Catmull-Rom, escritos letra a letra por um \"dedo\" com pequenas variações de inclinação, rotação e tamanho. O espelho tem uma camada de névoa feita de um reflexo desfocado, um véu esbranquiçado e minúsculas gotículas; onde o dedo passa, a névoa é apagada com borda úmida e clara e aparece o reflexo nítido (lâmpadas quentes, azulejos, planta e prateleira). Com o tempo a névoa volta a fechar pelas bordas e, às vezes, gotas escorrem das letras deixando um fio de vidro limpo e uma gota brilhante na ponta. Permita digitar, escrever à mão livre com o mouse, apagar a última letra com Backspace e limpar tudo com Esc. Comece escrevendo sozinho \"alguém passou por aqui ♥\".",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "style.css",
+        "sketch.js",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "Artefato7ArturTaboada",
+      "id": "artefato7arturtaboada",
+      "name": "Artefato7ArturTaboada",
+      "origin": "native",
+      "lastModified": 1791054980260,
+      "title": "Rios",
+      "tags": [
+        "AI",
+        "Claude",
+        "typography",
+        "justification",
+        "rivers",
+        "generative"
+      ],
+      "collection": "artefato da semana/7",
+      "description": "# Rios\n\nEste sketch parte de um acidente que existe dentro de todo texto justificado. Justificar uma coluna é esticar os espaços entre as palavras até a linha terminar exatamente na margem; cada linha estica de um jeito diferente e, de vez em quando, o espaço entre duas palavras se sobrepõe ao espaço da linha de baixo, e este ao da seguinte. Quatro, cinco, seis linhas depois abriu-se um corredor de branco atravessando a mancha. Os tipógrafos chamam esse corredor de **rio**.\n\nA imagem deste artefato é feita de texto, mas o que se olha nela não são as letras: é o branco que sobra entre elas. O rio não está na fonte, não está na entrelinha, não está na escolha das palavras — é o resto de uma conta, a soma dos arredondamentos que cada linha precisou fazer para fechar na margem certa. O programa não desenha rio nenhum; ele compõe a página e depois vai procurá-los.\n\n## Como o sketch funciona\n- A página é **composta de verdade**, não simulada. Cada palavra é medida com `textWidth()`, as palavras são juntadas enquanto couberem na medida da coluna, e a folga que sobra é repartida igualmente entre os vãos daquela linha. A última linha de cada parágrafo não é esticada, como manda a tradição, e o texto derrama de uma coluna para a outra quando a coluna enche.\n- A repartição da folga **não tem teto**. Um compositor hifenizaria a palavra seguinte em vez de abrir vãos enormes; sem hifenização — como no jornal composto com pressa — a linha estica até onde precisar. São justamente esses vãos exagerados que abrem os rios mais largos, de modo que o defeito não é corrigido aqui: ele é o assunto. Em contrapartida, toda linha justificada termina exatamente na margem, em qualquer formato de tela.\n- A detecção usa a **definição tipográfica** do fenômeno, e não uma aproximação: dois vãos pertencem ao mesmo rio quando seus intervalos horizontais se sobrepõem. O corredor desenhado é o branco comum a toda a corrente, e por isso ele afina onde os vãos quase se perdem e se alarga onde estão bem alinhados. Uma corrente só vira rio a partir de quatro linhas, e o peso visual cresce com o comprimento: um rio de quatro linhas é marginal e aparece fraco; um de oito domina a coluna.\n- Um rio só existe **dentro de uma coluna**. A calha entre colunas é outro branco, de outra natureza, e não conta.\n- **A medida respira.** A largura das colunas abre e fecha num ciclo de trinta e um segundos. A cada largura nova as linhas se quebram em outros pontos, os vãos caem em outros lugares, e os rios secam e abrem sozinhos — que é exatamente o que acontece quando se troca uma palavra por um sinônimo mais curto numa prova de página.\n- **A vista aperta os olhos.** Num segundo ciclo, de dezessete segundos, a tinta perde força até as palavras deixarem de ser legíveis e virarem textura cinza, e nesse momento a água fica funda. É literalmente o gesto que um tipógrafo usa para achar rios numa prova: apertar os olhos, ou virar a página de cabeça para baixo, até as letras deixarem de ser lidas. Os dois ciclos têm durações diferentes e primas entre si, então a página nunca se repete.\n- Todas as medidas derivam de `min(windowWidth, windowHeight)`, e o número de colunas é a maior quantidade que ainda respeite uma medida mínima por coluna — abaixo de mais ou menos vinte e cinco caracteres por linha a justificação deixa de fechar sem hifenização. Numa tela larga isso resolve para quatro colunas; numa tela de celular, para uma só. `windowResized()` recalcula tudo.\n- Por desempenho, as letras são compostas numa camada à parte e só refeitas quando a medida muda de fato (o valor é arredondado ao pixel, já que as quebras de linha só mudam em medidas discretas). Cada quadro custa um único blit mais os rios, e o sketch roda a 60 quadros por segundo com cerca de cento e vinte linhas de texto na tela.\n\n## Inspiração\nA referência não é uma obra, é um vício de ofício. Rios são um dos defeitos clássicos da composição justificada, discutidos em qualquer manual de tipografia e caçados na prova de página com dois truques manuais: apertar os olhos até o texto virar mancha, ou virar a folha de cabeça para baixo, para que o cérebro pare de ler e passe a ver. O sketch pega esses dois gestos e os transforma nos seus dois únicos movimentos — a medida que respira, que faz os rios mudarem de lugar, e a vista que desfoca, que faz a água vir à tona.\n\nA escolha do tema foi por exclusão deliberada. Os caminhos mais trilhados da tipografia em programação criativa — texto correndo ao longo de uma curva, letras convertidas em pontos ou partículas, a palavra usada como pincel, tipografia cinética, nuvens de palavras — tratam todos a letra como **forma a ser manipulada**. Aqui a letra não é manipulada em nada: a fonte é comum, o corpo é comum, o texto é prosa corrida e o desenho é uma página de jornal, sem nenhum efeito. A única coisa que o programa faz é medir. O que aparece é uma forma que ninguém desenhou, feita inteiramente do branco que a composição deixou para trás — a imagem é o negativo do texto, não o texto.\n\nO texto que preenche as colunas fala do próprio fenômeno, de modo que a página é ao mesmo tempo a explicação e o exemplar defeituoso: as frases sobre vãos que esticam demais são compostas com vãos que esticam demais.\n\n## Sobre o uso de IA\nO artefato foi desenvolvido com auxílio do Claude (AI), a partir da minha escolha de tema e de sucessivas rodadas de teste. Vale registrar duas correções que só apareceram rodando o sketch no p5.js 2 de verdade, e não no raciocínio sobre o código: `textWidth(' ')` devolve **zero** nessa versão, porque a medição ignora o branco nas pontas da string — o que fazia a justificação sumir por completo e as palavras saírem coladas. A largura do espaço passou a ser medida por diferença, com o branco preso entre duas letras (`textWidth('n n') - textWidth('nn')`). A segunda foi o teto do vão, que deixava algumas linhas sem alcançar a margem e precisou ser removido.\n\n## Autor\nArtur Taboada Dios Carvalho\n\n## Como visualizar este projeto\n\n**Usando o ambiente online (p5front)**\n1. Acesse o ambiente de desenvolvimento utilizado na disciplina: [https://esperanc.github.io/p5front/](https://esperanc.github.io/p5front/).\n2. Copie todo o conteúdo do arquivo `sketch.js` deste zip e cole na área de edição de código do site.\n3. O resultado será renderizado na tela de visualização após o botão \"Run\" ser clicado. Vale esperar cerca de meio minuto com o sketch aberto: é o tempo de um ciclo completo da medida e de quase dois ciclos da vista, e é nesse intervalo que se vê os rios secarem e abrirem em outros lugares.\n\nNenhuma biblioteca externa além do p5.js é necessária.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "thumbnail.png",
+        "README.md"
+      ]
+    },
+    {
+      "folder": "artefato 7 aeroporto palavras Arthur Ramos",
+      "id": "artefato-7-aeroporto-palavras-arthur-ramos",
+      "name": "artefato 7 aeroporto palavras Arthur Ramos",
+      "origin": "native",
+      "lastModified": 1791054831199,
+      "title": "Aeroporto para Palavras Nunca Ditas",
+      "tags": [
+        "AI",
+        "ChatGPT",
+        "p5.js",
+        "typography",
+        "generative",
+        "split-flap"
+      ],
+      "collection": "artefato da semana/7",
+      "description": "# Aeroporto para Palavras Nunca Ditas\n\n**Autor:** Arthur Ramos  \n**Artefato da Semana 7 — Tipografia**\n\n## Ideia\n\nO sketch transforma um painel antigo de partidas em um terminal para frases que alguém pensou, mas nunca conseguiu dizer. Em vez de cidades, os destinos são mensagens como **EU FICO**, **ME DESCULPA**, **VOLTA** e **AINDA DÁ TEMPO**. Cada uma recebe um estado, como **NÃO DITA**, **ENGOLIDA**, **ADIADA** ou **SEM CORAGEM**.\n\nAs letras giram como as peças de um painel mecânico _split-flap_. De tempos em tempos, uma linha muda e uma nova mensagem tenta encontrar seu lugar. A composição é diferente a cada execução.\n\n## Como a tipografia forma a imagem\n\nDepois do fundo, a única primitiva visual utilizada é `text()`. Molduras, divisórias, indicadores, códigos, ruídos e o próprio painel são construídos com caracteres tipográficos, incluindo `═`, `─`, `│`, `·`, `▓` e letras. Não há retângulos, linhas, círculos ou contornos de fonte desenhando a estrutura.\n\nA proposta evita as soluções mais diretas apresentadas na aula, como formar letras com pontos, deformar contornos, preencher máscaras tipográficas ou criar nuvens de palavras. Aqui, a tipografia funciona ao mesmo tempo como imagem, interface e narrativa.\n\n## Geração e interação\n\n- A distribuição inicial de mensagens, horários, códigos, portões e estados é aleatória.\n- A cada intervalo, uma das linhas passa por uma nova sequência de letras.\n- **Clique ou toque em uma linha:** troca somente aquela partida.\n- **Espaço:** pausa ou continua o painel.\n- **R:** recria todo o terminal.\n- **S:** salva a imagem atual em PNG.\n\nO canvas usa `windowWidth` e `windowHeight`. O número de linhas, o tamanho dos caracteres e as colunas visíveis se adaptam à janela.\n\n## Referências\n\n- [Aula 6 — Tipografia, Creative Coding 2026](https://esperanc.github.io/SlideDown/index.html?p=6%20-%20Tipografia&f=https%3A%2F%2Fesperanc.github.io%2FCreativeCoding2026)\n- [Split-flap display](https://en.wikipedia.org/wiki/Split-flap_display)\n\nOs painéis mecânicos de aeroportos inspiraram o movimento letra por letra e a organização em colunas. O conteúdo foi deslocado do transporte literal para a ideia de mensagens que permanecem esperando uma partida emocional.\n\n## Uso de inteligência artificial\n\nO código e a documentação foram desenvolvidos com auxílio do **ChatGPT**, com escolhas e revisão de Arthur Ramos.\n\nPrompt inicial utilizado:\n\n> Crie um sketch generativo e responsivo em p5.js sobre tipografia. Quero representar um painel de aeroporto para palavras que nunca foram ditas. No lugar das cidades, coloque mensagens como “EU FICO”, “ME DESCULPA” e “VOLTA”, com estados como “NÃO DITA”, “ADIADA” e “SEM CORAGEM”. As letras devem mudar como em um painel mecânico de aeroporto. Construa toda a imagem com texto e caracteres tipográficos. Use p5.js versão 2 por CDN e comente o código para facilitar a compreensão.\n\n## Requisitos técnicos\n\n- p5.js **2.2.3** carregado pelo CDN jsDelivr;\n- nenhuma cópia da biblioteca p5.js incluída no ZIP;\n- nenhuma fonte externa ou arquivo de fonte incluído;\n- arquivos do sketch diretamente na raiz do ZIP.",
+      "hasThumb": true,
+      "files": [
+        "thumbnail.png",
+        "index.html",
+        "README.md",
+        "sketch.js",
+        "style.css"
+      ]
+    },
+    {
+      "folder": "artefato7 dermatoglifia tipografica",
+      "id": "artefato7-dermatoglifia-tipografica",
+      "name": "artefato7 dermatoglifia tipografica",
+      "origin": "native",
+      "lastModified": 1791054724064,
+      "title": "Dermatoglifia Semiótica: Identidade em Curvas Tipográficas",
+      "tags": [
+        "AI",
+        "Gemini",
+        "typography",
+        "biometry",
+        "generative-art"
+      ],
+      "collection": "artefato da semana/7",
+      "description": "# Dermatoglifia Semiótica: Identidade em Curvas Tipográficas\n\n## Inspiração\n- **Obra de referência:** *Self-Portrait in Letters* / Gravuras de Linhas de Nível Biométricas & Poesia Concreta\n- **Autores de referência:** Augusto de Campos (Poesia Concreta) e Casey Reas (Process Compendium / Software Structures)\n- **Link:** https://www.behance.net/gallery/134958175/Typographic-Portraits-Fingerprint-Identity\n\n## Relação entre o Sketch e a Obra\nEste artefato propõe uma fusão entre a poesia concreta brasileira e o desenho generativo de campos vetoriais. Em vez de utilizar as abordagens tradicionais de tipografia computacional (como converter uma imagem em grade de caracteres ASCII ou dispersar vértices de fontes em partículas caóticas), este sketch constrói **a própria imagem anatômica exclusivamente a partir de cadeias tipográficas vivas**:\n\n1. **Campo Vetorial Biométrico:** Anéis concêntricos são deformados por ruído de Perlin e coeficientes trigonométricos de excentricidade, emulando os arcos e deltas de uma impressão digital.\n2. **Orientação Tangencial do Glifo:** Cada caractere das frases é calculado individualmente no espaço paramétrico polar, rotacionando-se na tangente exata da crista para manter a coerência visual da imagem global.\n3. **Lente Semiótica Interativa:** O observador interage com o mouse para transitar entre a **imagem macro** (a impressão digital pura) e a **leitura micro** (os versos sobre privacidade, identidade e vigilância digital que compõem o corpo).",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "Artefato 7 Ele Angel Mansilla",
+      "id": "artefato-7-ele-angel-mansilla",
+      "name": "Artefato 7 Ele Angel Mansilla",
+      "origin": "native",
+      "lastModified": 1791054089305,
+      "title": "Ele",
+      "tags": [
+        "AI",
+        "Claude",
+        "typography",
+        "horror",
+        "sound",
+        "3d"
+      ],
+      "collection": "artefato da semana/7",
+      "description": "# Ele\r\n\r\nAutor: Angel Mansilla  \r\nDRE: 123691897\r\n\r\nA ideia partiu do vídeo [I made a horror game that's IMPOSSIBLE to SCREENSHOT!](https://www.youtube.com/watch?v=RNhiT-SmR1Q), do canal Branta Games, em que um jogo de terror é feito só de chiado preto e branco e a cena só aparece quando as coisas se movem ([o jogo se chama Motus](https://brantagames.itch.io/motus)). Quis fazer isso com palavras: a tela inteira é uma página de texto, e não existe nenhum desenho, só letras numa grade. Depois veio a ideia de que quem anda pela casa não enxerga e só descobre o que tem em volta jogando uma pedra e ouvindo onde ela cai.\r\n\r\nVocê começa num porão trancado com um cadeado. Cada coisa da casa é escrita com o próprio nome: a parede é feita de \"parede parede\", o chão de \"chão\", a cadeira de \"cadeira\". Sem som, tudo fica num cinza apagado e as palavras se confundem umas com as outras. Quando você joga a pedra, ela quica nas paredes e cai no chão, e a onda do som passa pela casa acendendo cada coisa na sua cor. A chave do cadeado está pendurada no fundo da casa, ao lado dele, um homem vermelho escrito \"ele ele ele\", de costas, virado para a parede. Bilhetes nas paredes contam o que aconteceu ali.\r\n\r\nPelo caminho aparecem almas azuis, pequenas, escritas \"alma alma\". Elas têm a mesma regra que ele: vêm até você pela casa, depressa, enquanto você não está olhando, e congelam quando você olha. Quando uma delas chega do seu lado, ou quando você chega até ela, ela fala, com um som de bipes inspirado nas falas de [Deltarune](https://deltarune.com/), e some assim que sai da sua vista. Elas são o que sobrou de quem viveu com ele: ele é alguém da família que fez mal dentro de casa, e as almas falam disso de forma vaga e dolorida, sem descrever nada, mas cada uma deixa uma pista. Uma delas diz: \"ele dizia que esta casa era nossa... e que nós éramos dele. calei por tanto tempo que a minha voz se desfez em poeira. enquanto os olhos estão nele, ele não caminha.\"\r\n\r\nPedras jogadas perto dele o acordam, e pegar a chave também. Os passos contam: de longe, cada passo deixa ele um pouco mais alerta; perto dele, um passo só já o acorda. Acordado, ele segue você pela casa, mas só se mexe quando não está sendo encarado, e é preciso voltar até a porta do porão sem tirar os olhos dele. Se ele te alcança, a grade inteira forma um \"ele\" gigante; se você abre o cadeado, forma \"saída\".\r\n\r\n## Como jogar\r\n\r\n1. Abra o `index.html` no navegador (Chrome, Edge ou Firefox), com a internet ligada: o p5.js 2 e a fonte Courier Prime vêm de CDN.\r\n2. A primeira tela explica os comandos. Aperte E, a barra de espaço ou clique para continuar; depois aparece o primeiro bilhete, que conta a história.\r\n3. Ande com as teclas W, A, S e D (W para a frente, S para trás, A e D para os lados). Para olhar e virar, arraste o mouse com o botão apertado.\r\n4. Aperte a barra de espaço para jogar uma pedra. Por onde o som passa, cada coisa acende na sua cor e fica mais fácil de ler.\r\n5. A frase no alto da tela lembra o que você está buscando. Quando aparecer \"E ·\" no meio da tela, a tecla E lê o bilhete, pega a chave ou abre o cadeado. Os bilhetes nas paredes explicam o resto.\r\n6. Não jogue pedras perto dele: o barulho o acorda, e pegar a chave também. Os seus passos também são ouvidos: se aparecer \"algo se mexeu no fundo da casa\", ele está perto; chegando perto dele, ele acorda. Se ele acordar, fique de frente para ele e ande para trás com a tecla S até a porta do porão.\r\n\r\nA barra de baixo lembra todos os comandos (H esconde e mostra). P pausa e R recomeça. A tecla V mostra o mapa do movimento, que deixa ver a técnica por trás: o que está em cinza desliza para a esquerda, o que está em laranja desliza para a direita e o preto ferve.\r\n\r\n## Como foi feito\r\n\r\nA casa é uma cena 3D desenhada escondida, em WEBGL e em baixa resolução, com um pixel para cada letra da grade, e ela nunca aparece na tela. Um shader pequeno grava em cada pixel a distância até quem joga, o nome da coisa e a distância até onde a pedra caiu, e o sketch lê isso com `loadPixels()`. Cada linha de texto é montada letra a letra: coisas diferentes deslizam em sentidos opostos, e as trocas só acontecem entre palavras, então nenhuma palavra se quebra. Nos finais, a palavra gigante é escrita numa imagem do tamanho da grade e só as células que caem dentro das letras acendem, como a letra usada como máscara na aula de tipografia. O som é feito no próprio navegador, com Web Audio. Da disciplina usei arrays, objetos, vetores e transformações, `random()` e a aula de tipografia: medir a fonte antes de desenhar, compor o texto letra a letra, tratar o texto como palavras e amostrar pixels.\r\n\r\n## Participação da IA\r\n\r\nUsei o Claude Code (Claude) para desenvolver o trabalho. As ideias e as escolhas principais foram minhas: o efeito do vídeo feito com palavras, a pessoa cega e a pedra que revela a casa, a fuga com chave e cadeado, os bilhetes, as almas azuis que falam com som de bipes, as cores de cada tipo de coisa e o visual dele, a partir de uma imagem de referência de um boneco em pixels. O Claude escreveu o código, testou no navegador e sugeriu algumas soluções que eu aceitei, como as coisas aparecerem escritas com o próprio nome, a regra de ele só andar quando não é encarado, a paleta de cores e os finais com a palavra gigante. Os textos dos bilhetes, das falas das almas (a partir do que eu pedi para elas sentirem) e dos finais foram escritos pelo Claude, e ele ajudou com este README.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "Particles with wallpaper groups",
+      "id": "particles-with-wallpaper-groups",
+      "name": "Particles with wallpaper groups",
+      "origin": "openprocessing",
+      "lastModified": 1790621020478,
+      "title": "",
+      "tags": [
+        "flow fields",
+        "symmetry",
+        "wallpaper groups"
+      ],
+      "collection": "generative",
+      "description": "Creates symmetric flow field patterns using wallpaper groups\n\n## Keyboard commands:\nf : decrease fade factor (more opaque)\nF : increase fade factor (more transparent)\n+ : zoom in\n- : zoom out\nG,g: New wallpaper group for the same field\n> :  increases tile size\n< :  decreases tile size\nc,C: color scheme cycle\nany other key: randomize",
+      "hasThumb": true,
+      "files": [
+        "mySketch.js",
+        "Groups.js",
+        "index.html",
+        "thumbnail.png",
+        "README.md"
+      ]
+    },
     {
       "folder": "Artefato 6 Samuel Araujo",
       "id": "artefato-6-samuel-araujo",
       "name": "Artefato 6   Samuel Araujo",
       "origin": "native",
-      "lastModified": 1790539237345,
+      "lastModified": 1790620989700,
       "title": "",
       "tags": [],
       "collection": "artefato da semana/6",
@@ -4554,29 +5372,6 @@
         "README.md",
         "thumbnail.png",
         "style.css"
-      ]
-    },
-    {
-      "folder": "Particles with wallpaper groups",
-      "id": "particles-with-wallpaper-groups",
-      "name": "Particles with wallpaper groups",
-      "origin": "openprocessing",
-      "lastModified": 1786730932358,
-      "title": "",
-      "tags": [
-        "flow fields",
-        "symmetry",
-        "wallpaper groups"
-      ],
-      "collection": "generative",
-      "description": "Creates symmetric flow field patterns using wallpaper groups\n\n## Keyboard commands:\nf : decrease fade factor (more opaque)\nF : increase fade factor (more transparent)\n+ : zoom in\n- : zoom out\nG,g: New wallpaper group for the same field\n> :  increases tile size\n< :  decreases tile size\nc,C: color scheme cycle\nany other key: randomize",
-      "hasThumb": true,
-      "files": [
-        "mySketch.js",
-        "Groups.js",
-        "index.html",
-        "thumbnail.png",
-        "README.md"
       ]
     },
     {

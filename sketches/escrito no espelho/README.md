@@ -1,0 +1,11 @@
+---
+title: Escrito no espelho
+tags: [AI, Claude, typography, mirror, fog, handwriting]
+collection: artefato da semana/7
+---
+
+A inspiração veio de quando eu era criança e adorava escrever no espelho do banheiro com o dedo, depois do banho, quando o vidro estava todo embaçado. A obra recria esse gesto: a "fonte" não é um arquivo de tipografia, mas um alfabeto desenhado traço a traço por pontos (com suporte a acentos do português), que um dedo invisível escreve na névoa com leve tremor, inclinação e variação de tamanho em cada letra. Onde o dedo passa, o embaçado se abre e revela o reflexo nítido de um banheiro iluminado; com o tempo a névoa volta a se fechar pelas bordas, as letras somem e, aqui e ali, escorrem gotas que deixam fios finos de vidro limpo. Dá para digitar qualquer texto (Backspace apaga a última letra, Esc limpa o espelho, `*` desenha um coração e `@` um rostinho) ou arrastar o mouse para escrever à mão livre. Como a tipografia é desenhada pelo próprio código, não há arquivos de fonte no projeto. A IA (Claude) foi utilizada como ferramenta de apoio no desenvolvimento do código em p5.js, auxiliando na modelagem do alfabeto por traços suavizados, na composição das camadas de névoa, borda úmida e reflexo e na animação das gotas. A partir dessas sugestões, o código foi adaptado e refinado para alcançar o resultado visual desejado.
+
+**Prompt sugestivo:**
+
+> Crie um sketch em p5.js (versão 2), em um canvas de 900×900, sobre o tema Tipografia, em que o texto é escrito com o dedo num espelho embaçado de banheiro. Não use arquivos de fonte nem textToPoints: defina um alfabeto próprio por traços (a–z, números, pontuação e acentos do português) suavizados com curvas Catmull-Rom, escritos letra a letra por um "dedo" com pequenas variações de inclinação, rotação e tamanho. O espelho tem uma camada de névoa feita de um reflexo desfocado, um véu esbranquiçado e minúsculas gotículas; onde o dedo passa, a névoa é apagada com borda úmida e clara e aparece o reflexo nítido (lâmpadas quentes, azulejos, planta e prateleira). Com o tempo a névoa volta a fechar pelas bordas e, às vezes, gotas escorrem das letras deixando um fio de vidro limpo e uma gota brilhante na ponta. Permita digitar, escrever à mão livre com o mouse, apagar a última letra com Backspace e limpar tudo com Esc. Comece escrevendo sozinho "alguém passou por aqui ♥".
