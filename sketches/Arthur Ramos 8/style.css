@@ -1,0 +1,26 @@
+:root {
+  color-scheme: dark;
+  background: #10130f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+main {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+body {
+  background: #10130f;
+  font-family: system-ui, sans-serif;
+}
+
+canvas {
+  display: block;
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Revoada</title>
+    <script src="https://cdn.jsdelivr.net/npm/p5@2.3.4/lib/p5.min.js"></script>
+    <style>
+      html, body { margin: 0; padding: 0; overflow: hidden; background: #0E0E12; }
+      canvas { display: block; }
+      #barra {
+        position: fixed; top: 12px; left: 50%; transform: translateX(-50%);
+        display: flex; flex-direction: column; align-items: center; gap: 6px; z-index: 2;
+      }
+      #barra .linha { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; }
+      #barra button {
+        font: 600 13px/1 system-ui, sans-serif; color: #EDE6D6; cursor: pointer;
+        background: rgba(255, 255, 255, 0.06); border: 1px solid #3a3a44; border-radius: 6px;
+        padding: 8px 12px;
+      }
+      #barra button:hover { border-color: #E4572E; }
+      #barra button:disabled { opacity: 0.45; cursor: wait; }
+      #barra .dica { font: 12px system-ui, sans-serif; color: #8a857c; }
+      #barra .rotulo { font: 12px system-ui, sans-serif; color: #b8b2a8; align-self: center; }
+      #barra select {
+        font: 600 13px system-ui, sans-serif; color: #EDE6D6; background: #1c1c24;
+        border: 1px solid #3a3a44; border-radius: 6px; padding: 6px 8px; cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="sketch.js"></script>
+  </body>
+</html>

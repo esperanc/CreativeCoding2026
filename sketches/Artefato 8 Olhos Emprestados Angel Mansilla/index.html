@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Olhos Emprestados — Angel Mansilla</title>
+  <link rel="icon" href="data:,">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600&display=swap">
+  <style>
+    html, body {
+      margin: 0;
+      height: 100%;
+      background: #0b1222;
+      overflow: hidden;
+    }
+
+    canvas {
+      display: block;
+    }
+
+    .painel {
+      position: fixed;
+      z-index: 10;
+      pointer-events: none;
+      color: #efe7d6;
+      font-family: "Cormorant Garamond", Georgia, serif;
+    }
+
+    #cartao {
+      top: 22px;
+      left: 26px;
+      max-width: min(360px, calc(100vw - 52px));
+      text-shadow: 0 0 2px rgba(0, 0, 0, 1), 0 1px 3px rgba(0, 0, 0, 0.95), 0 0 12px rgba(0, 0, 0, 0.8), 0 0 28px rgba(0, 0, 0, 0.55);
+      opacity: 0;
+      transform: translateY(-6px);
+      transition: opacity 0.35s, transform 0.35s;
+    }
+
+    /* sombra suave atrás do texto, sem bordas, para ler sobre partes claras */
+    #cartao::before {
+      content: "";
+      position: absolute;
+      inset: -70px -120px -60px -80px;
+      z-index: -1;
+      background: radial-gradient(ellipse 60% 55% at 32% 45%, rgba(4, 7, 14, 0.62), rgba(4, 7, 14, 0) 100%);
+    }
+
+    #cartao.visivel {
+      opacity: 1;
+      transform: none;
+    }
+
+    #cartao p {
+      margin: 0;
+    }
+
+    #sobre {
+      font-family: Inter, system-ui, sans-serif;
+      font-size: 10.5px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #ddd2b8;
+      margin-bottom: 4px !important;
+    }
+
+    #nome {
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 1.1;
+      margin: 0;
+    }
+
+    #condicao {
+      font-style: italic;
+      font-weight: 600;
+      font-size: 19px;
+      color: #e6c27a;
+      margin: 2px 0 9px !important;
+    }
+
+    #frase {
+      font-family: Inter, system-ui, sans-serif;
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 1.45;
+      color: #f1eadc;
+    }
+
+    #ajuda {
+      bottom: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      max-width: calc(100vw - 32px);
+      padding: 7px 16px;
+      font-family: Inter, system-ui, sans-serif;
+      font-size: 13px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      background: rgba(8, 12, 22, 0.74);
+      border: 1px solid rgba(239, 231, 214, 0.16);
+      border-radius: 999px;
+    }
+
+    #ajuda:empty {
+      display: none;
+    }
+
+    #guarda {
+      top: 22px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 9px 16px;
+      font-family: Inter, system-ui, sans-serif;
+      font-size: 15px;
+      color: #2a2212;
+      background: #f4d35e;
+      border-radius: 6px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+      opacity: 0;
+      transition: opacity 0.25s;
+    }
+
+    #guarda.visivel {
+      opacity: 1;
+    }
+
+    #aviso {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-width: min(520px, calc(100vw - 32px));
+      padding: 14px 22px;
+      font-size: 20px;
+      font-weight: 600;
+      text-align: center;
+      background: rgba(8, 12, 22, 0.9);
+      border: 1px solid rgba(239, 231, 214, 0.2);
+      border-radius: 6px;
+    }
+
+    #aviso:empty {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="cartao" class="painel" aria-live="polite">
+    <p id="sobre">pelos olhos de</p>
+    <h2 id="nome"></h2>
+    <p id="condicao"></p>
+    <p id="frase"></p>
+  </div>
+  <div id="ajuda" class="painel"></div>
+  <div id="guarda" class="painel">Segurança: por favor, afaste-se do quadro.</div>
+  <div id="aviso" class="painel" role="status">Carregando a Mona Lisa…</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/p5@2.3.4/lib/p5.min.js"></script>
+  <script src="sketch.js"></script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+html, body { margin: 0; padding: 0; background: #1b1814; }
+body { min-height: 100vh; display: flex; align-items: center; justify-content: center; }
+main { line-height: 0; }
+canvas { display: block; max-width: 100vw; max-height: 100vh; height: auto !important; width: auto !important; aspect-ratio: 1 / 1; }
