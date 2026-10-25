@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crânio 3D — p5.js 2.0 WebGL</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/p5@2.0.0/lib/p5.min.js"></script>
+</head>
+<body>
+
+  <div id="ui">
+    <h1>Crânio 3D (WebGL)</h1>
+    <p class="sub">Primitivas 3D • p5.js 2.0 • Aula 9</p>
+
+    <div class="control-group">
+      <label>
+        <span>Abertura da Mandíbula</span>
+        <span id="jawVal">Auto</span>
+      </label>
+      <input id="jawSlider" type="range" min="0" max="100" value="0" />
+    </div>
+
+    <div class="control-group">
+      <div class="btn-row">
+        <button id="btnAuto" class="active">Animação Auto</button>
+        <button id="btnNormal">normalMaterial()</button>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label><span>Iluminação</span></label>
+      <div class="btn-row">
+        <button class="light-btn active" data-mode="0">Estúdio</button>
+        <button class="light-btn" data-mode="1">Dramática</button>
+        <button class="light-btn" data-mode="2">Cripta</button>
+      </div>
+    </div>
+
+    <div class="hint">
+      • <b>Arrastar:</b> girar câmera (orbitControl)<br/>
+      • <b>Scroll:</b> zoom<br/>
+      • Órbitas seladas e oclusão dental com limite rígido.
+    </div>
+  </div>
+
+  <!-- Código do sketch p5.js -->
+  <script src="sketch.js"></script>
+</body>
+</html>

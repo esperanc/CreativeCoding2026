@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Artefato 9 — Jardim Orbital 3D</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; background: #080d20; color: #ecedff; font-family: Arial, sans-serif; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+    header { width: min(95vw, 900px); padding: 18px 4px 10px; }
+    h1 { font-size: clamp(20px, 3vw, 31px); margin: 0 0 6px; letter-spacing: .03em; }
+    p { color: #aab7db; font-size: 13px; margin: 0; line-height: 1.6; }
+    #sketch-container { width: min(95vw, 900px); border: 1px solid #323b67; border-radius: 15px; overflow: hidden; box-shadow: 0 20px 65px #0009; line-height: 0; }
+    #sketch-container canvas { display: block; width: 100% !important; height: auto !important; touch-action: none; }
+    footer { width: min(95vw, 900px); padding: 12px 5px 20px; color: #aab7db; font-size: 12px; line-height: 1.7; }
+    kbd { border: 1px solid #606b9a; border-radius: 4px; padding: 1px 5px; color: #e2e8ff; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>✦ Jardim Orbital</h1>
+    <p>Uma escultura cinética feita apenas com primitivas 3D do p5.js.</p>
+  </header>
+  <main id="sketch-container" aria-label="Jardim Orbital interativo em 3D"></main>
+  <footer>Arraste o mouse para girar a câmera · Role para aproximar · <kbd>Espaço</kbd> pausa · <kbd>C</kbd> muda a paleta · <kbd>S</kbd> salva imagem · <kbd>R</kbd> reinicia a visão</footer>
+  <script src="https://cdn.jsdelivr.net/npm/p5@2.3.4/lib/p5.min.js"></script>
+  <script src="sketch.js"></script>
+</body>
+</html>

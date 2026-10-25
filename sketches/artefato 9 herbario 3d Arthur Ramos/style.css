@@ -1,0 +1,95 @@
+:root {
+  color-scheme: dark;
+  background: #08100d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#sketch-holder {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+body {
+  background: #08100d;
+  color: #e9e3ce;
+  font-family: "Courier New", monospace;
+}
+
+canvas {
+  display: block;
+}
+
+.interface,
+.controles,
+.semente {
+  position: fixed;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.interface {
+  top: clamp(22px, 5vw, 64px);
+  left: clamp(22px, 5vw, 72px);
+  max-width: 360px;
+}
+
+.etiqueta {
+  margin: 0 0 14px;
+  color: #9fd9ad;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+}
+
+h1 {
+  margin: 0;
+  font-family: Georgia, serif;
+  font-size: clamp(28px, 4.3vw, 62px);
+  font-weight: 400;
+  line-height: 0.95;
+  letter-spacing: -0.035em;
+}
+
+.descricao {
+  max-width: 315px;
+  margin: 20px 0 0;
+  color: rgba(233, 227, 206, 0.62);
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.controles {
+  right: clamp(18px, 4vw, 58px);
+  bottom: clamp(18px, 4vw, 44px);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  color: rgba(233, 227, 206, 0.48);
+  font-size: 10px;
+  text-align: right;
+}
+
+.semente {
+  left: clamp(22px, 5vw, 72px);
+  bottom: clamp(18px, 4vw, 44px);
+  color: rgba(159, 217, 173, 0.7);
+  font-size: 10px;
+  letter-spacing: 0.16em;
+}
+
+@media (max-width: 620px), (max-height: 560px) {
+  .descricao {
+    display: none;
+  }
+
+  .controles span:nth-child(2),
+  .controles span:nth-child(5) {
+    display: none;
+  }
+}

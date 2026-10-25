@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Acreção</title>
+    <script src="https://cdn.jsdelivr.net/npm/p5@2.3.4/lib/p5.min.js"></script>
+    <style>
+      html, body { margin: 0; padding: 0; overflow: hidden; background: #06070C; }
+      canvas { display: block; }
+      #barra {
+        position: fixed; top: 10px; left: 50%; transform: translateX(-50%);
+        display: flex; flex-direction: column; align-items: center; gap: 5px; z-index: 2;
+        max-width: 98vw; pointer-events: none;
+      }
+      #barra .linha { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; align-items: center; pointer-events: auto; }
+      #barra button {
+        font: 600 13px/1 system-ui, sans-serif; color: #EDE6D6; cursor: pointer;
+        background: #161822; border: 1px solid #343846; border-radius: 6px; padding: 7px 10px;
+      }
+      #barra button:hover { border-color: #50AAFF; }
+      #barra .campo { display: inline-flex; align-items: center; gap: 6px; }
+      #barra .rotulo { font: 12px system-ui, sans-serif; color: #8f96a6; }
+      #barra .valor { font: 12px system-ui, sans-serif; color: #EDE6D6; min-width: 4ch; }
+      #barra input[type=range] { width: 110px; accent-color: #50AAFF; }
+      #barra .dica { font: 12px system-ui, sans-serif; color: #8f96a6; text-align: center; }
+    </style>
+  </head>
+  <body>
+    <script src="sketch.js"></script>
+  </body>
+</html>

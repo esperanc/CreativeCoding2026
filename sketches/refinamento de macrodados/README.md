@@ -1,7 +1,7 @@
 ---
 title: Refinamento de Macrodados
 tags: [IA, Gemini]
-collection: artefato semana 7
+collection: artefato da semana/7
 ---
 
 Nome: Pedro Paulo de Oliveira Rocha

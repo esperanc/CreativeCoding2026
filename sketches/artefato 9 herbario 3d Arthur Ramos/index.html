@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Herbário de Plantas Impossíveis</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/p5@2.2.3/lib/p5.js"></script>
+  </head>
+  <body>
+    <main id="sketch-holder" aria-label="Jardim generativo tridimensional"></main>
+
+    <section class="interface" aria-hidden="true">
+      <p class="etiqueta">ARTEFATO 9 · WEBGL</p>
+      <h1>Herbário de<br />Plantas Impossíveis</h1>
+      <p class="descricao">
+        Espécies digitais cultivadas com esferas, cilindros, cones, toros e caixas.
+      </p>
+    </section>
+
+    <section class="controles" aria-hidden="true">
+      <span>arraste: orbitar</span>
+      <span>roda: aproximar</span>
+      <span>clique ou R: nova espécie</span>
+      <span>espaço: pausar</span>
+      <span>S: salvar</span>
+    </section>
+
+    <div class="semente" aria-hidden="true">SEMENTE <span id="seed-number">0901</span></div>
+    <script src="sketch.js"></script>
+  </body>
+</html>
