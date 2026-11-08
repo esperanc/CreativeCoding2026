@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Abissal</title>
+    <script src="https://cdn.jsdelivr.net/npm/p5@2.3.4/lib/p5.min.js"></script>
+    <style>
+      html, body { margin: 0; padding: 0; overflow: hidden; background: #02050a; }
+      canvas { display: block; touch-action: none; cursor: crosshair; }
+      .barra { position: fixed; top: 14px; right: 14px; z-index: 2; display: flex; gap: 6px; }
+      .barra button {
+        font: 13px Georgia, serif; letter-spacing: 0.06em; color: rgba(240, 225, 200, 0.85); cursor: pointer;
+        background: rgba(22, 16, 16, 0.7); border: 1px solid rgba(90, 200, 255, 0.3); border-radius: 4px; padding: 7px 12px;
+      }
+      .barra .campo { display: flex; align-items: center; gap: 8px; font: 13px Georgia, serif; color: rgba(240, 225, 200, 0.75);
+        background: rgba(22, 16, 16, 0.7); border: 1px solid rgba(90, 200, 255, 0.3); border-radius: 4px; padding: 4px 10px; }
+      .barra input[type=range] { width: 110px; accent-color: #5cc8ff; }
+      .barra button:hover { border-color: rgba(90, 200, 255, 0.8); }
+      .dica {
+        position: fixed; left: 50%; bottom: 22px; transform: translateX(-50%); z-index: 2;
+        font: 300 13px/1 Georgia, serif; letter-spacing: 0.25em; color: rgba(230, 220, 200, 0.35);
+        pointer-events: none; text-transform: lowercase;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="sketch.js"></script>
+  </body>
+</html>

@@ -1,0 +1,8 @@
+:root { --bg:#14161b; --fg:#e9e9ec; box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px); }
+html,body { margin:0; height:100%; background:var(--bg); overflow:hidden; font-family:system-ui,sans-serif; }
+canvas { display:block; }
+#ui { position:fixed; left:12px; bottom:calc(12px + env(safe-area-inset-bottom,0px)); color:var(--fg);
+  font-size:13px; line-height:1.5; }
+#ui b { font-size:15px; }
+#ui span { opacity:.7; }

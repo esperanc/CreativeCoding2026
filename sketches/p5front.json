@@ -1,14 +1,913 @@
 {
   "format": "p5front-export",
   "version": 1,
-  "createdAt": "2026-10-25T15:09:45.072Z",
+  "createdAt": "2026-11-08T16:42:13.364Z",
   "projects": [
+    {
+      "folder": "hershey font draw",
+      "id": "hershey-font-draw",
+      "name": "hershey font draw",
+      "origin": "native",
+      "lastModified": 1794156124344,
+      "title": "",
+      "tags": [],
+      "collection": "techniques/libraries",
+      "description": "",
+      "hasThumb": false,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "hersheytext.min.json",
+        "hershey.js",
+        "gui.js",
+        "README.md"
+      ]
+    },
+    {
+      "folder": "tesseract",
+      "id": "tesseract",
+      "name": "tesseract",
+      "origin": "native",
+      "lastModified": 1794156100143,
+      "title": "Tesseract",
+      "tags": [
+        "AI",
+        "ChatGPT",
+        "4D",
+        "Hipercubo",
+        "Tesseract"
+      ],
+      "collection": "artefato da semana/10",
+      "description": "Um quadro de uma tentativa de representação de um hipercubo 4d, ele parece se \"deformar\" pois possue as cordenadas, x,y,z, e w, além disso, como é uma tentativa de fazer uma representação do espaço 4d acarreta essa consequência.\n\nAutor: Ysabelle Estevão de Oliveira",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "Fish of Triangles",
+      "id": "fish-of-triangles",
+      "name": "Fish of Triangles",
+      "origin": "native",
+      "lastModified": 1794148332143,
+      "title": "Fish of Triangles",
+      "tags": [
+        "AI",
+        "ChatGPT",
+        "3D",
+        "WebGL",
+        "geometry",
+        "marine"
+      ],
+      "collection": "artefato da semana/10",
+      "description": "# Fish of triangles\n\nA short, articulated underwater study based on a fish whose body is hand-built as a triangular mesh. The scene begins from a distance, then cuts to a close-up where you can see its edges, vertices, and normals.\n\n## Idea\n\nI wanted to create an underwater journey that gradually transforms into a study of 3D geometry. The fish’s body is generated in the sketch from rings of vertices connected by triangular faces.\n\n## How It Works\n\n- The sketch uses `createCanvas(..., WEBGL)` and loads p5.js 2.3.2 from a CDN\n- `buildFishBody()` creates a `p5.Geometry` object. Each cross-section is a ring of vertices; neighboring rings are connected by two triangles per cell\n- The snout and tail are closed using additional central vertices and triangular faces\n- `computeNormals(SMOOTH)` calculates the vertex normals used for smooth shading\n- The fish is animated with slight rotations, while its pectoral fins and tail move to suggest that it is swimming\n- In close-up view, `drawMeshEdges()` displays the triangular mesh, and `drawVertexNormals()` draws short lines extending from the vertices in the normal directions\n- The camera zooms in as the dive progresses. Vertical mouse movement controls the dive, horizontal movement changes the viewing angle\n\n## Interaction\n\n- Move the mouse vertically to switch from a distant view to a close-up\n- Move the mouse horizontally to rotate around the fish\n- If you don't use the mouse, the dive continues automatically\n\n## Using AI\n\nCreated with the help of ChatGPT (AI). I chose the theme of underwater fish. ChatGPT helped me implement the custom geometry and interaction, and I revised the concept and structure of the sketch.\n\nAuthor: Yasmine",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "README.md",
+        "sketch.js",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "seraphim",
+      "id": "seraphim",
+      "name": "seraphim",
+      "origin": "native",
+      "lastModified": 1794147971308,
+      "title": "Serafim e Ophanim Cinético",
+      "tags": [],
+      "collection": "artefato da semana/10",
+      "description": "# Serafim e Ophanim Cinético\n\nArtefato interativo em modo WebGL utilizando a biblioteca p5.js v2. O projeto modela uma representação procedural e biblicamente precisa de um Serafim/Ophanim, unindo uma cinemática de íris mecânica tridimensional (com 6 asas articuladas que protegem o núcleo) a rodas de Ophanim concêntricas cravadas de olhos 3D, ambientadas em um Santuário Empíreo em 360 graus.\n\n## Conceito e Desenvolvimento\nFugindo de sólidos de revolução triviais e superfícies onduladas padrão, todas as formas complexas do artefato foram construídas na unha via malhas de triângulos (`TRIANGLES`) encapsuladas em objetos `p5.Geometry` reutilizáveis:\n- **Asas e Penas Chanfradas (`buildGeometry`)**: Cada asa é formada por camadas de lâminas curvadas com crista dorsal saliente e cálculo explícito de normais para conferir acabamento usinado/metálico sob iluminação especular.\n- **Rodas de Ophanim e Engastes**: Anéis com secção transversal em diamante e cavidades para olhos com pálpebras articuladas que reagem dinamicamente à abertura da entidade.\n- **Cenário Empíreo Integrado**: Cúpula celeste com gradiente por vértice, feixes de luz divina (*God Rays*), monólitos flutuantes dispostos em anel arquitetônico e brasas ascendentes geradas deterministicamente no espaço 3D.\n\n## Controles\n- **Arrastar com o mouse**: Rotaciona a câmera tridimensional livremente (`orbitControl`).\n- **Mover o cursor**: O olho central vigia e acompanha a posição do mouse em tempo real.\n- **Duplo clique**: Alterna entre a pulsação automática do Serafim e o controle manual da abertura das asas/pálpebras através da posição horizontal do mouse (`mouseX`).",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "Moto",
+      "id": "moto",
+      "name": "Moto",
+      "origin": "native",
+      "lastModified": 1794147888355,
+      "title": "Moto",
+      "tags": [
+        "AI",
+        "Deepseek",
+        "Hermes",
+        "3D",
+        "WebGL",
+        "modelagem",
+        "moto"
+      ],
+      "collection": "artefato da semana/10",
+      "description": "# Moto\n\n**Artefato 10 — \"Modelagem\"** · Programação Criativa · Samuel Vitor\n\nUma moto em modo WebGL modelada superfície por superfície, sem primitivas no corpo: o tanque, o rabo, o banco, o para-lama e o farol são lofts de seção variável; Já tinha feito algumas pro meu jogo samzax.itch.io/corredorbxd, mas essa foi a primeira custom.\n\n\n\n## Referências da semana (aula 10 — Modelagem)\n\nConstrução de malha própria: loft, sweep, sem depender das primitivas prontas.",
+      "hasThumb": true,
+      "files": [
+        "README.md",
+        "sketch.js",
+        "thumbnail.png",
+        "index.html"
+      ]
+    },
+    {
+      "folder": "sapo cururu",
+      "id": "sapo-cururu",
+      "name": "sapo cururu",
+      "origin": "native",
+      "lastModified": 1794147629935,
+      "title": "Sapo Cururu",
+      "tags": [
+        "AI",
+        "generative",
+        "Claude"
+      ],
+      "collection": "artefato da semana/10",
+      "description": "Autora: Rafaella Lenzi Romano\n\n# Sapo Cururu\n\nUm sapo vive numa lagoa de vitória-régias. Você decide para onde ele pula e quais moscas ele come.\n\n## Como usar\n\n- **Clique numa folha** para o sapo pular até ela. Cliques seguidos formam uma fila de pulos.\n- **Clique numa mosca** que esteja perto do sapo para ele pegá-la com a língua.\n- **Arraste** para girar a câmera e **role** para aproximar.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "Raio X de cidade",
+      "id": "raio-x-de-cidade",
+      "name": "Raio X de cidade",
+      "origin": "native",
+      "lastModified": 1794147500558,
+      "title": "Raio X de cidade",
+      "tags": [
+        "IA",
+        "Gemini",
+        "Claude"
+      ],
+      "collection": "artefato da semana/10",
+      "description": "title: Raio X de cidade\ntags:IA - Gemini e claude\ncollection: artefato semana 10\n\nNome: Pedro Paulo de Oliveira Rocha\n\nApesar de uma cidade procedural ser tipicamente utilizada\nresolvi refazê-la exibindo somente elementos que interagem \ncom a luz, como as vidraças, lâmpadas e televisores dos prédios",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "mimic dark souls",
+      "id": "mimic-dark-souls",
+      "name": "mimic dark souls",
+      "origin": "native",
+      "lastModified": 1794147145688,
+      "title": "Artefato 10 - Dark Souls Mimic",
+      "tags": [
+        "AI",
+        "ChatGPT",
+        "Mimic",
+        "Dark Souls"
+      ],
+      "collection": "artefato da semana/10",
+      "description": "Uma composição tridimensional interativa desenvolvida em **p5.js 2**, utilizando o modo **WEBGL**, inspirada nos Mímicos de **Dark Souls III**.\n\nO projeto apresenta um baú aparentemente comum que, ao ser despertado, revela sua verdadeira natureza monstruosa. Durante a transformação, o baú se ergue sobre pernas esqueléticas, estende braços alongados e abre sua tampa como uma mandíbula repleta de dentes, expondo uma grande língua.\n\nO personagem está inserido em uma masmorra medieval, composta por paredes e pisos de pedra, pilares, arcos, correntes e tochas. A modelagem utiliza primitivas geométricas tridimensionais, materiais, iluminação e animações progressivas. Quando desperto, o Mímico apresenta movimentos sutis de respiração e oscilação.\n\n### Controles\n\n- **Espaço:** Despertar ou adormecer o Mímico.\n- **Mouse:** Girar a câmera ao redor do cenário.\n- **Scroll:** Aproximar ou afastar a câmera.\n- **R:** Restaurar a posição inicial da câmera.\n- **H:** Mostrar ou ocultar o menu.\n\n**Autor:** Pedro Elias\n\n**Prompt usado:** Crie uma composição tridimensional interativa em p5.js 2, utilizando WEBGL, inspirada nos Mímicos de Dark Souls III. Modele um baú de madeira com detalhes metálicos que possa se transformar em uma criatura monstruosa, desenvolvendo braços e pernas esqueléticas, uma boca com dentes e uma língua alongada. Implemente uma animação progressiva de transformação, movimentos sutis enquanto a criatura estiver desperta e um cenário de masmorra medieval com iluminação, tochas e elementos arquitetônicos. Adicione controles interativos de câmera e um menu temático.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "artefato a espera vaza paulo vitor",
+      "id": "artefato-a-espera-vaza-paulo-vitor",
+      "name": "artefato a espera vaza paulo vitor",
+      "origin": "native",
+      "lastModified": 1794146878583,
+      "title": "A Espera Vaza",
+      "tags": [
+        "AI",
+        "ChatGPT",
+        "WebGL",
+        "p5.Geometry",
+        "custom mesh",
+        "negative space",
+        "typography"
+      ],
+      "collection": "artefato da semana/10",
+      "description": "# A Espera Vaza\n\n**Autor:** Paulo Vitor\n\n`A Espera Vaza` é uma escultura tipográfica construída como uma malha tridimensional. Uma folha dobrada parece ter perdido alguns de seus fragmentos; os vazios deixados por eles formam a palavra **ESPERA**. Os pedaços ausentes permanecem abaixo da folha, deslocados no espaço, como se a espera tivesse adquirido peso e caído para fora do documento.\n\nA obra foi pensada para depender do ponto de vista. De frente, os vazios se organizam como texto. Ao mover a câmera, a palavra se desfaz e a espessura, as dobras e os fragmentos revelam que ela não foi desenhada sobre a superfície: ela é uma ausência na própria geometria.\n\n## Relação com a aula 10\n\nO sketch usa `WEBGL` e constrói duas malhas com `p5.Geometry`: a folha restante e os fragmentos retirados. O código preenche manualmente as listas `vertices` e `faces`, monta cada volume com triângulos e chama `computeNormals(FLAT)` para que a iluminação reconheça as faces. Quando a dobra é recalculada, `freeGeometry()` libera as malhas anteriores antes da criação das novas.\n\nNão há modelo OBJ/STL importado, sólido de revolução nem conjunto aleatório de primitivas. A forma surge da regra que converte uma matriz tipográfica em matéria e espaço negativo.\n\n## Interação\n\n- **Mover o mouse:** altera o ponto de vista entre a leitura frontal e a visão lateral das dobras.\n- **Clique ou tecla R:** recalcula as dobras e a queda dos fragmentos.\n- **Tecla F:** fixa a câmera de frente para facilitar a leitura da palavra.\n- **Tecla S:** salva uma imagem do canvas.\n\n## Requisitos técnicos\n\nO canvas é responsivo e utiliza `windowWidth` e `windowHeight`. A biblioteca p5.js **2.3.4** é carregada pelo CDN jsDelivr no `index.html`; nenhuma cópia do p5.js, p5.sound, fonte, imagem ou modelo 3D está incluída no ZIP.\n\n## Uso de IA\n\nO **ChatGPT** auxiliou na concepção, programação, documentação e testes do trabalho.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "style.css",
+        "sketch.js",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "simpsons",
+      "id": "simpsons",
+      "name": "simpsons",
+      "origin": "native",
+      "lastModified": 1794146850013,
+      "title": "Simpsons procedural",
+      "tags": [
+        "AI",
+        "ChatGPT"
+      ],
+      "collection": "artefato da semana/10",
+      "description": "Modelo 3D de uma possivel personagem do universo de \"os simpsons\".\n\nprompt:\n\nescreva um script em p5js que faça a modelagem 3D de uma cabeça que se assemelhe a um personagem do programa \"os simpsons\". ele deve criar varias opções para cada caracteristica do personagem, como olhos, boca, etc, e criar o modelo com uma seleção aleatoria de cada uma.\n\nautor: Paulo Barbosa",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "chaveiro palavras",
+      "id": "chaveiro-palavras",
+      "name": "chaveiro palavras",
+      "origin": "native",
+      "lastModified": 1794146635228,
+      "title": "Chaveiro de Palavras",
+      "tags": [
+        "AI",
+        "Claude",
+        "WebGL",
+        "modelagem",
+        "buildGeometry",
+        "fechadura"
+      ],
+      "collection": "artefato da semana/10",
+      "description": "# Chaveiro de Palavras\n\nUma fechadura de pinos (tipo Yale) desenhada em corte, como uma planta técnica em 3D.\nVocê digita uma palavra de 5 letras e ela vira uma chave: cada letra define a\nprofundidade de um corte da lâmina. A chave entra na fechadura, os pinos sobem\napoiados no perfil dos cortes e o cilindro só gira se todos os pinos pararem\nexatamente na linha de corte — ou seja, se a palavra \"cortar\" igual ao segredo.\n\nComo só existem 6 profundidades, letras diferentes caem no mesmo corte\n(A G M S Y · B H N T Z · C I O U · D J P V · E K Q W · F L R X), então várias\npalavras abrem a mesma fechadura, como chaves falsas.\n\n## Modelagem\n- A chave é uma `p5.Geometry` construída à mão com `buildGeometry()`:\n  o perfil da lâmina é uma função linear por partes (cortes, cristas e ponta),\n  extrudada em faixas de triângulos com `beginShape(TRIANGLES)`, `vertex()` e\n  `normal()` explícitas; o ombro e o sulco são caixas e a cabeça é um anel\n  gerado por setores.\n- A geometria é refeita a cada letra digitada e pode ser exportada com\n  `saveObj()` (botão \"Exportar chave .obj\").\n- A fechadura usa primitivas (`cylinder()`, `cone()`, `box()`), molas em hélice\n  feitas com `vertex()` e plug/carcaça translúcidos em wireframe.\n- Iluminação com `ambientLight()`, `directionalLight()`, `pointLight()` e\n  `specularMaterial()`; câmera com `orbitControl()`.\n\n## Controles\n- **Campo \"Palavra\":** digite até 5 letras para cortar uma nova chave.\n- **Enter / botão Inserir:** insere ou retira a chave.\n- **Trocar segredo:** sorteia outra palavra-segredo para a fechadura.\n- **Exportar chave .obj:** baixa o modelo da chave atual.\n- **Mouse:** arraste para girar a câmera, role para aproximar.\n\nDepois de inserir, a leitura dos pinos mostra ✓ (certo), ▲ (corte raso demais)\nou ▼ (corte fundo demais) — dá para descobrir o segredo por tentativa.\n\n## Arquivos\n- `index.html`: página e carregamento do p5.js **2.3.4** via CDN jsDelivr.\n- `sketch.js`: código do sketch (modo `WEBGL`).\n- `Thumbnail.png`: miniatura.\n\nO zip não contém a biblioteca p5.js.\n\n## Uso de IA\nFeito com auxílio de IA (**Claude**), na ideia, no código e na documentação.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "README.md",
+        "sketch.js",
+        "Thumbnail.png",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "ambigrama solido",
+      "id": "ambigrama-solido",
+      "name": "ambigrama solido",
+      "origin": "native",
+      "lastModified": 1794146379115,
+      "title": "Ambigrama sólido",
+      "tags": [
+        "AI",
+        "Claude",
+        "ambigrama"
+      ],
+      "collection": "artefato da semana/10",
+      "description": "# Ambigrama sólido\n\n**Artefato 10 · Modelagem (modo WebGL)** · feito com auxílio de AI (Claude)\n\nVocê digita três letras e o sketch esculpe **um único objeto** que mostra a primeira letra de frente, a segunda de lado e a terceira de cima. Três lâmpadas coloridas (âmbar, ciano e magenta) projetam as três leituras como sombras nas paredes da cena.\n\nA ideia vem da capa de *Gödel, Escher, Bach*, de Douglas Hofstadter, em que um bloco de madeira projeta as letras G, E e B.\n\n## Como o objeto é modelado\n\n1. Cada letra é rasterizada num `createGraphics` 2D e reamostrada numa máscara 40×40.\n2. O bloco começa como uma grade cheia de 40×40×40 células.\n3. Ele é esculpido em três cortes sucessivos. Cada corte é a **extrusão** de uma letra ao longo de um eixo (Z, X e Y), e o sólido final é a **interseção** dessas três extrusões.\n4. A malha é montada à mão como `p5.Geometry`. Só as faces expostas de cada célula viram triângulos, com normais planas. As faces internas são descartadas.\n5. As \"sombras\" são a projeção real do sólido em cada eixo, também construída como `p5.Geometry`. Elas não são a letra original: quando a interseção destrói um pedaço da letra, a parede marca em **vermelho** o que a luz não consegue mais mostrar. O painel também informa quanto de cada letra sobreviveu (ex.: *N 95%*).\n\nNem todo trio de letras é compatível. Explorar quais combinações \"fecham\" (e quais perdem pedaços) faz parte da obra.\n\n## Interação\n\n| ação | efeito |\n|---|---|\n| campo de texto + **esculpir** (ou Enter) | esculpe novas letras (até 3) |\n| arrastar | gira a câmera |\n| roda do mouse | zoom |\n| **1 / 2 / 3** ou botões frente / lado / cima | vista ortográfica de cada leitura |\n| **4** ou **livre** | vista em perspectiva |\n| **T** ou **tour** | passeio automático pelas três leituras |\n| **O** | alterna projeção ortográfica/perspectiva |\n| **R** | reesculpe (repete a animação) |\n\n## Técnica\n\n- p5.js **2.x** carregado via CDN (jsDelivr). A biblioteca não está incluída no zip.\n- `createCanvas(..., WEBGL)`, `p5.Geometry` construída vértice a vértice, `model()`, `freeGeometry()`.\n- `directionalLight` (×3), `ambientLight`, `specularMaterial`, `emissiveMaterial`.\n- `camera()` esférica com interpolação suave, `ortho()` / `perspective()`.\n\n## Uso de IA\n\nEste artefato foi feito com auxílio de AI (**Claude**, da Anthropic). A IA propôs o conceito a partir de um pedido para evitar temas batidos e escreveu o código.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "esperanca",
+      "id": "esperanca",
+      "name": "esperanca",
+      "origin": "native",
+      "lastModified": 1794062156997,
+      "title": "Esperança",
+      "tags": [
+        "NoAI",
+        "animal",
+        "blender"
+      ],
+      "collection": "artefato da semana/10",
+      "description": "## Autor: Nick Correa\n\nModelagem feita sem auxílio de IA no software Blender. Tentei fugir dos temas esperados e quis fazer uma homenagem ao nosso professor. \n\n## Processo de modelagem:\nImagens de referência tiradas do google\nCirculos 8x8 pros olhos e base da cabeça\nVértices com modificadores skin para pernas e antenas\nCubo alongado com subdivisões para base do corpo\nModificador mirror no eixo x para todo o modelo",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "artefato10 natan azevedo gomes",
+      "id": "artefato10-natan-azevedo-gomes",
+      "name": "artefato10 natan azevedo gomes",
+      "origin": "native",
+      "lastModified": 1794062011516,
+      "title": "Gatinhos pulando nas caixas",
+      "tags": [
+        "generative",
+        "AI",
+        "Claude",
+        "cat",
+        "boxes"
+      ],
+      "collection": "artefato da semana/10",
+      "description": "Eu gosto muito de gatos, então tive a ideia de fazer algo com eles. Aqui, a cena começa com um gato sozinho e é possível usar o mouse para criar uma caixa. O gato, então, pula para cima da caixa. A cada 5 caixas criadas, um gato novo aparece, e com vários, o mais próximo da caixa criada pula para ela. Os gatinhos têm uma animação para sentar caso fiquem 2 segundos sem pular, e, depois de alguns segundos sentados (entre 7 e 14), eles pulam para outra caixa aleatoriamente.\n\nA própria caixa de papelão é um modelo importado: um arquivo OBJ escrito à mão dentro do código. Também dá para arrastar um arquivo .obj ou .stl para a janela: o objeto aparece onde foi solto e vira mais um lugar para os gatos.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "thumbnail.png",
+        "README.md"
+      ]
+    },
+    {
+      "folder": "abissal",
+      "id": "abissal",
+      "name": "abissal",
+      "origin": "native",
+      "lastModified": 1794061964557,
+      "title": "Abissal",
+      "tags": [
+        "AI",
+        "Claude",
+        "WebGL",
+        "p5.Geometry",
+        "malha",
+        "STL",
+        "ray marching",
+        "jogo da vida",
+        "autômato celular 3D"
+      ],
+      "collection": "artefato da semana/10",
+      "description": "# Abissal\n\n**Autor:** Murilo Jorge de Figueiredo\n\n![thumbnail](thumbnail.png)\n\n## O que é\n\nUm organismo mole e luminoso que cresce, se dobra, abre túneis e se apaga por\ndentro. Só que ele não existe: é um **jogo da vida discreto**, numa grade de\n40 × 40 × 40 células, e toda a continuidade vem de **um parâmetro do ray\nmarching**. O botão **ver as células** zera esse parâmetro e mostra o que estava\npor trás: contas separadas que nascem e morrem em saltos, geração a geração. A\ntroca é animada, e dá para ver o organismo se desfazer em células e se refazer.\n\nUm terceiro botão, **ver a malha**, congela um instante e transforma o\norganismo num objeto de verdade, feito de triângulos: uma `p5.Geometry` que o\np5 desenha como qualquer malha e que pode ser salva em **.stl** e impressa. São\ntrês maneiras de ver a mesma coisa: o que ela **é** (células), como o raio a\n**desenha** (o organismo) e como ela pode ser **construída** (a malha).\n\nNo thumbnail, da esquerda para a direita: as células, o organismo e a malha, no\nmesmo instante.\n\n## A regra\n\nCada célula olha as 26 vizinhas do cubo em volta dela:\n\n- uma célula vazia **nasce** se tem 6, 7 ou 8 vizinhas vivas;\n- uma viva **sobrevive** com 4 a 7 vizinhas;\n- senão ela não some de uma vez: passa por 8 estados de **esfriamento**, em que\n  não conta como vizinha, e só então vira vazio.\n\nÉ a regra de vida 3D conhecida como *Pyroclastic* (S4-7/B6-8/10). A partir de\numa semente cresce um corpo que nunca para de se refazer por dentro. Fora de\numa esfera no meio da grade nada vive, então o organismo fica solto no escuro.\n\n## O organismo é o ray marching\n\nCada célula é uma **esfera crua**, do tamanho da sua densidade: 1 viva, menos\nenquanto esfria, 0 vazia. O valor anda suavemente entre as gerações, e a célula\nincha ao nascer e murcha ao morrer. A grade vai para a placa de vídeo como uma\n**textura**, com as 40 fatias lado a lado.\n\nPara cada pixel, o raio entra no cubo e, a cada passo, consulta as 27 células\nem volta do ponto e calcula a distância até a forma. A forma é a **união suave**\n(*smooth min*) das esferas, com raio **k**:\n\n- **k = 0** é a união comum: contas separadas, a grade à mostra. É o jogo da\n  vida como ele é, discreto, em saltos;\n- **k grande**: a distância \"cede\" entre esferas vizinhas e elas se fundem numa\n  massa mole, com pontes e gargalos. É o organismo.\n\nNada é borrado nem pré-calculado: é o mesmo dado, com um parâmetro do ray\nmarching mudado. O controle **fusão (k)** mexe nele diretamente, e o botão o\nanima de zero até o valor escolhido.\n\nA normal vem do gradiente da distância, e a cor é misturada entre as células com\no mesmo peso da união. Em volta da superfície, o raio soma o calor que atravessa\nde raspão: o brilho.\n\n**Pulo do espaço vazio.** Consultar 27 células a cada passo é caro. Por isso a\ntextura guarda, para cada célula, se há alguma vizinha viva. Onde não há, o raio\npula uma célula inteira sem consultar nenhuma.\n\n## A malha\n\nA aula de modelagem 3D entra aqui. A mesma distância da união suave é\ncalculada em JavaScript, igual à do shader, numa grade de amostras, e\nconvertida numa `p5.Geometry` construída na mão:\n\n- **vértices**: cada cubinho da grade de amostras é cortado em 6 tetraedros\n  (*marching tetrahedra*, o primo sem tabelas do *marching cubes*). Em cada\n  aresta onde a distância troca de sinal nasce um vértice, no ponto\n  interpolado;\n- **faces**: trios de índices, ordenados em sentido **anti-horário** vistos de\n  fora, para a normal apontar para fora do organismo (o lado de fora é\n  descoberto pelos cantos do tetraedro que ficam fora da forma);\n- **normais**: cada triângulo tem seus três vértices próprios, e\n  `computeNormals()` (`FLAT`) dá uma normal por face, então a malha aparece\n  facetada, com cada triângulo à mostra. Esse é o ponto: ver a superfície como\n  objeto construído;\n- **cor por vértice** (`vertexColors`), da mesma paleta do shader;\n- `model()` desenha, `freeGeometry()` libera a malha anterior quando ela é\n  refeita, e **salvar .stl** usa `saveStl()`, com o dobro da resolução da tela.\n\nPara não precisar alinhar duas câmeras diferentes, a malha é desenhada com\n`perspective()` e `camera()` calculadas a partir da mesma câmera do raio. Por\nisso as três visões têm exatamente o mesmo enquadramento. Montar dezenas de\nmilhares de triângulos leva algumas frações de segundo, então ver a malha\n**congela** a vida: ela é um instante tirado do tempo.\n\n## A cor\n\nCada célula tem uma \"temperatura\": a recém-nascida é a mais clara e, enquanto\nmorre, desce pela paleta até a cor mais escura. A paleta padrão, **abissal**,\nvai do ciano pálido ao violeta escuro, como bioluminescência. O botão de cor\ntroca entre cinco paletas (abissal, brasa, orquídea, ouro e tinta, musgo).\n\n## Testes\n\nAntes de chegar aqui, comparamos o mesmo organismo, no mesmo instante, com\nvárias maneiras de o ray marching construir a superfície: campo borrado, união\nsuave curta e longa, células morrendo subtraídas, espaço espelhado, espaço\ntorcido, superfície ondulada, passo largo demais e poucos passos. A primeira\nversão fundia as células borrando a grade antes de marchar. Trocamos para a\nunião suave porque assim a fusão vem do próprio ray marching, e o valor de k\nfoi escolhido comparando de 0 a 1,6. Também testamos uma grade de 28³ e uma de\n40³; a maior deixa as dobras e a grade das células mais finas.\n\n## Como usar\n\nAbra o `index.html` no navegador.\n\n| Controle | Ação |\n|---|---|\n| **ver as células / ver o organismo** (ou C) | anima k entre zero e o valor da fusão |\n| **fusão (k)** | o raio da união suave |\n| **ver a malha / ver o raio** (ou M) | congela um instante como `p5.Geometry` |\n| **salvar .stl** | exporta o organismo para impressão 3D |\n| **cor** | troca a paleta |\n| **clique** | semeia vida no ponto apontado |\n| **arrastar** / **roda do mouse** | girar / aproximar |\n| **espaço** | pausa |\n| **R** | recomeça |\n\nO canvas usa o modo **WEBGL**. O organismo e as células são desenhados por um\nshader próprio (`createShader`) num plano do tamanho da tela, com a grade\nchegando ao shader como textura (`createImage`); a malha é uma `p5.Geometry`\ndesenhada com `model()`, luzes e `specularMaterial()`. O p5.js (versão 2.3.4) é carregado de CDN e não está no\nzip.",
+      "hasThumb": true,
+      "files": [
+        "sketch.js",
+        "index.html",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "MariaEduardaAraujo Artefato 10",
+      "id": "mariaeduardaaraujo-artefato-10",
+      "name": "MariaEduardaAraujo Artefato 10",
+      "origin": "native",
+      "lastModified": 1794060497006,
+      "title": "Leão Geométrico",
+      "tags": [
+        "AI",
+        "Gemini",
+        "3D",
+        "WebGL",
+        "modelagem",
+        "anatomia"
+      ],
+      "collection": "artefato da semana/10",
+      "description": "# Artefato 10 - Modelagem 3D\n\n**Autora:** Maria Eduarda Araújo  \n**DRE:** 119054059  \n\n## Sobre o Projeto\nPara o artefato de modelagem em WebGL, o objetivo foi levar as primitivas 3D com uma expressividade geométrica, desenvolvendo um Leão animado focado em anatomia e volumetria fluida.\n\nO corpo do leão foi unificado em uma estrutura contínua e optei por dão colocar exoesqueleto ou coisa similar porque achei que ficou esquisito. Tentei fazer uma certa integração do abdômen ao peitoral de forma suave. A juba foi refinada para um sistema orgânico de duas camadas radiais de primitivas `cone`. A camada externa usa um leve deslocamento no eixo X (`-15`) e intercala funções `sin()` e `cos()` para criar um caimento natural e um balançozinho que simula a passagem do vento.\n\nNa cabeça, useii uma lógica de pálpebras que pisca ritmicamente utilizando uma verificação de módulo (`frameCount % 120 < 8`) associada ao `scale()` do eixo Y das esferas oculares. A mandíbula inferior, coloquei dentes afiados (que são simplismente pequenos cones inseridos na hierarquia do focinho), também abre e fecha organicamente seguindo uma curva trigonométrica.\n\nA inspiração pro meu projeto foi porque levei meu irmãozinho no zoologico no domingo e o animal favorito dele foi o leão.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "sanfona",
+      "id": "sanfona",
+      "name": "sanfona",
+      "origin": "native",
+      "lastModified": 1794060434524,
+      "title": "Sanfona",
+      "tags": [
+        "AI",
+        "Claude",
+        "Modelagem"
+      ],
+      "collection": "artefato da semana/10",
+      "description": "Aluno: Luiz Henrique da Costa Pacheco\nDRE: 125056085\n\nUma Sanfona que abre e fecha automaticamente ou segurando o clique do meio do mouse e arrastando horizontalmente.\n\nPrompt usado:\nFaça um sketch de p5.js em modo WEBGL que modele um objeto tridimensional.\nTema: uma sanfona (acordeão).\nRequisitos:\nO fole deve ser uma malha construída vértice a vértice, com dobras\nalternadas e normais por face (produto vetorial), apontando para fora.\nDuas caixas de madeira nas pontas, com moldura clara, e botões madrepérola feitas de cilindros em uma delas.\norbitControl() para girar a câmera.\nO fole abre e fecha sozinho com seno e, ao segurar o clique, a abertura passa a ser controlada pela posição horizontal do mouse.\nCódigo comentado em português, com constantes no topo para eu poder personalizar (número de dobras, cores, profundidade das dobras).",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "artefato #10 Leo Nunes (corrigido)",
+      "id": "artefato-10-leo-nunes-corrigido",
+      "name": "artefato #10   Leo Nunes (corrigido)",
+      "origin": "native",
+      "lastModified": 1794060385332,
+      "title": "Modelin da Terra (+Meteoros)",
+      "tags": [
+        "ChatGPT",
+        "Earth",
+        "Meteor"
+      ],
+      "collection": "artefato da semana/10",
+      "description": "Primeiramente busquei colocar na mão(sem IA) um arquivo .obj no P5js o que me deu um trabalho enorme! (talvez devesse ter buscado um modelo mais simples, mas em 2026 é muito difícil achar as coisas na web)\n\nDepois de ter perdido MUITO tempo fazendo esse .obj funcionar a cada execução ele renderiza com as cores erradas... às vezes a terra era renderizada nas suas cores corretas, mas apesar de investigar muito nada foi encontrado, mesmo começando a usar o chatGPT.\n\nEntão me dei por vencido e adicionamos a funcionalidade de colidir meteoros com nosso modelinho, mas encerrei antes que o LLM estragasse mais as coisas.\n\n\nModelo Baixado [aqui](https://free3d.com/3d-model/earth-photorealistic-2k-927613.html)\n\nBROWSER: Apenas consegui rodar no FireFox.\n\nEaster Egg: se atualizar muitas vezes de repente a terra fica azul...\n\n\nAutor: Leonardo Nunes Guimarães Costa",
+      "hasThumb": true,
+      "files": [
+        "Textures/Diffuse_2K.png",
+        "Earth 2K.mtl",
+        "Earth_Surface.obj",
+        "index.html",
+        "README.md",
+        "sketch.js",
+        "starfield.jpg",
+        "style.css",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "artefato 10",
+      "id": "artefato-10",
+      "name": "artefato 10",
+      "origin": "native",
+      "lastModified": 1794060214173,
+      "title": "Keith",
+      "tags": [
+        "AI",
+        "Claude",
+        "KeithHaring",
+        "PopArt"
+      ],
+      "collection": "artefato da semana/10",
+      "description": "# Keith\n\n> Nome: Laura Daflon dos Santos Santana Meira\n>\n> DRE: 120053993\n\nQuando tinha 13 anos minha mãe me levou para uma exposição do Keith Haring e \nfiquei simplesmente apaixonada; mais tarde descobri sua importância no mundo da PopArt \ne na luta contra a AIDS.\nQuis, portanto, transformar esse espaço para trazer as obras dele para o 3d. \nAcabei usando Claude por ser uma estrutura mais difícil e complexa\nde ser feita.\n\nForam diversas iterações, gostaria de colocar mais obras, todavia tinha o limite\nde 5 focos de luz, então optei por essas 5.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "config.js",
+        "geometria.js",
+        "obras.js",
+        "obra-radiant-baby.js",
+        "assinatura.js",
+        "navegacao.js",
+        "sala.js",
+        "teto.js",
+        "README.md",
+        "obra-barking-dog.js",
+        "obra-coracao.js",
+        "obra-dancarino.js",
+        "plaquinhas.js",
+        "obra-acrobatas.js",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "Lanterna e Tinta",
+      "id": "lanterna-e-tinta",
+      "name": "Lanterna e Tinta",
+      "origin": "native",
+      "lastModified": 1794060086166,
+      "title": "Lanterna e Tinta",
+      "tags": [
+        "AI",
+        "Claude",
+        "WEBGL",
+        "p5.Geometry",
+        "buildGeometry",
+        "chase",
+        "game"
+      ],
+      "collection": "artefato da semana/10",
+      "description": "Aluna: Júlia Vilela\n\nArtefato feito com auxílio de AI (Claude), em modo WEBGL com p5.js 2.\n\nUma lanterninha de papel foge de três bolhas de tinta num piso de pedra. Por onde a lanterna passa, as lajotas acendem; por onde a tinta passa, elas apagam. Quando 65% do piso estiver aceso, o nível sobe e as bolhas ficam mais rápidas. Você tem 5 vidas.\n\nAs três bolhas perseguem de jeitos diferentes:\n\n* A **verde** vai direto até a lanterna.\n* A **roxa** mira onde a lanterna vai estar daqui a quase um segundo.\n* A **vinho** tenta fechar o cerco pelo lado oposto ao da verde.\n\nQuando alguma chega perto, todas passam a ir direto. Se você ficar 5 segundos sem mexer, a lanterna passa a fugir sozinha, escolhendo a cada instante a direção com mais caminho livre, mais tinta para limpar e menos bolhas por perto.\n\n## Interação\n\n* Setas ou WASD movem a lanterna.\n* Clique ou arraste: a lanterna vai até o ponto do piso sob o mouse. O ponto é calculado com um raio que sai da câmera até o plano do chão.\n* Espaço dá um pulo de velocidade, com recarga de pouco mais de 2 segundos.\n* `R` recomeça.\n* `E` salva a cena em STL (`lanterna-e-tinta.stl`). `O` salva em OBJ (`lanterna-e-tinta.obj`).\n\n## Tecnologia\n\n* p5.js 2.x carregada por CDN (`cdn.jsdelivr.net/npm/p5@2`), sem a biblioteca no zip.\n* Nenhuma fonte e nenhum arquivo de imagem. O texto na tela é HTML comum.",
+      "hasThumb": false,
+      "files": [
+        "style.css",
+        "index.html",
+        "README.md",
+        "sketch.js"
+      ]
+    },
+    {
+      "folder": "alpha com tenis comicamente grande",
+      "id": "alpha-com-tenis-comicamente-grande",
+      "name": "alpha com tenis comicamente grande",
+      "origin": "native",
+      "lastModified": 1794059708096,
+      "title": "Partículas em movimento",
+      "tags": [
+        "AI",
+        "gemini",
+        "generative",
+        "solids",
+        "3D"
+      ],
+      "collection": "artefato da semana/10",
+      "description": "Um sketch feito pelo gemini que desenha o Alpha de Final Fantasy XIV com um tênis grande demais.\n\nPrimeiro prompt feito: \"poderia fazer o código em p5 de modelagem 3D do Alpha do Final Fantasy como um bicho de pelúcia calçando tênis de verdade, de maneira que os tênis fiquem muito grandes para ele\"\n\nAutor: Joao Ricardo S. Magalhaes",
+      "hasThumb": true,
+      "files": [
+        "sketch.js",
+        "index.html",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "cachimbo",
+      "id": "cachimbo",
+      "name": "cachimbo",
+      "origin": "native",
+      "lastModified": 1794059614951,
+      "title": "Isto não é um cachimbo",
+      "tags": [
+        "Releitura",
+        "Generativa",
+        "Claude",
+        "Gemini"
+      ],
+      "collection": "artefato da semana/10",
+      "description": "Releitura digital da obra de René Magritte, La Trahison des images.\n\nAutor: João Pedro Moretti",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "artefato10 joao galetti",
+      "id": "artefato10-joao-galetti",
+      "name": "artefato10 joao galetti",
+      "origin": "native",
+      "lastModified": 1794059567310,
+      "title": "Malha",
+      "tags": [
+        "AI",
+        "Claude",
+        "3D",
+        "WEBGL",
+        "p5.Geometry",
+        "tricô",
+        "Fair Isle",
+        "generativo"
+      ],
+      "collection": "artefato da semana/10",
+      "description": "# Malha\n\nEm português, **malha** é ao mesmo tempo a *mesh* de triângulos da\ncomputação gráfica e o tecido de tricô. Neste sketch as duas coisas são uma\nsó: uma máquina circular tece, ao vivo e ponto a ponto, um tubo de tricô\nFair Isle. Cada laço de lã é uma malha 3D construída vértice a vértice num\n`p5.Geometry`, e o tubo inteiro é uma espiral contínua, ou seja, um fio só.\n\nO tecido não é modelado à mão: ele sai de uma **curva**. O ponto de meia é\nescrito como função de um parâmetro *s* ∈ [0, 1]:\n\n```\nu = k + s + A·sin(4πs)/2π      // avança na carreira; as pernas se inclinam (o \"V\")\ny = −(k+s)/N · altura + H·cos(2πs)   // sobe em espiral; o laço sobe e desce\nρ = R − D·cos(4πs)            // as pernas vêm para a frente, a cabeça vai para trás\n```\n\nEssa curva é enrolada no cilindro e varrida por um tubo de 6 lados. Para\ncada anel calculo à mão a tangente, a normal e a binormal, e gravo em\n`vertices`, `vertexNormals` e `vertexColors`. As `faces` costuram os anéis\nem triângulos no sentido anti-horário. Como a malha é real, o lado de\ndentro do tubo mostra sozinho o avesso do tricô (o ponto tricô).\n\n**O desenho** segue a gramática do Fair Isle: faixas de motivos com simetria\ndupla (losangos, cruzes, X, molduras combinados ao acaso numa grade de\npontos inteiros e recusados se ficarem ralos ou chapados demais), faixas\nmiúdas (\"peerie\") entre elas, listras de acento, duas cores por carreira e\no sombreamento em degraus, simétrico em torno do centro da faixa. As\npaletas são de lãs Shetland: creme, aveia, turfa, índigo, garança, musgo,\nocre. Cada fio ainda tem uma torção de três cabos, escrita na cor de cada\nvértice.\n\n**A máquina:** uma coroa de 60 agulhas, das quais o came levanta as que\nestão perto do ponto atual; os dois fios da carreira descem de um olhal (o\nda cor do ponto vai tenso até a agulha, o outro corre por dentro); o tubo\ngira e sobe a cada ponto.\n\n**Interaja:**\n- **clique** — o tricô continua com um desenho novo a partir da próxima\n  carreira (a história fica gravada no tubo)\n- **segure espaço** — tece depressa\n- **segure D** — desmancha: o fio é puxado e os pontos se desfazem na ordem\n  inversa\n- **arraste** — gira a câmera (`orbitControl`); **R** volta à câmera inicial\n- **O** — baixa o tubo de tecido inteiro como `.obj` (`buildGeometry` +\n  `saveObj`), para abrir em outros programas de 3D\n- **S** — salva a imagem\n- `?seed=N` na URL fixa o desenho\n\n## Detalhes técnicos\n\n- p5.js v2 via CDN (jsDelivr), modo `WEBGL`; nada da biblioteca no zip.\n- Cada carreira pronta é **uma** geometria (60 pontos × 14 anéis × 6\n  vértices); só a carreira em andamento é desenhada ponto a ponto, e o ponto\n  que está sendo laçado é refeito a cada quadro até a fração atual da\n  curva. Geometrias que saem de cena são liberadas com `freeGeometry`.\n- 64 carreiras em memória (~350 mil vértices); roda a 60 fps numa GPU\n  integrada.\n- O padrão é gerado sob demanda, carreira a carreira, e guardado: desmanchar\n  e refazer tece exatamente o mesmo desenho.\n\nAutor: **João Galetti** — feito com o auxílio de AI (Claude, da Anthropic),\ncom verificação visual das iterações via Playwright.",
+      "hasThumb": true,
+      "files": [
+        "README.md",
+        "index.html",
+        "sketch.js",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "luminaria cobogo",
+      "id": "luminaria-cobogo",
+      "name": "luminaria cobogo",
+      "origin": "native",
+      "lastModified": 1794059433182,
+      "title": "Luminária Cobogó",
+      "tags": [
+        "AI",
+        "Claude",
+        "WebGL 3D",
+        "shader",
+        "cobogó",
+        "luminária",
+        "paramétrico"
+      ],
+      "collection": "artefato da semana/10",
+      "description": "Luminária Cobogó\nUma luminária paramétrica feita de cobogós, acesa numa sala à noite. Você escolhe o formato, o desenho e o tamanho da peça, e a luz que passa pelos vazados projeta o desenho nas paredes, no teto e nos móveis.\n\nFeita com p5.js 2 no modo WEBGL. Continua os cobogós paramétricos do artefato da semana 9: lá eles formavam uma parede; aqui viram um objeto que se ilumina.\n\nA ideia\nO cobogó é o bloco vazado da arquitetura brasileira, criado em Recife na década de 1920. Ele deixa passar o ar e a luz, mas filtra o sol, e a sombra que ele desenha no chão faz parte da arquitetura. Esta luminária inverte o caminho: a luz agora vem de dentro, e o cobogó desenha a sombra na sala em volta.\n\nA peça foi pensada para ser impressa em 3D. Por isso o sketch também estima o material, o tempo de impressão e o preço de cada combinação.\n\nComo funciona\n1. A peça\nO corpo é uma única malha construída com buildGeometry():\n\nCada face do prisma é um retângulo com uma grade de vazados. Os furos são feitos com beginContour(), e o p5 triangula a face com eles.\nA face é desenhada no plano XY e levada para o lugar com applyMatrix(), que a gira para a direção certa e a encosta no prisma.\nUma segunda face, um pouco menor, forma o lado de dentro. As paredes de cada furo ligam a face de fora à de dentro, então a peça tem espessura de verdade (3,5 mm).\nEmbaixo (luminária de mesa) ou em cima (pendente) fica uma placa com o furo do bocal.\nCada desenho é uma função que devolve os vazados de um módulo, em coordenadas de 0 a 1. O mesmo desenho serve para qualquer formato e tamanho da peça.\n\n2. As sombras\nO p5 ilumina cada forma separadamente e não projeta sombras. Por isso a sala é desenhada com um shader próprio, que calcula a sombra em cada ponto:\n\nPara cada ponto da parede, o shader traça o raio que vem da lâmpada até ele.\nPelo ângulo do raio, descobre por qual face da luminária ele sai e em que altura.\nConsulta uma máscara do desenho: um createGraphics() com os furos pintados de branco sobre o preto.\nSe o raio passou por um furo, o ponto recebe luz quente, mais fraca quanto mais longe da lâmpada. Se bateu na cerâmica, fica na sombra.\nO aparador também faz sombra: o shader testa se o raio atravessa a caixa do móvel antes de chegar à parede.\n\n3. Os números\nCom a área e o volume da peça, o sketch estima quanto PLA a impressão gastaria (paredes externas sólidas, miolo com preenchimento parcial) e quantas horas levaria. Somando filamento, máquina, mão de obra, kit elétrico e embalagem, chega a um preço de venda. Os custos vêm de uma oficina de impressão 3D real; parte deles ainda é estimativa.\n\nParâmetros\nParâmetro\tOpções\nFormato\thexagonal, quadrada, octogonal ou cilíndrica\nDesenho do cobogó\tPétalas, Círculo, Losango, Ampulheta, Quadras, Ondas, Arco, Folha, Cata-vento, Meia-lua, Gota, Ogivas\nTamanho\tP (12 × 18 cm), M (16 × 24 cm), G (22 × 32 cm)\nEscala do desenho\tcobogós grandes (≈ 6 cm), médios (≈ 4,5 cm) ou finos (≈ 3,4 cm)\nUso\tluminária de mesa ou pendente\nCor\tterracota, branco cal, concreto, verde musgo, azul azulejo, ocre, grafite\nAcabamento\tfosco ou acetinado\nA forma cilíndrica é um prisma com muitas faces. O número de faces depende da escala do desenho, para os cobogós não ficarem esticados.\n\nInteração\nArrastar: gira a câmera. Roda do mouse: aproxima. Botão direito: desloca.\nDia / Noite: muda a luz ambiente. À noite, só a luminária ilumina a sala.\nSurpreenda-me: sorteia uma combinação.\nSalvar imagem ou tecla S: baixa um PNG.\nFeito com auxílio de AI (Claude).",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "thumbnail.png",
+        "README.md"
+      ]
+    },
+    {
+      "folder": "o peso de quem nao esta",
+      "id": "o-peso-de-quem-nao-esta",
+      "name": "o peso de quem nao esta",
+      "origin": "native",
+      "lastModified": 1794059132188,
+      "title": "O peso de quem não está",
+      "tags": [
+        "AI",
+        "ChatGPT",
+        "WebGL",
+        "geometria",
+        "interação",
+        "memória"
+      ],
+      "collection": "artefato da semana/10",
+      "description": "# O peso de quem não está\n\n**Autor:** Henrique Kezen V. H. Leite  \n**Programação com auxílio de IA:** ChatGPT  \n**Biblioteca:** p5.js 2.2.3, carregada exclusivamente por CDN.\n\n## Conceito\n\nUm banco conserva o peso de quem passou por ele. O estofado cede sem que ninguém apareça: duas presenças chegam em momentos diferentes, compartilham o assento e partem. A espuma demora a recuperar sua forma. O intervalo entre a partida e o desaparecimento da marca é a matéria deste trabalho.\n\nO visitante também pode deixar uma presença. Suas marcas se misturam às da sequência automática numa única superfície contínua. A estrutura de madeira permanece rígida, em contraste com o tecido que guarda uma memória passageira do contato.\n\n## Execução e interação\n\nImporte o ZIP no [p5Front](https://esperanc.github.io/p5front/) e execute `index.html`. Também é possível extrair os arquivos para uma pasta, iniciar um servidor local (por exemplo, `python -m http.server 8000`) e abrir `http://localhost:8000` no navegador. É necessária conexão à internet para carregar o p5.js pelo CDN e suporte a WebGL.\n\n- **Clique ou toque no assento:** cria uma presença no ponto atingido. Ela chega gradualmente, permanece e desaparece lentamente.\n- **Arraste sobre a cena:** gira a câmera. Movimentos maiores que seis pixels são tratados como arraste, sem criar uma presença ao soltar.\n- **Roda do mouse ou pinça com dois dedos:** aproxima ou afasta a câmera dentro de limites.\n- **Vista inicial:** restaura o enquadramento.\n- **Recomeçar:** limpa as marcas e reinicia a sequência.\n- **Pausar / Continuar:** interrompe ou retoma o tempo da animação; a câmera permanece disponível. Presenças criadas durante a pausa começam a se desenvolver ao continuar.\n\nA sequência automática dura 36 segundos e se repete. As marcas são limitadas em profundidade e as presenças adicionadas pelo visitante são limitadas a oito simultâneas para manter a interação leve.\n\n## Geometria e técnicas\n\nO assento é um `p5.Geometry` próprio, com vértices, faces triangulares indexadas e coordenadas UV. Sua parte superior é uma grade de 84 × 32 células no computador e 60 × 24 em telas inicialmente estreitas. Anéis laterais e uma base fecham o volume do estofado. As células compartilham vértices, permitindo normais contínuas.\n\nA cada atualização, campos suaves de pressão são combinados. Cada presença tem duas regiões largas de apoio e uma área de contato adicional à frente. A soma passa por uma função de saturação para evitar que marcas sobrepostas atravessem a estrutura. Um sistema de mola amortecida aproxima os vértices do deslocamento desejado; o envelope temporal da presença produz uma recuperação lenta. É uma aproximação expressiva de espuma com memória, não uma simulação física completa de tecido.\n\nAs posições dos vértices são realmente modificadas. `computeNormals()` recalcula as normais da malha compartilhada para que a iluminação acompanhe as depressões. `freeGeometry()` libera os buffers anteriores antes de reenviar a geometria alterada por `model()`, evitando acumulação de modelos na GPU. A madeira e as ferragens são agrupadas uma única vez com `buildGeometry()`.\n\nA textura do tecido é gerada pelo próprio sketch com `createGraphics()` e aplicada por UVs. Não há modelos ou fotografias externos. A sombra de contato é uma textura procedural sobre um plano: não é uma sombra projetada automaticamente pelas luzes. Ela permanece sob o banco e não simula oclusão física entre todas as peças.\n\nA câmera usa perspectiva e coordenadas esféricas. Para localizar o toque, um raio sai da câmera e é intersectado com os triângulos atuais do assento pelo algoritmo de Möller–Trumbore. A seleção acompanha tanto a câmera quanto a deformação da malha.\n\n## Relação com o material da disciplina\n\nFoi consultado o material [Modelagem 3D](https://esperanc.github.io/SlideDown/index.html?p=9%20-%20Modelagem%203D&f=https%3A%2F%2Fesperanc.github.io%2FCreativeCoding2026), no repositório público da disciplina. O arquivo está identificado como “Aula 9 — Modelagem 3D”; seus exemplos e as quatro sugestões finais correspondem às referências citadas no enunciado do artefato da semana 10.\n\nAs técnicas aplicadas são a construção manual de `p5.Geometry`, faces por índices, cálculo de normais, UVs, agrupamento com `buildGeometry()`, exibição com `model()` e gerenciamento com `freeGeometry()`. Os objetos de exemplo dos slides não são utilizados na composição.\n\nReferências técnicas: [p5.Geometry](https://p5js.org/reference/p5/p5.Geometry/), [buildGeometry](https://p5js.org/reference/p5/buildGeometry/) e [freeGeometry](https://p5js.org/reference/p5/freeGeometry/).\n\n## Validação\n\nValidação executada em Chromium com renderização WebGL por software:\n\n- p5.js 2.2.3 carregado pelo CDN; contexto WebGL 2 confirmado.\n- Malha do computador: 3.502 vértices e 7.000 faces; malha móvel reduzida: 2.030 vértices.\n- Sequência verificada aos 6, 13 e 34 segundos simulados: primeiro uma marca, depois duas, e recuperação final com deslocamento residual inferior a 0,001 unidade.\n- Clique no assento, clique após girar a câmera, arraste sem criar presença, limites de zoom, reinício e pausa/continuação verificados.\n- Tela de 390 px com toque, arraste e pinça em emulação móvel; redimensionamento para 320 px sem transbordamento horizontal.\n- ZIP importado no p5Front: título, tags, coleção e miniatura reconhecidos. O sketch foi executado dentro do p5Front e a deformação foi observada.\n- Nenhum erro de JavaScript nos testes locais ou na execução no p5Front.\n\n**Limitação:** não houve teste em aparelho móvel físico. A renderização por software do ambiente de teste é mais lenta que uma GPU; os testes confirmam funcionamento e adaptação da interface, não uma taxa de quadros garantida em todos os dispositivos.\n\n`thumbnail.png` é uma captura da obra executada em navegador, com a malha do assento deformada. Não é uma ilustração gerada separadamente.\n\n## Prompt utilizado\n\nO texto abaixo registra integralmente o pedido de implementação.\n\n```text\nCrie um sketch de programação criativa chamado “O peso de quem não está”, usando p5.js versão 2, modo WEBGL e as técnicas apresentadas no material da aula 10.\n\nConceito\n\nUm banco vazio conserva o peso das pessoas que passaram por ele. Ninguém aparece na cena: as presenças são percebidas apenas pelas deformações do assento, como se corpos invisíveis ocupassem seus lugares.\n\nQuero explorar a ideia de que uma ausência também deixa marcas. A cena deve transmitir isso visualmente, sem depender de textos explicativos.\n\nComposição\n\n* Um banco comprido, com estrutura firme e assento estofado contínuo, capaz de apresentar deformações localizadas.\n* Aparência delicada e levemente envelhecida, com cores discretas e iluminação suave.\n* Fundo simples, com espaço vazio suficiente para reforçar a sensação de solidão.\n* Enquadramento em perspectiva que permita perceber a profundidade das marcas no assento.\n* Evite personagens visíveis, silhuetas humanas, efeitos de neon e elementos decorativos sem função na proposta.\n\nMovimento e interação\n\nEm repouso, a cena deve apresentar uma sequência lenta: uma presença afunda um lado do assento; depois, outra ocupa o lugar ao lado. A primeira desaparece, mas sua marca permanece por algum tempo antes de se desfazer.\n\nAo clicar ou tocar em uma região do assento, o usuário deve criar uma nova presença naquele ponto. A deformação precisa surgir gradualmente, permanecer por alguns instantes e retornar suavemente à forma original.\n\nAs marcas próximas devem interagir de maneira contínua, sem parecer buracos independentes. O banco deve transmitir peso, resistência e memória por meio do movimento.\n\nPermita girar a câmera com um gesto distinto da criação de presenças, diferenciando clique de arraste e mantendo os controles utilizáveis no celular.\n\nImplementação\n\nConsulte o material da aula 10 antes de definir a construção da geometria. Se ele não estiver disponível, solicite-o antes de implementar.\n\nA superfície deformável deve ser uma malha 3D cuja geometria seja efetivamente modificada. As deformações devem responder às presenças, evitando ondulações aleatórias sem relação com o conceito.\n\nUse iluminação e normais adequadas para tornar as mudanças de volume legíveis. Não presuma que a iluminação padrão do p5.js produza sombras projetadas.\n\nOrganize o código em funções claras, com comentários em português, mantendo-o compreensível para um estudante. Priorize fluidez e limite o detalhamento da malha quando necessário.\n\nEntrega\n\nEntregue um único ZIP com os arquivos do sketch diretamente na raiz, incluindo index.html, sketch.js, eventuais estilos, README.md e thumbnail.png.\n\nCarregue p5.js versão 2 exclusivamente por CDN. Não inclua a biblioteca no ZIP.\n\nO README deve começar com este preâmbulo:\n\n⸻\n\ntitle: O peso de quem não está\ntags: [AI, ChatGPT, WebGL, geometria, interação, memória]\ncollection: artefato da semana/10\n\nInclua o nome Henrique Kezen V. H. Leite, uma descrição do conceito, instruções de execução e interação, as técnicas utilizadas e este prompt integralmente.\n\nA thumbnail.png deve ser uma captura representativa do próprio sketch funcionando.\n\nTeste a renderização WebGL, as deformações, a recuperação do assento, os controles da câmera e a interação em telas pequenas. Verifique erros de JavaScript e valide a importação do ZIP, os metadados e a miniatura no p5Front. Informe explicitamente qualquer validação que não puder realizar.\n```",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "Artefato10 AquiEstaASuaMao HAlmico",
+      "id": "artefato10-aquiestaasuamao-halmico",
+      "name": "Artefato10 AquiEstaASuaMao HAlmico",
+      "origin": "native",
+      "lastModified": 1794058883417,
+      "title": "Aqui Está a Sua Mão",
+      "tags": [
+        "AI",
+        "Claude",
+        "webgl",
+        "3d",
+        "malha",
+        "obj",
+        "p5.Geometry",
+        "metalinguagem",
+        "humor"
+      ],
+      "collection": "artefato da semana/10",
+      "description": "Um chat em que a IA se representa trabalhando. O pedido é simples:\n\"Faça uma mão.\" A IA responde com toda a confiança (\"Claro! Aqui está\numa mão humana anatomicamente correta, com cinco dedos, modelada\nvértice a vértice:\") e escreve o arquivo OBJ linha por linha, enquanto\na malha se monta ao lado: primeiro os vértices, como pontos, depois as\nfaces. A mão sai com seis ou sete dedos.\n\nCada reclamação recebe um pedido de desculpas cada vez mais caprichado\n(\"Você tem toda a razão, e agradeço muito por apontar isso!\") e uma\n\"versão corrigida\", com nome de arquivo cada vez mais desesperado\n(`mao_corrigida_final_v2.obj`, `mao_final_DE_VERDADE.obj`...). O\ndefeito apontado some e aparecem outros, a confiança declarada sobe de\n97% para 100% (verificado), e depois de algumas rodadas a IA às vezes\njura que corrigiu o que não corrigiu. O contador de pedidos de\ndesculpas fica no topo.\n\nOs defeitos são os erros de verdade de quem escreve uma malha à mão:\n- dedos a mais, a menos, grudados, dois polegares, um dedo comprido\n  demais, articulações dobrando para trás;\n- um dedo com as faces na ordem errada: a normal aponta para dentro e\n  a luz acende pelo lado errado;\n- mão sem normais: o OBJ não traz `vn` e ninguém chamou\n  `computeNormals()`, então a luz não tem com o que trabalhar e a mão\n  sai preta;\n- normais `FLAT` onde deviam ser `SMOOTH`: a mão sai facetada, \"como\n  um cristal\";\n- faces faltando: um buraco na palma.\n\nInteração:\n- as respostas do usuário são botões no pé do chat: uma para cada\n  defeito visível (\"Tem 7 dedos.\", \"Está toda preta.\", \"Tem um dedo do\n  avesso.\"...), mais \"Isso não é uma mão.\" e \"Está ótima, obrigado.\";\n- \"Baixar ....obj\" salva a mão atual com `saveObj()`, para abrir em\n  qualquer programa 3D;\n- arrastar sobre a mão gira a vista (`orbitControl`); a roda aproxima.\n\nO canvas é quadrado e se adapta à janela. Não há semente fixa de\naleatoriedade: cada mão e cada sequência de defeitos são sorteadas de\nnovo.\n\nTécnicas usadas:\n- a mão é gerada por código como duas listas, vértices e faces (trios\n  de índices): a palma é uma pilha de anéis de seção de superelipse,\n  do pulso aos nós dos dedos; cada dedo é um tubo de seção elíptica\n  que segue um eixo com três falanges, dobrado nas articulações, com a\n  ponta arredondada por anéis que encolhem; as aberturas são fechadas\n  por tampas em leque. Anéis vizinhos são costurados com dois\n  triângulos por célula, a mesma conta de grade `j * (n + 1) + i` da\n  superfície e do sólido de revolução;\n- a ordem dos índices de cada face é escolhida para a normal apontar\n  para fora (sentido anti-horário visto de fora), conferida pelo sinal\n  do volume da malha fechada; o dedo \"do avesso\" só inverte essa ordem;\n- as listas viram texto OBJ (`v x y z`, `f a b c`, índices a partir\n  de 1, com comentários confiantes da IA, como `# dedos: 5\n  (conferido)`). O texto aparece no chat e, ao terminar, vira um\n  `Blob` lido com `loadModel(url, { fileType: \".obj\", normalize: false })`;\n- enquanto o texto é escrito, a malha aparece aos poucos: os vértices\n  como pontos (`beginShape(POINTS)`) e as faces num `p5.Geometry`\n  parcial, refeito a cada poucos quadros e liberado com\n  `freeGeometry()`;\n- `computeNormals(SMOOTH)` para a mão \"certa\", `computeNormals(FLAT)`\n  para a facetada e nenhuma chamada para a preta;\n- `saveObj()` para baixar a malha;\n- grade de chão de programa 3D com `line()`, luz ambiente, duas\n  `directionalLight()` e `specularMaterial()`;\n- chat em HTML sobre o canvas (`createDiv`, `createButton`), com as\n  fontes IBM Plex do Google Fonts.\n\nInspirações:\n- as mãos de seis dedos das imagens geradas por IA, que viraram a\n  piada mais conhecida sobre o assunto; a matéria explica por que os\n  modelos erram tanto as mãos —\n  https://petapixel.com/2023/03/02/why-ai-image-generators-cant-get-hands-right/\n- o hábito dos assistentes de pedir desculpas e concordar com tudo\n  (\"Você tem toda a razão!\"), discutido como bajulação (sycophancy) dos\n  modelos de linguagem —\n  https://www.anthropic.com/research/towards-understanding-sycophancy-in-language-models\n- \"A Traição das Imagens\" (\"Isto não é um cachimbo\"), de René Magritte\n  (1929): uma imagem que contradiz o próprio texto. Aqui é o contrário:\n  o texto insiste que a imagem é o que ela não é —\n  https://en.wikipedia.org/wiki/The_Treachery_of_Images\n\nAutor: Henrique Almico Dias da Silva",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "style.css",
+        "sketch.js",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "helena giovanna artefato 10",
+      "id": "helena-giovanna-artefato-10",
+      "name": "helena giovanna artefato 10",
+      "origin": "native",
+      "lastModified": 1794058858277,
+      "title": "",
+      "tags": [],
+      "collection": "artefato da semana/10",
+      "description": "---\ntitle: Orquestra de Tesouras 3D - Helena Giovanna\ntags: [AI, ChatGPT, p5js, WEBGL, 3D, generative, animation, interactive]\ncollection: artefato da semana/10\n---\n\nOrquestra de Tesouras 3D é um artefato interativo desenvolvido em p5.js 2, utilizando WEBGL e modelagem tridimensional com p5.Geometry, vértices, faces triangulares e primitivas 3D. A composição apresenta nove tesouras mecânicas animadas sobre um palco iluminado, acompanhadas por um maestro que conduz seus movimentos. O artefato explora geometria personalizada, articulações, iluminação colorida e coreografias sincronizadas. O usuário pode movimentar a câmera com o mouse, alternar entre três coreografias com as teclas 1, 2 e 3, pausar com Espaço, reiniciar com R e salvar uma imagem com S.\n\nAI ChatGPT: desenvolvido com auxílio de inteligência artificial.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "thumbnail.png",
+        "README.md"
+      ]
+    },
+    {
+      "folder": "Artefato 10 Gabriella Murta",
+      "id": "artefato-10-gabriella-murta",
+      "name": "Artefato 10   Gabriella Murta",
+      "origin": "native",
+      "lastModified": 1794058634846,
+      "title": "Artefato 10 - janelas de livros",
+      "tags": [
+        "window",
+        "ia",
+        "generative"
+      ],
+      "collection": "artefato da semana/10",
+      "description": "Autora: Gabriella Pinheiro\n\nJanelas de livros criadas com ajuda de IA Claude, com o seguinte prompt: Fui em uma exposição recentemente que tinha mais ou menos essa ideia: Era um quadro com volume em camadas sucessivas que diminuiam. Olhando de frente causava a sensação de um caminho em perspectiva, mas olhando de lado era possível ver o volume.Mas ainda gostaria de trabalhar com objetos. Pode até ter um texto escrito quando o alinhamento acontecer, para a pessoa saber que achou a visão certa.\nPensei em uma coisa mais abertura de passione https://www.youtube.com/watch?v=AjGZw_DqpQw e a obra revolução das girafas https://www.youtube.com/watch?v=DcIZ3EsE7CI\nQuero que tenham livros espalhados e que, na direção certa elas formem uma janela aberta para o horizonte. Quando a direção certa for encontrada, a imagem aparece. Acesse o mesmo site de imagem do artefato 8.\nAgora queria o código completo que tem n janelas espalhadas pelo espaço e direcionadas para todos os lados. O fundo do canva em azul claro.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "artefato quadrilateros paulo vitor",
+      "id": "artefato-quadrilateros-paulo-vitor",
+      "name": "artefato quadrilateros paulo vitor",
+      "origin": "native",
+      "lastModified": 1794053564844,
+      "title": "",
+      "tags": [],
+      "collection": "artefato da semana/1",
+      "description": "# Entre Prédios\n\n**Autor:** Paulo Vitor Couto\n\n## Descrição\n\nEste sketch estático apresenta uma homenagem gráfica a um herói aracnídeo atravessando uma cidade à noite. A imagem procura transmitir movimento por meio da pose diagonal do personagem, das linhas de teia e da perspectiva dos prédios.\n\nToda a composição foi construída usando `quad()` como única primitiva geométrica do p5.js. Até os elementos que normalmente seriam desenhados como linhas — teias, contornos e detalhes da roupa — são quadriláteros muito finos.\n\n## Ideia visual\n\n- O fundo usa faixas quadriláteras em diferentes tons de azul para criar profundidade.\n- Os prédios são quadriláteros irregulares que convergem em direção ao centro.\n- As janelas são pequenos quadriláteros amarelos e azulados.\n- O personagem é formado por várias peças quadriláteras vermelhas, azuis e escuras.\n- A teia é composta por quadriláteros longos e estreitos.\n\n## Como executar\n\n1. Extraia o arquivo `.zip`.\n2. Abra `index.html` em um navegador com acesso à internet; ou\n3. Copie o conteúdo de `sketch.js` para o [editor online do p5.js](https://editor.p5js.org/).\n\nO sketch não possui animação. A função `noLoop()` faz com que a imagem seja desenhada apenas uma vez.\n\n## Arquivos\n\n- `index.html`: carrega a biblioteca p5.js e o sketch.\n- `style.css`: centraliza o canvas na página.\n- `sketch.js`: contém o desenho e os comentários explicativos.\n- `thumbnail.png`: prévia do resultado gerado.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "README.md",
+        "sketch.js",
+        "style.css",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "no de fone",
+      "id": "no-de-fone",
+      "name": "no de fone",
+      "origin": "native",
+      "lastModified": 1794052522779,
+      "title": "Nó de fone",
+      "tags": [
+        "AI",
+        "Claude",
+        "WEBGL",
+        "p5.js v2",
+        "geometria própria"
+      ],
+      "collection": "artefato da semana/10",
+      "description": "# Nó de fone\n\nUm fone de ouvido com fio, daqueles que a gente guarda no bolso e que sempre voltam emaranhados. O sketch gera o cabo, o plug de 3,5 mm, o divisor em Y e os dois fones **vértice a vértice**, em modo WEBGL, e mostra tudo girando devagar sob luzes coloridas.\n\n**Feito com auxílio de IA (AI — Claude, da Anthropic).**\n\n## Como interagir\n\n- Arraste o mouse para girar e use a roda para aproximar (`orbitControl`).\n- Duplo clique, ou a tecla `N`, gera um novo emaranhado (outra semente).\n\n## Como funciona\n\n- **Caminho do cabo:** um passeio aleatório com inércia, puxado de volta ao centro, suavizado com splines de Catmull-Rom. Três trechos: o cabo principal e os dois ramos depois do Y.\n- **Tubo:** a malha é construída com um referencial de transporte paralelo, para o fio não torcer, com normais por vértice para o sombreamento suave.\n- **Peças torneadas:** plug, Y e fones são perfis de revolução construídos à mão em torno do eixo local do cabo.\n- **WEBGL:** `buildGeometry()` com `beginShape(TRIANGLES)`, `normal()` e `vertex()`, `model()`, luzes (`ambientLight`, `directionalLight`, `pointLight`), `specularMaterial()` e `shininess()`.\n\nA biblioteca p5.js (v2.2.3) é carregada de CDN; o zip não a contém.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "jogo da cobrinha 2 uma nova dimensao",
+      "id": "jogo-da-cobrinha-2-uma-nova-dimensao",
+      "name": "jogo da cobrinha 2 uma nova dimensao",
+      "origin": "native",
+      "lastModified": 1794051307261,
+      "title": "Jogo da Cobrinha 2 - Uma nova dimensão",
+      "tags": [
+        "generative",
+        "AI",
+        "Claude",
+        "Snake",
+        "Game",
+        "3D",
+        "Model",
+        "Graphs",
+        "Algorithms"
+      ],
+      "collection": "artefato da semana/10",
+      "description": "# Cobra 3D autônoma\n\nUm jogo da cobrinha que se joga sozinho, num espaço tridimensional. A cobra caça maçãs dentro de uma gaiola de arestas finas, cresce a cada uma que come e, quando enche o espaço ou fica sem saída, o mundo reinicia. Ninguém controla nada: o usuário só observa e, se quiser, orbita a câmera.\n\n## A ideia\n\nO jogo da cobrinha clássico vive numa grade 2D e depende de um jogador. Aqui duas coisas mudam:\n\n1. **A grade vira um reticulado 3D** de 7 × 7 × 7 células. A cobra anda de célula em célula, nas seis direções (cima, baixo, esquerda, direita, frente, trás).\n2. **O jogador vira um algoritmo.** A cobra escolhe sozinha o próximo passo, e o interesse está em assistir às decisões dela.\n\nO corpo da cobra não é uma fila de cubos. É **um tubo contínuo e liso**, cuja forma é refeita a cada quadro conforme ela se move. Esse é o centro do sketch e a razão de o 3D valer a pena: a cobra é uma malha viva.\n\n## Como o sketch funciona\n\n### O mundo\n\n- Um reticulado de `N = 7` células por lado, com `CELULA = 46` unidades de aresta.\n- A **gaiola** é a moldura do reticulado: 12 caixas finas empacotadas com `buildGeometry()` uma única vez, no `setup()`.\n- A **maçã** aparece numa célula livre aleatória e flutua e gira devagar. Quando é comida, outra surge.\n\n### A cobra como malha\n\nA cobra é guardada como uma lista de células, da cabeça ao rabo. Para desenhá-la, o sketch segue estes passos:\n\n1. Converte as células em pontos do espaço e **interpola** a cabeça e o rabo entre uma célula e a seguinte, para o movimento ser fluido e não aos saltos.\n2. **Suaviza** o caminho com subdivisão de Chaikin, que corta os cantos e transforma as quinas em curvas.\n3. **Varre um círculo** ao longo do caminho, em `tubo()`: a cada ponto cria um anel de vértices, transportando o quadro de referência de um anel para o seguinte (transporte paralelo) para o tubo não torcer.\n4. **Costura as faces** entre anéis vizinhos, com índices em sentido anti-horário visto de fora, como a aula ensina.\n5. **Fecha as pontas** com anéis de raio decrescente, e define o perfil do raio: cabeça mais grossa e cauda afinando.\n6. Chama `computeNormals(SMOOTH)`, para o corpo ficar liso, sem facetas.\n\nComo o tubo muda o tempo todo, a malha anterior é descartada com `freeGeometry()` antes de criar a nova. É o caso citado em aula: uma malha reconstruída a cada quadro vaza memória de vídeo se não for liberada.\n\n### A maçã\n\nA maçã e o caule são sólidos de revolução feitos à mão em `revolucao()`: um perfil `[raio, y]` girado em torno do eixo y, como o vaso da aula. O perfil da maçã tem uma covinha no topo e outra embaixo.\n\nEsses perfis têm raio mínimo de 0,05 nos polos, e não zero. Uma versão anterior usava `sphere()` e `cylinder()` e gerava no console o aviso `face has colinear sides or a repeated vertex`: os polos dessas primitivas têm vértices repetidos, e o `computeNormals(SMOOTH)` os funde, deixando triângulos degenerados.\n\n### O cérebro da cobra\n\nA cada passo (`PASSO = 230` ms), a função `decidir()` escolhe a próxima célula:\n\n1. **Busca o menor caminho até a maçã** (busca em largura no reticulado), sem atravessar o próprio corpo.\n2. **Verifica se é seguro.** Simula o corpo depois de comer e confirma que a cabeça ainda alcançaria o próprio rabo. Se sim, segue pela maçã.\n3. Se não for seguro, **persegue o rabo**, que sempre abre espaço, para ganhar tempo.\n4. Se isso também falhar, escolhe o **vizinho com mais espaço livre** ao redor (preenchimento por inundação).\n5. Se não houver nenhum movimento possível, o mundo **reinicia**. Ele também reinicia quando a cobra chega a `MAX = 40` células.\n\nO placar no canto mostra maçãs comidas, recorde, tamanho atual e número da rodada.\n\n### Luz e material\n\nA cena usa `ambientLight`, uma `directionalLight` fixa e uma `pointLight` azulada que orbita a gaiola. A cobra é verde com `specularMaterial` e `shininess`. A maçã é vermelha e brilhante, e o caule é fosco. O modelo não traz cor ou material próprio: `fill()` e os materiais são decididos no sketch, como na aula.\n\n### Exportar\n\nCom o sketch rodando, as teclas **O** e **S** salvam a malha da cobra **naquele instante** em `cobra.obj` e `cobra.stl` (binário), via `saveObj()` e `saveStl()`. Dá para fotografar a cobra em qualquer pose e abrir o resultado em outro programa.\n\n## Uma ideia que ficou pelo caminho: tubos como obstáculos\n\nNuma fase posterior do desenvolvimento, para dar mais desafio, o espaço ganhou **tubos fixos como obstáculos**. Eram caminhos aleatórios pelo reticulado, suavizados e transformados em canos coloridos pela mesma função `tubo()`. A cobra tinha de contornar os canos e o próprio corpo para chegar às maçãs.\n\nA ideia funcionava, mas foi **descontinuada em favor da visualização**. Com os canos, a cena ficava carregada e disputava a atenção com o que importa: a cobra se movendo, crescendo e desenhando curvas no espaço. Sem eles, o corpo é lido com clareza, e a busca de caminho continua interessante porque, quando a cobra fica longa, o maior obstáculo passa a ser ela mesma.\n\nUm vestígio ficou no código: o conjunto `obst` existe, vazio, e a busca de caminho o consulta. Se quiser reativar o desafio, basta povoá-lo com as células a evitar.\n\n## Parâmetros para experimentar\n\nFicam no início do `sketch.js`:\n\n| Constante | Valor | O que controla |\n|---|---|---|\n| `N` | 7 | lado do reticulado, em células |\n| `CELULA` | 46 | tamanho de cada célula |\n| `LADOS` | 12 | lados da seção do tubo; menos é mais leve, mais é mais redondo |\n| `PASSO` | 230 | milissegundos entre um passo e o seguinte |\n| `MAX` | 40 | tamanho em que o mundo reinicia |\n\nO raio do corpo e o perfil de afinamento estão em `malhaCobra()`. Como a malha da cobra é refeita a cada quadro, o custo cresce com o comprimento: se o sketch pesar, reduza `LADOS` ou `MAX`.\n\n## Conceitos da aula usados\n\n- `p5.Geometry` construída ponto a ponto: `vertices` e `faces`, com a ordem dos índices.\n- `computeNormals(SMOOTH)`, e o motivo de os vértices repetidos importarem.\n- `buildGeometry()` para a gaiola, calculada uma vez no `setup()`.\n- Sólido de revolução feito à mão, para a maçã e o caule.\n- `freeGeometry()` para malhas reconstruídas a cada quadro.\n- `fill()`, `specularMaterial()`, `shininess()` e luzes sobre uma malha sem material próprio.\n- `saveObj()` e `saveStl()` para o caminho de volta.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "diego artefato10",
+      "id": "diego-artefato10",
+      "name": "diego artefato10",
+      "origin": "native",
+      "lastModified": 1794051067897,
+      "title": "",
+      "tags": [],
+      "collection": "",
+      "description": "# Painel Eletromecânico de Sinais & Indicadores Analógicos 3D\n\n**Coleção:** artefato da semana/10  \n**Ferramenta:** AI Gemini  \n**Autor:** [Seu Nome Aqui]  \n\n## 1. Conceito do Artefato\nEste trabalho é uma escultura digital interativa em 3D criada com **p5.js em modo WebGL**, explorando o material da Aula 10 (iluminação 3D, materiais especulares/emissivos e controle orbital de câmera).\n\nO artefato simula um **Console Eletromecânico Retro-Futurista de Análise de Sinais**.\n\nA composição combina:\n- **Medidores Analógicos VU:** Mostradores côncavos com agulhas de deflexão dinâmica e tampas de vidro translúcido.\n- **Seleitores Rotativos de Bronze (Knobs):** Chaves com acabamento metálico estriado que respondem a cliques do usuário.\n- **Tubo Indicador de Válvula / Nixie:** Encapsulamento de vidro borossilicato com filamentos incandescentes aquecidos por emissão de luz.\n- **Tela de Osciloscópio Vetorial:** Mostrador de fósforo verde exibindo ondas de interferência harmônica em tempo real.\n\n## 2. Técnicas de WebGL & Iluminação Aplicadas (Aula 10)\n- **Modo WebGL Responsivo:** Inicialização via `createCanvas(windowWidth, windowHeight, WEBGL)` com escalonamento dinâmico em `draw()` e readequação em `windowResized()`.\n- **Câmera Orbital:** Implementação de `orbitControl()` permitindo rotação, translação e zoom livre ao redor do console.\n- **Sistema Multicamadas de Luzes:**\n  - `ambientLight()`: Proporciona a iluminação de base do laboratório.\n  - `directionalLight()`: Simula iluminação chave dourada vinda do topo.\n  - `pointLight()` ciano e âmbar: Fontes pontuais de destaque criando reflexos dinâmicos nos metais e vidros.\n- **Propriedades de Materiais Avançados:**\n  - `ambientMaterial()` e `specularMaterial()` para definir brilho de alumínio e bronze.\n  - `shininess()` ajustado para diferentes texturas (metais foscos vs. vidro alto brilho).\n  - `emissiveMaterial()` para áreas retroiluminadas e filamentos energizados.\n\n## 3. Instruções de Interação\n- **Girar / Orbitar:** Clique e arraste com o botão esquerdo do mouse para visualizar a estrutura 3D de qualquer ângulo.\n- **Zoom:** Utilize a roda do mouse (scroll) para aproximar ou afastar a câmera.\n- **Alterar Frequências:** Clique em qualquer ponto da tela com o mouse para girar os seletores rotativos de bronze em incrementos angulares.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "fita cassete",
+      "id": "fita-cassete",
+      "name": "fita cassete",
+      "origin": "native",
+      "lastModified": 1794050911973,
+      "title": "Fita Emaranhada",
+      "tags": [
+        "AI",
+        "Claude",
+        "WEBGL",
+        "3D",
+        "fita",
+        "geometria"
+      ],
+      "collection": "artefato da semana/10",
+      "description": "A obra é uma fita magnética de cassete solta, ondulando como um nó tridimensional em WEBGL. A fita não é uma primitiva do p5.js: é uma geometria construída vértice a vértice com buildGeometry, em que cada segmento tem seção retangular (duas faces e duas bordas) e os triângulos são gerados ao longo de um caminho formado pela soma de senóides em frequências diferentes, com um desvio de noise. A orientação da seção é propagada ponto a ponto (transporte paralelo do quadro de referência) e recebe uma torção crescente com variação de noise, o que faz a fita girar sobre si mesma. As normais são calculadas com computeNormals e a geometria é refeita a cada quadro, de modo que o nó se desfaz e se refaz devagar. Luzes ambiente, direcional quente e pontual azulada, junto de um material especular marrom, fazem a fita brilhar como plástico. A câmera gira lentamente e pode ser controlada com o mouse (orbitControl). A IA (Claude) foi utilizada como ferramenta de apoio no desenvolvimento do código em p5.js, auxiliando na ideia do tema, na construção da geometria da fita e no cálculo do quadro de referência ao longo do caminho. A partir dessas sugestões, o código foi adaptado e refinado para alcançar o resultado visual desejado.\n\n**Prompt sugestivo:**\n\n> Crie um sketch em p5.js (versão 2, carregado por CDN), em canvas WEBGL do tamanho da janela, que mostre uma fita de cassete emaranhada. Construa a fita com buildGeometry: ela segue um caminho 3D (soma de senóides com desvio de noise), tem seção retangular fina e torção ao longo do comprimento, usando transporte paralelo para orientar a seção. Chame computeNormals e refaça a geometria a cada quadro com liberação da anterior (freeGeometry), para que o nó ondule devagar. Use ambientLight, directionalLight, pointLight e specularMaterial marrom com shininess, fundo escuro, rotação lenta e orbitControl.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "README.md",
+        "sketch.js",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "Artefato10ArturTaboada",
+      "id": "artefato10arturtaboada",
+      "name": "Artefato10ArturTaboada",
+      "origin": "native",
+      "lastModified": 1794050723380,
+      "title": "Sombra Construída",
+      "tags": [
+        "AI",
+        "Claude",
+        "webgl",
+        "3d",
+        "geometry",
+        "mesh",
+        "shadow-volume"
+      ],
+      "collection": "artefato da semana/10",
+      "description": "# Sombra Construída\n\nO renderizador do p5 não faz sombra. As luzes acendem as superfícies voltadas para elas e ignoram por completo o que está atrás: um objeto não escurece outro, e nada projeta nada no chão. Isso não é um descuido da biblioteca, é uma conta que o motor não faz — saber se a luz chega a um ponto exigiria perguntar se alguma outra parte da cena está no caminho, e nenhuma luz do p5 pergunta isso.\n\nEntão aqui a sombra é **construída**. Não desenhada, não simulada, não aproximada com um borrão escuro no chão: modelada, com uma lista de vértices e uma lista de faces, como qualquer outra malha. O que se vê no meio da cena não é um efeito de iluminação — é um sólido, de casca fechada e orientada, que por acaso ocupa exatamente a região do espaço onde a luz não chega. Apertando a tecla `O` ele sai num arquivo `.obj` que abre no Blender.\n\n## Como o sketch funciona\n\n- **O objeto é uma superfície estrelada.** Para cada direção do espaço existe um raio, e a casca é o conjunto desses pontos: a esfera mais o que cada braço puxa naquela direção. Como o raio é sempre positivo, a malha fecha sozinha e nunca se atravessa — e isso não é enfeite, é a garantia de que a pergunta \"onde a luz não chega\" tem resposta única.\n\n- **Cada execução traz uma peça diferente.** Sorteia-se quantos braços o objeto tem, para que lado eles apontam e de que ponto do percurso a lâmpada parte; a tecla `R` sorteia outra. O que não se sorteia é a sombra: ela continua sendo a resposta exata à mesma pergunta, e muda porque a pergunta mudou. O giro dos braços é aplicado às **direções** antes de a casca nascer, e não à malha pronta — assim a grade de triângulos acompanha a nova forma, e a sombra sai do objeto de verdade, não de uma cópia girada depois.\n\n- **O raio é uma soma, não um máximo.** A versão óbvia da conta toma o braço que mais puxa em cada direção, e isso tem quina: no meio do caminho entre dois braços a função troca de dono e a superfície ganha uma dobra. A grade de triângulos atravessa essa dobra na diagonal e o resultado aparece como degrau — um serrilhado grosso que não some aumentando a resolução. Somando as contribuições, os braços se misturam num vale liso e a casca fica sem quina nenhuma. Uma superfície lisa é o que torna possível o passo seguinte.\n\n- **A malha é soldada antes de qualquer coisa.** A grade de uma volta fechada nasce com a emenda duplicada: os vértices do começo e do fim ocupam o mesmo lugar sem serem o mesmo vértice. O método abaixo mede uma grandeza em cada vértice, e na emenda não soldada essa grandeza teria dois valores no mesmo ponto — a curva da silhueta se rasgaria exatamente ali. É a mesma soldagem que o `computeNormals(SMOOTH)` faz por dentro, usada aqui para outro fim. Nas duas fileiras dos polos a célula da grade também não é um quadrado, e sim um triângulo, de modo que ali só se emite um triângulo por célula: emitir dois deixaria um de área zero, do qual o p5 reclama uma vez por face depois de soldar.\n\n- **A silhueta sai de um campo, não das arestas.** Em cada vértice mede-se o cosseno entre a normal e a direção que vem da lâmpada: negativo quer dizer virado para a luz, positivo quer dizer de costas. A silhueta é onde esse número passa por zero. Dentro de cada triângulo o campo varia linearmente, então o zero é um segmento de reta, e o ponto em que ele corta uma aresta sai de uma regra de três entre os valores das pontas. Dois triângulos vizinhos calculam o **mesmo** ponto para a aresta que dividem, porque partem dos mesmos dois números — é por isso que a curva fecha sem fenda. O algoritmo clássico de volume de sombra percorre as arestas da malha e por isso só consegue uma silhueta poligonal, do tamanho da faceta; esta corta os triângulos por dentro e sai lisa, de modo que a sombra deixa de denunciar a resolução do objeto.\n\n- **O sólido tem três partes e uma regra de orientação.** A parte escura da casca é recortada ao longo da curva — cada triângulo cai num de quatro casos, e nos dois do meio o pedaço escuro é um triângulo ou um quadrilátero. Esse recorte, com a volta invertida, é a tampa de cima; o mesmo recorte projetado no chão é a de baixo, que é exatamente a sombra achatada de sempre; e as paredes ligam uma à outra ao longo do contorno. A ordem dos índices não é escolha de gosto: ao longo da curva a tampa e a parede dividem a mesma aresta e precisam percorrê-la em sentidos **opostos**, ou a casca deixa de ser orientável. Das combinações possíveis, uma só funciona.\n\n- **A sombra é refeita quando a luz anda.** Construir custa alguns milissegundos e a lâmpada se move devagar, então o sólido só é reconstruído quando o ângulo mudou o bastante para a diferença aparecer; a malha anterior é devolvida com `freeGeometry()`. Entre uma reconstrução e outra, a cena roda sem nenhum custo a mais.\n\n- **O sólido é desenhado sem material.** Com as luzes ligadas, um `fill()` sem `ambientMaterial()` sai como cor chapada, que ignora as lâmpadas. É o certo aqui por teimosia de coerência: iluminar uma sombra seria absurdo, e a tampa de cima, que encara a lâmpada em cheio, sairia clara. Opaco e chapado, o sólido se lê como escultura — o que informa a sua forma é o contorno, que muda quando se gira a câmera, como num teatro de sombras. A metade escura do objeto é pintada quase exatamente com a mesma cor, de modo que a emenda entre um e outro não se nota.\n\n- **A iluminação é de uma lâmpada só**, com um resto de luz ambiente fazendo as vezes do céu. Duas ou três luzes deixariam a cena mais bonita e acabariam com o assunto: com várias fontes não existe *a* sombra.\n\n- **A lâmpada vai e volta num arco, em vez de dar a volta inteira.** Não é economia. Dando a volta completa ela passa por trás do objeto, e nesse momento o sólido aponta para a câmera e engole o quadro inteiro de preto — medindo, a tela chegava a 50% de pixels escuros, contra 14% a 30% ao longo do arco. Oscilando em torno da direção de quem olha, a lâmpada fica sempre atrás do observador, que é como se posiciona uma luz para estudar uma sombra, e o sólido se afasta pelo fundo. Para ver de outro lado, gira-se a câmera — que é o movimento certo para isso.\n\n- Todas as medidas derivam de `min(windowWidth, windowHeight)` e `windowResized()` reconstrói tudo, de modo que a cena cabe em qualquer formato de tela.\n\n### Controles\n\n| tecla / gesto | ação |\n|---|---|\n| arrastar | gira a câmera em volta da cena |\n| roda do mouse | aproxima e afasta |\n| `R` | sorteia outra peça |\n| `3` a `8` | número de braços, mantendo a inclinação sorteada |\n| `L` | põe a câmera **na lâmpada** |\n| `P` | pausa o giro da luz |\n| `C` | mostra só o contorno da silhueta |\n| `V` | deixa o sólido translúcido, para ver por dentro |\n| `M` | mostra o esqueleto: contorno, raios e chão |\n| `S` | salva a imagem num PNG |\n| `O` | exporta a sombra como arquivo `.obj` |\n\nVale insistir em duas delas. A tecla `L` põe a câmera no lugar **exato** da lâmpada, e dali o sólido desaparece por completo atrás do objeto — não por truque de desenho, mas porque é isto que uma sombra é: o pedaço de espaço que o objeto esconde de quem está na luz. Tem de ser o lugar exato; de um palmo atrás, a projeção parte de outro centro e o sólido reaparece pelas beiradas. E a tecla `O` é o argumento inteiro numa tecla: se a sombra fosse um efeito de iluminação não haveria o que exportar; como ela é uma `p5.Geometry` igual a qualquer outra, ela sabe se gravar em disco, e o arquivo que sai é uma peça fechada que se pode medir, cortar ao meio ou mandar imprimir.\n\n## Inspiração\n\nA técnica tem nome e idade: **volume de sombra**, de Frank Crow, 1977 — a ideia de que a região escura atrás de um objeto pode ser tratada como um sólido, em vez de um efeito. Crow a propôs para jogos, onde ela resolve sombras exatas sem traçar raios; aqui ela é usada ao contrário, não para render mais rápido mas para que a sombra exista como coisa.\n\nA segunda referência é mais velha e vem do desenho à mão. Em geometria descritiva, a sombra de um corpo em perspectiva se acha traçando um raio de luz por ponto do contorno até o plano do chão e ligando os pés desses raios. É literalmente o que a tecla `M` desenha: o contorno em cima, a sua projeção embaixo, e o feixe de retas entre os dois. Essas retas são as geratrizes da parede — o sólido inteiro é uma superfície regrada, feita de segmentos, e é por isso que ele pode ser escrito com dois triângulos por pedaço do contorno. O que o sketch faz é esse desenho de prancheta, só que fechado e em três dimensões.\n\nA escolha do tema. Os caminhos mais trilhados da modelagem 3D em programação criativa — sólidos de revolução, poliedros e cristais, terrenos de ruído, nuvens de cubos, planetas, nós toroidais, árvores e conchas — tratam todos a malha como **a forma que se quer ver**. Aqui a malha construída à mão não é a forma que se quer ver: é a ausência dela. O objeto que faz a sombra é só o pretexto, e nenhuma linha do programa decide como a sombra deve parecer. A forma que aparece é consequência de onde a lâmpada está.\n\n## Sobre o uso de IA\n\nO artefato foi desenvolvido com auxílio do Claude (AI), a partir da minha escolha de tema e de sucessivas rodadas de teste em navegador. Duas percepções aqui só apareceram rodando o sketch de verdade, e nenhuma delas se resolveria raciocinando sobre o código:\n\nA primeira foi que `createCamera()`, no p5 2, **cria** a câmera mas não a põe em uso. Sem `setCamera()`, tudo o que se pede a ela é guardado e ignorado, e a cena continua sendo desenhada pela câmera padrão. O sintoma é desconcertante justamente por ser silencioso: mover a câmera não dá erro nenhum, simplesmente não faz efeito — afastar de dez para quarenta raios dava a mesma imagem, pixel por pixel.\n\nA segunda foi a orientação da casca. Ao longo do contorno, a tampa e a parede dividem a mesma aresta, e as duas combinações que pareciam naturais percorriam essa aresta no **mesmo** sentido, o que deixa trechos do sólido virados do avesso. O defeito não aparece na imagem e passa até por um teste de volume com sinal, porque pedaços invertidos ainda somam a favor; só ficou visível contando as arestas dirigidas e exigindo que cada uma apareça uma vez em cada sentido.\n\n## Autor\n\nArtur Taboada Dios Carvalho\n\n## Como visualizar este projeto\n\n**Usando o ambiente online (p5front)**\n\n1. Acesse o ambiente de desenvolvimento utilizado na disciplina: [https://esperanc.github.io/p5front/](https://esperanc.github.io/p5front/).\n2. Copie todo o conteúdo do arquivo `sketch.js` deste zip e cole na área de edição de código do site.\n3. O resultado será renderizado na tela de visualização após o botão \"Run\" ser clicado. Cada clique em \"Run\" — ou cada toque na tecla `R` — sorteia uma peça diferente. Vale arrastar o mouse para girar em volta do sólido, e vale apertar `L` pelo menos uma vez: é a vista em que a sombra prova que é sombra.\n\nNenhuma biblioteca externa além do p5.js é necessária.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "thumbnail.png",
+        "README.md"
+      ]
+    },
+    {
+      "folder": "artefato 10 arqueologia cursor Arthur Ramos",
+      "id": "artefato-10-arqueologia-cursor-arthur-ramos",
+      "name": "artefato 10 arqueologia cursor Arthur Ramos",
+      "origin": "native",
+      "lastModified": 1794050549783,
+      "title": "Arqueologia do Cursor",
+      "tags": [
+        "AI",
+        "ChatGPT",
+        "WEBGL",
+        "modelagem 3D",
+        "p5.Geometry",
+        "gesto"
+      ],
+      "collection": "artefato da semana/10",
+      "description": "# Arqueologia do Cursor\n\n**Autor:** Arthur Ramos  \n**Tecnologia:** p5.js 2.2.3 em modo WEBGL  \n**Auxílio de IA:** ChatGPT\n\n## Descrição\n\n`Arqueologia do Cursor` trata o movimento do mouse como um vestígio que pode ser escavado e preservado. Um traço que normalmente desapareceria assim que o usuário soltasse o botão é transformado em uma escultura tridimensional fechada, iluminada e observada como um objeto de museu.\n\nO sketch começa com um gesto produzido pelo próprio programa. Ao pressionar `D` ou clicar em **DESENHAR NOVO GESTO**, o usuário pode registrar outro movimento. A velocidade do cursor altera a largura da fita: movimentos lentos deixam marcas mais espessas, enquanto movimentos rápidos criam partes mais finas. Essa informação também desloca o traço no eixo `z`, fazendo o gesto abandonar o plano e ocupar o espaço.\n\n## Como a malha é construída\n\nO trabalho não carrega nenhum modelo pronto. O código cria diretamente um `p5.Geometry`:\n\n1. Cada amostra do gesto recebe uma tangente e uma direção perpendicular.\n2. A espessura gera os limites esquerdo e direito da fita.\n3. A profundidade cria quatro vértices por amostra: frente e verso de cada limite.\n4. Cada trecho é fechado com oito faces triangulares: frente, verso e duas paredes.\n5. Duas tampas fecham o início e o final do gesto.\n6. `computeNormals(FLAT)` calcula as normais e preserva as quinas da extrusão.\n\nA malha também recebe coordenadas `uv`, mesmo sem usar uma textura. Quando um novo gesto é criado, `freeGeometry()` libera a geometria anterior da memória de vídeo.\n\nO objeto é desenhado em laranja forte. Os triângulos da própria `p5.Geometry` são percorridos e enviados para `beginShape(TRIANGLES)`. A cor emissiva não depende da iluminação, por isso a forma permanece visível durante toda a rotação. Uma linha laranja-clara acompanha o centro do gesto.\n\n## Conceitos da aula explorados\n\n- `p5.Geometry`, `vertices`, `faces`, `uvs` e `vertexNormals`.\n- Faces definidas por índices e organizadas como triângulos.\n- Ordem dos vértices e orientação das faces.\n- Cálculo de normais com `computeNormals(FLAT)`.\n- Renderização das faces com `beginShape(TRIANGLES)`, `normal()` e `vertex()`.\n- Liberação da malha anterior com `freeGeometry()`.\n- Exportação da geometria com `saveObj()` e `saveStl()`.\n- Material emissivo, perspectiva e `orbitControl()`.\n\n## Como interagir\n\n- Arraste o mouse no modo de visualização para orbitar a câmera.\n- Use a roda do mouse para aproximar ou afastar.\n- Pressione `D` para entrar ou sair do modo de desenho.\n- No modo de desenho, arraste o mouse e solte para criar uma nova escultura.\n- Pressione `R` para gerar outro gesto automaticamente.\n- Pressione `M` para revelar ou esconder os triângulos da malha.\n- Pressione `A` para ligar ou desligar a rotação automática.\n- Pressione `Espaço` para pausar.\n- Pressione `O` para exportar o modelo em OBJ.\n- Pressione `T` para exportar o modelo em STL.\n- Pressione `S` para salvar uma imagem do canvas.\n\n## Requisitos técnicos\n\n- O projeto usa p5.js **versão 2.2.3**, hospedada no CDN jsDelivr.\n- A biblioteca p5.js não está incluída no ZIP.\n- Não há modelos 3D, imagens, fontes ou outras bibliotecas dentro do projeto.\n- O canvas é responsivo e usa `windowWidth` e `windowHeight`.\n- Todos os arquivos estão diretamente na raiz do ZIP.\n\n## Processo com IA\n\nO ChatGPT foi usado para desenvolver, comentar e revisar o código.",
+      "hasThumb": true,
+      "files": [
+        "thumbnail.png",
+        "index.html",
+        "README.md",
+        "sketch.js",
+        "style.css"
+      ]
+    },
+    {
+      "folder": "Artefato 10 Diamante Bruto Angel Mansilla",
+      "id": "artefato-10-diamante-bruto-angel-mansilla",
+      "name": "Artefato 10 Diamante Bruto Angel Mansilla",
+      "origin": "native",
+      "lastModified": 1794050132914,
+      "title": "Diamante Bruto",
+      "tags": [
+        "AI",
+        "Claude",
+        "3d",
+        "webgl",
+        "modelagem",
+        "faroeste",
+        "filme",
+        "animação",
+        "música"
+      ],
+      "collection": "artefato da semana/10",
+      "description": "# Diamante Bruto\n\nAutor: Angel Mansilla  \nDRE: 123691897\n\nPra esse artefato eu tentei fazer algo bem grandioso. Me inspirei numa música que eu gosto muito, [Diamond Jack](https://www.youtube.com/watch?v=mRpiBvwKX6c), da Rachel Kim. Se você assistir o clipe, vai ver que ele trata de uma situação bem parecida com a que eu trouxe aqui, mas decidi reinterpretar em um cenário completamente diferente, no caso, o Velho Oeste. Com isso consegui criar cenas diferentes e clássicas também, como a do túnel.\n\nUma das cenas que eu mais gostei, e que foi bem difícil de fazer, foi a da bala pelo chapéu. Polir tudo isso também foi bem difícil, porque era bastante coisa pra polir até chegar em um resultado bom.\n\nEu ainda mudaria algumas coisas, principalmente no final, acho que tentaria deixar o último ato um pouco mais divertido. Mas senti que ficou bem legal e estou muito orgulhoso desse trabalho.\n\n## Como usar\n\nAbre o `index.html` no navegador, ou carrega o ZIP no p5Front e aperta Run, e clica em Assistir. O filme dura 3 minutos e 6 segundos, tem legendas em português e a música já vem junto no ZIP. Precisa de internet, porque o p5.js 2 (versão 2.3.4) vem do jsDelivr e as fontes vêm do Google Fonts.\n\nDá pra usar F pra tela cheia, Espaço pra pausar, R pra recomeçar, S pra ligar ou desligar as legendas e V pro filtro de película antiga. Em computador mais fraco a qualidade baixa sozinha, e como é a música que manda no tempo, o que cai são os quadros, o som não trava.\n\n## Como fiz\n\nUsei o modo WEBGL e o material da aula de modelagem 3D. Não importei nenhum modelo, todo objeto nasce de regras no código: o `modelos.js` tem uma classe `Malha` que junta os triângulos com caixas, extrusões e sólidos de revolução e transforma tudo em `p5.Geometry`, com vértices, faces, cores e coordenadas de textura, que depois são desenhados com `model()`. Assim saem o trem, os móveis do vagão, o terreno, o cânion e, no `elenco.js`, os personagens e os cavalos, que são várias malhas articuladas. São mais de 200 mil triângulos. As normais são calculadas no shader, a partir da posição de cada ponto da face, e o `roteiro.js` guarda a história: a coreografia, a luz e a câmera de cada plano.\n\n## IA\n\nUsei o Claude pra escrever o código e testar o filme. Eu dirigi: fui pedindo e aprovando as cenas, os ângulos de câmera e os tempos, e ajustei as legendas.\n\n## Créditos\n\n- Diamond Jack, de Rachel Kim: https://www.youtube.com/watch?v=mRpiBvwKX6c (a música é dela e vai no ZIP só para este trabalho da disciplina)\n- Aula de Modelagem 3D: https://github.com/esperanc/CreativeCoding2026/blob/main/9%20-%20Modelagem%203D/slides.md\n- p5.js: https://p5js.org/\n- Fontes Rye e Cormorant Garamond: https://fonts.google.com/",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "modelos.js",
+        "elenco.js",
+        "roteiro.js",
+        "legendas.js",
+        "diamond-jack.mp3",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
     {
       "folder": "Artefato 8 Olhos Emprestados Angel Mansilla",
       "id": "artefato-8-olhos-emprestados-angel-mansilla",
       "name": "Artefato 8 Olhos Emprestados Angel Mansilla",
       "origin": "native",
-      "lastModified": 1792940971223,
+      "lastModified": 1794050098040,
       "title": "Olhos Emprestados",
       "tags": [
         "AI",
@@ -745,27 +1644,6 @@
         "index.html",
         "style.css",
         "sketch.js"
-      ]
-    },
-    {
-      "folder": "hershey font draw",
-      "id": "hershey-font-draw",
-      "name": "hershey font draw",
-      "origin": "native",
-      "lastModified": 1792940475399,
-      "title": "",
-      "tags": [],
-      "collection": "techniques/libraries",
-      "description": "",
-      "hasThumb": false,
-      "files": [
-        "index.html",
-        "sketch.js",
-        "style.css",
-        "hersheytext.min.json",
-        "hershey.js",
-        "gui.js",
-        "README.md"
       ]
     },
     {
@@ -6135,25 +7013,6 @@
         "sketch.js",
         "style.css",
         "README.md",
-        "thumbnail.png"
-      ]
-    },
-    {
-      "folder": "artefato quadrilateros paulo vitor",
-      "id": "artefato-quadrilateros-paulo-vitor",
-      "name": "artefato quadrilateros paulo vitor",
-      "origin": "native",
-      "lastModified": 1787086873746,
-      "title": "",
-      "tags": [],
-      "collection": "artefato da semana/1",
-      "description": "# Entre Prédios\n\n**Autor:** Paulo Vitor Couto\n\n## Descrição\n\nEste sketch estático apresenta uma homenagem gráfica a um herói aracnídeo atravessando uma cidade à noite. A imagem procura transmitir movimento por meio da pose diagonal do personagem, das linhas de teia e da perspectiva dos prédios.\n\nToda a composição foi construída usando `quad()` como única primitiva geométrica do p5.js. Até os elementos que normalmente seriam desenhados como linhas — teias, contornos e detalhes da roupa — são quadriláteros muito finos.\n\n## Ideia visual\n\n- O fundo usa faixas quadriláteras em diferentes tons de azul para criar profundidade.\n- Os prédios são quadriláteros irregulares que convergem em direção ao centro.\n- As janelas são pequenos quadriláteros amarelos e azulados.\n- O personagem é formado por várias peças quadriláteras vermelhas, azuis e escuras.\n- A teia é composta por quadriláteros longos e estreitos.\n\n## Como executar\n\n1. Extraia o arquivo `.zip`.\n2. Abra `index.html` em um navegador com acesso à internet; ou\n3. Copie o conteúdo de `sketch.js` para o [editor online do p5.js](https://editor.p5js.org/).\n\nO sketch não possui animação. A função `noLoop()` faz com que a imagem seja desenhada apenas uma vez.\n\n## Arquivos\n\n- `index.html`: carrega a biblioteca p5.js e o sketch.\n- `style.css`: centraliza o canvas na página.\n- `sketch.js`: contém o desenho e os comentários explicativos.\n- `thumbnail.png`: prévia do resultado gerado.",
-      "hasThumb": true,
-      "files": [
-        "index.html",
-        "README.md",
-        "sketch.js",
-        "style.css",
         "thumbnail.png"
       ]
     },

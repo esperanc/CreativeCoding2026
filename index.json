@@ -37,6 +37,10 @@
         {
             "folder": "9 - Modelagem 3D",
             "title": "Modelagem 3D"
+        },
+        {
+            "folder": "10 - Shaders",
+            "title": "Shaders"
         }
     ]
 }

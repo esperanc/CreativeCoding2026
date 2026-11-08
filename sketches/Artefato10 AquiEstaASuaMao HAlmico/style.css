@@ -1,0 +1,83 @@
+html, body { margin: 0; padding: 0; background: #1d1d20; }
+canvas { display: block; }
+
+/* o palco tem o tamanho do canvas; o chat fica por cima, à esquerda */
+#palco {
+  position: relative;
+  overflow: hidden;
+  font-family: 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  color: #26262b;
+}
+
+.chat {
+  position: absolute; left: 3%; top: 3%; bottom: 3%; width: 47%;
+  display: flex; flex-direction: column;
+  background: rgba(252, 251, 249, 0.94);
+  border: 1px solid rgba(0, 0, 0, 0.12); border-radius: 0.9em;
+  box-shadow: 0 0.3em 1.4em rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+}
+.topo {
+  display: flex; justify-content: space-between; align-items: baseline;
+  padding: 0.7em 1em; border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  font-size: 0.9em;
+}
+.topo span { color: #8a3b2e; font-size: 0.85em; }
+
+.mensagens {
+  flex: 1; overflow-y: auto; padding: 0.8em 0.9em;
+  display: flex; flex-direction: column; gap: 0.7em;
+  scroll-behavior: smooth;
+}
+.msg { font-size: 0.92em; line-height: 1.4; }
+.msg.usuario {
+  align-self: flex-end; max-width: 80%;
+  background: #2f2f36; color: #f4f2ee;
+  padding: 0.45em 0.8em; border-radius: 0.9em 0.9em 0.2em 0.9em;
+}
+.msg.ia { display: grid; grid-template-columns: 1.9em 1fr; column-gap: 0.55em; }
+.msg.ia > :not(.avatar) { grid-column: 2; }
+.avatar {
+  grid-row: 1 / span 3; width: 1.9em; height: 1.9em; border-radius: 50%;
+  background: #d9d3c7; color: #4a443a; font-size: 0.75em; font-weight: 600;
+  display: flex; align-items: center; justify-content: center;
+}
+.digitando { letter-spacing: 0.15em; color: #9a968e; animation: pisca 1s infinite; }
+@keyframes pisca { 50% { opacity: 0.3; } }
+
+.codigo {
+  margin-top: 0.5em; border-radius: 0.5em; overflow: hidden;
+  background: #1f2126; color: #d6d9de;
+}
+.codigo .cab {
+  display: flex; justify-content: space-between; gap: 1em;
+  padding: 0.3em 0.7em; background: #2b2e35; color: #9aa1ab;
+  font-family: 'IBM Plex Mono', ui-monospace, Menlo, Consolas, monospace; font-size: 0.75em;
+}
+.codigo pre {
+  margin: 0; padding: 0.5em 0.7em; height: 9.2em; overflow: hidden;
+  font-family: 'IBM Plex Mono', ui-monospace, Menlo, Consolas, monospace;
+  font-size: 0.72em; line-height: 1.25; white-space: pre;
+}
+.codigo.encolhido pre { display: none; }
+
+.status { margin-top: 0.35em; font-size: 0.75em; color: #8b877f; }
+
+.botoes {
+  display: flex; flex-wrap: wrap; gap: 0.4em;
+  padding: 0.7em 0.9em; border-top: 1px solid rgba(0, 0, 0, 0.08);
+  min-height: 1.8em;
+}
+.botoes button {
+  font: inherit; font-size: 0.82em; cursor: pointer;
+  background: #fff; color: #26262b;
+  border: 1px solid rgba(0, 0, 0, 0.22); border-radius: 1em; padding: 0.3em 0.75em;
+}
+.botoes button:hover { background: #2f2f36; color: #f4f2ee; }
+.botoes button.sutil { border-style: dashed; color: #6b675f; }
+
+.rotulo {
+  position: absolute; right: 3%; bottom: 3%;
+  font-size: 0.75em; color: rgba(0, 0, 0, 0.45);
+  pointer-events: none;
+}

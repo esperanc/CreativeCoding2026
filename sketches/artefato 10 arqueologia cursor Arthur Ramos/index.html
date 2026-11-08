@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Arqueologia do Cursor</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/p5@2.2.3/lib/p5.js"></script>
+  </head>
+  <body>
+    <main id="sketch-holder" aria-label="Escultura tridimensional criada a partir de um gesto"></main>
+
+    <svg id="gesture-layer" aria-hidden="true">
+      <polyline id="gesture-line" points=""></polyline>
+    </svg>
+
+    <section class="interface" aria-hidden="true">
+      <p class="etiqueta">ARTEFATO 10 · MODELAGEM</p>
+      <h1>Arqueologia<br />do Cursor</h1>
+      <p class="descricao">
+        Um gesto passageiro é escavado da tela e reconstruído como uma malha tridimensional.
+      </p>
+    </section>
+
+    <button id="draw-button" type="button">DESENHAR NOVO GESTO</button>
+
+    <section class="dados" aria-hidden="true">
+      <span>AMOSTRA <strong id="seed-number">1001</strong></span>
+      <span>VÉRTICES <strong id="vertex-count">0</strong></span>
+      <span>FACES <strong id="face-count">0</strong></span>
+      <span id="mode-label">OBJETO EM EXAME</span>
+    </section>
+
+    <section class="controles" aria-hidden="true">
+      <span>arraste: orbitar</span>
+      <span>roda: aproximar</span>
+      <span>D: desenhar</span>
+      <span>R: novo gesto gerado</span>
+      <span>M: revelar triângulos</span>
+      <span>O / T: exportar OBJ / STL</span>
+      <span>S: salvar imagem</span>
+    </section>
+
+    <script src="sketch.js"></script>
+  </body>
+</html>

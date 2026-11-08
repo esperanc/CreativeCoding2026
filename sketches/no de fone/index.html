@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Nó de fone</title>
+    <script src="https://cdn.jsdelivr.net/npm/p5@2.2.3/lib/p5.min.js"></script>
+    <style>
+      html, body { margin: 0; height: 100%; background: #0d0e16; overflow: hidden; }
+      canvas { display: block; }
+      #dica {
+        position: fixed; left: 14px; bottom: 12px; margin: 0;
+        font: 12px/1.4 system-ui, sans-serif; color: rgba(255, 255, 255, 0.45);
+        pointer-events: none; user-select: none;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="dica">arraste para girar · roda do mouse aproxima · duplo clique (ou N) desfaz e emaranha de novo</p>
+    <script src="sketch.js"></script>
+  </body>
+</html>

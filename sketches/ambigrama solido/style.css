@@ -1,0 +1,25 @@
+html, body { margin: 0; padding: 0; overflow: hidden; background: #100f14; }
+canvas { display: block; }
+#hud {
+  position: fixed; left: 18px; top: 16px; max-width: 440px;
+  font-family: "Helvetica Neue", Arial, sans-serif; color: #e9e4dc;
+  user-select: none;
+}
+#hud .title { font-size: 22px; font-weight: 800; letter-spacing: .02em; }
+#hud .sub { font-size: 13px; opacity: .65; margin-bottom: 10px; }
+#hud .row { display: flex; gap: 6px; margin: 6px 0; flex-wrap: wrap; }
+#hud input {
+  width: 80px; font: 800 18px "Arial Black", Arial, sans-serif; text-transform: uppercase;
+  letter-spacing: .15em; padding: 4px 8px; border-radius: 6px;
+  border: 1px solid #555; background: #1d1b22; color: #fff;
+}
+#hud button {
+  font: 12px "Helvetica Neue", Arial, sans-serif; padding: 5px 10px; border-radius: 6px;
+  border: 1px solid #444; background: #24222a; color: #ddd; cursor: pointer;
+}
+#hud button:hover { background: #34313b; color: #fff; }
+#hud .read { font-size: 26px; margin-top: 10px; min-height: 32px; }
+#hud .read b { font-family: "Arial Black", Arial, sans-serif; }
+#hud .fid { font-size: 12px; opacity: .8; min-height: 16px; }
+#hud .miss { color: #e63c3c; margin-left: 6px; }
+#hud .help { font-size: 11px; opacity: .45; margin-top: 10px; }

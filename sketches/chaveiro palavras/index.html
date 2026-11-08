@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Artefato 10 — Chaveiro de Palavras</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; background: #0b1424; color: #e6eefc; font-family: "Courier New", monospace; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+    header { width: min(95vw, 900px); padding: 18px 4px 10px; }
+    h1 { font-size: clamp(20px, 3vw, 30px); margin: 0 0 6px; letter-spacing: .06em; }
+    p { color: #9fb3d6; font-size: 13px; margin: 0; line-height: 1.6; }
+    #sketch-container { width: min(95vw, 900px); border: 1px solid #2c4166; border-radius: 12px; overflow: hidden; box-shadow: 0 20px 65px #0009; line-height: 0; }
+    #sketch-container canvas { display: block; width: 100% !important; height: auto !important; touch-action: none; }
+    #painel { width: min(95vw, 900px); display: flex; flex-wrap: wrap; gap: 10px; align-items: center; padding: 12px 4px 4px; }
+    #palavra { width: 9ch; font: bold 22px "Courier New", monospace; letter-spacing: .35em; text-transform: uppercase; background: #0f1d33; color: #ffd27a; border: 1px solid #3c5a8c; border-radius: 6px; padding: 6px 8px; }
+    button { font: 13px "Courier New", monospace; background: #15294a; color: #dbe7ff; border: 1px solid #3c5a8c; border-radius: 6px; padding: 8px 12px; cursor: pointer; }
+    button:hover { background: #1d3863; }
+    #status { width: min(95vw, 900px); padding: 6px 4px; font-size: 14px; min-height: 2.4em; color: #cfe0ff; }
+    .ok { color: #7dffb0; } .alto { color: #ff8a7a; } .baixo { color: #7ac8ff; }
+    footer { width: min(95vw, 900px); padding: 8px 5px 20px; color: #9fb3d6; font-size: 12px; line-height: 1.7; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>⚿ Chaveiro de Palavras</h1>
+    <p>Cada letra vira a profundidade de um corte. A fechadura só gira com a palavra certa — ou com qualquer outra que corte igual.</p>
+  </header>
+  <main id="sketch-container" aria-label="Fechadura de pinos em corte, em 3D, com chave gerada a partir de uma palavra"></main>
+  <div id="painel">
+    <label for="palavra">Palavra:</label>
+    <input id="palavra" maxlength="5" value="CHAVE" autocomplete="off" spellcheck="false" />
+    <button id="btInserir">Inserir / retirar (Enter)</button>
+    <button id="btSegredo">Trocar segredo</button>
+    <button id="btObj">Exportar chave .obj</button>
+  </div>
+  <div id="status"></div>
+  <footer>Arraste para girar a câmera · role para aproximar · a leitura dos pinos aparece depois de inserir a chave (▲ corte raso demais, ▼ fundo demais) · letras que caem no mesmo corte: A G M S Y · B H N T Z · C I O U · D J P V · E K Q W · F L R X</footer>
+  <script src="https://cdn.jsdelivr.net/npm/p5@2.3.4/lib/p5.min.js"></script>
+  <script src="sketch.js"></script>
+</body>
+</html>

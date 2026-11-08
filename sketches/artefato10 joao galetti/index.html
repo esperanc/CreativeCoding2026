@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Malha</title>
+  <style>
+    html, body { margin: 0; padding: 0; overflow: hidden; background: #1c1917; }
+    canvas { display: block; }
+    #dica {
+      position: fixed; left: 16px; bottom: 14px;
+      font: 12px/1.5 Georgia, serif; color: #a39a8c; opacity: 0.75;
+      pointer-events: none; transition: opacity 2s;
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/p5@2.3.4/lib/p5.min.js"></script>
+</head>
+<body>
+  <div id="dica">clique: novo desenho a partir da próxima carreira · segure espaço: tecer depressa · segure D: desmanchar · arraste: girar a câmera · R: câmera inicial · O: baixar a malha (.obj) · S: salvar imagem</div>
+  <script src="sketch.js"></script>
+  <script>setTimeout(() => { const d = document.getElementById("dica"); if (d) d.style.opacity = 0; }, 10000);</script>
+</body>
+</html>
