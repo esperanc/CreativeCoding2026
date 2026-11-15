@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Biomas do Brasil - p5.js v2</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { overflow: hidden; font-family: system-ui, -apple-system, sans-serif; background: #0f172a; }
+    #hud {
+      position: fixed;
+      top: 16px;
+      left: 16px;
+      z-index: 10;
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid rgba(148, 163, 184, 0.25);
+      color: #f8fafc;
+      padding: 12px 16px;
+      border-radius: 10px;
+      backdrop-filter: blur(6px);
+      max-width: 330px;
+    }
+    #hud h2 { font-size: 1.05rem; margin-bottom: 4px; }
+    #hud p { font-size: 0.85rem; color: #cbd5e1; line-height: 1.4; }
+    #btn-voltar {
+      display: none;
+      margin-top: 10px;
+      padding: 7px 12px;
+      border: none;
+      border-radius: 6px;
+      background: #38bdf8;
+      color: #0f172a;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    #btn-voltar:hover { background: #7dd3fc; }
+  </style>
+  <!-- p5.js v2 -->
+  <script src="https://cdn.jsdelivr.net/npm/p5@2/lib/p5.min.js"></script>
+</head>
+<body>
+  <div id="hud">
+    <h2 id="hud-titulo">Mapa dos Biomas do Brasil</h2>
+    <p id="hud-desc">Clique em uma região colorida para explorar o bioma em 3D.</p>
+    <button id="btn-voltar" onclick="voltarParaMapa()">← Voltar ao Mapa (M)</button>
+  </div>
+
+  <!-- Scripts das 6 sub-cenas de biomas -->
+  <script src="amazonia.js"></script>
+  <script src="cerrado.js"></script>
+  <script src="caatinga.js"></script>
+  <script src="mata_atlantica.js"></script>
+  <script src="pantanal.js"></script>
+  <script src="pampa.js"></script>
+
+  <!-- Script base -->
+  <script src="sketch.js"></script>
+</body>
+</html>

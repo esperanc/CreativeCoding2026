@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>De costas</title>
+    <script src="https://cdn.jsdelivr.net/npm/p5@2.3.4/lib/p5.min.js"></script>
+    <style>
+      html, body { margin: 0; padding: 0; overflow: hidden; background: #07070a; }
+      canvas { display: block; touch-action: none; }
+      .dica { position: fixed; z-index: 2; pointer-events: none; font-family: Georgia, serif; }
+      .dica { bottom: 16px; left: 50%; transform: translateX(-50%); font-size: 12px; letter-spacing: 0.18em; white-space: nowrap; }
+      .regua-w { position: fixed; z-index: 2; left: 50%; bottom: 44px; width: 180px; height: 1px; transform: translateX(-50%);
+        background: rgba(200, 220, 255, 0.35); pointer-events: none; display: none; }
+      .regua-w span { position: absolute; top: -4px; width: 2px; height: 9px; margin-left: -1px; background: rgba(220, 235, 255, 0.9); }
+      .mapa { position: fixed; z-index: 2; top: 14px; right: 14px; border: 1px solid rgba(255,255,255,0.15); border-radius: 3px; pointer-events: none; }
+    </style>
+  </head>
+  <body>
+    <script src="sketch.js"></script>
+  </body>
+</html>

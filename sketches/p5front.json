@@ -1,8 +1,936 @@
 {
   "format": "p5front-export",
   "version": 1,
-  "createdAt": "2026-11-08T16:42:13.364Z",
+  "createdAt": "2026-11-15T18:01:12.753Z",
   "projects": [
+    {
+      "folder": "Arthur Cury PF 1",
+      "id": "arthur-cury-pf-1",
+      "name": "Arthur Cury PF 1",
+      "origin": "native",
+      "lastModified": 1794765670712,
+      "title": "",
+      "tags": [
+        "AI",
+        "automato celular"
+      ],
+      "collection": "projeto final/Arthur Cury Sampaio/1",
+      "description": "# Automato Celular Organico - Parte 1\n\nPara essa primeira entrega do trabalho final eu decidi fazer um automato celular, puxando a ideia do Game of Life clássico, mas tentando deixar o visual mais organico e menos travado naquele padrão preto e branco. \n\nNessa primeira versao eu fiz uma grid onde cada celula guarda nao so se ta viva ou morta, mas tambem a idade dela e uma energia residual. Com isso, conforme elas sobrevivem, a cor vai mudando aos poucos ( do ciano pro roxo ) e quando morrem elas deixam um rastro que vai sumindo devagar. Usei Perlin Noise pra gerar o estado inicial e parecer mais natural, e tambem coloquei uma chance pequena das celulas muito velhas morrerem do nada pra tela nao ficar travada naquelas formas estaticas eternas. Da pra clicar e arrastar o mouse na tela pra criar mais celulas e apertar 'R' pra resetar tudo.\n\n## O que pretendo acrescentar ate a 3a entrega:\n\nA ideia é usar essa base pra expandir bastante nas proximas semanas. O que eu planejo fazer é:\n\n- Na parte 2: colocar mais de um tipo de celula na mesma grid pra simular um ecossistema de verdade ( tipo presa e predador, ou especies que competem por espaco ) com cores e regras de vizinhanca diferentes pra cada uma. Tambem quero tentar fazer areas do mapa terem mais \"nutrientes\" que outras usando outra camada de noise no fundo.\n- Na parte 3: criar uma interfacezinha com sliders ou atalhos pra conseguir mexer nas regras em tempo real ( mudar velocidade, taxa de nascimento, decaimento do rastro ) e adicionar outros tipos de interacao no mouse, tipo poder desenhar paredes/obstaculos onde as celulas nao conseguem nascer ou jogar algum evento que muda o comportamento delas.\n\nUsei IA pra me ajudar a estruturar a logica do rastro de energia das celulas na matriz e ajustar a transicao de cores no modo HSB.",
+      "hasThumb": true,
+      "files": [
+        "README.md",
+        "sketch.js",
+        "index.html",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "jardim encantado",
+      "id": "jardim-encantado",
+      "name": "jardim encantado",
+      "origin": "native",
+      "lastModified": 1794760010423,
+      "title": "",
+      "tags": [
+        "Garden",
+        "generalize",
+        "AI",
+        "ChatGPT",
+        "Gemini"
+      ],
+      "collection": "projeto final/Taísa Evangelista de Oliveira Martello/1",
+      "description": "## Ideia do projeto\n\nO projeto consiste na criação de um jardim digital audiovisual e generativo, no qual elementos naturais — como flores, folhas, caules e partículas de luz — são construídos e animados por meio de programação criativa.\n\nA proposta explora a relação entre natureza, matemática, movimento e som, transformando a tela em um ecossistema poético que reage ao toque do usuário.\n\n## Primeira implementação\n\nNesta primeira etapa, foi desenvolvida uma versão funcional e interativa utilizando **p5.js** e síntese sonora nativa via **Web Audio API**, sem dependência de arquivos externos:\n\n* **Composição e movimento:** cenário atmosférico em crepúsculo com colinas em camadas, partículas luminosas flutuantes e caules desenhados com curvas de Bézier que balançam continuamente simulando o vento.\n* **Diversidade botânica:** três espécies distintas de flores (flor em camadas translúcidas, margarida silvestre e flor de cinco pétalas), geradas com variações de cor, escala e profundidade.\n* **Interação audiovisual:** ao tocar ou clicar na tela, uma nova flor desabrocha suavemente naquele ponto. O primeiro toque também inicia uma base musical inspirada na valsa *Liebesleid* (Kreisler/Rachmaninoff, em Lá menor), enquanto cada espécie de flor emite uma nota harmônica própria ao nascer (Lá4, Dó5 ou Mi5).\n\n## Próximas etapas\n\n**Segunda entrega:** ampliar as formas de interação com o jardim, permitindo influenciar a intensidade e a direção do vento ao arrastar o toque pela tela, além de adicionar reações nas flores já existentes.\n\n**Terceira entrega:** implementar variações ambientais ao longo do tempo (transição de iluminação e atmosfera), novas espécies botânicas e aprimoramentos na síntese sonora e visual.\n\n## Uso de inteligência artificial\n\nA inteligência artificial foi utilizada como ferramenta de apoio na concepção criativa, na estruturação do código em p5.js, na criação da síntese sonora via Web Audio API e na depuração do funcionamento em dispositivos móveis.\n\nLinka dos chats:\nChat GPT: https://chatgpt.com/share/6af7ab55-fe24-83e9-8f2f-1a96d120c488?ogimg=plain\nGemini: Não consegui gerar o link",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "jogointerativo",
+      "id": "jogointerativo",
+      "name": "jogointerativo",
+      "origin": "native",
+      "lastModified": 1794759404798,
+      "title": "Tesseract",
+      "tags": [
+        "AI",
+        "ChatGPT",
+        "Jogo",
+        "Interativo"
+      ],
+      "collection": "projeto final/YSABELLE ESTEVAO DE OLIVEIRA/1",
+      "description": "Um jogo que tem como objetivo a interatividade do usuário para conseguir passar de fase. Ele deve atravessar os desafios criando caminhos a partir dos desenhos feitos no canva com seu mouse.\n\nAutor: Ysabelle Estevão de Oliveira",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "Projeto final Yasmine",
+      "id": "projeto-final-yasmine",
+      "name": "Projeto final Yasmine",
+      "origin": "native",
+      "lastModified": 1794759291859,
+      "title": "Through the Looking Glass",
+      "tags": [
+        "AI",
+        "Claude",
+        "WEBGL",
+        "3D",
+        "animation",
+        "storytelling",
+        "fantasy",
+        "fragrance"
+      ],
+      "collection": "projeto final/Yasmine Aissa/1",
+      "description": "# Through the Looking Glass\n\n## Concept\n\nFor my final project, I want to create a short cinematic advertisement for a fictional perfume. The inspiration comes from the aesthetics of fairy tales : an old house, a mysterious mirror, a snow-covered forest, a white owl, and an enchanted red apple.\n\nThe idea is to tell a visual story. The mirror acts as a gateway to a fantasy world. An owl guides the main character through the forest towards a glowing apple, which will eventually be revealed as the symbol of the perfume.\n\nThe working title is **Through the Looking Glass**. The perfume's name and visual identity may still change during the development process.\n\n## First Implementation — Part 1\n\nThis first version is a 44-second horizontal (16:9) film that establishes the atmosphere and the narrative structure, in four scenes:\n\n1. **The house** : an old room with a rug, a bookshelf, an armchair, a lamp, a moonlit window and a mysterious mirror. The camera moves towards the mirror while a silhouette raises her hand to it and the glass starts to glow.\n2. **The mirror** : a flash of white light hides the crossing into another world.\n3. **The forest** : a snowy pine forest with falling snow and a mist effect (distant trees fade into the colour of the fog). The silhouette walks along a winding path, guided by a white owl with flapping wings. A red glow can be seen far ahead.\n4. **The apple** : the glowing red apple, with a halo and floating sparkles, while the owl circles it. The title appears at the end.\n\nThe project uses p5.js in WEBGL mode. Everything is created in code with 3D primitives (boxes, planes, spheres, ellipsoids, cylinders), transformations, materials, lights and animation. A simple timeline controls the cameras, lights and movements. This first submission is a visual study : the main character is still a simple silhouette, and the owl and the environment will be refined.\n\n## What I Plan to Add by the Third Submission\n\n1. **Part 2** : improve the 3D models of the main character, the owl and the perfume bottle, develop the mirror-crossing sequence and the labyrinth, improve the choreography and the camera movements.\n\n2. **Part 3** : create the visual transformation of the apple into a perfume bottle, finalize the perfume's visual identity, add post-processing effects using shaders, improve the snow and mist effects and synchronize the final editing with an original or royalty-free soundtrack (there is no sound yet).\n\nI want the final result to feel like a real perfume advertisement, with short cinematic shots, carefully composed framing, expressive lighting, and a consistent atmosphere.\n\n## How to Use\n\nOpen `index.html` in your browser, or upload the ZIP file to p5Front and press Run. The film starts by itself.\n\n- Space or click : pause / play\n- R : restart\n\nThe sketch uses p5.js 2.3.2 via jsDelivr, so an internet connection is required.\n\n## How It Was Made\n\nI used p5.js in WEBGL mode. The house, mirror, trees, owl and apple are built directly in the code from 3D primitives, with transformations, materials and lighting. A timeline of about 44 seconds organizes the four scenes. Snow and sparkles are animated, and the end title is a 2D texture drawn once and placed in the 3D scene.\n\n## Use of AI\n\nI used Claude (Anthropic) to write the code and to explore procedural modeling techniques. The artistic direction, the narrative concept and the atmosphere (the fairy-tale universe, the mirror, the owl and the apple) were defined by me. This is a first implementation that will be developed and refined in the next submissions.\n\nAuthor: Yasmine",
+      "hasThumb": true,
+      "files": [
+        "README.md",
+        "sketch.js",
+        "style.css",
+        "thumbnail.png",
+        "index.html"
+      ]
+    },
+    {
+      "folder": "projeto final 01 coletiva desorganizada",
+      "id": "projeto-final-01-coletiva-desorganizada",
+      "name": "projeto final 01 coletiva desorganizada",
+      "origin": "native",
+      "lastModified": 1794759214294,
+      "title": "Coletiva Desorganizada",
+      "tags": [
+        "AI",
+        "Claude",
+        "generative",
+        "homenagem",
+        "colagem",
+        "campo de fluxo",
+        "agentes",
+        "emergência",
+        "voronoi",
+        "noise"
+      ],
+      "collection": "projeto final/VICTOR HUGO FIGUEIREDO PEREIRA DA SILVA/1",
+      "description": "# Coletiva Desorganizada\n\n**Autor:** Victor Hugo Figueiredo Pereira da Silva\n\n**Projeto final, parte 1** (primeira de três entregas).\n\nFeito com o auxílio de IA (**AI**, **Claude**).\n\n![thumbnail](thumbnail.png)\n\n## Homenagem\n\nSete artistas digitais de hoje dividem a mesma folha. Nenhuma obra é copiada:\nde cada um eu peguei só a **marca registrada**, o gesto que faz a gente\nreconhecer o autor de longe, e reescrevi do zero com o que vimos nas aulas.\n\n| artista | a marca dele | como aparece no sketch | conceito da disciplina |\n|---|---|---|---|\n| [Tyler Hobbs](https://www.tylerxhobbs.com/words/fidenza) (*Fidenza*) | fitas coloridas que seguem um campo de fluxo sem se tocar | fitas em trechos de cor, com grade de ocupação | `noise()` e campo de fluxo (aula 4) |\n| [Dmitri Cherniak](https://www.dmitricherniak.com/) (*Ringers*) | um barbante esticado em volta de pinos | retas tangentes e arcos em volta de uma grade de pinos, um pino colorido | vetores, `atan2`, coordenadas polares (aula 3) |\n| [Manolo Gamboa Naon](https://www.behance.net/manoloide) | excesso de círculos concêntricos saturados | anéis, rodas raiadas e colares de pontos, do maior para o menor | acaso moldado com `pow(random())` (aula 4) |\n| [Zach Lieberman](https://www.instagram.com/zach.lieberman/) | ondas de luz em degradê sobre o escuro | faixas em seno somadas em modo `screen`, com halos | seno, cor e mistura aditiva (aulas 2 e 3) |\n| [Jared Tarbell](http://www.complexification.net/gallery/machines/substrate/) (*Substrate*) | rachaduras retas com aquarela de areia | agentes que anotam o ângulo numa grade e renascem perpendiculares | agente que lê o próprio rastro (aula 5) |\n| [Casey Reas](https://reas.com/) (*Process*) | linhas que nascem do encontro de círculos | círculos invisíveis andam; quando dois se tocam, uma linha liga os centros | emergência: regra local, forma global (aulas 5 e 6) |\n| [Ryoji Ikeda](https://www.ryojiikeda.com/) (*test pattern*, *datamatics*) | código de barras, o dado em preto e branco | fileiras de barras, números miúdos e uma linha vermelha | dado que vira imagem e tipografia (aulas 6 e 7) |\n\n## Ideia do trabalho\n\nUma exposição coletiva costuma ser arrumada: cada artista na sua parede, com a\nsua etiqueta. Aqui a exposição não coube nas paredes. A folha é rasgada em\nsete territórios e cada artista pinta o seu, todos ao mesmo tempo, na frente de\nquem assiste. Quando terminam, ninguém respeita a fronteira: as fitas do Hobbs\natravessam a folha, o barbante do Cherniak é espetado no vizinho, o confete do\nGamboa espirra, a luz do Lieberman vaza pela fresta, as rachaduras do Tarbell\ncortam a moldura, os círculos do Reas aparecem do lado de fora e uma tira de\ncódigo de barras do Ikeda risca tudo de lado a lado.\n\nO título resume a regra do trabalho, que eu chamo de **harmonicamente\ndesorganizado**:\n\n- **O que dá harmonia:** uma única semente, uma única paleta e um único campo\n  de ruído. O mesmo campo guia as fitas do Hobbs, a direção das primeiras\n  rachaduras do Tarbell, a inclinação da grade de pinos do Cherniak e para\n  onde o confete do Gamboa espirra.\n- **O que dá desordem:** as bordas rasgadas e as invasões. A tecla `D` muda o\n  nível: *arrumado* (bordas retas, ninguém invade), *desorganizado* e *caos*.\n\nÉ também um resumo do que eu mais gostei na disciplina: campo de fluxo\n(artefato 04), agentes e emergência (05 e 06), a obra sendo feita ao vivo, a\nsemente que repete a obra e a etiqueta de museu que explica o que se vê.\n\n## Parte técnica\n\n### A folha rasgada\n\n1. **Sete pontos bem espalhados.** Uso o \"melhor candidato\" de Mitchell\n   (aula 4): para cada ponto sorteio 40 candidatos e fico com o que está mais\n   longe dos pontos já colocados.\n2. **Território de cada ponto.** É o diagrama de Voronoi: começo com a folha\n   inteira e corto fora, vizinho por vizinho, a metade que está mais perto do\n   vizinho (produto escalar com a mediatriz).\n3. **Rasgo.** Cada lado é dividido em pedacinhos e cada ponto é empurrado por\n   `noise()`. Como o empurrão só depende da posição, dois vizinhos rasgam o\n   lado comum do mesmo jeito e as bordas continuam encaixando.\n4. **Recorte.** Cada artista pinta preso ao seu território com\n   `drawingContext.clip()`. As invasões são desenhadas depois, sem recorte.\n\n### Pintura ao vivo\n\nCada artista é uma função geradora (`function*`). A cada quadro o `draw()` dá\nalguns milissegundos para cada uma e ela continua de onde parou no `yield`.\nAssim os sete pintam juntos sem travar a página.\n\n### Os sete algoritmos\n\n- **Hobbs:** segue o ângulo do campo passo a passo; cada fita pronta registra\n  seus pontos numa grade, e a próxima para quando encosta em alguma.\n- **Cherniak:** entre dois pinos o barbante é uma tangente aos dois círculos\n  (externa se passa pelo mesmo lado, interna se cruza); em cada pino, um arco.\n- **Gamboa Naon:** 170 círculos de três tipos, com raio caindo por `pow()`.\n- **Lieberman:** 64 faixas `sin()` com degradê em HSL e mistura `screen`.\n- **Tarbell:** rachaduras gravam o ângulo numa grade; quem bate em outra\n  renasce em ângulo reto; um raio perpendicular pinta a areia.\n- **Reas:** círculos invisíveis vagam; se a distância é menor que a soma dos\n  raios, traço uma linha quase transparente entre os centros.\n- **Ikeda:** barras de largura `pow(random())`, fileiras de dígitos e uma linha\n  vermelha.\n\n## O que a semente sorteia\n\n- a paleta (Risografia, Itacoatiara, Madrugada ou Feira) e a ordem das cores;\n- a posição dos sete territórios e qual artista fica em cada um;\n- o campo de ruído (e, com ele, o rasgo das bordas e a direção das fitas);\n- tudo dentro de cada território: fitas, pinos, círculos, ondas, rachaduras,\n  agentes, barras e as invasões.\n\nA semente aparece na legenda. `?semente=913` na URL repete uma obra.\n\n## Controles\n\n| ação | efeito |\n|---|---|\n| clique ou `N` | nova obra (nova semente) |\n| `R` | refaz a mesma obra |\n| `D` | nível de desordem: arrumado, desorganizado, caos |\n| `H` | mostra ou esconde as etiquetas |\n| `ESPAÇO` | termina a pintura sem animar |\n| `S` | salva um PNG com a semente no nome |\n\n## Ideias para o projeto final e o que pretendo acrescentar até a 3ª entrega\n\nEsta primeira entrega é a base: a folha rasgada, os sete artistas em 2D e as\ninvasões. O plano para as próximas duas:\n\n**2ª entrega (mais conceitos da disciplina dentro da coletiva)**\n\n- **Refik Anadol com shader** (aula 10): um território pintado por um\n  fragment shader de *fbm* com *domain warping*, como pigmento fluido.\n- **Tipografia como matéria** (aula 6): as etiquetas deixam de ser só texto;\n  o nome de cada artista é extraído com `textToPoints` e desenhado pelo\n  algoritmo do próprio artista (o nome do Hobbs em fitas, o do Tarbell em\n  rachaduras).\n- **Imagem** (aula 7): uma foto vinda por URL serve de \"modelo vivo\" e cada\n  território a interpreta do seu jeito (brilho vira largura de fita,\n  densidade de barras, tamanho de círculo).\n- **Invasões mais ricas:** em vez de só passar por cima, o invasor adota a\n  técnica do território invadido (uma fita do Hobbs que vira código de barras\n  ao entrar no Ikeda).\n\n**3ª entrega (interação e acabamento)**\n\n- **Curadoria com o mouse:** arrastar um ponto muda o território ao vivo;\n  clicar numa etiqueta troca o artista daquela parede.\n- **Um território em 3D** (aulas 8 e 9): cubos à maneira de Manfred Mohr ou uma\n  malha `p5.Geometry` renderizada em um `createGraphics(WEBGL)`.\n- **Modo \"visita guiada\":** a câmera aproxima de cada território e mostra o\n  mecanismo por trás (o campo de fluxo, a grade de ocupação, os círculos\n  invisíveis do Reas).\n- Filtro final em shader (grão e leve aberração) e ajuste fino das paletas.\n\n## Como executar\n\nAbra o `index.html` em um navegador, ou carregue o zip no\n[p5Front](https://esperanc.github.io/p5front/). O p5.js 2 vem por CDN\n(`cdn.jsdelivr.net/npm/p5@2.2.3`); não há imagens nem bibliotecas no zip.\n\n## Prompt utilizado\n\n> Faça o meu projeto final de Programação Criativa (parte 1) em p5.js.\n>\n> **Enunciado do professor:** \"Seu projeto final é individual e será\n> desenvolvido ao longo de 3 semanas. Na primeira semana você deve entregar\n> sua primeira implementação exatamente como se fosse um artefato da semana.\n> No README.md use como nome da collection a string `projeto final/seu nome/1`,\n> onde \"seu nome\" é o seu nome como aparece na plataforma do classroom. Não\n> esqueça também de: 1) colocar as tags de AI e outras que julgar relevante.\n> No README.md também escreva suas ideias para o projeto final e o que você\n> pretende acrescentar até a etapa final (3a entrega). 2) o arquivo\n> thumbnail.png. 3) testar o seu programa! Preste atenção nas mensagens de\n> erro mostradas pelo p5front, mas às vezes omitidas pelo editor do p5 e\n> outras plataformas.\"\n>\n> **Tema.** Quero uma mistura de vários dos artistas digitais mais\n> importantes da atualidade, pegando a marca registrada de cada um e juntando\n> todas no mesmo sketch de forma harmonicamente desorganizada, mostrando os\n> conceitos de que mais gostei na disciplina. O nome é \"Coletiva\n> Desorganizada\": uma exposição coletiva que não coube nas paredes.\n>\n> **A folha.** Sorteie sete pontos bem espalhados na janela (melhor candidato\n> de Mitchell, 40 candidatos por ponto) e dê a cada um o seu território de\n> Voronoi. Rasgue as bordas dos territórios empurrando os pontos de cada lado\n> com `noise()` que só dependa da posição, para os vizinhos continuarem\n> encaixando. Cada território vai para um artista sorteado, que pinta preso\n> a ele com `drawingContext.clip()`.\n>\n> **Os sete artistas e suas marcas** (nada copiado de obra nenhuma, só o\n> gesto, escrito do zero):\n> 1. Tyler Hobbs: fitas que seguem um campo de fluxo sem se sobrepor (grade\n>    de ocupação), com contorno escuro e divididas em trechos de cor.\n> 2. Dmitri Cherniak: grade de pinos e um barbante fechado esticado em volta\n>    de alguns deles (tangentes externas e internas entre círculos, arco em\n>    cada pino), forma preenchida e um pino colorido.\n> 3. Manolo Gamboa Naon: uns 170 círculos saturados, do maior para o menor,\n>    de três tipos: anéis concêntricos, roda raiada e colar de pontos.\n> 4. Zach Lieberman: fundo escuro e 64 faixas em onda (seno) com degradê em\n>    HSL somadas em modo `screen`, mais alguns halos de luz.\n> 5. Jared Tarbell: rachaduras retas que anotam o ângulo numa grade, param\n>    ao bater em outra e renascem perpendiculares, com pintura de areia ao\n>    lado.\n> 6. Casey Reas: círculos invisíveis que vagam; quando dois se tocam, uma\n>    linha quase transparente liga os centros.\n> 7. Ryoji Ikeda: fundo preto, fileiras de barras brancas de larguras\n>    sorteadas, fileiras de números miúdos e uma única linha vermelha.\n>\n> **Harmonia.** Uma única semente, uma única paleta (sortear entre\n> Risografia, Itacoatiara, Madrugada e Feira, com cores de peso diferente) e\n> um único campo de ruído que oriente todo mundo: as fitas, as primeiras\n> rachaduras, a inclinação da grade de pinos e a direção do confete.\n>\n> **Desordem.** Depois que todos terminam, cada artista invade os vizinhos\n> sem recorte: fitas finas atravessam a folha, um barbante é espetado fora,\n> círculos espirram como confete, a luz vaza pela fronteira, rachaduras\n> cortam a moldura, os círculos do Reas aparecem e uma tira de código de\n> barras risca a folha de lado a lado. A tecla `D` alterna três níveis:\n> arrumado (bordas retas, sem invasão), desorganizado e caos.\n>\n> **Pintura ao vivo.** Os sete pintam ao mesmo tempo, na frente de quem\n> assiste; cada artista é uma função geradora e o `draw()` dá alguns\n> milissegundos para cada uma por quadro. No fim, grão de papel por cima.\n>\n> **Etiquetas.** Em cada território, uma etiqueta de museu com \"à maneira de\n> NOME\", a marca do artista e o conceito da disciplina usado. Embaixo, uma\n> legenda com o título, a semente, a paleta e o nível de desordem.\n>\n> **Controles.** Clique ou `N`: nova obra. `R`: refazer. `D`: desordem.\n> `H`: etiquetas. `ESPAÇO`: terminar sem animar. `S`: salvar PNG com a\n> semente no nome. `?semente=N` na URL repete uma obra. Ao redimensionar a\n> janela, refazer a mesma obra no tamanho novo, com tudo proporcional ao\n> menor lado.\n>\n> **Entrega.** p5.js versão 2 por CDN, sem biblioteca no zip; código e\n> comentários em português, explicados para qualquer colega entender;\n> `index.html`, `sketch.js`, `README.md` e `thumbnail.png` direto na raiz do\n> zip.\n\n## Arquivos\n\n- `index.html`: página que carrega o p5.js 2 e o sketch\n- `sketch.js`: o código, comentado em português\n- `thumbnail.png`: captura da obra (semente 913)\n- `README.md`: este arquivo",
+      "hasThumb": true,
+      "files": [
+        "sketch.js",
+        "index.html",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "elefanta meena sing quem canta os males espanta",
+      "id": "elefanta-meena-sing-quem-canta-os-males-espanta",
+      "name": "elefanta meena sing quem canta os males espanta",
+      "origin": "native",
+      "lastModified": 1794759067240,
+      "title": "Meena elefanta",
+      "tags": [
+        "ai",
+        "chatgpt",
+        "elefoa",
+        "sing"
+      ],
+      "collection": "projeto final/THOMAS CARDOSO DE MIRANDA/1",
+      "description": "Artefato projeto final parte 1\n\neu estou ensaiando a música dela na aula de canto, então quero fazer algo nesse sentido. aguardem cenas das próximas partes.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "thumbnail.png",
+        "README.md"
+      ]
+    },
+    {
+      "folder": "leviathan",
+      "id": "leviathan",
+      "name": "leviathan",
+      "origin": "native",
+      "lastModified": 1794759039250,
+      "title": "Leviathan Abissal",
+      "tags": [
+        "AI",
+        "Gemini",
+        "WebGL",
+        "buildGeometry",
+        "ProceduralAnimation",
+        "InverseKinematics"
+      ],
+      "collection": "projeto final/Thalisson Braga/1",
+      "description": "# Leviathan Abissal e Cinemática Procedural (Etapa 1 / 3)\n\nEste projeto final desenvolve, ao longo de três semanas, uma simulação interativa de uma criatura abissal colossal (Leviathan biomecânico/quitinoso) nadando em uma fossa oceânica profunda no modo WebGL do p5.js v2.\n\n## O que foi implementado nesta Etapa 1\n- **Locomoção Vertebral por Cinemática de Cadeia (32 Segmentos)**: O corpo da criatura não usa animações pré-gravadas; cada vértebra calcula sua posição e matriz de orientação 3D (vetores *Forward*, *Up* e *Right* via produto vetorial) seguindo a vértebra anterior com restrição de distância rígida e propagação de onda muscular hidrodinâmica.\n- **Morfologia Quitinosa com `buildGeometry()`**: Construção manual de malhas poligonais (`TRIANGLES`) com cálculo de vetores normais (`computeNormals()`) para o crânio blindado, mandíbulas inferiores bipartidas, vértebras com quilha dorsal, costelas arqueadas, barbatanas peitorais e leque caudal.\n- **Bioluminescência Progressiva**: Órgãos luminosos ao longo da espinha dorsal que disparam pulsos de luz ciano/elétrica da cabeça até a cauda, iluminando dinamicamente a carapaça escura.\n- **Ecossistema Abissal**: Cúpula oceânica profunda, chaminés hidrotermais vulcânicas (*black smokers*) e suspensão de neve marinha/plâncton luminescente.\n\n## Planejamento para as Próximas Etapas (Até a 3ª Entrega)\n\n### Etapa 2 (Semana 2) - Tentáculos com Física de Verlet e Cardume de Boids 3D\n- Implementar **apêndices e filamentos sensoriais secundários** saindo das costelas e da cabeça utilizando integração física de Verlet 3D (com inércia e arrasto da água).\n- Adicionar um **cardume de peixes abissais bioluminescentes** governados pelo algoritmo de *Flocking / Boids* (separação, alinhamento, coesão e evasão de predador quando o Leviathan se aproxima).\n- Implementar o bote da mandíbula: abertura reativa das presas inferiores quando a cabeça se aproxima da isca ou do cardume.\n\n### Etapa 3 (Semana 3) - Shaders Submarinos, Câmeras de Perseguição e Áudio Abissal\n- Desenvolver um **shader customizado de cáusticas submarinas e atenuação de neblina abissal (*depth fog*)** para aumentar a sensação de escala colossal.\n- Adicionar modos de câmera selecionáveis: **Câmera Livre (`orbitControl`)**, **Câmera Dorsal (montada atrás do crânio do Leviathan)** e **Câmera Submarino/ROV (com holofote cônico `spotLight` controlado pelo jogador)**.\n- Integrar **áudio procedural via Web Audio API** gerando reverberações graves hidrofônicas, estalos de sonar e o som de deslocamento de água proporcional à velocidade da criatura.\n\n## Controles da Etapa 1\n- **Arrastar com o mouse**: Rotaciona a câmera ao redor da fossa abissal (`orbitControl`).\n- **Mover o cursor**: No modo de caça, guia a **Isca Bioluminescente** que o Leviathan persegue pelo espaço 3D.\n- **Duplo clique**: Alterna entre o **Nado Autônomo (Patrulha em Oito/Espiral)** e o **Modo de Caça (Perseguição ao Cursor)** com abertura agressiva das mandíbulas.\n- **Tecla `S`**: Salva um frame como `thumbnail.png` para validação no p5Front.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "uma viagem pelo japao",
+      "id": "uma-viagem-pelo-japao",
+      "name": "uma viagem pelo japao",
+      "origin": "native",
+      "lastModified": 1794758817911,
+      "title": "Uma viagem pelo Japão",
+      "tags": [
+        "ai",
+        "generative",
+        "claude"
+      ],
+      "collection": "projeto final/Rafaella Lenzi/1",
+      "description": "Autora: Rafaella Lenzi Romano\n\n# Uma viagem pelo Japão\n \nUm curta feito em p5.js sobre a minha viagem ao Japão. Uma viajante, vista de costas, passa por Tokyo, Kyoto, Nara e Osaka, e cada cidade tem a sua música.\n \n## As cidades\n \n- **Tokyo:** uma rua com neon à noite e a Tokyo Tower no fim\n- **Kyoto:** o túnel de torii do Fushimi Inari\n- **Nara:** lanternas de pedra, cervos, ginkgos e o Todai-ji\n- **Osaka:** o canal de Dotonbori\n\n## Escolhendo o trecho de cada música\n \nCada cidade toca só um trecho da sua música (normalmente o refrão), e a cidade dura o tempo desse trecho. Os tempos ficam na tabela `SONGS`, no topo do arquivo.\n \nPara escolher os tempos, mude `TUNE` para o nome de uma cidade (por exemplo, `const TUNE = 'Osaka';`). Isso abre uma tela com a onda da música, onde dá para marcar o início (I) e o fim (O), ouvir como vai ficar no filme (P) e copiar a linha para a tabela `SONGS` (C). No final, volte `TUNE` para `null`.\n \n## Para as próximas entregas\n \n- Melhorar as paisagens das cidades, principalmente Nara e Kyoto\n- Melhor a personagem andando\n- Tornar as transições mais naturais, em alguns momentos dá a impressão de engasgar um pouco\n- Talvez adicionar a cidade de Hiroshima\n- Cenários de Tokyo e Kyoto parecem um pouco monótonos demais, então gostaria de trazer mais elementos para eles\n\n(as melhorias são principalmente estéticas)\n\n## Músicas\n \n- Tokyo: Meiko, \"Fantasy\"\n- Kyoto: Narpy, \"Cherry Blossoms\"\n- Nara: \"Always With Me\" (A Viagem de Chihiro)\n- Osaka: Miki Matsubara, \"Stay With Me\"\n\nOs arquivos mp3 não estão incluídos no projeto.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png",
+        "tokyo.mp3",
+        "nara.mp3",
+        "osaka.mp3",
+        "kyoto.mp3"
+      ]
+    },
+    {
+      "folder": "projeto final",
+      "id": "projeto-final",
+      "name": "projeto final",
+      "origin": "native",
+      "lastModified": 1794758743870,
+      "title": "Projeto Final - Os Dez Selos Arcanos",
+      "tags": [
+        "AI",
+        "ChatGPT",
+        "Grimorio",
+        "Arcano"
+      ],
+      "collection": "projeto final/Pedro Elias Gonçalves Antonio/1",
+      "description": "Uma composição interativa desenvolvida em p5.js 2D para testar a junção de formas.\n\nO projeto apresenta um círculo arcano composto por oito runas numeradas, que podem ser conectadas em diferentes sequências para realizar feitiços. Ao todo, existem dez magias, cada uma com combinações próprias e efeitos visuais distintos, incluindo chamas, escudos, relâmpagos, portais, cristais de gelo e manifestações de energia arcana.\n\nAo lado do círculo, um grimório interativo permite acompanhar as magias descobertas, consultar informações e revelar pistas progressivas para decifrar cada ritual. O objetivo é descobrir as nove magias iniciais para desbloquear um décimo selo secreto, acompanhado de uma animação especial de revelação.\n\nO cenário representa uma câmara ritualística medieval, com piso de pedra texturizado, rachaduras, inscrições arcanas e velas animadas. A composição utiliza geometria procedural, sistemas de partículas, iluminação simulada, anéis rotativos e animações contínuas, criando uma atmosfera mágica e misteriosa.\n\n### Planejamento para as próximas semanas\n\nNas próximas etapas do desenvolvimento, pretendo expandir tanto a apresentação visual quanto as mecânicas de interação, tornando o grimório uma experiência mais completa de descoberta e experimentação mágica.\n\n1. Aprimoramento dos efeitos de conjuração\n\nDesenvolver animações mais complexas e individualizadas para cada magia, com transições mais suaves, maior variedade de partículas e efeitos que representem melhor os elementos de cada feitiço.\n\n2. Expansão do grimório\n\nAdicionar descrições narrativas, informações sobre a origem das magias e ilustrações dos selos descobertos, tornando o grimório mais próximo de um verdadeiro livro de feitiços de fantasia.\n\n3. Sistema de progressão e persistência\n\nImplementar um sistema de salvamento local para preservar as magias descobertas e as pistas reveladas, permitindo continuar o progresso mesmo após fechar a página.\n\n4. Ambientação sonora\n\nExplorar a inclusão de efeitos sonoros para a seleção de runas, conjuração de magias e descoberta de novos selos, além de uma ambientação discreta para a câmara ritualística.\n\n5. Refinamento da interface e responsividade\n\nMelhorar a organização dos elementos em diferentes resoluções de tela, especialmente em dispositivos com áreas de visualização menores, mantendo o círculo e o grimório acessíveis.\n\n6. Expansão do décimo selo secreto\n\nAprimorar a revelação de CHAOS, adicionando uma sequência visual mais elaborada e um efeito final que destaque a conclusão dos nove rituais anteriores.\n\nEssas funcionalidades representam ideias para a evolução do projeto e poderão ser ajustadas conforme os testes e o desenvolvimento nas próximas semanas.\n\n---\n\nAutor: Pedro Elias\n\nPrompt usado: Crie uma composição interativa em p5.js 2D inspirada em grimórios e círculos mágicos de fantasia. Desenvolva um círculo arcano com oito runas clicáveis que possam ser conectadas em sequências para conjurar diferentes magias, cada uma com efeitos visuais próprios. Adicione um grimório interativo com pistas progressivas, um sistema de descoberta de nove magias e um décimo selo secreto desbloqueável. Crie um cenário de câmara ritualística medieval com piso de pedra texturizado, velas animadas, inscrições arcanas, partículas e efeitos luminosos. Implemente uma interface temática, animações de conjuração e um sistema de progressão, aprimorando gradualmente os efeitos visuais e a experiência interativa.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "projeto final 1 paulo vitor",
+      "id": "projeto-final-1-paulo-vitor",
+      "name": "projeto final 1 paulo vitor",
+      "origin": "native",
+      "lastModified": 1794758715613,
+      "title": "Ata das Coisas que Não Houve",
+      "tags": [
+        "AI",
+        "ChatGPT",
+        "generative-art",
+        "simulation",
+        "interactive",
+        "emergence",
+        "filosofia",
+        "algorithmic-archive",
+        "self-revision"
+      ],
+      "collection": "projeto final/Paulo Vitor Couto Doederlein/1",
+      "description": "# Ata das Coisas que Não Houve\n\n**Subtítulo:** uma máquina que se arrepende  \n**Autor:** Paulo Vitor Couto Doederlein  \n**Desenvolvido com auxílio de AI:** ChatGPT / Codex\n\n> **Atenção:** se meu nome estiver abreviado ou grafado de outra maneira no Google Classroom, devo ajustar somente o nome na propriedade `collection` antes de enviar.\n\n## Conceito\n\nEste trabalho imagina um cartório impossível encarregado de registrar não apenas aquilo que aconteceu, mas também as alternativas que foram recusadas. Cada trajetória oficial produz atos numerados e cada ato contém duas direções: a versão que se tornou vigente e aquela que foi arquivada.\n\nO arquivo, porém, não é neutro. A cada nove segundos, o sistema mede a orientação de todos os atos vigentes, descobre qual direção se tornou um hábito dominante e rasura parte desses registros. As alternativas associadas aos atos anulados voltam a circular e passam a modificar decisões futuras. A obra, portanto, não apenas gera uma imagem: ela observa seus próprios padrões, identifica quando ficou repetitiva e revisa a própria história.\n\nO conceito cruza comportamento emergente, filosofia do contrafactual, memória institucional e a linguagem visual de documentos burocráticos. Em vez de simular uma planta, um planeta ou um fenômeno natural, o sketch encena uma instituição algorítmica capaz de arrependimento.\n\n## Gramática visual\n\n- **Fitas duplas em coral e âmbar:** caminhos considerados oficiais.\n- **Traços ciano pontilhados:** alternativas recusadas que continuam interferindo no arquivo.\n- **Pequenos quadrados numerados:** atos registrados pelo sistema.\n- **Rasuras violetas:** atos contestados pelo público ou anulados pela revisão automática.\n- **Linhas transversais:** marcas de autenticação inseridas nas trajetórias oficiais.\n- **Grade e margens discretas:** estrutura visual de um documento em permanente elaboração.\n\n## Entrega 1 — Fundação funcional\n\nEsta primeira versão implementa:\n\n- agentes oficiais e alternativas arquivadas;\n- campo vetorial compartilhado criado sem `noise()`;\n- influência recíproca entre caminhos oficiais, alternativas e memória;\n- registro de decisões como atos numerados;\n- classificação dos atos em oito direções;\n- detecção periódica do comportamento dominante;\n- revisão automática que rasura decisões repetidas;\n- promoção de caminhos anteriormente rejeitados;\n- contestação interativa de atos pelo observador;\n- composição responsiva ao tamanho da janela;\n- variação generativa entre execuções.\n\n### Como interagir\n\n- **Mover o cursor:** atua como a presença de um auditor e curva documentos próximos.\n- **Clicar perto de um ato:** contesta o registro, rasura a decisão oficial e promove sua alternativa.\n- **Clicar longe dos atos:** protocola uma contestação externa que perturba a memória local.\n- **Espaço:** pausa ou retoma o arquivo.\n- **R:** reinicia com outra configuração.\n- **S:** salva o quadro atual como `thumbnail.png`.\n\n## Evolução planejada\n\n### Entrega 2 — Proveniência e camadas de memória\n\nVou acrescentar um grafo de proveniência: cada ato saberá quais decisões anteriores o influenciaram e quais alternativas surgiram de sua rasura. O campo será dividido em memória oficial e memória clandestina. Um fragment shader revelará essas camadas como marcas de pressão, apagamentos e textos parcialmente recuperados, como um documento examinado contra a luz. As revisões deixarão de considerar apenas direção e passarão a observar também genealogias excessivamente dominantes.\n\n### Entrega 3 — Arquivo performático\n\nA versão final terá capítulos temporais — protocolo, saturação, auditoria, rasura e reabertura — e uma paisagem sonora generativa inspirada em carimbos, máquinas de escrever e papel sendo manipulado. O som será produzido pelos acontecimentos do sistema, e não por uma música externa. A interface será refinada para permitir acompanhar a genealogia de um ato sem transformar a obra em um painel convencional.\n\n## Técnica\n\nO sketch usa p5.js 2 carregado por CDN. A biblioteca não está incluída no ZIP. Todas as variáveis estão declaradas e funções ou constantes do p5.js não são executadas na inicialização global. O projeto foi estruturado e testado para funcionar no p5Front.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "style.css",
+        "sketch.js",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "Projeto Final 1 Kintsugi Patrick Mucio",
+      "id": "projeto-final-1-kintsugi-patrick-mucio",
+      "name": "Projeto Final 1 Kintsugi Patrick Mucio",
+      "origin": "native",
+      "lastModified": 1794758552077,
+      "title": "Kintsugi Generativo",
+      "tags": [
+        "AI",
+        "Claude",
+        "kintsugi",
+        "emergência",
+        "cerâmica",
+        "fissuras",
+        "generative-art",
+        "interativo"
+      ],
+      "collection": "projeto final/PATRICK MUCIO RODRIGUES PEREIRA/1",
+      "description": "# Kintsugi Generativo — o que quebra, brilha\n\n**Nome:** PATRICK MUCIO RODRIGUES PEREIRA\n**Projeto final — parte 1 (1ª entrega)**\n\n*Kintsugi* (金継ぎ, \"emenda de ouro\") é a técnica japonesa de consertar cerâmica\nquebrada com laca e pó de ouro. A rachadura não é escondida: ela passa a fazer parte\nda história do objeto e o torna mais valioso.\n\nNeste sketch, um **prato de cerâmica é gerado por código**: o esmalte, a paleta\n(celadon, porcelana azul, tenmoku, terracota, shino, índigo) e a decoração pintada\n(pétalas, ondas ou escamas *seigaiha*) mudam a cada prato. Cada clique é um **impacto**:\nfissuras nascem do ponto clicado, se ramificam e se propagam. Quando cada fissura para,\n**o ouro escorre por dentro dela**, segmento por segmento, e brilhos percorrem as emendas.\n\n## Como funciona\n\n- **Fissuras como agentes:** cada fissura é um agente que caminha em passos curtos.\n  A cada passo a direção sofre uma pequena perturbação gaussiana e uma leve atração\n  para fora do prato (trincas reais tendem a correr para a borda).\n- **Ramificação:** com uma pequena probabilidade a fissura se divide. O ramo filho\n  herda parte da \"energia\" que sobrou e fica mais fino.\n- **Parada:** uma grade de ocupação (320×320) registra por onde as fissuras já passaram.\n  Uma fissura para quando **encontra outra fissura**, chega à **borda** ou perde energia.\n  O padrão final de cacos não foi desenhado: ele **emerge** dessas regras locais\n  (conceito de emergência do artefato 6).\n- **Ouro:** depois que uma fissura termina, o ouro a percorre com um pequeno atraso,\n  com brilho (`shadowBlur`) e tons de ouro que variam com o ruído de Perlin.\n- **Camadas:** o prato (estático), as fissuras e o ouro ficam em três `createGraphics`\n  separados e desenhados de forma incremental, então o sketch continua leve mesmo com\n  milhares de segmentos. Tudo é calculado em coordenadas normalizadas (raio = 1).\n  Por isso, ao redimensionar a janela, o prato e todas as fissuras são redesenhados\n  no novo tamanho.\n- O canvas usa `windowWidth`/`windowHeight` e o prato se encaixa no espaço disponível.\n\n## Interação\n\n| Ação | Efeito |\n|---|---|\n| Clique no prato | impacto naquele ponto |\n| `ESPAÇO` | impacto em um ponto aleatório |\n| `N` | novo prato (nova semente, esmalte e decoração) |\n| `A` | liga/desliga o modo automático (o prato se quebra e se refaz sozinho) |\n| `S` | salva a imagem em PNG |\n\n## Técnico\n\n- p5.js **2.4.0** carregado por CDN (jsDelivr). A biblioteca **não** está no zip.\n- Sem imagens nem fontes externas: tudo é desenhado por código.\n- Feito com auxílio de IA (**Claude**, Anthropic), que ajudou na ideia, no código\n  e na revisão.\n\n## Ideias para o projeto final (até a 3ª entrega)\n\nO tema geral é **\"reparo\"**: transformar a quebra em algo belo. Até a entrega final\npretendo acrescentar:\n\n1. **Cacos de verdade (parte 2):** usar as fissuras fechadas para recortar o prato em\n   polígonos (fragmentos). Os cacos se separam e caem com uma física simples e depois\n   voltam ao lugar, colados com ouro. O usuário poderá arrastar os cacos para\n   remontar o prato.\n2. **Som:** usar p5.sound para o estalo da cerâmica no impacto (com intensidade de acordo\n   com a força) e um som suave de sino enquanto o ouro escorre. Também quero quebrar o\n   prato com o **microfone**: um som alto (palma, grito) gera um impacto.\n3. **3D / WebGL (parte 3):** levar o prato para uma tigela em WebGL, com iluminação\n   e as emendas douradas em relevo, para girar e observar de vários ângulos.\n4. **Tipografia:** o usuário escreve uma lembrança ou \"algo que se quebrou\", e o texto\n   é gravado ao longo das linhas de ouro (`textToPoints` com fonte de CDN).\n5. **Galeria de reparos:** guardar os pratos consertados (semente + impactos) e\n   mostrar uma \"coleção\" com todos eles, ou exportar um cartão de cada prato.\n6. **Envelhecimento:** com o tempo, o prato pode receber microfissuras, manchas de chá\n   e desgaste do esmalte, para que cada peça conte sua própria história.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "README.md",
+        "sketch.js",
+        "style.css",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "catalogo do que nao existe 1",
+      "id": "catalogo-do-que-nao-existe-1",
+      "name": "catalogo do que nao existe 1",
+      "origin": "native",
+      "lastModified": 1794758212205,
+      "title": "Catálogo do que Não Existe",
+      "tags": [
+        "museum",
+        "art",
+        "interactive",
+        "generative",
+        "AI"
+      ],
+      "collection": "projeto final/Nicole Cardozo/1",
+      "description": "# Catálogof do que Não Existe\n\n**Projeto final · parte 1 de 3** · feito com auxílio de AI (Claude)\n\nUm museu de objetos impossíveis. Cada objeto do acervo foi \"doado\" por alguém que descreveu **para que ele serve**: medir a saudade, abrir as manhãs de segunda-feira, chamar quem já foi embora. O museu fabrica o objeto em 3D, dá a ele pelo menos uma **contradição** que o torna inutilizável (uma alça do lado de dentro, uma peça que nunca tocou o resto, um dente em duplicata) e o cataloga com uma **ficha catalográfica**, como num acervo de verdade.\n\nA obra brinca com a distância entre o objeto e o documento que o descreve. A ficha é rigorosa: número de tombo, classificação, dimensões, procedência, estado de conservação e assuntos. O objeto que ela descreve, porém, não pode existir.\n\n## O que já funciona (parte 1)\n\n- **Gerador de objetos em 3D (WebGL).** Uma gramática de peças (cilindros, caixas, toros, esferas, cones, tubos curvos ao longo de curvas de Bézier e sólidos de revolução montados à mão como `p5.Geometry`). Cada um dos seis verbos tem uma estrutura própria:\n  - *abrir* → chave com haste, argola e dentes;\n  - *medir* → tripé, haste com graduação irregular e mostrador com ponteiro que gira sozinho;\n  - *guardar* → recipiente torneado com tampa, alças e pés;\n  - *chamar* → tubo curvo terminando em campânula;\n  - *aquecer* → serpentina em volta de uma coluna;\n  - *esquecer* → moldura com garras que seguram um vazio, com fragmentos à deriva.\n- **Contradições.** Cada objeto recebe uma ou duas: peça duplicada, peça flutuante, alça interna, peça desproporcional ou peça torta. A contradição é escrita nas notas da ficha.\n- **Materiais.** Latão, cobre, ferro fundido, porcelana, vidro, cera e papel, com materiais secundários e de detalhe escolhidos pela semente.\n- **Ficha catalográfica.** Tombo (`CNE 2026/0007`), classificação na **CDI — Classificação Decimal do Inexistente**, denominação, material, dimensões calculadas a partir da geometria, época, procedência, conservação, modo de uso, notas, assuntos e doador.\n- **Termo de doação.** Um formulário em que o visitante escolhe o verbo, escreve o complemento, o material e a época. O objeto é gerado deterministicamente a partir de uma semente.\n- **Fichário.** Abas na parte de baixo da tela percorrem o acervo. As doações ficam salvas no navegador (`localStorage`).\n- **Cena de museu.** Pedestal, luz de foco (`spotLight`), luz de preenchimento e animação de entrada na vitrine.\n\n## Interação\n\n| ação | efeito |\n|---|---|\n| **＋ Doar um objeto** (ou tecla **D**) | abre o termo de doação |\n| **ao acaso** (no formulário) | preenche o termo aleatoriamente |\n| arrastar / roda do mouse | gira e aproxima a câmera |\n| abas do fichário ou **← →** | percorre o acervo |\n\n## Ideias para o projeto final e o que pretendo acrescentar\n\n### Parte 2: a exposição\n- **Sala navegável.** Vários pedestais numa galeria em WebGL, com o visitante andando entre eles (câmera em primeira pessoa) em vez de ver um objeto por vez.\n- **Vitrines e etiquetas.** Caixa de vidro sobre alguns objetos e uma pequena placa no pedestal com tombo e denominação, desenhada como textura.\n- **Mais vocabulário.** Novos verbos (*consertar*, *apagar*, *dividir*, *esperar*), novas contradições (peça espelhada, peça que atravessa outra) e mais materiais, inclusive texturas procedurais (veios de madeira, pátina no cobre).\n- **Sombras de contato** sob os objetos, para que pareçam pousados no pedestal.\n\n### Parte 3: o sistema de informação\n- **Busca no acervo** por verbo, material, época, assunto e doador, como num catálogo de biblioteca.\n- **Índice de assuntos** navegável. Clicar em \"Saudade — Medição\" mostra todos os objetos ligados à saudade.\n- **Exportação.** Baixar a ficha como imagem e o objeto em **STL**, para que o \"objeto que não existe\" possa ser impresso em 3D.\n- **Relações entre objetos.** Objetos doados com complementos parecidos aparecem como \"ver também\" na ficha.\n- **Acervo compartilhado** (se viável). As doações de visitantes diferentes passam a compor o mesmo museu.\n\n## Técnica\n\n- p5.js **2.x** carregado via CDN (jsDelivr). A biblioteca não está incluída no zip.\n- Modo `WEBGL`; `p5.Geometry` construída vértice a vértice (sólidos de revolução); `model()`; primitivas 3D; cilindros orientados entre dois pontos com `rotate(ângulo, eixo)`; `spotLight`, `pointLight`, `directionalLight`, `specularMaterial`; `orbitControl`.\n- Gerador pseudoaleatório com semente (mulberry32): o mesmo termo de doação sempre gera o mesmo objeto e a mesma ficha.\n- Arquivos: `objeto.js` (gramática e desenho das peças), `ficha.js` (textos e catalogação), `sketch.js` (cena, acervo e interface).\n\n## Uso de IA\n\nEste projeto foi feito com auxílio de AI (**Claude**, da Anthropic). A IA ajudou a desenvolver o conceito e escreveu o código da primeira versão.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "objeto.js",
+        "ficha.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "biomas brasileiros",
+      "id": "biomas-brasileiros",
+      "name": "biomas brasileiros",
+      "origin": "native",
+      "lastModified": 1794758018330,
+      "title": "Biomas Brasileiros",
+      "tags": [
+        "AI",
+        "gemini",
+        "2d",
+        "3d"
+      ],
+      "collection": "projeto final/Nick Correa/1",
+      "description": "## Projeto Biomas Brasileiros\n### Contexto Socioambiental: Por que esse tema?\n\nMais do que um exercício de computação gráfica, a construção digital desses ambientes nasce como um registro visual e instrumento de sensibilização diante da crise socioambiental enfrentada pelo Brasil:\n\n* **Queimadas e Devastação na Amazônia:** O avanço contínuo de queimadas criminosas e do desmatamento tem transformado vastas áreas de floresta tropical em cinzas, comprometendo a biodiversidade, destruindo corredores ecológicos e alterando o regime de chuvas (os \"rios voadores\") que abastece outras regiões do país, como o Cerrado e o Pantanal.\n* **Exploração Predatória e Perda de Terras Raras Naturais:** A corrida global por minerais estratégicos e **terras raras**, somada ao garimpo ilegal e à mineração sem controle ambiental, pressiona áreas de preservação permanente e unidades de conservação. Essa exploração acelera a supressão da vegetação nativa, contamina bacias hidrográficas com metais pesados e degrada solos que levaram milênios para se formar.\n* **Chacinas e Violência contra os Povos Indígenas:** Os povos originários são os principais guardiões da integridade desses biomas — especialmente na Amazônia e no Cerrado. No entanto, comunidades indígenas enfrentam invasões constantes de seus territórios por grileiros, madeireiros e garimpeiros, resultando em conflitos fundiários, contaminação de rios, expulsão de suas terras e chacinas brutais.\n\nAo permitir que o usuário caminhe virtualmente por representações de cada bioma, o projeto busca dar visibilidade à riqueza natural e cultural que está sob ameaça direta, reforçando que a preservação da floresta e dos campos é indissociável da proteção à vida e à demarcação das terras indígenas.\n\n### Ideia Geral do Projeto\n\nO projeto propõe uma experiência visual em duas formas de navegação:\n\n1. **Mapa Cartográfico Interativo (2D):** Na tela inicial, o usuário visualiza o mapa do Brasil dividido nas seis regiões de biomas, diferenciadas por cores e acompanhadas de legenda interativa. Ao passar o cursor e clicar sobre qualquer região, o sistema identifica o polígono correspondente e carrega a sub-cena daquele ecossistema.\n2. **Exploração Imersiva (3D):** Dentro de cada bioma, o ambiente é renderizado em 3D com iluminação direcional, relevo e elementos naturais característicos daquela paisagem. O visitante pode caminhar livremente pelo cenário utilizando as teclas `WASD` (ou setas), correr (`Shift`), pular (`Espaço`) e movimentar a câmera em 360° com o mouse.\n\nA arquitetura foi estruturada de forma modular, separando o controlador principal e o mapa (`sketch.js`) de seis scripts independentes, permitindo que cada ecossistema seja construído, detalhado e atualizado de maneira isolada.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "caatinga.js",
+        "amazonia.js",
+        "cerrado.js",
+        "mata_atlantica.js",
+        "pampa.js",
+        "pantanal.js",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "trabalho final1 natan azevedo gomes",
+      "id": "trabalho-final1-natan-azevedo-gomes",
+      "name": "trabalho final1 natan azevedo gomes",
+      "origin": "native",
+      "lastModified": 1794757948512,
+      "title": "Garçom Novato",
+      "tags": [
+        "generative",
+        "AI",
+        "Claude",
+        "restaurant",
+        "waiter",
+        "comedy",
+        "physics"
+      ],
+      "collection": "projeto final/Natan Gomes/1",
+      "description": "Eu pensei que seria legal tentar fazer algo com física de destruição neste trabalho final, então pensei em um garçom derrubando sua bandeja. Elaborei mais um pouco a cena e saiu esta pequena animação. Ela começa sozinha; a barra de espaço pausa e continua, e a tecla R recomeça.\n\nAté a etapa final, planejo ajustar os modelos e as animações das pessoas, deixar a iluminação mais interessante (uma iluminação geral mais baixa e as velas como fontes de luz) e incluir áudio. Também quero que os clientes reajam à queda, com os da mesa se afastando e os das outras mesas virando para olhar, e colocar mais um susto no caminho antes da reverência, como uma criança correndo pelo salão, para a tensão ir crescendo até o final. Um epílogo com o garçom varrendo os cacos enquanto o salão esvazia e as velas se apagam também ficaria legal.\n\nNome: Natan Azevedo Gomes",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "thumbnail.png",
+        "README.md"
+      ]
+    },
+    {
+      "folder": "decostas",
+      "id": "decostas",
+      "name": "decostas",
+      "origin": "native",
+      "lastModified": 1794757471778,
+      "title": "De costas",
+      "tags": [
+        "AI",
+        "Claude",
+        "jogo",
+        "labirinto",
+        "primeira pessoa",
+        "WebGL",
+        "geração procedural",
+        "espaços não euclidianos",
+        "portais",
+        "toro",
+        "Möbius",
+        "quarta dimensão",
+        "framebuffer",
+        "shaders",
+        "p5.Geometry",
+        "texturas procedurais",
+        "espaços liminares",
+        "Backrooms",
+        "Web Audio"
+      ],
+      "collection": "projeto final/Murilo Jorge de Figueiredo/1",
+      "description": "# De costas\n\n**Autor:** Murilo Jorge de Figueiredo\n\n![thumbnail](thumbnail.png)\n\n## De onde vem a ideia\n\nA ideia vem de um jogo que eu comecei a fazer quando era criança, num curso de\njogos em Unity para crianças, e que **nunca terminei**. Era um labirinto em que o\nponto de vista mudava o que de fato acontecia: um corredor todo branco em que\nnão se vê nada, um corredor que, quando você se vira para olhar, já é outra\ncoisa, um corredor que se encaixa em outro. O projeto final é a chance de\nterminar esse jogo, agora no p5.js.\n\n## A ideia\n\nUm labirinto em primeira pessoa feito de **ilusões de espaço**: corredores que\ncontinuam em outro lugar, passagens que viram o mundo do avesso, lugares maiores\npor dentro que por fora, um mundo sem borda, um labirinto em quatro dimensões e\ncoisas que mudam quando você não está olhando. Tudo na linguagem de salas,\ncorredores e labirintos. O labirinto é gerado proceduralmente a cada partida e\n**sempre tem saída**, por mais que mude.\n\nO clima é o dos **espaços liminares** e das *Backrooms*: corredores de escritório\nvazios, papel de parede amarelo manchado de umidade, carpete úmido, forro de\nplacas e luminárias fluorescentes que zumbem e às vezes piscam. É um lugar de\npassagem que parece familiar e não é de ninguém, sem nenhuma ameaça visível. O\ndesconforto vem só do espaço: ele se repete, não tem fim e não obedece à\ngeometria. As placas de **SAÍDA** apontam o caminho de verdade, mas uma em cada\ncinco mente. Os bilhetes colados nas paredes dizem \"não olhe para trás\" e \"você\njá passou aqui\", e o labirinto faz isso ser verdade.\n\nO principal recurso para os espaços impossíveis são **portais sem moldura**: uma\npassagem comum que, sem nenhum aviso, continua em outro ponto do labirinto. O\nque se vê por ela é o lugar de destino de verdade, então nada denuncia a costura.\nO corredor parece seguir reto, mas você está em outro lugar, às vezes virado\n90° ou 180°, às vezes espelhado.\n\n## O que esta primeira versão explora\n\nEsta primeira entrega experimenta várias ideias de uma vez. Cada uma está\nfuncionando, mas em forma de esboço; o acabamento fica para as próximas etapas.\n\n- **Labirinto sempre resolvível.** O labirinto é cavado como uma **árvore**\n  (busca em profundidade a partir da entrada): existe exatamente um caminho\n  entre quaisquer duas células, então existe caminho até a saída, que é a célula\n  mais distante da entrada. As passagens da árvore nunca se fecham.\n- **O mundo é um toro.** Não há borda: quem sai pelo leste entra pelo oeste, quem\n  sai pelo sul entra pelo norte. Esse espaço é desenhado de verdade, não\n  simulado: o labirinto aparece repetido em volta de si mesmo (3 × 3 cópias), e\n  um corredor que atravessa a \"borda\" continua sem emenda. Dá para andar em\n  linha reta e voltar ao mesmo lugar.\n- **Portas instáveis.** Algumas paredes fora da árvore ora são parede, ora são\n  passagem. Elas só trocam de estado depois de você ter passado perto e quando\n  saem do seu campo de visão. Você olha um corredor, se vira, volta a olhar, e\n  ele já não é o mesmo. Como só criam ou desfazem atalhos, o labirinto continua\n  resolvível.\n- **Portais.** Duas a quatro duplas de passagens comuns são ligadas entre si.\n  Atravessar uma leva à outra, girado do jeito que for preciso para o corredor\n  continuar: quem anda reto continua andando reto, mas em outro lugar e em outra\n  direção. Pela passagem se vê o destino, desenhado em tempo real. Ela vale dos\n  dois lados: quem vem de trás chega ao outro lado do outro portal. Um corredor\n  pode levar a ele mesmo por outro lado, e dois corredores paralelos podem dar um\n  no outro. Cada dupla só é aceita se, depois dela, ainda houver caminho até a\n  saída.\n- **O portal espelhado.** Uma das duplas (lilás no mapa) é uma **reflexão**, não\n  uma rotação: quem passa sai **espelhado**, como numa fita de Möbius. O mundo\n  inteiro troca de mão, o que estava à esquerda fica à direita, e uma segunda\n  travessia desfaz. Pela passagem já se vê o outro lado refletido. As **placas e\n  os bilhetes** nas paredes têm texto: do outro lado, \"SAÍDA\" aparece escrito ao\n  contrário, e é assim que se percebe ter virado do avesso. Na tela, o espelho é\n  a imagem refletida, e os controles também se invertem para continuar fazendo\n  sentido.\n- **Maior por dentro.** Num beco sem saída, o beco não termina: a passagem para\n  ele é um portal para um **corredor comprido** que dá num **salão** com o\n  triplo do pé-direito do labirinto, que não caberia em lugar nenhum dele. De\n  fora já se vê o corredor longo onde deveria haver um beco. De dentro do\n  corredor, olhando para trás, se vê o labirinto. A volta leva ao mesmo lugar,\n  olhando para o lado certo.\n- **O labirinto em quatro dimensões.** O salão do beco é um **labirinto 4D**:\n  5 × 5 × 3 células em x, z e w, todas do mesmo tamanho, com paredes que são\n  caixas 4D nas três orientações. Você nunca vê o 4D inteiro, só uma **fatia 3D**:\n  o plano que passa por você, formado pela sua frente e pela vertical. **Q** e **E**\n  **giram essa fatia** entre x e w, em volta de você. Essa é a mecânica de\n  *Miegakure* e *4D Miner*, que a pesquisa apontou como o que dá a sensação de\n  4D. Uma primeira versão em camadas de w parecia só \"trocar de andar\".\n  - Andar é sempre andar na fatia. Com ela girada, ir em frente é ir, em parte\n    ou de todo, pela quarta dimensão.\n  - Ao girar, os corredores **esticam, se fundem e se abrem** continuamente. As\n    paredes \"de w\", invisíveis com a fatia reta, viram paredes comuns quando ela\n    gira, e as de x somem.\n  - O **tom** de cada parede diz a orientação dela: amarelo para x, esverdeado\n    para z, azul para w. A borda do labirinto 4D é escura. A régua embaixo mostra\n    quanto a fatia está girada.\n  - A **saída** fica numa célula sem porta em nenhuma das suas paredes 3D. Só se\n    entra nela pela quarta dimensão, como a casa trancada de *Miegakure*.\n  - No alto flutuam um **tesserato** e uma **hiperesfera**, fatiados pelo mesmo\n    plano. A forma deles muda conforme você gira: uma bússola da quarta\n    dimensão.\n  - Não se gira a fatia para dentro de uma parede.\n  - O corredor de entrada é um corredor 3D comum. Lá a fatia volta a ficar\n    reta sozinha, e ele só se liga à camada de entrada do labirinto 4D.\n- **Níveis.** A saída é uma porta solta no meio de uma sala, com luz do outro lado (dos dois lados). Ao passar por ela, um labirinto novo e\n  maior é gerado.\n- **O mapa** (tecla M), visto de cima, entrega os truques: portas instáveis em\n  vermelho, os portais em duplas da mesma cor (o espelhado em lilás), o beco\n  maior por dentro em azul, e nenhuma borda.\n\nNo thumbnail, à esquerda, uma passagem que é o portal espelhado: através dela a\nplaca de SAÍDA aparece escrita ao contrário. À direita, o beco maior por dentro:\nonde deveria haver uma parede, um corredor comprido.\n\n**Testes.**\n- **Portais.** Em 30 labirintos gerados, todos com saída alcançável (os\n  portais contam, as portas instáveis contam como fechadas), andamos através de\n  cada portal: em 120 travessias, o jogador sempre sai do lado certo do portal\n  de destino, olhando na direção dele. As travessias espelhadas trocam a mão do\n  mundo e as outras não.\n- **O beco maior por dentro.** Nos 30, ele leva à sala, dá para andar pelo\n  corredor e voltar ao labirinto.\n- **O labirinto 4D.** Em 60 labirintos 4D gerados, todos têm saída, e em todos\n  ela está trancada em 3D (sem nenhuma ligação em x ou z). O caminho mais curto\n  até ela tem em média cerca de 10 células e 3 passagens pela quarta dimensão.\n  Com a fatia girada a 90°, andar em frente atravessa para a camada vizinha só\n  onde há passagem; com a fatia reta, andar não muda w.\n- **Teclado e erros.** W A S D, setas, Q/E e M foram testados com o teclado de\n  verdade, e o console não mostra erros.\n\n## Como é feito\n\n- **Nenhum arquivo de imagem nem de som.** As texturas (papel de parede amarelo\n  com padrão, manchas e rodapé; carpete; forro de placas; placas de SAÍDA e\n  bilhetes) são desenhadas pelo próprio sketch uma vez, em canvases 2D feitos com\n  `createGraphics()`, e usadas com `texture()`. O texto usa a fonte padrão.\n- **O zumbido** é sintetizado com a Web Audio API do navegador: osciladores em\n  60 Hz e harmônicos, passando por um filtro, e um chiado agudo bem baixo. O\n  volume sobe perto de uma luminária acesa. Começa no primeiro clique ou tecla,\n  como o navegador exige.\n- As placas de SAÍDA usam a distância de cada célula até a saída pela árvore\n  (busca em largura): a seta aponta para o lado da parede em que fica o próximo\n  passo do caminho, e 20% das placas são invertidas de propósito.\n- As paredes são caixas montadas com `beginShape(QUADS)`, `normal()` e\n  `vertex(x, y, z, u, v)`, com as coordenadas de textura em unidades do mundo\n  (`textureWrap(REPEAT)`): o papel de parede continua de uma parede para a outra\n  e não estica nas pontas.\n- As paredes, o chão, o teto, as placas e as luminárias de cada nível\n  viram `p5.Geometry`, montadas uma vez com `buildGeometry()` e desenhadas com\n  `model()` nove vezes (o toro), uma malha por textura. As luminárias que piscam\n  ficam em malhas separadas, acesas ou apagadas a cada quadro. As anteriores são\n  liberadas com `freeGeometry()`. As portas instáveis mudam, então ficam fora\n  dessas malhas: cada uma tem a sua, desenhada só quando está fechada.\n- Para desenhar, cada parede vai só de um canto ao outro, e cada canto da grade\n  é um poste à parte: duas paredes nunca se sobrepõem, então nunca há duas\n  superfícies brigando pelo mesmo pixel.\n- A luz é uma `ambientLight()` amarelada e as quatro luminárias acesas mais\n  perto, cada uma um `pointLight()`, com `lightFalloff()`.\n- **Portais.** Cada ponta de portal (\"boca\") tem um centro c, uma normal n e uma\n  matriz M (2 × 2) que leva direções daqui para lá. M é uma rotação, ou uma\n  reflexão no portal espelhado (F = 2nnᵀ − I aplicada depois da rotação). Um\n  ponto p perto da boca corresponde a c' + M (p − c) do outro lado.\n  - Atravessar é aplicar isso à posição e à direção do jogador.\n  - Ver através é desenhar o mundo, num `createFramebuffer()`, de um ponto de\n    vista virtual: os olhos do jogador levados para o outro lado.\n  - Um `baseMaterialShader().modify()` acrescenta ao material padrão do p5 um\n    plano de corte: os pixels do lado do olho virtual são descartados, para que\n    nada entre ele e o portal de destino tampe a vista.\n  - A boca é uma placa fina pintada por um segundo shader, que lê o framebuffer\n    na mesma posição da tela (`gl_FragCoord`). Assim a imagem se encaixa pixel a\n    pixel, de qualquer ângulo. No portal espelhado, a leitura é invertida na\n    horizontal.\n  - Por quadro, até dois portais visíveis são desenhados (os mais próximos).\n    Cópias do toro inteiras atrás da câmera não são desenhadas.\n- **Caminho até a saída.** A busca em largura atravessa os portais: quem entra\n  pela célula de trás de uma boca sai pela célula da frente da outra, e vice-versa.\n- \"Fora do campo de visão\" é o ângulo entre a direção do olhar e a direção até a\n  porta, comparado com a metade da abertura horizontal da câmera, mais uma folga.\n  No toro, a distância é sempre até a cópia mais próxima.\n- O labirinto 4D é uma lista de **caixas 4D** (intervalos em x, z e w). A fatia\n  é a reta, no plano x–w, que passa pelo jogador na direção (cos θ, sen θ). A\n  fatia de uma caixa é o intervalo dessa reta dentro do retângulo [x0, x1] ×\n  [w0, w1], calculado pelo método das placas (o mesmo de raio contra caixa).\n  Como z e a altura não mudam, a fatia de uma caixa 4D é sempre uma caixa 3D,\n  desenhada como as paredes do labirinto, com um tom diferente para cada\n  orientação (as paredes de w são azuladas). O mundo é desenhado nas coordenadas da fatia (o jogador\n  em u = 0), e a colisão é feita contra essas mesmas caixas.\n- Andar move o jogador ao longo da fatia: x += du · cos θ, w += du · sen θ.\n  Girar muda θ em volta do próprio jogador, e só é permitido se ele não ficar\n  dentro de uma parede.\n- A saída é uma célula-folha da árvore. Se ela se liga ao resto por x ou z, essa\n  ligação é fechada e outra é aberta em w. Como continua sendo folha, a árvore\n  continua árvore. Depois, algumas paredes a mais se abrem como atalhos (nunca as\n  da saída).\n- As fatias do tesserato e da hiperesfera são malhas comuns, refeitas a cada\n  quadro. Cada vértice vai para as coordenadas da fatia (u, y, z, n), em que n é\n  a distância até ela.\n  - A fatia da hiperesfera é uma `sphere()` de raio √(r² − n²).\n  - A do tesserato sai de cortar cada uma das 8 células cúbicas dele em n = 0.\n    Os pontos onde as arestas atravessam a fatia formam um polígono; ordenados\n    em volta do centro, viram uma face. As faces são orientadas para fora e\n    montadas numa `p5.Geometry` com normais `FLAT` (`computeNormals()`). A malha\n    do quadro anterior é liberada com `freeGeometry()`.\n\n## O que pretendo acrescentar até a etapa final\n\n1. **Portais mais estranhos.** Portais com escala (uma porta que leva a uma\n   versão menor ou maior do mesmo corredor), portais que mudam de destino\n   quando ninguém está olhando, um corredor que leva a ele mesmo por trás (você\n   vê suas próprias costas, o que daria sentido ao nome do jogo), e portais\n   vistos através de portais (recursão), que hoje mostram o lugar real.\n2. **Mais puzzles em 4D.** Fantasmas discretos das paredes logo \"ao lado\" em w\n   (como em *4D Golf*), para enxergar o que vai aparecer antes de girar. Salas\n   que introduzam o 4D aos poucos (primeiro objetos 3D \"esticados\" em w, depois\n   formas 4D de verdade, como recomenda a equipe de *Miegakure*). Objetos 4D que\n   é preciso girar até a fatia deles deixar uma fresta. Som como bússola, mudando\n   com o ângulo da fatia.\n3. **A casa-tesserato.** Oito salas cúbicas ligadas como as células de um\n   hipercubo, em que cada porta leva a outra sala. Andando sempre em frente,\n   passa-se por quatro portas e volta-se à primeira. É o conto *\"—And He Built a\n   Crooked House\"*, de Robert Heinlein.\n4. **Outras topologias.** Uma garrafa de Klein (o toro com uma das voltas\n   espelhada, agora possível com o portal espelhado), um corredor em espiral que\n   nunca sobe nem desce, salas que se empilham no mesmo lugar.\n5. **Mais estruturas de ponto de vista:** uma porta que leva a lugares\n   diferentes conforme o lado de onde se olha, um corredor que só existe\n   enquanto você olha para trás, uma sala que muda quando você pisca.\n6. **Mudanças no próprio caminho**, não só nos atalhos, verificando a cada troca,\n   com uma busca no grafo, que ainda existe caminho até a saída.\n7. **Mais estranhamento liminar:** salas que se repetem idênticas, uma piscina\n   vazia, escadas que não levam a lugar nenhum, um corredor comprido demais (que\n   se alonga enquanto se anda), luzes que se apagam atrás de você, passos no\n   carpete que continuam um instante depois que você para.\n8. **Acabamento:** transições entre níveis, uma sequência de níveis que apresente\n   cada ilusão aos poucos, e uma pequena narrativa ou objetivo.\n\n## Como jogar\n\nAbra o `index.html` no navegador e clique na tela.\n\n| Controle | Ação |\n|---|---|\n| **clique** | prende o mouse para olhar (Esc solta) |\n| **mouse** (ou arrastar, ou ← →) | girar |\n| **W A S D** (ou ↑ ↓) | andar |\n| **Q / E** | girar a fatia entre x e w (na sala 4D) |\n| **M** | mapa visto de cima |\n| **N** | liga e desliga o som |\n| **R** | outro labirinto |\n\nSe o ambiente não deixar prender o mouse, arrastar com o botão pressionado\ntambém gira a visão. O canvas usa `windowWidth` e `windowHeight`. O p5.js\n(versão 2.3.4) é carregado de CDN e não está no zip.",
+      "hasThumb": true,
+      "files": [
+        "sketch.js",
+        "index.html",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "Maria Eduarda Araujo Projeto final 1",
+      "id": "maria-eduarda-araujo-projeto-final-1",
+      "name": "Maria Eduarda Araujo   Projeto final 1",
+      "origin": "native",
+      "lastModified": 1794756193766,
+      "title": "O Livro Monstruoso dos Monstros e o Retrato Vivo (Parte 1)",
+      "tags": [
+        "AI",
+        "Gemini",
+        "animacao",
+        "narrativa",
+        "HarryPotter",
+        "curta"
+      ],
+      "collection": "projeto final/Maria Eduarda Araujo/1",
+      "description": "# Projeto Final (Parte 1): O Livro Monstruoso dos Monstros\n\n**Autora:** Maria Eduarda Araújo  \n**DRE:** 119054059  \n\n---\n\n## 1. Visão Geral e Ideia do Projeto Final\nO meu projeto final consiste em um curta-metragem animado buscando alta fidelidade visual inspirado no universo de *Harry Potter*, unindo a estética clássica de abertura de livros dos filmes da Disney.\n\nA narrativa é totalmente guiada por uma linha do tempo baseada no tempo de execução (`millis()`) e foi dividida em três etapas evolutivas ao longo das três semanas de desenvolvimento:\n* **Etapa 1 (Atual — O Despertar do Livro):** O *Livro Monstruoso dos Monstros* repousa fechado sobre uma mesa de mogno em Hogwarts, amarrado por duas fivelas laterais. Inicialmente visto de perfil, ele acorda, os seus 8 olhos de aranha abrem par por par, olham para os lados e **encaram diretamente a câmera** (o espectador). Irritado por estar sendo observado, ele luta furiosamente contra as amarras, arrebenta as fivelas com faíscas mágicas, dá botes e abre-se em perspectiva 3D, folheando algumas páginas detalhadas no estilo clássico da Disney até pousar na página de pergaminho em branco com moldura renascentista.\n* **Etapa 2 (Próxima Semana — O Retrato Vivo):** A câmera realizará um *zoom in* cinematográfico em direção à moldura da página direita, revelando o surgimento da fotografia mágica com o Trio de Ouro (Harry, Rony e Hermione) abraçados dentro do retrato.\n* **Etapa 3 (Semana Final — A Fuga do Quadro):** Os personagens dentro da foto irão desfazer o abraço, virar de perfil e correr articuladamente para fora dos limites da moldura, desaparecendo gradualmente ao cruzar a borda do papel (utilizando `drawingContext.clip()`), exatamente como nos retratos do mundo bruxo.\n\n---\n\n## 2. O que foi implementado nesta 1ª Entrega\nNesta primeira implementação, desenvolvi um motor gráfico robusto utilizando matemática avançada e transformações afins em WebGL, alguns com a ajuda do gemini:\n\n* **Câmera 3D Contínua (Perfil $\\rightarrow$ Visão Superior):** O curta inicia com a câmera na altura da mesa enfocando diretamente a **borda lateral** do livro (onde fica a bocarra principal), evidenciando o relevo ocular e as duas fivelas de couro. Em seguida, a câmera executa um arco suave de transição tridimensional até a visão de cima (*top-down*).\n* **Anatomia de Aranha Caranguejeira (Tarântula):** A capa é inteiramente revestida por cerdas em camadas orgânicas (tons de carvão, mogno e pontas ferrugem) geradas por curvas de Bézier matemáticas (`curvaMat` baseada em `vertex()`). No alto da capa, uma elevação volumétrica em domo abriga **8 olhos de aranha desproporcionais e expressivos** (sem pelos na órbita, equipados com pálpebras limpas e sem marcas indesejadas).\n* **Atuação Dinâmica dos Olhos:** Os 8 olhos abrem devagar de par em par, examinam os arredores, e miram de forma intimidadora na direção de quem assiste, franzindo as pálpebras de raiva antes de iniciar o combate.\n* **Boca nas 3 Bordas e Língua Anatômica:** As fileiras de presas de marfim e gengivas estendem-se por toda a extensão lateral, superior e inferior do livro. Quando ele bota para fora, uma língua comprida, carnuda e sinuosa serpenteia para fora da lateral com sulco central e brilho úmido.\n* **Luta contra as Fivelas e Tremedeira Equilibrada:** Duas fivelas de latão na parede lateral direita prendem o livro. Ele vibra de raiva com uma frequência de tremor calibrada para transmitir tensão sem borrar a imagem, arrebenta as amarras gerando partículas de faíscas e estabiliza-se no centro.\n* **Folhear Clássico Estilo Disney:** A capa gira em 3D revelando 10 páginas de pergaminho curvas que voam em sequência pelo ar (trazendo caligrafia manuscrita e iluminuras que se curvam junto no ar) e os dentinhos das bordas do livro aberto continuam se mexendo levemente.\n\n---\n\n## 3. Testes, Validação e Thumbnail\n* **Testes no p5front:** O programa foi extensivamente testado no ambiente do `p5front` para garantir que as mensagens de erro do interpretador fossem evitadas, substituindo funções que não funcionavam por algoritmos geométricos próprios. Houve dificuldade com a parte das mudanças das paginas e alguns dos movimentos que o livro deveriam fazer que requeriam varias mudanças e alterações no código até ficar no estagio atual.\n* **Arquivo `thumbnail.png`:** A miniatura oficial foi capturada no mostrando o livro já com as páginas abertas e iluminado, representando perfeitamente a identidade visual do curta.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "PROJETO FINAL (1 3) MANOEL V C CARVALHO",
+      "id": "projeto-final-1-3-manoel-v-c-carvalho",
+      "name": "PROJETO FINAL (1 3)   MANOEL V C CARVALHO",
+      "origin": "native",
+      "lastModified": 1794756119248,
+      "title": "Rampa Acessível",
+      "tags": [
+        "AI",
+        "Claude",
+        "Archicad",
+        "NBR 9050"
+      ],
+      "collection": "projeto final/Manoel Victor da Costa Carvalho/1",
+      "description": "Primeiro sketch para o projeto final que tem como objetivo criar animações para facilitar a compreensão da norma técnica ABNT NBR 9050/2020. Um cenário foi modelado no software ArchiCAD e posteriormente, com o uso da IA Claude realizou-se a animação do modelo arquitetônico. Como produto final pretende-se realizar a animação de elementos gráficos do tópico 4.2 - Pessoas em cadeira de rodas (P.C.R.) da norma supracitada.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "descanso a beira mar 2",
+      "id": "descanso-a-beira-mar-2",
+      "name": "descanso a beira mar 2",
+      "origin": "native",
+      "lastModified": 1794755992139,
+      "title": "Descanso à beira-mar",
+      "tags": [
+        "Generativo",
+        "Gemini Argon",
+        "Praia"
+      ],
+      "collection": "projeto final/Luiz Henrique Pacheco/1",
+      "description": "🌊🌊🌊🌊🌊 Orla da Praia Procedural🌊🌊🌊🌊🌊🌊\n\nUma experiência de arte generativa contemplativa que simula a visão aérea (top-down) de uma orla marítima. Projetado para proporcionar relaxamento visual, o sketch combina ruído de Perlin (Perlin Noise) e funções trigonométricas assimétricas para criar costas únicas e o movimento orgânico do quebrar das ondas na areia.\n\nFuncionalidades Principais\n\n- A cada execução (ou duplo clique), um novo recorte costeiro é gerado aleatoriamente com distribuição natural de guarda-sóis, esteiras, coqueiros que balançam ao vento e gaivotas sobrevoando a orla.\n\nCiclo de Iluminação em Tempo Real: O sketch lê automaticamente o relógio do sistema (hour()) para ajustar a paleta de cores e sombras sem necessidade de intervenção manual:\n\n☀️ Dia (06h00 – 15h59): Sol Tropical — águas azul-turquesa vibrantes e areia clara.\n\n🌅 Tarde (16h00 – 18h59): Entardecer Dourado — tons quentes de âmbar, sombras alongadas e reflexos dourados.\n\n🌙 Noite (19h00 – 05h59): Luar Sereno — tons profundos de azul-noturno e reflexos prateados na água.\n\nPróximos passos:\n\n- Gostaria de implementar o audio das ondas batendo na areia para dar ainda mais sensação de relaxamento e talvez ser uma aba que possa ser deixada ao fundo no monitor enquanto o usuário faz alguma outra atividade.\n\n- Penso também em implementar um sistema de pomodoro, onde a cada 30min o som das ondas é trocado por sons de chuva para indicar o momento de descanso. Mudaria a animação para terem gotas d'água e um timer ao canto da tela. Mas fico em dúvida se algo assim quebraria a intenção da arte pela arte.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "artefato #11 Leo Nunes",
+      "id": "artefato-11-leo-nunes",
+      "name": "artefato #11   Leo Nunes",
+      "origin": "native",
+      "lastModified": 1794755895698,
+      "title": "ARTEFATO XI - Parte I",
+      "tags": [
+        "chatGPT",
+        "Market",
+        "OBJKT",
+        "AI"
+      ],
+      "collection": "projeto final/Leonardo Nunes Guimarães Costa/1",
+      "description": "# TEMA\nEsta é a primeira entrega referente ao trabalho final da disciplina \"Programação Criativa\" ministrada pelo Prof. Claudio Esperança e portanto a definidora do tema das duas próximas duas entregas: \n**<p style=\"text-align:center;\"> AGORA QUE NOS FORMAMOS PROGRAMADORAS CRIATIVAS E PROGRAMADORES CRIATIVOS, COMO TRABALHAMOS COM ISSO? </p>**\n\n\nRetorno a esta temática, com ênfase no \"retorno\", pois antes de começar o curso de Engenharia de Computação e Informação(2022) trabalhei brevemente junto à artista [DABG](https://www.instagram.com/dabg____?exln=MWRscTI5cHNkZDJ5YQ==) para a entrada desta nesse meio e em seguida o \"Inverno Crypto\" esfriou o mercado e nunca mais pensei em me envolver novamente com NFTs nas plotaformas existentes. Mas o curso me trouxe um novo desafio e também me expôs a um mundo de criatividade, principalmente por parte dos colegas que me cercam (a cada semana um monte de surpresas vendo os artefatos da galera) e com esse pessoal em mente resolvi montar um tutorial de como eles podem expor seus trabalhos(na galeria [OBJKT](https://objkt.com/)) que ao meu ver são muito melhores que a maioria do que já é exposto nessas galerias digitais (infelizmente isso aqui está incompleto ).\n\n# Cronograma\nPor se tratar de um projeto de finalização de curso me dediquei muito mais nessa primeira semana ao processo de decisão do tema e pesquisa e montei o seguinte cronograma:\n\n* Semana 1: Pesquisa e Definição do Tema, Artefato/Tutorial(incompleto).\n\n* Semana 2:\n  * Segunda: Alinhar com professor póssíveis entregas.\n  * Entrega de Sexta: Artefato/Tutorial Completo + Artefatos Adicionais.\n\n* Semana 3: \n  * Segunda: ????\n  * Entrega de Sexta: Deploy dos artefatos na galeria OBJKT\n\n\n\n\nAutor: Leonardo Nunes Guimarães Costa",
+      "hasThumb": true,
+      "files": [
+        "thumbnail.png",
+        "style.css",
+        "sketch.js",
+        "README.md",
+        "index.html"
+      ]
+    },
+    {
+      "folder": "nostradamus",
+      "id": "nostradamus",
+      "name": "nostradamus",
+      "origin": "native",
+      "lastModified": 1794755732845,
+      "title": "Nostradamus",
+      "tags": [
+        "AI",
+        "Claude",
+        "Data",
+        "Environment",
+        "Old",
+        "Retro",
+        "LowPoly"
+      ],
+      "collection": "projeto final/Laura Daflon dos Santos Santana Meira/1",
+      "description": "# Nostradamus\n\n> Nome: Laura Daflon dos Santos Santana Meira\n>\n> DRE: 120053993\n\nMichel de Nostradame nasceu em Saint-Rémy-de-Provence, no sul da França, em dezembro de 1503. É conhecido\ncomo um vidente famoso com profecias que nos permeiam até hoje. Esse trabalho é uma forma de remeter a \nideia de projeção do futuro, mas contemplando algo da modernidade: a computação.\n\nA proposta desse trabalho é falar sobre o meio ambiente e dados, mais especificamente\ncomo o uso de dados pode nos auxiliar nesse processo de identificar que ações hoje em dia\npodem acabar piorando o futuro do planeta.\n\nA ideia é usar essa estética de computador antigo, para apresentar um modelo 3D de um mundo que se\naltera conforme compostos são alterados. Então, o que aconteceria se aumentamos a quantidade de PFAs no mundo?\nUsamos dados para prever de uma forma lúdica e interativa.\n\nNa primeira entrega, tem-se a base do mundo e a interface principal feitas.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "camera.js",
+        "config.js",
+        "geometria.js",
+        "luz.js",
+        "planeta.js",
+        "cidades.js",
+        "fauna.js",
+        "vegetacao.js",
+        "atmosfera.js",
+        "orbita.js",
+        "interface.js",
+        "assets/logo.svg",
+        "assets/audio/musica.wav",
+        "polos.js",
+        "dados.js",
+        "espaco.js",
+        "telas.js",
+        "icones.js",
+        "thumbnail.png",
+        "README.md"
+      ]
+    },
+    {
+      "folder": "projeto final julia vilela",
+      "id": "projeto-final-julia-vilela",
+      "name": "projeto final julia vilela",
+      "origin": "native",
+      "lastModified": 1794755559574,
+      "title": "",
+      "tags": [
+        "AI",
+        "generative art",
+        "geometric motion",
+        "p5.js",
+        "physics",
+        "bouncing balls",
+        "collision",
+        "network",
+        "graph",
+        "animation"
+      ],
+      "collection": "projeto final/Julia Vilela/1",
+      "description": "# Geometric Motion — Bolinhas em Rede\n\n**Collection:** projeto final/Júlia Vilela/1\n\n**Tags:** AI, generative art, geometric motion, p5.js, physics, bouncing balls, collision, network, graph, animation\n\n![thumbnail](thumbnail.png)\n\n## Descrição\n\nEsboço em p5.js inspirado em vídeos de *geometric motion art* e nos clássicos jogos de bolinhas que ricocheteiam nas paredes. Sobre um fundo preto, pequenas bolinhas verdes e vazadas vão surgindo uma a uma, cada uma com um anel que se expande no momento em que aparece. Na maior parte das vezes a nova bolinha nasce perto de uma que já existe, e assim a rede parece brotar de si mesma; de vez em quando ela surge num ponto qualquer da tela e começa um novo aglomerado.\n\nCada bolinha anda em linha reta, ricocheteia ao tocar as bordas da tela e bate nas outras bolinhas em choques elásticos, trocando de direção como num jogo de bilhar. A cada impacto, com a parede ou com outra bolinha, acende um pequeno clarão verde.\n\nEnquanto se movem, as bolinhas formam um grafo que muda o tempo todo. Quando duas delas ficam a menos de uma distância máxima, uma linha cresce da mais antiga em direção à mais nova. A espessura e o brilho da linha aumentam à medida que as bolinhas se aproximam, o que destaca triângulos e polígonos dentro de uma teia de ligações mais finas. Quando elas se afastam demais, a linha se recolhe e desaparece. Depois que todas as bolinhas nasceram, a composição continua em movimento por cerca de 10 segundos, esmaece e recomeça com uma nova formação aleatória.",
+      "hasThumb": true,
+      "files": [
+        "thumbnail.png",
+        "sketch.js",
+        "README.md",
+        "index.html"
+      ]
+    },
+    {
+      "folder": "desabrochar de flor com reflexo",
+      "id": "desabrochar-de-flor-com-reflexo",
+      "name": "desabrochar de flor com reflexo",
+      "origin": "native",
+      "lastModified": 1794755387261,
+      "title": "Desabrochar de flor com reflexo",
+      "tags": [
+        "AI",
+        "generative",
+        "claude",
+        "L-system"
+      ],
+      "collection": "projeto final/João Ricardo Santiago Magalhães/1",
+      "description": "Um sketch feito pelo Claude do ciclo da vida de uma flor, onde será acrescentado o desabrochar dela e então seu definhamento se dissolvendo em pólen para então nascer uma nova flor.\n\nAutor: Joao Ricardo S. Magalhaes",
+      "hasThumb": true,
+      "files": [
+        "sketch.js",
+        "index.html",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "basca flu",
+      "id": "basca-flu",
+      "name": "basca flu",
+      "origin": "native",
+      "lastModified": 1794697966311,
+      "title": "Basca Flu",
+      "tags": [
+        "AI",
+        "Generative",
+        "Claude",
+        "ChatGPT",
+        "Gemini",
+        "Basquete"
+      ],
+      "collection": "projeto final/JOAO PEDRO MORETTI FONTES FERREIRA/1",
+      "description": "Jogador de basquete do Fluminense arremessa de diversos lugares da quadra. Quanto mais longe da cesta, menor é a probabilidade de acerto.\n\nPara as próximas etapas, pretendo adicionar mais jogadores e jogadas mais elaboradas como enterradas, pontes aéreas, bandejas etc.\n\nAutor: João Pedro Moretti Fontes Ferreira",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "projeto final 1 joao galetti",
+      "id": "projeto-final-1-joao-galetti",
+      "name": "projeto final 1 joao galetti",
+      "origin": "native",
+      "lastModified": 1794697618227,
+      "title": "Laços",
+      "tags": [
+        "AI",
+        "Claude",
+        "música",
+        "som",
+        "Web Audio",
+        "música generativa",
+        "fita magnética",
+        "Brian Eno",
+        "interativo"
+      ],
+      "collection": "projeto final/João Galetti/1",
+      "description": "# Laços\n\n*Música para fitas que não terminam.*\n\nEm 1978, para compor *Music for Airports*, Brian Eno gravou algumas notas\ncantadas em pedaços de fita magnética, fechou cada pedaço num laço e pôs\ntodos para tocar ao mesmo tempo. Os laços tinham comprimentos diferentes,\ne nenhum comprimento era múltiplo de outro, então as notas se encontravam\nem combinações que quase nunca se repetiam. Fiz um estúdio desses na\ntela, onde a geometria aparece e pode ser mexida.\n\nNuma fita, **tempo é distância**: a fita corre a 19 cm/s, então um laço\nque dá a volta num pedestal mais longe demora mais para passar de novo pela\ncabeça de leitura. Cada canal do gravador lê um laço que sai dos roletes,\nabraça um ou dois pedestais espalhados pela sala e volta. As notas são\nmarcas de lápis de cera sobre a fita, e o comprimento da marca é a duração\nda nota. **Arrastar um pedestal muda o comprimento de todos os laços que\npassam por ele**, e com isso muda a música.\n\n> Clique para ligar o gravador. Fones ou caixas de som ajudam.\n\n## Como funciona\n\n**Geometria.** Cada laço é o envoltório convexo dos círculos que a fita\nabraça: os dois roletes do canal e os pedestais. O envoltório é calculado\nsobre pontos amostrados nos círculos e reamostrado a passo constante. O\nperímetro dá o período do laço (entre ~15 e ~45 s), e a cabeça de leitura\nfica no ponto em que a fita passa entre os roletes. Ao montar a sessão,\ncada canal escolhe os pedestais que dão um período longe dos outros e\nlonge de razões simples (1:1, 2:1, 3:2…), para que os laços não se\nrealinhem. A escolha também evita que uma fita passe raspando num pedestal\nque ela não abraça.\n\n**Notas.** As marcas ficam presas ao material da fita, não ao espaço. Uma\nnota soa enquanto sua marca está sobre a cabeça. Os canais de **voz** têm\nnotas longas (2,5 a 6,5 s), e os de **piano** têm marcas curtas em X, que\nsão só o ataque. As alturas saem de uma escala sorteada por sessão\n(\"aeroporto\", com as notas de Eno: Fá, Láb, Dó, Réb, Mib…; ou lídio,\npentatônica, dórico, mixolídio), escolhidas para que qualquer encontro de\nnotas soe bem.\n\n**Som (Web Audio, nativo do navegador).**\n- *Voz*: três dentes-de-serra levemente desafinados e um triângulo passam\n  por filtros de formantes (\"a\", \"o\" ou \"u\", um por canal), com um pouco\n  de respiração (ruído filtrado) e um vibrato que chega devagar, como numa\n  voz que sustenta a nota.\n- *Piano*: seis parciais senoidais levemente inarmônicas, cada uma com seu\n  tempo de decaimento, e uma batida curta de martelo.\n- *Fita*: um único nó (`ConstantSource`) controla a afinação de todas as\n  vozes ao mesmo tempo, como a velocidade de um gravador. Fita mais rápida\n  soa mais aguda, e fita que para soa como um disco perdendo força. Também\n  há *wow* e *flutter* (duas oscilações lentas na afinação) e um chiado\n  baixo.\n- Reverberação por convolução com uma resposta de sala sintetizada (5,5 s,\n  com a cauda escurecendo) e um compressor no fim da cadeia.\n\n**Partitura.** Na faixa escura do alto, cada nota que soa é desenhada\nenquanto acontece, com a cor da marca de lápis do seu canal: os últimos\n90 segundos, nota por nota. Ali aparecem os acordes que ninguém compôs,\nque surgem do encontro de laços de comprimentos diferentes.\n\n**O gravador.** Cada canal tem uma etiqueta de fita crepe com as notas\nescritas à mão, um VU que responde à voz do canal, o período do laço e uma\nluz de liga/desliga. A fita tem brilho de óxido, sombra, marcas finas que\nmostram o movimento e uma emenda prateada. O laço que está cantando acende\nde leve na cor do seu lápis.\n\n## Interação\n\n- **clique**: liga o gravador (o navegador só permite som depois de um clique)\n- **arraste os pedestais**: muda o comprimento dos laços e, com ele, o ritmo\n- **clique numa fita**, no botão do canal ou nas teclas **1–7**: liga/desliga o canal\n- **↑ ↓** ou **rolagem**: velocidade da fita, de semitom em semitom (de −12 a +12)\n- **0**: volta à velocidade original\n- **espaço**: para ou solta a fita\n- **N**: outra sessão (outros pedestais, laços, notas e escala)\n- **S**: salva a imagem\n- `?seed=N` na URL fixa a sessão\n\n## Detalhes técnicos\n\n- p5.js v2 via CDN (jsDelivr), modo 2D; nada da biblioteca no zip. O som\n  usa só a Web Audio API do próprio navegador, sem bibliotecas. Fontes\n  IBM Plex e Caveat via Google Fonts.\n- Sessões reprodutíveis por semente (mulberry32).\n- Testado em navegador headless (Playwright): sem erros no console; o pico\n  do sinal de saída ficou entre 0,1 e 0,45, sem clipar. Também testei\n  variação de velocidade, parada da fita, arraste dos pedestais e telas\n  largas e em retrato.\n\n## O que vem nas próximas entregas\n\n**2ª entrega: compor com a fita**\n- **Gravar a própria voz** num trecho de um laço, com o microfone (`getUserMedia`).\n  O laço passa a cantar com a sua voz, sujeita à velocidade da fita.\n- **Lápis de cera e tesoura**: desenhar novas marcas na fita com o mouse,\n  apagar marcas, cortar um trecho e emendar invertido (fita tocada ao\n  contrário).\n- **Laçar e soltar pedestais**: incluir ou tirar um pedestal de um laço,\n  criar pedestais novos e mudar a forma do laço sem limite de dois\n  pedestais.\n\n**3ª entrega: os outros estúdios**\n- **Frippertronics**: dois gravadores com a mesma fita passando do primeiro\n  para o segundo, criando eco que se repete e decai. A distância entre a\n  cabeça de gravação e a de leitura é o tempo do eco, e dá para ver isso\n  na tela.\n- **Fase à la Steve Reich**: dois laços idênticos em velocidades\n  ligeiramente diferentes, que se defasam devagar.\n- Uma vista **3D (WEBGL)** do estúdio, com as fitas em alturas diferentes\n  e a câmera passeando entre os pedestais.\n- Exportar a sessão: gravar o áudio (`MediaRecorder`), salvar a partitura e\n  compartilhar a posição dos pedestais pela URL.\n\nAutor: **João Galetti**. Feito com o auxílio de AI (Claude, da Anthropic),\ncom verificação visual e do sinal de áudio de cada iteração via Playwright.",
+      "hasThumb": true,
+      "files": [
+        "README.md",
+        "index.html",
+        "sketch.js",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "O planeta que se lembra de voce entrega 1",
+      "id": "o-planeta-que-se-lembra-de-voce-entrega-1",
+      "name": "O planeta que se lembra de voce entrega 1",
+      "origin": "native",
+      "lastModified": 1794697482146,
+      "title": "O planeta que se lembra de você",
+      "tags": [
+        "AI",
+        "ChatGPT",
+        "p5.js",
+        "WEBGL",
+        "3D",
+        "memória",
+        "constelação",
+        "interação",
+        "persistência",
+        "rosa"
+      ],
+      "collection": "projeto final/Henrique Kezen V. H. Leite/1",
+      "description": "# O planeta que se lembra de você\n\n**Autor:** Henrique Kezen V. H. Leite  \n**Produzido com auxílio de AI — ChatGPT.**\n\n## Conceito\n\nUm pequeno planeta é capaz de se lembrar de quem o visita. Aproximar-se da rosa, abrir sua redoma e permitir que a chuva alcance o mundo não desaparecem quando a ação termina: cada acontecimento acende uma estrela colorida. Ligadas na ordem em que nasceram, essas estrelas formam uma constelação particular, construída pela relação entre visitante e planeta.\n\nA atmosfera e a ideia de “cativar” de *O Pequeno Príncipe* orientam o trabalho, sem reproduzir personagens ou cenas do livro. A obra interpreta o vínculo como uma transformação mútua: o visitante muda o céu, enquanto a rosa aprende gradualmente a reconhecer sua presença.\n\nEsta é a primeira de três entregas do projeto final. Ela funciona como uma obra completa, mas estabelece a memória persistente que sustentará as transformações das próximas etapas.\n\n## Interação\n\n- **Arrastar:** gira a câmera em torno do planeta.\n- **Roda do mouse ou pinça:** aproxima e afasta a câmera.\n- **Aproximar-se da rosa:** enquadra a redoma. Permanecer observando por cerca de dois segundos registra uma memória rosada.\n- **Abrir/fechar redoma:** permite ou interrompe o tempo biológico da rosa. A primeira abertura da visita registra uma memória dourada.\n- **Deixar chover:** libera parte das gotas suspensas. A primeira chuva da visita registra uma memória azul. A rosa só desperta se a redoma estiver aberta.\n- **Ver o planeta:** restaura o enquadramento inicial.\n- **Apagar memória:** após confirmação, remove a constelação armazenada neste navegador e reinicia a experiência.\n\n## As quatro memórias\n\n- **Branca — visita:** aparece no primeiro acesso e em cada nova visita válida.\n- **Rosada — observação:** nasce quando o visitante realmente permanece diante da rosa.\n- **Dourada — abertura:** registra o instante em que a proteção é retirada.\n- **Azul — chuva:** preserva a decisão de permitir que a água caia.\n\nCada ação só gera uma estrela por visita. As estrelas existem no espaço tridimensional da cena, pulsam suavemente e são ligadas cronologicamente. Suas posições são persistentes: atualizar a página não redesenha a constelação.\n\n## Memória e privacidade\n\nO histórico é armazenado exclusivamente no `localStorage` do navegador, sob uma chave própria do projeto. Nenhum dado é transmitido para servidores. O estado contém a versão do formato, a sessão atual, o horário da última visita, a sequência de memórias e as ações já registradas.\n\nUma sessão permanece válida por trinta minutos. Recarregar a página imediatamente não cria outra visita nem duplica ações. Depois desse intervalo, um novo acesso inicia outra visita e acrescenta uma estrela branca mais intensa. Dados ausentes, incompatíveis ou corrompidos são descartados com segurança. Se o armazenamento estiver bloqueado, o sketch continua funcionando durante a sessão, mas avisa que não poderá preservá-la.\n\n## A rosa e a familiaridade\n\nA quantidade de memórias produz internamente uma familiaridade contínua, calculada por `1 - exp(-memórias / 8)`. Esse valor nunca aparece como placar ou barra. Ele altera discretamente a postura, o movimento e a abertura inicial da rosa. Conforme a constelação cresce, a flor torna-se mais ereta, responde com mais confiança à chuva e se inclina suavemente em relação à câmera.\n\n## Construção e técnicas\n\nO sketch usa `createCanvas(..., WEBGL)` com p5.js 2.2.3 carregado por CDN. Não há imagens, texturas ou modelos externos.\n\n- `sphere`, `ellipsoid`, `cylinder`, `cone` e `torus` constroem planeta, pedras, árvore, gotas, rosa, redoma, estrelas e impactos.\n- `buildGeometry()` reúne planeta, árvore, gotas estáticas e estrelas decorativas em malhas reutilizáveis.\n- Um shader de vértices move milhares de gotas com pequenas fases espaciais na GPU.\n- `camera()` e `perspective()` implementam a câmera orbital com limites de distância e elevação.\n- Luzes direcionais e pontuais, materiais e normais produzem volume sem modelos ou texturas.\n- A constelação usa posições 3D determinísticas derivadas de cada memória, linhas cronológicas e animações de nascimento.\n- Eventos de ponteiro tratam mouse, toque e gesto de pinça.\n\nO código limita `deltaTime`, usa `pixelDensity(1)`, reduz a quantidade de gotas em telas estreitas e exibe no máximo 36 estrelas simultaneamente. O histórico completo continua preservado quando esse limite visual é ultrapassado.\n\n## Organização\n\n- Persistência e validação dos dados.\n- Sessões e registro de ações únicas.\n- Constelação e animação das novas estrelas.\n- Construção estática do planeta e da árvore.\n- Chuva, impactos e recomposição da água.\n- Ciclo biológico da rosa e movimento da redoma.\n- Câmera, mouse, toque e interface.\n\n## Ideias para o projeto final\n\n### Entrega 2 — O planeta se transforma\n\nO histórico de cuidado começará a alterar permanentemente a matéria do planeta. A chuva poderá deixar veios azulados, raízes poderão se expandir, vegetação e frutos poderão surgir e períodos excessivos sob a redoma poderão mudar a postura da rosa. Chuva, proteção e observação produzirão consequências visuais diferentes, ainda sem barras ou condições explícitas de vitória.\n\n### Entrega 3 — O planeta guarda a relação\n\nO tempo real entre visitas passará a influenciar o mundo. Ausências longas, diferentes trajetórias de transformação, uma constelação mais elaborada e a possibilidade de revisitar marcas formarão a versão final. Materiais, iluminação, transições, desempenho e uma possível paisagem sonora também serão refinados. Não haverá vitória ou derrota: cada histórico produzirá uma versão particular do planeta.\n\n## Arquivos\n\n- `index.html`: estrutura da nova experiência e carregamento do p5.js por CDN.\n- `style.css`: identidade visual e adaptação para telas pequenas.\n- `sketch.js`: cena WEBGL, persistência, constelação, rosa, chuva e interação.\n- `thumbnail.png`: captura representativa desta primeira entrega.\n- `README.md`: metadados, conceito, instruções, planejamento e prompt integral.\n\n## Limitações conhecidas\n\n- A memória pertence ao navegador e à origem em que o sketch é executado. Apagar os dados do site, usar navegação privada ou abrir a obra em outra origem cria outro histórico.\n- A iluminação do p5.js não produz sombras projetadas nesta cena.\n- O desempenho real varia conforme navegador e GPU.\n\n## Validação\n\n### Verificações realizadas\n\n- `sketch.js` passou na análise sintática com `node --check`.\n- A cena foi renderizada integralmente em Chromium com WebGL por software e p5.js 2.2.3. A cópia local usada exclusivamente durante o teste foi removida; o ZIP final contém apenas a referência ao CDN.\n- Foram acionadas e observadas as quatro memórias: visita branca, observação rosada, abertura dourada e chuva azul.\n- A constelação permaneceu com as mesmas quatro estrelas e posições depois de atualizar a página.\n- Repetir observação, abertura e chuva na mesma sessão manteve a contagem em quatro memórias.\n- Um teste automatizado com treze asserções verificou criação inicial, ações únicas, recarregamento, nova visita após 31 minutos, recuperação de JSON corrompido e lógica do comando de apagar memória.\n- Um estado propositalmente corrompido foi carregado no navegador; o sketch descartou os dados inválidos, iniciou uma memória válida e continuou renderizando.\n- Uma sessão envelhecida artificialmente em 31 minutos produziu uma segunda visita e uma nova estrela branca maior.\n- Rotação por arraste, aproximação com rolagem, foco na rosa, abertura da redoma, chuva, florescimento e retorno à vista geral foram exercitados no navegador.\n- O layout foi inspecionado em janelas de 1200 × 820 e 500 × 844 pixels, sem transbordamento horizontal. Em telas compactas, a constelação é aproximada do planeta para não desaparecer pelas bordas.\n- `thumbnail.png` é uma captura real do sketch executando com as quatro memórias conectadas.\n- A estrutura final contém apenas `index.html`, `style.css`, `sketch.js`, `README.md` e `thumbnail.png`.\n\n### Verificações externas pendentes\n\n- A importação no p5Front e a leitura do painel ⓘ não puderam ser executadas neste ambiente.\n- O navegador gráfico de teste bloqueou o CDN por uma restrição de certificado da infraestrutura. A renderização foi validada com a mesma versão 2.2.3 obtida do pacote oficial, e o HTML final voltou a apontar para `https://cdn.jsdelivr.net/npm/p5@2.2.3/lib/p5.min.js`.\n- A largura exata de 390 pixels e o gesto físico de pinça não foram executados; a folha de estilos possui regras específicas para larguras de até 390 pixels e o tratamento de dois ponteiros permanece implementado.\n\n## Prompt da primeira entrega\n\nO texto abaixo é a solicitação integral usada para produzir esta etapa.\n\n```markdown\nCrie a **primeira entrega do projeto final de programação criativa**, chamada **“O planeta que se lembra de você”**, usando **p5.js versão 2 em modo WEBGL**.\n\nUse como base o ZIP anexado do artefato anterior, **“O planeta que guarda a chuva”**. Reaproveite e melhore o código útil da cena 3D — planeta, chuva, rosa, redoma, árvore, câmera, shader, iluminação e otimizações —, mas trate esta como **uma entrega inteiramente nova**.\n\nO projeto deve ter:\n\n- novo conceito;\n- novo título;\n- nova identidade visual;\n- nova interface;\n- nova lógica de interação;\n- novo `README.md`;\n- nova `thumbnail.png`;\n- novos metadados;\n- novo ZIP de entrega.\n\nNão reutilize o README, a thumbnail, a coleção ou a apresentação visual do trabalho anterior. O código pode ser reaproveitado e refatorado porque esta obra é uma evolução técnica daquele experimento, mas todo o restante deve ser produzido especificamente para o projeto final.\n\n# Conceito\n\nUm pequeno planeta é capaz de se lembrar de quem o visita.\n\nCada ação significativa realizada pelo visitante transforma-se em uma estrela colorida permanente. Essas estrelas surgem no espaço ao redor do planeta e são ligadas cronologicamente, formando uma constelação particular. A constelação funciona como o registro visual da relação construída entre o visitante e aquele mundo.\n\nA inspiração vem da atmosfera e da ideia de “cativar” presente em *O Pequeno Príncipe*, mas a obra deve possuir composição, comportamento e narrativa próprios. Não quero uma reprodução literal do livro, personagens reconhecíveis ou uma coleção de referências. A relação com a obra deve aparecer principalmente no conceito de que criar um vínculo deixa marcas tanto em quem observa quanto naquilo que é observado.\n\nA obra deve transmitir que o planeta não guarda apenas eventos: ele gradualmente aprende a reconhecer o visitante.\n\n# Escopo desta primeira entrega\n\nEsta entrega deve apresentar uma obra funcional e completa por si mesma, embora seja apenas o primeiro estágio de um projeto que continuará evoluindo nas duas semanas seguintes.\n\nO núcleo desta etapa é a criação da **memória persistente do planeta**, representada por estrelas coloridas.\n\nImplemente quatro tipos de memória:\n\n- **Visita:** ao iniciar uma nova visita válida, surge uma estrela branca.\n- **Observação da rosa:** ao aproximar a câmera da rosa e permanecer observando-a por aproximadamente dois segundos, surge uma estrela rosada.\n- **Abertura da redoma:** ao abrir a redoma pela primeira vez naquela visita, surge uma estrela dourada.\n- **Chuva:** ao liberar a chuva pela primeira vez naquela visita, surge uma estrela azul ou turquesa.\n\nCada tipo de ação deve criar no máximo uma estrela por visita. Apertar repetidamente o mesmo botão não pode gerar várias estrelas iguais.\n\n# Definição de visita\n\nA primeira execução da obra cria a primeira visita.\n\nUma nova visita deve ser reconhecida somente quando tiver passado um intervalo mínimo desde a sessão anterior. Use aproximadamente **30 minutos** como intervalo padrão. Atualizar a página imediatamente não deve criar uma nova estrela branca nem permitir duplicar todas as memórias da mesma sessão.\n\nArmazene um identificador da sessão, o horário da visita e quais ações já foram registradas nela. Uma visita posterior válida deve criar uma estrela branca um pouco maior ou visualmente mais intensa que a estrela da primeira visita.\n\nInclua um comando discreto chamado **“Apagar memória”**, destinado a testes e apresentações. Ele deve pedir confirmação antes de remover os dados persistentes e restaurar a experiência inicial.\n\nSe o armazenamento local estiver indisponível, a obra ainda deve funcionar durante a sessão atual e informar discretamente que a memória não poderá ser preservada depois que a página for fechada.\n\nNenhum dado deve ser enviado para servidores. Toda a memória deve existir apenas no navegador do visitante.\n\n# Persistência\n\nUse `localStorage` com uma chave específica e suficientemente única para este projeto.\n\nArmazene, no mínimo:\n\n- versão do formato dos dados;\n- identificador ou instante inicial da sessão atual;\n- horário da última visita;\n- sequência cronológica das memórias;\n- tipo de cada memória;\n- posição espacial de cada estrela;\n- ações já realizadas na sessão;\n- quantidade total de visitas.\n\nImplemente validação dos dados carregados. Caso o conteúdo salvo esteja ausente, incompleto, incompatível ou corrompido, inicialize um estado válido sem interromper o sketch.\n\nA disposição das estrelas precisa permanecer igual depois de atualizar ou reabrir a página. Não gere posições diferentes a cada carregamento.\n\n# Constelação de memórias\n\nAs estrelas de memória devem existir no espaço tridimensional da cena, e não como elementos HTML sobrepostos à tela.\n\nCada memória deve possuir:\n\n- posição 3D persistente;\n- cor correspondente ao tipo de ação;\n- brilho ou pulsação suave;\n- tamanho com pequena variação;\n- instante ou ordem de criação.\n\nLigue as estrelas de memória por linhas finas e discretas, seguindo a ordem cronológica em que surgiram. A constelação deve crescer progressivamente, sem aparecer pronta desde o começo.\n\nAo criar uma nova memória:\n\n1. faça a estrela surgir suavemente;\n2. aumente seu brilho por um instante;\n3. desenhe gradualmente a ligação com a memória anterior;\n4. preserve o movimento contemplativo da cena.\n\nAs estrelas de memória precisam ser visualmente distinguíveis das estrelas decorativas do fundo. Evite aparência de neon, interface tecnológica, mapa de rede ou painel de dados. A constelação deve parecer poética, delicada e integrada ao pequeno universo.\n\nDistribua as memórias de maneira que as primeiras estrelas sejam visíveis no enquadramento inicial. As posições podem ser calculadas de forma pseudoaleatória, mas devem usar uma semente derivada da própria memória para permanecer determinísticas.\n\nEvite crescimento visual ilimitado. Defina uma quantidade máxima razoável de estrelas visíveis, preservando os dados históricos. Caso esse limite seja alcançado, memórias antigas podem perder intensidade ou integrar uma névoa estelar discreta, sem simplesmente quebrar a composição.\n\n# A rosa reconhece o visitante\n\nA rosa deve responder gradualmente à quantidade de memórias acumuladas. Essa resposta não deve usar níveis explícitos, barras, pontos ou mensagens de gamificação.\n\nCalcule internamente uma variável contínua de familiaridade. Uma possibilidade é:\n\n`familiaridade = 1 - exp(-quantidadeDeMemorias / 8)`\n\nUse essa familiaridade para produzir mudanças sutis:\n\n- inicialmente, a rosa é pequena, fechada e levemente recolhida;\n- conforme a constelação cresce, ela se torna mais ereta;\n- começa a inclinar-se discretamente na direção da câmera;\n- apresenta movimento orgânico mais perceptível;\n- quando recebe chuva com a redoma aberta, floresce com mais confiança e amplitude;\n- visitantes recorrentes devem perceber que a rosa reage de forma diferente, sem que o programa explique isso numericamente.\n\nA rosa não deve seguir a câmera de forma mecânica ou instantânea. Use interpolação suave e limite o ângulo de inclinação para que o movimento pareça orgânico.\n\nMantenha a lógica principal da redoma:\n\n- ela começa fechada;\n- pode ser aberta e fechada;\n- a chuva somente desperta a rosa quando a redoma está aberta;\n- fechar a redoma interrompe temporariamente o ciclo biológico;\n- reabrir permite que ele continue;\n- a primeira abertura válida da sessão registra a memória dourada;\n- fechar a redoma não precisa criar uma nova estrela nesta etapa.\n\nMantenha também o ciclo de crescimento, florescimento e murchamento, mas refatore-o para que a familiaridade influencie suavemente a postura e o florescimento.\n\n# Chuva e planeta\n\nReaproveite o sistema existente de gotas suspensas e chuva radial, preservando as otimizações com `buildGeometry()` e shader quando forem úteis.\n\nMelhore o que for necessário para integrar a chuva ao novo projeto:\n\n- mantenha o movimento lento das gotas;\n- preserve a abertura temporária no invólucro de água;\n- mantenha os impactos ou ondulações na superfície;\n- permita repetir a chuva depois da recomposição;\n- registre apenas a primeira chuva de cada visita como memória azul;\n- a chuva deve funcionar independentemente da posição da câmera;\n- a constelação não pode ser afetada indevidamente pelo shader das gotas.\n\nO planeta, a árvore invertida, a rosa e a água podem manter a linguagem visual do artefato anterior, mas devem receber refinamentos de composição, iluminação, materiais e enquadramento para pertencerem à nova obra.\n\n# Direção visual\n\nCrie uma nova identidade visual para **“O planeta que se lembra de você”**.\n\nA atmosfera deve ser:\n\n- contemplativa;\n- delicada;\n- melancólica sem ser sombria demais;\n- artesanal;\n- inspirada em pequenos mundos;\n- distante de interfaces tecnológicas ou de videogames convencionais.\n\nUse:\n\n- fundo azul muito escuro;\n- tons terrosos no planeta;\n- azul e turquesa na água;\n- rosa envelhecido na flor;\n- branco, rosa, dourado e azul nas memórias;\n- iluminação suave;\n- bastante espaço negativo;\n- tipografia elegante e discreta.\n\nA interface não deve copiar o layout editorial do artefato anterior. Refaça o HTML e o CSS com uma composição nova e responsiva.\n\nOs controles podem incluir:\n\n- **Aproximar-se da rosa**;\n- **Abrir redoma / Fechar redoma**;\n- **Deixar chover**;\n- **Vista do planeta**;\n- **Apagar memória**.\n\nUse textos de estado curtos e poéticos, sem explicar excessivamente a metáfora. A obra precisa ser compreendida principalmente pelo comportamento visual.\n\nA interface deve funcionar em desktop e celular. Arrastar deve girar a câmera; roda do mouse ou gesto de pinça deve controlar a aproximação. Os botões devem continuar utilizáveis em telas pequenas sem cobrir o planeta.\n\n# Som e recursos externos\n\nNão é necessário implementar áudio nesta primeira entrega.\n\nNão use imagens, modelos 3D ou texturas externas. Construa os elementos com primitivas, geometrias próprias, shaders e materiais do p5.js.\n\nNão inclua a biblioteca p5.js no ZIP.\n\n# Arquitetura do código\n\nOrganize o código em partes claras, separando responsabilidades como:\n\n- inicialização e renderização;\n- construção do planeta;\n- construção da árvore;\n- construção da rosa e da redoma;\n- partículas e chuva;\n- câmera e gestos;\n- armazenamento persistente;\n- gerenciamento de sessões;\n- criação das memórias;\n- renderização da constelação;\n- cálculo de familiaridade;\n- interface e textos de estado.\n\nEvite concentrar toda a nova lógica em `draw()`.\n\nComente em português principalmente:\n\n- decisões menos óbvias;\n- estrutura dos dados persistentes;\n- definição de uma nova sessão;\n- posicionamento determinístico das estrelas;\n- crescimento da constelação;\n- cálculo de familiaridade;\n- tratamento de dados corrompidos;\n- relação entre câmera e rosa.\n\nNão encha o código com comentários que apenas repitam literalmente cada linha.\n\n# Desempenho\n\nPreserve ou melhore as otimizações do artefato anterior.\n\nConsidere:\n\n- `pixelDensity(1)` quando necessário;\n- malhas de baixa complexidade;\n- geometrias estáticas reunidas com `buildGeometry()`;\n- quantidade reduzida de primitivas desenhadas individualmente;\n- número menor de gotas em telas pequenas;\n- limite para quantidade de estrelas e linhas visíveis;\n- limitação de `deltaTime` após retorno de abas inativas;\n- ausência de criação desnecessária de vetores e objetos a cada quadro.\n\nO projeto deve permanecer fluido em computadores comuns e utilizável em celulares razoáveis.\n\n# Limite desta entrega\n\nImplemente apenas o escopo da **entrega 1**.\n\nNão implemente ainda todas as transformações ambientais, consequências de ausência prolongada, múltiplas trajetórias finais ou áudio completo. Entretanto, organize o código para permitir essas expansões sem precisar reescrever toda a arquitetura.\n\nA primeira entrega precisa parecer uma obra funcional, e não uma demonstração técnica incompleta.\n\n# Planejamento das próximas entregas\n\nRegistre no README que o projeto deverá evoluir da seguinte maneira.\n\n## Entrega 2 — O planeta se transforma\n\nPretendo fazer com que o histórico de cuidado produza mudanças persistentes na matéria do planeta:\n\n- a chuva deixará veios azulados ou marcas na superfície;\n- raízes poderão se expandir;\n- vegetação e pequenos frutos poderão surgir;\n- períodos excessivos sob a redoma poderão alterar a postura da rosa;\n- chuva, proteção e observação produzirão resultados visuais diferentes;\n- o planeta começará a revelar consequências das escolhas acumuladas.\n\nEssas mudanças continuarão sem barras de estado ou condições explícitas de vitória.\n\n## Entrega 3 — O planeta guarda a relação\n\nPretendo acrescentar:\n\n- influência do tempo real transcorrido entre visitas;\n- reação visual a ausências longas;\n- diferentes trajetórias de transformação;\n- constelação mais elaborada;\n- possibilidade de revisitar as marcas deixadas;\n- transições e enquadramentos mais refinados;\n- polimento de materiais, iluminação e desempenho;\n- paisagem sonora opcional, caso ela fortaleça a obra;\n- experiência final responsiva e devidamente testada.\n\nO resultado final não deverá possuir vitória ou derrota. Cada histórico de interação deverá produzir uma versão particular do planeta.\n\n# Arquivos da entrega\n\nEntregue um único arquivo ZIP com os seguintes arquivos diretamente na raiz:\n\n- `index.html`\n- `sketch.js`\n- `style.css`\n- `README.md`\n- `thumbnail.png`\n\nArquivos JavaScript adicionais podem ser usados se melhorarem claramente a organização, desde que também estejam na raiz ou em uma estrutura simples suportada pelo p5Front.\n\nNão coloque uma pasta externa envolvendo o projeto dentro do ZIP.\n\nO arquivo da miniatura deve se chamar exatamente **`thumbnail.png`**. Não use nomes como `thumbnail (1).png`. A miniatura precisa ser uma captura real e representativa desta primeira entrega, mostrando o planeta e pelo menos algumas estrelas coloridas conectadas.\n\n# p5.js\n\nUse **p5.js versão 2**, carregado exclusivamente por CDN.\n\nUtilize, por exemplo:\n\n`https://cdn.jsdelivr.net/npm/p5@2.2.3/lib/p5.min.js`\n\nNão inclua `p5.js`, `p5.min.js` ou uma cópia da biblioteca no ZIP.\n\n# README.md\n\nO `README.md` deve começar exatamente com um preâmbulo YAML válido semelhante a:\n\n---\ntitle: O planeta que se lembra de você\ntags: [AI, ChatGPT, p5.js, WEBGL, 3D, memória, constelação, interação, persistência, rosa]\ncollection: projeto final/Henrique Kezen V. H. Leite/1\n---\n\nConfirme que **“Henrique Kezen V. H. Leite”** corresponde exatamente ao nome exibido no Classroom. Se o nome da plataforma for diferente, use no campo `collection` a grafia exata apresentada pelo Classroom.\n\nDepois do preâmbulo, o README deve conter:\n\n- título da obra;\n- nome do autor: **Henrique Kezen V. H. Leite**;\n- indicação de que houve auxílio de AI — ChatGPT;\n- conceito;\n- relação conceitual com a ideia de cativar, sem afirmar que a obra reproduz personagens do livro;\n- descrição do que está implementado nesta primeira entrega;\n- instruções de execução;\n- instruções de interação;\n- explicação das quatro cores de memória;\n- funcionamento das sessões e da persistência local;\n- explicação de que nenhum dado é enviado para servidores;\n- técnicas de p5.js e WEBGL utilizadas;\n- arquitetura e decisões de desempenho;\n- limitações conhecidas;\n- seção **“Ideias para o projeto final”**;\n- planejamento explícito das entregas 2 e 3;\n- lista dos arquivos do ZIP;\n- verificações realizadas;\n- este prompt reproduzido integralmente em uma seção chamada **“Prompt da primeira entrega”**.\n\nNão afirme que algum teste foi realizado caso ele não tenha sido efetivamente executado.\n\n# Validação obrigatória\n\nAntes de finalizar o ZIP:\n\n1. Verifique a sintaxe de todos os arquivos JavaScript.\n2. Execute o projeto em navegador.\n3. Confirme que o p5.js carregado pertence à versão 2.\n4. Confirme que não há erros no console.\n5. Teste a câmera com mouse.\n6. Teste zoom com roda do mouse.\n7. Teste interação por toque ou emulação móvel.\n8. Teste abertura e fechamento da redoma.\n9. Teste chuva com a redoma aberta e fechada.\n10. Teste criação de cada uma das quatro cores de estrela.\n11. Confirme que a mesma ação não cria várias estrelas na mesma visita.\n12. Atualize a página e verifique que a constelação mantém as mesmas estrelas e posições.\n13. Confirme que atualizar imediatamente não inicia uma nova visita.\n14. Teste o comando “Apagar memória”.\n15. Teste comportamento com dados inválidos no `localStorage`.\n16. Teste layout em tela larga e em largura próxima de 390 pixels.\n17. Confirme que `thumbnail.png` existe com esse nome exato.\n18. Inspecione o conteúdo final do ZIP.\n19. Confirme que a biblioteca p5.js não está incluída.\n20. Importe o ZIP no p5Front.\n21. Verifique se título, tags, coleção e thumbnail são reconhecidos.\n22. Execute dentro do p5Front e observe possíveis mensagens de erro que outras plataformas podem omitir.\n\nCaso alguma validação não possa ser realizada no ambiente disponível, declare isso objetivamente no README em vez de alegar sucesso.\n\nAo terminar, entregue o ZIP completo da primeira etapa do projeto final.\n```",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "style.css",
+        "sketch.js",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "helena giovanna projeto final 1",
+      "id": "helena-giovanna-projeto-final-1",
+      "name": "helena giovanna projeto final 1",
+      "origin": "native",
+      "lastModified": 1794697366090,
+      "title": "Portas sem Arquitetura",
+      "tags": [
+        "AI",
+        "ChatGPT",
+        "3D",
+        "WEBGL",
+        "generative-art",
+        "p5js",
+        "instalação-interativa",
+        "surrealismo"
+      ],
+      "collection": "projeto final/Helena Giovanna/1",
+      "description": "- Conceito\n\nPortas sem Arquitetura é uma instalação artística digital tridimensional que explora a ideia de passagem, espaço e possibilidades desconhecidas.\n\nA obra apresenta uma coleção de portas suspensas em um ambiente sem arquitetura definida. Cada porta possui características próprias, revelando estruturas recursivas, interiores luminosos, geometrias abstratas e profundidades aparentemente infinitas.\n\nA proposta é criar um espaço de exploração em que cada porta representa uma passagem diferente, sem necessariamente revelar seu destino.\n\nArtefato desenvolvido com auxílio de AI (ChatGPT).\n\n\n\n- Interação\n\nMouse: orbita a câmera e controla o zoom.\n\nClique ou espaço: abre e fecha a porta selecionada.\n\nTeclas 1 a 9: selecionam uma porta diretamente.\n\nR: gera uma nova instalação.\n\n\n\n- Tecnologia\n\np5.js 2.3.3\n\nJavaScript\n\nWEBGL\n\nHTML\n\nCSS\n\nO p5.js é carregado por CDN e não está incluído no projeto.\n\n\n\n- Próximas etapas\n\nAmpliar a variedade de formas, materiais e comportamentos das portas.\n\nExplorar efeitos de iluminação, profundidade e atmosfera para tornar cada passagem visualmente única.\n\nDesenvolver interações mais complexas entre as portas e o ambiente, reforçando a sensação de um espaço surreal e imprevisível.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "piscina de questoes etapa1 2",
+      "id": "piscina-de-questoes-etapa1-2",
+      "name": "piscina de questoes etapa1 2",
+      "origin": "native",
+      "lastModified": 1794697268836,
+      "title": "Piscina de bolinhas - Gráficos no Enade 2025",
+      "tags": [
+        "IA",
+        "generative",
+        "visualization"
+      ],
+      "collection": "projeto final/Gabriella Pinheiro/1",
+      "description": "Autor: Gabriella Pinheiro\n\nA ideia é fazer uma visualização de dados interativa para apresentar dados da prova do Enade 2025. O parque da escola com a piscina de bolinhas é uma metáfora para o uso dos gráficos como ferramenta pedagógica para ensino-aprendizagem. \n\nAs etapas do projeto são:\nEtapa 1 (13/11): piscina e dados, que já estão prontos, mais a escola e o parquinho como cenário estático, com a câmera livre para apresentação da cena inteira.\nEtapa 2 (20/11): a câmera congelada sobre a piscina e acontece a interação: pegar a bolinha colorida que abrirá o card com os dados da questão da prova.\nEtapa 3 (27/11): a abertura com o percurso de câmera, luz, som e o acabamento da narrativa. Acréscimo de visualizações para exploração de relações e agrupamentos. Inserção de títulos e textos explicativos, legendas e fontes.",
+      "hasThumb": true,
+      "files": [
+        "piscina-de-questoes/style.css",
+        "piscina-de-questoes/index.html",
+        "piscina-de-questoes/questoes.json",
+        "piscina-de-questoes/dados.js",
+        "piscina-de-questoes/sketch.js",
+        "index.html",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "a biblioteca impossivel",
+      "id": "a-biblioteca-impossivel",
+      "name": "a biblioteca impossivel",
+      "origin": "native",
+      "lastModified": 1794694317049,
+      "title": "A Biblioteca Impossível",
+      "tags": [
+        "generative",
+        "AI",
+        "Claude",
+        "Monks",
+        "Escher",
+        "Geometry",
+        "Penrose",
+        "Multiverse",
+        "Feromone",
+        "Illusion"
+      ],
+      "collection": "projeto final/Diogo dos Santos Machado Vieira/1",
+      "description": "# Biblioteca impossível\n\nUma escada de Penrose construída com geometria 3D **real e descontínua**, habitada por monges que sobem e descem sem fim. Feita em p5.js 2.0.3 (WEBGL) como trabalho final de disciplina de programação criativa.\n\nA peça junta três camadas que se explicam entre si:\n\n1. **Uma ilusão de percepção:** o anel parece fechar só de um ponto de vista exato.\n2. **Um sistema de agentes:** 40 monges com regras locais, sem coordenação global.\n3. **Emergência medida:** faixas de circulação e trilhas surgem sozinhas, e um painel mostra números.\n\n### Controles\n\n| Controle | O que faz |\n|---|---|\n| Arrastar | Gira a câmera (elevação limitada) |\n| `P` | Alterna projeção ortogonal e perspectiva |\n| `R` | Volta ao ponto ideal da ilusão |\n| `T` | Alterna a vizinhança dos agentes entre \"mundo\" e \"tela\" |\n| Slider **Revelar** | Separa os quatro lances e os pinta de cores diferentes |\n| Slider **Viés à direita** | Liga uma regra explícita de manter a direita |\n| Slider **Feromônio** | Liga a estigmergia nos degraus |\n| Sliders **az** e **el** | Ajuste fino (±3°) do ponto ideal |\n\n## Concepção\n\n### A ideia\n\nA escada de Penrose (Penrose e Penrose, 1958), popularizada por Escher em *Ascendente e Descendente* (1960), é um objeto que não existe: um circuito de degraus que sobe o tempo todo e volta ao ponto de partida. Em vez de desenhar a ilusão em 2D, o projeto a constrói em 3D de verdade. Uma peça de geometria real, com a trapaça escondida em um único deslocamento, e que se desfaz quando a câmera sai do lugar certo.\n\nO ponto de partida foi escolher algo em que os conceitos de 3D da disciplina fossem **necessários** para a ilusão funcionar, e não enfeite. Existe um objeto só, e tudo que se acrescentou serve a ele.\n\n### Por que a ilusão funciona\n\nO circuito não é fechado. É uma espiral de quatro lances (10, 10, 6 e 6 degraus) ligados por quatro patamares de canto, com 36 blocos no total (32 degraus e 4 patamares). Ao fim da volta, o último patamar fica deslocado do início em:\n\n```\nD = (4s, 4s, 32h)\n```\n\nonde `h` é a subida de um degrau e `s` é o seu passo. A diferença entre os lances (10 contra 6 degraus) é o que dá o deslocamento horizontal `4s`, e os 32 degraus dão a subida `32h`.\n\nEm projeção **ortogonal**, quaisquer pontos que diferem por um vetor paralelo à direção de visão caem no mesmo lugar da tela. Então basta que `D` seja paralelo à câmera. Isso fixa a geometria:\n\n- Azimute da câmera: 45° (porque `Dx = Dy`).\n- Elevação: `tan(el) = 32h / (√2 · 4s)`. Com a razão `s/h = 8/√6`, isso dá `tan(el) = √3`, ou seja, **60°**.\n\nPor isso a escada tem degraus rasos (passo cerca de 3,3 vezes a subida): é o custo de manter degraus contínuos e a emenda fechando exatamente a 60°. Na projeção em **perspectiva**, a profundidade denuncia o deslocamento e a ilusão quebra. O projeto usa essa quebra de propósito (tecla `P`).\n\n### A regra de cor da costura\n\nO fim do circuito, mais perto da câmera, mostra a parede lateral do último patamar por cima do primeiro degrau. Para essa costura não aparecer, o **primeiro degrau** (piso e lateral visível) recebe o mesmo tom da parede lateral do último patamar, sem degradê. É a mesma lógica de Escher: duas superfícies a profundidades diferentes só lêem como uma se tiverem o mesmo tom.\n\n### Geometria\n\n- `blocos()` gera a lista de blocos do circuito (degraus e patamares) e o primeiro degrau \"virtual\" do próximo ciclo.\n- `fita(a, B)` transforma **cada lance em um sólido só**: um perfil em dente de serra extrudado pela largura, montado à mão em um `p5.Geometry` (vértices, faces e normais). A primeira versão usava uma caixa por degrau, e as laterais liam como tijolos separados. A fita deixa a lateral uma faixa contínua.\n- Os quatro lances são geometrias separadas. Isso permite deslocá-los no modo revelação e é o que o deslocamento `D` faz de fato.\n\n### Shader\n\nUm shader GLSL próprio (`VERT` e `FRAG`) substitui as luzes do p5. Ele calcula o tom por **orientação da face** a partir da normal: topo claro, uma lateral média, a outra escura. Como duas faces iguais têm o mesmo tom, mesmo em posições diferentes, a emenda desaparece. A cor de vértice (RGB) leva dois usos:\n\n- o **degradê dos pisos** (mais escuros junto ao espelho do degrau), que é a única pista de onde cada degrau começa;\n- a **cor dos livros**, multiplicada pelo tom do carvalho.\n\n### Câmera\n\nÓrbita própria com `camera()` e elevação limitada. Perto do ponto ideal (menos de cerca de 6°), a câmera encaixa sozinha com easing. O modelo é construído com Z para cima, e uma `rotateX(HALF_PI)` o converte para o Y para baixo do p5.\n\n### Modo revelação\n\nO slider afasta os quatro lances na vertical, pinta cada um de uma cor (`TINTS`) e recua a câmera. Dá para girar e ver que se trata de uma espiral, não de um anel. O encaixe da câmera fica desligado enquanto o slider está fora de zero.\n\n## O sistema de agentes\n\nQuarenta monges, vinte subindo e vinte descendo, caminham pelo circuito. Cada um tem posição ao longo do caminho (`s`), posição lateral (`l`), velocidade e direção. As regras são **só locais**:\n\n- anda na própria velocidade preferida;\n- freia se há alguém à frente, na mesma faixa lateral, dentro do alcance de visão;\n- desvia lateralmente para o lado com mais espaço;\n- tem um pequeno ruído lateral, para quebrar a simetria.\n\nQuando um monge completa a volta, a posição salta em `D`. Na tela esse salto não aparece, e é isso que faz a caminhada parecer infinita. O caminho dos agentes usa uma normal lateral com quina (miter) nos cantos e muda de altura exatamente na borda entre blocos, para não haver saltos.\n\n### Emergência medida\n\nO painel mostra quatro números, atualizados a cada 20 quadros:\n\n| Medida | Como é calculada |\n|---|---|\n| Fluxo | Travessias da emenda nos últimos 10 s |\n| Velocidade média | Média das velocidades dos 40 agentes |\n| Segregação em faixas | Distância lateral entre o centro de quem sobe e o de quem desce, como porcentagem do máximo |\n| Sobreposições | Pares de monges fisicamente no mesmo lugar |\n\nA pergunta que o painel permite responder é: **faixas de circulação surgem sem que nenhuma regra as mencione?** Compare a segregação com tudo desligado, com o viés à direita (uma regra explícita) e com o feromônio.\n\n### Estigmergia (slider Feromônio)\n\nCada monge deposita feromônio na célula (bloco) e na faixa lateral (esquerda, centro, direita) onde está, em campos separados por população. O feromônio evapora com constante de tempo de cerca de 6 s. Com o slider ligado, o monge olha a célula à frente e vai para a faixa com mais rastro da própria população, evitando o rastro da outra. O feromônio aparece como marcas translúcidas sobre os pisos.\n\n### Percepção pela tela (tecla T)\n\nNo modo \"mundo\", o monge vê quem está à frente no caminho. No modo \"tela\", só vê quem também está perto dele **na projeção 2D**. No ponto ideal isso não muda nada, porque a emenda não aparece na projeção. Fora dele, o anel se abre na tela, quem está do outro lado da emenda deixa de ser visto, e as sobreposições tendem a subir. É o ponto em que a ilusão de percepção e o sistema de agentes se encontram.\n\n## Estilo: biblioteca\n\n- **Paleta:** pisos em carvalho, fundo de pergaminho no tema claro e madeira escura no tema escuro.\n- **Estantes baixas:** livros em pé nas bordas externas dos degraus e dos patamares (e na frente dos patamares de canto). O padrão e a cor de cada livro dependem só do índice do bloco, então o bloco virtual 36 equivale ao 0 e a emenda continua invisível.\n- **Monges:** feitos de primitivas (hábito em dois cilindros, cordão, capuz, rosto e mãos), virados para o sentido da caminhada. Quem sobe usa hábito escuro e quem desce usa hábito claro, como os dois grupos da litografia de Escher.\n\n## O fundo: outras realidades\n\nAo longe, em névoa, aparecem silhuetas de outras estruturas impossíveis, como se fossem outras realidades onde a mesma ilusão acontece:\n\n- **Anéis de Penrose com outras proporções** (8/4, 9/3, 14/6 e 7/5 degraus por lance). Cada um recebe a razão passo/subida `s = 2(n1+n3)h / (√6 (n1−n3))`, que faz o seu deslocamento ficar paralelo à mesma visão ideal.\n- **Triângulos de Penrose**, feitos de três barras (x, y, z) cujo fim fica deslocado em `(L, L, √6·L)`, o mesmo princípio da escada.\n- **Uma torre**, com o anel principal empilhado duas vezes.\n\nTodas fecham no mesmo ponto de vista e **se desfazem juntas** quando a câmera sai dele. Elas ficam em posições de tela fixadas no ponto ideal e em profundidades diferentes, então ao girar aparece paralaxe. A névoa é um uniform do shader (`uFog` e `uFogCol`): quanto mais longe, mais a cor se aproxima da cor do fundo, e a estrutura interna vira só um traço de tom. Em perspectiva, o afastamento também as diminui.\n\n## Conceitos da disciplina usados\n\n| Conceito | Onde aparece |\n|---|---|\n| Projeção ortogonal e perspectiva | A própria ilusão, e sua quebra com `P` |\n| Câmera (`camera`) e órbita | Controle do ponto de vista, com limites e encaixe |\n| Geometria customizada (`p5.Geometry`) | A fita de cada lance e as estantes |\n| Normais | Base do tom por face no shader |\n| Transformações e hierarquia (`push`/`pop`, `translate`, `rotate`, `scale`) | Conversão Z para cima, monges, marcas de feromônio |\n| Shader (GLSL) | Tom por face, degradê de piso, cores de livros e de lances |\n| Atributos de vértice | Normais e cor de vértice no shader |\n| Buffer de profundidade | Faz a peça mais próxima cobrir a mais distante, base da costura |\n| Animação e easing | Encaixe da câmera, passos dos monges |\n| Agentes e emergência | Contrafluxo, faixas, estigmergia e vizinhança pela tela |\n\nObservação: as luzes do p5 (`directionalLight` etc.) **não** são usadas. O tom das faces é calculado no shader, de forma fixa por orientação, porque a ilusão exige que faces iguais tenham o mesmo tom em qualquer posição.\n\n## Decisões e o que foi descartado\n\n- **Terraços planos:** uma versão trazia terraços planos nos lances longos para fechar a conta. Eles quebravam a leitura de uma escada contínua, então foram trocados por lances só de degraus, com degraus mais rasos.\n- **Hachura de gravura:** a primeira versão desenhava hachura nas laterais, como uma gravura. O olho a lia como textura de material e perdia o volume, então foi trocada por tons chapados.\n- **Caixas por degrau:** foram trocadas pela fita contínua, pela razão já descrita.\n- **Contorno por aresta:** foi removido, porque criava linhas de tijolo nas laterais.\n\n## Ideias para continuar\n\n- Sombras suaves de contato entre livros e degraus.\n- Uma regra de leitura: monges que param para \"ler\" em certos livros, gerando engarrafamentos emergentes.\n- Gravar as métricas ao longo do tempo e mostrar um gráfico de segregação contra feromônio.\n\n## Referências\n\n- L. S. Penrose e R. Penrose, \"Impossible objects: a special type of visual illusion\", *British Journal of Psychology*, 1958.\n- M. C. Escher, *Ascendente e Descendente* (litografia), 1960.\n- P.-P. Grassé, sobre estigmergia (1959).\n- D. Helbing e P. Molnár, modelo de forças sociais para o movimento de pedestres, 1995.\n- Documentação do p5.js 2.0 (`p5.Geometry`, shaders, `camera`, `ortho`).",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "entrega final diego.1",
+      "id": "entrega-final-diego1",
+      "name": "entrega final diego.1",
+      "origin": "native",
+      "lastModified": 1794694242582,
+      "title": "",
+      "tags": [
+        "AI",
+        "Gemini",
+        "WebGL",
+        "Interativo",
+        "ArteGerativa",
+        "SinteseVetorial",
+        "ProjetoFinal"
+      ],
+      "collection": "projeto final/DIEGO D ORSI DUARTE/1",
+      "description": "# Sintetizador Vetorial Modular & Câmara de Interferência 3D (Entrega 1)\n\n**Coleção:** `projeto final/[Diego D Orsi Duarte]/1`  \n**Tags:** `AI`, `Gemini`, `WebGL`, `Interativo`, `ArteGerativa`, `SinteseVetorial`  \n**Autor:** Diego D Orsi Duarte  \n\n---\n\n## 1. Visão Geral do Projeto\nEste projeto desenvolve um **Sintetizador Vetorial Modular Interativo em 3D** construído com **p5.js (versão 2)** em modo **WebGL**. Inspirado em sintetizadores modulares analógicos (como sistemas Eurorack/Buchla) e osciloscópios vetoriais em modo XY, o artefato traduz relações matemáticas de frequência, amplitude e modulação de fase (FM) em esculturas luminosas tridimensionais dentro de um rack industrial iluminado.\n\nEm vez de recorrer a formas genéricas de 3D procedural, o trabalho une **design de hardware eletromecânico** (potenciômetros rotativos, indicadores de LED, conectores *jack* sextavados e chassis de alumínio anodizado) com **síntese geométrica em tempo real** (trajetórias de Lissajous 3D moduladas por fase).\n\n---\n\n## 2. O que foi Implementado nesta 1ª Entrega (Semana 1)\n- **Arquitetura Modular Responsiva em WebGL:** Canvas adaptativo (`windowWidth` / `windowHeight`) com escalonamento dinâmico proporcional à janela e câmera orbital interativa (`orbitControl`).\n- **4 Módulos de Controle Paramétrico (`OSC_X`, `OSC_Y`, `OSC_Z`, `MOD_FM`):**\n  - Cada módulo possui barra de LED pulsante sincronizada com sua frequência, escala radial, potenciômetro rotativo iluminado, indicador de multiplicador harmônico e conectores *jack*.\n- **Câmara Central de Interferência 3D:**\n  - Renderização em tempo real de curvas harmônicas tridimensionais com modulação cruzada de fase, interpolação cromática (ciano, magenta e âmbar) e nós energizados percorrendo a trajetória.\n- **Iluminação Cênica e Materiais Avançados:**\n  - Combinação de `ambientLight`, `directionalLight` e três `pointLight` dinâmicas interagindo com superfícies de `ambientMaterial`, `specularMaterial`, `shininess` e `emissiveMaterial`.\n- **Controles Interativos Iniciais:**\n  - **Clique do Mouse / Tecla `R`:** Sorteia um novo *patch* harmônico completo (frequências, fases, amplitudes e ângulos dos potenciômetros).\n  - **Arrastar / Scroll:** Orbitar livremente e aplicar zoom no equipamento 3D.\n  - **Teclas `1` a `4`:** Incrementa individualmente o multiplicador de frequência de cada um dos 4 módulos.\n  - **Tecla `M`:** Alterna entre modos de visualização da câmara (ressonância dupla vs. malha simples).\n  - **Tecla `Espaço`:** Congela/retoma a evolução temporal da fase para inspeção detalhada.\n\n---\n\n## 3. Planejamento e Evolução até a Etapa Final (3ª Entrega)\n\n### Etapa 2 — Semana 2 (`projeto final/[Seu Nome no Classroom]/2`)\n- **Sistema de Cabos Físicos Interativos (Patch Cables 3D):** Implementação de curvas catenárias tridimensionais com física simples (gravidade e balanço suave) conectando os conectores *jack* dos módulos às entradas da câmara.\n- **Conexão por Clique (Seleção de Portas):** Permitir que o usuário clique em uma porta de saída e em uma porta de entrada para criar ou remover roteamentos de modulação manualmente.\n- **Novos Modos de Distorção Harmônica (Wavefolder & Ring Modulator):** Adição de algoritmos de dobramento de onda e quantização espacial na câmara central, além de presets salvos via teclado.\n\n### Etapa 3 — Semana 3 / Entrega Final (`projeto final/[Seu Nome no Classroom]/3`)\n- **Síntese Sonora em Tempo Real (Web Audio API / p5.sound):** Sincronizar os parâmetros visuais dos 4 módulos (`OSC_X`, `OSC_Y`, `OSC_Z` e `MOD_FM`) com osciladores de áudio reais (síntese FM/AM), fazendo com que o usuário ouça exatamente a harmonia geométrica que está esculpindo na tela.\n- **Persistência de Fósforo e Efeitos Ópticos:** Simulação de rastro luminoso na câmara vetorial e reflexos especulares aprimorados no visor.\n- **Interface HUD Minimalista (Overlay 2D):** Exibição opcional (ligada/desligada por tecla) com os valores exatos de razão de frequência (ex.: `3:4:5`), taxa de modulação FM e guia rápido de atalhos.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "Trabalho Final 1 Carolina Abdu",
+      "id": "trabalho-final-1-carolina-abdu",
+      "name": "Trabalho Final 1 Carolina Abdu",
+      "origin": "native",
+      "lastModified": 1794693890949,
+      "title": "Sistema em 60 Hz",
+      "tags": [
+        "AI",
+        "Claude",
+        "2D",
+        "simulação",
+        "sistema elétrico",
+        "agentes",
+        "frequência",
+        "osciloscópio"
+      ],
+      "collection": "projeto final/Carolina Abdu/1",
+      "description": "A obra é uma simulação interativa de um sistema elétrico em 2D, em que o mapa mostra o que acontece quando a demanda muda. Uma hidrelétrica, uma usina solar, três térmicas (A, B e uma turbina de pico) e três cargas (cidade, indústria e litoral) ficam ligadas por nove linhas. Cada usina é um agente: reage ao desvio de frequência, respeita uma rampa de subida e, no caso das térmicas, tem um tempo de partida visível na tela. A frequência vem de um balanço simples entre geração e carga e aparece num osciloscópio, cuja senoide deriva e muda de cor quando se afasta de 60 Hz, junto de um histórico de frequência com faixas de alarme. Quando a demanda sobe, térmicas partem; quando cai muito, elas desligam, a solar é limitada e a hidrelétrica reduz a geração e verte água na barragem. O fluxo de potência é calculado nas linhas (aproximação DC), que mudam de verde para vermelho, ganham brilho e vibram ao passar de 100% da capacidade, enquanto partículas mostram o sentido do fluxo. O dia típico acorda a cidade pela manhã, deixa a solar sustentar o meio-dia e a perde no fim da tarde, e o gráfico da carga líquida mostra o efeito da curva do pato. No modo livre, a hora, a demanda extra, um pico de +200 MW e uma nuvem sobre a solar podem ser controlados pelos botões e barras. A IA (Claude) foi utilizada como ferramenta de apoio no desenvolvimento do código em p5.js, auxiliando na modelagem da frequência e do despacho, no cálculo do fluxo nas linhas e na organização do painel. A partir dessas sugestões, o código foi adaptado e refinado para alcançar o resultado visual desejado.\n\n**Prompt sugestivo:**\n\n> Crie um sketch em p5.js (versão 2, por CDN) de uma simulação didática de um sistema elétrico em 2D: um mapa com 6 barras e 9 linhas, uma hidrelétrica, uma usina solar, três térmicas e três cargas. A frequência (60 Hz) deve variar conforme o balanço entre geração e carga, e aparecer num osciloscópio com histórico. As usinas são agentes com rampa, controle por desvio de frequência e tempo de partida; térmicas partem quando a demanda sobe e desligam quando cai, a solar é limitada e a hidro verte água quando sobra geração. Calcule o fluxo nas linhas (fluxo DC) e mostre o carregamento por cor, brilho e vibração. Inclua um dia típico (demanda com pico da manhã, solar ao meio-dia e pico da noite, com gráfico de geração e carga líquida) e um modo livre com controles de hora, demanda extra, pico de demanda e nuvem.\n\n**Ideias para o trabalho final e o que será acrescentado até a 3ª entrega:**\n\nEsta é a 1ª entrega: o núcleo da simulação (frequência, despacho das usinas, fluxo nas linhas e dia típico com curva do pato). O objetivo é transformar a simulação numa peça visual e didática, em que se entenda o sistema elétrico só de olhar.\n\n- Caso estocástico: falhas aleatórias de usinas e de linhas, vento e nuvens imprevisíveis e picos de demanda sem aviso. O sistema reage ao imprevisto, e um placar mede por quanto tempo ele aguenta sem cortar carga.\n- Contingência de linha (critério N-1): ao perder uma linha, o fluxo se redistribui e outras linhas sobrecarregam, com risco de efeito cascata.\n- Mais fontes: usina eólica e baterias, que mostram como o armazenamento suaviza a queda da solar no fim da tarde.\n- Visual e som: shaders (aula 10) para o brilho das linhas e a persistência do osciloscópio, e um zumbido cujo tom acompanha a frequência.\n- Mapa mais autoral: relevo desenhado com ruído (aula 4), nuvens que passam de fato sobre a usina solar e dia e noite mais marcados.\n- Interface: cenários prontos (dia comum, onda de calor, seca com reservatório baixo), botão para reiniciar e ajuste da dificuldade.\n- Polimento: mensagens didáticas durante os eventos, atalhos de teclado e revisão do desempenho.\n\nPlano de entregas: 2ª entrega com o caso estocástico e a contingência de linha; 3ª entrega com as novas fontes, shaders, som, cenários e o polimento final.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "FinalParte1ArturTaboada",
+      "id": "finalparte1arturtaboada",
+      "name": "FinalParte1ArturTaboada",
+      "origin": "native",
+      "lastModified": 1794693731668,
+      "title": "Reconstituição",
+      "tags": [
+        "AI",
+        "Claude",
+        "fracture",
+        "shape-matching",
+        "inverse-problem",
+        "geometry",
+        "generative",
+        "p5js"
+      ],
+      "collection": "projeto final/Artur Taboada Dios Carvalho/1",
+      "description": "# Reconstituição\n\nUm disco de vidro é atingido num ponto. Ele trinca, os cacos se afastam — e então o programa remonta o disco inteiro olhando **apenas para o formato das bordas quebradas**. A partir do momento em que os cacos se separam, quem remonta não sabe mais de onde veio nenhum deles: não recebe posição, não recebe rotação, não recebe vizinhança. Recebe um saco de contornos.\n\nA tese que o sketch quer tornar visível é esta: **a informação que permite remontar um objeto quebrado não está em lugar nenhum além da aspereza da fratura.** Uma superfície de ruptura frágil não é lisa — é rugosa, e a rugosidade é a *mesma* dos dois lados da quebra, porque os dois lados eram o mesmo lugar um instante antes. É por isso que um restaurador diz que dois cacos eram vizinhos sem nunca ter visto a peça inteira. Tirada a aspereza, não sobra nada: duas bordas lisas de mesmo comprimento são indistinguíveis.\n\nO disco tem uma borda lisa, que não é fratura, e ela está lá de propósito — é o contraexemplo dentro da própria peça. Nenhuma linha do programa fala em \"aro\" ou em \"borda original\"; mesmo assim ela nunca é usada para remontar nada, porque não tem o que dizer. Como isso acontece sozinho é a parte mais interessante do código, e está contada abaixo.\n\n## Como o sketch funciona\n\n**A quebra não é Voronoi.** Voronoi é o atalho de sempre e produz um padrão que não se parece com nada quebrado. O padrão aqui é o do impacto em placa frágil: trincas radiais partindo do ponto atingido e trincas circunferenciais ligando radiais vizinhas, com os anéis cada vez mais largos conforme se afastam — cacos miúdos perto da pancada, cacos grandes na periferia. É o desenho que qualquer um reconhece num para-brisa. Algumas trincas circunferenciais não vão até o fim, e onde elas falham dois cacos saem grudados num só; é o que tira a regularidade do leque.\n\n**A aspereza é auto-afim.** Cada trinca é uma soma de harmônicos com amplitude caindo com a frequência segundo um expoente, que é o jeito usual de escrever uma curva auto-afim. Em fratura frágil esse expoente ronda 0,8, medido assim em vidro, metal e rocha. Vale registrar que o número de harmônicos foi decidido pela aparência e confirmado pela medição: com poucos, o primeiro domina e a trinca serpenteia feito rio — na tela virava peça de quebra-cabeça, não vidro partido. Com muitos, o desenho fica certo **e** o casamento fica mais fácil, porque a informação que identifica uma borda está no número de ondulações independentes, não no tamanho delas.\n\n**O desgaste existe para o problema não ser de brincadeira.** Depois de separado, cada caco é amassado por conta própria. Sem isso, dois cacos vizinhos teriam a borda idêntica ao bit e o casamento seria exato — o que não acontece com nada que se quebra de verdade.\n\n**O que o solucionador recebe** é uma lista de polilinhas fechadas, em ordem sorteada, cada uma centrada no próprio centroide e girada por um ângulo aleatório. A linha que faz essa entrega está escrita de propósito para ser auditável: `resolver(sacola.contornos)`, e nada mais atravessa.\n\n**Como ele trabalha**, em cinco passos:\n\n1. Reamostra cada contorno a passo constante e guarda, em cada ponto, quanto a tangente girou desde ali — um número que não muda se o caco for girado ou arrastado.\n2. **Peneira:** para cada par de cacos, procura trechos em que esse giro acumulado corre junto nos dois, um deles lido ao contrário.\n3. **Confere:** em cada trecho candidato, acha por mínimos quadrados o movimento rígido que põe uma borda sobre a outra e mede o que sobra, em pixels. Depois estica o trecho pelas pontas até as duas bordas se afastarem.\n4. **Desambigua:** trechos rivais pela mesma beirada se anulam, a não ser que um seja bem mais longo que os outros.\n5. **Monta:** aceita os pares do mais longo para o mais curto, sem fechar ciclo, e percorre a árvore encaixando um caco de cada vez.\n\n**Não existe etapa de achar cantos**, e o passo 3 explica por quê: o canto aparece sozinho, como a posição em que duas bordas param de concordar. Procurá-lo antes seria procurar o que já vem de brinde — e, como a seção sobre IA conta, também não funciona.\n\n**A busca acontece na tela, aos poucos.** Resolver a quebra inteira de uma vez levava um quarto de segundo aqui e bem mais numa máquina lenta, e isso aparecia como uma tela branca no começo: o navegador não desenha quadro nenhum enquanto uma função não devolve. A varredura passou a ser feita alguns pares por quadro, com o ritmo calculado para a quebra inteira caber em cerca de duzentos quadros, qualquer que seja o número de cacos. O arranque caiu de 250 ms para menos de 20 ms — um quadro.\n\nNão foi só conserto de desempenho, e o ganho maior é outro: a busca é a parte mais interessante do programa e estava acontecendo escondida. Agora ela é a terceira fase. Um fio liga o par de cacos que está sendo comparado naquele instante, e cada trecho dado por coincidente pisca em azul e some em menos de um segundo. São as **tentativas** — por volta de oitenta e cinco delas numa quebra típica, contra cerca de vinte que sobrevivem às peneiras. O contraste entre os muitos piscas azuis e os poucos fios dourados que ficam no encaixe é a melhor explicação que achei do que o programa faz.\n\n**O aro cai fora no passo 4.** Um trecho áspero de fratura casa com um caco só, o que estava do outro lado. Um trecho liso casa com todo mundo que também tenha um trecho liso, porque não tem o que os distinga. Jogar fora os trechos reivindicados por vários parceiros elimina a borda original sem jamais mencioná-la.\n\n## O que foi medido\n\nVinte e cinco quebras seguidas, em navegador, somando 522 cacos:\n\n| | |\n|---|---|\n| cacos por quebra | 21,1 em média |\n| cacos devolvidos ao lugar certo | 526 de 528 — **99,6%** |\n| quebras remontadas por inteiro | 23 de 25 |\n| pior quebra isolada | 95% dos cacos recuperados |\n| pares de vizinhança aceitos | 501 |\n| pares aceitos que estavam **errados** | **nenhum** |\n| erro de posição depois de alinhar | 0,95 px |\n| tempo para resolver uma quebra | 262 ms, repartidos por ~200 quadros |\n| tempo do arranque, antes do primeiro quadro | cerca de 11 ms |\n\nNenhum falso positivo em 501 decisões é o número de que mais me orgulho, e ele não veio de sorte: veio de exigir que cada casamento passasse por três provas independentes — o giro acumulado, a distância em pixels e a unicidade.\n\n## O que não volta\n\nQuase tudo volta: em 25 quebras, 23 fecharam completas. O caco que sobra, quando sobra, é sempre do mesmo tipo — um dos miúdos do centro, pulverizados pela pancada. Isso não é defeito, é consequência direta da tese. Uma borda curta carrega poucas ondulações, e poucas ondulações não bastam para identificar ninguém. É exatamente o que acontece numa bancada de restauro, onde a caixinha de lascas sem destino fica para sempre ao lado da peça remontada.\n\nE o disco volta a ficar inteiro **torto**. Encaixe é informação relativa: os cacos sabem quem era vizinho de quem e não sabem que lado era para cima. Medindo o giro entre a reconstituição e a verdade nas 25 quebras, ele cai em qualquer lugar do círculo — 77°, −73°, −126°, 175°, −36°… A inclinação com que a peça termina não é um erro do programa: é a parte da pergunta que não tem resposta.\n\n## Inspiração\n\nA referência direta é a bancada de restauro arqueológico, onde a reconstituição de uma peça é feita por tentativa sobre o formato das fraturas, e onde a regra de ouro é que a quebra é a assinatura. A segunda é o *kintsugi*, pela ideia de que a linha da quebra pode ser o que há de mais informativo numa peça, em vez do que se esconde — daí os trechos casados acenderem em dourado no momento do encaixe, e só então.\n\n## O que vem nas próximas entregas\n\n**Etapa 2 — tornar o problema difícil de verdade.** Hoje a montagem é uma árvore: pares que fechariam ciclo são recusados, o que joga fora justamente a informação mais forte que existe. Se A encaixa em B, B em C e C em A, os três giros têm de somar zero, e um casamento falso quase nunca passa nesse teste. Com coerência de ciclos dá para (a) aceitar evidências fracas que hoje são descartadas, recuperando os cacos miúdos do centro, e (b) misturar na mesa os cacos de **dois** discos diferentes e tirar de letra, que é o problema real do arqueólogo. Junto vêm: peças faltando de propósito, a pancada no lugar em que o usuário clicar e com a força que ele der, e materiais diferentes — vidro temperado se estilhaça em grãos quase iguais, cerâmica racha em radiais longas, gelo lasca em conchas.\n\n**Etapa 3 — sair do plano e fechar o argumento.** A remontagem passa a ser de uma casca fina curva, quebrada em três dimensões: as bordas viram curvas no espaço, o casamento passa a comparar torção além de curvatura, e o encaixe vira um movimento rígido de seis graus de liberdade. E, se couber, a conclusão natural do tema: **inferir o caco que falta**. Fechada a remontagem, o buraco que sobra tem um contorno conhecido, e dele se pode deduzir a forma exata da peça perdida — que é literalmente o que um restaurador faz quando modela a reposição. Essa peça inferida seria exportável.\n\n## Sobre o uso de IA\n\nO artefato foi desenvolvido com auxílio do Claude (AI), a partir da minha escolha de tema e de muitas rodadas de medição em navegador. Este projeto foi, de longe, o que mais exigiu derrubar ideias por medição, e vale registrar quatro:\n\n**Achar cantos não funciona.** A primeira versão cortava cada contorno em arestas pelos cantos, para comparar aresta com aresta. Medindo o ângulo em cada canto verdadeiro: a mediana é 88°, ótima — mas os mais fracos viram 5°, enquanto a aspereza no meio de uma trinca chega a virar 42°. As duas populações se sobrepõem e não existe limiar que as separe. O método inteiro foi para o lixo.\n\n**Curvatura é ruidosa demais.** A segunda versão comparava curvatura ponto a ponto. As duas reamostragens caem em pontos ligeiramente diferentes da mesma borda, e só essa defasagem já produz uma discordância do tamanho do sinal — havia pares de vizinhos verdadeiros cuja corrida dava zero. A troca pelo giro *acumulado* resolveu: é uma soma em vez de uma diferença, e somar alisa o ruído em vez de amplificá-lo.\n\n**O aro encaixa mesmo, e isso não é bug.** A corrida falsa mais longa ficava inteira sobre a borda do disco — o raio dos seus pontos variava entre 228 e 230 num disco de 231 — com resíduo de 1,3 px, igual ao de um encaixe verdadeiro. Levei um tempo tentando consertar uma coisa que estava certa: duas partes do mesmo círculo *encaixam*, porque um círculo girado sobre si próprio continua sendo ele. O que falta ao aro não é semelhança, é informação, e isso exigiu um critério de natureza diferente — o da unicidade.\n\n**Quase acertei e estava errado, duas vezes seguidas.** Devolver só a corrida mais longa de cada par parecia óbvio; nos pares que eram *mesmo* vizinhos, a mais longa costumava ser a do aro, e o trecho de fratura, que é o que presta, ficava de fora. E a primeira versão da desambiguação derrubava as duas reivindicações rivais, o que fazia uma corrida falsa encostada numa verdadeira levar a verdadeira junto: sobravam sete de oitenta. As duas só apareceram porque eu estava contando quantos pares aceitos eram *de fato* vizinhos, e não só olhando se a tela ficava bonita.\n\nPor fim, duas correções de desempenho, que acabaram mudando o trabalho. A varredura de todo ponto contra todo ponto levava 2.150 ms por quebra. Indexando os pontos por uma etiqueta — quanto a tangente gira nos dezesseis passos seguintes —, cada ponto passa a ser comparado só com os poucos de etiqueta parecida, e o tempo caiu para 230 ms, sem perder um único casamento. Mesmo assim, 230 ms gastos de uma vez só travam o navegador, e o sintoma era uma tela branca ao apertar \"Run\". Reparti a varredura em alguns pares por quadro — e, ao fazer isso, percebi que estava escondendo justamente o que havia de mais interessante para quem assiste. A busca virou uma fase visível, que é hoje o trecho mais longo do ciclo.\n\n## Autor\n\nArtur Taboada Dios Carvalho\n\n## Como visualizar este projeto\n\n**Usando o ambiente online (p5front)**\n\n1. Acesse o ambiente de desenvolvimento utilizado na disciplina: [https://esperanc.github.io/p5front/](https://esperanc.github.io/p5front/).\n2. Copie todo o conteúdo do arquivo `sketch.js` deste zip e cole na área de edição de código do site.\n3. O resultado será renderizado na tela de visualização após o botão \"Run\" ser clicado. Cada ciclo leva cerca de dez segundos e tem seis tempos: o disco inteiro; a trinca correndo a partir do ponto atingido; os cacos se afastando; **a busca**, em que um fio liga o par que está sendo comparado e cada trecho tentado pisca em azul; a remontagem, com os trechos que sobreviveram acendendo em dourado; e o repouso. Vale esperar o ciclo todo pelo menos uma vez, e vale olhar com atenção a quarta parte, que é onde o programa decide tudo. Cada clique na tela — ou a tecla `R` — atinge um disco novo.\n\n### Controles\n\n| tecla / gesto | ação |\n|---|---|\n| clique ou `R` | atinge outro disco |\n| `espaço` | pausa |\n| `A` | avança para a próxima fase |\n| `E` | acende ou apaga os trechos casados |\n| `D` | mostra a conferência: quantos cacos voltaram ao lugar, quantos pares foram aceitos e quantos estavam certos |\n| `S` | salva a imagem num PNG |\n\nNenhuma biblioteca externa além do p5.js é necessária, e o sketch não carrega nenhum arquivo: toda a geometria nasce em código.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css",
+        "thumbnail.png",
+        "README.md"
+      ]
+    },
+    {
+      "folder": "Quilometros depois",
+      "id": "quilometros-depois",
+      "name": "Quilometros depois",
+      "origin": "native",
+      "lastModified": 1794693614436,
+      "title": "Quilômetros Depois",
+      "tags": [
+        "AI",
+        "ChatGPT",
+        "p5.js",
+        "WebGL",
+        "narrativa",
+        "estrada",
+        "3D"
+      ],
+      "collection": "projeto final/ARTHUR FREITAS RAMOS/1",
+      "description": "# Quilômetros Depois\n\n**Arthur Freitas Ramos · Creative Coding · Entrega 1 de 3**\n\nUma estrada. Dois viajantes. Algo que ainda não se revela.\n\n## Conceito\n\nUma narrativa tridimensional em que o tempo é medido pela distância. O observador avança por uma estrada e encontra os mesmos dois personagens, em momentos diferentes, junto de uma caixa laranja. Os trechos vazios entre os encontros deixam espaço para imaginar o que aconteceu fora de campo.\n\nA estrada retoma um motivo dos primeiros exercícios da disciplina e o transforma no eixo temporal da história. Não se pode voltar ao que já passou. O cenário tem aparência de maquete geométrica: árvores facetadas, montanhas de poucos polígonos, personagens montados com primitivas e materiais de cores sólidas. A intenção é despertar curiosidade e mistério.\n\n## Cenário — refinamento da primeira entrega\n\nA paisagem foi ampliada dentro da mesma Entrega 1. O terreno plano dá lugar a um vale com colinas trianguladas, bosques e três camadas de montanhas. A distribuição dos elementos varia entre execuções, mantendo clareiras nos encontros para preservar a leitura dos personagens e da caixa.\n\n- Pinheiros, árvores de copa arredondada e árvores alongadas, em verdes e tons dourados.\n- Arbustos, pedras, tufos de capim e pequenas flores claras e amarelas no acostamento.\n- Cercas de madeira em trechos alternados, bordas de cascalho e balizadores com refletores noturnos.\n- Nuvens facetadas com deslocamento lento, halo solar, aves ao longe e pequenos pontos de luz na vegetação durante a noite.\n- Copas e capim com movimentos discretos de vento.\n- Paleta de céu e vegetação refinada, com névoa para separar os planos da paisagem.\n\nO relevo e os elementos se reciclam ao longo do caminho. A altura de cada árvore e arbusto é calculada sobre os mesmos triângulos do terreno, mantendo as bases apoiadas nas encostas. As geometrias compostas são construídas com `buildGeometry()` e reutilizadas com `model()`; os trechos de relevo descartados liberam seus buffers antes da substituição. Elementos distantes usam menos detalhes de composição para controlar o custo de renderização.\n\n## Narrativa desta versão\n\n1. **O encontro, na margem direita:** ao amanhecer, o viajante azul se aproxima da caixa e aponta para ela. O viajante creme observa à distância. Curiosidade e cautela se expressam pela posição e pela inclinação dos corpos.\n2. **A investigação, na margem esquerda:** durante o dia, os dois se aproximam do objeto. O azul testa a tampa, que não abre. O outro examina a caixa. Uma linha muito discreta na tampa antecipa o próximo encontro.\n3. **O primeiro brilho, na margem direita:** ao anoitecer, a caixa pulsa. Os viajantes recuam, um deles junto de uma placa, e continuam observando. A caixa ilumina o chão e interfere nos materiais próximos.\n\nDepois de passarmos pelo último quadro, uma luz fora de campo deixa um reflexo alaranjado na estrada e se dissipa. O título e o nome do autor aparecem sobre a viagem noturna. A estrada continua; a caixa permanece fechada. Este encerramento é provisório e será expandido pelas próximas cenas.\n\nAs cenas não têm títulos na tela nem diálogos. Os nomes acima são apenas documentação do roteiro.\n\n## Como experimentar\n\n- A viagem começa automaticamente ao abrir a página.\n- **Mova o mouse** para olhar suavemente para os lados e um pouco para cima ou para baixo.\n- Não é preciso interagir para acompanhar a história. A câmera sugere a direção dos encontros, preservando uma pequena margem de olhar.\n- A velocidade diminui na aproximação das cenas e volta a aumentar nos intervalos. O avanço nunca é interrompido pelo usuário.\n- Para assistir novamente, recarregue a página.\n\nA primeira entrega é silenciosa. Não possui comandos de teclado, ações por clique, pontuação ou botão de início. A duração resulta do percurso e do ritmo das cenas, sem uma duração mínima imposta.\n\n## Executar localmente\n\nAbra um terminal nesta pasta e execute:\n\n```sh\npython3 -m http.server 8000\n```\n\nDepois acesse [http://localhost:8000](http://localhost:8000) em um navegador de computador com WebGL habilitado. Encerre o servidor com `Ctrl+C` quando terminar.\n\nTambém é possível abrir `index.html` diretamente no navegador: não há recursos locais carregados por `fetch`. O servidor local é recomendado para desenvolvimento.\n\nÉ necessária conexão com a internet para carregar **p5.js 2.2.3 pelo CDN jsDelivr**. A versão está fixada para evitar mudanças inesperadas. A biblioteca não é distribuída nesta pasta. Caso o CDN falhe, a página informa o problema de carregamento.\n\n## Arquivos\n\nTodos os arquivos de entrega ficam diretamente na raiz:\n\n```text\nindex.html      página, metadados, introdução e créditos\nstyle.css       apresentação, céu, tipografia e sobreposição de luz\nsketch.js       mundo WebGL, estrada, narrativa, câmera e personagens\nREADME.md       conceito, execução, processo e plano das três entregas\nthumbnail.png   captura real do sketch em execução\n```\n\nNão foi gerado ZIP. Por decisão do autor, o projeto será desenvolvido de forma contínua e o empacotamento será feito por ele. O thumbnail será atualizado junto das futuras versões.\n\n## Tecnologias e conteúdos da disciplina\n\n- **JavaScript e p5.js 2 / WebGL:** canvas tridimensional, perspectiva e câmera.\n- **Transformações hierárquicas:** corpos articulados com `push`, `pop`, translações e rotações.\n- **Primitivas geométricas:** caixas, esferas facetadas, cones e elipses. Não há modelos 3D, texturas ou imagens de cenário externas.\n- **Geometria procedural reutilizável:** `buildGeometry`, `model`, normais planas e malhas triangulares para árvores, vegetação, nuvens e relevo.\n- **Luz e materiais:** luz ambiente e direcional, luz pontual na caixa, materiais emissivos para legibilidade noturna e sombras de contato simplificadas.\n- **Interpolação:** transições de cor, velocidade, direção de olhar, poses e pulsos de luz.\n- **Aleatoriedade com semente por sessão:** posicionamento da vegetação, pedras, montanhas e estrelas. A ordem da narrativa é fixa.\n- **Movimento com `deltaTime`:** velocidade em unidades por segundo; limite de 50 ms por atualização evita saltos grandes ao retornar à aba.\n- **Reciclagem:** um conjunto fixo de segmentos e elementos de terreno é reposicionado à frente do observador.\n- **Composição e perspectiva:** estrada, faixas e balizadores sugerem profundidade; cada encontro possui uma clareira e espaço de observação.\n\nO alvo desta etapa é computador. O canvas acompanha o tamanho da janela e seu redimensionamento; controles por toque e composição para celular não fazem parte do escopo atual.\n\n## Organização para continuidade\n\nO código permanece em um `sketch.js`, dividido em responsabilidades:\n\n| Sistema | Responsabilidade |\n| --- | --- |\n| `CONFIG` e `PALETTE` | Escalas, velocidade, distâncias e cores |\n| `RoadManager` | Desenho e reciclagem dos trechos de estrada |\n| `StoryManager` / `StoryScene` | Encontros por distância, desaceleração e encerramento |\n| `Character` | Um corpo reutilizável, com roupa, escala e poses parametrizadas |\n| `DayNightCycle` | Céu e iluminação sincronizados com o percurso |\n| `CameraController` | Olhar pelo mouse e orientação suave para as cenas |\n| `Environment` | Bosques, flores, cercas, nuvens, aves, sol, lua e estrelas |\n| `Terrain` | Colinas trianguladas, altura dos elementos e reciclagem das malhas |\n| `SceneryAssets` | Geometrias compostas compartilhadas pelos elementos do cenário |\n| `Interface` | Introdução, indicação de percurso e créditos |\n\nO chão está em `y = 0`; valores negativos de `y` apontam para o céu. O caminho à frente usa `z` negativo. A câmera permanece perto da origem e o mundo se desloca em sua direção. Para posicionar uma cena, subtrai-se sua distância narrativa da distância percorrida. Apenas um quadro de personagens é desenhado por vez, evitando versões simultâneas dos viajantes.\n\n## Evolução e plano das três entregas\n\nEsta é a primeira versão do trabalho final. Ela estabelece a base técnica e retoma a estrada dos exercícios anteriores com função narrativa, acrescentando personagens recorrentes, passagem de tempo e uma sequência de acontecimentos.\n\n### Entrega 1 — O encontro · implementada\n\n- Estrada contínua e reciclável; movimento automático com desacelerações.\n- Maquete geométrica e personagens com identidade visual constante.\n- Três cenas: encontro, investigação e primeiro brilho.\n- Transição de amanhecer para dia, entardecer e noite.\n- Olhar pelo mouse, introdução breve e encerramento aberto.\n- Refinamento do cenário: vale, vegetação variada, flores, cercas, nuvens, aves e atmosfera noturna.\n\n### Entrega 2 — A disputa · planejada\n\n- Preservar e aprimorar as três primeiras cenas.\n- Melhorar a qualidade dos personagens, articulações e expressividade dos gestos.\n- Acrescentar disputa pela caixa, tentativa de transporte em carrinho e acidente.\n- Animar puxar, carregar, cair e ajudar usando o mesmo sistema de personagens.\n- Refinar transições, iluminação, variações do cenário e comportamentos secundários.\n- Avaliar pequenas respostas à atenção do observador, sem tornar obrigatória a interação.\n\n### Entrega 3 — A abertura · planejada\n\n- Revisar as seis cenas anteriores e concluir a história.\n- Acrescentar reconciliação e abertura conjunta da caixa.\n- Fazer a esfera luminosa subir e se transformar no novo sol.\n- Criar uma conclusão e continuidade coerentes com a estrada.\n- Adicionar áudio opcional, ativado pelo usuário, partículas e efeitos finais.\n- Finalizar personagens, créditos, desempenho e documentação de todo o processo.\n\nAs próximas etapas são intenções de desenvolvimento, não funcionalidades já presentes. Roteiro, gestos e enquadramentos poderão ser ajustados pelo autor durante a evolução do projeto.\n\n## Uso de IA\n\nO projeto foi desenvolvido com auxílio do ChatGPT/Codex na ideação, no planejamento, na estruturação e implementação do código e na verificação técnica. Arthur Freitas Ramos definiu o conceito, a direção estética, a seleção da narrativa e o escopo das entregas, orientando e revisando o desenvolvimento.\n\n## Referências\n\nA direção artística parte do roteiro do autor e dos exercícios anteriores da disciplina, incluindo a estrada em perspectiva e a experiência de modelagem procedural “Arqueologia do Cursor”. A caixa laranja também retoma a necessidade de contraste e legibilidade aprendida nesse processo. Não foram usados modelos, imagens, músicas ou trabalhos de outros alunos como assets.\n\nReferências técnicas consultadas:\n\n- [Documentação do p5.js](https://p5js.org/reference/): primitivas, transformações, câmera e execução do sketch.\n- [Materiais no p5.js](https://p5js.org/examples/3D-Materials/): relação entre formas geométricas e iluminação.\n- [Material emissivo](https://p5js.org/reference/p5/emissiveMaterial/): manter o objeto visível mesmo em uma cena noturna. O material por si só não ilumina outras formas; a cena combina esse material com uma luz pontual e elipses translúcidas no chão.\n- [buildGeometry](https://p5js.org/reference/p5/buildGeometry/) e [clearColors](https://p5js.org/reference/p5.Geometry/clearColors/): construir formas compostas uma vez e reutilizá-las com materiais adequados ao horário da narrativa.\n\n## Verificação desta versão\n\nVerificação realizada em 13/11/2026, no Google Chrome com WebGL, usando o p5.js real carregado pelo CDN:\n\n- Percurso completo do início aos créditos sem mouse, teclado ou cliques; os três encontros ocorreram na ordem esperada. A estrada seguiu avançando após o encerramento.\n- Console sem erros ou avisos durante o percurso e na inspeção visual da versão final.\n- Aproximadamente 60 FPS no computador de teste; isso não constitui garantia de desempenho em todo equipamento.\n- Movimento simulado a 30, 60 e 120 FPS com diferença inferior a 0,02 segundo até a mesma distância final; aproximadamente 15 segundos na faixa principal de leitura de cada encontro.\n- Verificação da atualização de movimento com intervalos de 1 e 10 segundos: ambos limitados a 50 ms de avanço, sem saltar cenas. Intervalos negativos são tratados como zero.\n- Movimento do mouse para os dois lados e redimensionamento em 1920 × 1080, 1440 × 900 e 1024 × 768.\n- Número de segmentos e grupos de cenário permanece limitado: 16 segmentos de estrada, 16 trechos de relevo e 36 grupos recicláveis de vegetação e detalhes.\n- Após o refinamento do cenário, o percurso completo foi repetido com os três encontros e créditos, mantendo aproximadamente 60 FPS no computador de teste e console sem erros ou avisos.\n- A malha do relevo foi conferida contra a função de altura usada pelos objetos, sem diferença nos vértices; todas as normais do chão apontam para cima. Em uma verificação estendida até 24.000 unidades de percurso, o cache gráfico variou entre 64 e 73 geometrias, com liberação dos trechos substituídos.\n- Capturas revisadas de encontro, investigação, brilho, reflexo final e créditos. `thumbnail.png` é uma captura da primeira cena renderizada pelo próprio sketch, sem interface do navegador.\n- Mensagem de erro conferida com o carregamento do CDN bloqueado propositalmente.\n- Abertura direta de `index.html` também conferida no Chrome.\n\nA execução no p5Front e o empacotamento não foram realizados; ficam sob responsabilidade do autor, conforme o escopo combinado. Não foi testado em outros navegadores nem em celular.",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "README.md",
+        "sketch.js",
+        "style.css",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "Projeto Final 1 A Mascara da Morte Rubra Angel Mansilla",
+      "id": "projeto-final-1-a-mascara-da-morte-rubra-angel-mansilla",
+      "name": "Projeto Final 1 A Mascara da Morte Rubra Angel Mansilla",
+      "origin": "native",
+      "lastModified": 1794693420615,
+      "title": "Projeto Final Parte 1: A Máscara da Morte Rubra",
+      "tags": [
+        "AI",
+        "Claude",
+        "2d",
+        "shader",
+        "filme",
+        "animação",
+        "música",
+        "teatro de varetas",
+        "papel recortado",
+        "Edgar Allan Poe"
+      ],
+      "collection": "projeto final/Angel Mansilla/1",
+      "description": "# A Máscara da Morte Rubra\n\nProjeto final, parte 1  \nAutor: Angel Mansilla  \nDRE: 123691897\n\nEu gosto muito da obra do Edgar Allan Poe, então pro projeto final quis adaptar um conto dele que eu curto bastante, [A Máscara da Morte Rubra](https://pt.wikipedia.org/wiki/A_M%C3%A1scara_da_Morte_Rubra). Tentei trazer a visão que eu tenho desse conto: a peste matando os pobres lá embaixo, enquanto o príncipe e os amigos dele ficam trancados num castelo que ninguém consegue alcançar, fazendo um baile como se nada estivesse acontecendo, até a morte entrar mesmo assim.\n\nA primeira ideia era fazer um stop motion 2D, mas achei que ficava mais legal como um teatro de varetas, com bonecos de papel recortado que alguém segura por baixo do palco. Fui de 2D porque no Diamante Bruto o 3D me deu muito retrabalho com encaixe e ângulo de câmera.\n\nO filme tem 2 minutos e 56 segundos. Começa na vila morrendo da peste, daí a corte entra no castelo e vem o baile nas sete salas, o relógio de ébano que faz todo mundo parar, as doze badaladas da meia-noite e o mascarado, que vai dançando pelas salas com uma dama que só aparece na sombra dele na parede, até chegar na sala preta. No final eu quis fugir do óbvio: em vez de só cair, o príncipe é tirado pra uma última valsa com a morte, e quem tenta agarrar o mascarado vira boneco dele e dança de mãos dadas até cair.\n\n## Como usar\n\nAbre o `index.html` no navegador, ou carrega o ZIP no p5Front e aperta Run, daí é só clicar na cortina pra começar. Precisa de internet, porque o p5.js 2 (versão 2.3.4) vem do jsDelivr. O som é todo gerado no código, então não tem arquivo de áudio. Espaço pausa, as setas voltam ou avançam 5 segundos e R recomeça.\n\n## Como fiz\n\nTudo é desenhado no canvas 2D. Cada peça de papel tem borda de tesoura, textura e uma sombra curta, e os bonecos são peças presas por tachinhas que giram em volta de um pivô. As partes com vareta seguem a dança e as soltas balançam atrasadas, então quando o relógio toca as mãos param e o resto ainda balança um pouco. As danças seguem o compasso da música, e pros bonecos darem as mãos de verdade o braço dobra no cotovelo sozinho até a mão chegar no lugar certo. A vila é um cenário bem maior que a tela, e a câmera vai do plano geral até os pobres e depois sobe pela pedra até o portão do castelo. As legendas são amarelas e vão se corrompendo, como se a peste estivesse comendo as letras.\n\nPor cima de tudo tem um shader de filtro, feito com `createFilterShader()` da aula 10, que faz a luz colorida dos vitrais, o foco curto, o grão e a palidez nas badaladas, e os raios de luz que entram pelos vitrais são outro shader. A música, uma valsa e o Dies irae, é feita com Web Audio. O código tá dividido em `papel.js` (as peças de papel), `bonecos.js`, `cenario.js` (as salas), `fora.js` (a vila e o rochedo), `som.js` e `sketch.js`, que tem o roteiro.\n\n## O que vem nas próximas entregas\n\n- Entrega 2: assistir o filme inteiro com calma pra acertar ritmo e movimento, dar mais gestos aos bonecos (virar a cabeça pro mascarado, a multidão abrindo caminho) e colocar os braseiros nos tripés atrás dos vitrais, que no conto são a única luz das salas.\n- Entrega 3: acabamento, com legendas que dá pra desligar, tela cheia, créditos no final e ajuste do som e do desempenho pra rodar bem em computador mais fraco.\n\n## IA\n\nUsei o Claude pra escrever o código e testar o filme. Eu dirigi: escolhi o conto, troquei o stop motion pelo teatro de varetas, desenhei a vila com o castelo inalcançável e fui pedindo e aprovando as mudanças, como as badaladas menos apressadas, as legendas que se corrompem, o mascarado dançando pelas salas e um final menos chato pra morte do príncipe e da corte.\n\n## Créditos\n\n- A Máscara da Morte Rubra (The Masque of the Red Death), de Edgar Allan Poe, 1842, domínio público: https://pt.wikipedia.org/wiki/A_M%C3%A1scara_da_Morte_Rubra\n- Dies irae, canto medieval, domínio público: https://pt.wikipedia.org/wiki/Dies_irae\n- Aula 10 - Shaders: https://github.com/esperanc/CreativeCoding2026/blob/main/10%20-%20Shaders/slides.md\n- p5.js: https://p5js.org/",
+      "hasThumb": true,
+      "files": [
+        "index.html",
+        "papel.js",
+        "bonecos.js",
+        "cenario.js",
+        "fora.js",
+        "som.js",
+        "sketch.js",
+        "README.md",
+        "thumbnail.png"
+      ]
+    },
+    {
+      "folder": "hook vertices",
+      "id": "hook-vertices",
+      "name": "hook vertices",
+      "origin": "shared",
+      "lastModified": 1794691437866,
+      "title": "",
+      "tags": [],
+      "collection": "",
+      "description": "",
+      "hasThumb": false,
+      "files": [
+        "index.html",
+        "sketch.js",
+        "style.css"
+      ]
+    },
     {
       "folder": "hershey font draw",
       "id": "hershey-font-draw",

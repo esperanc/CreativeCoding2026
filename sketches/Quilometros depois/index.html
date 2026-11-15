@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#263136">
+    <meta name="description" content="Uma estrada, dois viajantes e algo que ainda não se revela. Uma narrativa geométrica de Arthur Freitas Ramos.">
+    <title>Quilômetros Depois — Arthur Freitas Ramos</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23ee783d' d='m16 2 13 7v14l-13 7-13-7V9z'/%3E%3Cpath fill='none' stroke='%23ffd49d' d='m3 9 13 7 13-7M16 16v14'/%3E%3C/svg%3E">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/p5@2.2.3/lib/p5.min.js" onerror="document.documentElement.dataset.loadError='true'"></script>
+    <script defer src="sketch.js"></script>
+  </head>
+  <body>
+    <main id="experience" aria-label="Quilômetros Depois: narrativa tridimensional em movimento">
+      <div id="canvas-host"></div>
+      <div class="vignette" aria-hidden="true"></div>
+      <div id="afterglow" aria-hidden="true"></div>
+
+      <header class="masthead">
+        <span class="wordmark">Quilômetros Depois<span class="orange-dot">.</span></span>
+        <span class="edition">UM ESTUDO SOBRE O TEMPO <i></i> 01 / 03</span>
+      </header>
+
+      <section id="intro" aria-labelledby="intro-title">
+        <p class="eyebrow">UMA NARRATIVA EM MOVIMENTO</p>
+        <h1 id="intro-title">Quilômetros<br><em>Depois.</em></h1>
+        <p class="intro-copy">Uma estrada. Dois viajantes.<br>Algo que ainda não se revela.</p>
+        <p class="intro-instruction"><span class="mouse-icon" aria-hidden="true"></span>Mova o mouse para olhar ao redor.<br><span>A estrada segue por conta própria.</span></p>
+      </section>
+
+      <section id="credits" aria-label="Créditos" hidden>
+        <p class="eyebrow">AINDA HÁ CAMINHO</p>
+        <h2>Quilômetros <em>Depois.</em></h2>
+        <p>Arthur Freitas Ramos</p>
+        <p class="credits-note">Primeira entrega · Creative Coding</p>
+      </section>
+
+      <footer class="journey-footer">
+        <span class="author">ARTHUR FREITAS RAMOS</span>
+        <div class="journey-line" aria-hidden="true"><span id="journey-progress"></span></div>
+        <span class="look-hint"><span class="small-dot"></span> OLHE AO REDOR</span>
+      </footer>
+      <p id="loading" role="status">Preparando o caminho<span>…</span></p>
+      <div id="error" role="alert">
+        <p>O caminho não pôde ser aberto.</p>
+        <span id="error-detail">Verifique a conexão com a internet e recarregue a página para carregar o p5.js.</span>
+      </div>
+      <noscript>Ative o JavaScript para percorrer esta estrada.</noscript>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nostradamus</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/p5@2.2.3/lib/p5.js"></script>
+</head>
+<body data-tela="boot">
+  <main></main>
+
+  <div id="tela-boot">
+    <div class="caixa-mac"><span data-icone="mac-feliz"></span></div>
+    <div class="caixa-bemvindo">Bem-vindo ao NOSTRADAMUS.</div>
+  </div>
+
+  <div id="desktop">
+    <header id="barra-desktop" class="barra">
+      <span class="logo-barra" data-icone="app"></span>
+      <button class="item-menu">Arquivo</button>
+      <button class="item-menu">Editar</button>
+      <button class="item-menu">Visualizar</button>
+      <button class="item-menu">Especial</button>
+      <span class="espaco"></span>
+      <span class="relogio"></span>
+    </header>
+
+    <div class="icone-desktop" style="right: 24px; top: 48px;">
+      <span data-icone="disco"></span><label>Disco Rígido</label>
+    </div>
+    <div class="icone-desktop" data-abre="app" style="left: 40px; top: 60px;">
+      <span data-icone="app"></span><label>Nostradamus</label>
+    </div>
+    <div class="icone-desktop" style="left: 40px; top: 170px;">
+      <span data-icone="pasta"></span><label>Dados</label>
+    </div>
+    <div class="icone-desktop" style="left: 40px; top: 270px;">
+      <span data-icone="doc"></span><label>LEIA-ME</label>
+    </div>
+    <div class="icone-desktop" style="right: 24px; bottom: 24px;">
+      <span data-icone="lixeira"></span><label>Lixeira</label>
+    </div>
+    <p class="dica-desktop">clique duas vezes em Nostradamus para abrir</p>
+  </div>
+
+  <header id="barra-menu" class="barra">
+    <span class="logo-barra" data-icone="app"></span>
+    <button class="item-menu" data-menu="compostos">Compostos</button>
+    <button class="item-menu" data-menu="sobre">Sobre os compostos</button>
+    <button class="item-menu" data-menu="mundo">Mundo</button>
+    <button class="item-menu" data-menu="ajuda">Ajuda</button>
+    <span class="espaco"></span>
+    <button id="botao-som" title="Música">♪ som off</button>
+    <button class="item-menu" data-menu="sair">Sair</button>
+    <span class="relogio"></span>
+  </header>
+
+  <div class="janela-mac" id="janela-ajuda" hidden>
+    <div class="titulo">
+      <button class="fechar" aria-label="Fechar">X</button>
+      <span>Ajuda</span>
+    </div>
+    <div class="conteudo">
+      <p>Arraste para girar o planeta.</p>
+      <p>Role para aproximar ou afastar.</p>
+      <p>Em <b>Compostos</b>, ajuste os níveis e clique em Aplicar.</p>
+    </div>
+  </div>
+
+  <div class="janela-mac janela-compostos" id="janela-compostos" hidden>
+    <div class="titulo">
+      <button class="fechar" aria-label="Fechar">X</button>
+      <span>Compostos</span>
+    </div>
+    <div class="conteudo">
+      <p class="explica">0% = antes da indústria · 100% = pior cenário em 2100</p>
+      <div id="lista-compostos"></div>
+      <div class="rodape">
+        <button class="botao-mac secundario" id="botao-resetar">Resetar</button>
+        <button class="botao-mac" id="botao-aplicar">Aplicar</button>
+      </div>
+    </div>
+  </div>
+
+  <footer id="barra-ano" class="barra">
+    <span class="rotulo">ANO</span>
+    <input id="ano" type="range" min="2026" max="2100" value="2026" />
+    <span id="ano-valor">2026</span>
+  </footer>
+
+  <div id="crt"></div>
+
+  <audio id="musica" src="assets/audio/musica.wav" loop></audio>
+
+  <script src="config.js"></script>
+  <script src="geometria.js"></script>
+  <script src="camera.js"></script>
+  <script src="espaco.js"></script>
+  <script src="luz.js"></script>
+  <script src="planeta.js"></script>
+  <script src="cidades.js"></script>
+  <script src="polos.js"></script>
+  <script src="vegetacao.js"></script>
+  <script src="fauna.js"></script>
+  <script src="atmosfera.js"></script>
+  <script src="orbita.js"></script>
+  <script src="dados.js"></script>
+  <script src="icones.js"></script>
+  <script src="telas.js"></script>
+  <script src="interface.js"></script>
+  <script src="sketch.js"></script>
+</body>
+</html>

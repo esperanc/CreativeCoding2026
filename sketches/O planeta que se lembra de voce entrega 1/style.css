@@ -1,0 +1,91 @@
+:root{
+  color-scheme:dark;
+  --fundo:#07121b;
+  --linha:rgba(190,206,203,.17);
+  --texto:#e9e1cf;
+  --suave:#91a5aa;
+  --painel:rgba(7,18,27,.67);
+}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;background:#03090f;color:var(--texto)}
+body{font-family:Inter,Arial,sans-serif;display:grid;place-items:center;padding:18px}
+button{font:inherit}
+#experiencia{
+  position:relative;
+  width:min(1380px,100%);
+  min-height:760px;
+  overflow:hidden;
+  isolation:isolate;
+  border:1px solid var(--linha);
+  border-radius:26px;
+  background:
+    radial-gradient(circle at 62% 44%,rgba(34,65,74,.7),transparent 34%),
+    radial-gradient(circle at 30% 80%,rgba(71,48,42,.2),transparent 37%),
+    var(--fundo);
+  box-shadow:0 30px 90px rgba(0,0,0,.45);
+}
+#universo{position:absolute;inset:0;min-height:760px}
+canvas{display:block;touch-action:none}
+.identidade{position:absolute;z-index:2;left:clamp(26px,4vw,62px);top:clamp(28px,5vw,68px);pointer-events:none}
+.etapa{margin:0 0 20px;font-size:10px;letter-spacing:.24em;color:#9fa99d}
+h1{margin:0;font:400 clamp(34px,4.5vw,64px)/1.02 Georgia,serif;letter-spacing:-.045em;text-wrap:balance}
+h1 em{font-weight:400;color:#c8a2a3}
+.convite{max-width:260px;margin:24px 0 0;color:#8fa1a5;font:italic 12px/1.6 Georgia,serif}
+.legenda{
+  position:absolute;z-index:2;right:clamp(22px,3.4vw,52px);top:clamp(28px,4vw,54px);
+  padding:16px 18px;border:1px solid var(--linha);border-radius:16px;
+  background:var(--painel);backdrop-filter:blur(12px);
+}
+.legenda-titulo{margin:0 0 11px;color:#bdc7c3;font-size:11px;letter-spacing:.05em}
+.legenda ul{display:grid;grid-template-columns:repeat(2,auto);gap:8px 18px;margin:0;padding:0;list-style:none}
+.legenda li{display:flex;align-items:center;gap:7px;color:#81979d;font-size:10px}
+.legenda i{width:7px;height:7px;border-radius:50%;box-shadow:0 0 8px currentColor}
+.legenda .visita{color:#e8e3d8;background:currentColor}
+.legenda .observacao{color:#d999aa;background:currentColor}
+.legenda .abertura{color:#d8ad62;background:currentColor}
+.legenda .chuva{color:#78c5d2;background:currentColor}
+.acoes{
+  position:absolute;z-index:3;left:50%;bottom:73px;transform:translateX(-50%);
+  width:min(760px,calc(100% - 44px));text-align:center;
+}
+.acoes-principais{display:flex;justify-content:center;flex-wrap:wrap;gap:9px}
+.acoes button{
+  min-height:43px;padding:11px 17px;border:1px solid rgba(181,199,199,.32);border-radius:999px;
+  background:rgba(7,20,29,.76);color:#d8d7ca;font-size:11px;letter-spacing:.02em;
+  backdrop-filter:blur(10px);cursor:pointer;transition:.25s ease;
+}
+.acoes button:hover{border-color:rgba(223,212,184,.68);background:rgba(28,46,54,.88);transform:translateY(-1px)}
+.acoes button:focus-visible,#apagar:focus-visible{outline:2px solid #dcbf89;outline-offset:3px}
+.acoes button:disabled{opacity:.42;cursor:default;transform:none}
+#aproximar{color:#edc9cd;border-color:rgba(211,145,161,.44)}
+#chover{color:#c1e3e7;border-color:rgba(108,183,197,.48)}
+#redoma{color:#ead8b6;border-color:rgba(213,170,96,.45)}
+#estado{min-height:18px;margin:12px 0 0;color:#839aa0;font:italic 11px/1.45 Georgia,serif}
+footer{
+  position:absolute;z-index:3;left:clamp(24px,3.5vw,52px);right:clamp(24px,3.5vw,52px);bottom:22px;
+  padding-top:14px;border-top:1px solid var(--linha);display:flex;align-items:center;justify-content:space-between;gap:16px;
+  color:#71868d;font-size:9px;letter-spacing:.06em;
+}
+#apagar{padding:0;border:0;background:none;color:#6f7775;font-size:9px;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+#apagar:hover{color:#c39d98}
+@media(max-width:720px){
+  body{padding:0}
+  #experiencia{min-height:100svh;border:0;border-radius:0}
+  #universo{min-height:100svh}
+  .identidade{left:22px;top:25px}
+  .etapa{margin-bottom:12px;font-size:8px}
+  h1{font-size:33px}
+  .convite{display:none}
+  .legenda{right:16px;top:150px;padding:10px 12px;background:rgba(7,18,27,.55)}
+  .legenda-titulo{font-size:9px;margin-bottom:7px}
+  .legenda ul{grid-template-columns:auto;gap:4px}
+  .legenda li{font-size:8px}
+  .acoes{bottom:78px;width:calc(100% - 28px)}
+  .acoes-principais{gap:6px}
+  .acoes button{min-height:38px;padding:9px 12px;font-size:9px}
+  #estado{font-size:9px;margin-top:8px}
+  footer{left:18px;right:18px;bottom:17px;gap:7px;flex-wrap:wrap;font-size:7px}
+  footer span:nth-child(2){display:none}
+}
+@media(max-width:390px){.legenda{top:132px}.acoes button{padding-inline:10px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto;transition:none!important}}

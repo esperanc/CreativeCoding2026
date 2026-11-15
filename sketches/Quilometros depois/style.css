@@ -1,0 +1,62 @@
+:root {
+  color-scheme: dark;
+  --paper: #f4ead9;
+  --muted: #e4ddceaa;
+  --orange: #f0a06c;
+  --sky-top: #727d90;
+  --sky-bottom: #e6b59d;
+}
+
+* { box-sizing: border-box; }
+html, body { width: 100%; height: 100%; margin: 0; overflow: hidden; }
+body { color: var(--paper); background: #263136; font-family: "Helvetica Neue", Arial, sans-serif; }
+#experience { position: relative; width: 100%; height: 100%; isolation: isolate; }
+#canvas-host { position: absolute; inset: 0; background: linear-gradient(var(--sky-top), var(--sky-bottom) 48%, var(--sky-bottom)); }
+canvas { display: block; width: 100%; height: 100%; }
+.vignette { position: absolute; inset: 0; pointer-events: none; background: radial-gradient(ellipse at 50% 48%, transparent 38%, #15202b33 100%); }
+#afterglow { position: absolute; inset: 0; pointer-events: none; opacity: 0; background: radial-gradient(ellipse at 52% 110%, #fff1bbdd 0%, #f5914377 40%, transparent 78%); mix-blend-mode: screen; }
+.masthead, .journey-footer { position: absolute; left: 3.6vw; right: 3.6vw; display: flex; align-items: center; justify-content: space-between; pointer-events: none; }
+.masthead { top: 30px; }
+.wordmark { font: 23px Georgia, "Times New Roman", serif; letter-spacing: -.7px; }
+.orange-dot { color: var(--orange); }
+.edition { display: flex; align-items: center; gap: 14px; font-size: 9px; letter-spacing: 2px; opacity: .8; }
+.edition i { display: inline-block; width: 24px; height: 1px; background: currentColor; opacity: .6; }
+#intro { position: absolute; left: 9vw; top: 27%; pointer-events: none; opacity: 0; transform: translateY(10px); transition: opacity 1.4s, transform 1.4s; }
+html[data-ready="true"] #intro { opacity: 1; transform: translateY(0); }
+html[data-ready="true"] #intro.departed { opacity: 0; transform: translateY(-8px); }
+.eyebrow { font-size: 9px; font-weight: 500; letter-spacing: 3.4px; margin: 0 0 25px; }
+h1 { font: normal clamp(62px, 7.5vw, 120px)/.95 Georgia, "Times New Roman", serif; letter-spacing: -5px; margin: 0; text-shadow: 0 2px 45px #24303922; }
+h1 em, h2 em { font-weight: normal; }
+.intro-copy { font-size: 13px; line-height: 1.75; letter-spacing: .3px; margin: 25px 0 28px; color: var(--paper); }
+.intro-instruction { position: relative; font-size: 10px; line-height: 1.9; padding-left: 26px; color: var(--paper); }
+.intro-instruction > span:last-child { color: var(--muted); }
+.mouse-icon { position: absolute; left: 0; top: 5px; height: 23px; width: 14px; border: 1px solid #f4ead9aa; border-radius: 8px; }
+.mouse-icon::after { content: ""; position: absolute; top: 4px; left: 5px; height: 5px; width: 2px; background: var(--paper); border-radius: 1px; }
+.journey-footer { bottom: 25px; gap: 32px; }
+.author, .look-hint { font-size: 8px; letter-spacing: 2px; white-space: nowrap; opacity: .74; }
+.look-hint { display: flex; align-items: center; gap: 8px; }
+.small-dot { width: 4px; height: 4px; background: var(--orange); border-radius: 50%; }
+.journey-line { width: 150px; height: 1px; background: #f4ead933; position: absolute; left: 50%; transform: translateX(-50%); }
+#journey-progress { display: block; width: 100%; height: 1px; background: var(--orange); transform: scaleX(0); transform-origin: left; }
+#credits { position: absolute; top: 31%; width: 100%; text-align: center; pointer-events: none; opacity: 0; transition: opacity 3s; }
+#credits.visible { opacity: 1; }
+#credits .eyebrow { font-size: 9px; }
+h2 { font: normal clamp(44px, 5vw, 75px) Georgia, serif; letter-spacing: -2.5px; margin: 20px 0; }
+#credits > p:not(.eyebrow) { font-size: 12px; letter-spacing: 1px; }
+#credits .credits-note { font-size: 9px !important; opacity: .6; margin-top: 22px; }
+#loading { position: absolute; bottom: 64px; width: 100%; text-align: center; font-size: 11px; letter-spacing: 1px; }
+html[data-ready="true"] #loading { display: none; }
+#error { display: none; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: min(450px, 80%); padding: 30px; background: #202a34ed; line-height: 1.6; }
+#error p { font: 25px Georgia, serif; }
+#error span { font-size: 13px; opacity: .8; }
+html[data-load-error="true"] #error { display: block; }
+html[data-load-error="true"] #loading, html[data-load-error="true"] #intro { display: none; }
+noscript { position: absolute; top: 45%; left: 10%; }
+@media (max-width: 800px) {
+  .edition { font-size: 8px; letter-spacing: 1px; }
+  .edition i { display: none; }
+  .author, .look-hint { font-size: 7px; letter-spacing: 1px; }
+  .journey-line { width: 75px; }
+  h1 { letter-spacing: -3px; }
+  #intro { top: 23%; }
+}

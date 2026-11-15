@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07121b">
+  <title>O planeta que se lembra de você</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/p5@2.2.3/lib/p5.min.js" defer
+    onerror="document.getElementById('estado').textContent='Não foi possível carregar o p5.js. Verifique a conexão.'"></script>
+  <script src="sketch.js" defer></script>
+</head>
+<body>
+  <main id="experiencia">
+    <div id="universo" aria-label="Pequeno planeta em três dimensões cercado por chuva e por uma constelação criada pelas ações do visitante. Arraste para girar."></div>
+
+    <header class="identidade">
+      <p class="etapa">PROJETO FINAL · PRIMEIRA MEMÓRIA</p>
+      <h1>O planeta que se<br><em>lembra de você</em></h1>
+      <p class="convite">Toda aproximação deixa alguma coisa no céu.</p>
+    </header>
+
+    <aside class="legenda" aria-label="Cores das memórias">
+      <p class="legenda-titulo"><span id="quantidade-memorias">0</span> memórias no céu</p>
+      <ul>
+        <li><i class="visita"></i>visita</li>
+        <li><i class="observacao"></i>rosa</li>
+        <li><i class="abertura"></i>redoma</li>
+        <li><i class="chuva"></i>chuva</li>
+      </ul>
+    </aside>
+
+    <section class="acoes" aria-label="Ações sobre o planeta">
+      <div class="acoes-principais">
+        <button id="aproximar" type="button">Aproximar-se da rosa</button>
+        <button id="redoma" type="button">Abrir redoma</button>
+        <button id="chover" type="button" disabled>Deixar chover</button>
+        <button id="vista" type="button">Ver o planeta</button>
+      </div>
+      <p id="estado" role="status" aria-live="polite">O pequeno mundo está despertando…</p>
+    </section>
+
+    <footer>
+      <span>Henrique Kezen V. H. Leite</span>
+      <span>arraste para girar · role ou pince para aproximar</span>
+      <button id="apagar" type="button">Apagar memória</button>
+    </footer>
+
+    <noscript>Ative JavaScript para visitar este pequeno mundo.</noscript>
+  </main>
+</body>
+</html>

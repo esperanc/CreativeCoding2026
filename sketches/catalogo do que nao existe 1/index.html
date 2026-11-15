@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Catálogo do que Não Existe</title>
+  <script src="https://cdn.jsdelivr.net/npm/p5@2.3.4/lib/p5.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="palco">
+    <header id="cabecalho">
+      <h1>Catálogo do que Não Existe</h1>
+      <p>acervo de objetos impossíveis · doações abertas ao público</p>
+      <button id="btn-doar">＋ Doar um objeto</button>
+    </header>
+    <nav id="fichario" aria-label="Fichário do acervo"></nav>
+    <div id="dica">arraste para girar · roda para aproximar · ← → percorre o acervo · D doa</div>
+  </main>
+
+  <aside id="coluna">
+    <article id="ficha"></article>
+  </aside>
+
+  <div id="modal">
+    <form id="form-doacao">
+      <h2>Termo de doação</h2>
+      <p class="sub">Descreva o objeto. O museu se encarrega de fabricá-lo e catalogá-lo.</p>
+      <label>Este objeto serve para
+        <div class="linha">
+          <select id="f-verbo"></select>
+          <input id="f-comp" maxlength="60" autocomplete="off">
+        </div>
+      </label>
+      <label>É feito de
+        <select id="f-mat"></select>
+      </label>
+      <label>Época
+        <select id="f-ep"></select>
+      </label>
+      <label>Nome do doador (opcional)
+        <input id="f-doador" maxlength="40" autocomplete="off">
+      </label>
+      <div class="botoes">
+        <button type="button" id="btn-acaso">ao acaso</button>
+        <span style="flex:1"></span>
+        <button type="button" id="btn-fechar">cancelar</button>
+        <button type="submit" class="primario">doar</button>
+      </div>
+    </form>
+  </div>
+
+  <script src="objeto.js"></script>
+  <script src="ficha.js"></script>
+  <script src="sketch.js"></script>
+</body>
+</html>

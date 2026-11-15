@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Escada impossível</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="ui">
+  <div id="st"></div>
+  <div id="met"></div>
+  <div id="dica">Arraste para girar. P: ortogonal ou perspectiva. R: ponto ideal. T: vizinhança pela tela. Pessoas: cor escura sobe, cor quente desce.</div>
+  <label class="ctl"><span>Revelar</span><input id="sl" type="range" min="0" max="100" value="0" aria-label="Revelar a construção"></label>
+  <label class="ctl"><span>Viés à direita</span><input id="vi" type="range" min="0" max="100" value="0" aria-label="Viés de manter a direita"></label>
+  <label class="ctl"><span>Feromônio</span><input id="fe" type="range" min="0" max="100" value="0" aria-label="Intensidade do feromônio"></label>
+  <label class="ctl"><span id="ta">az +0,0°</span><input id="ja" type="range" min="-30" max="30" value="0" aria-label="Ajuste fino do azimute ideal"></label>
+  <label class="ctl"><span id="te">el +0,0°</span><input id="je" type="range" min="-30" max="30" value="0" aria-label="Ajuste fino da elevação ideal"></label>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/p5@2.0.3/lib/p5.min.js"></script>
+<script src="sketch.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laços</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=IBM+Plex+Mono:wght@400&family=IBM+Plex+Sans+Condensed:wght@700&display=swap" rel="stylesheet">
+  <style>
+    html, body { margin: 0; padding: 0; overflow: hidden; background: #e9e5dd; }
+    canvas { display: block; }
+    #dica {
+      position: fixed; right: 18px; bottom: 6px; left: 18px; text-align: center;
+      font: 11px/1.5 "IBM Plex Mono", monospace; color: #5e584f;
+      pointer-events: none; transition: opacity 2s;
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/p5@2.3.4/lib/p5.min.js"></script>
+</head>
+<body>
+  <div id="dica">arraste os pedestais: o comprimento do laço é o tempo · clique numa fita ou num botão: liga/desliga o canal · ↑ ↓ ou rolagem: velocidade da fita · espaço: parar · N: outra sessão · S: salvar imagem</div>
+  <script src="sketch.js"></script>
+  <script>setTimeout(() => { const d = document.getElementById("dica"); if (d) d.style.opacity = 0; }, 16000);</script>
+</body>
+</html>

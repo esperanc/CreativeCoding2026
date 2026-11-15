@@ -1,0 +1,4580 @@
+// Os mesmos dados de questoes.json, num script: assim o sketch abre até direto do computador,
+// sem servidor (o navegador bloqueia a leitura do JSON em arquivos locais).
+window.DADOS_PISCINA = {
+ "fonte": "Inep, microdados do Enade das Licenciaturas 2025 (versão de 09/09/2026); classificação das questões com gráfico pela pesquisadora. Acertos em %, cursos presenciais.",
+ "cores": {
+  "Artes Visuais": "#00A050",
+  "Ciências Biológicas": "#98D030",
+  "Ciências Sociais": "#004018",
+  "Computação": "#80D0F0",
+  "Educação Física": "#00A8E8",
+  "Filosofia": "#283090",
+  "Física": "#E0A0C8",
+  "Geografia": "#E80088",
+  "História": "#E81820",
+  "Letras – Inglês": "#F05060",
+  "Letras – Português": "#F8F000",
+  "Letras – Português e Espanhol": "#883030",
+  "Letras – Português e Inglês": "#E08010",
+  "Matemática": "#F04018",
+  "Música": "#601068",
+  "Pedagogia": "#B058B0",
+  "Química": "#918F8F"
+ },
+ "questoes": [
+  {
+   "prova": "Artes Visuais",
+   "questao": 31,
+   "grafico": false
+  },
+  {
+   "prova": "Artes Visuais",
+   "questao": 32,
+   "grafico": false
+  },
+  {
+   "prova": "Artes Visuais",
+   "questao": 33,
+   "grafico": false
+  },
+  {
+   "prova": "Artes Visuais",
+   "questao": 34,
+   "grafico": false
+  },
+  {
+   "prova": "Artes Visuais",
+   "questao": 35,
+   "grafico": false
+  },
+  {
+   "prova": "Artes Visuais",
+   "questao": 36,
+   "grafico": false
+  },
+  {
+   "prova": "Artes Visuais",
+   "questao": 37,
+   "grafico": false
+  },
+  {
+   "prova": "Artes Visuais",
+   "questao": 38,
+   "grafico": false
+  },
+  {
+   "prova": "Artes Visuais",
+   "questao": 39,
+   "grafico": false
+  },
+  {
+   "prova": "Artes Visuais",
+   "questao": 40,
+   "grafico": false
+  },
+  {
+   "prova": "Artes Visuais",
+   "questao": 41,
+   "grafico": false
+  },
+  {
+   "prova": "Artes Visuais",
+   "questao": 42,
+   "grafico": false
+  },
+  {
+   "prova": "Artes Visuais",
+   "questao": 43,
+   "grafico": false
+  },
+  {
+   "prova": "Artes Visuais",
+   "questao": 44,
+   "grafico": false
+  },
+  {
+   "prova": "Artes Visuais",
+   "questao": 45,
+   "grafico": false
+  },
+  {
+   "prova": "Artes Visuais",
+   "questao": 46,
+   "grafico": false
+  },
+  {
+   "prova": "Artes Visuais",
+   "questao": 47,
+   "grafico": false
+  },
+  {
+   "prova": "Artes Visuais",
+   "questao": 48,
+   "grafico": false
+  },
+  {
+   "prova": "Artes Visuais",
+   "questao": 49,
+   "grafico": false
+  },
+  {
+   "prova": "Artes Visuais",
+   "questao": 50,
+   "grafico": false
+  },
+  {
+   "prova": "Artes Visuais",
+   "questao": 51,
+   "grafico": false
+  },
+  {
+   "prova": "Artes Visuais",
+   "questao": 52,
+   "grafico": false
+  },
+  {
+   "prova": "Artes Visuais",
+   "questao": 53,
+   "grafico": false
+  },
+  {
+   "prova": "Artes Visuais",
+   "questao": 54,
+   "grafico": false
+  },
+  {
+   "prova": "Artes Visuais",
+   "questao": 55,
+   "grafico": false
+  },
+  {
+   "prova": "Artes Visuais",
+   "questao": 56,
+   "grafico": false
+  },
+  {
+   "prova": "Artes Visuais",
+   "questao": 57,
+   "grafico": false
+  },
+  {
+   "prova": "Artes Visuais",
+   "questao": 58,
+   "grafico": false
+  },
+  {
+   "prova": "Artes Visuais",
+   "questao": 59,
+   "grafico": false
+  },
+  {
+   "prova": "Artes Visuais",
+   "questao": 60,
+   "grafico": false
+  },
+  {
+   "prova": "Artes Visuais",
+   "questao": 61,
+   "grafico": false
+  },
+  {
+   "prova": "Artes Visuais",
+   "questao": 62,
+   "grafico": false
+  },
+  {
+   "prova": "Artes Visuais",
+   "questao": 63,
+   "grafico": false
+  },
+  {
+   "prova": "Artes Visuais",
+   "questao": 64,
+   "grafico": false
+  },
+  {
+   "prova": "Artes Visuais",
+   "questao": 65,
+   "grafico": false
+  },
+  {
+   "prova": "Artes Visuais",
+   "questao": 66,
+   "grafico": false
+  },
+  {
+   "prova": "Artes Visuais",
+   "questao": 67,
+   "grafico": false
+  },
+  {
+   "prova": "Artes Visuais",
+   "questao": 68,
+   "grafico": false
+  },
+  {
+   "prova": "Artes Visuais",
+   "questao": 69,
+   "grafico": false
+  },
+  {
+   "prova": "Artes Visuais",
+   "questao": 70,
+   "grafico": false
+  },
+  {
+   "prova": "Artes Visuais",
+   "questao": 71,
+   "grafico": false
+  },
+  {
+   "prova": "Artes Visuais",
+   "questao": 72,
+   "grafico": false
+  },
+  {
+   "prova": "Artes Visuais",
+   "questao": 73,
+   "grafico": false
+  },
+  {
+   "prova": "Artes Visuais",
+   "questao": 74,
+   "grafico": false
+  },
+  {
+   "prova": "Artes Visuais",
+   "questao": 75,
+   "grafico": false
+  },
+  {
+   "prova": "Artes Visuais",
+   "questao": 76,
+   "grafico": false
+  },
+  {
+   "prova": "Artes Visuais",
+   "questao": 77,
+   "grafico": false
+  },
+  {
+   "prova": "Artes Visuais",
+   "questao": 78,
+   "grafico": false
+  },
+  {
+   "prova": "Artes Visuais",
+   "questao": 79,
+   "grafico": false
+  },
+  {
+   "prova": "Artes Visuais",
+   "questao": 80,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Biológicas",
+   "questao": 31,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Biológicas",
+   "questao": 32,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Biológicas",
+   "questao": 33,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Biológicas",
+   "questao": 34,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Biológicas",
+   "questao": 35,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Biológicas",
+   "questao": 36,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Biológicas",
+   "questao": 37,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Biológicas",
+   "questao": 38,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Biológicas",
+   "questao": 39,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Biológicas",
+   "questao": 40,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Biológicas",
+   "questao": 41,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Biológicas",
+   "questao": 42,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Biológicas",
+   "questao": 43,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Biológicas",
+   "questao": 44,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Biológicas",
+   "questao": 45,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Biológicas",
+   "questao": 46,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Biológicas",
+   "questao": 47,
+   "grafico": true,
+   "classificacao": "conteúdo",
+   "tipo": "Gráfico de linhas",
+   "resumo": "Casos de toxoplasmose 2016–2022",
+   "acerto_brasil": 82.3,
+   "acerto_rj": 86.5,
+   "acerto_ufrj": 87.2,
+   "dificuldade_tri": -1.531
+  },
+  {
+   "prova": "Ciências Biológicas",
+   "questao": 48,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Biológicas",
+   "questao": 49,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Biológicas",
+   "questao": 50,
+   "grafico": true,
+   "classificacao": "conteúdo",
+   "tipo": "Gráfico linha e coluna",
+   "resumo": "Temperatura × desastres climáticos",
+   "acerto_brasil": 68.4,
+   "acerto_rj": 73.6,
+   "acerto_ufrj": 77.6,
+   "dificuldade_tri": -0.736
+  },
+  {
+   "prova": "Ciências Biológicas",
+   "questao": 51,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Biológicas",
+   "questao": 52,
+   "grafico": true,
+   "classificacao": "conteúdo",
+   "tipo": "Gráfico de linhas",
+   "resumo": "Malária por área especial",
+   "acerto_brasil": 19.4,
+   "acerto_rj": 19.6,
+   "acerto_ufrj": 20.8,
+   "dificuldade_tri": 1.275
+  },
+  {
+   "prova": "Ciências Biológicas",
+   "questao": 53,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Biológicas",
+   "questao": 54,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Biológicas",
+   "questao": 55,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Biológicas",
+   "questao": 56,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Biológicas",
+   "questao": 57,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Biológicas",
+   "questao": 58,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Biológicas",
+   "questao": 59,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Biológicas",
+   "questao": 60,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Biológicas",
+   "questao": 61,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Biológicas",
+   "questao": 62,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Biológicas",
+   "questao": 63,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Biológicas",
+   "questao": 64,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Biológicas",
+   "questao": 65,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Biológicas",
+   "questao": 66,
+   "grafico": true,
+   "classificacao": "conteúdo",
+   "tipo": "Gráfico de dispersão",
+   "resumo": "Dispersão com regressão e intervalo de confiança",
+   "acerto_brasil": 59.0,
+   "acerto_rj": 63.3,
+   "acerto_ufrj": 67.2,
+   "dificuldade_tri": -0.445
+  },
+  {
+   "prova": "Ciências Biológicas",
+   "questao": 67,
+   "grafico": true,
+   "classificacao": "conteúdo",
+   "tipo": "Gráfico linha e coluna",
+   "resumo": "Casos graves × óbitos por faixa etária",
+   "acerto_brasil": 75.5,
+   "acerto_rj": 78.9,
+   "acerto_ufrj": 80.8,
+   "dificuldade_tri": -1.396
+  },
+  {
+   "prova": "Ciências Biológicas",
+   "questao": 68,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Biológicas",
+   "questao": 69,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Biológicas",
+   "questao": 70,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Biológicas",
+   "questao": 71,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Biológicas",
+   "questao": 72,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Biológicas",
+   "questao": 73,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Biológicas",
+   "questao": 74,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Biológicas",
+   "questao": 75,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Biológicas",
+   "questao": 76,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Biológicas",
+   "questao": 77,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Biológicas",
+   "questao": 78,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Biológicas",
+   "questao": 79,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Biológicas",
+   "questao": 80,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Sociais",
+   "questao": 31,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Sociais",
+   "questao": 32,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Sociais",
+   "questao": 33,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Sociais",
+   "questao": 34,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Sociais",
+   "questao": 35,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Sociais",
+   "questao": 36,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Sociais",
+   "questao": 37,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Sociais",
+   "questao": 38,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Sociais",
+   "questao": 39,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Sociais",
+   "questao": 40,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Sociais",
+   "questao": 41,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Sociais",
+   "questao": 42,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Sociais",
+   "questao": 43,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Sociais",
+   "questao": 44,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Sociais",
+   "questao": 45,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Sociais",
+   "questao": 46,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Sociais",
+   "questao": 47,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Sociais",
+   "questao": 48,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Sociais",
+   "questao": 49,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Sociais",
+   "questao": 50,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Sociais",
+   "questao": 51,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Sociais",
+   "questao": 52,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Sociais",
+   "questao": 53,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Sociais",
+   "questao": 54,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Sociais",
+   "questao": 55,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Sociais",
+   "questao": 56,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Sociais",
+   "questao": 57,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Sociais",
+   "questao": 58,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Sociais",
+   "questao": 59,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Sociais",
+   "questao": 60,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Sociais",
+   "questao": 61,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Sociais",
+   "questao": 62,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Sociais",
+   "questao": 63,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Sociais",
+   "questao": 64,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Sociais",
+   "questao": 65,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Sociais",
+   "questao": 66,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Sociais",
+   "questao": 67,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Sociais",
+   "questao": 68,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Sociais",
+   "questao": 69,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Sociais",
+   "questao": 70,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Sociais",
+   "questao": 71,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Sociais",
+   "questao": 72,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Sociais",
+   "questao": 73,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Sociais",
+   "questao": 74,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Sociais",
+   "questao": 75,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Sociais",
+   "questao": 76,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Sociais",
+   "questao": 77,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Sociais",
+   "questao": 78,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Sociais",
+   "questao": 79,
+   "grafico": false
+  },
+  {
+   "prova": "Ciências Sociais",
+   "questao": 80,
+   "grafico": false
+  },
+  {
+   "prova": "Computação",
+   "questao": 31,
+   "grafico": false
+  },
+  {
+   "prova": "Computação",
+   "questao": 32,
+   "grafico": false
+  },
+  {
+   "prova": "Computação",
+   "questao": 33,
+   "grafico": false
+  },
+  {
+   "prova": "Computação",
+   "questao": 34,
+   "grafico": false
+  },
+  {
+   "prova": "Computação",
+   "questao": 35,
+   "grafico": false
+  },
+  {
+   "prova": "Computação",
+   "questao": 36,
+   "grafico": false
+  },
+  {
+   "prova": "Computação",
+   "questao": 37,
+   "grafico": false
+  },
+  {
+   "prova": "Computação",
+   "questao": 38,
+   "grafico": false
+  },
+  {
+   "prova": "Computação",
+   "questao": 39,
+   "grafico": false
+  },
+  {
+   "prova": "Computação",
+   "questao": 40,
+   "grafico": false
+  },
+  {
+   "prova": "Computação",
+   "questao": 41,
+   "grafico": false
+  },
+  {
+   "prova": "Computação",
+   "questao": 42,
+   "grafico": false
+  },
+  {
+   "prova": "Computação",
+   "questao": 43,
+   "grafico": false
+  },
+  {
+   "prova": "Computação",
+   "questao": 44,
+   "grafico": false
+  },
+  {
+   "prova": "Computação",
+   "questao": 45,
+   "grafico": false
+  },
+  {
+   "prova": "Computação",
+   "questao": 46,
+   "grafico": false
+  },
+  {
+   "prova": "Computação",
+   "questao": 47,
+   "grafico": false
+  },
+  {
+   "prova": "Computação",
+   "questao": 48,
+   "grafico": false
+  },
+  {
+   "prova": "Computação",
+   "questao": 49,
+   "grafico": false
+  },
+  {
+   "prova": "Computação",
+   "questao": 50,
+   "grafico": false
+  },
+  {
+   "prova": "Computação",
+   "questao": 51,
+   "grafico": false
+  },
+  {
+   "prova": "Computação",
+   "questao": 52,
+   "grafico": false
+  },
+  {
+   "prova": "Computação",
+   "questao": 53,
+   "grafico": false
+  },
+  {
+   "prova": "Computação",
+   "questao": 54,
+   "grafico": false
+  },
+  {
+   "prova": "Computação",
+   "questao": 55,
+   "grafico": false
+  },
+  {
+   "prova": "Computação",
+   "questao": 56,
+   "grafico": false
+  },
+  {
+   "prova": "Computação",
+   "questao": 57,
+   "grafico": false
+  },
+  {
+   "prova": "Computação",
+   "questao": 58,
+   "grafico": false
+  },
+  {
+   "prova": "Computação",
+   "questao": 59,
+   "grafico": false
+  },
+  {
+   "prova": "Computação",
+   "questao": 60,
+   "grafico": false
+  },
+  {
+   "prova": "Computação",
+   "questao": 61,
+   "grafico": false
+  },
+  {
+   "prova": "Computação",
+   "questao": 62,
+   "grafico": false
+  },
+  {
+   "prova": "Computação",
+   "questao": 63,
+   "grafico": false
+  },
+  {
+   "prova": "Computação",
+   "questao": 64,
+   "grafico": false
+  },
+  {
+   "prova": "Computação",
+   "questao": 65,
+   "grafico": false
+  },
+  {
+   "prova": "Computação",
+   "questao": 66,
+   "grafico": false
+  },
+  {
+   "prova": "Computação",
+   "questao": 67,
+   "grafico": false
+  },
+  {
+   "prova": "Computação",
+   "questao": 68,
+   "grafico": false
+  },
+  {
+   "prova": "Computação",
+   "questao": 69,
+   "grafico": false
+  },
+  {
+   "prova": "Computação",
+   "questao": 70,
+   "grafico": false
+  },
+  {
+   "prova": "Computação",
+   "questao": 71,
+   "grafico": false
+  },
+  {
+   "prova": "Computação",
+   "questao": 72,
+   "grafico": false
+  },
+  {
+   "prova": "Computação",
+   "questao": 73,
+   "grafico": false
+  },
+  {
+   "prova": "Computação",
+   "questao": 74,
+   "grafico": false
+  },
+  {
+   "prova": "Computação",
+   "questao": 75,
+   "grafico": false
+  },
+  {
+   "prova": "Computação",
+   "questao": 76,
+   "grafico": false
+  },
+  {
+   "prova": "Computação",
+   "questao": 77,
+   "grafico": false
+  },
+  {
+   "prova": "Computação",
+   "questao": 78,
+   "grafico": false
+  },
+  {
+   "prova": "Computação",
+   "questao": 79,
+   "grafico": false
+  },
+  {
+   "prova": "Computação",
+   "questao": 80,
+   "grafico": false
+  },
+  {
+   "prova": "Educação Física",
+   "questao": 31,
+   "grafico": false
+  },
+  {
+   "prova": "Educação Física",
+   "questao": 32,
+   "grafico": false
+  },
+  {
+   "prova": "Educação Física",
+   "questao": 33,
+   "grafico": false
+  },
+  {
+   "prova": "Educação Física",
+   "questao": 34,
+   "grafico": false
+  },
+  {
+   "prova": "Educação Física",
+   "questao": 35,
+   "grafico": false
+  },
+  {
+   "prova": "Educação Física",
+   "questao": 36,
+   "grafico": false
+  },
+  {
+   "prova": "Educação Física",
+   "questao": 37,
+   "grafico": false
+  },
+  {
+   "prova": "Educação Física",
+   "questao": 38,
+   "grafico": false
+  },
+  {
+   "prova": "Educação Física",
+   "questao": 39,
+   "grafico": false
+  },
+  {
+   "prova": "Educação Física",
+   "questao": 40,
+   "grafico": false
+  },
+  {
+   "prova": "Educação Física",
+   "questao": 41,
+   "grafico": false
+  },
+  {
+   "prova": "Educação Física",
+   "questao": 42,
+   "grafico": false
+  },
+  {
+   "prova": "Educação Física",
+   "questao": 43,
+   "grafico": false
+  },
+  {
+   "prova": "Educação Física",
+   "questao": 44,
+   "grafico": false
+  },
+  {
+   "prova": "Educação Física",
+   "questao": 45,
+   "grafico": false
+  },
+  {
+   "prova": "Educação Física",
+   "questao": 46,
+   "grafico": false
+  },
+  {
+   "prova": "Educação Física",
+   "questao": 47,
+   "grafico": false
+  },
+  {
+   "prova": "Educação Física",
+   "questao": 48,
+   "grafico": false
+  },
+  {
+   "prova": "Educação Física",
+   "questao": 49,
+   "grafico": false
+  },
+  {
+   "prova": "Educação Física",
+   "questao": 50,
+   "grafico": false
+  },
+  {
+   "prova": "Educação Física",
+   "questao": 51,
+   "grafico": false
+  },
+  {
+   "prova": "Educação Física",
+   "questao": 52,
+   "grafico": false
+  },
+  {
+   "prova": "Educação Física",
+   "questao": 53,
+   "grafico": false
+  },
+  {
+   "prova": "Educação Física",
+   "questao": 54,
+   "grafico": false
+  },
+  {
+   "prova": "Educação Física",
+   "questao": 55,
+   "grafico": false
+  },
+  {
+   "prova": "Educação Física",
+   "questao": 56,
+   "grafico": false
+  },
+  {
+   "prova": "Educação Física",
+   "questao": 57,
+   "grafico": false
+  },
+  {
+   "prova": "Educação Física",
+   "questao": 58,
+   "grafico": false
+  },
+  {
+   "prova": "Educação Física",
+   "questao": 59,
+   "grafico": false
+  },
+  {
+   "prova": "Educação Física",
+   "questao": 60,
+   "grafico": false
+  },
+  {
+   "prova": "Educação Física",
+   "questao": 61,
+   "grafico": false
+  },
+  {
+   "prova": "Educação Física",
+   "questao": 62,
+   "grafico": false
+  },
+  {
+   "prova": "Educação Física",
+   "questao": 63,
+   "grafico": false
+  },
+  {
+   "prova": "Educação Física",
+   "questao": 64,
+   "grafico": false
+  },
+  {
+   "prova": "Educação Física",
+   "questao": 65,
+   "grafico": false
+  },
+  {
+   "prova": "Educação Física",
+   "questao": 66,
+   "grafico": false
+  },
+  {
+   "prova": "Educação Física",
+   "questao": 67,
+   "grafico": false
+  },
+  {
+   "prova": "Educação Física",
+   "questao": 68,
+   "grafico": false
+  },
+  {
+   "prova": "Educação Física",
+   "questao": 69,
+   "grafico": false
+  },
+  {
+   "prova": "Educação Física",
+   "questao": 70,
+   "grafico": false
+  },
+  {
+   "prova": "Educação Física",
+   "questao": 71,
+   "grafico": false
+  },
+  {
+   "prova": "Educação Física",
+   "questao": 72,
+   "grafico": false
+  },
+  {
+   "prova": "Educação Física",
+   "questao": 73,
+   "grafico": false
+  },
+  {
+   "prova": "Educação Física",
+   "questao": 74,
+   "grafico": false
+  },
+  {
+   "prova": "Educação Física",
+   "questao": 75,
+   "grafico": false
+  },
+  {
+   "prova": "Educação Física",
+   "questao": 76,
+   "grafico": false
+  },
+  {
+   "prova": "Educação Física",
+   "questao": 77,
+   "grafico": false
+  },
+  {
+   "prova": "Educação Física",
+   "questao": 78,
+   "grafico": false
+  },
+  {
+   "prova": "Educação Física",
+   "questao": 79,
+   "grafico": false
+  },
+  {
+   "prova": "Educação Física",
+   "questao": 80,
+   "grafico": false
+  },
+  {
+   "prova": "Filosofia",
+   "questao": 31,
+   "grafico": false
+  },
+  {
+   "prova": "Filosofia",
+   "questao": 32,
+   "grafico": false
+  },
+  {
+   "prova": "Filosofia",
+   "questao": 33,
+   "grafico": false
+  },
+  {
+   "prova": "Filosofia",
+   "questao": 34,
+   "grafico": false
+  },
+  {
+   "prova": "Filosofia",
+   "questao": 35,
+   "grafico": false
+  },
+  {
+   "prova": "Filosofia",
+   "questao": 36,
+   "grafico": false
+  },
+  {
+   "prova": "Filosofia",
+   "questao": 37,
+   "grafico": false
+  },
+  {
+   "prova": "Filosofia",
+   "questao": 38,
+   "grafico": false
+  },
+  {
+   "prova": "Filosofia",
+   "questao": 39,
+   "grafico": false
+  },
+  {
+   "prova": "Filosofia",
+   "questao": 40,
+   "grafico": false
+  },
+  {
+   "prova": "Filosofia",
+   "questao": 41,
+   "grafico": false
+  },
+  {
+   "prova": "Filosofia",
+   "questao": 42,
+   "grafico": false
+  },
+  {
+   "prova": "Filosofia",
+   "questao": 43,
+   "grafico": false
+  },
+  {
+   "prova": "Filosofia",
+   "questao": 44,
+   "grafico": false
+  },
+  {
+   "prova": "Filosofia",
+   "questao": 45,
+   "grafico": false
+  },
+  {
+   "prova": "Filosofia",
+   "questao": 46,
+   "grafico": false
+  },
+  {
+   "prova": "Filosofia",
+   "questao": 47,
+   "grafico": false
+  },
+  {
+   "prova": "Filosofia",
+   "questao": 48,
+   "grafico": false
+  },
+  {
+   "prova": "Filosofia",
+   "questao": 49,
+   "grafico": false
+  },
+  {
+   "prova": "Filosofia",
+   "questao": 50,
+   "grafico": false
+  },
+  {
+   "prova": "Filosofia",
+   "questao": 51,
+   "grafico": false
+  },
+  {
+   "prova": "Filosofia",
+   "questao": 52,
+   "grafico": false
+  },
+  {
+   "prova": "Filosofia",
+   "questao": 53,
+   "grafico": false
+  },
+  {
+   "prova": "Filosofia",
+   "questao": 54,
+   "grafico": false
+  },
+  {
+   "prova": "Filosofia",
+   "questao": 55,
+   "grafico": false
+  },
+  {
+   "prova": "Filosofia",
+   "questao": 56,
+   "grafico": false
+  },
+  {
+   "prova": "Filosofia",
+   "questao": 57,
+   "grafico": false
+  },
+  {
+   "prova": "Filosofia",
+   "questao": 58,
+   "grafico": false
+  },
+  {
+   "prova": "Filosofia",
+   "questao": 59,
+   "grafico": false
+  },
+  {
+   "prova": "Filosofia",
+   "questao": 60,
+   "grafico": false
+  },
+  {
+   "prova": "Filosofia",
+   "questao": 61,
+   "grafico": false
+  },
+  {
+   "prova": "Filosofia",
+   "questao": 62,
+   "grafico": false
+  },
+  {
+   "prova": "Filosofia",
+   "questao": 63,
+   "grafico": false
+  },
+  {
+   "prova": "Filosofia",
+   "questao": 64,
+   "grafico": false
+  },
+  {
+   "prova": "Filosofia",
+   "questao": 65,
+   "grafico": false
+  },
+  {
+   "prova": "Filosofia",
+   "questao": 66,
+   "grafico": false
+  },
+  {
+   "prova": "Filosofia",
+   "questao": 67,
+   "grafico": false
+  },
+  {
+   "prova": "Filosofia",
+   "questao": 68,
+   "grafico": false
+  },
+  {
+   "prova": "Filosofia",
+   "questao": 69,
+   "grafico": false
+  },
+  {
+   "prova": "Filosofia",
+   "questao": 70,
+   "grafico": false
+  },
+  {
+   "prova": "Filosofia",
+   "questao": 71,
+   "grafico": false
+  },
+  {
+   "prova": "Filosofia",
+   "questao": 72,
+   "grafico": false
+  },
+  {
+   "prova": "Filosofia",
+   "questao": 73,
+   "grafico": false
+  },
+  {
+   "prova": "Filosofia",
+   "questao": 74,
+   "grafico": false
+  },
+  {
+   "prova": "Filosofia",
+   "questao": 75,
+   "grafico": false
+  },
+  {
+   "prova": "Filosofia",
+   "questao": 76,
+   "grafico": false
+  },
+  {
+   "prova": "Filosofia",
+   "questao": 77,
+   "grafico": false
+  },
+  {
+   "prova": "Filosofia",
+   "questao": 78,
+   "grafico": false
+  },
+  {
+   "prova": "Filosofia",
+   "questao": 79,
+   "grafico": false
+  },
+  {
+   "prova": "Filosofia",
+   "questao": 80,
+   "grafico": false
+  },
+  {
+   "prova": "Física",
+   "questao": 31,
+   "grafico": false
+  },
+  {
+   "prova": "Física",
+   "questao": 32,
+   "grafico": false
+  },
+  {
+   "prova": "Física",
+   "questao": 33,
+   "grafico": false
+  },
+  {
+   "prova": "Física",
+   "questao": 34,
+   "grafico": false
+  },
+  {
+   "prova": "Física",
+   "questao": 35,
+   "grafico": false
+  },
+  {
+   "prova": "Física",
+   "questao": 36,
+   "grafico": false
+  },
+  {
+   "prova": "Física",
+   "questao": 37,
+   "grafico": false
+  },
+  {
+   "prova": "Física",
+   "questao": 38,
+   "grafico": false
+  },
+  {
+   "prova": "Física",
+   "questao": 39,
+   "grafico": false
+  },
+  {
+   "prova": "Física",
+   "questao": 40,
+   "grafico": false
+  },
+  {
+   "prova": "Física",
+   "questao": 41,
+   "grafico": false
+  },
+  {
+   "prova": "Física",
+   "questao": 42,
+   "grafico": false
+  },
+  {
+   "prova": "Física",
+   "questao": 43,
+   "grafico": false
+  },
+  {
+   "prova": "Física",
+   "questao": 44,
+   "grafico": false
+  },
+  {
+   "prova": "Física",
+   "questao": 45,
+   "grafico": false
+  },
+  {
+   "prova": "Física",
+   "questao": 46,
+   "grafico": false
+  },
+  {
+   "prova": "Física",
+   "questao": 47,
+   "grafico": false
+  },
+  {
+   "prova": "Física",
+   "questao": 48,
+   "grafico": false
+  },
+  {
+   "prova": "Física",
+   "questao": 49,
+   "grafico": false
+  },
+  {
+   "prova": "Física",
+   "questao": 50,
+   "grafico": false
+  },
+  {
+   "prova": "Física",
+   "questao": 51,
+   "grafico": false
+  },
+  {
+   "prova": "Física",
+   "questao": 52,
+   "grafico": false
+  },
+  {
+   "prova": "Física",
+   "questao": 53,
+   "grafico": false
+  },
+  {
+   "prova": "Física",
+   "questao": 54,
+   "grafico": false
+  },
+  {
+   "prova": "Física",
+   "questao": 55,
+   "grafico": false
+  },
+  {
+   "prova": "Física",
+   "questao": 56,
+   "grafico": false
+  },
+  {
+   "prova": "Física",
+   "questao": 57,
+   "grafico": false
+  },
+  {
+   "prova": "Física",
+   "questao": 58,
+   "grafico": false
+  },
+  {
+   "prova": "Física",
+   "questao": 59,
+   "grafico": false
+  },
+  {
+   "prova": "Física",
+   "questao": 60,
+   "grafico": false
+  },
+  {
+   "prova": "Física",
+   "questao": 61,
+   "grafico": false
+  },
+  {
+   "prova": "Física",
+   "questao": 62,
+   "grafico": false
+  },
+  {
+   "prova": "Física",
+   "questao": 63,
+   "grafico": false
+  },
+  {
+   "prova": "Física",
+   "questao": 64,
+   "grafico": false
+  },
+  {
+   "prova": "Física",
+   "questao": 65,
+   "grafico": false
+  },
+  {
+   "prova": "Física",
+   "questao": 66,
+   "grafico": false
+  },
+  {
+   "prova": "Física",
+   "questao": 67,
+   "grafico": false
+  },
+  {
+   "prova": "Física",
+   "questao": 68,
+   "grafico": true,
+   "classificacao": "uso do gráfico",
+   "tipo": "Dispersão e linhas",
+   "resumo": "Tracker: posição e velocidade",
+   "acerto_brasil": 71.5,
+   "acerto_rj": 79.9,
+   "acerto_ufrj": 84.2,
+   "dificuldade_tri": -1.082
+  },
+  {
+   "prova": "Física",
+   "questao": 69,
+   "grafico": false
+  },
+  {
+   "prova": "Física",
+   "questao": 70,
+   "grafico": true,
+   "classificacao": "conteúdo",
+   "tipo": "Dispersão e linhas",
+   "resumo": "Tracker: posição e velocidade",
+   "acerto_brasil": 35.9,
+   "acerto_rj": 48.2,
+   "acerto_ufrj": 68.4,
+   "dificuldade_tri": 0.604
+  },
+  {
+   "prova": "Física",
+   "questao": 71,
+   "grafico": false
+  },
+  {
+   "prova": "Física",
+   "questao": 72,
+   "grafico": false
+  },
+  {
+   "prova": "Física",
+   "questao": 73,
+   "grafico": false
+  },
+  {
+   "prova": "Física",
+   "questao": 74,
+   "grafico": false
+  },
+  {
+   "prova": "Física",
+   "questao": 75,
+   "grafico": false
+  },
+  {
+   "prova": "Física",
+   "questao": 76,
+   "grafico": true,
+   "classificacao": "uso do gráfico",
+   "tipo": "Gráfico de linhas",
+   "resumo": "Reta de ajuste",
+   "acerto_brasil": 53.3,
+   "acerto_rj": 74.4,
+   "acerto_ufrj": 86.8,
+   "dificuldade_tri": -0.083
+  },
+  {
+   "prova": "Física",
+   "questao": 77,
+   "grafico": false
+  },
+  {
+   "prova": "Física",
+   "questao": 78,
+   "grafico": false
+  },
+  {
+   "prova": "Física",
+   "questao": 79,
+   "grafico": false
+  },
+  {
+   "prova": "Física",
+   "questao": 80,
+   "grafico": false
+  },
+  {
+   "prova": "Geografia",
+   "questao": 31,
+   "grafico": false
+  },
+  {
+   "prova": "Geografia",
+   "questao": 32,
+   "grafico": false
+  },
+  {
+   "prova": "Geografia",
+   "questao": 33,
+   "grafico": false
+  },
+  {
+   "prova": "Geografia",
+   "questao": 34,
+   "grafico": false
+  },
+  {
+   "prova": "Geografia",
+   "questao": 35,
+   "grafico": false
+  },
+  {
+   "prova": "Geografia",
+   "questao": 36,
+   "grafico": false
+  },
+  {
+   "prova": "Geografia",
+   "questao": 37,
+   "grafico": false
+  },
+  {
+   "prova": "Geografia",
+   "questao": 38,
+   "grafico": false
+  },
+  {
+   "prova": "Geografia",
+   "questao": 39,
+   "grafico": false
+  },
+  {
+   "prova": "Geografia",
+   "questao": 40,
+   "grafico": false
+  },
+  {
+   "prova": "Geografia",
+   "questao": 41,
+   "grafico": false
+  },
+  {
+   "prova": "Geografia",
+   "questao": 42,
+   "grafico": false
+  },
+  {
+   "prova": "Geografia",
+   "questao": 43,
+   "grafico": false
+  },
+  {
+   "prova": "Geografia",
+   "questao": 44,
+   "grafico": false
+  },
+  {
+   "prova": "Geografia",
+   "questao": 45,
+   "grafico": false
+  },
+  {
+   "prova": "Geografia",
+   "questao": 46,
+   "grafico": false
+  },
+  {
+   "prova": "Geografia",
+   "questao": 47,
+   "grafico": false
+  },
+  {
+   "prova": "Geografia",
+   "questao": 48,
+   "grafico": true,
+   "classificacao": "conteúdo",
+   "tipo": "Barras agrupadas",
+   "resumo": "Homicídios de mulheres negras por UF",
+   "acerto_brasil": 74.8,
+   "acerto_rj": 79.6,
+   "acerto_ufrj": 89.0,
+   "dificuldade_tri": -1.305
+  },
+  {
+   "prova": "Geografia",
+   "questao": 49,
+   "grafico": false
+  },
+  {
+   "prova": "Geografia",
+   "questao": 50,
+   "grafico": false
+  },
+  {
+   "prova": "Geografia",
+   "questao": 51,
+   "grafico": false
+  },
+  {
+   "prova": "Geografia",
+   "questao": 52,
+   "grafico": false
+  },
+  {
+   "prova": "Geografia",
+   "questao": 53,
+   "grafico": false
+  },
+  {
+   "prova": "Geografia",
+   "questao": 54,
+   "grafico": false
+  },
+  {
+   "prova": "Geografia",
+   "questao": 55,
+   "grafico": false
+  },
+  {
+   "prova": "Geografia",
+   "questao": 56,
+   "grafico": false
+  },
+  {
+   "prova": "Geografia",
+   "questao": 57,
+   "grafico": false
+  },
+  {
+   "prova": "Geografia",
+   "questao": 58,
+   "grafico": false
+  },
+  {
+   "prova": "Geografia",
+   "questao": 59,
+   "grafico": false
+  },
+  {
+   "prova": "Geografia",
+   "questao": 60,
+   "grafico": false
+  },
+  {
+   "prova": "Geografia",
+   "questao": 61,
+   "grafico": false
+  },
+  {
+   "prova": "Geografia",
+   "questao": 62,
+   "grafico": false
+  },
+  {
+   "prova": "Geografia",
+   "questao": 63,
+   "grafico": false
+  },
+  {
+   "prova": "Geografia",
+   "questao": 64,
+   "grafico": true,
+   "classificacao": "conteúdo",
+   "tipo": "Gráfico de setores e barras",
+   "resumo": "Conservação por bioma; área queimada",
+   "acerto_brasil": 74.9,
+   "acerto_rj": 76.8,
+   "acerto_ufrj": 91.8,
+   "dificuldade_tri": -1.391
+  },
+  {
+   "prova": "Geografia",
+   "questao": 65,
+   "grafico": true,
+   "classificacao": "conteúdo",
+   "tipo": "Gráfico de setores",
+   "resumo": "Conservação por bioma",
+   "acerto_brasil": 78.5,
+   "acerto_rj": 78.4,
+   "acerto_ufrj": 87.7,
+   "dificuldade_tri": -1.53
+  },
+  {
+   "prova": "Geografia",
+   "questao": 66,
+   "grafico": false
+  },
+  {
+   "prova": "Geografia",
+   "questao": 67,
+   "grafico": false
+  },
+  {
+   "prova": "Geografia",
+   "questao": 68,
+   "grafico": false
+  },
+  {
+   "prova": "Geografia",
+   "questao": 69,
+   "grafico": false
+  },
+  {
+   "prova": "Geografia",
+   "questao": 70,
+   "grafico": false
+  },
+  {
+   "prova": "Geografia",
+   "questao": 71,
+   "grafico": false
+  },
+  {
+   "prova": "Geografia",
+   "questao": 72,
+   "grafico": false
+  },
+  {
+   "prova": "Geografia",
+   "questao": 73,
+   "grafico": false
+  },
+  {
+   "prova": "Geografia",
+   "questao": 74,
+   "grafico": false
+  },
+  {
+   "prova": "Geografia",
+   "questao": 75,
+   "grafico": false
+  },
+  {
+   "prova": "Geografia",
+   "questao": 76,
+   "grafico": false
+  },
+  {
+   "prova": "Geografia",
+   "questao": 77,
+   "grafico": false
+  },
+  {
+   "prova": "Geografia",
+   "questao": 78,
+   "grafico": false
+  },
+  {
+   "prova": "Geografia",
+   "questao": 79,
+   "grafico": false
+  },
+  {
+   "prova": "Geografia",
+   "questao": 80,
+   "grafico": false
+  },
+  {
+   "prova": "História",
+   "questao": 31,
+   "grafico": false
+  },
+  {
+   "prova": "História",
+   "questao": 32,
+   "grafico": false
+  },
+  {
+   "prova": "História",
+   "questao": 33,
+   "grafico": false
+  },
+  {
+   "prova": "História",
+   "questao": 34,
+   "grafico": false
+  },
+  {
+   "prova": "História",
+   "questao": 35,
+   "grafico": false
+  },
+  {
+   "prova": "História",
+   "questao": 36,
+   "grafico": false
+  },
+  {
+   "prova": "História",
+   "questao": 37,
+   "grafico": false
+  },
+  {
+   "prova": "História",
+   "questao": 38,
+   "grafico": false
+  },
+  {
+   "prova": "História",
+   "questao": 39,
+   "grafico": false
+  },
+  {
+   "prova": "História",
+   "questao": 40,
+   "grafico": false
+  },
+  {
+   "prova": "História",
+   "questao": 41,
+   "grafico": false
+  },
+  {
+   "prova": "História",
+   "questao": 42,
+   "grafico": false
+  },
+  {
+   "prova": "História",
+   "questao": 43,
+   "grafico": false
+  },
+  {
+   "prova": "História",
+   "questao": 44,
+   "grafico": false
+  },
+  {
+   "prova": "História",
+   "questao": 45,
+   "grafico": false
+  },
+  {
+   "prova": "História",
+   "questao": 46,
+   "grafico": false
+  },
+  {
+   "prova": "História",
+   "questao": 47,
+   "grafico": false
+  },
+  {
+   "prova": "História",
+   "questao": 48,
+   "grafico": false
+  },
+  {
+   "prova": "História",
+   "questao": 49,
+   "grafico": false
+  },
+  {
+   "prova": "História",
+   "questao": 50,
+   "grafico": false
+  },
+  {
+   "prova": "História",
+   "questao": 51,
+   "grafico": false
+  },
+  {
+   "prova": "História",
+   "questao": 52,
+   "grafico": false
+  },
+  {
+   "prova": "História",
+   "questao": 53,
+   "grafico": false
+  },
+  {
+   "prova": "História",
+   "questao": 54,
+   "grafico": false
+  },
+  {
+   "prova": "História",
+   "questao": 55,
+   "grafico": false
+  },
+  {
+   "prova": "História",
+   "questao": 56,
+   "grafico": false
+  },
+  {
+   "prova": "História",
+   "questao": 57,
+   "grafico": false
+  },
+  {
+   "prova": "História",
+   "questao": 58,
+   "grafico": false
+  },
+  {
+   "prova": "História",
+   "questao": 59,
+   "grafico": false
+  },
+  {
+   "prova": "História",
+   "questao": 60,
+   "grafico": false
+  },
+  {
+   "prova": "História",
+   "questao": 61,
+   "grafico": false
+  },
+  {
+   "prova": "História",
+   "questao": 62,
+   "grafico": false
+  },
+  {
+   "prova": "História",
+   "questao": 63,
+   "grafico": false
+  },
+  {
+   "prova": "História",
+   "questao": 64,
+   "grafico": false
+  },
+  {
+   "prova": "História",
+   "questao": 65,
+   "grafico": false
+  },
+  {
+   "prova": "História",
+   "questao": 66,
+   "grafico": false
+  },
+  {
+   "prova": "História",
+   "questao": 67,
+   "grafico": false
+  },
+  {
+   "prova": "História",
+   "questao": 68,
+   "grafico": false
+  },
+  {
+   "prova": "História",
+   "questao": 69,
+   "grafico": false
+  },
+  {
+   "prova": "História",
+   "questao": 70,
+   "grafico": false
+  },
+  {
+   "prova": "História",
+   "questao": 71,
+   "grafico": false
+  },
+  {
+   "prova": "História",
+   "questao": 72,
+   "grafico": false
+  },
+  {
+   "prova": "História",
+   "questao": 73,
+   "grafico": false
+  },
+  {
+   "prova": "História",
+   "questao": 74,
+   "grafico": false
+  },
+  {
+   "prova": "História",
+   "questao": 75,
+   "grafico": false
+  },
+  {
+   "prova": "História",
+   "questao": 76,
+   "grafico": false
+  },
+  {
+   "prova": "História",
+   "questao": 77,
+   "grafico": false
+  },
+  {
+   "prova": "História",
+   "questao": 78,
+   "grafico": false
+  },
+  {
+   "prova": "História",
+   "questao": 79,
+   "grafico": false
+  },
+  {
+   "prova": "História",
+   "questao": 80,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Inglês",
+   "questao": 31,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Inglês",
+   "questao": 32,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Inglês",
+   "questao": 33,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Inglês",
+   "questao": 34,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Inglês",
+   "questao": 35,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Inglês",
+   "questao": 36,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Inglês",
+   "questao": 37,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Inglês",
+   "questao": 38,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Inglês",
+   "questao": 39,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Inglês",
+   "questao": 40,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Inglês",
+   "questao": 41,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Inglês",
+   "questao": 42,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Inglês",
+   "questao": 43,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Inglês",
+   "questao": 44,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Inglês",
+   "questao": 45,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Inglês",
+   "questao": 46,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Inglês",
+   "questao": 47,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Inglês",
+   "questao": 48,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Inglês",
+   "questao": 49,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Inglês",
+   "questao": 50,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Inglês",
+   "questao": 51,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Inglês",
+   "questao": 52,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Inglês",
+   "questao": 53,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Inglês",
+   "questao": 54,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Inglês",
+   "questao": 55,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Inglês",
+   "questao": 56,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Inglês",
+   "questao": 57,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Inglês",
+   "questao": 58,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Inglês",
+   "questao": 59,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Inglês",
+   "questao": 60,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Inglês",
+   "questao": 61,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Inglês",
+   "questao": 62,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Inglês",
+   "questao": 63,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Inglês",
+   "questao": 64,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Inglês",
+   "questao": 65,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Inglês",
+   "questao": 66,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Inglês",
+   "questao": 67,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Inglês",
+   "questao": 68,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Inglês",
+   "questao": 69,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Inglês",
+   "questao": 70,
+   "grafico": true,
+   "classificacao": "conteúdo",
+   "tipo": "Gráfico de barras e setores",
+   "resumo": "Falantes por língua; línguas dos sites",
+   "acerto_brasil": 42.1,
+   "acerto_rj": 54.2,
+   "acerto_ufrj": null,
+   "dificuldade_tri": 0.459
+  },
+  {
+   "prova": "Letras – Inglês",
+   "questao": 71,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Inglês",
+   "questao": 72,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Inglês",
+   "questao": 73,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Inglês",
+   "questao": 74,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Inglês",
+   "questao": 75,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Inglês",
+   "questao": 76,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Inglês",
+   "questao": 77,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Inglês",
+   "questao": 78,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Inglês",
+   "questao": 79,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Inglês",
+   "questao": 80,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português",
+   "questao": 31,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português",
+   "questao": 32,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português",
+   "questao": 33,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português",
+   "questao": 34,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português",
+   "questao": 35,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português",
+   "questao": 36,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português",
+   "questao": 37,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português",
+   "questao": 38,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português",
+   "questao": 39,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português",
+   "questao": 40,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português",
+   "questao": 41,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português",
+   "questao": 42,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português",
+   "questao": 43,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português",
+   "questao": 44,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português",
+   "questao": 45,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português",
+   "questao": 46,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português",
+   "questao": 47,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português",
+   "questao": 48,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português",
+   "questao": 49,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português",
+   "questao": 50,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português",
+   "questao": 51,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português",
+   "questao": 52,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português",
+   "questao": 53,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português",
+   "questao": 54,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português",
+   "questao": 55,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português",
+   "questao": 56,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português",
+   "questao": 57,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português",
+   "questao": 58,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português",
+   "questao": 59,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português",
+   "questao": 60,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português",
+   "questao": 61,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português",
+   "questao": 62,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português",
+   "questao": 63,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português",
+   "questao": 64,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português",
+   "questao": 65,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português",
+   "questao": 66,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português",
+   "questao": 67,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português",
+   "questao": 68,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português",
+   "questao": 69,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português",
+   "questao": 70,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português",
+   "questao": 71,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português",
+   "questao": 72,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português",
+   "questao": 73,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português",
+   "questao": 74,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português",
+   "questao": 75,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português",
+   "questao": 76,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português",
+   "questao": 77,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português",
+   "questao": 78,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português",
+   "questao": 79,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português",
+   "questao": 80,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Espanhol",
+   "questao": 31,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Espanhol",
+   "questao": 32,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Espanhol",
+   "questao": 33,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Espanhol",
+   "questao": 34,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Espanhol",
+   "questao": 35,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Espanhol",
+   "questao": 36,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Espanhol",
+   "questao": 37,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Espanhol",
+   "questao": 38,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Espanhol",
+   "questao": 39,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Espanhol",
+   "questao": 40,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Espanhol",
+   "questao": 41,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Espanhol",
+   "questao": 42,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Espanhol",
+   "questao": 43,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Espanhol",
+   "questao": 44,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Espanhol",
+   "questao": 45,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Espanhol",
+   "questao": 46,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Espanhol",
+   "questao": 47,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Espanhol",
+   "questao": 48,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Espanhol",
+   "questao": 49,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Espanhol",
+   "questao": 50,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Espanhol",
+   "questao": 51,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Espanhol",
+   "questao": 52,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Espanhol",
+   "questao": 53,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Espanhol",
+   "questao": 54,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Espanhol",
+   "questao": 55,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Espanhol",
+   "questao": 56,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Espanhol",
+   "questao": 57,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Espanhol",
+   "questao": 58,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Espanhol",
+   "questao": 59,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Espanhol",
+   "questao": 60,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Espanhol",
+   "questao": 61,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Espanhol",
+   "questao": 62,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Espanhol",
+   "questao": 63,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Espanhol",
+   "questao": 64,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Espanhol",
+   "questao": 65,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Espanhol",
+   "questao": 66,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Espanhol",
+   "questao": 67,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Espanhol",
+   "questao": 68,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Espanhol",
+   "questao": 69,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Espanhol",
+   "questao": 70,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Espanhol",
+   "questao": 71,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Espanhol",
+   "questao": 72,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Espanhol",
+   "questao": 73,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Espanhol",
+   "questao": 74,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Espanhol",
+   "questao": 75,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Espanhol",
+   "questao": 76,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Espanhol",
+   "questao": 77,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Espanhol",
+   "questao": 78,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Espanhol",
+   "questao": 79,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Espanhol",
+   "questao": 80,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Inglês",
+   "questao": 31,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Inglês",
+   "questao": 32,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Inglês",
+   "questao": 33,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Inglês",
+   "questao": 34,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Inglês",
+   "questao": 35,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Inglês",
+   "questao": 36,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Inglês",
+   "questao": 37,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Inglês",
+   "questao": 38,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Inglês",
+   "questao": 39,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Inglês",
+   "questao": 40,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Inglês",
+   "questao": 41,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Inglês",
+   "questao": 42,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Inglês",
+   "questao": 43,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Inglês",
+   "questao": 44,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Inglês",
+   "questao": 45,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Inglês",
+   "questao": 46,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Inglês",
+   "questao": 47,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Inglês",
+   "questao": 48,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Inglês",
+   "questao": 49,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Inglês",
+   "questao": 50,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Inglês",
+   "questao": 51,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Inglês",
+   "questao": 52,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Inglês",
+   "questao": 53,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Inglês",
+   "questao": 54,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Inglês",
+   "questao": 55,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Inglês",
+   "questao": 56,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Inglês",
+   "questao": 57,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Inglês",
+   "questao": 58,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Inglês",
+   "questao": 59,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Inglês",
+   "questao": 60,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Inglês",
+   "questao": 61,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Inglês",
+   "questao": 62,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Inglês",
+   "questao": 63,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Inglês",
+   "questao": 64,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Inglês",
+   "questao": 65,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Inglês",
+   "questao": 66,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Inglês",
+   "questao": 67,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Inglês",
+   "questao": 68,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Inglês",
+   "questao": 69,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Inglês",
+   "questao": 70,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Inglês",
+   "questao": 71,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Inglês",
+   "questao": 72,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Inglês",
+   "questao": 73,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Inglês",
+   "questao": 74,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Inglês",
+   "questao": 75,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Inglês",
+   "questao": 76,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Inglês",
+   "questao": 77,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Inglês",
+   "questao": 78,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Inglês",
+   "questao": 79,
+   "grafico": false
+  },
+  {
+   "prova": "Letras – Português e Inglês",
+   "questao": 80,
+   "grafico": false
+  },
+  {
+   "prova": "Matemática",
+   "questao": 31,
+   "grafico": false
+  },
+  {
+   "prova": "Matemática",
+   "questao": 32,
+   "grafico": false
+  },
+  {
+   "prova": "Matemática",
+   "questao": 33,
+   "grafico": false
+  },
+  {
+   "prova": "Matemática",
+   "questao": 34,
+   "grafico": false
+  },
+  {
+   "prova": "Matemática",
+   "questao": 35,
+   "grafico": false
+  },
+  {
+   "prova": "Matemática",
+   "questao": 36,
+   "grafico": false
+  },
+  {
+   "prova": "Matemática",
+   "questao": 37,
+   "grafico": false
+  },
+  {
+   "prova": "Matemática",
+   "questao": 38,
+   "grafico": false
+  },
+  {
+   "prova": "Matemática",
+   "questao": 39,
+   "grafico": false
+  },
+  {
+   "prova": "Matemática",
+   "questao": 40,
+   "grafico": false
+  },
+  {
+   "prova": "Matemática",
+   "questao": 41,
+   "grafico": false
+  },
+  {
+   "prova": "Matemática",
+   "questao": 42,
+   "grafico": true,
+   "classificacao": "uso do gráfico",
+   "tipo": "Gráfico de dispersão",
+   "resumo": "Dispersão e ajuste de curva",
+   "acerto_brasil": 57.4,
+   "acerto_rj": 65.4,
+   "acerto_ufrj": 75.0,
+   "dificuldade_tri": -0.139
+  },
+  {
+   "prova": "Matemática",
+   "questao": 43,
+   "grafico": true,
+   "classificacao": "uso do gráfico",
+   "tipo": "Gráfico linha e coluna",
+   "resumo": "Função com retângulos sob a curva",
+   "acerto_brasil": 41.5,
+   "acerto_rj": 47.3,
+   "acerto_ufrj": 52.5,
+   "dificuldade_tri": 0.835
+  },
+  {
+   "prova": "Matemática",
+   "questao": 44,
+   "grafico": false
+  },
+  {
+   "prova": "Matemática",
+   "questao": 45,
+   "grafico": false
+  },
+  {
+   "prova": "Matemática",
+   "questao": 46,
+   "grafico": false
+  },
+  {
+   "prova": "Matemática",
+   "questao": 47,
+   "grafico": true,
+   "classificacao": "uso do gráfico",
+   "tipo": "Gráfico de dispersão",
+   "resumo": "Planos em 3D",
+   "acerto_brasil": 37.3,
+   "acerto_rj": 45.5,
+   "acerto_ufrj": 66.2,
+   "dificuldade_tri": 0.835
+  },
+  {
+   "prova": "Matemática",
+   "questao": 48,
+   "grafico": true,
+   "classificacao": "uso do gráfico",
+   "tipo": "Gráfico de linhas",
+   "resumo": "Função trigonométrica",
+   "acerto_brasil": 48.1,
+   "acerto_rj": 58.4,
+   "acerto_ufrj": 78.8,
+   "dificuldade_tri": 0.556
+  },
+  {
+   "prova": "Matemática",
+   "questao": 49,
+   "grafico": false
+  },
+  {
+   "prova": "Matemática",
+   "questao": 50,
+   "grafico": false
+  },
+  {
+   "prova": "Matemática",
+   "questao": 51,
+   "grafico": false
+  },
+  {
+   "prova": "Matemática",
+   "questao": 52,
+   "grafico": false
+  },
+  {
+   "prova": "Matemática",
+   "questao": 53,
+   "grafico": false
+  },
+  {
+   "prova": "Matemática",
+   "questao": 54,
+   "grafico": false
+  },
+  {
+   "prova": "Matemática",
+   "questao": 55,
+   "grafico": false
+  },
+  {
+   "prova": "Matemática",
+   "questao": 56,
+   "grafico": false
+  },
+  {
+   "prova": "Matemática",
+   "questao": 57,
+   "grafico": false
+  },
+  {
+   "prova": "Matemática",
+   "questao": 58,
+   "grafico": false
+  },
+  {
+   "prova": "Matemática",
+   "questao": 59,
+   "grafico": false
+  },
+  {
+   "prova": "Matemática",
+   "questao": 60,
+   "grafico": false
+  },
+  {
+   "prova": "Matemática",
+   "questao": 61,
+   "grafico": false
+  },
+  {
+   "prova": "Matemática",
+   "questao": 62,
+   "grafico": true,
+   "classificacao": "conteúdo",
+   "tipo": "Gráfico de dispersão",
+   "resumo": "Plano cartesiano com circunferências",
+   "acerto_brasil": 42.9,
+   "acerto_rj": 60.3,
+   "acerto_ufrj": 81.2,
+   "dificuldade_tri": 0.601
+  },
+  {
+   "prova": "Matemática",
+   "questao": 63,
+   "grafico": false
+  },
+  {
+   "prova": "Matemática",
+   "questao": 64,
+   "grafico": true,
+   "classificacao": "uso do gráfico",
+   "tipo": "Gráfico de linhas",
+   "resumo": "Gráficos de funções",
+   "acerto_brasil": 29.4,
+   "acerto_rj": 37.6,
+   "acerto_ufrj": 52.5,
+   "dificuldade_tri": 1.351
+  },
+  {
+   "prova": "Matemática",
+   "questao": 65,
+   "grafico": false
+  },
+  {
+   "prova": "Matemática",
+   "questao": 66,
+   "grafico": false
+  },
+  {
+   "prova": "Matemática",
+   "questao": 67,
+   "grafico": true,
+   "classificacao": "conteúdo",
+   "tipo": "Gráfico de dispersão",
+   "resumo": "Plano cartesiano com locais do bairro",
+   "acerto_brasil": 49.4,
+   "acerto_rj": 57.5,
+   "acerto_ufrj": 68.8,
+   "dificuldade_tri": 0.204
+  },
+  {
+   "prova": "Matemática",
+   "questao": 68,
+   "grafico": false
+  },
+  {
+   "prova": "Matemática",
+   "questao": 69,
+   "grafico": false
+  },
+  {
+   "prova": "Matemática",
+   "questao": 70,
+   "grafico": true,
+   "classificacao": "conteúdo",
+   "tipo": "Gráfico de dispersão",
+   "resumo": "Coordenadas em 3D",
+   "acerto_brasil": 63.9,
+   "acerto_rj": 73.9,
+   "acerto_ufrj": 80.0,
+   "dificuldade_tri": -0.141
+  },
+  {
+   "prova": "Matemática",
+   "questao": 71,
+   "grafico": false
+  },
+  {
+   "prova": "Matemática",
+   "questao": 72,
+   "grafico": false
+  },
+  {
+   "prova": "Matemática",
+   "questao": 73,
+   "grafico": false
+  },
+  {
+   "prova": "Matemática",
+   "questao": 74,
+   "grafico": false
+  },
+  {
+   "prova": "Matemática",
+   "questao": 75,
+   "grafico": false
+  },
+  {
+   "prova": "Matemática",
+   "questao": 76,
+   "grafico": false
+  },
+  {
+   "prova": "Matemática",
+   "questao": 77,
+   "grafico": false
+  },
+  {
+   "prova": "Matemática",
+   "questao": 78,
+   "grafico": true,
+   "classificacao": "conteúdo",
+   "tipo": "Gráfico de linhas",
+   "resumo": "Modelo de lixo acumulado",
+   "acerto_brasil": 41.5,
+   "acerto_rj": 46.0,
+   "acerto_ufrj": 57.5,
+   "dificuldade_tri": 0.622
+  },
+  {
+   "prova": "Matemática",
+   "questao": 79,
+   "grafico": false
+  },
+  {
+   "prova": "Matemática",
+   "questao": 80,
+   "grafico": false
+  },
+  {
+   "prova": "Música",
+   "questao": 31,
+   "grafico": false
+  },
+  {
+   "prova": "Música",
+   "questao": 32,
+   "grafico": false
+  },
+  {
+   "prova": "Música",
+   "questao": 33,
+   "grafico": false
+  },
+  {
+   "prova": "Música",
+   "questao": 34,
+   "grafico": false
+  },
+  {
+   "prova": "Música",
+   "questao": 35,
+   "grafico": false
+  },
+  {
+   "prova": "Música",
+   "questao": 36,
+   "grafico": false
+  },
+  {
+   "prova": "Música",
+   "questao": 37,
+   "grafico": false
+  },
+  {
+   "prova": "Música",
+   "questao": 38,
+   "grafico": false
+  },
+  {
+   "prova": "Música",
+   "questao": 39,
+   "grafico": false
+  },
+  {
+   "prova": "Música",
+   "questao": 40,
+   "grafico": false
+  },
+  {
+   "prova": "Música",
+   "questao": 41,
+   "grafico": false
+  },
+  {
+   "prova": "Música",
+   "questao": 42,
+   "grafico": false
+  },
+  {
+   "prova": "Música",
+   "questao": 43,
+   "grafico": false
+  },
+  {
+   "prova": "Música",
+   "questao": 44,
+   "grafico": false
+  },
+  {
+   "prova": "Música",
+   "questao": 45,
+   "grafico": false
+  },
+  {
+   "prova": "Música",
+   "questao": 46,
+   "grafico": false
+  },
+  {
+   "prova": "Música",
+   "questao": 47,
+   "grafico": false
+  },
+  {
+   "prova": "Música",
+   "questao": 48,
+   "grafico": false
+  },
+  {
+   "prova": "Música",
+   "questao": 49,
+   "grafico": false
+  },
+  {
+   "prova": "Música",
+   "questao": 50,
+   "grafico": false
+  },
+  {
+   "prova": "Música",
+   "questao": 51,
+   "grafico": false
+  },
+  {
+   "prova": "Música",
+   "questao": 52,
+   "grafico": false
+  },
+  {
+   "prova": "Música",
+   "questao": 53,
+   "grafico": false
+  },
+  {
+   "prova": "Música",
+   "questao": 54,
+   "grafico": false
+  },
+  {
+   "prova": "Música",
+   "questao": 55,
+   "grafico": false
+  },
+  {
+   "prova": "Música",
+   "questao": 56,
+   "grafico": false
+  },
+  {
+   "prova": "Música",
+   "questao": 57,
+   "grafico": false
+  },
+  {
+   "prova": "Música",
+   "questao": 58,
+   "grafico": false
+  },
+  {
+   "prova": "Música",
+   "questao": 59,
+   "grafico": false
+  },
+  {
+   "prova": "Música",
+   "questao": 60,
+   "grafico": false
+  },
+  {
+   "prova": "Música",
+   "questao": 61,
+   "grafico": false
+  },
+  {
+   "prova": "Música",
+   "questao": 62,
+   "grafico": false
+  },
+  {
+   "prova": "Música",
+   "questao": 63,
+   "grafico": false
+  },
+  {
+   "prova": "Música",
+   "questao": 64,
+   "grafico": false
+  },
+  {
+   "prova": "Música",
+   "questao": 65,
+   "grafico": false
+  },
+  {
+   "prova": "Música",
+   "questao": 66,
+   "grafico": false
+  },
+  {
+   "prova": "Música",
+   "questao": 67,
+   "grafico": false
+  },
+  {
+   "prova": "Música",
+   "questao": 68,
+   "grafico": false
+  },
+  {
+   "prova": "Música",
+   "questao": 69,
+   "grafico": false
+  },
+  {
+   "prova": "Música",
+   "questao": 70,
+   "grafico": false
+  },
+  {
+   "prova": "Música",
+   "questao": 71,
+   "grafico": false
+  },
+  {
+   "prova": "Música",
+   "questao": 72,
+   "grafico": false
+  },
+  {
+   "prova": "Música",
+   "questao": 73,
+   "grafico": false
+  },
+  {
+   "prova": "Música",
+   "questao": 74,
+   "grafico": false
+  },
+  {
+   "prova": "Música",
+   "questao": 75,
+   "grafico": false
+  },
+  {
+   "prova": "Música",
+   "questao": 76,
+   "grafico": false
+  },
+  {
+   "prova": "Música",
+   "questao": 77,
+   "grafico": false
+  },
+  {
+   "prova": "Música",
+   "questao": 78,
+   "grafico": false
+  },
+  {
+   "prova": "Música",
+   "questao": 79,
+   "grafico": false
+  },
+  {
+   "prova": "Música",
+   "questao": 80,
+   "grafico": false
+  },
+  {
+   "prova": "Pedagogia",
+   "questao": 31,
+   "grafico": false
+  },
+  {
+   "prova": "Pedagogia",
+   "questao": 32,
+   "grafico": false
+  },
+  {
+   "prova": "Pedagogia",
+   "questao": 33,
+   "grafico": false
+  },
+  {
+   "prova": "Pedagogia",
+   "questao": 34,
+   "grafico": false
+  },
+  {
+   "prova": "Pedagogia",
+   "questao": 35,
+   "grafico": false
+  },
+  {
+   "prova": "Pedagogia",
+   "questao": 36,
+   "grafico": false
+  },
+  {
+   "prova": "Pedagogia",
+   "questao": 37,
+   "grafico": false
+  },
+  {
+   "prova": "Pedagogia",
+   "questao": 38,
+   "grafico": false
+  },
+  {
+   "prova": "Pedagogia",
+   "questao": 39,
+   "grafico": false
+  },
+  {
+   "prova": "Pedagogia",
+   "questao": 40,
+   "grafico": false
+  },
+  {
+   "prova": "Pedagogia",
+   "questao": 41,
+   "grafico": false
+  },
+  {
+   "prova": "Pedagogia",
+   "questao": 42,
+   "grafico": false
+  },
+  {
+   "prova": "Pedagogia",
+   "questao": 43,
+   "grafico": false
+  },
+  {
+   "prova": "Pedagogia",
+   "questao": 44,
+   "grafico": false
+  },
+  {
+   "prova": "Pedagogia",
+   "questao": 45,
+   "grafico": false
+  },
+  {
+   "prova": "Pedagogia",
+   "questao": 46,
+   "grafico": false
+  },
+  {
+   "prova": "Pedagogia",
+   "questao": 47,
+   "grafico": false
+  },
+  {
+   "prova": "Pedagogia",
+   "questao": 48,
+   "grafico": false
+  },
+  {
+   "prova": "Pedagogia",
+   "questao": 49,
+   "grafico": false
+  },
+  {
+   "prova": "Pedagogia",
+   "questao": 50,
+   "grafico": false
+  },
+  {
+   "prova": "Pedagogia",
+   "questao": 51,
+   "grafico": false
+  },
+  {
+   "prova": "Pedagogia",
+   "questao": 52,
+   "grafico": false
+  },
+  {
+   "prova": "Pedagogia",
+   "questao": 53,
+   "grafico": false
+  },
+  {
+   "prova": "Pedagogia",
+   "questao": 54,
+   "grafico": false
+  },
+  {
+   "prova": "Pedagogia",
+   "questao": 55,
+   "grafico": false
+  },
+  {
+   "prova": "Pedagogia",
+   "questao": 56,
+   "grafico": false
+  },
+  {
+   "prova": "Pedagogia",
+   "questao": 57,
+   "grafico": false
+  },
+  {
+   "prova": "Pedagogia",
+   "questao": 58,
+   "grafico": false
+  },
+  {
+   "prova": "Pedagogia",
+   "questao": 59,
+   "grafico": false
+  },
+  {
+   "prova": "Pedagogia",
+   "questao": 60,
+   "grafico": false
+  },
+  {
+   "prova": "Pedagogia",
+   "questao": 61,
+   "grafico": false
+  },
+  {
+   "prova": "Pedagogia",
+   "questao": 62,
+   "grafico": false
+  },
+  {
+   "prova": "Pedagogia",
+   "questao": 63,
+   "grafico": false
+  },
+  {
+   "prova": "Pedagogia",
+   "questao": 64,
+   "grafico": false
+  },
+  {
+   "prova": "Pedagogia",
+   "questao": 65,
+   "grafico": false
+  },
+  {
+   "prova": "Pedagogia",
+   "questao": 66,
+   "grafico": false
+  },
+  {
+   "prova": "Pedagogia",
+   "questao": 67,
+   "grafico": false
+  },
+  {
+   "prova": "Pedagogia",
+   "questao": 68,
+   "grafico": false
+  },
+  {
+   "prova": "Pedagogia",
+   "questao": 69,
+   "grafico": false
+  },
+  {
+   "prova": "Pedagogia",
+   "questao": 70,
+   "grafico": false
+  },
+  {
+   "prova": "Pedagogia",
+   "questao": 71,
+   "grafico": false
+  },
+  {
+   "prova": "Pedagogia",
+   "questao": 72,
+   "grafico": false
+  },
+  {
+   "prova": "Pedagogia",
+   "questao": 73,
+   "grafico": false
+  },
+  {
+   "prova": "Pedagogia",
+   "questao": 74,
+   "grafico": false
+  },
+  {
+   "prova": "Pedagogia",
+   "questao": 75,
+   "grafico": false
+  },
+  {
+   "prova": "Pedagogia",
+   "questao": 76,
+   "grafico": false
+  },
+  {
+   "prova": "Pedagogia",
+   "questao": 77,
+   "grafico": false
+  },
+  {
+   "prova": "Pedagogia",
+   "questao": 78,
+   "grafico": false
+  },
+  {
+   "prova": "Pedagogia",
+   "questao": 79,
+   "grafico": false
+  },
+  {
+   "prova": "Pedagogia",
+   "questao": 80,
+   "grafico": false
+  },
+  {
+   "prova": "Química",
+   "questao": 31,
+   "grafico": false
+  },
+  {
+   "prova": "Química",
+   "questao": 32,
+   "grafico": false
+  },
+  {
+   "prova": "Química",
+   "questao": 33,
+   "grafico": false
+  },
+  {
+   "prova": "Química",
+   "questao": 34,
+   "grafico": false
+  },
+  {
+   "prova": "Química",
+   "questao": 35,
+   "grafico": false
+  },
+  {
+   "prova": "Química",
+   "questao": 36,
+   "grafico": false
+  },
+  {
+   "prova": "Química",
+   "questao": 37,
+   "grafico": false
+  },
+  {
+   "prova": "Química",
+   "questao": 38,
+   "grafico": false
+  },
+  {
+   "prova": "Química",
+   "questao": 39,
+   "grafico": false
+  },
+  {
+   "prova": "Química",
+   "questao": 40,
+   "grafico": false
+  },
+  {
+   "prova": "Química",
+   "questao": 41,
+   "grafico": false
+  },
+  {
+   "prova": "Química",
+   "questao": 42,
+   "grafico": false
+  },
+  {
+   "prova": "Química",
+   "questao": 43,
+   "grafico": false
+  },
+  {
+   "prova": "Química",
+   "questao": 44,
+   "grafico": false
+  },
+  {
+   "prova": "Química",
+   "questao": 45,
+   "grafico": false
+  },
+  {
+   "prova": "Química",
+   "questao": 46,
+   "grafico": false
+  },
+  {
+   "prova": "Química",
+   "questao": 47,
+   "grafico": false
+  },
+  {
+   "prova": "Química",
+   "questao": 48,
+   "grafico": false
+  },
+  {
+   "prova": "Química",
+   "questao": 49,
+   "grafico": false
+  },
+  {
+   "prova": "Química",
+   "questao": 50,
+   "grafico": false
+  },
+  {
+   "prova": "Química",
+   "questao": 51,
+   "grafico": false
+  },
+  {
+   "prova": "Química",
+   "questao": 52,
+   "grafico": false
+  },
+  {
+   "prova": "Química",
+   "questao": 53,
+   "grafico": false
+  },
+  {
+   "prova": "Química",
+   "questao": 54,
+   "grafico": false
+  },
+  {
+   "prova": "Química",
+   "questao": 55,
+   "grafico": false
+  },
+  {
+   "prova": "Química",
+   "questao": 56,
+   "grafico": true,
+   "classificacao": "conteúdo",
+   "tipo": "Gráfico de bolhas",
+   "resumo": "Gráfico de Ragone",
+   "acerto_brasil": 51.5,
+   "acerto_rj": 71.2,
+   "acerto_ufrj": 70.4,
+   "dificuldade_tri": -0.186
+  },
+  {
+   "prova": "Química",
+   "questao": 57,
+   "grafico": false
+  },
+  {
+   "prova": "Química",
+   "questao": 58,
+   "grafico": false
+  },
+  {
+   "prova": "Química",
+   "questao": 59,
+   "grafico": false
+  },
+  {
+   "prova": "Química",
+   "questao": 60,
+   "grafico": false
+  },
+  {
+   "prova": "Química",
+   "questao": 61,
+   "grafico": false
+  },
+  {
+   "prova": "Química",
+   "questao": 62,
+   "grafico": false
+  },
+  {
+   "prova": "Química",
+   "questao": 63,
+   "grafico": false
+  },
+  {
+   "prova": "Química",
+   "questao": 64,
+   "grafico": false
+  },
+  {
+   "prova": "Química",
+   "questao": 65,
+   "grafico": false
+  },
+  {
+   "prova": "Química",
+   "questao": 66,
+   "grafico": false
+  },
+  {
+   "prova": "Química",
+   "questao": 67,
+   "grafico": false
+  },
+  {
+   "prova": "Química",
+   "questao": 68,
+   "grafico": false
+  },
+  {
+   "prova": "Química",
+   "questao": 69,
+   "grafico": false
+  },
+  {
+   "prova": "Química",
+   "questao": 70,
+   "grafico": false
+  },
+  {
+   "prova": "Química",
+   "questao": 71,
+   "grafico": false
+  },
+  {
+   "prova": "Química",
+   "questao": 72,
+   "grafico": false
+  },
+  {
+   "prova": "Química",
+   "questao": 73,
+   "grafico": false
+  },
+  {
+   "prova": "Química",
+   "questao": 74,
+   "grafico": false
+  },
+  {
+   "prova": "Química",
+   "questao": 75,
+   "grafico": false
+  },
+  {
+   "prova": "Química",
+   "questao": 76,
+   "grafico": false
+  },
+  {
+   "prova": "Química",
+   "questao": 77,
+   "grafico": false
+  },
+  {
+   "prova": "Química",
+   "questao": 78,
+   "grafico": false
+  },
+  {
+   "prova": "Química",
+   "questao": 79,
+   "grafico": false
+  },
+  {
+   "prova": "Química",
+   "questao": 80,
+   "grafico": false
+  },
+  {
+   "prova": "Formação Geral",
+   "questao": 1,
+   "grafico": false
+  },
+  {
+   "prova": "Formação Geral",
+   "questao": 2,
+   "grafico": false
+  },
+  {
+   "prova": "Formação Geral",
+   "questao": 3,
+   "grafico": false
+  },
+  {
+   "prova": "Formação Geral",
+   "questao": 4,
+   "grafico": false
+  },
+  {
+   "prova": "Formação Geral",
+   "questao": 5,
+   "grafico": false
+  },
+  {
+   "prova": "Formação Geral",
+   "questao": 6,
+   "grafico": false
+  },
+  {
+   "prova": "Formação Geral",
+   "questao": 7,
+   "grafico": false
+  },
+  {
+   "prova": "Formação Geral",
+   "questao": 8,
+   "grafico": false
+  },
+  {
+   "prova": "Formação Geral",
+   "questao": 9,
+   "grafico": false
+  },
+  {
+   "prova": "Formação Geral",
+   "questao": 10,
+   "grafico": false
+  },
+  {
+   "prova": "Formação Geral",
+   "questao": 11,
+   "grafico": false
+  },
+  {
+   "prova": "Formação Geral",
+   "questao": 12,
+   "grafico": false
+  },
+  {
+   "prova": "Formação Geral",
+   "questao": 13,
+   "grafico": false
+  },
+  {
+   "prova": "Formação Geral",
+   "questao": 14,
+   "grafico": false
+  },
+  {
+   "prova": "Formação Geral",
+   "questao": 15,
+   "grafico": false
+  },
+  {
+   "prova": "Formação Geral",
+   "questao": 16,
+   "grafico": false
+  },
+  {
+   "prova": "Formação Geral",
+   "questao": 17,
+   "grafico": false
+  },
+  {
+   "prova": "Formação Geral",
+   "questao": 18,
+   "grafico": false
+  },
+  {
+   "prova": "Formação Geral",
+   "questao": 19,
+   "grafico": false
+  },
+  {
+   "prova": "Formação Geral",
+   "questao": 20,
+   "grafico": false
+  },
+  {
+   "prova": "Formação Geral",
+   "questao": 21,
+   "grafico": false
+  },
+  {
+   "prova": "Formação Geral",
+   "questao": 22,
+   "grafico": false
+  },
+  {
+   "prova": "Formação Geral",
+   "questao": 23,
+   "grafico": false
+  },
+  {
+   "prova": "Formação Geral",
+   "questao": 24,
+   "grafico": false
+  },
+  {
+   "prova": "Formação Geral",
+   "questao": 25,
+   "grafico": false
+  },
+  {
+   "prova": "Formação Geral",
+   "questao": 26,
+   "grafico": false
+  },
+  {
+   "prova": "Formação Geral",
+   "questao": 27,
+   "grafico": false
+  },
+  {
+   "prova": "Formação Geral",
+   "questao": 28,
+   "grafico": false
+  },
+  {
+   "prova": "Formação Geral",
+   "questao": 29,
+   "grafico": false
+  },
+  {
+   "prova": "Formação Geral",
+   "questao": 30,
+   "grafico": false
+  }
+ ]
+};
